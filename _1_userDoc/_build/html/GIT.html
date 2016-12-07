@@ -429,51 +429,42 @@ chemin du depot distant directement en editant le fichier &#8220;config&#8221; d
 <hr class="docutils" />
 <div class="section" id="github">
 <h2>github<a class="headerlink" href="#github" title="Lien permanent vers ce titre">¶</a></h2>
-<blockquote>
-<div><ol class="arabic">
-<li><dl class="first docutils">
-<dt>Ajouter le depot distant &#8220;origin&#8221;</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="p">[</span><span class="n">url_de_votre_projet_sur_github</span><span class="p">]</span>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><blockquote class="first">
+<div><p><a class="reference external" href="http://guillaumevincent.com/2012/12/23/Git-pour-les-nuls-recuperer_une_branche_distante.html">http://guillaumevincent.com/2012/12/23/Git-pour-les-nuls-recuperer_une_branche_distante.html</a></p>
+</div></blockquote>
+<ol class="last arabic">
+<li><p class="first">Ajouter le depot distant &#8220;origin&#8221;</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="p">[</span><span class="n">url_de_votre_projet_sur_github</span><span class="p">]</span>
 </pre></div>
 </div>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Pousser la branch locale &#8220;master&#8221; vers la branch distante &#8220;origin&#8221;</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+<li><p class="first">Pousser la branch locale &#8220;master&#8221; vers la branch distante &#8220;origin&#8221;</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
 </pre></div>
 </div>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Mettre à jour le depot local depuis le dépot distant</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branche</span><span class="p">]</span>
+<li><p class="first">Mettre à jour le depot local depuis le dépot distant</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branche</span><span class="p">]</span>
     <span class="c1"># le nom de la branch est optionel si il n&#39;y en a qu&#39;une (origin)</span>
 </pre></div>
 </div>
-</dd>
-</dl>
 </li>
 <li><dl class="first docutils">
 <dt>Lister les branch distantes</dt>
 <dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>Lister les branch distantes toutes seules</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span>
+<li><p class="first">Lister les branch distantes toutes seules</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span>
 </pre></div>
 </div>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>afficher l&#8217;url à la suite du nom de la branch</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+<li><p class="first">afficher l&#8217;url à la suite du nom de la branch</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
 </pre></div>
 </div>
-</dd>
-</dl>
 </li>
 </ul>
 </dd>
@@ -487,33 +478,38 @@ chemin du depot distant directement en editant le fichier &#8220;config&#8221; d
 </ul>
 </div></blockquote>
 </li>
-<li><dl class="first docutils">
-<dt>Pousser toutes branch d&#8217;un coup sur le depot distant</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">all</span>
+<li><p class="first">Pousser toutes branch d&#8217;un coup sur le depot distant</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">all</span>
 </pre></div>
 </div>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Supprimer une branche distante</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:[</span><span class="n">nom_de_la_branche_distante</span><span class="p">]</span>
+<li><p class="first">Supprimer une branche distante</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:[</span><span class="n">nom_de_la_branche_distante</span><span class="p">]</span>
     <span class="c1"># N.B : les &#39;:&#39; doivent être colles au nom de la branch distante</span>
 </pre></div>
 </div>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Obtenir la list des branch distantes (list depuis de dépot local)</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">r</span>
+<li><p class="first">Obtenir la list des branch distantes (list depuis de dépot local)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">r</span>
 </pre></div>
 </div>
-</dd>
-</dl>
+</li>
+<li><p class="first">Obtenr la list de toutes les branch</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Pour récupérer une branch distante dans un dépot local</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="p">[</span><span class="n">nom_de_la_branch_local</span><span class="p">]</span> <span class="p">[</span><span class="n">emplacement_de_la_branch_distante</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">branch_distante</span><span class="p">]</span>
+    <span class="c1"># git checkout -b dev origin/dev</span>
+</pre></div>
+</div>
 </li>
 </ol>
-</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 

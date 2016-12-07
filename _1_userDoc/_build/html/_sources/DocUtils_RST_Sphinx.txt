@@ -37,7 +37,8 @@ Sphinx
 
 :Liens WEB:
         * http://www.sphinx-doc.org/en/stable/tutorial.html
-        *https://developer.ridgerun.com/wiki/index.php/How_to_generate_sphinx_documentation_for_python_code_running_in_an_embedded_system
+        
+        * https://developer.ridgerun.com/wiki/index.php/How_to_generate_sphinx_documentation_for_python_code_running_in_an_embedded_system
             # un petit cookbook sur la configuration
     
 Installer Sphinx
@@ -52,4 +53,4 @@ Démarrage et initialisation rapide
     
         sphinx-quickstart
 
-------------------------------------------------------------------------------------------
+

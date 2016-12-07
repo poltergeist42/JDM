@@ -242,30 +242,28 @@ Un dépôt distant ne doit pas être un dossier de travail.
 github
 ======
 
-    #. Ajouter le depot distant "origin"
-        ::
+:Liens Web:
+            http://guillaumevincent.com/2012/12/23/Git-pour-les-nuls-recuperer_une_branche_distante.html
+
+    #. Ajouter le depot distant "origin" ::
         
             git remote add origin [url_de_votre_projet_sur_github]
 
-    #. Pousser la branch locale "master" vers la branch distante "origin"
-        ::
+    #. Pousser la branch locale "master" vers la branch distante "origin" ::
         
             git push -u origin master
             
-    #. Mettre à jour le depot local depuis le dépot distant
-        ::
+    #. Mettre à jour le depot local depuis le dépot distant ::
         
             git pull [nom de la branche]
                 # le nom de la branch est optionel si il n'y en a qu'une (origin)
 
     #. Lister les branch distantes
-        * Lister les branch distantes toutes seules
-            ::
+        * Lister les branch distantes toutes seules ::
                 
                 git remote
                 
-        * afficher l'url à la suite du nom de la branch
-            ::
+        * afficher l'url à la suite du nom de la branch ::
             
                 git remote -v
                 
@@ -274,20 +272,26 @@ github
         * Ouvrir le dossier ".git" que se trouve à la base du dépot local
         * Editer le fichier "config" et modifier la ligne "URL"
         
-    #. Pousser toutes branch d'un coup sur le depot distant
-        ::
+    #. Pousser toutes branch d'un coup sur le depot distant ::
         
             git push --all
             
-    #. Supprimer une branche distante
-        ::
+    #. Supprimer une branche distante ::
         
             git push origin :[nom_de_la_branche_distante]
                 # N.B : les ':' doivent être colles au nom de la branch distante
             
-    #. Obtenir la list des branch distantes (list depuis de dépot local)
-        ::
+    #. Obtenir la list des branch distantes (list depuis de dépot local) ::
         
             git branch -r
+            
+    #. Obtenr la list de toutes les branch ::
+    
+            git branch -a
+            
+    #. Pour récupérer une branch distante dans un dépot local ::
+            
+            git checkout -b [nom_de_la_branch_local] [emplacement_de_la_branch_distante]/[branch_distante]
+                # git checkout -b dev origin/dev
             
  
