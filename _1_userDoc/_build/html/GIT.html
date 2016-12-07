@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>GIT &#8212; documentation JDM 20160628</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '20160628',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="top" title="documentation JDM 20160628" href="index.html" />
+    <link rel="next" title="Kicad" href="kicad.html" />
+    <link rel="prev" title="DocUtils ; reStructuredText (.rst) ; Sphinx" href="DocUtils_RST_Sphinx.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="git">
+<h1>GIT<a class="headerlink" href="#git" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="les-liens-utils">
+<h2>Les liens utils<a class="headerlink" href="#les-liens-utils" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><ul class="first last">
+<li><p class="first"><a class="reference external" href="https://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-%C3%80-propos-de-la-gestion-de-version">https://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-%C3%80-propos-de-la-gestion-de-version</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></p>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.youtube.com/watch?v=rP3T0Ee6pLU&amp;list=PLjwdMgw5TTLXuY5i7RW0QqGdW0NZntqiP">https://www.youtube.com/watch?v=rP3T0Ee6pLU&amp;list=PLjwdMgw5TTLXuY5i7RW0QqGdW0NZntqiP</a></dt>
+<dd><p class="first last"># Chaine youtube en francais sur l&#8217;utilisation de GIT</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://youtu.be/V6Zo68uQPqE">https://youtu.be/V6Zo68uQPqE</a></dt>
+<dd><p class="first last"># Cours complet un peu long mais en français en claire</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://git-scm.com/doc">https://git-scm.com/doc</a></dt>
+<dd><p class="first last"># documentation</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.nano-editor.org/dist/v2.2/NT/">https://www.nano-editor.org/dist/v2.2/NT/</a></dt>
+<dd><p class="first last"># nano</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://alexgirard.com/git-book/">https://alexgirard.com/git-book/</a></dt>
+<dd><p class="first last"># &#8216;Livre&#8217; en francais</p>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="configurer-git">
+<h2>Configurer GIT<a class="headerlink" href="#configurer-git" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Les options de base pour la configuration</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;votre_pseudo&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="n">moi</span><span class="nd">@email</span><span class="o">.</span><span class="n">com</span>
+    <span class="c1"># on commence par configurer son nom (user.name)</span>
+    <span class="c1"># puis son adresse Email (user.email)</span>
+
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">color</span><span class="o">.</span><span class="n">diff</span> <span class="n">auto</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">color</span><span class="o">.</span><span class="n">status</span> <span class="n">auto</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">color</span><span class="o">.</span><span class="n">branch</span> <span class="n">auto</span>
+    <span class="c1"># Les 3 lignes permettent de mettre le shell en couleur</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Pour verifier la configuration</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="nb">list</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Remplacer VI par Nano</dt>
+<dd><ul class="first last">
+<li><p class="first"><a class="reference external" href="https://sourceforge.net/projects/nano/">Télécharger Nano.</a> et l&#8217;installer
+dans &#8220;C:Program Files (x86)&#8221;</p>
+</li>
+<li><p class="first">Ajouter le chemin de Nano dans le path</p>
+</li>
+<li><dl class="first docutils">
+<dt>Ouvrir une invite de commande et tapez</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">core</span><span class="o">.</span><span class="n">editor</span> <span class="n">nano</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="obtenir-de-l-aide">
+<h2>Obtenir de l&#8217;aide<a class="headerlink" href="#obtenir-de-l-aide" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>les commandes de bases integree a git</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">help</span>
+<span class="n">git</span> <span class="n">help</span> <span class="o">&lt;</span><span class="n">verbe</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="o">&lt;</span><span class="n">verbe</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">help</span>
+<span class="n">man</span> <span class="n">git</span><span class="o">-&lt;</span><span class="n">verbe</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="demarrer-un-depot-git">
+<h2>Démarrer un dépôt Git<a class="headerlink" href="#demarrer-un-depot-git" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Initialisation d&#8217;un dépôt Git dans un répertoire existant</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="enregistrer-des-modifications-dans-le-depot">
+<h2>Enregistrer des modifications dans le dépôt<a class="headerlink" href="#enregistrer-des-modifications-dans-le-depot" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Vérifier l&#8217;état des fichiers</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Ajouter les données</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">*</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>faire un commit</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="s2">&quot;votre commentaire&quot;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="creer-lister-et-selectionner-une-branche">
+<h2>Creer, lister et selectionner une branche<a class="headerlink" href="#creer-lister-et-selectionner-une-branche" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Pour lister une branche</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
+    <span class="c1"># la branch ayant un asterics est la branche courante</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Pour creer une nouvelle branch</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branch</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Pour selectionner et se déplacer sur une branche</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branch</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Pour importer des fichiers depuis une autre branch.</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">chekout</span> <span class="p">[</span><span class="n">branch</span><span class="p">]</span> <span class="p">[</span><span class="n">fichier</span> <span class="n">cible</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge">
+<h2>appliquer le contenu d&#8217;une branch dans la branch courante (faire un merge)<a class="headerlink" href="#appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Se placer sur la branche de destination</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">branch</span> <span class="n">cible</span><span class="p">]</span>
+    <span class="c1"># ex : git checkout master</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>lancer la commande &#8220;merge&#8221; en prenant comme argument la branch a appliquer</dt>
+<dd><dl class="first last docutils">
+<dt>::</dt>
+<dd><dl class="first last docutils">
+<dt>git merge [branch_a_appliquer]</dt>
+<dd><p class="first last"># ex : git merge dev</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="suprimer-des-elements">
+<h2>suprimer des éléments<a class="headerlink" href="#suprimer-des-elements" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>supprimer un fichier dans le repository (l&#8217;index)</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="o">--</span><span class="n">cached</span> <span class="p">[</span><span class="n">nom_du_fichier</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>supprimer tous le cache</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="o">--</span><span class="n">cached</span> <span class="o">.</span>
+    <span class="c1"># ne pas oublier le point</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>réparer l&#8217;index si un fichier est supprimer du dossier de travail mais pas de l&#8217;index</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first">supprimer une branch</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">D</span> <span class="p">[</span><span class="n">nom_de_la_branch</span><span class="p">]</span>
+    <span class="c1"># l&#39;option &#39;-D&#39; est l&#39;equivalent de --delete --force</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="faire-un-instantane-puis-le-liberer">
+<h2>faire un &#8220;instantané&#8221; puis le libérer<a class="headerlink" href="#faire-un-instantane-puis-le-liberer" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">faire un instantané</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="p">[</span><span class="n">nom</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Obtenir la list des stash</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="nb">list</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Libérer l&#8217;instantané, et le supprimer</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pop</span> <span class="p">[</span><span class="nb">id</span> <span class="n">du</span> <span class="n">stash</span> <span class="p">(</span><span class="n">commit</span><span class="p">)</span> <span class="n">ou</span> <span class="n">son</span> <span class="n">nom</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Appliquer l&#8217;instantané</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">apply</span> <span class="p">[</span><span class="n">ID</span> <span class="n">ou</span> <span class="n">nom</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="reparer-annuler-remplacer">
+<h2>Reparer / annuler / remplacer<a class="headerlink" href="#reparer-annuler-remplacer" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://alexgirard.com/git-book/intermediaire/repair-reset-checkout-revert/">https://alexgirard.com/git-book/intermediaire/repair-reset-checkout-revert/</a></dt>
+<dd><p class="first last"># Explications fr</p>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="reparer-une-erreur-non-committee">
+<h3>Reparer une erreur non-committee<a class="headerlink" href="#reparer-une-erreur-non-committee" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Reparer une erreur non-committee</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span> <span class="n">HEAD</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="annuler-remplacer-le-dernier-commit">
+<h3>annuler / remplacer le dernier commit<a class="headerlink" href="#annuler-remplacer-le-dernier-commit" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">annuler le dernier commit</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">revert</span> <span class="n">HEAD</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">remplacer le dernier commit par le présent</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">ammend</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="gestion-depot-distant">
+<h2>Gestion depot distant<a class="headerlink" href="#gestion-depot-distant" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un dépôt distant ne doit pas être un dossier de travail.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>créer un dépot distant</dt>
+<dd><p class="first">se placer dans le dossier distant</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span> <span class="o">--</span><span class="n">bare</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>dépot local</dt>
+<dd><p class="first">Si il s&#8217;agit d&#8217;un nouveau projet on peut faire un clone</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="p">[</span><span class="o">//</span><span class="n">chemin</span><span class="o">/</span><span class="n">vers</span><span class="o">/</span><span class="n">depot</span><span class="o">/</span><span class="n">distant</span><span class="p">]</span>
+</pre></div>
+</div>
+<p class="last">Si il s&#8217;agit d&#8217;un projet existant ayant déjà un dépot distant, on peut changer le
+chemin du depot distant directement en editant le fichier &#8220;config&#8221; du dépôt local.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="github">
+<h2>github<a class="headerlink" href="#github" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Ajouter le depot distant &#8220;origin&#8221;</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="p">[</span><span class="n">url_de_votre_projet_sur_github</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Pousser la branch locale &#8220;master&#8221; vers la branch distante &#8220;origin&#8221;</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Mettre à jour le depot local depuis le dépot distant</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branche</span><span class="p">]</span>
+    <span class="c1"># le nom de la branch est optionel si il n&#39;y en a qu&#39;une (origin)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Lister les branch distantes</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Lister les branch distantes toutes seules</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>afficher l&#8217;url à la suite du nom de la branch</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Modifier l&#8217;url du dépot distant</p>
+<blockquote>
+<div><ul class="simple">
+<li>Ouvrir le dossier &#8221;.git&#8221; que se trouve à la base du dépot local</li>
+<li>Editer le fichier &#8220;config&#8221; et modifier la ligne &#8220;URL&#8221;</li>
+</ul>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Pousser toutes branch d&#8217;un coup sur le depot distant</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">all</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Supprimer une branche distante</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:[</span><span class="n">nom_de_la_branche_distante</span><span class="p">]</span>
+    <span class="c1"># N.B : les &#39;:&#39; doivent être colles au nom de la branch distante</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Obtenir la list des branch distantes (list depuis de dépot local)</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">r</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">GIT</a><ul>
+<li><a class="reference internal" href="#les-liens-utils">Les liens utils</a></li>
+<li><a class="reference internal" href="#configurer-git">Configurer GIT</a></li>
+<li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l&#8217;aide</a></li>
+<li><a class="reference internal" href="#demarrer-un-depot-git">Démarrer un dépôt Git</a></li>
+<li><a class="reference internal" href="#enregistrer-des-modifications-dans-le-depot">Enregistrer des modifications dans le dépôt</a></li>
+<li><a class="reference internal" href="#creer-lister-et-selectionner-une-branche">Creer, lister et selectionner une branche</a></li>
+<li><a class="reference internal" href="#appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge">appliquer le contenu d&#8217;une branch dans la branch courante (faire un merge)</a></li>
+<li><a class="reference internal" href="#suprimer-des-elements">suprimer des éléments</a></li>
+<li><a class="reference internal" href="#faire-un-instantane-puis-le-liberer">faire un &#8220;instantané&#8221; puis le libérer</a></li>
+<li><a class="reference internal" href="#reparer-annuler-remplacer">Reparer / annuler / remplacer</a><ul>
+<li><a class="reference internal" href="#reparer-une-erreur-non-committee">Reparer une erreur non-committee</a></li>
+<li><a class="reference internal" href="#annuler-remplacer-le-dernier-commit">annuler / remplacer le dernier commit</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gestion-depot-distant">Gestion depot distant</a></li>
+<li><a class="reference internal" href="#github">github</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="DocUtils_RST_Sphinx.html" title="Chapitre précédent">DocUtils ; reStructuredText (.rst) ; Sphinx</a></li>
+      <li>Next: <a href="kicad.html" title="Chapitre suivant">Kicad</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/GIT.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Poltergeist42.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/GIT.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

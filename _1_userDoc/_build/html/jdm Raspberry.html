@@ -1,0 +1,3127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>* jdm Raspberry PI * &mdash; documentation JDM 20160628</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '20160628',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="documentation JDM 20160628" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="jdm-raspberry-pi">
+<h1><strong>* jdm Raspberry PI *</strong><a class="headerlink" href="#jdm-raspberry-pi" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="table-des-matieres">
+<h2>Table des matières<a class="headerlink" href="#table-des-matieres" title="Lien permanent vers ce titre">¶</a></h2>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#raspberry">Raspberry</a></dt>
+<dd><ol class="first last arabic">
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#rpi-utilises">RPi utilisés</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#model-2-id-fix">Model 2 (ID-FIX)</a></li>
+<li><a class="reference internal" href="#rpi-rov">RPI ROV</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p class="first"><a class="reference internal" href="#acceder-au-fichier-de-configuration-du-rpi">Acceder au fichier de configuration du RPI</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#connaitre-la-configuration-materiel-du-rpi">Connaitre la configuration matériel du RPI</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#vocabulaire">Vocabulaire</a></p>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#la-bibliotheque-rpi-gpio">La bibliotheque RPi.GPIO</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#implentation-rpi2">Implentation RPi2</a></li>
+<li><a class="reference internal" href="#installation-de-rpi-gpio">Installation de RPi.GPIO</a></li>
+<li><a class="reference internal" href="#utilisation-de-rpi-gpio-avec-python">Utilisation de RPi.GPIO avec Python</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#i2c">I2C</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#installation-activation-de-l-i2c">Installation / Activation de l&#8217;I2C</a></li>
+<li><a class="reference internal" href="#connaitre-l-adresse-des-matetiels-branches">Connaitre l&#8217;adresse des matétiels branchés</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#uart">UART</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#liberer-l-uart">Libérer l&#8217;UART</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p class="first"><a class="reference internal" href="#pwm-servo-moteur-et-dc-motor">PWM, Servo moteur et DC Motor</a></p>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#python">PYTHON</a></dt>
+<dd><ol class="first last arabic">
+<li><p class="first"><a class="reference internal" href="#obtenir-de-l-aide-sur-une-class-ou-une-methode-python">Obtenir de l&#8217;aide sur une class ou une méthode (python)</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux">Lignes de code à insérer au debut de chaque script sous linux</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#os-library">os library</a></p>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#pip">pip</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#installation-de-pip">Installation de PIP</a></li>
+<li><a class="reference internal" href="#utilisation-de-pip">Utilisation de PIP</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper">Les environnements virtuels Python : virtualenv et virtualenvwrapper</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#installation-des-environements-virtuels">installation des environements virtuels</a></li>
+<li><a class="reference internal" href="#configuration-des-environements-virtuels">configuration des environements virtuels</a></li>
+<li><a class="reference internal" href="#utilisation-environements-virtuels">Utilisation environements virtuels</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p class="first"><a class="reference internal" href="#un-shell-python-qui-fait-de-l-auto-completion">Un shell Python qui fait de l&#8217;auto completion</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#convertir-un-string-en-bytes">convertir un string en bytes</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#faire-un-executable-a-partir-d-un-script">faire un executable à partir d&#8217;un script</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#fichiers-de-configuration-ini">Fichiers de configuration (.ini)</a></p>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#docutils-restructuredtext-rst-sphinx">DocUtils ; reStructuredText (.rst) ; Sphinx</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#docutils">DocUtils</a></li>
+<li><a class="reference internal" href="#restructuredtext-rst">reStructuredText (.rst)</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#linux">LINUX</a></dt>
+<dd><ol class="first last arabic">
+<li><p class="first"><a class="reference internal" href="#rappel-des-commandes-de-bases">rappel des commandes de bases</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#rappel-des-raccourcis-de-navigation-dans-le-shell">rappel des raccourcis de navigation dans le shell</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#activer-le-compte-root">activer le compte root</a></p>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#connaitre-la-version-du-systeme">connaitre la version du systeme</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#installation-de-lsb-release">installation de lsb-release</a></li>
+<li><a class="reference internal" href="#utilisation-de-lsb-release">utilisation de lsb-release</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#connaitre-la-version-d-un-paquet">connaitre la version d&#8217;un paquet</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#installation-de-apt-show-versions">installation de apt-show-versions</a></li>
+<li><a class="reference internal" href="#utilisation-de-apt-show-versions">utilisation de apt-show-versions</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p class="first"><a class="reference internal" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique">Pour copier des fichiers en root depuis l&#8217;interface graphique</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#pour-passer-la-langue-et-le-clavier-en-francais">pour passer la langue et le clavier en francais</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#pour-rendre-un-fichier-executable">Pour rendre un fichier &#8220;Executable&#8221;</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">Pour pouvoir se connecter en RDP sur un poste Linux</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#pour-faire-du-xforwarding">pour faire du XForwarding</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">Pour mettre une IP fixe sur une interfaces réseau</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#pour-active-le-wifi">Pour active le WIFI</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande">Se connecter a un reseau wifi en ligne de commande</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#connaitre-la-liste-des-materiel-usb">Connaitre la liste des matériel usb</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#connaitre-l-espace-disque-utilise-et-celui-disponible">Connaitre l&#8217;éspace disque utilise et celui disponible</a></p>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#les-posrts-series">Les posrts séries</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#connaitre-la-liste-des-ports-serie">Connaitre la liste des ports série :</a></li>
+<li><a class="reference internal" href="#interoger-le-journal-sur-les-ports-serie">interoger le journal sur les ports série :</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#faire-du-multi-screen-sur-une-fenetre-terminal">faire du multi-screen sur une fenêtre terminal</a></dt>
+<dd><ol class="first last arabic">
+<li><p class="first"><a class="reference internal" href="#installation-de-screen">Installation de screen</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#lancer-l-application-screen">Lancer l&#8217;application &#8220;screen&#8221;</a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#liste-des-commandes-des-bases-pour-screen">Liste des commandes des bases pour screen</a></p>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#pour-creer-un-script-qui-s-execute-au-demarrage-du-syteme">pour créer un script qui s&#8217;execute au démarrage du sytème</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#preparation-du-script-shell">Préparation du script shell</a></li>
+<li><a class="reference internal" href="#preparation-du-script-python">Préparation du script python</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#git">GIT</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#configurer-git">Configurer GIT</a></li>
+<li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l&#8217;aide</a></li>
+<li><a class="reference internal" href="#demarrer-un-depot-git">Démarrer un dépôt Git</a></li>
+<li><a class="reference internal" href="#enregistrer-des-modifications-dans-le-depot">Enregistrer des modifications dans le dépôt</a></li>
+<li><a class="reference internal" href="#creer-lister-et-selectionner-une-branche">Creer, lister et selectionner une branche</a></li>
+<li><a class="reference internal" href="#appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge">appliquer le contenu d&#8217;une branch dans la branch courante (faire un merge)</a></li>
+<li><a class="reference internal" href="#suprimer-des-elements">suprimer des éléments</a></li>
+<li><a class="reference internal" href="#annuler-remplacer-le-dernier-commit">annuler / remplacer le dernier commit</a></li>
+<li><a class="reference internal" href="#github">github</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#composants-specifiques">Composants Spécifiques</a></dt>
+<dd><ol class="first last arabic">
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#magnetomettre-hmc5883l">Magnetomettre : HMC5883L</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#implentation-hmc5883l">Implentation HMC5883L</a></li>
+<li><a class="reference internal" href="#installation-des-librairies-quick2wire-et-i2clibraries">Installation des librairies quick2wire et i2clibraries</a></li>
+<li><a class="reference internal" href="#configuration-du-hmc5883l">Configuration du HMC5883L</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#motteur-pas-a-pas-28byj-48">Motteur Pas à Pas : 28BYJ-48</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#specification-du-pap">Specification du PAP</a></li>
+<li><a class="reference internal" href="#correspodanse-entre-le-driver-et-les-gpio">Correspodanse entre le driver et les GPIO</a></li>
+<li><a class="reference internal" href="#phases">Phases</a></li>
+<li><a class="reference internal" href="#organisation-des-phases-en-python3">Organisation des phases en python3</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#picamera">Picamera</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#activation-du-module-camera-sur-le-rpi">Activation du module caméra sur le RPi</a></li>
+<li><a class="reference internal" href="#installation-de-la-camera">installation de la camera</a></li>
+<li><a class="reference internal" href="#instalation-de-la-librairie-picamera">Instalation de la librairie PiCamera</a></li>
+<li><a class="reference internal" href="#utilisation-avec-python">utilisation avec python</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="#capteur-ultrason-hc-sr04">Capteur ultrason : HC-SR04</a></dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference internal" href="#vocabulaire-et-definission-pour-le-hc-sr04">Vocabulaire et definission pour le HC-SR04</a></li>
+<li><a class="reference internal" href="#specification-du-hc-sr04">Specification du HC-SR04</a></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="raspberry">
+<h2>Raspberry<a class="headerlink" href="#raspberry" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="rpi-utilises">
+<h3>RPi utilisés<a class="headerlink" href="#rpi-utilises" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="model-2-id-fix">
+<h4>Model 2 (ID-FIX)<a class="headerlink" href="#model-2-id-fix" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">NAME</span>                  <span class="p">:</span> <span class="n">RPi2pierre</span>
+<span class="n">MAC</span> <span class="n">address</span> <span class="n">ETH</span>       <span class="p">:</span> <span class="n">b8</span><span class="p">:</span><span class="mi">27</span><span class="p">:</span><span class="n">eb</span><span class="p">:</span><span class="mi">65</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">5</span><span class="n">a</span>
+<span class="n">IP</span>                    <span class="p">:</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">32.253</span>
+<span class="n">netmask</span>               <span class="p">:</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+
+<span class="n">MAC</span> <span class="n">Address</span> <span class="n">WLAN</span>      <span class="p">:</span> <span class="mi">08</span><span class="p">:</span><span class="mi">86</span><span class="p">:</span><span class="mi">3</span><span class="n">b</span><span class="p">:</span><span class="mi">6</span><span class="n">b</span><span class="p">:</span><span class="mi">4</span><span class="n">d</span><span class="p">:</span><span class="mi">58</span>
+                      <span class="p">:</span> <span class="n">eth</span><span class="o">.</span><span class="n">addr</span> <span class="o">==</span> <span class="mi">08</span><span class="p">:</span><span class="mi">86</span><span class="p">:</span><span class="mi">3</span><span class="n">b</span><span class="p">:</span><span class="mi">6</span><span class="n">b</span><span class="p">:</span><span class="mi">4</span><span class="n">d</span><span class="p">:</span><span class="mi">58</span>
+                                   <span class="c1"># filtre a appliquer dans Wireshark</span>
+<span class="n">login</span>                 <span class="p">:</span> <span class="n">pi</span>
+<span class="n">password</span>              <span class="p">:</span> <span class="n">raspberry</span>
+
+<span class="n">loginRoot</span>             <span class="p">:</span> <span class="n">root</span>
+<span class="n">password</span>              <span class="p">:</span> <span class="n">raspberry</span>
+
+<span class="n">xrdp</span>                  <span class="p">:</span> <span class="n">activé</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="rpi-rov">
+<h4>RPI ROV<a class="headerlink" href="#rpi-rov" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">NAME</span>                  <span class="p">:</span> <span class="n">rpiRov</span>
+<span class="n">MAC</span> <span class="n">address</span> <span class="n">ETH</span>       <span class="p">:</span> <span class="n">b8</span><span class="p">:</span><span class="mi">27</span><span class="p">:</span><span class="n">eb</span><span class="p">:</span><span class="n">e0</span><span class="p">:</span><span class="mi">4</span><span class="n">b</span><span class="p">:</span><span class="mi">93</span>
+<span class="n">IP</span>                    <span class="p">:</span>
+<span class="n">netmask</span>               <span class="p">:</span>
+
+<span class="n">MAC</span> <span class="n">Address</span> <span class="n">WLAN</span>      <span class="p">:</span>
+                      <span class="p">:</span> <span class="n">eth</span><span class="o">.</span><span class="n">addr</span> <span class="o">==</span> <span class="n">d8</span><span class="p">:</span><span class="n">eb</span><span class="p">:</span><span class="mi">97</span><span class="p">:</span><span class="mi">1</span><span class="n">c</span><span class="p">:</span><span class="mi">3</span><span class="n">e</span><span class="p">:</span><span class="n">b4</span>
+                                  <span class="c1"># filtre a appliquer dans Wireshark</span>
+<span class="n">login</span>                 <span class="p">:</span> <span class="n">pi</span>
+<span class="n">password</span>              <span class="p">:</span> <span class="n">raspberry</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="acceder-au-fichier-de-configuration-du-rpi">
+<h3>Acceder au fichier de configuration du RPI<a class="headerlink" href="#acceder-au-fichier-de-configuration-du-rpi" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="connaitre-la-configuration-materiel-du-rpi">
+<h3>Connaitre la configuration matériel du RPI<a class="headerlink" href="#connaitre-la-configuration-materiel-du-rpi" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">CPU:</th><td class="field-body"><ul class="first last simple">
+<li>cat /proc/cpuinfo</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="vocabulaire">
+<h3>Vocabulaire<a class="headerlink" href="#vocabulaire" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="docutils">
+<dt>HAT (Chapeau)</dt>
+<dd>C&#8217;est le nom que porte les cartes filles sur Raspberry Pi.
+Sur Arduino, cela s&#8217;appel un Shield (Bouclier)</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="la-bibliotheque-rpi-gpio">
+<h3>La bibliotheque RPi.GPIO<a class="headerlink" href="#la-bibliotheque-rpi-gpio" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://pypi.python.org/pypi/RPi.GPIO">https://pypi.python.org/pypi/RPi.GPIO</a></li>
+<li><a class="reference external" href="http://sourceforge.net/projects/raspberry-gpio-python/">http://sourceforge.net/projects/raspberry-gpio-python/</a></li>
+<li><a class="reference external" href="http://sourceforge.net/p/raspberry-gpio-python/wiki/Home/">http://sourceforge.net/p/raspberry-gpio-python/wiki/Home/</a></li>
+<li><a class="reference external" href="http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/">http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="implentation-rpi2">
+<h4>Implentation RPi2<a class="headerlink" href="#implentation-rpi2" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="12%" />
+<col width="22%" />
+<col width="6%" />
+<col width="6%" />
+<col width="22%" />
+<col width="12%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Board</th>
+<th class="head">BCM</th>
+<th class="head">Def</th>
+<th class="head" colspan="2">PINS</th>
+<th class="head">Def</th>
+<th class="head">BCM</th>
+<th class="head">Board</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&nbsp;</td>
+<td>3.3v</td>
+<td>DC power</td>
+<td>01</td>
+<td>02</td>
+<td>DC power</td>
+<td>5v</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>8</td>
+<td>GPIO02</td>
+<td>i2c SDA</td>
+<td>03</td>
+<td>04</td>
+<td>DC power</td>
+<td>5v</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>9</td>
+<td>GPIO03</td>
+<td>i2c SCL</td>
+<td>05</td>
+<td>06</td>
+<td>Ground</td>
+<td>GND</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td>GPIO04</td>
+<td>GPIO_GCLK</td>
+<td>07</td>
+<td>08</td>
+<td>TXD0</td>
+<td>GPIO14</td>
+<td>15</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>GND</td>
+<td>Ground</td>
+<td>09</td>
+<td>10</td>
+<td>RXD0</td>
+<td>GPIO15</td>
+<td>16</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>GPIO17</td>
+<td>GPIO_Gen0</td>
+<td>11</td>
+<td>12</td>
+<td>GPIO_Gen1</td>
+<td>GPIO18</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>GPIO27</td>
+<td>GPIO_Gen2</td>
+<td>13</td>
+<td>14</td>
+<td>Ground</td>
+<td>GND</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>GPIO22</td>
+<td>GPIO_Gen3</td>
+<td>15</td>
+<td>16</td>
+<td>GPIO_Gen4</td>
+<td>GPIO23</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>3.3v</td>
+<td>DC power</td>
+<td>17</td>
+<td>18</td>
+<td>GPIO_Gen5</td>
+<td>GPIO24</td>
+<td>5</td>
+</tr>
+<tr class="row-odd"><td>12</td>
+<td>GPIO10</td>
+<td>SPI_MOSI</td>
+<td>19</td>
+<td>20</td>
+<td>Ground</td>
+<td>GND</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>13</td>
+<td>GPIO09</td>
+<td>SPI_MISO</td>
+<td>21</td>
+<td>22</td>
+<td>GPIO_Gen6</td>
+<td>GPIO25</td>
+<td>6</td>
+</tr>
+<tr class="row-odd"><td>14</td>
+<td>GPIO11</td>
+<td>SPI_CLK</td>
+<td>23</td>
+<td>24</td>
+<td>SPI_CE0_N</td>
+<td>GPIO08</td>
+<td>10</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>GND</td>
+<td>Ground</td>
+<td>25</td>
+<td>26</td>
+<td>SPI_CE1_N</td>
+<td>GPIO07</td>
+<td>11</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>ID_SD</td>
+<td>i2c ID EEPROM</td>
+<td>27</td>
+<td>28</td>
+<td>i2c ID EEPROM</td>
+<td>ID_SC</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>21</td>
+<td>GPIO05</td>
+<td>&nbsp;</td>
+<td>29</td>
+<td>30</td>
+<td>Ground</td>
+<td>GND</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>22</td>
+<td>GPIO06</td>
+<td>&nbsp;</td>
+<td>31</td>
+<td>32</td>
+<td>&nbsp;</td>
+<td>GPIO12</td>
+<td>26</td>
+</tr>
+<tr class="row-even"><td>23</td>
+<td>GPIO13</td>
+<td>&nbsp;</td>
+<td>33</td>
+<td>34</td>
+<td>Ground</td>
+<td>GND</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>24</td>
+<td>GPIO19</td>
+<td>&nbsp;</td>
+<td>35</td>
+<td>36</td>
+<td>&nbsp;</td>
+<td>GPIO16</td>
+<td>27</td>
+</tr>
+<tr class="row-even"><td>25</td>
+<td>GPIO26</td>
+<td>&nbsp;</td>
+<td>37</td>
+<td>38</td>
+<td>&nbsp;</td>
+<td>GPIO20</td>
+<td>28</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>GND</td>
+<td>Ground</td>
+<td>39</td>
+<td>40</td>
+<td>&nbsp;</td>
+<td>GPIO21</td>
+<td>29</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="installation-de-rpi-gpio">
+<h4>Installation de RPi.GPIO<a class="headerlink" href="#installation-de-rpi-gpio" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>1.</strong>   si RPi.GPIO n&#8217;est pas installer, saisir</dt>
+<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">RPi</span><span class="o">.</span><span class="n">GPIO</span>
+</pre></div>
+</div>
+<p>Pour mettre à jour la bibliothèque</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">RPi</span><span class="o">.</span><span class="n">GPIO</span> <span class="o">--</span> <span class="n">upgrade</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="utilisation-de-rpi-gpio-avec-python">
+<h4>Utilisation de RPi.GPIO avec Python<a class="headerlink" href="#utilisation-de-rpi-gpio-avec-python" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>2.1.</strong> Importer la bibliotheque</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="k">as</span> <span class="nn">GPIO</span>
+    <span class="c1"># Attention, c&#39;est bien RPi avec un i minuscule</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>2.2.</strong> Choisir la notation pour accèder au broche du GPIO.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Il y a 2 façon d&#8217;adresser les broches du GPIO, soit par sont numéro
+de broche (GPIO.BOARD) soit par son nom dans le registre (GPIO.BCM).
+C&#8217;est la methode &#8221;.setmode()&#8221; qui permet de configurer le mode de
+fonctionnement des GPIO.</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="i2c">
+<h3>I2C<a class="headerlink" href="#i2c" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens Web:</th><td class="field-body"><ul class="first">
+<li><p class="first"><a class="reference external" href="http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/">http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="http://elinux.org/RPi_ADC_I2C_Python">http://elinux.org/RPi_ADC_I2C_Python</a></p>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www.bitflippersanonymous.com/raspberry-pi-projects/i2c-temperature">http://www.bitflippersanonymous.com/raspberry-pi-projects/i2c-temperature</a></dt>
+<dd><p class="first last"># exemple pour un capteur de température i2c</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://mchobby.be/wiki/index.php?title=ArduPi-I2C-Support">http://mchobby.be/wiki/index.php?title=ArduPi-I2C-Support</a></dt>
+<dd><p class="first last"># Exemple de comunication en i2c entre un RPi et un arduino
+en utilisant quick2wire.i2c</p>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Ref:</th><td class="field-body"><ul class="first last simple">
+<li>Livre (papier) Raspberry Pi2, page 558.</li>
+<li>Chapitre 14, Section 2.3, paragraphe 2.3.3 : installation de la carte</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="installation-activation-de-l-i2c">
+<h4>Installation / Activation de l&#8217;I2C<a class="headerlink" href="#installation-activation-de-l-i2c" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>1.1.</strong> Entrée dans le fichier de config du rpi</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>sudo raspi-config</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>9 Advanced Options</dt>
+<dd><ul class="first simple">
+<li>A7 I2C</li>
+</ul>
+<p class="last">[YES], [YES], [Finish]</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p><strong>1.2.</strong> Ajouter une entrée dans le fichier &#8220;modules&#8221;</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>sudo nano /etc/modules</dt>
+<dd><ul class="first last simple">
+<li>ajouter : i2c-dev</li>
+<li>Sauvegarder et quitter</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>1.3.</strong> Ajouter les paquets nécessaires</dt>
+<dd><ul class="first last simple">
+<li>sudo apt-get install i2c-tools</li>
+<li>sudo apt-get install python-smbus</li>
+</ul>
+</dd>
+<dt><strong>1.4.</strong> Redémarer le rpi</dt>
+<dd><ul class="first last simple">
+<li>sudo reboot</li>
+</ul>
+</dd>
+<dt><strong>1.5.</strong> Ajouter l&#8217;utilisateur courant au groupe i2c</dt>
+<dd><ul class="first last simple">
+<li>sudo adduser $USER i2c</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="connaitre-l-adresse-des-matetiels-branches">
+<h4>Connaitre l&#8217;adresse des matétiels branchés<a class="headerlink" href="#connaitre-l-adresse-des-matetiels-branches" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>2.1.</strong> se placer dans le dossier modprob.d</dt>
+<dd><ul class="first last simple">
+<li>cd /etc/modprobe.d/</li>
+</ul>
+</dd>
+<dt><strong>2.2.</strong> executer la commande i2cdetect avec des droits éléver</dt>
+<dd><ul class="first last simple">
+<li>sudo i2cdetect -y 1</li>
+</ul>
+</dd>
+</dl>
+<p>Exemple avec un magnetometre HMC5883L :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>pi@raspiBlanc ~ $ cd /etc/modprobe.d/
+pi@raspiBlanc /etc/modprobe.d $ sudo i2cdetect -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- 1e --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="uart">
+<h3>UART<a class="headerlink" href="#uart" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="liberer-l-uart">
+<h4>Libérer l&#8217;UART<a class="headerlink" href="#liberer-l-uart" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><p><strong>N.B :</strong> par défaut l&#8217;uart est configuré en mode console pour le débug. pour l&#8217;utiliser,
+il faut d&#8217;abord le libérer.</p>
+<blockquote>
+<div><p><strong>1.</strong>  Intérroger le journal sur les dernier événement de la liaison série pour vérifier
+que l&#8217;opération n&#8217;a pas déjà été effectuer</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dmesg</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">tty</span>
+</pre></div>
+</div>
+<p>si l&#8217;opération n&#8217;a pas encore été effectuer, le résultat obtenu doit être :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span>    <span class="mf">0.002072</span><span class="p">]</span> <span class="n">console</span> <span class="p">[</span><span class="n">tty1</span><span class="p">]</span> <span class="n">enabled</span>
+<span class="p">[</span>    <span class="mf">0.195363</span><span class="p">]</span> <span class="mi">3</span><span class="n">f201000</span><span class="o">.</span><span class="n">uart</span><span class="p">:</span> <span class="n">ttyAMA0</span> <span class="n">at</span> <span class="n">MMIO</span> <span class="mh">0x3f201000</span> <span class="p">(</span><span class="n">irq</span> <span class="o">=</span> <span class="mi">83</span><span class="p">,</span> <span class="n">base_baud</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">PL011</span> <span class="n">rev2</span>
+<span class="p">[</span>    <span class="mf">0.695429</span><span class="p">]</span> <span class="n">console</span> <span class="p">[</span><span class="n">ttyAMA0</span><span class="p">]</span> <span class="n">enabled</span>
+</pre></div>
+</div>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>2.1.</strong> configurer l&#8217;UART avec l&#8217;outil de configuration du Rpi</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>2.2.</strong> se déplacer dans les menu selon la séquence suivante</dt>
+<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="mi">8</span> <span class="p">]</span> <span class="o">--&gt;</span> <span class="p">[</span> <span class="n">A8</span><span class="p">]</span> <span class="o">--&gt;</span> <span class="p">[</span> <span class="n">Non</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>Le quatrième écran vous informe que Serial est maintenant désactivé</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">Ok</span> <span class="p">]</span> <span class="o">--&gt;</span> <span class="p">[</span> <span class="n">Finish</span> <span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>2.3.</strong> Redémarer</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">reboot</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>3.</strong>  Vérifier dans le journal que l&#8217;opération a bien été prise en compte</dt>
+<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="n">demsg</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">tty</span>
+</pre></div>
+</div>
+<p>ce qui doit vous donner le résultat suivant :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span>    <span class="mf">0.002051</span><span class="p">]</span> <span class="n">console</span> <span class="p">[</span><span class="n">tty1</span><span class="p">]</span> <span class="n">enabled</span>
+<span class="p">[</span>    <span class="mf">0.195175</span><span class="p">]</span> <span class="mi">3</span><span class="n">f201000</span><span class="o">.</span><span class="n">uart</span><span class="p">:</span> <span class="n">ttyAMA0</span> <span class="n">at</span> <span class="n">MMIO</span> <span class="mh">0x3f201000</span> <span class="p">(</span><span class="n">irq</span> <span class="o">=</span> <span class="mi">83</span><span class="p">,</span> <span class="n">base_baud</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">PL011</span> <span class="n">rev2</span>
+</pre></div>
+</div>
+<p class="last">On constate que la derniere ligne à disparue, le mode debug sur la sortie UART
+est donc bien désactivée.</p>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="pwm-servo-moteur-et-dc-motor">
+<h3>PWM, Servo moteur et DC Motor<a class="headerlink" href="#pwm-servo-moteur-et-dc-motor" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens Web:</th><td class="field-body"><blockquote class="first">
+<div><ul>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://fr.wikipedia.org/wiki/Modulation_de_largeur_d'impulsion">https://fr.wikipedia.org/wiki/Modulation_de_largeur_d&#8217;impulsion</a></dt>
+<dd><p class="first last"># La page wikipedia sur la Modulation de Largeur d&#8217;Impulsion
+(Pulse Width Modulation &#8211; PWM)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-7">http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-7</a></dt>
+<dd><p class="first last"># utilisation du PWM sur raspberry (en francais)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.youtube.com/watch?v=BLtV0Z38S94">https://www.youtube.com/watch?v=BLtV0Z38S94</a></dt>
+<dd><p class="first last"># utilisation du PWM sur raspberry (video)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.youtube.com/watch?v=ddlDgUymbxc">https://www.youtube.com/watch?v=ddlDgUymbxc</a></dt>
+<dd><p class="first last"># utilisation du servo moteur avec le RPi (video)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.youtube.com/watch?v=v2jpnyKPH64">https://www.youtube.com/watch?v=v2jpnyKPH64</a></dt>
+<dd><p class="first last"># principe de fonctionnement d&#8217;un servo moteur (video)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.youtube.com/watch?v=W7cV9_W12sM">https://www.youtube.com/watch?v=W7cV9_W12sM</a></dt>
+<dd><p class="first last"># utilisation d&#8217;un DC Motor avec le Pi (video)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<dl class="last docutils">
+<dt><strong>1.</strong> utilisation general du PWM / PFM</dt>
+<dd><p class="first">Exemple d&#8217; utilisation (en python 3) :</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">debut</span> <span class="n">de</span> <span class="n">script</span> <span class="p">]</span>
+    <span class="kn">import</span> <span class="nn">RPI.GPIO</span> <span class="k">as</span> <span class="nn">GPIO</span>
+        <span class="c1"># importation de la bibliotheque RPI</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="o">.</span><span class="n">BCM</span><span class="p">)</span>
+        <span class="c1"># Utilisation des GPIO en mode &quot;BCM&quot;</span>
+
+    <span class="n">une_broche_du_pi</span> <span class="o">=</span> <span class="mi">25</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">une_broche_du_pi</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+        <span class="c1"># On choisi la sur la quelle on veut faire du PWM</span>
+        <span class="c1"># Il vaut mieu eviter de choisir une broche qui est aussi utilisee</span>
+        <span class="c1"># pour autre chose comme de l&#39;I2C, du SPI ou du serial</span>
+
+    <span class="n">frequence</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">rapportCyclique</span> <span class="o">=</span> <span class="mi">50</span>
+
+    <span class="n">p</span> <span class="o">=</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">PWM</span><span class="p">(</span><span class="n">une_broche_du_pi</span><span class="p">,</span> <span class="n">frequence</span><span class="p">)</span>
+        <span class="c1"># on initialise le PWM sur la broche choisie et on indique la frequence</span>
+
+    <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">rapportCyclique</span><span class="p">)</span>
+        <span class="c1"># On l&#39;impulsion en indiquant le rapport cyclique (Duty Cycle)</span>
+        <span class="c1">#</span>
+        <span class="c1"># Le rapport cyclique correspond au rapport de la durée de l&#39;impultion</span>
+        <span class="c1"># sur la periode. Cette valeur est exprimée en pourcentage</span>
+        <span class="c1"># voir https://fr.wikipedia.org/wiki/Rapport_cyclique_d&#39;ouverture</span>
+
+    <span class="n">rapportCyclique</span> <span class="o">=</span> <span class="mi">80</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">ChangeDutyCycle</span><span class="p">(</span><span class="n">rapportCyclique</span><span class="p">)</span>
+        <span class="c1"># pour changer le rapport cyclique &quot;a la volee&quot;, on utilise</span>
+        <span class="c1"># la methode RPI.GPIO.PWM.ChangeDutyCycle()</span>
+
+    <span class="n">frequence</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">ChangeFrequency</span><span class="p">(</span><span class="n">frequence</span><span class="p">)</span>
+        <span class="c1"># On peut changer la frequence &quot;a la volee&quot;. On parle alors de PFM</span>
+        <span class="c1"># on utilise la methode RPI.GPIO.PWM.ChangeFrequency()</span>
+
+    <span class="n">p</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="c1"># on arrete l&#39;impulsion</span>
+
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span>
+        <span class="c1"># on libere toutes les GPIO</span>
+<span class="p">[</span><span class="n">fin</span> <span class="n">de</span> <span class="n">script</span> <span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>2.</strong> servo moteur :</dt>
+<dd><p class="first">La periode pour un servo moteur est generalement de 20ms
+(a controler avec la documentation). les angles : 0 ; 90 ; 180 son généralement
+associes a des duree d&#8217;impulsion de 0.5 ; 1.5 ; 2.5 ms ce qui donne les rapports cycliques
+(duty cycle) suivants :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">0.5</span><span class="o">/</span><span class="mi">20</span> <span class="o">=</span> <span class="mf">2.5</span><span class="o">%</span>
+<span class="mf">1.5</span><span class="o">/</span><span class="mi">20</span> <span class="o">=</span> <span class="mf">7.5</span><span class="o">%</span>
+<span class="mf">2.5</span><span class="o">/</span><span class="mi">20</span> <span class="o">=</span> <span class="mf">12.5</span> <span class="o">%</span>
+</pre></div>
+</div>
+<p class="last">L&#8217;ensemble des valeurs de 0 a 180° son donc comprisent entre 0.5 et 2.5 ms soit
+entre 2.5% et 12.5%.</p>
+</dd>
+<dt><strong>3.</strong> DC motor :</dt>
+<dd><p class="first">Le rapport cyclique permet de gérer la vitesse du moteur(valeur de 0 à 100).
+Il est préférable d&#8217;utiliser 2 broches PWM pour gerer le sens de rotation.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="8%" />
+<col width="85%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">A</th>
+<th class="head">B</th>
+<th class="head">Actions</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="2">0</td>
+<td>0</td>
+<td>rotation off</td>
+</tr>
+<tr class="row-odd"><td colspan="2">0</td>
+<td>1</td>
+<td>rotation on (sens 1)</td>
+</tr>
+<tr class="row-even"><td colspan="2">1</td>
+<td>0</td>
+<td>rotation on (sens 2)</td>
+</tr>
+<tr class="row-odd"><td colspan="2">1</td>
+<td>1</td>
+<td>rotation off</td>
+</tr>
+</tbody>
+</table>
+<p class="last">La frequence est a adapter en fonction du bruit du moteur
+(quant il &#8220;chante&#8221;, c&#8217;est pas bon)</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="python">
+<h2>PYTHON<a class="headerlink" href="#python" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="obtenir-de-l-aide-sur-une-class-ou-une-methode-python">
+<h3>Obtenir de l&#8217;aide sur une class ou une méthode  (python)<a class="headerlink" href="#obtenir-de-l-aide-sur-une-class-ou-une-methode-python" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt>Dans la console Python, saisir  :</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s2">&quot;nom_de_la_class&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux">
+<h3>Lignes de code à insérer au debut de chaque script sous linux<a class="headerlink" href="#lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+</pre></div>
+</div>
+<p><strong>N.B :</strong> copier ces lignes entierement sans oublier le &#8220;#&#8221; devant.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="os-library">
+<h3>os library<a class="headerlink" href="#os-library" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p><strong>1.1.</strong> Connaitre le repertoitre de travail</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+    <span class="c1"># on commence par importer la bibliotheque &#39;os&#39;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>1.2.</strong> Redefinir le repertoir courant</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;mon_rep/de/travail&quot;</span><span class="p">)</span>
+    <span class="c1"># meme sous windows, il faut remplacer les &quot;\&quot; dans le chemin de</span>
+    <span class="n">destination</span> <span class="n">par</span> <span class="n">des</span> <span class="s2">&quot;/&quot;</span>
+
+    <span class="n">ex</span> <span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;C:/mntJeanCloud/Perso/LAB/Pierre/python/projet/appliActivity&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="pip">
+<h3>pip<a class="headerlink" href="#pip" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens web:</th><td class="field-body"><ul class="first last">
+<li><p class="first"><a class="reference external" href="http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/">http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="http://www.inspyration.org/tutoriels/utiliser-pip">http://www.inspyration.org/tutoriels/utiliser-pip</a></p>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://sametmax.com/votre-python-aime-les-pip/">http://sametmax.com/votre-python-aime-les-pip/</a></dt>
+<dd><p class="first last"># ce liens montre des exemples d&#8217;utilisation de pip</p>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="installation-de-pip">
+<h4>Installation de PIP<a class="headerlink" href="#installation-de-pip" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><p><strong>1.1.</strong> Recuperation et installation du packet</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">bootstrap</span><span class="o">.</span><span class="n">pypa</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">get</span><span class="o">-</span><span class="n">pip</span><span class="o">.</span><span class="n">py</span>
+    <span class="c1"># recuperation du script d&#39;installation</span>
+
+<span class="n">python</span> <span class="n">get</span><span class="o">-</span><span class="n">pip</span><span class="o">.</span><span class="n">py</span>
+    <span class="c1"># se placer dans le repertoire d&#39;installation et lancer le script</span>
+    <span class="c1"># une elevation est peut être necessaire</span>
+</pre></div>
+</div>
+<p><strong>1.2.</strong> Installation depuis apt-get</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span>
+    <span class="c1"># pip sera installer dans le repertoir suivant :</span>
+    <span class="c1"># /usr/bin/pip3</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="utilisation-de-pip">
+<h4>Utilisation de PIP<a class="headerlink" href="#utilisation-de-pip" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><p>La commande pip s&#8217;execute directement dans le shell</p>
+<p><strong>2.1.</strong> Executer pip pour python3 dans un environement linux</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span><span class="o">-</span><span class="mf">3.2</span> <span class="p">[</span><span class="n">une_commande</span><span class="p">]</span>
+        <span class="n">ou</span>
+<span class="n">pip3</span> <span class="p">[</span><span class="n">une</span> <span class="n">commande</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>2.2.</strong> obtenir la liste des options</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">help</span>
+    <span class="c1"># fonctionne aussi avec pip tout seul</span>
+</pre></div>
+</div>
+<p><strong>2.3.</strong> chercher un paquet</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">search</span> <span class="p">[</span><span class="n">nom_du_paquet_rechercher</span><span class="p">]</span>
+    <span class="c1"># on peut recherher plusieurs termes en les separent par des espaces</span>
+    <span class="c1"># ex : pip search py3 numpy</span>
+    <span class="c1"># attention, la recherche est egalement faite sur</span>
+    <span class="c1"># les definissions des paquets</span>
+</pre></div>
+</div>
+<p><strong>2.4.</strong> installer un paquet</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="p">[</span><span class="n">nom_du_paquet_a_installer</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper">
+<h3>Les environnements virtuels Python : virtualenv et virtualenvwrapper<a class="headerlink" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://sametmax.com/les-environnement-virtuels-python-virtualenv-et-virtualenvwrapper/">http://sametmax.com/les-environnement-virtuels-python-virtualenv-et-virtualenvwrapper/</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="installation-des-environements-virtuels">
+<h4>installation des environements virtuels<a class="headerlink" href="#installation-des-environements-virtuels" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><p><strong>1.</strong>  Installation de virtualenv et virtualenvwrapper</p>
+<p>N.B : il est préférable de les installer en sudo et non en root (su)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenvwrapper</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="configuration-des-environements-virtuels">
+<h4>configuration des environements virtuels<a class="headerlink" href="#configuration-des-environements-virtuels" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><p><strong>2.1.</strong> Créer un dossier pour les environements virtuels</p>
+<blockquote>
+<div><ul class="simple">
+<li>Se placer dans le répertoire de l&#8217;utilisateur (/home/pi)</li>
+<li>Créer un dossier pour les environements virtuels</li>
+</ul>
+</div></blockquote>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">virtualenv</span>
+</pre></div>
+</div>
+<p><strong>2.2.1.</strong>   Editer le fichier .bashrc</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<p><strong>2.2.2.</strong>   renseigner le fichier .bashrc</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>*Se placer à la fin du fichier et saisir :
+
+    # virtualenvwrapper
+
+    export WORKON_HOME=~/virtualenv
+        # si le dossier n&#39;a pas été créer au même endroit ou avec le même
+        # nom, modifier la ligne précédente en conséquense
+
+    mkdir -p $WORKON_HOME
+    source  /usr/local/bin/virtualenvwrapper.sh
+        # si virtualenvwrapper.sh n&#39;est pas installer au même endroit,
+        # adapter le chemin d&#39;accès au fichier
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="utilisation-environements-virtuels">
+<h4>Utilisation environements virtuels<a class="headerlink" href="#utilisation-environements-virtuels" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><p><strong>3.1.</strong> Création d&#8217;un nouvel environements virtuel</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="p">[</span><span class="n">nom_de_l_environement</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">2</span>
+    <span class="c1"># ex : mkvirtualenv env1 -P /usr/bin/python3.2</span>
+
+    <span class="c1"># un dossier du nom de votre environement virtuel est alors créer</span>
+    <span class="c1"># dans le dossier virtualenv créer en section 2.1</span>
+
+    <span class="c1"># l&#39;option &quot;-p usr/bin/python3.2&quot; permet de configurer l&#39;environements</span>
+    <span class="c1"># virtuel pour python3. par défaut sur Rpi, c&#39;est python2 qui est</span>
+    <span class="c1"># utilisé</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><strong>3.2.</strong> Activation / désactivation de l&#8217;environment</dt>
+<dd><p class="first">Pour être utilisé, un environement doit être activé :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">workon</span> <span class="p">[</span><span class="n">nom_de_l_environement</span><span class="p">]</span>
+        <span class="c1"># ex : workon env1</span>
+</pre></div>
+</div>
+<p>A la fin de son utilisation, ou pour passer sur un autre environement, il faut
+le désactiver :</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">deactivate</span>
+    <span class="c1"># c&#39;est tout !</span>
+    <span class="c1"># Attention, ce n&#39;est pas deSactivate, mais bien deactivate sans &quot;S&quot;</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>3.3.</strong> supprimer un environement</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">rmvirtualenv</span> <span class="p">[</span><span class="n">nom_de_l_environement</span><span class="p">]</span>
+    <span class="c1"># ex : rmvirtualenv env1</span>
+    <span class="c1"># le dossier de lenvironement sera également supprimer</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="un-shell-python-qui-fait-de-l-auto-completion">
+<h3>Un shell Python qui fait de l&#8217;auto completion<a class="headerlink" href="#un-shell-python-qui-fait-de-l-auto-completion" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>ipython</li>
+<li>ipython3 (pour python3)</li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="convertir-un-string-en-bytes">
+<h3>convertir un string en bytes<a class="headerlink" href="#convertir-un-string-en-bytes" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">mystring</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="faire-un-executable-a-partir-d-un-script">
+<h3>faire un executable à partir d&#8217;un script<a class="headerlink" href="#faire-un-executable-a-partir-d-un-script" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">les softs:</th><td class="field-body"><ul class="first last simple">
+<li>py2exe</li>
+<li>cx_Freeze</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>La procédure d&#8217;utilisation :</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first last">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://python.developpez.com/faq/?page=Py2exe">http://python.developpez.com/faq/?page=Py2exe</a></dt>
+<dd><p class="first last"># tuto pour py2exe</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.youtube.com/watch?v=k3VoLjGA6jI">https://www.youtube.com/watch?v=k3VoLjGA6jI</a></dt>
+<dd><p class="first last"># video EN sur py2exe</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://pypi.python.org/pypi/py2exe/0.9.2.0/">https://pypi.python.org/pypi/py2exe/0.9.2.0/</a></dt>
+<dd><p class="first last"># py2exe (soft + install)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://pypi.python.org/pypi?:action=display&amp;name=cx_Freeze&amp;version=4.3.4">https://pypi.python.org/pypi?:action=display&amp;name=cx_Freeze&amp;version=4.3.4</a></dt>
+<dd><p class="first last"># cx_Freeze (soft)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="fichiers-de-configuration-ini">
+<h3>Fichiers de configuration (.ini)<a class="headerlink" href="#fichiers-de-configuration-ini" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first last">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://stackoverflow.com/questions/8884188/how-to-read-and-write-ini-file-with-python">http://stackoverflow.com/questions/8884188/how-to-read-and-write-ini-file-with-python</a></dt>
+<dd><p class="first last"># exemple util pour comprendre le fonctionnement</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www.marclebrun.be/wiki/doku.php?id=python:fichier_de_configuration_configparser">http://www.marclebrun.be/wiki/doku.php?id=python:fichier_de_configuration_configparser</a></dt>
+<dd><p class="first last"># Exemple en francais (python2)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www.developpez.net/forums/blogs/208887-tyrtamos/b23/simplifier-gestion-fichiers-ini-python/">http://www.developpez.net/forums/blogs/208887-tyrtamos/b23/simplifier-gestion-fichiers-ini-python/</a></dt>
+<dd><p class="first last"># Autre exemple (pytohn3) en francais</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.python.org/3.4/library/configparser.html">https://docs.python.org/3.4/library/configparser.html</a></dt>
+<dd><p class="first last"># Doc officiel (EN)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="docutils-restructuredtext-rst-sphinx">
+<h2>DocUtils ; reStructuredText (.rst) ; Sphinx<a class="headerlink" href="#docutils-restructuredtext-rst-sphinx" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="docutils">
+<h3>DocUtils<a class="headerlink" href="#docutils" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://docutils.sourceforge.net/">http://docutils.sourceforge.net/</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="restructuredtext-rst">
+<h3>reStructuredText (.rst)<a class="headerlink" href="#restructuredtext-rst" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first last">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://fr.wikipedia.org/wiki/ReStructuredText">https://fr.wikipedia.org/wiki/ReStructuredText</a></dt>
+<dd><p class="first last"># (Definission Wikipedia)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://aful.org/wikis/interop/ReStructuredText">https://aful.org/wikis/interop/ReStructuredText</a></dt>
+<dd><p class="first last"># Exemple et definission en francais</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://mg.pov.lt/restview/">https://mg.pov.lt/restview/</a></dt>
+<dd><p class="first last"># api en python permettant de convertir dynamiquement
+les fichiers &#8221;.rst&#8221; en page Web</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/steenhulthin/reStructuredText_NPP">https://github.com/steenhulthin/reStructuredText_NPP</a></dt>
+<dd><p class="first last"># Pour ajouter la syntaxe &#8220;reStructuredText&#8221; à notePad++</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">http://docutils.sourceforge.net/docs/user/rst/quickref.html</a></dt>
+<dd><p class="first last"># Un petit guide de reférence</p>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="sphinx">
+<h3>Sphinx<a class="headerlink" href="#sphinx" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/stable/tutorial.html">http://www.sphinx-doc.org/en/stable/tutorial.html</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="installer-sphinx">
+<h4>Installer Sphinx<a class="headerlink" href="#installer-sphinx" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><dl class="docutils">
+<dt>::</dt>
+<dd>pip install sphinx</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="demarrage-et-initialisation-rapide">
+<h4>Démarrage et initialisation rapide<a class="headerlink" href="#demarrage-et-initialisation-rapide" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><dl class="docutils">
+<dt>::</dt>
+<dd>sphinx-quickstart</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="linux">
+<h2>LINUX<a class="headerlink" href="#linux" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="rappel-des-commandes-de-bases">
+<h3>rappel des commandes de bases<a class="headerlink" href="#rappel-des-commandes-de-bases" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="http://wiki.linux-france.org/wiki/Les_commandes_fondamentales_de_Linux">http://wiki.linux-france.org/wiki/Les_commandes_fondamentales_de_Linux</a></li>
+</ul>
+</div></blockquote>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&#8212; Command &#8212;</th>
+<th class="head">&#8212; Meaning &#8212;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ls</td>
+<td><dl class="first last docutils">
+<dt>list files in current directory</dt>
+<dd><p class="first"># pour afficher la list de tous les éléments,
+même cachés</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li>ls -a</li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td>cd</td>
+<td>change directory</td>
+</tr>
+<tr class="row-even"><td>pwd</td>
+<td>print working directory</td>
+</tr>
+<tr class="row-odd"><td>rm</td>
+<td><dl class="first last docutils">
+<dt>filename remove filename</dt>
+<dd><p class="first"># Pour forcer la suppression d&#8217;un
+# répertoir non vide</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li>rm -Rf monrepertoire</li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td>mkdir <em>directoryname</em></td>
+<td>make directory with directoryname</td>
+</tr>
+<tr class="row-odd"><td>rmdir <em>directoryname</em></td>
+<td>remove empty directory</td>
+</tr>
+<tr class="row-even"><td>cat textfile</td>
+<td>display contents of textfile in the terminal</td>
+</tr>
+<tr class="row-odd"><td>mv oldfile newfile</td>
+<td>move (rename) oldfile to newfile</td>
+</tr>
+<tr class="row-even"><td>cp oldfile newfile</td>
+<td>copy oldfile to newfile</td>
+</tr>
+<tr class="row-odd"><td>man command</td>
+<td>display manual of command</td>
+</tr>
+<tr class="row-even"><td>date</td>
+<td>read system date/time</td>
+</tr>
+<tr class="row-odd"><td>echo</td>
+<td>echo what is typed back in the terminal</td>
+</tr>
+<tr class="row-even"><td>grep</td>
+<td>search program that uses regular expressions</td>
+</tr>
+<tr class="row-odd"><td>sudo</td>
+<td>perform as root user</td>
+</tr>
+<tr class="row-even"><td>./program</td>
+<td>run program</td>
+</tr>
+<tr class="row-odd"><td>exit</td>
+<td>quit terminal session</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="rappel-des-raccourcis-de-navigation-dans-le-shell">
+<h3>rappel des raccourcis de navigation dans le shell<a class="headerlink" href="#rappel-des-raccourcis-de-navigation-dans-le-shell" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key or Key Combination</th>
+<th class="head">Function</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Ctrl + A</td>
+<td>Move cursor to beginning of line</td>
+</tr>
+<tr class="row-odd"><td>Ctrl + C</td>
+<td>Stop currently-executing process</td>
+</tr>
+<tr class="row-even"><td>Ctrl + D</td>
+<td>Log out—equivalent to typing exit</td>
+</tr>
+<tr class="row-odd"><td>Ctrl + E</td>
+<td>Move cursor to end of line</td>
+</tr>
+<tr class="row-even"><td>Ctrl + H</td>
+<td>Delete character in front of cursor</td>
+</tr>
+<tr class="row-odd"><td>Ctrl + L</td>
+<td>Clear terminal</td>
+</tr>
+<tr class="row-even"><td>Ctrl + R</td>
+<td>Search command history</td>
+</tr>
+<tr class="row-odd"><td>Ctrl + Z</td>
+<td>Suspend a program</td>
+</tr>
+<tr class="row-even"><td>Arrow Left/Right</td>
+<td>Move cursor left/right one character</td>
+</tr>
+<tr class="row-odd"><td>Arrow Up/Down</td>
+<td>Scrolls through previous commands</td>
+</tr>
+<tr class="row-even"><td>Shift + PageUp/PageDown</td>
+<td>Move one page up or down in terminal output</td>
+</tr>
+<tr class="row-odd"><td>Tab</td>
+<td>Command or file name completion</td>
+</tr>
+<tr class="row-even"><td>Tab Tab</td>
+<td>Shows all command or file name possibilities</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="activer-le-compte-root">
+<h3>activer le compte root<a class="headerlink" href="#activer-le-compte-root" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">passwd</span> <span class="n">root</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="connaitre-la-version-du-systeme">
+<h3>connaitre la version du systeme<a class="headerlink" href="#connaitre-la-version-du-systeme" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="installation-de-lsb-release">
+<h4>installation de lsb-release<a class="headerlink" href="#installation-de-lsb-release" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">lsb</span><span class="o">-</span><span class="n">release</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="utilisation-de-lsb-release">
+<h4>utilisation de lsb-release<a class="headerlink" href="#utilisation-de-lsb-release" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">lsb_release</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="connaitre-la-version-d-un-paquet">
+<h3>connaitre la version d&#8217;un paquet<a class="headerlink" href="#connaitre-la-version-d-un-paquet" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="installation-de-apt-show-versions">
+<h4>installation de apt-show-versions<a class="headerlink" href="#installation-de-apt-show-versions" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">apt</span><span class="o">-</span><span class="n">show</span><span class="o">-</span><span class="n">versions</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="utilisation-de-apt-show-versions">
+<h4>utilisation de apt-show-versions<a class="headerlink" href="#utilisation-de-apt-show-versions" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">show</span><span class="o">-</span><span class="n">versions</span> <span class="o">*</span><span class="n">nom_du_paquet</span><span class="o">*</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-copier-des-fichiers-en-root-depuis-l-interface-graphique">
+<h3>Pour copier des fichiers en root depuis l&#8217;interface graphique<a class="headerlink" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p>Installation du logiciel &#8220;gksu&#8221;</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">gksu</span>
+</pre></div>
+</div>
+<p>Ouvrir l&#8217;explorateur de fichier.
+dans le menu <strong>&#8220;Aide&#8221;</strong>, cliquer sur l&#8217;item <strong>&#8220;A propos&#8221;</strong>
+dans la fentre d&#8217;information qui s&#8217;affiche, relever le nom de l&#8217;explorateur</p>
+<blockquote>
+<div>ex : Thunar</div></blockquote>
+<dl class="docutils">
+<dt>Dans une fenêtre terminal entrer :</dt>
+<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="n">gksu</span> <span class="o">*</span><span class="n">nom_de_l_explorateur</span><span class="o">*</span>
+</pre></div>
+</div>
+<p class="last">ex : gksu Thunar</p>
+</dd>
+</dl>
+<p>L&#8217;explorateur de fichier doit s&#8217;ouvrir. Un banseau orange vous signal que l&#8217;on se
+trouve sur le compte root.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-passer-la-langue-et-le-clavier-en-francais">
+<h3>pour passer la langue et le clavier en francais<a class="headerlink" href="#pour-passer-la-langue-et-le-clavier-en-francais" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="http://the-raspberry.com/changer-langue-raspberry-pi">http://the-raspberry.com/changer-langue-raspberry-pi</a></li>
+<li><a class="reference external" href="https://www.raspberrypi.org/forums/viewtopic.php?f=65&amp;t=21700">https://www.raspberrypi.org/forums/viewtopic.php?f=65&amp;t=21700</a></li>
+</ul>
+</div></blockquote>
+<p><strong>1.</strong>  Changer la langue depuis l&#8217;interface de configuration du Pi</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>se connecter a l&#8217;interface de configuration</dt>
+<dd><ul class="first last simple">
+<li>sudo raspi-config</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Ouvrir le menu &#8220;5 Internalisation Options&#8221;</p>
+</li>
+<li><p class="first">Ouvrir &#8220;I1 Change Locale&#8221;</p>
+</li>
+<li><p class="first">Si une langue comme <strong>&#8220;en_GB.UTF-8 UTF-8&#8221;</strong> est cochee, decochez-la
+en appuyant sur <strong>&#8220;Espace&#8221;</strong></p>
+</li>
+<li><p class="first">Cochez la langue <strong>&#8220;fr_FR.UTF-8 UTF-8</strong>&#8220;</p>
+</li>
+<li><p class="first">Selectioner <strong>&#8220;OK&#8221;</strong> puis valider</p>
+</li>
+<li><p class="first">Verifier le jeu de parametres regionaux puis valider sur <strong>&#8220;OK&#8221;</strong></p>
+</li>
+<li><p class="first">Valider sur &#8220;Finish&#8221; puis redemarrer</p>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>2.</strong> Modifier manuellement le fichier keyboard</p>
+<blockquote class="last">
+<div><ul>
+<li><dl class="first docutils">
+<dt>Editer le fichier keyboard</dt>
+<dd><ul class="first last simple">
+<li>sudo nano /etc/default/keyboard</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">remplacer &#8220;gb&#8221; par &#8220;fr&#8221;</p>
+</li>
+</ul>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-rendre-un-fichier-executable">
+<h3>Pour rendre un fichier &#8220;Executable&#8221;<a class="headerlink" href="#pour-rendre-un-fichier-executable" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">x</span> <span class="p">[</span><span class="n">nomDuFichier</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">
+<h3>Pour pouvoir se connecter en RDP sur un poste Linux<a class="headerlink" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">xrdp</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-faire-du-xforwarding">
+<h3>pour faire du XForwarding<a class="headerlink" href="#pour-faire-du-xforwarding" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://blog.sckyzo.com/x11-forwarding-en-ssh-via-putty-windows/">http://blog.sckyzo.com/x11-forwarding-en-ssh-via-putty-windows/</a></li>
+<li><a class="reference external" href="http://frans-web.com/?p=18">http://frans-web.com/?p=18</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">
+<h3>Pour mettre une IP fixe sur une interfaces réseau<a class="headerlink" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="http://www.cyberciti.biz/tips/howto-ubuntu-linux-convert-dhcp-network-configuration-to-static-ip-configuration.html">http://www.cyberciti.biz/tips/howto-ubuntu-linux-convert-dhcp-network-configuration-to-static-ip-configuration.html</a></li>
+</ul>
+</div></blockquote>
+<p>Ouvrir le fichiers de configuration des interfaces :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">network</span><span class="o">/</span><span class="n">interfaces</span>
+</pre></div>
+</div>
+<p>Remplacer :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>    <span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">dhcp</span>
+
+<span class="n">par</span>
+    <span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">32.254</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+    <span class="n">network</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">32.0</span> <span class="p">(</span><span class="n">optionel</span><span class="p">)</span>
+    <span class="n">gateway</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">32.1</span> <span class="p">(</span><span class="n">optionel</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Redémarrer le réseau</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">networking</span> <span class="n">restart</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-active-le-wifi">
+<h3>Pour active le WIFI<a class="headerlink" href="#pour-active-le-wifi" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="https://wiki.debian.org/fr/WiFi/HowToUse">https://wiki.debian.org/fr/WiFi/HowToUse</a></li>
+</ul>
+</div></blockquote>
+<p>Ouvrir le fichiers de configuration des interfaces :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">network</span><span class="o">/</span><span class="n">interfaces</span>
+</pre></div>
+</div>
+<p>remplacer :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>    <span class="n">iface</span> <span class="n">wlan0</span> <span class="n">inet</span> <span class="n">manual</span>
+
+<span class="n">par</span>
+    <span class="n">iface</span> <span class="n">wlan0</span> <span class="n">inet</span> <span class="n">dhcp</span>
+</pre></div>
+</div>
+<p>Redémarrer les interfaces réseau</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">ifdown</span> <span class="o">-</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">ifup</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="se-connecter-a-un-reseau-wifi-en-ligne-de-commande">
+<h3>Se connecter a un reseau wifi en ligne de commande<a class="headerlink" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="http://korben.info/comment-se-connecter-a-un-reseau-wifi-en-ligne-de-commande-sous-linux.html">http://korben.info/comment-se-connecter-a-un-reseau-wifi-en-ligne-de-commande-sous-linux.html</a></li>
+</ul>
+</div></blockquote>
+<p>Demarer la carte wifi</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ifconfig</span> <span class="n">wlan0</span> <span class="n">up</span>
+</pre></div>
+</div>
+<p>Rechercher les différents reseau a porter</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">iwlist</span> <span class="n">ath0</span> <span class="n">scan</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="connaitre-la-liste-des-materiel-usb">
+<h3>Connaitre la liste des matériel usb<a class="headerlink" href="#connaitre-la-liste-des-materiel-usb" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">lsusb</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="connaitre-l-espace-disque-utilise-et-celui-disponible">
+<h3>Connaitre l&#8217;éspace disque utilise et celui disponible<a class="headerlink" href="#connaitre-l-espace-disque-utilise-et-celui-disponible" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="les-posrts-series">
+<h3>Les posrts séries<a class="headerlink" href="#les-posrts-series" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.instructables.com/id/Read-and-write-from-serial-port-with-Raspberry-Pi/">http://www.instructables.com/id/Read-and-write-from-serial-port-with-Raspberry-Pi/</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Rappel (equivalence de la notation Windows / Linux</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="43%" />
+<col width="57%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Windows</th>
+<th class="head">Linux</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>COM1</td>
+<td>/dev/ttyS0</td>
+</tr>
+<tr class="row-odd"><td>COM2</td>
+<td>/dev/ttyS1</td>
+</tr>
+<tr class="row-even"><td>COM3</td>
+<td>/dev/ttyS2</td>
+</tr>
+<tr class="row-odd"><td>COM4</td>
+<td>/dev/ttyS3</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="connaitre-la-liste-des-ports-serie">
+<h4>Connaitre la liste des ports série :<a class="headerlink" href="#connaitre-la-liste-des-ports-serie" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">tty</span><span class="o">*</span>
+    <span class="c1"># La commande retourne généralement plus de 50 tty.</span>
+    <span class="c1"># Cependant, les tty associés au port USB disposent d&#39;une nomenclature différente.</span>
+    <span class="c1"># Ils contiennent habituellement USB ou ACM (Abstract Control Model)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="interoger-le-journal-sur-les-ports-serie">
+<h4>interoger le journal sur les ports série :<a class="headerlink" href="#interoger-le-journal-sur-les-ports-serie" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dmesg</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">tty</span>
+    <span class="c1"># Information plus complète qu&#39;avec l&#39;instruction précédente</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="faire-du-multi-screen-sur-une-fenetre-terminal">
+<h3>faire du multi-screen  sur une fenêtre terminal<a class="headerlink" href="#faire-du-multi-screen-sur-une-fenetre-terminal" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="installation-de-screen">
+<h4>Installation de screen<a class="headerlink" href="#installation-de-screen" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">screen</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lancer-l-application-screen">
+<h4>Lancer l&#8217;application &#8220;screen&#8221;<a class="headerlink" href="#lancer-l-application-screen" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">screen</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="liste-des-commandes-des-bases-pour-screen">
+<h4>Liste des commandes des bases pour screen<a class="headerlink" href="#liste-des-commandes-des-bases-pour-screen" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Raccourcis clavier</th>
+<th class="head">Fonctions</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>screen</td>
+<td>Lancer screen</td>
+</tr>
+<tr class="row-odd"><td>CTRL+[a]    &#8211;&gt; [c]</td>
+<td>Ouvrir un nouveau screen</td>
+</tr>
+<tr class="row-even"><td>CTRL+[a]    &#8211;&gt; [espace]</td>
+<td>Basculer vers le screen suivant</td>
+</tr>
+<tr class="row-odd"><td>CTRL+[a][a]</td>
+<td>Basculer entre le teminal actif et le dernier consulté</td>
+</tr>
+<tr class="row-even"><td>CTRL+[a]    &#8211;&gt; d</td>
+<td>Détacher la session screen (permet) de fermer la console
+sans arréter les process</td>
+</tr>
+<tr class="row-odd"><td>screen -r</td>
+<td>Se reconnecter à la session screen tel qu&#8217;elle était
+lors du détachement avec CTRL[a][d]. On parle de rattacher
+le screen</td>
+</tr>
+<tr class="row-even"><td>exit</td>
+<td>Ferme le screen courrant</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-creer-un-script-qui-s-execute-au-demarrage-du-syteme">
+<h3>pour créer un script qui s&#8217;execute au démarrage du sytème<a class="headerlink" href="#pour-creer-un-script-qui-s-execute-au-demarrage-du-syteme" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="docutils">
+<dt>Pour faire en sorte qu&#8217;un script s&#8217;execute au démarrage, il faut 2 éléments distincts :</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Un script shell placé dans <strong>/etc/init.d</strong></dt>
+<dd><p class="first"># <strong>N.B :</strong> le &#8220;d&#8221; dans &#8220;int.d&#8221; signifie : deamon.
+C&#8217;est le nom des services sous linux</p>
+<dl class="last docutils">
+<dt>exemple de script</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier"><strong>/etc/init.d/skeleton</strong></span><dd><p class="first last"># Le fichier skeleton, dans linux, est donné a titre de model.
+Il est conseillé de se faire une copie du fichier
+dans ses documents et de travailler à partir de cette exemple</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>un script (notre code python) placé dans <strong>/usr/sbin</strong></dt>
+<dd><p class="first last"># <strong>N.B :</strong> le &#8220;s&#8221; dans &#8220;sbin&#8221;, signifie : system.
+Le bin repésente les Binnaires,
+c&#8217;est à dire les executables.
+Le dossier sbin est donc le dossier
+qui contien les executable du systeme,
+autremant dit les services.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="preparation-du-script-shell">
+<h4>Préparation du script shell<a class="headerlink" href="#preparation-du-script-shell" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><p><strong>1.</strong> ouvrir une copie du fichier &#8220;skeleton&#8221;. et modifier les ligne suivante :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          skeleton                   &lt;-- le titre
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Example initscript         &lt;-- description courte
+# Description:       This file should be used   &lt;-- description longue
+#                    to construct scripts to be
+#                    placed in /etc/init.d.
+### END INIT INFO
+
+# Author: Foo Bar &lt;foobar@baz.org&gt;              &lt;-- votre nom
+#
+# Please remove the &quot;Author&quot; lines above and replace them
+# with your own name if you copy and modify this script.
+
+# Do NOT &quot;set -e&quot;
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+DESC=&quot;Description of the service&quot;
+NAME=daemonexecutablename                       &lt;-- le nom de votre deamon
+DAEMON=/usr/sbin/$NAME                          &lt;-- le chemin de votre script si
+                                                    ce dernier est different du
+                                                    chemin ci contre
+
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          skeleton
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Example initscript
+# Description:       This file should be used to construct scripts to be
+#                    placed in /etc/init.d.
+### END INIT INFO
+
+# Author: Foo Bar &lt;foobar@baz.org&gt;
+#
+# Please remove the &quot;Author&quot; lines above and replace them
+# with your own name if you copy and modify this script.
+
+# Do NOT &quot;set -e&quot;
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+DESC=&quot;Description of the service&quot;
+NAME=daemonexecutablename
+DAEMON=/usr/sbin/$NAME
+DAEMON_ARGS=&quot;--options args&quot;
+PIDFILE=/var/run/$NAME.pid
+SCRIPTNAME=/etc/init.d/$NAME
+</pre></div>
+</div>
+<p><strong>2.</strong> après avoir effectuer les modification, enregistrer le fichier
+sous un autre nom (ex : blink_init) dans le dossier :</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>3.</strong> depuis le dossier <strong>/etc/init.d</strong>, ouvrir une fenêtre terminale
+et rendre le script executable avec la commande suivante :</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">x</span> <span class="p">[</span><span class="n">nom_du_script</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>ex : chmod a+x blink_init</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="preparation-du-script-python">
+<h4>Préparation du script python<a class="headerlink" href="#preparation-du-script-python" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><p><strong>1.</strong> Si se n&#8217;est pas déjà fait, editer le script et ajouter la ligne suivante
+sur la premiere ligne de votre fichier</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>2.</strong> Copier le fichier dans le dossier <strong>/usr/sbin/</strong></p>
+<dl class="docutils">
+<dt><strong>3.</strong> rendre le script executalbe</dt>
+<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">x</span> <span class="p">[</span><span class="n">nom_du_script</span><span class="o">.</span><span class="n">py</span><span class="p">]</span>
+</pre></div>
+</div>
+<p class="last">ex: chmod a+x blink.py</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="git">
+<h2>GIT<a class="headerlink" href="#git" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><ul class="first last">
+<li><p class="first"><a class="reference external" href="https://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-%C3%80-propos-de-la-gestion-de-version">https://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-%C3%80-propos-de-la-gestion-de-version</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></p>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.youtube.com/watch?v=rP3T0Ee6pLU&amp;list=PLjwdMgw5TTLXuY5i7RW0QqGdW0NZntqiP">https://www.youtube.com/watch?v=rP3T0Ee6pLU&amp;list=PLjwdMgw5TTLXuY5i7RW0QqGdW0NZntqiP</a></dt>
+<dd><p class="first last"># Chaine youtube en francais sur l&#8217;utilisation de GIT</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://youtu.be/V6Zo68uQPqE">https://youtu.be/V6Zo68uQPqE</a></dt>
+<dd><p class="first last"># Cours complet un peu long mais en français en claire</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://git-scm.com/doc">https://git-scm.com/doc</a></dt>
+<dd><p class="first last"># documentation</p>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="configurer-git">
+<h3>Configurer GIT<a class="headerlink" href="#configurer-git" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Les options de base pour la configuration</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;votre_pseudo&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="n">moi</span><span class="nd">@email</span><span class="o">.</span><span class="n">com</span>
+    <span class="c1"># on commence par configurer son nom (user.name)</span>
+    <span class="c1"># puis son adresse Email (user.email)</span>
+
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">color</span><span class="o">.</span><span class="n">diff</span> <span class="n">auto</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">color</span><span class="o">.</span><span class="n">status</span> <span class="n">auto</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">color</span><span class="o">.</span><span class="n">branch</span> <span class="n">auto</span>
+    <span class="c1"># Les 3 lignes permettent de mettre le shell en couleur</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Pour verifier la configuration</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="nb">list</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="obtenir-de-l-aide">
+<h3>Obtenir de l&#8217;aide<a class="headerlink" href="#obtenir-de-l-aide" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>les commandes de bases integree a git</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">help</span>
+<span class="n">git</span> <span class="n">help</span> <span class="o">&lt;</span><span class="n">verbe</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="o">&lt;</span><span class="n">verbe</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">help</span>
+<span class="n">man</span> <span class="n">git</span><span class="o">-&lt;</span><span class="n">verbe</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="demarrer-un-depot-git">
+<h3>Démarrer un dépôt Git<a class="headerlink" href="#demarrer-un-depot-git" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Initialisation d&#8217;un dépôt Git dans un répertoire existant</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="enregistrer-des-modifications-dans-le-depot">
+<h3>Enregistrer des modifications dans le dépôt<a class="headerlink" href="#enregistrer-des-modifications-dans-le-depot" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Vérifier l&#8217;état des fichiers</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Ajouter les données</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">*</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>faire un commit</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="s2">&quot;votre commentaire&quot;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="creer-lister-et-selectionner-une-branche">
+<h3>Creer, lister et selectionner une branche<a class="headerlink" href="#creer-lister-et-selectionner-une-branche" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Pour lister une branche</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
+    <span class="c1"># la branch ayant un asterics est la branche courante</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Pour creer une nouvelle branch</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branch</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Pour selectionner et se déplacer sur une branche</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branch</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Pour importer des fichiers depuis une autre branch.</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">chekout</span> <span class="p">[</span><span class="n">branch</span><span class="p">]</span> <span class="p">[</span><span class="n">fichier</span> <span class="n">cible</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge">
+<h3>appliquer le contenu d&#8217;une branch dans la branch courante (faire un merge)<a class="headerlink" href="#appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Se placer sur la branche de destination</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">branch</span> <span class="n">cible</span><span class="p">]</span>
+    <span class="c1"># ex : git checkout master</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>lancer la commande &#8220;merge&#8221; en prenant comme argument la branch a appliquer</dt>
+<dd><dl class="first last docutils">
+<dt>::</dt>
+<dd><dl class="first last docutils">
+<dt>git merge [branch_a_appliquer]</dt>
+<dd><p class="first last"># ex : git merge dev</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="suprimer-des-elements">
+<h3>suprimer des éléments<a class="headerlink" href="#suprimer-des-elements" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>supprimer un fichier dans le repository (l&#8217;index)</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="o">--</span><span class="n">cached</span> <span class="p">[</span><span class="n">nom_du_fichier</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>supprimer tous le cache</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="o">--</span><span class="n">cached</span> <span class="o">.</span>
+    <span class="c1"># ne pas oublier le point</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>réparer l&#8217;index si un fichier est supprimer du dossier de travail mais pas de l&#8217;index</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>supprimer une branch</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">D</span> <span class="p">[</span><span class="n">nom_de_la_branch</span><span class="p">]</span>
+    <span class="c1"># l&#39;option &#39;-D&#39; est l&#39;equivalent de --delete --force</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="faire-un-instantane-puis-le-liberer">
+<h3>faire un &#8220;instantané&#8221; puis le libérer<a class="headerlink" href="#faire-un-instantane-puis-le-liberer" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>faire un instantané</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="p">[</span><span class="n">nom</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Obtenir la list des stash</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="nb">list</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Libérer l&#8217;instantané, et le supprimer</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pop</span> <span class="p">[</span><span class="nb">id</span> <span class="n">du</span> <span class="n">stash</span> <span class="p">(</span><span class="n">commit</span><span class="p">)</span> <span class="n">ou</span> <span class="n">son</span> <span class="n">nom</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Appliquer l&#8217;instantané</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">apply</span> <span class="p">[</span><span class="n">ID</span> <span class="n">ou</span> <span class="n">nom</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="annuler-remplacer-le-dernier-commit">
+<h3>annuler / remplacer le dernier commit<a class="headerlink" href="#annuler-remplacer-le-dernier-commit" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>annuler le dernier commit</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">revert</span> <span class="n">HEAD</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>remplacer le dernier commit par le présent</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">ammend</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="github">
+<h3>github<a class="headerlink" href="#github" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Ajouter le depot distant &#8220;origin&#8221;</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="p">[</span><span class="n">url_de_votre_projet_sur_github</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Pousser la branch locale &#8220;master&#8221; vers la branch distante &#8220;origin&#8221;</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Mettre à jour le depot local depuis le dépot distant</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branche</span><span class="p">]</span>
+    <span class="c1"># le nom de la branch est optionel si il n&#39;y en a qu&#39;une (origin)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Lister les branch distantes</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Lister les branch distantes toutes seules</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>afficher l&#8217;url à la suite du nom de la branch</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Modifier l&#8217;url du dépot distant</p>
+<blockquote>
+<div><ul class="simple">
+<li>Ouvrir le dossier &#8221;.git&#8221; que se trouve à la base du dépot local</li>
+<li>Editer le fichier &#8220;config&#8221; et modifier la ligne &#8220;URL&#8221;</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="composants-specifiques">
+<h2>Composants Spécifiques<a class="headerlink" href="#composants-specifiques" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="magnetomettre-hmc5883l">
+<h3>Magnetomettre : HMC5883L<a class="headerlink" href="#magnetomettre-hmc5883l" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><ul class="first last">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/?ALLSTEPS">http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/?ALLSTEPS</a></dt>
+<dd><p class="first last"># Instructable (install I2C et test en Python3)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/">http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/</a></dt>
+<dd><p class="first last"># Exemple de mise en oeuvre + list des fonctions</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf">http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf</a></dt>
+<dd><p class="first last"># Datasheet du composant</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.sparkfun.com/products/10530">https://www.sparkfun.com/products/10530</a></dt>
+<dd><p class="first last"># fiche produit Sparkfun (arduino)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="implentation-hmc5883l">
+<h4>Implentation HMC5883L<a class="headerlink" href="#implentation-hmc5883l" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><p>La sérigraphie est masqué lorsque le magnétometre est enfiché dans une breadbord.
+L&#8217;implentation si dessous est donc présenter en <strong>vue de dessus (donc sérigraphie cachée)</strong></p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Haut</span>
+    <span class="mi">3</span><span class="n">v3</span>
+    <span class="n">DRDY</span>
+    <span class="n">SDA</span>
+    <span class="n">SCL</span>
+    <span class="n">GND</span>
+    <span class="n">VCC_</span><span class="o">+</span><span class="mi">5</span><span class="n">v</span>
+<span class="n">Bas</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="installation-des-librairies-quick2wire-et-i2clibraries">
+<h4>Installation des librairies quick2wire et i2clibraries<a class="headerlink" href="#installation-des-librairies-quick2wire-et-i2clibraries" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>1.1.</strong> Préparation :</dt>
+<dd><p class="first">Si ce n&#8217;est pas déjà fait, il faut installer les outils Python :</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">i2c</span><span class="o">-</span><span class="n">tools</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">smbus</span>
+     <span class="c1"># Quick2wire.i2c peut aussi être utilisé our l&#39;i2c</span>
+
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span>
+<span class="n">sudo</span> <span class="n">reboot</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>1.2.</strong> l&#8217;installation et configuations des librairies et outils Quick2wire</dt>
+<dd><p class="first"><strong>N.B :</strong> le lignes qui suivent sont copiées telles quelles depuis la page instructables</p>
+<dl class="last docutils">
+<dt>Se positionner à l&#8217;endroit ou l&#8217;on veut installer quick2wire</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span><span class="o">.</span><span class="n">git</span>
+    <span class="c1">#get quick2wire from github.com</span>
+
+    <span class="c1">#if don&#39;t have git, try &quot;sudo apt-get install git&quot;</span>
+
+<span class="n">mv</span> <span class="o">./</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span> <span class="o">./</span><span class="n">code</span>
+    <span class="c1"># renaming the quick2wire library folder to code for tidiness,</span>
+    <span class="c1"># you can skip this if you prefer keeping it original</span>
+
+<span class="n">nano</span> <span class="n">setup</span><span class="o">.</span><span class="n">env</span>
+    <span class="c1"># create a setup file, basically to point out where the quick2wire library is</span>
+    <span class="c1"># situated for your python</span>
+    <span class="c1"># after this line, terminal will enter text editing mode, type in these lines</span>
+
+<span class="n">export</span> <span class="n">QUICK2WIRE_API_HOME</span><span class="o">=~/</span><span class="n">project</span><span class="o">/</span><span class="n">code</span>
+    <span class="c1">#change the directory address if different than what i&#39;m using</span>
+    <span class="c1">#export PYTHONPATH=$PYTHONPATH:$QUICK2WIRE_API_HOME</span>
+
+<span class="n">after</span> <span class="n">that</span> <span class="n">CTRL</span><span class="o">+</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">ENTER</span> <span class="n">to</span> <span class="n">quit</span><span class="p">,</span> <span class="n">save</span> <span class="ow">and</span> <span class="n">overwrite</span>
+
+<span class="n">back</span> <span class="ow">in</span> <span class="n">terminal</span> <span class="n">mode</span>
+
+<span class="o">.</span> <span class="o">./</span><span class="n">quick2wire</span><span class="o">.</span><span class="n">env</span>
+    <span class="c1"># run the environment setup, run this once every time after reboot,</span>
+    <span class="c1"># running twice will append the address directory</span>
+    <span class="c1"># for checking, use &quot;env |grep quick2wire&quot;,</span>
+    <span class="c1"># address shown must be the same with the directory where</span>
+    <span class="c1"># you install your quick2wire library</span>
+
+<span class="n">cd</span> <span class="n">code</span>
+    <span class="c1">#go into the quick2wire folder, this will be where you put your python code</span>
+
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">bitbucket</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">thinkbowl</span><span class="o">/</span><span class="n">i2clibraries</span><span class="o">.</span><span class="n">git</span>
+    <span class="c1">#getting library files containing functions for i2c devices such as HMC5883L,</span>
+    <span class="c1">#ITG-3205, ADXL345 and LCD</span>
+
+<span class="n">Now</span> <span class="n">you</span> <span class="n">can</span> <span class="n">shut</span> <span class="n">it</span> <span class="n">down</span> <span class="k">with</span> <span class="s2">&quot;sudo shutdown -h now&quot;</span> <span class="n">so</span> <span class="n">that</span> <span class="n">we</span> <span class="n">can</span> <span class="n">do</span> <span class="n">the</span> <span class="n">wiring</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="configuration-du-hmc5883l">
+<h4>Configuration du HMC5883L<a class="headerlink" href="#configuration-du-hmc5883l" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>2.1.</strong> la déclinaison terrestre</dt>
+<dd><p class="first">Pour pouvoir être le plus précis possible, il faut recalibrer la boussole en tenant compte
+de notre décallage par rapport au pole magnétique. On appel ça : <strong>&#8220;la déclinaison terrestre&#8221;</strong>
+Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
+<blockquote>
+<div><ul class="simple">
+<li>Longitude :  49° 1&#8216;22.48&#8221;N</li>
+<li>Latitude  :   2° 1&#8216;50.51&#8221;E</li>
+</ul>
+</div></blockquote>
+<p class="last">se qui donne à la date du 18/08/2015 : 0° 9,24&#8217;</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="motteur-pas-a-pas-28byj-48">
+<h3>Motteur Pas à Pas : 28BYJ-48<a class="headerlink" href="#motteur-pas-a-pas-28byj-48" title="Lien permanent vers ce titre">¶</a></h3>
+<p><strong>N.B :</strong> se PAP doit être piloté par un driver comme le UNL2003</p>
+<div class="section" id="specification-du-pap">
+<h4>Specification du PAP<a class="headerlink" href="#specification-du-pap" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="71%" />
+<col width="29%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>angle par pas (moteur)</td>
+<td>5.625°</td>
+</tr>
+<tr class="row-even"><td>Nbe de pas / tours (moteur)</td>
+<td>64 (360/5.625)</td>
+</tr>
+<tr class="row-odd"><td>ratio (demultiplicateur)</td>
+<td>1/64</td>
+</tr>
+<tr class="row-even"><td>angle par pas (en sortie d&#8217;abre)</td>
+<td>0.087890625°</td>
+</tr>
+<tr class="row-odd"><td>Nbe de pas / tour (en sortie d&#8217;arbre)</td>
+<td>4096</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="correspodanse-entre-le-driver-et-les-gpio">
+<h4>Correspodanse entre le driver et les GPIO<a class="headerlink" href="#correspodanse-entre-le-driver-et-les-gpio" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">BCM (GPIO)</th>
+<th class="head">Serigraphie sur UNL2003</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>GPIO17</td>
+<td>N1</td>
+</tr>
+<tr class="row-odd"><td>GPIO18</td>
+<td>N2</td>
+</tr>
+<tr class="row-even"><td>GPIO27</td>
+<td>N3</td>
+</tr>
+<tr class="row-odd"><td>GPIO22</td>
+<td>N4</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="phases">
+<h4>Phases<a class="headerlink" href="#phases" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="10%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="8">==&gt; CW Direction (1-2 Phase )</td>
+</tr>
+<tr class="row-even"><td>lead Wire color</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr class="row-odd"><td>4 orange</td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>x</td>
+</tr>
+<tr class="row-even"><td>3 yelow</td>
+<td>&nbsp;</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2 pink</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>1 blue</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt><strong>N.B :</strong> les 8 phases donnent 1 tour complet sur le moteur,</dt>
+<dd>soit 1/64 de tour en sortie d&#8217;arbre.</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="organisation-des-phases-en-python3">
+<h4>Organisation des phases en python3<a class="headerlink" href="#organisation-des-phases-en-python3" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Séquense de sortie</span>
+<span class="n">ndp</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">phase</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">ndp</span><span class="p">))</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><strong>N.B :</strong> la liste contenu dans chaque phase, correspond à l&#8217;état</dt>
+<dd><p class="first">(1 = Hight = True ; 0 = Low = False) à appliquer sur le broches du GPIO</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span>  <span class="p">:</span> <span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+    <span class="o">--&gt;</span> <span class="n">GPIO17</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="o">--&gt;</span> <span class="n">GPIO18</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="o">--&gt;</span> <span class="n">GPIO27</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="o">--&gt;</span> <span class="n">GPIO22</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="picamera">
+<h3>Picamera<a class="headerlink" href="#picamera" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><ul class="first last">
+<li><p class="first"><a class="reference external" href="http://www.framboise314.fr/picamera-pour-piloter-integralement-la-camera-de-votre-raspberry-pi-en-python/">http://www.framboise314.fr/picamera-pour-piloter-integralement-la-camera-de-votre-raspberry-pi-en-python/</a></p>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://picamera.readthedocs.org/en/release-1.0/quickstart.html">http://picamera.readthedocs.org/en/release-1.0/quickstart.html</a></dt>
+<dd><p class="first last"># Quick Start</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://picamera.readthedocs.org/en/release-1.0/recipes1.html">http://picamera.readthedocs.org/en/release-1.0/recipes1.html</a></dt>
+<dd><p class="first last"># CookBook</p>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="activation-du-module-camera-sur-le-rpi">
+<h4>Activation du module caméra sur le RPi<a class="headerlink" href="#activation-du-module-camera-sur-le-rpi" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>1.1.</strong> se connecter au module de configuration</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>1.2.</strong> faire la séquence suivante</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;5 Enable Camera&quot;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+        <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Enable</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+        <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Finish</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+        <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Oui</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="installation-de-la-camera">
+<h4>installation de la camera<a class="headerlink" href="#installation-de-la-camera" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><p><strong>2.</strong>   Insérer la limende dans le ports situé au niveau du port HDMI.</p>
+<blockquote>
+<div><strong>N.B :</strong> la partie métallique doit être en direction du port HDMI</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="instalation-de-la-librairie-picamera">
+<h4>Instalation de la librairie PiCamera<a class="headerlink" href="#instalation-de-la-librairie-picamera" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>3.</strong> Faire les mises à jour système de rigueur puis</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">picamera</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="utilisation-avec-python">
+<h4>utilisation avec python<a class="headerlink" href="#utilisation-avec-python" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">picamera</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="capteur-ultrason-hc-sr04">
+<h3>Capteur ultrason : HC-SR04<a class="headerlink" href="#capteur-ultrason-hc-sr04" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://youtu.be/xACy8l3LsXI">https://youtu.be/xACy8l3LsXI</a></li>
+<li><a class="reference external" href="http://www.modmypi.com/blog/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi">http://www.modmypi.com/blog/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="vocabulaire-et-definission-pour-le-hc-sr04">
+<h4>Vocabulaire et definission pour le HC-SR04<a class="headerlink" href="#vocabulaire-et-definission-pour-le-hc-sr04" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Trig:</th><td class="field-body"><dl class="first docutils">
+<dt>En Sortie (hautparleur - Trig)</dt>
+<dd><p class="first last"># 1 impulsion est egale a 10us (0.00001)</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Echo:</th><td class="field-body"><p class="first">En Entree (Micro - Echo)</p>
+<blockquote>
+<div><p># Attention les entrée du RPi etant en 3.3v,
+il faut faire un pont diviseur entre la broche
+&#8220;Echo&#8221; et le GND pour pouvoir se brancher
+sur le RPi</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Vitesse du son:</th><td class="field-body"><p class="first">Le son se déplace à une vitesse d&#8217;environ 343 m/s (à température ambiante de 20°),
+soit environ 34300 cm/s</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Distance:</th><td class="field-body"><dl class="first last docutils">
+<dt>D = 17150 x time</dt>
+<dd><p class="first last"># 17150 correspond a la vitesse du son / 2 (34300/2).
+On divise par 2 car seule la distance en l&#8217;obstacle et le mur nous intéresse
+et non la distance total parcourue par l&#8217;onde radio.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="specification-du-hc-sr04">
+<h4>Specification du HC-SR04<a class="headerlink" href="#specification-du-hc-sr04" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Alimentation:</th><td class="field-body">5 V</td>
+</tr>
+<tr class="field-even field"><th class="field-name">porté:</th><td class="field-body">2 cm à 500 cm</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Résolution:</th><td class="field-body">0.3 cm</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Fréquence:</th><td class="field-body">40 kHz</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><strong>* jdm Raspberry PI *</strong></a><ul>
+<li><a class="reference internal" href="#table-des-matieres">Table des matières</a></li>
+<li><a class="reference internal" href="#raspberry">Raspberry</a><ul>
+<li><a class="reference internal" href="#rpi-utilises">RPi utilisés</a><ul>
+<li><a class="reference internal" href="#model-2-id-fix">Model 2 (ID-FIX)</a></li>
+<li><a class="reference internal" href="#rpi-rov">RPI ROV</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#acceder-au-fichier-de-configuration-du-rpi">Acceder au fichier de configuration du RPI</a></li>
+<li><a class="reference internal" href="#connaitre-la-configuration-materiel-du-rpi">Connaitre la configuration matériel du RPI</a></li>
+<li><a class="reference internal" href="#vocabulaire">Vocabulaire</a></li>
+<li><a class="reference internal" href="#la-bibliotheque-rpi-gpio">La bibliotheque RPi.GPIO</a><ul>
+<li><a class="reference internal" href="#implentation-rpi2">Implentation RPi2</a></li>
+<li><a class="reference internal" href="#installation-de-rpi-gpio">Installation de RPi.GPIO</a></li>
+<li><a class="reference internal" href="#utilisation-de-rpi-gpio-avec-python">Utilisation de RPi.GPIO avec Python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#i2c">I2C</a><ul>
+<li><a class="reference internal" href="#installation-activation-de-l-i2c">Installation / Activation de l&#8217;I2C</a></li>
+<li><a class="reference internal" href="#connaitre-l-adresse-des-matetiels-branches">Connaitre l&#8217;adresse des matétiels branchés</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#uart">UART</a><ul>
+<li><a class="reference internal" href="#liberer-l-uart">Libérer l&#8217;UART</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pwm-servo-moteur-et-dc-motor">PWM, Servo moteur et DC Motor</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#python">PYTHON</a><ul>
+<li><a class="reference internal" href="#obtenir-de-l-aide-sur-une-class-ou-une-methode-python">Obtenir de l&#8217;aide sur une class ou une méthode  (python)</a></li>
+<li><a class="reference internal" href="#lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux">Lignes de code à insérer au debut de chaque script sous linux</a></li>
+<li><a class="reference internal" href="#os-library">os library</a></li>
+<li><a class="reference internal" href="#pip">pip</a><ul>
+<li><a class="reference internal" href="#installation-de-pip">Installation de PIP</a></li>
+<li><a class="reference internal" href="#utilisation-de-pip">Utilisation de PIP</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper">Les environnements virtuels Python : virtualenv et virtualenvwrapper</a><ul>
+<li><a class="reference internal" href="#installation-des-environements-virtuels">installation des environements virtuels</a></li>
+<li><a class="reference internal" href="#configuration-des-environements-virtuels">configuration des environements virtuels</a></li>
+<li><a class="reference internal" href="#utilisation-environements-virtuels">Utilisation environements virtuels</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#un-shell-python-qui-fait-de-l-auto-completion">Un shell Python qui fait de l&#8217;auto completion</a></li>
+<li><a class="reference internal" href="#convertir-un-string-en-bytes">convertir un string en bytes</a></li>
+<li><a class="reference internal" href="#faire-un-executable-a-partir-d-un-script">faire un executable à partir d&#8217;un script</a></li>
+<li><a class="reference internal" href="#fichiers-de-configuration-ini">Fichiers de configuration (.ini)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#docutils-restructuredtext-rst-sphinx">DocUtils ; reStructuredText (.rst) ; Sphinx</a><ul>
+<li><a class="reference internal" href="#docutils">DocUtils</a></li>
+<li><a class="reference internal" href="#restructuredtext-rst">reStructuredText (.rst)</a></li>
+<li><a class="reference internal" href="#sphinx">Sphinx</a><ul>
+<li><a class="reference internal" href="#installer-sphinx">Installer Sphinx</a></li>
+<li><a class="reference internal" href="#demarrage-et-initialisation-rapide">Démarrage et initialisation rapide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#linux">LINUX</a><ul>
+<li><a class="reference internal" href="#rappel-des-commandes-de-bases">rappel des commandes de bases</a></li>
+<li><a class="reference internal" href="#rappel-des-raccourcis-de-navigation-dans-le-shell">rappel des raccourcis de navigation dans le shell</a></li>
+<li><a class="reference internal" href="#activer-le-compte-root">activer le compte root</a></li>
+<li><a class="reference internal" href="#connaitre-la-version-du-systeme">connaitre la version du systeme</a><ul>
+<li><a class="reference internal" href="#installation-de-lsb-release">installation de lsb-release</a></li>
+<li><a class="reference internal" href="#utilisation-de-lsb-release">utilisation de lsb-release</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#connaitre-la-version-d-un-paquet">connaitre la version d&#8217;un paquet</a><ul>
+<li><a class="reference internal" href="#installation-de-apt-show-versions">installation de apt-show-versions</a></li>
+<li><a class="reference internal" href="#utilisation-de-apt-show-versions">utilisation de apt-show-versions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique">Pour copier des fichiers en root depuis l&#8217;interface graphique</a></li>
+<li><a class="reference internal" href="#pour-passer-la-langue-et-le-clavier-en-francais">pour passer la langue et le clavier en francais</a></li>
+<li><a class="reference internal" href="#pour-rendre-un-fichier-executable">Pour rendre un fichier &#8220;Executable&#8221;</a></li>
+<li><a class="reference internal" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">Pour pouvoir se connecter en RDP sur un poste Linux</a></li>
+<li><a class="reference internal" href="#pour-faire-du-xforwarding">pour faire du XForwarding</a></li>
+<li><a class="reference internal" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">Pour mettre une IP fixe sur une interfaces réseau</a></li>
+<li><a class="reference internal" href="#pour-active-le-wifi">Pour active le WIFI</a></li>
+<li><a class="reference internal" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande">Se connecter a un reseau wifi en ligne de commande</a></li>
+<li><a class="reference internal" href="#connaitre-la-liste-des-materiel-usb">Connaitre la liste des matériel usb</a></li>
+<li><a class="reference internal" href="#connaitre-l-espace-disque-utilise-et-celui-disponible">Connaitre l&#8217;éspace disque utilise et celui disponible</a></li>
+<li><a class="reference internal" href="#les-posrts-series">Les posrts séries</a><ul>
+<li><a class="reference internal" href="#connaitre-la-liste-des-ports-serie">Connaitre la liste des ports série :</a></li>
+<li><a class="reference internal" href="#interoger-le-journal-sur-les-ports-serie">interoger le journal sur les ports série :</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#faire-du-multi-screen-sur-une-fenetre-terminal">faire du multi-screen  sur une fenêtre terminal</a><ul>
+<li><a class="reference internal" href="#installation-de-screen">Installation de screen</a></li>
+<li><a class="reference internal" href="#lancer-l-application-screen">Lancer l&#8217;application &#8220;screen&#8221;</a></li>
+<li><a class="reference internal" href="#liste-des-commandes-des-bases-pour-screen">Liste des commandes des bases pour screen</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pour-creer-un-script-qui-s-execute-au-demarrage-du-syteme">pour créer un script qui s&#8217;execute au démarrage du sytème</a><ul>
+<li><a class="reference internal" href="#preparation-du-script-shell">Préparation du script shell</a></li>
+<li><a class="reference internal" href="#preparation-du-script-python">Préparation du script python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#git">GIT</a><ul>
+<li><a class="reference internal" href="#configurer-git">Configurer GIT</a></li>
+<li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l&#8217;aide</a></li>
+<li><a class="reference internal" href="#demarrer-un-depot-git">Démarrer un dépôt Git</a></li>
+<li><a class="reference internal" href="#enregistrer-des-modifications-dans-le-depot">Enregistrer des modifications dans le dépôt</a></li>
+<li><a class="reference internal" href="#creer-lister-et-selectionner-une-branche">Creer, lister et selectionner une branche</a></li>
+<li><a class="reference internal" href="#appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge">appliquer le contenu d&#8217;une branch dans la branch courante (faire un merge)</a></li>
+<li><a class="reference internal" href="#suprimer-des-elements">suprimer des éléments</a></li>
+<li><a class="reference internal" href="#faire-un-instantane-puis-le-liberer">faire un &#8220;instantané&#8221; puis le libérer</a></li>
+<li><a class="reference internal" href="#annuler-remplacer-le-dernier-commit">annuler / remplacer le dernier commit</a></li>
+<li><a class="reference internal" href="#github">github</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#composants-specifiques">Composants Spécifiques</a><ul>
+<li><a class="reference internal" href="#magnetomettre-hmc5883l">Magnetomettre : HMC5883L</a><ul>
+<li><a class="reference internal" href="#implentation-hmc5883l">Implentation HMC5883L</a></li>
+<li><a class="reference internal" href="#installation-des-librairies-quick2wire-et-i2clibraries">Installation des librairies quick2wire et i2clibraries</a></li>
+<li><a class="reference internal" href="#configuration-du-hmc5883l">Configuration du HMC5883L</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#motteur-pas-a-pas-28byj-48">Motteur Pas à Pas : 28BYJ-48</a><ul>
+<li><a class="reference internal" href="#specification-du-pap">Specification du PAP</a></li>
+<li><a class="reference internal" href="#correspodanse-entre-le-driver-et-les-gpio">Correspodanse entre le driver et les GPIO</a></li>
+<li><a class="reference internal" href="#phases">Phases</a></li>
+<li><a class="reference internal" href="#organisation-des-phases-en-python3">Organisation des phases en python3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#picamera">Picamera</a><ul>
+<li><a class="reference internal" href="#activation-du-module-camera-sur-le-rpi">Activation du module caméra sur le RPi</a></li>
+<li><a class="reference internal" href="#installation-de-la-camera">installation de la camera</a></li>
+<li><a class="reference internal" href="#instalation-de-la-librairie-picamera">Instalation de la librairie PiCamera</a></li>
+<li><a class="reference internal" href="#utilisation-avec-python">utilisation avec python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#capteur-ultrason-hc-sr04">Capteur ultrason : HC-SR04</a><ul>
+<li><a class="reference internal" href="#vocabulaire-et-definission-pour-le-hc-sr04">Vocabulaire et definission pour le HC-SR04</a></li>
+<li><a class="reference internal" href="#specification-du-hc-sr04">Specification du HC-SR04</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/jdm Raspberry.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Poltergeist42.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/jdm Raspberry.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
