@@ -660,3 +660,16 @@ logging Library
                 
 :Description:
             Cette Lib permet de faire du log sur des éléments.
+            
+------------------------------------------------------------------------------------------
+
+hashlib Library
+===============
+
+:Liens Web:
+            * http://sametmax.com/md5-en-bash-php-python-et-javascript/
+                # un petit exemple vite fait
+                
+            * https://docs.python.org/3.4/library/hashlib.html
+                # la doc de la lib
+                
