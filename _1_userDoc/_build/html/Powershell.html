@@ -81,7 +81,11 @@
 <blockquote>
 <div><dl class="docutils">
 <dt>::</dt>
-<dd>[Objet_ou_command] | get-members (ou gm)</dd>
+<dd><dl class="first last docutils">
+<dt>[Objet_ou_command] | get-members (ou gm)</dt>
+<dd># exemple pour une variable : $v_a | get-members</dd>
+</dl>
+</dd>
 </dl>
 </div></blockquote>
 </div>
@@ -106,6 +110,21 @@
 </li>
 </ol>
 </div></blockquote>
+<div class="section" id="variables-specifiques">
+<h3>variables spécifiques<a class="headerlink" href="#variables-specifiques" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">$_:</th><td class="field-body">contient l&#8217;objet en cours dans le pipeline</td>
+</tr>
+<tr class="field-even field"><th class="field-name">$Error:</th><td class="field-body">contient les objets d&#8217;erreur de la seesion PowerShell en cours</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="equivalent-du-print-ou-du-echo">
@@ -143,6 +162,23 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 </ol>
 </div></blockquote>
 </div>
+<hr class="docutils" />
+<div class="section" id="declarer-une-fonction">
+<h2>Déclarer une fonction<a class="headerlink" href="#declarer-une-fonction" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="p">[</span><span class="n">nom_de_la_fonction</span><span class="p">]</span> <span class="p">{</span>
+<span class="p">[</span><span class="n">command_1</span><span class="p">]</span>
+<span class="p">[</span><span class="n">command_2</span><span class="p">]</span>
+<span class="p">[</span><span class="n">etc_</span><span class="o">...</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">ex</span> <span class="p">:</span>
+
+    <span class="n">function</span> <span class="n">f_maFonction</span> <span class="p">{</span> <span class="n">get</span><span class="o">-</span><span class="n">cliditem</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -160,8 +196,12 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 </ul>
 </li>
 <li><a class="reference internal" href="#connaitre-toutes-les-methodes-d-un-objet">Connaitre toutes les methodes d&#8217;un objet</a></li>
-<li><a class="reference internal" href="#declarer-une-variable">Declarer une variable</a></li>
+<li><a class="reference internal" href="#declarer-une-variable">Declarer une variable</a><ul>
+<li><a class="reference internal" href="#variables-specifiques">variables spécifiques</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#equivalent-du-print-ou-du-echo">Equivalent du print (ou du echo)</a></li>
+<li><a class="reference internal" href="#declarer-une-fonction">Déclarer une fonction</a></li>
 </ul>
 </li>
 </ul>

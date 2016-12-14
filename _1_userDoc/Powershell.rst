@@ -32,6 +32,7 @@ Connaitre toutes les methodes d'un objet
 
     ::
         [Objet_ou_command] | get-members (ou gm)
+            # exemple pour une variable : $v_a | get-members
 
 ----------------------------------------------------------
 
@@ -49,6 +50,12 @@ Declarer une variable
        N.B : par convention les string se declarent avec des simples cotes ::
     
         $maVarible = 'text'
+        
+variables spécifiques
+---------------------
+
+    :$_:        contient l'objet en cours dans le pipeline
+    :$Error:    contient les objets d'erreur de la seesion PowerShell en cours
     
 ----------------------------------------------------------
 
@@ -76,3 +83,20 @@ Equivalent du print (ou du echo)
             PS C:\Users\polter> $valeur2 = 2
             PS C:\Users\polter> "{0} + {1} = {2}" -f $valeur, $valeur2, ($valeur + $valeur2)
             2 + 2 = 4
+            
+----------------------------------------------------------
+
+Déclarer une fonction
+=====================
+
+    ::
+    
+        function [nom_de_la_fonction] {
+        [command_1]
+        [command_2]
+        [etc_...]
+        }
+        
+        ex :
+        
+            function f_maFonction { get-cliditem }

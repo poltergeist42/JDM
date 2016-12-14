@@ -501,7 +501,13 @@ chemin du depot distant directement en editant le fichier &#8220;config&#8221; d
 </li>
 <li><p class="first">Pour récupérer une branch distante dans un dépot local</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="p">[</span><span class="n">nom_de_la_branch_local</span><span class="p">]</span> <span class="p">[</span><span class="n">emplacement_de_la_branch_distante</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">branch_distante</span><span class="p">]</span>
-    <span class="c1"># git checkout -b dev origin/dev</span>
+    <span class="c1"># ex : git checkout -b dev origin/dev</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Pour mettre à jour une branch locale depuis depuis une branch distante</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="o">-</span><span class="n">a</span> <span class="p">[</span><span class="n">depot_distant</span><span class="p">]</span> <span class="p">[</span><span class="n">branch_locale</span><span class="p">]</span>
+    <span class="c1"># ex : git pull -a origin dev</span>
 </pre></div>
 </div>
 </li>

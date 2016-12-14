@@ -292,6 +292,10 @@ github
     #. Pour récupérer une branch distante dans un dépot local ::
             
             git checkout -b [nom_de_la_branch_local] [emplacement_de_la_branch_distante]/[branch_distante]
-                # git checkout -b dev origin/dev
+                # ex : git checkout -b dev origin/dev
             
- 
+    #. Pour mettre à jour une branch locale depuis depuis une branch distante ::
+    
+            git pull -a [depot_distant] [branch_locale]
+                # ex : git pull -a origin dev
+            
