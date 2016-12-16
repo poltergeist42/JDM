@@ -35,6 +35,37 @@ Connaitre toutes les methodes d'un objet
             # exemple pour une variable : $v_a | get-members
 
 ----------------------------------------------------------
+            
+Caractère spécifiques
+=====================
+
+    #. Caractère d'echapement
+    
+        Le caractère d'échapement est le "`" (accent grave seul [ALT_GR-7])
+            * Placé en fin de ligne il permet de ligne, il sert de continuation pour aller
+              à la ligne ::
+              
+                $Reg = get-wmiobject -Namespace Root\Default -computerName `
+                       $Comptuer -List | where-object `
+                       {$_.Name -eq "StdRegProv"}
+                       
+           * Placé avant une variable elle sera interprétée comme une chaine de caratère ::
+           
+                ps:> $v_maVariable = "test"
+                
+                ps:> write-host "affichage de la variable : $v_maVariable"
+                ps:> affichage de la variable : test
+                
+                ps:> write-host "affichage de la variable : `$v_maVariable"
+                ps:> affichage de la variable : $v_maVariable
+
+            * Placé devant un caractère, il serat interpréter comme une commande ::
+            
+                ps:> $v_maVariable = "test"
+                ps:> write-host "blabla`t$v_maVariable"
+                ps:> blabla    test
+                
+----------------------------------------------------------
 
 Declarer une variable
 =====================
