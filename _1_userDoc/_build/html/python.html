@@ -1023,6 +1023,103 @@ automatiquement.</p>
 </tbody>
 </table>
 </div>
+<hr class="docutils" />
+<div class="section" id="utilisation-de-l-underscore">
+<h2>Utilisation de l&#8217;underscore (_)<a class="headerlink" href="#utilisation-de-l-underscore" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://sametmax.com/a-propos-des-attributs-prefixes-de-deux-underscores/">http://sametmax.com/a-propos-des-attributs-prefixes-de-deux-underscores/</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="publique-protege-et-prive">
+<h3>Publique, Protégé et Privé<a class="headerlink" href="#publique-protege-et-prive" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Bien qu&#8217;il n&#8217;y ai pas de notion &#8220;protégé&#8221; ou &#8220;privé&#8221; en python il y a des conventions qui
+permettent d&#8217;introduire ces notions dans les interpréteurs</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Publique</p>
+<blockquote>
+<div><p>C&#8217;est l&#8217;affectation classique.  Cette affectation sera visible dans l&#8217;API (dir()
+help())</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">maVariablePublique</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Protégé</p>
+<blockquote>
+<div><p>On préfix notre objet (attribut ou méthode) avec un simple underscore (_). L&#8217;objet
+n&#8217;apparaitra pas dans l&#8217;API mais sera utilisable de l&#8217;extérieur si on l&#8217;appel
+spécifiquement</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">_maVaribleProtegee</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Privé</p>
+<blockquote>
+<div><p>On préfix notre objet avec un double underscore (__). Il n&#8217;apparaitra pas dans
+l&#8217;API et renvairra un &#8220;AttributError&#8221; si on l&#8217;appel spécifiquement</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">__maVariablePrivee</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<p>Exemple d&#8217;utilisation :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span> <span class="p">:</span>
+<span class="gp">... </span>    <span class="n">pub</span>     <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="n">_prot</span>   <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">... </span>    <span class="n">__priv</span>  <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">getProt</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prot</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">getPriv</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__priv</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span> <span class="o">=</span> <span class="n">C</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+<span class="go">Help on C in module __main__ object:</span>
+
+<span class="go">class C(builtins.object)</span>
+<span class="go"> |  Methods defined here:</span>
+<span class="go"> |</span>
+<span class="go"> |  getPriv(self)</span>
+<span class="go"> |</span>
+<span class="go"> |  getProt(self)</span>
+<span class="go"> |</span>
+<span class="go"> |  ----------------------------------------------------------------------</span>
+<span class="go"> |  Data descriptors defined here:</span>
+<span class="go"> |</span>
+<span class="go"> |  __dict__</span>
+<span class="go"> |      dictionary for instance variables (if defined)</span>
+<span class="go"> |</span>
+<span class="go"> |  __weakref__</span>
+<span class="go"> |      list of weak references to the object (if defined)</span>
+<span class="go"> |</span>
+<span class="go"> |  ----------------------------------------------------------------------</span>
+<span class="go"> |  Data and other attributes defined here:</span>
+<span class="go"> |</span>
+<span class="go"> |  pub = 1</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="o">.</span><span class="n">_prot</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="o">.</span><span class="n">__priv</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">AttributeError</span>: <span class="n">&#39;C&#39; object has no attribute &#39;__priv&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="o">.</span><span class="n">getPriv</span><span class="p">()</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -1075,6 +1172,10 @@ automatiquement.</p>
 <li><a class="reference internal" href="#connaitre-le-nombre-de-cpu-d-un-systeme">Connaitre le nombre de CPU d&#8217;un système</a></li>
 <li><a class="reference internal" href="#logging-library">logging Library</a></li>
 <li><a class="reference internal" href="#hashlib-library">hashlib Library</a></li>
+<li><a class="reference internal" href="#utilisation-de-l-underscore">Utilisation de l&#8217;underscore (_)</a><ul>
+<li><a class="reference internal" href="#publique-protege-et-prive">Publique, Protégé et Privé</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

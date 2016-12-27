@@ -90,6 +90,58 @@
 </div></blockquote>
 </div>
 <hr class="docutils" />
+<div class="section" id="caractere-specifiques">
+<h2>Caractère spécifiques<a class="headerlink" href="#caractere-specifiques" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Caractère d&#8217;echapement</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Le caractère d&#8217;échapement est le &#8220;`&#8221; (accent grave seul [ALT_GR-7])</dt>
+<dd><blockquote class="first">
+<div><ul>
+<li><p class="first">Placé en fin de ligne il permet de ligne, il sert de continuation pour aller
+à la ligne</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$Reg = get-wmiobject -Namespace Root\Default -computerName `
+       $Comptuer -List | where-object `
+       {$_.Name -eq &quot;StdRegProv&quot;}
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p class="first">Placé avant une variable elle sera interprétée comme une chaine de caratère</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>ps:&gt; $v_maVariable = &quot;test&quot;
+
+ps:&gt; write-host &quot;affichage de la variable : $v_maVariable&quot;
+ps:&gt; affichage de la variable : test
+
+ps:&gt; write-host &quot;affichage de la variable : `$v_maVariable&quot;
+ps:&gt; affichage de la variable : $v_maVariable
+</pre></div>
+</div>
+</li>
+</ul>
+<blockquote class="last">
+<div><ul>
+<li><p class="first">Placé devant un caractère, il serat interpréter comme une commande</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>ps:&gt; $v_maVariable = &quot;test&quot;
+ps:&gt; write-host &quot;blabla`t$v_maVariable&quot;
+ps:&gt; blabla    test
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
 <div class="section" id="declarer-une-variable">
 <h2>Declarer une variable<a class="headerlink" href="#declarer-une-variable" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
@@ -196,6 +248,7 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 </ul>
 </li>
 <li><a class="reference internal" href="#connaitre-toutes-les-methodes-d-un-objet">Connaitre toutes les methodes d&#8217;un objet</a></li>
+<li><a class="reference internal" href="#caractere-specifiques">Caractère spécifiques</a></li>
 <li><a class="reference internal" href="#declarer-une-variable">Declarer une variable</a><ul>
 <li><a class="reference internal" href="#variables-specifiques">variables spécifiques</a></li>
 </ul>

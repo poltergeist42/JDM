@@ -673,3 +673,83 @@ hashlib Library
             * https://docs.python.org/3.4/library/hashlib.html
                 # la doc de la lib
                 
+------------------------------------------------------------------------------------------
+
+Utilisation de l'underscore (_)
+===============================
+
+:Liens Web:
+            * http://sametmax.com/a-propos-des-attributs-prefixes-de-deux-underscores/
+
+Publique, Protégé et Privé
+--------------------------
+
+Bien qu'il n'y ai pas de notion "protégé" ou "privé" en python il y a des conventions qui
+permettent d'introduire ces notions dans les interpréteurs
+
+    #. Publique
+    
+        C'est l'affectation classique.  Cette affectation sera visible dans l'API (dir()
+        help()) ::
+        
+            maVariablePublique = 1
+            
+    #. Protégé
+    
+        On préfix notre objet (attribut ou méthode) avec un simple underscore (_). L'objet
+        n'apparaitra pas dans l'API mais sera utilisable de l'extérieur si on l'appel
+        spécifiquement ::
+        
+            _maVaribleProtegee = 2
+            
+    #. Privé
+    
+        On préfix notre objet avec un double underscore (__). Il n'apparaitra pas dans
+        l'API et renvairra un "AttributError" si on l'appel spécifiquement ::
+        
+            __maVariablePrivee = 3
+            
+Exemple d'utilisation : ::
+
+    >>> class C(object) :
+    ...     pub     = 1
+    ...     _prot   = 2
+    ...     __priv  = 3
+    ...     def getProt(self) :
+    ...             return self._prot
+    ...     def getPriv(self) :
+    ...             return self.__priv
+    ...
+    >>> test = C()
+    >>> help(test)
+    Help on C in module __main__ object:
+
+    class C(builtins.object)
+     |  Methods defined here:
+     |
+     |  getPriv(self)
+     |
+     |  getProt(self)
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  pub = 1
+
+    >>> test._prot
+    2
+    >>> test.__priv
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    AttributeError: 'C' object has no attribute '__priv'
+    >>> test.getPriv()
+    3
