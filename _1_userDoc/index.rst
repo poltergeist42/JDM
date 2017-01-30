@@ -13,12 +13,14 @@ Contents:
 
    Composants
    ComputerVision
+   Django
    DocUtils_RST_Sphinx
    GIT
+   HTML_CSS
    kicad
    Linux
    Powershell
-   python
+   Python
    Raspberry
 
 
