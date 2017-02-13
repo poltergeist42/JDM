@@ -46,6 +46,148 @@
             
   <div class="section" id="django">
 <h1>Django<a class="headerlink" href="#django" title="Lien permanent vers ce titre">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/ref/">https://docs.djangoproject.com/fr/1.10/ref/</a></dt>
+<dd><p class="first last"># Référence de Django (fr)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/intro/">https://docs.djangoproject.com/fr/1.10/intro/</a></dt>
+<dd><p class="first last"># Tutoriel de prise en main / découverte</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/howto/">https://docs.djangoproject.com/fr/1.10/howto/</a></dt>
+<dd><p class="first last"># Guides pratiques</p>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<div class="section" id="principes-de-fonctionnement">
+<h2>Principes de fonctionnement<a class="headerlink" href="#principes-de-fonctionnement" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Django travail sur le principe du MVC (Model, Vue, Controler). L&#8217;organisation dans Django
+se présente sous la forme : Model, Vue, Template.</p>
+<p>La correspondance avec le MVC est la suivante :</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Model (Django : Model) :</p>
+<blockquote>
+<div><ul>
+<li><p class="first"><strong>models.py</strong> : C&#8217;est le scrip qui permet la création des tables
+dans la base de données.</p>
+<dl class="docutils">
+<dt>Par analogie avec la POO</dt>
+<dd><ul class="first last simple">
+<li>La base de donné est l&#8217;objet</li>
+<li>Les tables (définies comme des class dans &#8220;models.py&#8221;)
+sont des instances de l&#8217;objet</li>
+<li>Les champs (définies comme des attribut de class dans &#8220;models.py&#8221;)
+sont des attributs de l&#8217;instances</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Vue (Django : Template) :</p>
+<blockquote>
+<div><ul class="simple">
+<li>Tous les fichiers en &#8221;.html&#8221; dans ./templates</li>
+<li>Les feuilles de styles (&#8221;.css&#8221;) dans ./static</li>
+<li><strong>urls.py</strong> : sert de liaison avec views.py. Ce ficher génére les urls à la volée,
+par l&#8217;interprétation d&#8217;expression régulière (RegEx)</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Controler (Django : Vue)</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>views.py</strong> : Permet de faire le liens entre le Model et la Vue. Interprètes
+les formulaires HTML et interagit avec la base de données</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="rappel-des-commandes-de-base">
+<h2>Rappel des commandes de base<a class="headerlink" href="#rappel-des-commandes-de-base" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/intro/tutorial01/">https://docs.djangoproject.com/fr/1.10/intro/tutorial01/</a></li>
+</ul>
+</div></blockquote>
+<ol class="last arabic">
+<li><p class="first">Création d’un projet</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startproject</span> <span class="n">mysite</span>
+<span class="c1"># Cela va créer un répertoire mysite dans le répertoire courant</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Le serveur de développement</dt>
+<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
+</pre></div>
+</div>
+<p><strong>N.B</strong> : Le port par défaut est le 8000</p>
+<ol class="last arabic">
+<li><p class="first">Démarrage du serveur sur un autre port</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mi">8080</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Démarrer le serveur en écoutant sur une autre IP</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">8000</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p class="first">Création d&#8217;une application</p>
+<blockquote>
+<div><p>Pour créer votre application, assurez-vous d’être dans le même répertoire que manage.py</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="p">[</span><span class="n">votre_application</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="types-de-champ-les-plus-courant-models-py">
+<h2>Types de champ les plus courant (models.py)<a class="headerlink" href="#types-de-champ-les-plus-courant-models-py" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>models.CharField - Cela nous permet de définir un champ texte avec un nombre limité de caractères.</li>
+<li>models.TextField - Cela nous permet de définir un champ texte sans limite de caractères. Parfait pour le contenu d&#8217;un blog post !</li>
+<li>models.DateTimeField - Définit que le champ en question est une date ou une heure.</li>
+<li>models.ForeignKey - C&#8217;est un lien vers un autre modèle.</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -53,7 +195,17 @@
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Django</a><ul>
+<li><a class="reference internal" href="#principes-de-fonctionnement">Principes de fonctionnement</a></li>
+<li><a class="reference internal" href="#rappel-des-commandes-de-base">Rappel des commandes de base</a></li>
+<li><a class="reference internal" href="#types-de-champ-les-plus-courant-models-py">Types de champ les plus courant (models.py)</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>

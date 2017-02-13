@@ -12,6 +12,42 @@ Django
             * https://docs.djangoproject.com/fr/1.10/howto/
                 # Guides pratiques
 
+------------------------------------------------------------------------------------------
+
+Principes de fonctionnement
+===========================
+
+Django travail sur le principe du MVC (Model, Vue, Controler). L'organisation dans Django
+se présente sous la forme : Model, Vue, Template.
+
+La correspondance avec le MVC est la suivante :
+
+    #. Model (Django : Model) :
+    
+        - **models.py** : C'est le scrip qui permet la création des tables
+          dans la base de données. 
+          
+          Par analogie avec la POO
+            + La base de donné est l'objet
+            + Les tables (définies comme des class dans "models.py")
+              sont des instances de l'objet
+            + Les champs (définies comme des attribut de class dans "models.py")
+              sont des attributs de l'instances
+            
+    #. Vue (Django : Template) :
+        
+        - Tous les fichiers en ".html" dans ./templates
+        - Les feuilles de styles (".css") dans ./static
+        - **urls.py** : sert de liaison avec views.py. Ce ficher génére les urls à la volée,
+          par l'interprétation d'expression régulière (RegEx)
+          
+    #. Controler (Django : Vue)
+    
+        - **views.py** : Permet de faire le liens entre le Model et la Vue. Interprètes
+          les formulaires HTML et interagit avec la base de données
+        
+
+------------------------------------------------------------------------------------------
 
 Rappel des commandes de base
 ============================

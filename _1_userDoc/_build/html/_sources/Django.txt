@@ -2,3 +2,92 @@
 Django
 ======
 
+:Liens Web:
+            * https://docs.djangoproject.com/fr/1.10/ref/
+                # Référence de Django (fr)
+                
+            * https://docs.djangoproject.com/fr/1.10/intro/
+                # Tutoriel de prise en main / découverte
+                
+            * https://docs.djangoproject.com/fr/1.10/howto/
+                # Guides pratiques
+
+------------------------------------------------------------------------------------------
+
+Principes de fonctionnement
+===========================
+
+Django travail sur le principe du MVC (Model, Vue, Controler). L'organisation dans Django
+se présente sous la forme : Model, Vue, Template.
+
+La correspondance avec le MVC est la suivante :
+
+    #. Model (Django : Model) :
+    
+        - **models.py** : C'est le scrip qui permet la création des tables
+          dans la base de données. 
+          
+          Par analogie avec la POO
+            + La base de donné est l'objet
+            + Les tables (définies comme des class dans "models.py")
+              sont des instances de l'objet
+            + Les champs (définies comme des attribut de class dans "models.py")
+              sont des attributs de l'instances
+            
+    #. Vue (Django : Template) :
+        
+        - Tous les fichiers en ".html" dans ./templates
+        - Les feuilles de styles (".css") dans ./static
+        - **urls.py** : sert de liaison avec views.py. Ce ficher génére les urls à la volée,
+          par l'interprétation d'expression régulière (RegEx)
+          
+    #. Controler (Django : Vue)
+    
+        - **views.py** : Permet de faire le liens entre le Model et la Vue. Interprètes
+          les formulaires HTML et interagit avec la base de données
+        
+
+------------------------------------------------------------------------------------------
+
+Rappel des commandes de base
+============================
+
+:Liens Web:
+            * https://docs.djangoproject.com/fr/1.10/intro/tutorial01/
+
+    #. Création d’un projet ::
+    
+        django-admin startproject mysite
+        # Cela va créer un répertoire mysite dans le répertoire courant
+        
+    #. Le serveur de développement
+        ::
+    
+            python manage.py runserver
+            
+        **N.B** : Le port par défaut est le 8000
+        
+        #. Démarrage du serveur sur un autre port ::
+        
+            python manage.py runserver 8080
+            
+        #. Démarrer le serveur en écoutant sur une autre IP ::
+        
+            python manage.py runserver 0.0.0.0:8000
+            
+    #. Création d'une application
+        
+        Pour créer votre application, assurez-vous d’être dans le même répertoire que manage.py ::
+        
+            python manage.py startapp [votre_application]
+            
+Types de champ les plus courant (models.py)
+===========================================
+
+    * models.CharField - Cela nous permet de définir un champ texte avec un nombre limité de caractères.
+    * models.TextField - Cela nous permet de définir un champ texte sans limite de caractères. Parfait pour le contenu d'un blog post !
+    * models.DateTimeField - Définit que le champ en question est une date ou une heure.
+    * models.ForeignKey - C'est un lien vers un autre modèle.
+
+    
+    
