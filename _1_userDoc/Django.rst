@@ -14,6 +14,73 @@ Django
 
 ------------------------------------------------------------------------------------------
 
+Démmarer un nouveau projet
+==========================
+
+    #. Créer l'environement virtuel
+    
+        - Créer un dossier avec un nom significatif : ::
+        
+            ex : env_[nom_du_projet]
+            
+        - Ce placer dans le répertoire de destination et lancer la création
+          de l'environement virtuel : ::
+          
+            cd env_[nom_du_projet]
+            
+            virtualenv --system-site-packages .
+                # Le point en fin de ligne représente le répertoire courrant
+                
+    #. Créer un projet Django
+    
+        - Créer un dossier significatif
+        - Lancer l'environement virtuel avant de créer le projet Django
+            + Executer le script d'activation : ::
+            
+                .\Scripts\activate.bat
+                
+        - Ce placer dans le répertoire de destination et lancer la création
+          du projet Django(site principal) : ::
+          
+            cd [nom_du_projet]
+            
+            django-admin startproject [nom_du_projet] .
+                # Le point en fin de ligne représente le répertoire courrant
+                # Un dossier du [nom_du_projet] sera créer dans le répertoire courrant
+                
+    #. Configurer le fichier "settings.py"
+    
+        - Editer le fichier "settings.py" situé dans le dossier "./[nom_du_projet]/"
+        - Modfier les lignes : ::
+        
+            LANGUAGE_CODE = 'en-us'
+            TIME_ZONE = 'UTC'
+            
+          par : ::
+          
+            LANGUAGE_CODE = 'fr-fr'
+            TIME_ZONE = 'Europe/Paris'
+            
+        - Ajouter après la ligne "STATIC_URL = '/static/'" la ligne : ::
+        
+            STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+            
+    #. Créer la base de donnée (pour une DB SQLite)
+    
+        - Se placer au même niveau que le fichiers "manage.py"
+        - Effectuer la première migration : ::
+        
+            manage.py migrate
+
+                
+Démarrer une nouvelle APP
+-------------------------
+
+    - Se placer au même niveau que le fichiers "manage.py"
+    
+
+------------------------------------------------------------------------------------------
+
 Principes de fonctionnement
 ===========================
 
