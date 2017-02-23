@@ -498,7 +498,7 @@ Tester un type attendu
             
 ------------------------------------------------------------------------------------------
 
-Packing et UnPacking (utilisation de : "*args" et "**kwargs")
+Packing et UnPacking (utilisation de : '*args' et '**kwargs')
 =============================================================
 
 :Liens Web:
