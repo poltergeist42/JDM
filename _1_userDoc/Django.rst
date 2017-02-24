@@ -2,7 +2,7 @@
 Django
 ======
 
-:Liens_Web:
+:Liens_WEB:
             * https://docs.djangoproject.com/fr/1.10/ref/
                 # Référence de Django (fr)
                 
@@ -122,7 +122,7 @@ La correspondance avec le MVC est la suivante :
 Rappel des commandes de base
 ============================
 
-:Liens_Web:
+:Liens_WEB:
             * https://docs.djangoproject.com/fr/1.10/intro/tutorial01/
 
     #. Création d’un projet ::
@@ -162,5 +162,19 @@ Types de champ les plus courant (models.py)
     * models.DateTimeField - Définit que le champ en question est une date ou une heure.
     * models.ForeignKey - C'est un lien vers un autre modèle.
 
+    
+Les Regex (Expression régulières)
+=================================
+
+:Liens_WEB:
+            * https://fr.wikipedia.org/wiki/Expression_rationnelle
+            
+Présentation rapide de la symbolique des expression régulière : ::
+
+    ^ -> le début du texte
+    $ -> la fin du texte
+    \d -> un chiffre
+    + -> indique que l'expression précédente doit se répéter au moins une fois
+    () -> capture une partie du pattern
     
     
