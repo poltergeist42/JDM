@@ -2,7 +2,7 @@
 Django
 ======
 
-:Liens Web:
+:Liens_Web:
             * https://docs.djangoproject.com/fr/1.10/ref/
                 # Référence de Django (fr)
                 
@@ -76,7 +76,10 @@ Démmarer un nouveau projet
 Démarrer une nouvelle APP
 -------------------------
 
-    - Se placer au même niveau que le fichiers "manage.py"
+    - Se placer au même niveau que le fichiers "manage.py" et executer la commande manage : ::
+    
+        manage.py startapp [votre_application]
+            # Un dossier [votre_application] sera créer dans le répertoire courant
     
 
 ------------------------------------------------------------------------------------------
@@ -119,7 +122,7 @@ La correspondance avec le MVC est la suivante :
 Rappel des commandes de base
 ============================
 
-:Liens Web:
+:Liens_Web:
             * https://docs.djangoproject.com/fr/1.10/intro/tutorial01/
 
     #. Création d’un projet ::
@@ -130,26 +133,29 @@ Rappel des commandes de base
     #. Le serveur de développement
         ::
     
-            python manage.py runserver
+            manage.py runserver
             
         **N.B** : Le port par défaut est le 8000
         
         #. Démarrage du serveur sur un autre port ::
         
-            python manage.py runserver 8080
+            manage.py runserver 8080
             
         #. Démarrer le serveur en écoutant sur une autre IP ::
         
-            python manage.py runserver 0.0.0.0:8000
+            manage.py runserver 0.0.0.0:8000
             
     #. Création d'une application
         
         Pour créer votre application, assurez-vous d’être dans le même répertoire que manage.py ::
         
-            python manage.py startapp [votre_application]
+            manage.py startapp [votre_application]
             
 Types de champ les plus courant (models.py)
 ===========================================
+
+:Liens_Web: * https://docs.djangoproject.com/fr/1.10/ref/models/fields/#field-types
+                # Liste complète depuis la doc officiel et en fr
 
     * models.CharField - Cela nous permet de définir un champ texte avec un nombre limité de caractères.
     * models.TextField - Cela nous permet de définir un champ texte sans limite de caractères. Parfait pour le contenu d'un blog post !
