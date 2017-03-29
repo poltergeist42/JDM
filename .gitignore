@@ -11,6 +11,7 @@ _5_*/
 _6_*/
 _7_*/
 *_v/
+_build/
 
 ## [ listes des extentions a ignorer ]
 *.*~
@@ -18,4 +19,5 @@ _7_*/
 *.264
 *.mkv
 *.mp4
+*.pyc
 Thumbs.db
