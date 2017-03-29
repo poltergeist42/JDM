@@ -17,7 +17,8 @@
         VERSION:     '20160628',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -26,7 +27,6 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="top" title="documentation JDM 20160628" href="index.html" />
     <link rel="next" title="PowerShell" href="Powershell.html" />
     <link rel="prev" title="Kicad" href="kicad.html" />
    
@@ -292,45 +292,37 @@ trouve sur le compte root.</p>
 </div></blockquote>
 <ol class="last arabic">
 <li><p class="first">Changer la langue depuis l&#8217;interface de configuration du Pi</p>
-<ul>
+<ul class="simple">
 <li><dl class="first docutils">
 <dt>se connecter a l&#8217;interface de configuration</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>sudo raspi-config</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p class="first">Ouvrir le menu &#8220;5 Internalisation Options&#8221;</p>
-</li>
-<li><p class="first">Ouvrir &#8220;I1 Change Locale&#8221;</p>
-</li>
-<li><p class="first">Si une langue comme <strong>&#8220;en_GB.UTF-8 UTF-8&#8221;</strong> est cochee, decochez-la
-en appuyant sur <strong>&#8220;Espace&#8221;</strong></p>
-</li>
-<li><p class="first">Cochez la langue <strong>&#8220;fr_FR.UTF-8 UTF-8</strong>&#8220;</p>
-</li>
-<li><p class="first">Selectioner <strong>&#8220;OK&#8221;</strong> puis valider</p>
-</li>
-<li><p class="first">Verifier le jeu de parametres regionaux puis valider sur <strong>&#8220;OK&#8221;</strong></p>
-</li>
-<li><p class="first">Valider sur &#8220;Finish&#8221; puis redemarrer</p>
-</li>
+<li>Ouvrir le menu &#8220;5 Internalisation Options&#8221;</li>
+<li>Ouvrir &#8220;I1 Change Locale&#8221;</li>
+<li>Si une langue comme <strong>&#8220;en_GB.UTF-8 UTF-8&#8221;</strong> est cochee, decochez-la
+en appuyant sur <strong>&#8220;Espace&#8221;</strong></li>
+<li>Cochez la langue <strong>&#8220;fr_FR.UTF-8 UTF-8</strong>&#8220;</li>
+<li>Selectioner <strong>&#8220;OK&#8221;</strong> puis valider</li>
+<li>Verifier le jeu de parametres regionaux puis valider sur <strong>&#8220;OK&#8221;</strong></li>
+<li>Valider sur &#8220;Finish&#8221; puis redemarrer</li>
 </ul>
 </li>
 <li><p class="first">Modifier manuellement le fichier keyboard</p>
 <blockquote>
-<div><ul>
+<div><ul class="simple">
 <li><dl class="first docutils">
 <dt>Editer le fichier keyboard</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>sudo nano /etc/default/keyboard</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p class="first">remplacer &#8220;gb&#8221; par &#8220;fr&#8221;</p>
-</li>
+<li>remplacer &#8220;gb&#8221; par &#8220;fr&#8221;</li>
 </ul>
 </div></blockquote>
 </li>
@@ -617,8 +609,8 @@ le screen</td>
 <dd><p class="first"># <strong>N.B :</strong> le &#8220;d&#8221; dans &#8220;int.d&#8221; signifie : deamon.
 C&#8217;est le nom des services sous linux</p>
 <dl class="last docutils">
-<dt>exemple de script</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier"><strong>/etc/init.d/skeleton</strong></span><dd><p class="first last"># Le fichier skeleton, dans linux, est donné a titre de model.
+<dt>exemple de script <span class="classifier-delimiter">:</span> <span class="classifier"><strong>/etc/init.d/skeleton</strong></span></dt>
+<dd><p class="first last"># Le fichier skeleton, dans linux, est donné a titre de model.
 Il est conseillé de se faire une copie du fichier
 dans ses documents et de travailler à partir de cette exemple</p>
 </dd>
@@ -811,7 +803,7 @@ sur la premiere ligne de votre fichier</p>
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/Linux.txt"
+      <li><a href="_sources/Linux.rst.txt"
             rel="nofollow">Montrer le code source</a></li>
     </ul>
    </div>
@@ -833,11 +825,11 @@ sur la premiere ligne de votre fichier</p>
       &copy;2016, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="_sources/Linux.txt"
+      <a href="_sources/Linux.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

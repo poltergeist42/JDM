@@ -17,7 +17,8 @@
         VERSION:     '20160628',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -26,7 +27,6 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="top" title="documentation JDM 20160628" href="index.html" />
     <link rel="next" title="Computer Vision" href="ComputerVision.html" />
     <link rel="prev" title="Mon journal de manip" href="index.html" />
    
@@ -52,29 +52,25 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><ul class="first last">
+<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><ul class="first last simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/?ALLSTEPS">http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/?ALLSTEPS</a></dt>
-<dd><p class="first last"># Instructable (install I2C et test en Python3)</p>
-</dd>
+<dd># Instructable (install I2C et test en Python3)</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/">http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/</a></dt>
-<dd><p class="first last"># Exemple de mise en oeuvre + list des fonctions</p>
-</dd>
+<dd># Exemple de mise en oeuvre + list des fonctions</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf">http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf</a></dt>
-<dd><p class="first last"># Datasheet du composant</p>
-</dd>
+<dd># Datasheet du composant</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://www.sparkfun.com/products/10530">https://www.sparkfun.com/products/10530</a></dt>
-<dd><p class="first last"># fiche produit Sparkfun (arduino)</p>
-</dd>
+<dd># fiche produit Sparkfun (arduino)</dd>
 </dl>
 </li>
 </ul>
@@ -274,7 +270,7 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 <col width="10%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-odd"><td>&#160;</td>
 <td colspan="8">==&gt; CW Direction (1-2 Phase )</td>
 </tr>
 <tr class="row-even"><td>lead Wire color</td>
@@ -290,39 +286,39 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 <tr class="row-odd"><td>4 orange</td>
 <td>x</td>
 <td>x</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
 <td>x</td>
 </tr>
 <tr class="row-even"><td>3 yelow</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 <td>x</td>
 <td>x</td>
 <td>x</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>2 pink</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
 <td>x</td>
 <td>x</td>
 <td>x</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>1 blue</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
 <td>x</td>
 <td>x</td>
 <td>x</td>
@@ -373,19 +369,16 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><ul class="first last">
-<li><p class="first"><a class="reference external" href="http://www.framboise314.fr/picamera-pour-piloter-integralement-la-camera-de-votre-raspberry-pi-en-python/">http://www.framboise314.fr/picamera-pour-piloter-integralement-la-camera-de-votre-raspberry-pi-en-python/</a></p>
-</li>
+<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.framboise314.fr/picamera-pour-piloter-integralement-la-camera-de-votre-raspberry-pi-en-python/">http://www.framboise314.fr/picamera-pour-piloter-integralement-la-camera-de-votre-raspberry-pi-en-python/</a></li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://picamera.readthedocs.org/en/release-1.0/quickstart.html">http://picamera.readthedocs.org/en/release-1.0/quickstart.html</a></dt>
-<dd><p class="first last"># Quick Start</p>
-</dd>
+<dd># Quick Start</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://picamera.readthedocs.org/en/release-1.0/recipes1.html">http://picamera.readthedocs.org/en/release-1.0/recipes1.html</a></dt>
-<dd><p class="first last"># CookBook</p>
-</dd>
+<dd># CookBook</dd>
 </dl>
 </li>
 </ul>
@@ -578,7 +571,7 @@ et non la distance total parcourue par l&#8217;onde radio.</p>
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/Composants.txt"
+      <li><a href="_sources/Composants.rst.txt"
             rel="nofollow">Montrer le code source</a></li>
     </ul>
    </div>
@@ -600,11 +593,11 @@ et non la distance total parcourue par l&#8217;onde radio.</p>
       &copy;2016, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="_sources/Composants.txt"
+      <a href="_sources/Composants.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

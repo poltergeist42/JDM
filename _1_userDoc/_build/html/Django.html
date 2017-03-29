@@ -17,7 +17,8 @@
         VERSION:     '20160628',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -26,7 +27,6 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="top" title="documentation JDM 20160628" href="index.html" />
     <link rel="next" title="DocUtils ; reStructuredText (.rst) ; Sphinx" href="DocUtils_RST_Sphinx.html" />
     <link rel="prev" title="Computer Vision" href="ComputerVision.html" />
    
@@ -50,23 +50,20 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last">
+<tr class="field-odd field"><th class="field-name">Liens_WEB:</th><td class="field-body"><ul class="first last simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/ref/">https://docs.djangoproject.com/fr/1.10/ref/</a></dt>
-<dd><p class="first last"># Référence de Django (fr)</p>
-</dd>
+<dd># Référence de Django (fr)</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/intro/">https://docs.djangoproject.com/fr/1.10/intro/</a></dt>
-<dd><p class="first last"># Tutoriel de prise en main / découverte</p>
-</dd>
+<dd># Tutoriel de prise en main / découverte</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/howto/">https://docs.djangoproject.com/fr/1.10/howto/</a></dt>
-<dd><p class="first last"># Guides pratiques</p>
-</dd>
+<dd># Guides pratiques</dd>
 </dl>
 </li>
 </ul>
@@ -74,6 +71,114 @@
 </tr>
 </tbody>
 </table>
+<hr class="docutils" />
+<div class="section" id="demmarer-un-nouveau-projet">
+<h2>Démmarer un nouveau projet<a class="headerlink" href="#demmarer-un-nouveau-projet" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Créer l&#8217;environement virtuel</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Créer un dossier avec un nom significatif :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Ce placer dans le répertoire de destination et lancer la création
+de l&#8217;environement virtuel :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
+
+<span class="n">virtualenv</span> <span class="o">--</span><span class="n">system</span><span class="o">-</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="o">.</span>
+    <span class="c1"># Le point en fin de ligne représente le répertoire courrant</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Créer un projet Django</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Créer un dossier significatif</p>
+</li>
+<li><dl class="first docutils">
+<dt>Lancer l&#8217;environement virtuel avant de créer le projet Django</dt>
+<dd><ul class="first last">
+<li><p class="first">Executer le script d&#8217;activation :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">Scripts</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Ce placer dans le répertoire de destination et lancer la création
+du projet Django(site principal) :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
+
+<span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startproject</span> <span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span> <span class="o">.</span>
+    <span class="c1"># Le point en fin de ligne représente le répertoire courrant</span>
+    <span class="c1"># Un dossier du [nom_du_projet] sera créer dans le répertoire courrant</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Configurer le fichier &#8220;settings.py&#8221;</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Editer le fichier &#8220;settings.py&#8221; situé dans le dossier &#8221;./[nom_du_projet]/&#8221;</p>
+</li>
+<li><p class="first">Modfier les lignes :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;en-us&#39;</span>
+<span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;UTC&#39;</span>
+</pre></div>
+</div>
+<p>par :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;fr-fr&#39;</span>
+<span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;Europe/Paris&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Ajouter après la ligne &#8220;STATIC_URL = &#8216;/static/&#8217;&#8221; la ligne :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;static&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Créer la base de donnée (pour une DB SQLite)</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Se placer au même niveau que le fichiers &#8220;manage.py&#8221;</p>
+</li>
+<li><p class="first">Effectuer la première migration :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<div class="section" id="demarrer-une-nouvelle-app">
+<h3>Démarrer une nouvelle APP<a class="headerlink" href="#demarrer-une-nouvelle-app" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ul>
+<li><p class="first">Se placer au même niveau que le fichiers &#8220;manage.py&#8221; et executer la commande manage :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="p">[</span><span class="n">votre_application</span><span class="p">]</span>
+    <span class="c1"># Un dossier [votre_application] sera créer dans le répertoire courant</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
 <hr class="docutils" />
 <div class="section" id="principes-de-fonctionnement">
 <h2>Principes de fonctionnement<a class="headerlink" href="#principes-de-fonctionnement" title="Lien permanent vers ce titre">¶</a></h2>
@@ -130,7 +235,7 @@ les formulaires HTML et interagit avec la base de données</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><blockquote class="first">
+<tr class="field-odd field"><th class="field-name">Liens_WEB:</th><td class="field-body"><blockquote class="first">
 <div><ul class="simple">
 <li><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/intro/tutorial01/">https://docs.djangoproject.com/fr/1.10/intro/tutorial01/</a></li>
 </ul>
@@ -144,18 +249,18 @@ les formulaires HTML et interagit avec la base de données</li>
 </li>
 <li><dl class="first docutils">
 <dt>Le serveur de développement</dt>
-<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
+<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
 </pre></div>
 </div>
 <p><strong>N.B</strong> : Le port par défaut est le 8000</p>
 <ol class="last arabic">
 <li><p class="first">Démarrage du serveur sur un autre port</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mi">8080</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mi">8080</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Démarrer le serveur en écoutant sur une autre IP</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">8000</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">8000</span>
 </pre></div>
 </div>
 </li>
@@ -166,7 +271,7 @@ les formulaires HTML et interagit avec la base de données</li>
 <li><p class="first">Création d&#8217;une application</p>
 <blockquote>
 <div><p>Pour créer votre application, assurez-vous d’être dans le même répertoire que manage.py</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="p">[</span><span class="n">votre_application</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="p">[</span><span class="n">votre_application</span><span class="p">]</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -179,14 +284,47 @@ les formulaires HTML et interagit avec la base de données</li>
 </div>
 <div class="section" id="types-de-champ-les-plus-courant-models-py">
 <h2>Types de champ les plus courant (models.py)<a class="headerlink" href="#types-de-champ-les-plus-courant-models-py" title="Lien permanent vers ce titre">¶</a></h2>
-<blockquote>
-<div><ul class="simple">
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/ref/models/fields/#field-types">https://docs.djangoproject.com/fr/1.10/ref/models/fields/#field-types</a></dt>
+<dd># Liste complète depuis la doc officiel et en fr</dd>
+</dl>
+</li>
 <li>models.CharField - Cela nous permet de définir un champ texte avec un nombre limité de caractères.</li>
 <li>models.TextField - Cela nous permet de définir un champ texte sans limite de caractères. Parfait pour le contenu d&#8217;un blog post !</li>
 <li>models.DateTimeField - Définit que le champ en question est une date ou une heure.</li>
 <li>models.ForeignKey - C&#8217;est un lien vers un autre modèle.</li>
 </ul>
-</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="les-regex-expression-regulieres">
+<h2>Les Regex (Expression régulières)<a class="headerlink" href="#les-regex-expression-regulieres" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_WEB:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://fr.wikipedia.org/wiki/Expression_rationnelle">https://fr.wikipedia.org/wiki/Expression_rationnelle</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Présentation rapide de la symbolique des expression régulière :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>^ -&gt; le début du texte
+$ -&gt; la fin du texte
+\d -&gt; un chiffre
++ -&gt; indique que l&#39;expression précédente doit se répéter au moins une fois
+() -&gt; capture une partie du pattern
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -199,9 +337,14 @@ les formulaires HTML et interagit avec la base de données</li>
   <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Django</a><ul>
+<li><a class="reference internal" href="#demmarer-un-nouveau-projet">Démmarer un nouveau projet</a><ul>
+<li><a class="reference internal" href="#demarrer-une-nouvelle-app">Démarrer une nouvelle APP</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#principes-de-fonctionnement">Principes de fonctionnement</a></li>
 <li><a class="reference internal" href="#rappel-des-commandes-de-base">Rappel des commandes de base</a></li>
 <li><a class="reference internal" href="#types-de-champ-les-plus-courant-models-py">Types de champ les plus courant (models.py)</a></li>
+<li><a class="reference internal" href="#les-regex-expression-regulieres">Les Regex (Expression régulières)</a></li>
 </ul>
 </li>
 </ul>
@@ -217,7 +360,7 @@ les formulaires HTML et interagit avec la base de données</li>
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/Django.txt"
+      <li><a href="_sources/Django.rst.txt"
             rel="nofollow">Montrer le code source</a></li>
     </ul>
    </div>
@@ -239,11 +382,11 @@ les formulaires HTML et interagit avec la base de données</li>
       &copy;2016, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="_sources/Django.txt"
+      <a href="_sources/Django.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
