@@ -125,11 +125,7 @@ Rappel des commandes de base
 :Liens_WEB:
             * https://docs.djangoproject.com/fr/1.10/intro/tutorial01/
 
-    #. Création d’un projet ::
-    
-        django-admin startproject mysite
-        # Cela va créer un répertoire mysite dans le répertoire courant
-        
+
     #. Le serveur de développement
         ::
     
@@ -145,11 +141,7 @@ Rappel des commandes de base
         
             manage.py runserver 0.0.0.0:8000
             
-    #. Création d'une application
-        
-        Pour créer votre application, assurez-vous d’être dans le même répertoire que manage.py ::
-        
-            manage.py startapp [votre_application]
+
             
 Types de champ les plus courant (models.py)
 ===========================================
