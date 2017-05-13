@@ -753,3 +753,22 @@ Exemple d'utilisation : ::
     AttributeError: 'C' object has no attribute '__priv'
     >>> test.getPriv()
     3
+    
+------------------------------------------------------------------------------------------
+
+connaitre l'os de travail
+=========================
+
+::
+
+    ex Win :
+    >>> import os
+    >>> os.name
+    'nt'
+    
+    ex Mac / Linux :
+    >>> import os
+    >>> os.name
+    'posix'
+    
+    
