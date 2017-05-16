@@ -146,10 +146,26 @@ appliquer le contenu d'une branch dans la branch courante (faire un merge)
 suprimer des éléments
 =====================
  
-    #. supprimer un fichier dans le repository (l'index)
+    #. supprimer un fichier du repository (de l'index, mais pas du dossier de travail)
+       
         ::
         
             git rm --cached [nom_du_fichier]
+            
+    #. supprimer un dossier du repository (de l'index, mais pas du dossier de travail)
+    
+        - On commence par l'exclure à laide de '.gitignore' ::
+            
+            ## gitignore
+            ## files
+            ...
+            ## dir
+            path_to_my_folder/
+            
+        - on le supprime ensuite de la même façon qu'un fichier ::
+        
+            git rm -r --cached path_to_my_folder/
+    
     
     #. supprimer tous le cache
         ::
