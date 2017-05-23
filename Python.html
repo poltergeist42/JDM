@@ -1,0 +1,1212 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PYTHON &#8212; documentation JDM 20170523</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '20170523',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Raspberry" href="Raspberry.html" />
+    <link rel="prev" title="PowerShell" href="Powershell.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="python">
+<h1>PYTHON<a class="headerlink" href="#python" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="obtenir-de-l-aide-sur-une-class-ou-une-methode-python">
+<h2>Obtenir de l’aide sur une class ou une méthode  (python)<a class="headerlink" href="#obtenir-de-l-aide-sur-une-class-ou-une-methode-python" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><p>Dans la console Python, saisir  :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s2">&quot;nom_de_la_class&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux">
+<h2>Lignes de code à insérer au debut de chaque script sous linux<a class="headerlink" href="#lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+</pre></div>
+</div>
+<p><strong>N.B :</strong> copier ces lignes entierement sans oublier le «&nbsp;#&nbsp;» devant.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="os-library">
+<h2>os library<a class="headerlink" href="#os-library" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://python.developpez.com/faq/?page=Repertoire">http://python.developpez.com/faq/?page=Repertoire</a></dt>
+<dd># résumer des commandes pour le traitemant des répertoires</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.python.org/3.4/library/os.html">https://docs.python.org/3.4/library/os.html</a></dt>
+<dd># doc officiel de la librairie</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="traitemant-des-repertoires">
+<h3>Traitemant des répertoires<a class="headerlink" href="#traitemant-des-repertoires" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Connaitre le repertoitre de travail</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+    <span class="c1"># on commence par importer la bibliotheque &#39;os&#39;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Redefinir le repertoir courant</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;mon_rep/de/travail&quot;</span><span class="p">)</span>
+    <span class="c1"># meme sous windows, il faut remplacer les &quot;\&quot; dans le chemin de</span>
+    <span class="n">destination</span> <span class="n">par</span> <span class="n">des</span> <span class="s2">&quot;/&quot;</span>
+
+    <span class="n">ex</span> <span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;C:/mntJeanCloud/Perso/LAB/Pierre/python/projet/appliActivity&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Savoir si un chemin représente un répertoire ?</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="c1"># renvoit True si path désigne un répertoire existant</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Créer un répertoire</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="mi">0777</span><span class="p">)</span>
+    <span class="c1"># créé un répertoire le plus à droite dans path</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="mi">0777</span><span class="p">)</span>
+    <span class="c1"># crée tous les répertoires de path n&#39;existant pas</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Supprimer un répertoire</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="c1"># supprime le répertoire path si celui-ci est vide</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Supprimer un fichiers</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">([</span><span class="n">nom_du_fichier</span><span class="p">])</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Renommer/déplacer un répertoire</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+    <span class="c1"># permet de renommer le répertoire src en le répertoire dst,</span>
+    <span class="c1"># tous les répertoire parent de dst doivent cependant déjà exister,</span>
+    <span class="c1"># une erreur étant sinon retournée.</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">renames</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+    <span class="c1"># permet de renommer le répertoire src en dst tout en créant si</span>
+    <span class="c1"># nécessaire les répertoires parent du répertoire de destination.</span>
+</pre></div>
+</div>
+<p><strong>N.B</strong> : Si le répertoire de destination se trouve sur le même système
+de fichiers, vous pouvez utiliser aussi bien les fonctions <strong>os.rename</strong>,
+<strong>os.renames</strong> que <strong>shutil.move</strong> sinon <strong>préférez shutil.move</strong>,
+les 2 autres fonctions pouvant échouer à leur tâche.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Connaître la taille d’un répertoire</p>
+</li>
+</ol>
+<p>Pour connaître la taille d’un répertoire, il suffit de le parcourir
+son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os.path</span>
+
+<span class="k">def</span> <span class="nf">sizedirectory</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">fic</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">size</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">fic</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">size</span>
+
+<span class="nb">print</span><span class="p">(</span> <span class="n">sizedirectory</span><span class="p">([</span><span class="n">path_</span><span class="o">=</span><span class="n">_mon_chemin_de_dossier</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="shutil-library">
+<h2>shutil library<a class="headerlink" href="#shutil-library" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.python.org/3.4/library/shutil.html">https://docs.python.org/3.4/library/shutil.html</a></dt>
+<dd># Documentation officielle de la lib.</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h3>Traitemant des répertoires<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Supprimer un répertoire non vide</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Renommer/déplacer un répertoire</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+    <span class="c1"># renomme exactement comme os.renames le répertoire src en dst si</span>
+    <span class="c1"># le répertoire de destination est sur le même système de fichiers.</span>
+    <span class="c1"># Autrement elle copie simplement src sur dst puis efface src.</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="pip">
+<h2>pip<a class="headerlink" href="#pip" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/">http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/</a></li>
+<li><a class="reference external" href="http://www.inspyration.org/tutoriels/utiliser-pip">http://www.inspyration.org/tutoriels/utiliser-pip</a></li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://sametmax.com/votre-python-aime-les-pip/">http://sametmax.com/votre-python-aime-les-pip/</a></dt>
+<dd># ce liens montre des exemples d’utilisation de pip</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="installation-de-pip">
+<h3>Installation de PIP<a class="headerlink" href="#installation-de-pip" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Recuperation et installation du packet</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">bootstrap</span><span class="o">.</span><span class="n">pypa</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">get</span><span class="o">-</span><span class="n">pip</span><span class="o">.</span><span class="n">py</span>
+    <span class="c1"># recuperation du script d&#39;installation</span>
+
+<span class="n">python</span> <span class="n">get</span><span class="o">-</span><span class="n">pip</span><span class="o">.</span><span class="n">py</span>
+    <span class="c1"># se placer dans le repertoire d&#39;installation et lancer le script</span>
+    <span class="c1"># une elevation est peut être necessaire</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Installation depuis apt-get</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span>
+    <span class="c1"># pip sera installer dans le repertoir suivant :</span>
+    <span class="c1"># /usr/bin/pip3</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="utilisation-de-pip">
+<h3>Utilisation de PIP<a class="headerlink" href="#utilisation-de-pip" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p>La commande pip s’execute directement dans le shell</p>
+<ol class="arabic">
+<li><p class="first">Executer pip pour python3 dans un environement linux</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span><span class="o">-</span><span class="mf">3.2</span> <span class="p">[</span><span class="n">une_commande</span><span class="p">]</span>
+        <span class="n">ou</span>
+<span class="n">pip3</span> <span class="p">[</span><span class="n">une</span> <span class="n">commande</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">obtenir la liste des options</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">help</span>
+    <span class="c1"># fonctionne aussi avec pip tout seul</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">chercher un paquet</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">search</span> <span class="p">[</span><span class="n">nom_du_paquet_rechercher</span><span class="p">]</span>
+    <span class="c1"># on peut recherher plusieurs termes en les separent par des espaces</span>
+    <span class="c1"># ex : pip search py3 numpy</span>
+    <span class="c1"># attention, la recherche est egalement faite sur</span>
+    <span class="c1"># les definissions des paquets</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">installer un paquet</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="p">[</span><span class="n">nom_du_paquet_a_installer</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper">
+<h2>Les environnements virtuels Python : virtualenv et virtualenvwrapper<a class="headerlink" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://sametmax.com/les-environnement-virtuels-python-virtualenv-et-virtualenvwrapper/">http://sametmax.com/les-environnement-virtuels-python-virtualenv-et-virtualenvwrapper/</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="installation-des-environements-virtuels">
+<h3>installation des environements virtuels<a class="headerlink" href="#installation-des-environements-virtuels" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Installation de virtualenv et virtualenvwrapper</li>
+</ol>
+<p>N.B : il est préférable de les installer en sudo et non en root (su)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenvwrapper</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="configuration-des-environements-virtuels">
+<h3>configuration des environements virtuels<a class="headerlink" href="#configuration-des-environements-virtuels" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Créer un dossier pour les environements virtuels</p>
+<blockquote>
+<div><ul class="simple">
+<li>Se placer dans le répertoire de l’utilisateur (/home/pi)</li>
+<li>Créer un dossier pour les environements virtuels</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">virtualenv</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p class="first">Editer le fichier .bashrc</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">renseigner le fichier .bashrc</p>
+</li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p class="first">Se placer à la fin du fichier et saisir :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span># virtualenvwrapper
+
+export WORKON_HOME=~/virtualenv
+    # si le dossier n&#39;a pas été créer au même endroit ou avec le même
+    # nom, modifier la ligne précédente en conséquense
+
+mkdir -p $WORKON_HOME
+source  /usr/local/bin/virtualenvwrapper.sh
+    # si virtualenvwrapper.sh n&#39;est pas installer au même endroit,
+    # adapter le chemin d&#39;accès au fichier
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="utilisation-environements-virtuels">
+<h3>Utilisation environements virtuels<a class="headerlink" href="#utilisation-environements-virtuels" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Création d’un nouvel environements virtuel</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="p">[</span><span class="n">nom_de_l_environement</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">2</span>
+    <span class="c1"># ex : mkvirtualenv env1 -P /usr/bin/python3.2</span>
+
+    <span class="c1"># un dossier du nom de votre environement virtuel est alors créer</span>
+    <span class="c1"># dans le dossier virtualenv créer en section 2.1</span>
+
+    <span class="c1"># l&#39;option &quot;-p usr/bin/python3.2&quot; permet de configurer l&#39;environements</span>
+    <span class="c1"># virtuel pour python3. par défaut sur Rpi, c&#39;est python2 qui est</span>
+    <span class="c1"># utilisé</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Activation / désactivation de l’environment</dt>
+<dd><p class="first">Pour être utilisé, un environement doit être activé :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">workon</span> <span class="p">[</span><span class="n">nom_de_l_environement</span><span class="p">]</span>
+        <span class="c1"># ex : workon env1</span>
+</pre></div>
+</div>
+<p>A la fin de son utilisation, ou pour passer sur un autre environement, il faut
+le désactiver :</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">deactivate</span>
+    <span class="c1"># c&#39;est tout !</span>
+    <span class="c1"># Attention, ce n&#39;est pas deSactivate,</span>
+    <span class="c1"># mais bien deactivate sans &quot;S&quot;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first">supprimer un environement</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rmvirtualenv</span> <span class="p">[</span><span class="n">nom_de_l_environement</span><span class="p">]</span>
+    <span class="c1"># ex : rmvirtualenv env1</span>
+    <span class="c1"># le dossier de lenvironement sera également supprimer</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="un-shell-python-qui-fait-de-l-auto-completion">
+<h2>Un shell Python qui fait de l’auto completion<a class="headerlink" href="#un-shell-python-qui-fait-de-l-auto-completion" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>ipython</li>
+<li>ipython3 (pour python3)</li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="convertir-un-string-en-bytes">
+<h2>convertir un string en bytes<a class="headerlink" href="#convertir-un-string-en-bytes" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">mystring</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="connaitre-l-adresse-memoire-d-un-objet">
+<h2>Connaitre l’adresse mémoire d’un objet<a class="headerlink" href="#connaitre-l-adresse-memoire-d-un-objet" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="c1"># on récupère l&#39;adresse au format decimal</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">45748752</span>
+
+<span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span>
+    <span class="c1"># récupère l&#39;adresse et on la convertit directement au format hexadecimal</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;0x2ba1210&#39;</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="affectation-copy-et-deepcopy">
+<h2>Affectation, copy et deepcopy<a class="headerlink" href="#affectation-copy-et-deepcopy" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Affectation :</dt>
+<dd><p class="first">L’affectation ne créer pas un nouvel objet. Elle se contente de pointer sur la
+même adresse en mémoire</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># a et b ont la même adresse</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span>
+<span class="s1">&#39;0x5ec5e370&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">)</span>
+<span class="s1">&#39;0x5ec5e370&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>copy</dt>
+<dd><p class="first">La copy permet de créer un nouvel objet qui pointe sur l’adresse du premier objet
+tant que la valeur du second n’a pas été modifier</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">copy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span> <span class="n">a</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span>
+<span class="go">&#39;0x5ec5e370&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">)</span>
+<span class="go">&#39;0x5ec5e370&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span>
+<span class="go">&#39;0x5ec5e370&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">)</span>
+<span class="go">&#39;0x5ec5e380&#39;</span>
+</pre></div>
+</div>
+<p>Attention la copy d’une list crée un nouvel objet mais les adresse des données
+pointée par la list reste les mêmes, donc la modification d’une valeur dans
+la list B modifiera aussi la valeur de la list A</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[1, 2, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">[1, 2, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span>
+<span class="go">&#39;0x593d78&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">)</span>
+<span class="go">&#39;0x2f81300&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="go">&#39;0x5ec5e370&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="go">&#39;0x5ec5e370&#39;</span>
+</pre></div>
+</div>
+<p class="last">On parle de shallow copy</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>deepcopy</dt>
+<dd><p class="first">Le deepcopy permet de faire une copie «&nbsp;en profondeur&nbsp;», c’est à dire une copie
+complète y compris le contenu des données itérables</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[1, 2, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">[1, 2, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span>
+<span class="go">&#39;0x593d78&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">)</span>
+<span class="go">&#39;0x593800&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="faire-un-executable-a-partir-d-un-script">
+<h2>faire un executable à partir d’un script<a class="headerlink" href="#faire-un-executable-a-partir-d-un-script" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">les softs:</th><td class="field-body"><ul class="first last simple">
+<li>py2exe</li>
+<li>cx_Freeze</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>La procédure d’utilisation :</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://python.developpez.com/faq/?page=Py2exe">http://python.developpez.com/faq/?page=Py2exe</a></dt>
+<dd># tuto pour py2exe</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.youtube.com/watch?v=k3VoLjGA6jI">https://www.youtube.com/watch?v=k3VoLjGA6jI</a></dt>
+<dd># video EN sur py2exe</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://pypi.python.org/pypi/py2exe/0.9.2.0/">https://pypi.python.org/pypi/py2exe/0.9.2.0/</a></dt>
+<dd># py2exe (soft + install)</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://pypi.python.org/pypi?:action=display&amp;name=cx_Freeze&amp;version=4.3.4">https://pypi.python.org/pypi?:action=display&amp;name=cx_Freeze&amp;version=4.3.4</a></dt>
+<dd># cx_Freeze (soft)</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="fichiers-de-configuration-ini">
+<h2>Fichiers de configuration (.ini)<a class="headerlink" href="#fichiers-de-configuration-ini" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://stackoverflow.com/questions/8884188/how-to-read-and-write-ini-file-with-python">http://stackoverflow.com/questions/8884188/how-to-read-and-write-ini-file-with-python</a></dt>
+<dd># exemple util pour comprendre le fonctionnement</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www.marclebrun.be/wiki/doku.php?id=python:fichier_de_configuration_configparser">http://www.marclebrun.be/wiki/doku.php?id=python:fichier_de_configuration_configparser</a></dt>
+<dd># Exemple en francais (python2)</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www.developpez.net/forums/blogs/208887-tyrtamos/b23/simplifier-gestion-fichiers-ini-python/">http://www.developpez.net/forums/blogs/208887-tyrtamos/b23/simplifier-gestion-fichiers-ini-python/</a></dt>
+<dd># Autre exemple (pytohn3) en francais</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.python.org/3.4/library/configparser.html">https://docs.python.org/3.4/library/configparser.html</a></dt>
+<dd># Doc officiel (EN)</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="format-json">
+<h2>Format JSON<a class="headerlink" href="#format-json" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://sdz.tdct.org/sdz/serialisez-vos-objets-au-format-json.html">http://sdz.tdct.org/sdz/serialisez-vos-objets-au-format-json.html</a></dt>
+<dd># utiliser json avec python, les bases et en francais</dd>
+</dl>
+</li>
+<li><a class="reference external" href="http://deusyss.developpez.com/tutoriels/Python/les-modules-de-configuration/">http://deusyss.developpez.com/tutoriels/Python/les-modules-de-configuration/</a></li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.python.org/3.4/library/json.html">https://docs.python.org/3.4/library/json.html</a></dt>
+<dd># la doc Python 3.4 (en)</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="web-framework">
+<h2>web framework<a class="headerlink" href="#web-framework" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="bottle">
+<h3>Bottle<a class="headerlink" href="#bottle" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://bottlepy.org/docs/dev/index.html">http://bottlepy.org/docs/dev/index.html</a></dt>
+<dd># Doc officielle</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Bottle is a fast, simple and lightweight WSGI micro web-framework for Python.</p>
+</div>
+<div class="section" id="flask">
+<h3>Flask<a class="headerlink" href="#flask" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-now-with-python-3-support">http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-now-with-python-3-support</a></dt>
+<dd># tuto complet (en)</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://phollow.fr/2012/08/demarrer-la-creation-site-python-flask/">https://phollow.fr/2012/08/demarrer-la-creation-site-python-flask/</a></dt>
+<dd># un exemple</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://flask.pocoo.org/docs/0.11/">http://flask.pocoo.org/docs/0.11/</a></dt>
+<dd># Doc officielle</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://flask.pocoo.org/docs/0.11/quickstart/">http://flask.pocoo.org/docs/0.11/quickstart/</a></dt>
+<dd># le QuickStart de la doc officielle</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://flask.pocoo.org/docs/0.11/tutorial/#tutorial">http://flask.pocoo.org/docs/0.11/tutorial/#tutorial</a></dt>
+<dd># tuto de la doc officeille</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Flask is a micro webdevelopment framework for Python.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="les-decorateurs">
+<h2>Les décorateurs<a class="headerlink" href="#les-decorateurs" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://gillesfabio.com/blog/2010/12/16/python-et-les-decorateurs/">http://gillesfabio.com/blog/2010/12/16/python-et-les-decorateurs/</a></dt>
+<dd># Exemple + explications en fr</dd>
+</dl>
+</li>
+<li><a class="reference external" href="http://sametmax.com/comprendre-les-decorateurs-python-pas-a-pas-partie-1/">http://sametmax.com/comprendre-les-decorateurs-python-pas-a-pas-partie-1/</a></li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://sametmax.com/comprendre-les-decorateur-python-pas-a-pas-partie-2/">http://sametmax.com/comprendre-les-decorateur-python-pas-a-pas-partie-2/</a></dt>
+<dd># une explication plus pousser, partie 1 et 2 (Sam &amp; Max)</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="tester-un-type-attendu">
+<h2>Tester un type attendu<a class="headerlink" href="#tester-un-type-attendu" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Pour Test si une variable ou une instance et bien du type attendu :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span> <span class="p">[</span><span class="n">variable_a_traiter</span><span class="p">],</span> <span class="p">[</span><span class="n">type_attendu</span><span class="p">]</span> <span class="p">)</span>
+
+<span class="n">ex</span> <span class="p">:</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span> <span class="n">a</span><span class="p">,</span> <span class="nb">list</span> <span class="p">)</span>
+<span class="kc">True</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="packing-et-unpacking-utilisation-de-args-et-kwargs">
+<h2>Packing et UnPacking (utilisation de : “<a href="#id2"><span class="problematic" id="id3">*</span></a>args” et “<a href="#id4"><span class="problematic" id="id5">**</span></a>kwargs”)<a class="headerlink" href="#packing-et-unpacking-utilisation-de-args-et-kwargs" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://deusyss.developpez.com/tutoriels/Python/args_kwargs/">http://deusyss.developpez.com/tutoriels/Python/args_kwargs/</a></dt>
+<dd># complet en fr</dd>
+</dl>
+</li>
+<li><a class="reference external" href="http://sametmax.com/operateur-splat-ou-etoile-en-python/">http://sametmax.com/operateur-splat-ou-etoile-en-python/</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>N.B :</strong> on parle de l’opérateur <strong>“splat”</strong> lorsque l’on parle de l’asterisque <strong>“*”</strong></p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">«&nbsp;<a href="#id6"><span class="problematic" id="id7">*</span></a>args&nbsp;»</p>
+<blockquote>
+<div><p><strong>“*args”</strong> permet de passer, à une fonctions, des arguments en nomrbes et de types
+inconnue puis converti l’ensemble en tuple.
+ex :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="n">args</span> <span class="p">)</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="p">)</span> <span class="p">:</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> - </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="go">(1, &#39;a&#39;, True)</span>
+<span class="go">1 - &lt;class &#39;int&#39;&gt;</span>
+<span class="go">a - &lt;class &#39;str&#39;&gt;</span>
+<span class="go">True - &lt;class &#39;bool&#39;&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">«&nbsp;<a href="#id8"><span class="problematic" id="id9">**</span></a>kwargs&nbsp;»</p>
+<blockquote>
+<div><p><strong>“*kwargs”</strong> permet de passer, à une fonctions, des arguments en nomrbes et de types
+inconnue puis converti l’ensemble en dictionnaire.
+ex :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">fd</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="n">kwargs</span> <span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fd</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">{&#39;c&#39;: 3, &#39;a&#39;: 1, &#39;b&#39;: 2}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<p><strong>N.B :</strong> Les termes <strong>«&nbsp;args&nbsp;»</strong> et <strong>«&nbsp;kwargse&nbsp;»</strong> sont des convensions et peuvent être
+remplacés par un nom plus parlant mais se n’est pas conseillé.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="passer-des-parametres-a-un-programme-avec-argparse">
+<h2>Passer des paramètres à un programme avec argparse<a class="headerlink" href="#passer-des-parametres-a-un-programme-avec-argparse" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><dl class="first docutils">
+<dt><a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/un-peu-de-programmation-systeme">https://openclassrooms.com/courses/apprenez-a-programmer-en-python/un-peu-de-programmation-systeme</a></dt>
+<dd><dl class="first last docutils">
+<dt># une bonne introdutions sur la gestion des flux entrant et sortant ainsi que</dt>
+<dd><p class="first last">sur argparse</p>
+</dd>
+</dl>
+</dd>
+<dt><a class="reference external" href="https://docs.python.org/3.4/library/argparse.html">https://docs.python.org/3.4/library/argparse.html</a></dt>
+<dd><p class="first last"># La doc officielle</p>
+</dd>
+<dt><a class="reference external" href="https://docs.python.org/3.4/howto/argparse.html">https://docs.python.org/3.4/howto/argparse.html</a></dt>
+<dd><p class="first last"># Un tuto tire de la doc officielle</p>
+</dd>
+<dt><a class="reference external" href="http://www.developpez.net/forums/d1477855/autres-langages/python-zope/general-python/marche-argparse/">http://www.developpez.net/forums/d1477855/autres-langages/python-zope/general-python/marche-argparse/</a></dt>
+<dd><p class="first last"># Voir le post de “tyrtamos” du 27/10/2014 à 16h40</p>
+</dd>
+</dl>
+<ol class="last arabic">
+<li><p class="first">Obtenir de l’aide sur les options de notre code</p>
+<blockquote>
+<div><p>Même si on ne met pas l’option “-h” ou «&nbsp;- -help&nbsp;», cette options est implémentée par
+défaut dès lors que l’on crée un parser avec argparse. Cette options vas lister et
+détailler nos propre options :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">code</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span>
+<span class="n">usage</span><span class="p">:</span> <span class="n">code</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span>
+
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>  <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Elements de bases</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">argparse</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+    <span class="c1"># Creation de l&#39;instance</span>
+
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="c1"># Recuperer les arguments</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">ajouter des arguments a parser</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">([</span><span class="n">listes_des_options_separees_par_des_virgules</span><span class="p">])</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">positional arguments</p>
+<p>Les “positional arguments” sont des arguments obligatoires lors de l’appel
+du script. ils sont declare entre guillemets (ou simples cotes) et sans tiret.
+Ils n’ont pas non plus un appel long et un appel court.</p>
+<blockquote>
+<div><p>ex :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;le nombre à mettre au carré&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">optional arguments</p>
+<blockquote>
+<div><p>les “optional arguments” sont des argument facultatifs. Ils sont déclare entre
+guillemets (ou simples cotes) avec tiret. Les appels court sont composes
+d’un tiret et d’une lettre. Les appels long sont composes d’un double tiret et
+d’un nom significatif. Les 2 appels peuvent etre soit declare ensemble ou declarer
+seuls (l’un ou l’autre)</p>
+<dl class="docutils">
+<dt><strong>N.B :</strong> meme si il n’y a pas de d’argument optionel de declare, il y en a</dt>
+<dd><p class="first last">toujours au moins un puisque le help (-h ou –help) est ajouter
+automatiquement.</p>
+</dd>
+</dl>
+<p>ex :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;-v&quot;</span><span class="p">,</span> <span class="s2">&quot;--verbose&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;augmente la verbosité&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">l’exemple tire du help( «&nbsp;argparse&nbsp;» )</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">following</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">simple</span> <span class="n">usage</span> <span class="n">example</span> <span class="n">that</span> <span class="n">sums</span> <span class="n">integers</span> <span class="kn">from</span> <span class="nn">the</span>
+<span class="n">command</span><span class="o">-</span><span class="n">line</span> <span class="ow">and</span> <span class="n">writes</span> <span class="n">the</span> <span class="n">result</span> <span class="n">to</span> <span class="n">a</span> <span class="n">file</span><span class="p">::</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s1">&#39;sum the integers at the command line&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s1">&#39;integers&#39;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;int&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;an integer to be summed&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s1">&#39;--log&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">argparse</span><span class="o">.</span><span class="n">FileType</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">),</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;the file where the sum should be written&#39;</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="n">args</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">integers</span><span class="p">))</span>
+    <span class="n">args</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="les-context-managers-et-le-mot-cle-with-en-python">
+<h2>Les context managers et le mot clé “with” en Python<a class="headerlink" href="#les-context-managers-et-le-mot-cle-with-en-python" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><dl class="first last docutils">
+<dt><a class="reference external" href="http://sametmax.com/les-context-managers-et-le-mot-cle-with-en-python/">http://sametmax.com/les-context-managers-et-le-mot-cle-with-en-python/</a></dt>
+<dd><p class="first last"># Article de présentation et d’utilisation sur les context managers</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="connaitre-le-nombre-de-cpu-d-un-systeme">
+<h2>Connaitre le nombre de CPU d’un système<a class="headerlink" href="#connaitre-le-nombre-de-cpu-d-un-systeme" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="logging-library">
+<h2>logging Library<a class="headerlink" href="#logging-library" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://sametmax.com/ecrire-des-logs-en-python/">http://sametmax.com/ecrire-des-logs-en-python/</a></dt>
+<dd># L’explication qui vas bien</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.python.org/3.4/library/logging.html">https://docs.python.org/3.4/library/logging.html</a></dt>
+<dd># La doc officeille</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body"><p class="first last">Cette Lib permet de faire du log sur des éléments.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="hashlib-library">
+<h2>hashlib Library<a class="headerlink" href="#hashlib-library" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://sametmax.com/md5-en-bash-php-python-et-javascript/">http://sametmax.com/md5-en-bash-php-python-et-javascript/</a></dt>
+<dd># un petit exemple vite fait</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.python.org/3.4/library/hashlib.html">https://docs.python.org/3.4/library/hashlib.html</a></dt>
+<dd># la doc de la lib</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="utilisation-de-l-underscore">
+<h2>Utilisation de l’underscore (_)<a class="headerlink" href="#utilisation-de-l-underscore" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://sametmax.com/a-propos-des-attributs-prefixes-de-deux-underscores/">http://sametmax.com/a-propos-des-attributs-prefixes-de-deux-underscores/</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="publique-protege-et-prive">
+<h3>Publique, Protégé et Privé<a class="headerlink" href="#publique-protege-et-prive" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Bien qu’il n’y ai pas de notion «&nbsp;protégé&nbsp;» ou «&nbsp;privé&nbsp;» en python il y a des conventions qui
+permettent d’introduire ces notions dans les interpréteurs</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Publique</p>
+<blockquote>
+<div><p>C’est l’affectation classique.  Cette affectation sera visible dans l’API (dir()
+help())</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">maVariablePublique</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Protégé</p>
+<blockquote>
+<div><p>On préfix notre objet (attribut ou méthode) avec un simple underscore (_). L’objet
+n’apparaitra pas dans l’API mais sera utilisable de l’extérieur si on l’appel
+spécifiquement</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">_maVaribleProtegee</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Privé</p>
+<blockquote>
+<div><p>On préfix notre objet avec un double underscore (__). Il n’apparaitra pas dans
+l’API et renvairra un «&nbsp;AttributError&nbsp;» si on l’appel spécifiquement</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">__maVariablePrivee</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<p>Exemple d’utilisation :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span> <span class="p">:</span>
+<span class="gp">... </span>    <span class="n">pub</span>     <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="n">_prot</span>   <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">... </span>    <span class="n">__priv</span>  <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">getProt</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prot</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">getPriv</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__priv</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span> <span class="o">=</span> <span class="n">C</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+<span class="go">Help on C in module __main__ object:</span>
+
+<span class="go">class C(builtins.object)</span>
+<span class="go"> |  Methods defined here:</span>
+<span class="go"> |</span>
+<span class="go"> |  getPriv(self)</span>
+<span class="go"> |</span>
+<span class="go"> |  getProt(self)</span>
+<span class="go"> |</span>
+<span class="go"> |  ----------------------------------------------------------------------</span>
+<span class="go"> |  Data descriptors defined here:</span>
+<span class="go"> |</span>
+<span class="go"> |  __dict__</span>
+<span class="go"> |      dictionary for instance variables (if defined)</span>
+<span class="go"> |</span>
+<span class="go"> |  __weakref__</span>
+<span class="go"> |      list of weak references to the object (if defined)</span>
+<span class="go"> |</span>
+<span class="go"> |  ----------------------------------------------------------------------</span>
+<span class="go"> |  Data and other attributes defined here:</span>
+<span class="go"> |</span>
+<span class="go"> |  pub = 1</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="o">.</span><span class="n">_prot</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="o">.</span><span class="n">__priv</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">AttributeError</span>: <span class="n">&#39;C&#39; object has no attribute &#39;__priv&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="o">.</span><span class="n">getPriv</span><span class="p">()</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="connaitre-l-os-de-travail">
+<h2>connaitre l’os de travail<a class="headerlink" href="#connaitre-l-os-de-travail" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="n">Win</span> <span class="p">:</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span>
+<span class="s1">&#39;nt&#39;</span>
+
+<span class="n">ex</span> <span class="n">Mac</span> <span class="o">/</span> <span class="n">Linux</span> <span class="p">:</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span>
+<span class="s1">&#39;posix&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PYTHON</a><ul>
+<li><a class="reference internal" href="#obtenir-de-l-aide-sur-une-class-ou-une-methode-python">Obtenir de l’aide sur une class ou une méthode  (python)</a></li>
+<li><a class="reference internal" href="#lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux">Lignes de code à insérer au debut de chaque script sous linux</a></li>
+<li><a class="reference internal" href="#os-library">os library</a><ul>
+<li><a class="reference internal" href="#traitemant-des-repertoires">Traitemant des répertoires</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#shutil-library">shutil library</a><ul>
+<li><a class="reference internal" href="#id1">Traitemant des répertoires</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pip">pip</a><ul>
+<li><a class="reference internal" href="#installation-de-pip">Installation de PIP</a></li>
+<li><a class="reference internal" href="#utilisation-de-pip">Utilisation de PIP</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper">Les environnements virtuels Python : virtualenv et virtualenvwrapper</a><ul>
+<li><a class="reference internal" href="#installation-des-environements-virtuels">installation des environements virtuels</a></li>
+<li><a class="reference internal" href="#configuration-des-environements-virtuels">configuration des environements virtuels</a></li>
+<li><a class="reference internal" href="#utilisation-environements-virtuels">Utilisation environements virtuels</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#un-shell-python-qui-fait-de-l-auto-completion">Un shell Python qui fait de l’auto completion</a></li>
+<li><a class="reference internal" href="#convertir-un-string-en-bytes">convertir un string en bytes</a></li>
+<li><a class="reference internal" href="#connaitre-l-adresse-memoire-d-un-objet">Connaitre l’adresse mémoire d’un objet</a></li>
+<li><a class="reference internal" href="#affectation-copy-et-deepcopy">Affectation, copy et deepcopy</a></li>
+<li><a class="reference internal" href="#faire-un-executable-a-partir-d-un-script">faire un executable à partir d’un script</a></li>
+<li><a class="reference internal" href="#fichiers-de-configuration-ini">Fichiers de configuration (.ini)</a></li>
+<li><a class="reference internal" href="#format-json">Format JSON</a></li>
+<li><a class="reference internal" href="#web-framework">web framework</a><ul>
+<li><a class="reference internal" href="#bottle">Bottle</a></li>
+<li><a class="reference internal" href="#flask">Flask</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#les-decorateurs">Les décorateurs</a></li>
+<li><a class="reference internal" href="#tester-un-type-attendu">Tester un type attendu</a></li>
+<li><a class="reference internal" href="#packing-et-unpacking-utilisation-de-args-et-kwargs">Packing et UnPacking (utilisation de : “*args” et “**kwargs”)</a></li>
+<li><a class="reference internal" href="#passer-des-parametres-a-un-programme-avec-argparse">Passer des paramètres à un programme avec argparse</a></li>
+<li><a class="reference internal" href="#les-context-managers-et-le-mot-cle-with-en-python">Les context managers et le mot clé “with” en Python</a></li>
+<li><a class="reference internal" href="#connaitre-le-nombre-de-cpu-d-un-systeme">Connaitre le nombre de CPU d’un système</a></li>
+<li><a class="reference internal" href="#logging-library">logging Library</a></li>
+<li><a class="reference internal" href="#hashlib-library">hashlib Library</a></li>
+<li><a class="reference internal" href="#utilisation-de-l-underscore">Utilisation de l’underscore (_)</a><ul>
+<li><a class="reference internal" href="#publique-protege-et-prive">Publique, Protégé et Privé</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#connaitre-l-os-de-travail">connaitre l’os de travail</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Powershell.html" title="Chapitre précédent">PowerShell</a></li>
+      <li>Next: <a href="Raspberry.html" title="Chapitre suivant">Raspberry</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Python.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Poltergeist42.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/Python.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

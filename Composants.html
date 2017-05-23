@@ -1,0 +1,608 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Composants Spécifiques &#8212; documentation JDM 20170523</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '20170523',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Computer Vision" href="ComputerVision.html" />
+    <link rel="prev" title="Mon journal de manip" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="composants-specifiques">
+<h1>Composants Spécifiques<a class="headerlink" href="#composants-specifiques" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="magnetomettre-hmc5883l">
+<h2>Magnetomettre : HMC5883L<a class="headerlink" href="#magnetomettre-hmc5883l" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/?ALLSTEPS">http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/?ALLSTEPS</a></dt>
+<dd># Instructable (install I2C et test en Python3)</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/">http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/</a></dt>
+<dd># Exemple de mise en oeuvre + list des fonctions</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf">http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf</a></dt>
+<dd># Datasheet du composant</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.sparkfun.com/products/10530">https://www.sparkfun.com/products/10530</a></dt>
+<dd># fiche produit Sparkfun (arduino)</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="implentation-hmc5883l">
+<h3>Implentation HMC5883L<a class="headerlink" href="#implentation-hmc5883l" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p>La sérigraphie est masqué lorsque le magnétometre est enfiché dans une breadbord.
+L’implentation si dessous est donc présenter en <strong>vue de dessus (donc sérigraphie cachée)</strong></p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Haut</span>
+    <span class="mi">3</span><span class="n">v3</span>
+    <span class="n">DRDY</span>
+    <span class="n">SDA</span>
+    <span class="n">SCL</span>
+    <span class="n">GND</span>
+    <span class="n">VCC_</span><span class="o">+</span><span class="mi">5</span><span class="n">v</span>
+<span class="n">Bas</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="installation-des-librairies-quick2wire-et-i2clibraries">
+<h3>Installation des librairies quick2wire et i2clibraries<a class="headerlink" href="#installation-des-librairies-quick2wire-et-i2clibraries" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Préparation :</dt>
+<dd><p class="first">Si ce n’est pas déjà fait, il faut installer les outils Python :</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">i2c</span><span class="o">-</span><span class="n">tools</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">smbus</span>
+     <span class="c1"># Quick2wire.i2c peut aussi être utilisé our l&#39;i2c</span>
+
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span>
+<span class="n">sudo</span> <span class="n">reboot</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>l’installation et configuations des librairies et outils Quick2wire</dt>
+<dd><p class="first"><strong>N.B :</strong> le lignes qui suivent sont copiées telles quelles depuis la page instructables</p>
+<dl class="last docutils">
+<dt>Se positionner à l’endroit ou l’on veut installer quick2wire</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span><span class="o">.</span><span class="n">git</span>
+    <span class="c1">#get quick2wire from github.com</span>
+
+    <span class="c1">#if don&#39;t have git, try &quot;sudo apt-get install git&quot;</span>
+
+<span class="n">mv</span> <span class="o">./</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span> <span class="o">./</span><span class="n">code</span>
+    <span class="c1"># renaming the quick2wire library folder to code for tidiness,</span>
+    <span class="c1"># you can skip this if you prefer keeping it original</span>
+
+<span class="n">nano</span> <span class="n">setup</span><span class="o">.</span><span class="n">env</span>
+    <span class="c1"># create a setup file, basically to point out where the quick2wire library is</span>
+    <span class="c1"># situated for your python</span>
+    <span class="c1"># after this line, terminal will enter text editing mode, type in these lines</span>
+
+<span class="n">export</span> <span class="n">QUICK2WIRE_API_HOME</span><span class="o">=~/</span><span class="n">project</span><span class="o">/</span><span class="n">code</span>
+    <span class="c1">#change the directory address if different than what i&#39;m using</span>
+    <span class="c1">#export PYTHONPATH=$PYTHONPATH:$QUICK2WIRE_API_HOME</span>
+
+<span class="n">after</span> <span class="n">that</span> <span class="n">CTRL</span><span class="o">+</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">ENTER</span> <span class="n">to</span> <span class="n">quit</span><span class="p">,</span> <span class="n">save</span> <span class="ow">and</span> <span class="n">overwrite</span>
+
+<span class="n">back</span> <span class="ow">in</span> <span class="n">terminal</span> <span class="n">mode</span>
+
+<span class="o">.</span> <span class="o">./</span><span class="n">quick2wire</span><span class="o">.</span><span class="n">env</span>
+    <span class="c1"># run the environment setup, run this once every time after reboot,</span>
+    <span class="c1"># running twice will append the address directory</span>
+    <span class="c1"># for checking, use &quot;env |grep quick2wire&quot;,</span>
+    <span class="c1"># address shown must be the same with the directory where</span>
+    <span class="c1"># you install your quick2wire library</span>
+
+<span class="n">cd</span> <span class="n">code</span>
+    <span class="c1">#go into the quick2wire folder, this will be where you put your python code</span>
+
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">bitbucket</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">thinkbowl</span><span class="o">/</span><span class="n">i2clibraries</span><span class="o">.</span><span class="n">git</span>
+    <span class="c1">#getting library files containing functions for i2c devices such as HMC5883L,</span>
+    <span class="c1">#ITG-3205, ADXL345 and LCD</span>
+
+<span class="n">Now</span> <span class="n">you</span> <span class="n">can</span> <span class="n">shut</span> <span class="n">it</span> <span class="n">down</span> <span class="k">with</span> <span class="s2">&quot;sudo shutdown -h now&quot;</span> <span class="n">so</span> <span class="n">that</span> <span class="n">we</span> <span class="n">can</span> <span class="n">do</span> <span class="n">the</span> <span class="n">wiring</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="configuration-du-hmc5883l">
+<h3>Configuration du HMC5883L<a class="headerlink" href="#configuration-du-hmc5883l" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>la déclinaison terrestre</dt>
+<dd><p class="first">Pour pouvoir être le plus précis possible, il faut recalibrer la boussole en tenant compte
+de notre décallage par rapport au pole magnétique. On appel ça : <strong>«&nbsp;la déclinaison terrestre&nbsp;»</strong>
+Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
+<blockquote>
+<div><ul class="simple">
+<li>Longitude :  49° 1’22.48&nbsp;»N</li>
+<li>Latitude  :   2° 1’50.51&nbsp;»E</li>
+</ul>
+</div></blockquote>
+<p class="last">se qui donne à la date du 18/08/2015 : 0° 9,24”</p>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="motteur-pas-a-pas-28byj-48">
+<h2>Motteur Pas à Pas : 28BYJ-48<a class="headerlink" href="#motteur-pas-a-pas-28byj-48" title="Lien permanent vers ce titre">¶</a></h2>
+<p><strong>N.B :</strong> se PAP doit être piloté par un driver comme le UNL2003</p>
+<div class="section" id="specification-du-pap">
+<h3>Specification du PAP<a class="headerlink" href="#specification-du-pap" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="71%" />
+<col width="29%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>angle par pas (moteur)</td>
+<td>5.625°</td>
+</tr>
+<tr class="row-even"><td>Nbe de pas / tours (moteur)</td>
+<td>64 (360/5.625)</td>
+</tr>
+<tr class="row-odd"><td>ratio (demultiplicateur)</td>
+<td>1/64</td>
+</tr>
+<tr class="row-even"><td>angle par pas (en sortie d’abre)</td>
+<td>0.087890625°</td>
+</tr>
+<tr class="row-odd"><td>Nbe de pas / tour (en sortie d’arbre)</td>
+<td>4096</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="correspodanse-entre-le-driver-et-les-gpio">
+<h3>Correspodanse entre le driver et les GPIO<a class="headerlink" href="#correspodanse-entre-le-driver-et-les-gpio" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">BCM (GPIO)</th>
+<th class="head">Serigraphie sur UNL2003</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>GPIO17</td>
+<td>N1</td>
+</tr>
+<tr class="row-odd"><td>GPIO18</td>
+<td>N2</td>
+</tr>
+<tr class="row-even"><td>GPIO27</td>
+<td>N3</td>
+</tr>
+<tr class="row-odd"><td>GPIO22</td>
+<td>N4</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="phases">
+<h3>Phases<a class="headerlink" href="#phases" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="10%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#160;</td>
+<td colspan="8">==&gt; CW Direction (1-2 Phase )</td>
+</tr>
+<tr class="row-even"><td>lead Wire color</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr class="row-odd"><td>4 orange</td>
+<td>x</td>
+<td>x</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>x</td>
+</tr>
+<tr class="row-even"><td>3 yelow</td>
+<td>&#160;</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>2 pink</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>1 blue</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt><strong>N.B :</strong> les 8 phases donnent 1 tour complet sur le moteur,</dt>
+<dd>soit 1/64 de tour en sortie d’arbre.</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="organisation-des-phases-en-python3">
+<h3>Organisation des phases en python3<a class="headerlink" href="#organisation-des-phases-en-python3" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Séquense de sortie</span>
+<span class="n">ndp</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">phase</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">ndp</span><span class="p">))</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><strong>N.B :</strong> la liste contenu dans chaque phase, correspond à l’état</dt>
+<dd><p class="first">(1 = Hight = True ; 0 = Low = False) à appliquer sur le broches du GPIO</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span>  <span class="p">:</span> <span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+    <span class="o">--&gt;</span> <span class="n">GPIO17</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="o">--&gt;</span> <span class="n">GPIO18</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="o">--&gt;</span> <span class="n">GPIO27</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="o">--&gt;</span> <span class="n">GPIO22</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="picamera">
+<h2>Picamera<a class="headerlink" href="#picamera" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.framboise314.fr/picamera-pour-piloter-integralement-la-camera-de-votre-raspberry-pi-en-python/">http://www.framboise314.fr/picamera-pour-piloter-integralement-la-camera-de-votre-raspberry-pi-en-python/</a></li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://picamera.readthedocs.org/en/release-1.0/quickstart.html">http://picamera.readthedocs.org/en/release-1.0/quickstart.html</a></dt>
+<dd># Quick Start</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://picamera.readthedocs.org/en/release-1.0/recipes1.html">http://picamera.readthedocs.org/en/release-1.0/recipes1.html</a></dt>
+<dd># CookBook</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="activation-du-module-camera-sur-le-rpi">
+<h3>Activation du module caméra sur le RPi<a class="headerlink" href="#activation-du-module-camera-sur-le-rpi" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>se connecter au module de configuration</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+<dl class="docutils">
+<dt>#.* faire la séquence suivante</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;5 Enable Camera&quot;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+        <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Enable</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+        <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Finish</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+        <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Oui</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="installation-de-la-camera">
+<h3>installation de la camera<a class="headerlink" href="#installation-de-la-camera" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Insérer la limende dans le ports situé au niveau du port HDMI.</li>
+</ol>
+<blockquote>
+<div><strong>N.B :</strong> la partie métallique doit être en direction du port HDMI</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="instalation-de-la-librairie-picamera">
+<h3>Instalation de la librairie PiCamera<a class="headerlink" href="#instalation-de-la-librairie-picamera" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Faire les mises à jour système de rigueur puis</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">picamera</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="utilisation-avec-python">
+<h3>utilisation avec python<a class="headerlink" href="#utilisation-avec-python" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">picamera</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="capteur-ultrason-hc-sr04">
+<h2>Capteur ultrason : HC-SR04<a class="headerlink" href="#capteur-ultrason-hc-sr04" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://youtu.be/xACy8l3LsXI">https://youtu.be/xACy8l3LsXI</a></li>
+<li><a class="reference external" href="http://www.modmypi.com/blog/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi">http://www.modmypi.com/blog/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="vocabulaire-et-definission-pour-le-hc-sr04">
+<h3>Vocabulaire et definission pour le HC-SR04<a class="headerlink" href="#vocabulaire-et-definission-pour-le-hc-sr04" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Trig:</th><td class="field-body"><dl class="first docutils">
+<dt>En Sortie (hautparleur - Trig)</dt>
+<dd><p class="first last"># 1 impulsion est egale a 10us (0.00001)</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Echo:</th><td class="field-body"><p class="first">En Entree (Micro - Echo)</p>
+<blockquote>
+<div><p># Attention les entrée du RPi etant en 3.3v,
+il faut faire un pont diviseur entre la broche
+«&nbsp;Echo&nbsp;» et le GND pour pouvoir se brancher
+sur le RPi</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Vitesse du son:</th><td class="field-body"><p class="first">Le son se déplace à une vitesse d’environ 343 m/s (à température ambiante de 20°),
+soit environ 34300 cm/s</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Distance:</th><td class="field-body"><dl class="first last docutils">
+<dt>D = 17150 x time</dt>
+<dd><p class="first last"># 17150 correspond a la vitesse du son / 2 (34300/2).
+On divise par 2 car seule la distance en l’obstacle et le mur nous intéresse
+et non la distance total parcourue par l’onde radio.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="specification-du-hc-sr04">
+<h3>Specification du HC-SR04<a class="headerlink" href="#specification-du-hc-sr04" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Alimentation:</th><td class="field-body">5 V</td>
+</tr>
+<tr class="field-even field"><th class="field-name">porté:</th><td class="field-body">2 cm à 500 cm</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Résolution:</th><td class="field-body">0.3 cm</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Fréquence:</th><td class="field-body">40 kHz</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Composants Spécifiques</a><ul>
+<li><a class="reference internal" href="#magnetomettre-hmc5883l">Magnetomettre : HMC5883L</a><ul>
+<li><a class="reference internal" href="#implentation-hmc5883l">Implentation HMC5883L</a></li>
+<li><a class="reference internal" href="#installation-des-librairies-quick2wire-et-i2clibraries">Installation des librairies quick2wire et i2clibraries</a></li>
+<li><a class="reference internal" href="#configuration-du-hmc5883l">Configuration du HMC5883L</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#motteur-pas-a-pas-28byj-48">Motteur Pas à Pas : 28BYJ-48</a><ul>
+<li><a class="reference internal" href="#specification-du-pap">Specification du PAP</a></li>
+<li><a class="reference internal" href="#correspodanse-entre-le-driver-et-les-gpio">Correspodanse entre le driver et les GPIO</a></li>
+<li><a class="reference internal" href="#phases">Phases</a></li>
+<li><a class="reference internal" href="#organisation-des-phases-en-python3">Organisation des phases en python3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#picamera">Picamera</a><ul>
+<li><a class="reference internal" href="#activation-du-module-camera-sur-le-rpi">Activation du module caméra sur le RPi</a></li>
+<li><a class="reference internal" href="#installation-de-la-camera">installation de la camera</a></li>
+<li><a class="reference internal" href="#instalation-de-la-librairie-picamera">Instalation de la librairie PiCamera</a></li>
+<li><a class="reference internal" href="#utilisation-avec-python">utilisation avec python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#capteur-ultrason-hc-sr04">Capteur ultrason : HC-SR04</a><ul>
+<li><a class="reference internal" href="#vocabulaire-et-definission-pour-le-hc-sr04">Vocabulaire et definission pour le HC-SR04</a></li>
+<li><a class="reference internal" href="#specification-du-hc-sr04">Specification du HC-SR04</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="Chapitre précédent">Mon journal de manip</a></li>
+      <li>Next: <a href="ComputerVision.html" title="Chapitre suivant">Computer Vision</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Composants.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Poltergeist42.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/Composants.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

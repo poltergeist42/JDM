@@ -1,0 +1,307 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PowerShell &#8212; documentation JDM 20170523</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '20170523',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="PYTHON" href="Python.html" />
+    <link rel="prev" title="LINUX" href="Linux.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="powershell">
+<h1>PowerShell<a class="headerlink" href="#powershell" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="commandes-utilies">
+<h2>Commandes utilies<a class="headerlink" href="#commandes-utilies" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="activer-desactiver-le-mode-debugage">
+<h3>Activer / Desactiver le mode debugage<a class="headerlink" href="#activer-desactiver-le-mode-debugage" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">activer le mode debugage</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">psdebug</span> <span class="o">-</span><span class="n">trace</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Desactiver le mode debugage</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">psdebug</span> <span class="o">-</span><span class="n">trace</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="autoriser-l-execution-des-script">
+<h3>Autoriser l’execution des script<a class="headerlink" href="#autoriser-l-execution-des-script" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">ExecutionPolicy</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="connaitre-toutes-les-methodes-d-un-objet">
+<h2>Connaitre toutes les methodes d’un objet<a class="headerlink" href="#connaitre-toutes-les-methodes-d-un-objet" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><dl class="docutils">
+<dt>::</dt>
+<dd><dl class="first last docutils">
+<dt>[Objet_ou_command] | get-members (ou gm)</dt>
+<dd># exemple pour une variable : $v_a | get-members</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="caractere-specifiques">
+<h2>Caractère spécifiques<a class="headerlink" href="#caractere-specifiques" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Caractère d’echapement</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Le caractère d’échapement est le «&nbsp;`&nbsp;» (accent grave seul [ALT_GR-7])</dt>
+<dd><blockquote class="first">
+<div><ul>
+<li><p class="first">Placé en fin de ligne il permet de ligne, il sert de continuation pour aller
+à la ligne</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$Reg = get-wmiobject -Namespace Root\Default -computerName `
+       $Comptuer -List | where-object `
+       {$_.Name -eq &quot;StdRegProv&quot;}
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p class="first">Placé avant une variable elle sera interprétée comme une chaine de caratère</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>ps:&gt; $v_maVariable = &quot;test&quot;
+
+ps:&gt; write-host &quot;affichage de la variable : $v_maVariable&quot;
+ps:&gt; affichage de la variable : test
+
+ps:&gt; write-host &quot;affichage de la variable : `$v_maVariable&quot;
+ps:&gt; affichage de la variable : $v_maVariable
+</pre></div>
+</div>
+</li>
+</ul>
+<blockquote class="last">
+<div><ul>
+<li><p class="first">Placé devant un caractère, il serat interpréter comme une commande</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>ps:&gt; $v_maVariable = &quot;test&quot;
+ps:&gt; write-host &quot;blabla`t$v_maVariable&quot;
+ps:&gt; blabla    test
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="declarer-une-variable">
+<h2>Declarer une variable<a class="headerlink" href="#declarer-une-variable" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">variable typee dynamiquement</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$maVarible = valeur
+</pre></div>
+</div>
+</li>
+<li><p class="first">variable fortement typee</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>[bool] $maVarible = true
+</pre></div>
+</div>
+<p>N.B : par convention les string se declarent avec des simples cotes</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$maVarible = &#39;text&#39;
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<div class="section" id="variables-specifiques">
+<h3>variables spécifiques<a class="headerlink" href="#variables-specifiques" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">$_:</th><td class="field-body">contient l’objet en cours dans le pipeline</td>
+</tr>
+<tr class="field-even field"><th class="field-name">$Error:</th><td class="field-body">contient les objets d’erreur de la seesion PowerShell en cours</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="equivalent-du-print-ou-du-echo">
+<h2>Equivalent du print (ou du echo)<a class="headerlink" href="#equivalent-du-print-ou-du-echo" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Methode classique avec la commande “write-host”</dt>
+<dd><p class="first">Dans cette commande, les simples cotes ne permettent pas d’interpreter de
+variable. L’utilisation des doubles cotes permet l’interpretation de variable ou
+d’objet</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span>PS C:\Users\polter&gt; $valeur = 2
+PS C:\Users\polter&gt; write-host &#39;$valeur&#39;
+$valeur
+PS C:\Users\polter&gt; write-host &quot;$valeur&quot;
+2
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first">Methode “plus propre” avec l’option “format” (-f)</p>
+<blockquote>
+<div><p>Avec cette methode on utilise les doubles cotes pour encadrer le texte, les
+accolades avec un numero d’index a l’interieur (commancant a 0). Les variables sont
+placees a l’exterieur du bloc (apres le “-f”) et separees par des virgules</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>PS C:\Users\polter&gt; $valeur = 2
+PS C:\Users\polter&gt; $valeur2 = 2
+PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeur + $valeur2)
+2 + 2 = 4
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="declarer-une-fonction">
+<h2>Déclarer une fonction<a class="headerlink" href="#declarer-une-fonction" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="p">[</span><span class="n">nom_de_la_fonction</span><span class="p">]</span> <span class="p">{</span>
+<span class="p">[</span><span class="n">command_1</span><span class="p">]</span>
+<span class="p">[</span><span class="n">command_2</span><span class="p">]</span>
+<span class="p">[</span><span class="n">etc_</span><span class="o">...</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">ex</span> <span class="p">:</span>
+
+    <span class="n">function</span> <span class="n">f_maFonction</span> <span class="p">{</span> <span class="n">get</span><span class="o">-</span><span class="n">cliditem</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PowerShell</a><ul>
+<li><a class="reference internal" href="#commandes-utilies">Commandes utilies</a><ul>
+<li><a class="reference internal" href="#activer-desactiver-le-mode-debugage">Activer / Desactiver le mode debugage</a></li>
+<li><a class="reference internal" href="#autoriser-l-execution-des-script">Autoriser l’execution des script</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#connaitre-toutes-les-methodes-d-un-objet">Connaitre toutes les methodes d’un objet</a></li>
+<li><a class="reference internal" href="#caractere-specifiques">Caractère spécifiques</a></li>
+<li><a class="reference internal" href="#declarer-une-variable">Declarer une variable</a><ul>
+<li><a class="reference internal" href="#variables-specifiques">variables spécifiques</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#equivalent-du-print-ou-du-echo">Equivalent du print (ou du echo)</a></li>
+<li><a class="reference internal" href="#declarer-une-fonction">Déclarer une fonction</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Linux.html" title="Chapitre précédent">LINUX</a></li>
+      <li>Next: <a href="Python.html" title="Chapitre suivant">PYTHON</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Powershell.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Poltergeist42.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/Powershell.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
