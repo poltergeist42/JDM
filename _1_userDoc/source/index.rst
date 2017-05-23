@@ -21,6 +21,7 @@ Mon journal de manip
    Powershell
    Python
    Raspberry
+   VIM
 
 Indices and tables
 ==================

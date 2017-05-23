@@ -8,7 +8,7 @@ if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=python -msphinx
 )
 set SOURCEDIR=source
-set BUILDDIR=..\..\docWeb\html
+set BUILDDIR=..\..\webDoc
 set SPHINXPROJ=JDM
 
 if "%1" == "" goto help

@@ -6,7 +6,7 @@ SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
 SPHINXPROJ    = JDM
 SOURCEDIR     = source
-BUILDDIR      = ..\..\docWeb\html
+BUILDDIR      = ..\..\webDoc
 
 # Put it first so that "make" without argument is like "make help".
 help:
