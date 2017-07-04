@@ -11,8 +11,8 @@ Journal de manip
 
 ------------------------------------------------------------------------------------------
 
-Description
+Déscription
 ===========
 
-Le JDM est un ensemble d'information, d'astuce et d'expérience pour les quelles il m'a
-semblé nécessaire de prendre des notes
+Le Journal De Manip (JDM) est un ensemble d'information, d'astuce et d'expérience pour les 
+quelles il m'a semblé nécessaire de prendre des notes
