@@ -105,8 +105,8 @@ faire une élévation valable toute la durée de la session
         
 ------------------------------------------------------------------------------------------
 
-Changer le propriétaire d'un dossier
-====================================
+Changer le propriétaire d'un dossier (ownership)
+================================================
     ::
     
         chown root:[nom_d'utilisateur] [nom_du_dossier]/
@@ -115,7 +115,32 @@ Changer le propriétaire d'un dossier
         
             chown root:volab echanges/
 
---------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+Créer une tâche planifié (cron)
+===============================
+
+:Liens Web:     
+                - https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux/executer-un-programme-a-une-heure-differee
+                - https://technique.arscenic.org/commandes-linux-de-base/article/cron-gestion-des-taches-planifiees
+                
+:cron:          C'est le soft qui execute les taches planifiées
+:crontab:       C'est le gestionaire des taches planifiées. Il y en a un par utilisateur
+
+    #. Option de crontab : ::
+    
+        crontab -l
+            # Pour lister les tâches planifiées
+            
+        crontab -e
+            # Pour Créer / éditer les tâches planifiées
+            
+        crontab -r
+            # Pour supprimer le crontab
+            # !!! Suppression immediate, pas d'avertissement, pas de confirmation
+
+
+------------------------------------------------------------------------------------------
 
 Mettre les droits sur un dossier
 ================================
@@ -127,7 +152,7 @@ Mettre les droits sur un dossier
         
             chmod -R 0777 echanges
 
---------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 connaitre la version du systeme
 ===============================
@@ -144,7 +169,7 @@ utilisation de lsb-release
     
         lsb_release -a
                     
---------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 connaitre la version d'un paquet
 ================================
@@ -161,7 +186,7 @@ utilisation de apt-show-versions
     
         apt-show-versions *nom_du_paquet*
 
---------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 Pour copier des fichiers en root depuis l'interface graphique
 =============================================================

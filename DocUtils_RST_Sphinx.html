@@ -136,6 +136,239 @@ les fichiers «&nbsp;.rst&nbsp;» en page Web</dd>
 </div></blockquote>
 </div>
 </div>
+<hr class="docutils" />
+<div class="section" id="rediger-et-publier-de-la-doc-avec-sphinx-sur-github-pages">
+<h2>Rédiger et publier de la doc avec Sphinx sur GitHub-pages<a class="headerlink" href="#rediger-et-publier-de-la-doc-avec-sphinx-sur-github-pages" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="docutils">
+<dt>:Liens WEB :</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="https://daler.github.io/sphinxdoc-test/includeme.html">https://daler.github.io/sphinxdoc-test/includeme.html</a></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="preparation-de-l-arborescence">
+<h3>Préparation de l’arborescence<a class="headerlink" href="#preparation-de-l-arborescence" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Création de 2 sous-dossier à la racine du projet</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">fakeLib</span>
+    <span class="n">project</span>
+    <span class="n">webDoc</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div><strong>N.B</strong> : “arboProject” inclue la création de ses 2 dossiers</div></blockquote>
+<ol class="arabic">
+<li><p class="first">Lier le dépôt local (Git) au dépot distant (GitHub)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="p">[</span><span class="n">votre_nom_sous_github</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">votre_depot_github</span><span class="p">]</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Initialiser Sphinx</dt>
+<dd><ul class="first last">
+<li><p class="first">Ce placer dans le dossier <strong>_1_userDoc</strong> et ouvrir une invite de commande</p>
+</li>
+<li><p class="first">Exécuter la commande :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Il faut accepter la plupart des choix par défaut sauf pour 4 d’entre eux :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Separate</span> <span class="n">source</span> <span class="ow">and</span> <span class="n">build</span> <span class="n">directories</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span><span class="n">y</span>
+<span class="n">Project</span> <span class="n">language</span> <span class="p">[</span><span class="n">en</span><span class="p">]:</span> <span class="n">fr</span>
+<span class="n">autodoc</span><span class="p">:</span> <span class="n">automatically</span> <span class="n">insert</span> <span class="n">docstrings</span> <span class="kn">from</span> <span class="nn">modules</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+<span class="n">githubpages</span><span class="p">:</span> <span class="n">create</span> <span class="o">.</span><span class="n">nojekyll</span> <span class="n">file</span> <span class="n">to</span> <span class="n">publish</span> <span class="n">the</span> <span class="n">document</span> <span class="n">on</span> <span class="n">GitHub</span> <span class="n">pages</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Configurer <strong>“conf.py”</strong></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Repérez les 3 lignes :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># import os</span>
+<span class="c1"># import sys</span>
+<span class="c1"># sys.path.insert(0, os.path.abspath(&#39;.&#39;))</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Remplacez les par :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../../&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Puis la ligne :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">A remplacer par :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_build&#39;</span><span class="p">,</span> <span class="s1">&#39;Thumbs.db&#39;</span><span class="p">,</span> <span class="s1">&#39;.DS_Store&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Configurer <strong>“Makefile”</strong></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Repérez les 2 lignes :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SOURCEDIR</span> <span class="o">=</span> <span class="n">source</span>
+<span class="n">BUILDDIR</span> <span class="o">=</span> <span class="n">build</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Remplacez les par :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SOURCEDIR</span> <span class="o">=</span> <span class="o">.</span>
+<span class="c1"># Attention, il y a un point après le égal. Cela signifie : &quot;répertoire courant&quot;</span>
+
+<span class="n">BUILDDIR</span> <span class="o">=</span> <span class="o">../../</span><span class="n">webDoc</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Configurer <strong>“Make.bat”</strong></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Rechercher la ligne :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">BUILDDIR</span><span class="o">=</span><span class="n">build</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">A remplacer par :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">BUILDDIR</span><span class="o">=</span> <span class="o">../../</span><span class="n">webDoc</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Faire un commit et le pousser dans le dépôt distant</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>git add .
+git commit -m &quot;install et conf de Sphinx&quot;
+git push -–all
+</pre></div>
+</div>
+</li>
+<li><p class="first">Création de la <strong>branch “gh-pages”</strong></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Copier l’url du dépôt distant</p>
+</li>
+<li><p class="first">Cloner le dépôt distant dans “webDochtml” et se déplacer dans se dossier</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="p">[</span><span class="n">url_copiée_depuis_GitHub</span><span class="p">]</span> <span class="n">html</span>
+<span class="c1"># Attention, html est en minuscule.</span>
+
+<span class="n">cd</span> <span class="n">html</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Création de la branch local “gh-pages”</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Création d’un lien symbolic entre notre nouvelle branch et une branch homonymes
+dans notre dépoôt distant puis on bascule automatiquement sur cette nouvelle branch</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">symbolic</span><span class="o">-</span><span class="n">ref</span> <span class="n">HEAD</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Suppression de l’indexation existante de notre nouvelle branch</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="o">.</span><span class="n">git</span>\<span class="n">index</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">on nettoye le contenue de notre nouvelle branch pour ne pas refaire un commit
+sur les éléments de la branch principale</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clean</span> <span class="o">--</span><span class="n">fdx</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Préparation des éléments à intégrer dans notre documentation</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rappel:</th><td class="field-body"><ul class="first last simple">
+<li>L’ordre dans lequel nous renseignons les fichiers, correspond à
+l’ordre dans lequel ils seront afficher sous GitHub.</li>
+<li>le fichier «&nbsp;index.rst&nbsp;» ne prend pas en charge les chemin relatif</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Création du fichier <strong>“includeMe.rst”</strong></dt>
+<dd><p class="first">Créer, dans le même dossier que le fichier “index.rst”, le fichier
+“includeMe.rst”.</p>
+<ul class="last">
+<li><p class="first">Resigner le fichier de la façon suivante :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">======================</span>
+<span class="n">README_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
+<span class="o">======================</span>
+
+<span class="o">..</span> <span class="n">include</span><span class="p">::</span> <span class="o">../../</span><span class="n">README</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Ajouter l’entrée <strong>“includeMe”</strong> dans <strong>“index.rst”</strong></p>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Extraction de la documentation depuis les docString du code</dt>
+<dd><p class="first">Créer, dans le même dossier que le fichier “index.rst”, un fichier ayant un nom significatif qui permete de se référer au code :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span>
+<span class="n">fakeLib</span>
+</pre></div>
+</div>
+<ul class="last">
+<li><p class="first">Renseigner se nouveau fichier sous la forme :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">fakeLib</span>
+ <span class="o">=======</span>
+
+ <span class="o">..</span> <span class="n">automodule</span><span class="p">::</span> <span class="n">_3_software</span><span class="o">.</span><span class="n">fakeLib</span>
+    <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+
+<span class="c1"># Ne pas oublier les 3 éspaces devant &#39;:members:&#39;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li>Ajouter l’entrée <strong>“fakeLib”</strong> dans <strong>“index.rst”</strong></li>
+</ul>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
 </div>
 
 
@@ -152,6 +385,10 @@ les fichiers «&nbsp;.rst&nbsp;» en page Web</dd>
 <li><a class="reference internal" href="#sphinx">Sphinx</a><ul>
 <li><a class="reference internal" href="#installer-sphinx">Installer Sphinx</a></li>
 <li><a class="reference internal" href="#demarrage-et-initialisation-rapide">Démarrage et initialisation rapide</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rediger-et-publier-de-la-doc-avec-sphinx-sur-github-pages">Rédiger et publier de la doc avec Sphinx sur GitHub-pages</a><ul>
+<li><a class="reference internal" href="#preparation-de-l-arborescence">Préparation de l’arborescence</a></li>
 </ul>
 </li>
 </ul>

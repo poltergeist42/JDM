@@ -222,8 +222,8 @@ même cachés</p>
 </div></blockquote>
 </div>
 <hr class="docutils" />
-<div class="section" id="changer-le-proprietaire-d-un-dossier">
-<h2>Changer le propriétaire d’un dossier<a class="headerlink" href="#changer-le-proprietaire-d-un-dossier" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="changer-le-proprietaire-d-un-dossier-ownership">
+<h2>Changer le propriétaire d’un dossier (ownership)<a class="headerlink" href="#changer-le-proprietaire-d-un-dossier-ownership" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">chown</span> <span class="n">root</span><span class="p">:[</span><span class="n">nom_d</span><span class="s1">&#39;utilisateur] [nom_du_dossier]/</span>
 
@@ -233,6 +233,43 @@ même cachés</p>
 </pre></div>
 </div>
 </div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="creer-une-tache-planifie-cron">
+<h2>Créer une tâche planifié (cron)<a class="headerlink" href="#creer-une-tache-planifie-cron" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux/executer-un-programme-a-une-heure-differee">https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux/executer-un-programme-a-une-heure-differee</a></li>
+<li><a class="reference external" href="https://technique.arscenic.org/commandes-linux-de-base/article/cron-gestion-des-taches-planifiees">https://technique.arscenic.org/commandes-linux-de-base/article/cron-gestion-des-taches-planifiees</a></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">cron:</th><td class="field-body"><p class="first">C’est le soft qui execute les taches planifiées</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">crontab:</th><td class="field-body"><p class="first">C’est le gestionaire des taches planifiées. Il y en a un par utilisateur</p>
+<ol class="last arabic">
+<li><p class="first">Option de crontab :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">crontab</span> <span class="o">-</span><span class="n">l</span>
+    <span class="c1"># Pour lister les tâches planifiées</span>
+
+<span class="n">crontab</span> <span class="o">-</span><span class="n">e</span>
+    <span class="c1"># Pour Créer / éditer les tâches planifiées</span>
+
+<span class="n">crontab</span> <span class="o">-</span><span class="n">r</span>
+    <span class="c1"># Pour supprimer le crontab</span>
+    <span class="c1"># !!! Suppression immediate, pas d&#39;avertissement, pas de confirmation</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <hr class="docutils" />
 <div class="section" id="mettre-les-droits-sur-un-dossier">
@@ -788,7 +825,8 @@ sur la premiere ligne de votre fichier</p>
 <li><a class="reference internal" href="#rappel-des-raccourcis-de-navigation-dans-le-shell">rappel des raccourcis de navigation dans le shell</a></li>
 <li><a class="reference internal" href="#activer-le-compte-root">activer le compte root</a></li>
 <li><a class="reference internal" href="#faire-une-elevation-valable-toute-la-duree-de-la-session">faire une élévation valable toute la durée de la session</a></li>
-<li><a class="reference internal" href="#changer-le-proprietaire-d-un-dossier">Changer le propriétaire d’un dossier</a></li>
+<li><a class="reference internal" href="#changer-le-proprietaire-d-un-dossier-ownership">Changer le propriétaire d’un dossier (ownership)</a></li>
+<li><a class="reference internal" href="#creer-une-tache-planifie-cron">Créer une tâche planifié (cron)</a></li>
 <li><a class="reference internal" href="#mettre-les-droits-sur-un-dossier">Mettre les droits sur un dossier</a></li>
 <li><a class="reference internal" href="#connaitre-la-version-du-systeme">connaitre la version du systeme</a><ul>
 <li><a class="reference internal" href="#installation-de-lsb-release">installation de lsb-release</a></li>
