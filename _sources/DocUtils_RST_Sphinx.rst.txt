@@ -216,7 +216,7 @@ Préparation de l'arborescence
        
             make html
             # si tous se passe bien, on obtien le message suivant :
-            # "Build finished. The HTML pages are in ../../webDoc\html."
+            # "Build finished. The HTML pages are in ..\..\webDoc\html."
             cd ..
             git add .
             git commit -m "blabla"
@@ -240,5 +240,30 @@ Préparation de l'arborescence
             
             example : ::
             
-                https://poltergeist42.github.io/fakeLib/ 
+                https://poltergeist42.github.io/fakeLib/
+                
+        #. Mettre à jour automatiquement la branch **'gh-pages'** et le dépôt distant
+            Pour automatiser la MAJ de 'gh-pages' il faut modifier le fichier **'Makefile'**
+            et **'make.bat'**.
             
+            - Dans **'Makefile'**, se placer à la fin du document et ajouter les lignes
+              suivantes à la fin du document : ::
+        
+                # reconstruction de la branch "gh-pages" et mise a jour du depot distant
+                buildandcommithtml: html
+
+                    cd $(BUILDDIR)/html; git add . ; git commit -m "rebuilt docs"; git push origin gh-pages
+                    
+            - Dans **'make.bat'** repérer les 2 lignes : ::
+            
+                %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
+                goto end
+                
+            - Intercaler les lignes suivantes entre les 2 : ::
+            
+                rem reconstruction de la branch "gh-pages" et mise a jour du depot distant
+                cd %BUILDDIR%\html
+                git add .
+                git commit -m "rebuilt docs"
+                git push origin gh-pages
+
