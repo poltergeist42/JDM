@@ -194,7 +194,8 @@ Préparation de l'arborescence
             - Ajouter l'entrée **'includeMe'** dans **'index.rst'**
             
         #. Extraction de la documentation depuis les docString du code
-            Créer, dans le même dossier que le fichier 'index.rst', un fichier ayant un nom significatif qui permete de se référer au code : ::
+            Créer, dans le même dossier que le fichier 'index.rst', un fichier ayant un
+            nom significatif qui permete de se référer au code : ::
             
                 ex :
                 fakeLib
@@ -210,3 +211,34 @@ Préparation de l'arborescence
                # Ne pas oublier les 3 éspaces devant ':members:'
                
            - Ajouter l'entrée **'fakeLib'** dans **'index.rst'**
+           
+        #. Génération de la doc et MAJ de la branch **master** en local et distant : ::
+       
+            make html
+            # si tous se passe bien, on obtien le message suivant :
+            # "Build finished. The HTML pages are in ../../webDoc\html."
+            cd ..
+            git add .
+            git commit -m "blabla"
+            git push orgin master
+            # on pousse la branch 'master' sur le dépôt distant
+            
+        #. MAJ de la branch **gh-pages** en local et en distant : ::
+        
+            cd ..\..
+            cd webDoc\html
+            git branch
+            # on vérifie que l'on est bien sur la branch 'gh-pages'
+            git add .
+            git commit -m "MAJ de la doc"
+            git push origin gh-pages
+            # on pousse la branch 'gh-pages' sur le dépôt distant
+            
+        #. Accéder à la documentation publiée sur GitHub :
+            Nous pouvons à présent consulter notre jolie documentation en ligne à 
+            l'adresse : https://<utilisateur_Gihub>.github.io/fakeLib/ 
+            
+            example : ::
+            
+                https://poltergeist42.github.io/fakeLib/ 
+            
