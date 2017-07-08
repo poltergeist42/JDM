@@ -1,9 +1,8 @@
-================
-Journal de manip
-================
+infos générales Journal de manip
+================================
 
    :Autheur:            `Poltergeist42 <https://github.com/poltergeist42>`_
-   :Projet:             JDM
+   :Projet:             Journal de manip
    :dépôt GitHub:       https://github.com/poltergeist42/JDM
    :documentation:      https://poltergeist42.github.io/JDM/
    :Licence:            CC BY-NC-SA 4.0
@@ -14,8 +13,8 @@ Journal de manip
 Déscription
 ===========
 
-Le Journal De Manip (JDM) est un ensemble d'information, d'astuce et d'expérience pour les 
-quelles il m'a semblé nécessaire de prendre des notes
+Le Journal De Manip (JDM) est un ensemble d'informations, d'astuces et d'expériences pour
+les quelles il m'a semblé nécessaire de prendre des notes
 
 Arborescence du projet
 ======================
@@ -28,7 +27,7 @@ Pour aider à la compréhension de mon organisation, voici un bref déscrptif de
     |   |
     |   \--_1_userDoc       # Contien toute la documentation relative au projet
     |      |
-    |      \--source       # Dossier réunissant les sources utilisées par Sphinx
+    |      \--source        # Dossier réunissant les sources utilisées par Sphinx
     |
     \--webDoc               # Dossier racine de la documentation qui doit être publiée
         |
