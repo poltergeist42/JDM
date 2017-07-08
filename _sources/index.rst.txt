@@ -10,6 +10,7 @@ Mon journal de manip
    :maxdepth: 2
    :caption: Contents:
 
+   includeMe
    Composants
    ComputerVision
    Django
