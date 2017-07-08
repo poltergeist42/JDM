@@ -21,7 +21,7 @@ Arborescence du projet
 
 Pour aider à la compréhension de mon organisation, voici un bref déscrptif de l'arborescence de se projet. Cette arborescence est à reproduire si vous récupérez ce dépôt depuis GitHub. ::
 
-    FAKELIB                 # Dossier racine du projet (non versionner)
+    JDM                     # Dossier racine du projet (non versionner)
     |
     +--project              # (branch master) contient l'ensemble du projet en lui même
     |   |
