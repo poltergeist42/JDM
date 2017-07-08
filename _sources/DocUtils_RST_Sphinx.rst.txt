@@ -267,3 +267,25 @@ Préparation de l'arborescence
                 git commit -m "rebuilt docs"
                 git push origin gh-pages
 
+        #. Cloner un dépôt distant utilisant **'gh-pages'**
+            
+            - Depuis la racine du projet cloner le dépôt distant dans 2 dossiers ayant la
+              même arborescence que le projet initial : ::
+            
+                ex :
+                D:\fakeLib>
+                > git clone https://github.com/poltergeist42/fakeLib.git .\project
+                > git clone https://github.com/poltergeist42/fakeLib.git .\webDoc\html
+                
+            - Ce déplacer dans le dossier **'html'** et vérifier la branch courante. Il
+              ne devrait y avoir que la branch **'master'** ::
+              
+                cd .\webDoc\html
+                git branch
+                
+            - Re-créer la branch locale **'gh-pages'** et l'associer avec le dépôt distant ::
+            
+                git checkout -b gh-pages remotes/origin/gh-pages
+                
+            - Une nouvelle vérification des branch locale devrait nous indiquer qu'il y a
+              2 branch et que nous sommes sur la branch **'gh-pages'**
