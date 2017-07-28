@@ -11,6 +11,9 @@ Django
                 
             * https://docs.djangoproject.com/fr/1.10/howto/
                 # Guides pratiques
+                
+            * https://www.youtube.com/watch?v=yDv5FIAeyoY
+                # Vidéo tutoriel de 08h00 sur Django 1.11
 
 ------------------------------------------------------------------------------------------
 
