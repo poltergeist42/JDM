@@ -135,7 +135,7 @@ Préparation de l'arborescence
  
         - A remplacer par : ::
             
-            set BUILDDIR= ../../webDoc
+            set BUILDDIR= ..\..\webDoc
             
     #. Faire un commit et le pousser dans le dépôt distant ::
     
@@ -169,7 +169,7 @@ Préparation de l'arborescence
         - on nettoye le contenue de notre nouvelle branch pour ne pas refaire un commit
           sur les éléments de la branch principale ::
           
-            git clean --fdx
+            git clean -fdx
             
     #. Préparation des éléments à intégrer dans notre documentation
     

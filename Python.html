@@ -622,7 +622,7 @@ complète y compris le contenu des données itérables</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://sdz.tdct.org/sdz/serialisez-vos-objets-au-format-json.html">http://sdz.tdct.org/sdz/serialisez-vos-objets-au-format-json.html</a></dt>
 <dd># utiliser json avec python, les bases et en francais</dd>
@@ -634,7 +634,33 @@ complète y compris le contenu des données itérables</p>
 <dd># la doc Python 3.4 (en)</dd>
 </dl>
 </li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://stackoverflow.com/questions/12309269/how-do-i-write-json-data-to-a-file-in-python">https://stackoverflow.com/questions/12309269/how-do-i-write-json-data-to-a-file-in-python</a></dt>
+<dd># La fonction postée par JRCS le 24/01/2017 est intéressante</dd>
+</dl>
+</li>
 </ul>
+<ol class="last arabic">
+<li><p class="first">Example d’utilisation intéressant :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">json</span> <span class="k">import</span> <span class="n">dump</span><span class="p">,</span> <span class="n">load</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">random</span>
+
+<span class="k">def</span> <span class="nf">json_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">delay</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">):</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">data</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="n">delay</span><span class="p">)</span> <span class="c1"># concurrency</span>
+</pre></div>
+</div>
+</li>
+</ol>
 </td>
 </tr>
 </tbody>
