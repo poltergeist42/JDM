@@ -67,11 +67,11 @@ Préparation de l'arborescence
 
     #. Création de 2 sous-dossier à la racine du projet ::
     
-        fakeLib
-            project
-            webDoc
+            fakeLib
+                project
+                webDoc
             
-      **N.B** : 'arboProject' inclue la création de ses 2 dossiers
+        **N.B** : 'arboProject' inclue la création de ses 2 dossiers
       
     #. Lier le dépôt local (Git) au dépot distant (GitHub) ::
     
@@ -79,7 +79,9 @@ Préparation de l'arborescence
         git push -u origin master
         
     #. Initialiser Sphinx
-        - Ce placer dans le dossier **_1_userDoc** et ouvrir une invite de commande
+        - Ce placer dans le dossier **_1_userDoc** (pensez à supprimer le suffixe "_v"
+          et ouvrir une invite de commande.
+          
         - Exécuter la commande : :: 
             
             sphinx-quickstart
@@ -123,7 +125,8 @@ Préparation de l'arborescence
         - Remplacez les par : ::
         
             SOURCEDIR = .
-            # Attention, il y a un point après le égal. Cela signifie : "répertoire courant"
+            # Attention, il y a un point après le égal.
+            # Cela signifie : "répertoire courant"
             
             BUILDDIR = ../../webDoc
             
@@ -146,7 +149,8 @@ Préparation de l'arborescence
     #. Création de la **branch 'gh-pages'**
     
         - Copier l'url du dépôt distant
-        - Cloner le dépôt distant dans 'webDoc\html' et se déplacer dans se dossier ::
+        - Se placer dans le dossier 'webDoc'
+        - Cloner le dépôt distant dans 'html' et se déplacer dans se dossier ::
         
             git clone [url_copiée_depuis_GitHub] html
             # Attention, html est en minuscule.
