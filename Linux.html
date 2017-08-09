@@ -222,6 +222,20 @@ même cachés</p>
 </div></blockquote>
 </div>
 <hr class="docutils" />
+<div class="section" id="connaitre-la-liste-des-groupes-aux-quels-appartient-un-utilisateur">
+<h2>Connaitre la liste des groupes aux quels appartient un utilisateur<a class="headerlink" href="#connaitre-la-liste-des-groupes-aux-quels-appartient-un-utilisateur" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>groups [nom_d&#39;utilisateur]
+
+ex :
+
+$ groups polter
+polter : polter adm cdrom sudo dip plugdev
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
 <div class="section" id="changer-le-proprietaire-d-un-dossier-ownership">
 <h2>Changer le propriétaire d’un dossier (ownership)<a class="headerlink" href="#changer-le-proprietaire-d-un-dossier-ownership" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
@@ -416,11 +430,22 @@ en appuyant sur <strong>«&nbsp;Espace&nbsp;»</strong></li>
 <hr class="docutils" />
 <div class="section" id="pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">
 <h2>Pour pouvoir se connecter en RDP sur un poste Linux<a class="headerlink" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux" title="Lien permanent vers ce titre">¶</a></h2>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">xrdp</span>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="https://www.maketecheasier.com/enabling-remote-desktop-access-on-raspberry-pi/">https://www.maketecheasier.com/enabling-remote-desktop-access-on-raspberry-pi/</a></li>
+</ul>
+</div></blockquote>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">xrdp</span>
 </pre></div>
 </div>
-</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <hr class="docutils" />
 <div class="section" id="pour-faire-du-xforwarding">
@@ -825,6 +850,7 @@ sur la premiere ligne de votre fichier</p>
 <li><a class="reference internal" href="#rappel-des-raccourcis-de-navigation-dans-le-shell">rappel des raccourcis de navigation dans le shell</a></li>
 <li><a class="reference internal" href="#activer-le-compte-root">activer le compte root</a></li>
 <li><a class="reference internal" href="#faire-une-elevation-valable-toute-la-duree-de-la-session">faire une élévation valable toute la durée de la session</a></li>
+<li><a class="reference internal" href="#connaitre-la-liste-des-groupes-aux-quels-appartient-un-utilisateur">Connaitre la liste des groupes aux quels appartient un utilisateur</a></li>
 <li><a class="reference internal" href="#changer-le-proprietaire-d-un-dossier-ownership">Changer le propriétaire d’un dossier (ownership)</a></li>
 <li><a class="reference internal" href="#creer-une-tache-planifie-cron">Créer une tâche planifié (cron)</a></li>
 <li><a class="reference internal" href="#mettre-les-droits-sur-un-dossier">Mettre les droits sur un dossier</a></li>

@@ -105,6 +105,20 @@ faire une élévation valable toute la durée de la session
         
 ------------------------------------------------------------------------------------------
 
+Connaitre la liste des groupes aux quels appartient un utilisateur
+==================================================================
+
+    ::
+    
+        groups [nom_d'utilisateur]
+        
+        ex :
+        
+        $ groups polter
+        polter : polter adm cdrom sudo dip plugdev
+
+------------------------------------------------------------------------------------------
+
 Changer le propriétaire d'un dossier (ownership)
 ================================================
     ::
@@ -255,6 +269,10 @@ Pour rendre un fichier "Executable"
 
 Pour pouvoir se connecter en RDP sur un poste Linux
 ===================================================
+
+:Liens_Web:
+            * https://www.maketecheasier.com/enabling-remote-desktop-access-on-raspberry-pi/
+
     ::
     
             sudo apt-get install xrdp
