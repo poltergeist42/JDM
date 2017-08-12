@@ -240,7 +240,7 @@ Préparation de l'arborescence
             
         #. Accéder à la documentation publiée sur GitHub :
             Nous pouvons à présent consulter notre jolie documentation en ligne à 
-            l'adresse : https://<utilisateur_Gihub>.github.io/fakeLib/ 
+            l'adresse : https://<utilisateur_Gihub>.github.io/[nom_du_dépot]/ 
             
             example : ::
             
