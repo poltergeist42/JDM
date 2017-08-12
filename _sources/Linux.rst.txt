@@ -272,6 +272,7 @@ Pour pouvoir se connecter en RDP sur un poste Linux
 
 :Liens_Web:
             * https://www.maketecheasier.com/enabling-remote-desktop-access-on-raspberry-pi/
+            * https://doc.ubuntu-fr.org/xrdp
 
     ::
     
