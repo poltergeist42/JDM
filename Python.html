@@ -46,6 +46,23 @@
             
   <div class="section" id="python">
 <h1>PYTHON<a class="headerlink" href="#python" title="Lien permanent vers ce titre">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://python.jpvweb.com/python/mesrecettespython/doku.php?id=Sommaire">http://python.jpvweb.com/python/mesrecettespython/doku.php?id=Sommaire</a></dt>
+<dd># (fr) de nombreux example et explication sur des utilisation sépcifique
+# de fonctionnalité python</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
 <div class="section" id="obtenir-de-l-aide-sur-une-class-ou-une-methode-python">
 <h2>Obtenir de l’aide sur une class ou une méthode  (python)<a class="headerlink" href="#obtenir-de-l-aide-sur-une-class-ou-une-methode-python" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
@@ -212,8 +229,8 @@ son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="pip">
-<h2>pip<a class="headerlink" href="#pip" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="pip-python-installing-packages">
+<h2>pip (Python installing packages)<a class="headerlink" href="#pip-python-installing-packages" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -292,8 +309,8 @@ son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper">
-<h2>Les environnements virtuels Python : virtualenv et virtualenvwrapper<a class="headerlink" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper-version-linux">
+<h2>Les environnements virtuels Python : virtualenv et virtualenvwrapper (version Linux)<a class="headerlink" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper-version-linux" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -575,6 +592,11 @@ complète y compris le contenu des données itérables</p>
 <dd># cx_Freeze (soft)</dd>
 </dl>
 </li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://python.jpvweb.com/python/mesrecettespython/doku.php?id=cx_freeze">http://python.jpvweb.com/python/mesrecettespython/doku.php?id=cx_freeze</a></dt>
+<dd># cookBook CX_Freeze (fr)</dd>
+</dl>
+</li>
 </ul>
 </td>
 </tr>
@@ -654,7 +676,7 @@ complète y compris le contenu des données itérables</p>
                     <span class="k">return</span> <span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-                    <span class="k">return</span> <span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">except</span><span class="p">:</span>
             <span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="n">delay</span><span class="p">)</span> <span class="c1"># concurrency</span>
 </pre></div>
@@ -735,7 +757,7 @@ complète y compris le contenu des données itérables</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://gillesfabio.com/blog/2010/12/16/python-et-les-decorateurs/">http://gillesfabio.com/blog/2010/12/16/python-et-les-decorateurs/</a></dt>
 <dd># Exemple + explications en fr</dd>
@@ -747,7 +769,38 @@ complète y compris le contenu des données itérables</p>
 <dd># une explication plus pousser, partie 1 et 2 (Sam &amp; Max)</dd>
 </dl>
 </li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://python.jpvweb.com/python/mesrecettespython/doku.php?id=decorateurs_modeles">http://python.jpvweb.com/python/mesrecettespython/doku.php?id=decorateurs_modeles</a></dt>
+<dd># (fr) plus facil à comprendre que Sam &amp; Max</dd>
+</dl>
+</li>
 </ul>
+<p>example d’utilisation :</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">decorateur</span><span class="p">(</span><span class="n">fonct</span><span class="p">)</span> <span class="p">:</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot; fonction decorateur permettant de donnée le temp d&#39;execution d&#39;une fonction &quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span> <span class="n">fonct</span> <span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">appelFonc</span><span class="p">(</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span> <span class="p">)</span> <span class="p">:</span>
+<span class="gp">... </span>            <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="gp">... </span>            <span class="n">tache</span> <span class="o">=</span> <span class="n">fonct</span><span class="p">(</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span> <span class="p">)</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;temps d&#39;execution : {time.time()-t}&quot;</span><span class="p">)</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">tache</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">appelFonc</span>
+<span class="gp">...</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nd">@decorateur</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="p">:</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot; affiche le contenue et le type des variables passees en argument &quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{a}</span><span class="s2"> - {type(a)}&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{b}</span><span class="s2"> - {type(b)}&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{c}</span><span class="s2"> - {type(c)}&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+<span class="go">a - &lt;class &#39;str&#39;&gt;</span>
+<span class="go">1 - &lt;class &#39;int&#39;&gt;</span>
+<span class="go">&lt;function f at 0x000001F6E7792268&gt; - &lt;class &#39;function&#39;&gt;</span>
+<span class="go">temps d&#39;execution : 0.00653386116027832</span>
+</pre></div>
+</div>
 </td>
 </tr>
 </tbody>
@@ -796,8 +849,9 @@ complète y compris le contenu des données itérables</p>
 <div><ol class="arabic">
 <li><p class="first">«&nbsp;<a href="#id6"><span class="problematic" id="id7">*</span></a>args&nbsp;»</p>
 <blockquote>
-<div><p><strong>“*args”</strong> permet de passer, à une fonctions, des arguments en nomrbes et de types
-inconnue puis converti l’ensemble en tuple.
+<div><p><strong>“*args”</strong> permet de passer, à une fonctions, des arguments en nomrbes et de
+types inconnue puis converti l’ensemble en tuple. Dans le prototype d’une
+fonction, cet argument est utilisé comme «&nbsp;positional argument&nbsp;».
 ex :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">:</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="n">args</span> <span class="p">)</span>
@@ -815,8 +869,9 @@ ex :</p>
 </li>
 <li><p class="first">«&nbsp;<a href="#id8"><span class="problematic" id="id9">**</span></a>kwargs&nbsp;»</p>
 <blockquote>
-<div><p><strong>“*kwargs”</strong> permet de passer, à une fonctions, des arguments en nomrbes et de types
-inconnue puis converti l’ensemble en dictionnaire.
+<div><p><strong>“*kwargs”</strong> permet de passer, à une fonctions, des arguments en nomrbes et de
+types inconnue puis converti l’ensemble en dictionnaire. Dans le prototype d’une
+fonction, cet argument est utilisé pour les argument par défaut.
 ex :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">fd</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="n">kwargs</span> <span class="p">)</span>
@@ -1150,12 +1205,12 @@ l’API et renvairra un «&nbsp;AttributError&nbsp;» si on l’appel spécifiqu
 <li><a class="reference internal" href="#id1">Traitemant des répertoires</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#pip">pip</a><ul>
+<li><a class="reference internal" href="#pip-python-installing-packages">pip (Python installing packages)</a><ul>
 <li><a class="reference internal" href="#installation-de-pip">Installation de PIP</a></li>
 <li><a class="reference internal" href="#utilisation-de-pip">Utilisation de PIP</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper">Les environnements virtuels Python : virtualenv et virtualenvwrapper</a><ul>
+<li><a class="reference internal" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper-version-linux">Les environnements virtuels Python : virtualenv et virtualenvwrapper (version Linux)</a><ul>
 <li><a class="reference internal" href="#installation-des-environements-virtuels">installation des environements virtuels</a></li>
 <li><a class="reference internal" href="#configuration-des-environements-virtuels">configuration des environements virtuels</a></li>
 <li><a class="reference internal" href="#utilisation-environements-virtuels">Utilisation environements virtuels</a></li>

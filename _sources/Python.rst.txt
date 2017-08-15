@@ -2,6 +2,13 @@
 PYTHON
 ======
 
+:Liens_Web:
+            * http://python.jpvweb.com/python/mesrecettespython/doku.php?id=Sommaire
+                # (fr) de nombreux example et explication sur des utilisation sépcifique
+                # de fonctionnalité python
+                
+------------------------------------------------------------------------------------------
+
 Obtenir de l'aide sur une class ou une méthode  (python)
 ========================================================
 
@@ -134,8 +141,8 @@ Traitemant des répertoires
 
 ------------------------------------------------------------------------------------------
                 
-pip
-===
+pip (Python installing packages)
+================================
 
 :Liens web:
             * http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/
@@ -192,8 +199,8 @@ Utilisation de PIP
 
 ------------------------------------------------------------------------------------------
 
-Les environnements virtuels Python : virtualenv et virtualenvwrapper
-====================================================================
+Les environnements virtuels Python : virtualenv et virtualenvwrapper (version Linux)
+====================================================================================
 
 :Liens Web:
             * http://sametmax.com/les-environnement-virtuels-python-virtualenv-et-virtualenvwrapper/
@@ -409,6 +416,9 @@ La procédure d'utilisation :
                     
             * https://pypi.python.org/pypi?:action=display&name=cx_Freeze&version=4.3.4
                 # cx_Freeze (soft)
+                
+            * http://python.jpvweb.com/python/mesrecettespython/doku.php?id=cx_freeze
+                # cookBook CX_Freeze (fr)
     
 ------------------------------------------------------------------------------------------
 
@@ -453,7 +463,7 @@ Format JSON
                                     return load(f)
                             else:
                                 with open(path, "w", encoding = "utf-8") as f:
-                                    return dump(data, f)
+                                    return dump(data, f, indent=4, sort_keys=True)
                         except:
                             sleep(random()*delay) # concurrency
                 
@@ -500,6 +510,34 @@ Les décorateurs
             * http://sametmax.com/comprendre-les-decorateurs-python-pas-a-pas-partie-1/
             * http://sametmax.com/comprendre-les-decorateur-python-pas-a-pas-partie-2/
                 # une explication plus pousser, partie 1 et 2 (Sam & Max)
+            * http://python.jpvweb.com/python/mesrecettespython/doku.php?id=decorateurs_modeles
+                # (fr) plus facil à comprendre que Sam & Max
+                
+            example d'utilisation : ::
+            
+                >>> def decorateur(fonct) :
+                ...     """ fonction decorateur permettant de donnée le temp d'execution d'une fonction """
+                ...     @functools.wraps( fonct )
+                ...     def appelFonc( *args, **kwargs ) :
+                ...             t = time.time()
+                ...             tache = fonct( *args, **kwargs )
+                ...             print(f"temps d'execution : {time.time()-t}")
+                ...             return tache
+                ...     return appelFonc
+                ...
+                >>>
+                >>> @decorateur
+                ... def f(a, b, c) :
+                ...     """ affiche le contenue et le type des variables passees en argument """
+                ...     print( f"{a} - {type(a)}")
+                ...     print( f"{b} - {type(b)}")
+                ...     print( f"{c} - {type(c)}")
+                ...
+                >>> f('a', 1, c=f)
+                a - <class 'str'>
+                1 - <class 'int'>
+                <function f at 0x000001F6E7792268> - <class 'function'>
+                temps d'execution : 0.00653386116027832
                 
 ------------------------------------------------------------------------------------------
 
@@ -530,8 +568,9 @@ Packing et UnPacking (utilisation de : '*args' et '**kwargs')
                 
     #. "*args"
     
-        **'*args'** permet de passer, à une fonctions, des arguments en nomrbes et de types
-        inconnue puis converti l'ensemble en tuple.
+        **'*args'** permet de passer, à une fonctions, des arguments en nomrbes et de
+        types inconnue puis converti l'ensemble en tuple. Dans le prototype d'une
+        fonction, cet argument est utilisé comme "positional argument".
         ex : ::
         
             >>> def f(*args) :
@@ -547,8 +586,9 @@ Packing et UnPacking (utilisation de : '*args' et '**kwargs')
             
     #. "**kwargs"
     
-        **'*kwargs'** permet de passer, à une fonctions, des arguments en nomrbes et de types
-        inconnue puis converti l'ensemble en dictionnaire.
+        **'*kwargs'** permet de passer, à une fonctions, des arguments en nomrbes et de
+        types inconnue puis converti l'ensemble en dictionnaire. Dans le prototype d'une
+        fonction, cet argument est utilisé pour les argument par défaut.
         ex : ::
         
             >>> def fd(**kwargs) :
