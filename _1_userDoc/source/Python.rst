@@ -9,6 +9,14 @@ PYTHON
                 
 ------------------------------------------------------------------------------------------
 
+Ensemble de commande utiles
+===========================
+
+:Liens_Web:
+            * https://python.developpez.com/faq/?page=Generalites
+
+------------------------------------------------------------------------------------------
+
 Obtenir de l'aide sur une class ou une méthode  (python)
 ========================================================
 
@@ -138,6 +146,23 @@ Traitemant des répertoires
                 # le répertoire de destination est sur le même système de fichiers.
                 # Autrement elle copie simplement src sur dst puis efface src.
 
+
+------------------------------------------------------------------------------------------
+
+psutil
+======
+
+Pour surveiller différent process machine ( CPU, RAM, Network, etc)
+
+:Liens_Web:
+            * https://code.google.com/archive/p/psutil/wikis/Documentation.wiki
+                # doc officielle
+                
+            * https://pypi.python.org/pypi/psutil
+                # doc officielle (mais une autre)
+                
+            * https://github.com/giampaolo/psutil
+                # Source github
 
 ------------------------------------------------------------------------------------------
                 
@@ -420,6 +445,15 @@ La procédure d'utilisation :
             * http://python.jpvweb.com/python/mesrecettespython/doku.php?id=cx_freeze
                 # cookBook CX_Freeze (fr)
     
+------------------------------------------------------------------------------------------
+
+créer un setup.py (installable avec pip) et mettre sa bibliotheque en ligne sur pypi
+====================================================================================
+
+:Liens_Web:
+            * http://sametmax.com/creer-un-setup-py-et-mettre-sa-bibliotheque-python-en-ligne-sur-pypi/
+                # Un cook book (fr)
+
 ------------------------------------------------------------------------------------------
 
 Fichiers de configuration (.ini)
@@ -831,4 +865,18 @@ connaitre l'os de travail
     >>> os.name
     'posix'
     
+------------------------------------------------------------------------------------------    
+matplotlib
+==========
+
+:Liens_Web:
+            * http://www.science-emergence.com/Articles/Tutoriel-Matplotlib/
+                # petite introduction (fr)
+                
+            * http://matplotlib.org/index.html
+                # le site officiel
+                
+            * https://matplotlib.org/users/tutorials.html
+                # tuto du site officiel
+                
     
