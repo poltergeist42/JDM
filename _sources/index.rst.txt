@@ -17,6 +17,7 @@ Mon journal de manip
    DocUtils_RST_Sphinx
    GIT
    HTML_CSS
+   Informatique
    kicad
    Linux
    Powershell

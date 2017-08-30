@@ -1,6 +1,6 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
@@ -36,7 +36,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body>
+  <body role="document">
   
 
     <div class="document">
@@ -82,7 +82,7 @@
 <h3>Implentation HMC5883L<a class="headerlink" href="#implentation-hmc5883l" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><p>La sérigraphie est masqué lorsque le magnétometre est enfiché dans une breadbord.
-L’implentation si dessous est donc présenter en <strong>vue de dessus (donc sérigraphie cachée)</strong></p>
+L&#8217;implentation si dessous est donc présenter en <strong>vue de dessus (donc sérigraphie cachée)</strong></p>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Haut</span>
     <span class="mi">3</span><span class="n">v3</span>
@@ -103,7 +103,7 @@ L’implentation si dessous est donc présenter en <strong>vue de dessus (donc s
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>Préparation :</dt>
-<dd><p class="first">Si ce n’est pas déjà fait, il faut installer les outils Python :</p>
+<dd><p class="first">Si ce n&#8217;est pas déjà fait, il faut installer les outils Python :</p>
 <div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">i2c</span><span class="o">-</span><span class="n">tools</span>
@@ -118,10 +118,10 @@ L’implentation si dessous est donc présenter en <strong>vue de dessus (donc s
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>l’installation et configuations des librairies et outils Quick2wire</dt>
+<dt>l&#8217;installation et configuations des librairies et outils Quick2wire</dt>
 <dd><p class="first"><strong>N.B :</strong> le lignes qui suivent sont copiées telles quelles depuis la page instructables</p>
 <dl class="last docutils">
-<dt>Se positionner à l’endroit ou l’on veut installer quick2wire</dt>
+<dt>Se positionner à l&#8217;endroit ou l&#8217;on veut installer quick2wire</dt>
 <dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span><span class="o">.</span><span class="n">git</span>
     <span class="c1">#get quick2wire from github.com</span>
 
@@ -176,15 +176,15 @@ L’implentation si dessous est donc présenter en <strong>vue de dessus (donc s
 <li><dl class="first docutils">
 <dt>la déclinaison terrestre</dt>
 <dd><p class="first">Pour pouvoir être le plus précis possible, il faut recalibrer la boussole en tenant compte
-de notre décallage par rapport au pole magnétique. On appel ça : <strong>«&nbsp;la déclinaison terrestre&nbsp;»</strong>
+de notre décallage par rapport au pole magnétique. On appel ça : <strong>&#8220;la déclinaison terrestre&#8221;</strong>
 Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 <blockquote>
 <div><ul class="simple">
-<li>Longitude :  49° 1’22.48&nbsp;»N</li>
-<li>Latitude  :   2° 1’50.51&nbsp;»E</li>
+<li>Longitude :  49° 1&#8216;22.48&#8221;N</li>
+<li>Latitude  :   2° 1&#8216;50.51&#8221;E</li>
 </ul>
 </div></blockquote>
-<p class="last">se qui donne à la date du 18/08/2015 : 0° 9,24”</p>
+<p class="last">se qui donne à la date du 18/08/2015 : 0° 9,24&#8217;</p>
 </dd>
 </dl>
 </li>
@@ -214,10 +214,10 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 <tr class="row-odd"><td>ratio (demultiplicateur)</td>
 <td>1/64</td>
 </tr>
-<tr class="row-even"><td>angle par pas (en sortie d’abre)</td>
+<tr class="row-even"><td>angle par pas (en sortie d&#8217;abre)</td>
 <td>0.087890625°</td>
 </tr>
-<tr class="row-odd"><td>Nbe de pas / tour (en sortie d’arbre)</td>
+<tr class="row-odd"><td>Nbe de pas / tour (en sortie d&#8217;arbre)</td>
 <td>4096</td>
 </tr>
 </tbody>
@@ -327,7 +327,7 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 </table>
 <dl class="docutils">
 <dt><strong>N.B :</strong> les 8 phases donnent 1 tour complet sur le moteur,</dt>
-<dd>soit 1/64 de tour en sortie d’arbre.</dd>
+<dd>soit 1/64 de tour en sortie d&#8217;arbre.</dd>
 </dl>
 </div></blockquote>
 </div>
@@ -348,7 +348,7 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 </pre></div>
 </div>
 <dl class="docutils">
-<dt><strong>N.B :</strong> la liste contenu dans chaque phase, correspond à l’état</dt>
+<dt><strong>N.B :</strong> la liste contenu dans chaque phase, correspond à l&#8217;état</dt>
 <dd><p class="first">(1 = Hight = True ; 0 = Low = False) à appliquer sur le broches du GPIO</p>
 <div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span>  <span class="p">:</span> <span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
     <span class="o">--&gt;</span> <span class="n">GPIO17</span> <span class="o">=</span> <span class="mi">1</span>
@@ -478,20 +478,20 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 <blockquote>
 <div><p># Attention les entrée du RPi etant en 3.3v,
 il faut faire un pont diviseur entre la broche
-«&nbsp;Echo&nbsp;» et le GND pour pouvoir se brancher
+&#8220;Echo&#8221; et le GND pour pouvoir se brancher
 sur le RPi</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Vitesse du son:</th><td class="field-body"><p class="first">Le son se déplace à une vitesse d’environ 343 m/s (à température ambiante de 20°),
+<tr class="field-odd field"><th class="field-name">Vitesse du son:</th><td class="field-body"><p class="first">Le son se déplace à une vitesse d&#8217;environ 343 m/s (à température ambiante de 20°),
 soit environ 34300 cm/s</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Distance:</th><td class="field-body"><dl class="first last docutils">
 <dt>D = 17150 x time</dt>
 <dd><p class="first last"># 17150 correspond a la vitesse du son / 2 (34300/2).
-On divise par 2 car seule la distance en l’obstacle et le mur nous intéresse
-et non la distance total parcourue par l’onde radio.</p>
+On divise par 2 car seule la distance en l&#8217;obstacle et le mur nous intéresse
+et non la distance total parcourue par l&#8217;onde radio.</p>
 </dd>
 </dl>
 </td>
@@ -593,7 +593,7 @@ et non la distance total parcourue par l’onde radio.</p>
       &copy;2017, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |

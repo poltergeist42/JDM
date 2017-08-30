@@ -1,6 +1,6 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
@@ -36,7 +36,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body>
+  <body role="document">
   
 
     <div class="document">
@@ -81,7 +81,7 @@
 <h2>Démmarer un nouveau projet<a class="headerlink" href="#demmarer-un-nouveau-projet" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Créer l’environement virtuel</p>
+<li><p class="first">Créer l&#8217;environement virtuel</p>
 <blockquote>
 <div><ul>
 <li><p class="first">Créer un dossier avec un nom significatif :</p>
@@ -90,7 +90,7 @@
 </div>
 </li>
 <li><p class="first">Ce placer dans le répertoire de destination et lancer la création
-de l’environement virtuel :</p>
+de l&#8217;environement virtuel :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
 
 <span class="n">virtualenv</span> <span class="o">--</span><span class="n">system</span><span class="o">-</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="o">.</span>
@@ -107,9 +107,9 @@ de l’environement virtuel :</p>
 <li><p class="first">Créer un dossier significatif</p>
 </li>
 <li><dl class="first docutils">
-<dt>Lancer l’environement virtuel avant de créer le projet Django</dt>
+<dt>Lancer l&#8217;environement virtuel avant de créer le projet Django</dt>
 <dd><ul class="first last">
-<li><p class="first">Executer le script d’activation :</p>
+<li><p class="first">Executer le script d&#8217;activation :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">Scripts</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
 </pre></div>
 </div>
@@ -131,10 +131,10 @@ du projet Django(site principal) :</p>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Configurer le fichier «&nbsp;settings.py&nbsp;»</p>
+<li><p class="first">Configurer le fichier &#8220;settings.py&#8221;</p>
 <blockquote>
 <div><ul>
-<li><p class="first">Editer le fichier «&nbsp;settings.py&nbsp;» situé dans le dossier «&nbsp;./[nom_du_projet]/&nbsp;»</p>
+<li><p class="first">Editer le fichier &#8220;settings.py&#8221; situé dans le dossier &#8221;./[nom_du_projet]/&#8221;</p>
 </li>
 <li><p class="first">Modfier les lignes :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;en-us&#39;</span>
@@ -147,7 +147,7 @@ du projet Django(site principal) :</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Ajouter après la ligne «&nbsp;STATIC_URL = “/static/”&nbsp;» la ligne :</p>
+<li><p class="first">Ajouter après la ligne &#8220;STATIC_URL = &#8216;/static/&#8217;&#8221; la ligne :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;static&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -158,7 +158,7 @@ du projet Django(site principal) :</p>
 <li><p class="first">Créer la base de donnée (pour une DB SQLite)</p>
 <blockquote>
 <div><ul>
-<li><p class="first">Se placer au même niveau que le fichiers «&nbsp;manage.py&nbsp;»</p>
+<li><p class="first">Se placer au même niveau que le fichiers &#8220;manage.py&#8221;</p>
 </li>
 <li><p class="first">Effectuer la première migration :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
@@ -174,7 +174,7 @@ du projet Django(site principal) :</p>
 <h3>Démarrer une nouvelle APP<a class="headerlink" href="#demarrer-une-nouvelle-app" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ul>
-<li><p class="first">Se placer au même niveau que le fichiers «&nbsp;manage.py&nbsp;» et executer la commande manage :</p>
+<li><p class="first">Se placer au même niveau que le fichiers &#8220;manage.py&#8221; et executer la commande manage :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="p">[</span><span class="n">votre_application</span><span class="p">]</span>
     <span class="c1"># Un dossier [votre_application] sera créer dans le répertoire courant</span>
 </pre></div>
@@ -187,7 +187,7 @@ du projet Django(site principal) :</p>
 <hr class="docutils" />
 <div class="section" id="principes-de-fonctionnement">
 <h2>Principes de fonctionnement<a class="headerlink" href="#principes-de-fonctionnement" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Django travail sur le principe du MVC (Model, Vue, Controler). L’organisation dans Django
+<p>Django travail sur le principe du MVC (Model, Vue, Controler). L&#8217;organisation dans Django
 se présente sous la forme : Model, Vue, Template.</p>
 <p>La correspondance avec le MVC est la suivante :</p>
 <blockquote>
@@ -195,16 +195,16 @@ se présente sous la forme : Model, Vue, Template.</p>
 <li><p class="first">Model (Django : Model) :</p>
 <blockquote>
 <div><ul>
-<li><p class="first"><strong>models.py</strong> : C’est le scrip qui permet la création des tables
+<li><p class="first"><strong>models.py</strong> : C&#8217;est le scrip qui permet la création des tables
 dans la base de données.</p>
 <dl class="docutils">
 <dt>Par analogie avec la POO</dt>
 <dd><ul class="first last simple">
-<li>La base de donné est l’objet</li>
-<li>Les tables (définies comme des class dans «&nbsp;models.py&nbsp;»)
-sont des instances de l’objet</li>
-<li>Les champs (définies comme des attribut de class dans «&nbsp;models.py&nbsp;»)
-sont des attributs de l’instances</li>
+<li>La base de donné est l&#8217;objet</li>
+<li>Les tables (définies comme des class dans &#8220;models.py&#8221;)
+sont des instances de l&#8217;objet</li>
+<li>Les champs (définies comme des attribut de class dans &#8220;models.py&#8221;)
+sont des attributs de l&#8217;instances</li>
 </ul>
 </dd>
 </dl>
@@ -215,10 +215,10 @@ sont des attributs de l’instances</li>
 <li><p class="first">Vue (Django : Template) :</p>
 <blockquote>
 <div><ul class="simple">
-<li>Tous les fichiers en «&nbsp;.html&nbsp;» dans ./templates</li>
-<li>Les feuilles de styles («&nbsp;.css&nbsp;») dans ./static</li>
+<li>Tous les fichiers en &#8221;.html&#8221; dans ./templates</li>
+<li>Les feuilles de styles (&#8221;.css&#8221;) dans ./static</li>
 <li><strong>urls.py</strong> : sert de liaison avec views.py. Ce ficher génére les urls à la volée,
-par l’interprétation d’expression régulière (RegEx)</li>
+par l&#8217;interprétation d&#8217;expression régulière (RegEx)</li>
 </ul>
 </div></blockquote>
 </li>
@@ -286,9 +286,9 @@ les formulaires HTML et interagit avec la base de données</li>
 </dl>
 </li>
 <li>models.CharField - Cela nous permet de définir un champ texte avec un nombre limité de caractères.</li>
-<li>models.TextField - Cela nous permet de définir un champ texte sans limite de caractères. Parfait pour le contenu d’un blog post !</li>
+<li>models.TextField - Cela nous permet de définir un champ texte sans limite de caractères. Parfait pour le contenu d&#8217;un blog post !</li>
 <li>models.DateTimeField - Définit que le champ en question est une date ou une heure.</li>
-<li>models.ForeignKey - C’est un lien vers un autre modèle.</li>
+<li>models.ForeignKey - C&#8217;est un lien vers un autre modèle.</li>
 </ul>
 </td>
 </tr>
@@ -373,7 +373,7 @@ $ -&gt; la fin du texte
       &copy;2017, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
