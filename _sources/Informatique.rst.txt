@@ -44,4 +44,34 @@ Excel
                 =NON(MOD(LIGNE() ;2))
         
         
+SysAdmin
+========
+
+Ensemble d'informations relativent à l'administration Système
+
+PowerShell
+----------
+
+    #. Identififer les PC qui ne se sont pas connecter au domaine depuis
+       au moins 180 Jours : ::
+       
+            import-module ActiveDirectory
+            $vdate = (Get-Date).adddays(-180)
+            Get-ADComputer -filter (Enabled -eq "True") -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CN
+                # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
+                # se sont pas connécter de puis au moins 180 Jours
         
+        #. pour ne pas filtrer le résultat et voir toutes les propriété : ::
+        
+            Get-ADComputer -filter * -property *
+                # N.B : Fonctionne aussi avec get-ADUser
+            
+    #. Identificer les comptes utilisateurs qui ne se sont pas connecter au domaine depuis
+       au moins 180 Jours : ::
+
+            import-module ActiveDirectory
+            $vdate = (Get-Date).adddays(-180)
+            Get-ADuser -filter {(Enabled -eq "True") -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CanonicalName
+                # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
+                # se sont pas connécter de puis au moins 180 Jours
+            
