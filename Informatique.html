@@ -119,7 +119,7 @@ au moins 180 Jours :</p>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span>import-module ActiveDirectory
 $vdate = (Get-Date).adddays(-180)
-Get-ADComputer -filter (Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CN
+Get-ADComputer -filter {(Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CN
     # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
     # se sont pas connécter de puis au moins 180 Jours
 </pre></div>
