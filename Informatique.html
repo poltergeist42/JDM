@@ -116,18 +116,23 @@ informatiques.</p>
 <div><ol class="arabic">
 <li><p class="first">Identififer les PC qui ne se sont pas connecter au domaine depuis
 au moins 180 Jours :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>    import-module ActiveDirectory
-    $vdate = (Get-Date).adddays(-180)
-    Get-ADComputer -filter (Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CN
-        # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
-        # se sont pas connécter de puis au moins 180 Jours
-
-#. pour ne pas filtrer le résultat et voir toutes les propriété : ::
-
-    Get-ADComputer -filter * -property *
-        # N.B : Fonctionne aussi avec get-ADUser
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>import-module ActiveDirectory
+$vdate = (Get-Date).adddays(-180)
+Get-ADComputer -filter (Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CN
+    # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
+    # se sont pas connécter de puis au moins 180 Jours
 </pre></div>
 </div>
+<ol class="arabic">
+<li><p class="first">pour ne pas filtrer le résultat et voir toutes les propriété :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">ADComputer</span> <span class="o">-</span><span class="nb">filter</span> <span class="o">*</span> <span class="o">-</span><span class="nb">property</span> <span class="o">*</span>
+    <span class="c1"># N.B : Fonctionne aussi avec get-ADUser</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
 </li>
 <li><p class="first">Identificer les comptes utilisateurs qui ne se sont pas connecter au domaine depuis
 au moins 180 Jours :</p>
