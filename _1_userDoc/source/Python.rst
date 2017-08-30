@@ -149,8 +149,8 @@ Traitemant des répertoires
 
 ------------------------------------------------------------------------------------------
 
-psutil
-======
+psutil (process and system utilities)
+=====================================
 
 Pour surveiller différent process machine ( CPU, RAM, Network, etc)
 
