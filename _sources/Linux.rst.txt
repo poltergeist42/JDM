@@ -579,3 +579,11 @@ Préparation du script python
         
         ex: chmod a+x blink.py
 
+------------------------------------------------------------------------------------------
+
+linux rediriger sortie vers null
+================================
+
+:Liens_Web:
+            * http://www.lanterne-rouge.info/article-que-signifie-dev-null-2-1-70233357.html
+                # Une explication (fr) sur les sortie STDOUT et STDERR
