@@ -29,6 +29,9 @@ reStructuredText (.rst)
             
         * http://docutils.sourceforge.net/docs/user/rst/quickref.html
             # Un petit guide de reférence
+            
+        * http://python.physique.free.fr/aide/Partie1.html
+            # détail de syntaxe avancé
 
 ------------------------------------------------------------------------------------------
 

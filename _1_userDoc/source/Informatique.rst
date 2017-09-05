@@ -53,11 +53,13 @@ PowerShell
 ----------
 
     #. Identififer les PC qui ne se sont pas connecter au domaine depuis
-       au moins 180 Jours : ::
+       au moins 180 Jours : 
+       
+        ::
        
             import-module ActiveDirectory
             $vdate = (Get-Date).adddays(-180)
-            Get-ADComputer -filter (Enabled -eq "True") -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CN
+            Get-ADComputer -filter {(Enabled -eq "True") -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CN
                 # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
                 # se sont pas connécter de puis au moins 180 Jours
         
