@@ -4,6 +4,36 @@ PowerShell
 
 Commandes utilies
 =================
+Obtenir de l'aide
+-----------------
+
+:Liens_Web:
+            * https://docs.microsoft.com/fr-fr/powershell/module/microsoft.powershell.utility/?view=powershell-5.1
+
+    #. Obtenir de l'aide depuis le shell ::
+    
+            get-help [nom_de_la_commande]
+            
+            ex :
+            get-help get-member
+            
+    #. Les diférents modes de l'aide
+    
+        * Pour consulter les exemples :: 
+        
+            get-help Get-Help -examples
+            
+        * Pour plus d'informations :: 
+        
+            get-help Get-Help -detailed
+            
+        * Pour obtenir des informations techniques :: 
+            
+            get-help Get-Help -full
+            
+        * Pour l’aide en ligne ::
+
+            get-help Get-Help -online
 
 Activer / Desactiver le mode debugage
 -------------------------------------
@@ -31,8 +61,8 @@ Connaitre toutes les methodes d'un objet
 ========================================
 
     ::
-        [Objet_ou_command] | get-members (ou gm)
-            # exemple pour une variable : $v_a | get-members
+        [Objet_ou_command] | get-member (ou gm)
+            # exemple pour une variable : $v_a | get-member
 
 ----------------------------------------------------------
             
