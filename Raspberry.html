@@ -91,7 +91,7 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="acceder-au-fichier-de-configuration-du-rpi">
-<h2>Acceder au fichier de configuration du RPI<a class="headerlink" href="#acceder-au-fichier-de-configuration-du-rpi" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Accéder au fichier de configuration du RPI<a class="headerlink" href="#acceder-au-fichier-de-configuration-du-rpi" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
 </pre></div>
@@ -100,7 +100,7 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="connaitre-la-configuration-materiel-du-rpi">
-<h2>Connaitre la configuration matériel du RPI<a class="headerlink" href="#connaitre-la-configuration-materiel-du-rpi" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Connaître la configuration matériel du RPI<a class="headerlink" href="#connaitre-la-configuration-materiel-du-rpi" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -142,8 +142,8 @@ Sur Arduino, cela s’appel un Shield (Bouclier)</dd>
 </tr>
 </tbody>
 </table>
-<div class="section" id="implentation-rpi2">
-<h3>Implentation RPi2<a class="headerlink" href="#implentation-rpi2" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="implantation-rpi2">
+<h3>Implantation RPi2<a class="headerlink" href="#implantation-rpi2" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table border="1" class="docutils">
 <colgroup>
@@ -371,7 +371,7 @@ Sur Arduino, cela s’appel un Shield (Bouclier)</dd>
 <h3>Utilisation de RPi.GPIO avec Python<a class="headerlink" href="#utilisation-de-rpi-gpio-avec-python" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Importer la bibliotheque :</p>
+<li><p class="first">Importer la bibliothèque :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="k">as</span> <span class="nn">GPIO</span>
     <span class="c1"># Attention, c&#39;est bien RPi avec un i minuscule</span>
 </pre></div>
@@ -390,8 +390,8 @@ fonctionnement des GPIO.</li>
 </ol>
 </div></blockquote>
 </div>
-<div class="section" id="quick-ref-les-fonctions-assosier-aux-gpio-en-python">
-<h3>Quick ref, les fonctions assosier aux GPIO en python<a class="headerlink" href="#quick-ref-les-fonctions-assosier-aux-gpio-en-python" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="quick-ref-les-fonctions-associer-aux-gpio-en-python">
+<h3>Quick ref, les fonctions associer aux GPIO en python<a class="headerlink" href="#quick-ref-les-fonctions-associer-aux-gpio-en-python" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -409,7 +409,7 @@ fonctionnement des GPIO.</li>
 </tr>
 </tbody>
 </table>
-<p>liste des diférentes commandes :</p>
+<p>liste des différentes commandes :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># RPi.GPIO Basics cheat sheet - Don&#39;t try to run this. It&#39;ll fail!</span>
 <span class="c1"># Alex Eames http://RasPi.TV</span>
 <span class="c1"># http://RasPi.TV/?p=4320</span>
@@ -466,8 +466,8 @@ fonctionnement des GPIO.</li>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="i2c">
-<h2>I2C<a class="headerlink" href="#i2c" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="protocole-i2c">
+<h2>Protocole I2C<a class="headerlink" href="#protocole-i2c" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -567,8 +567,8 @@ en utilisant quick2wire.i2c</dd>
 </ol>
 </div></blockquote>
 </div>
-<div class="section" id="connaitre-l-adresse-des-matetiels-branches">
-<h3>Connaitre l’adresse des matétiels branchés<a class="headerlink" href="#connaitre-l-adresse-des-matetiels-branches" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="connaitre-l-adresse-des-materiels-branches">
+<h3>Connaître l’adresse des matériels branchés<a class="headerlink" href="#connaitre-l-adresse-des-materiels-branches" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic simple">
 <li><dl class="first docutils">
@@ -580,7 +580,7 @@ en utilisant quick2wire.i2c</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>executer la commande i2cdetect avec des droits éléver</dt>
+<dt>exécuter la commande i2cdetect avec des droits élever</dt>
 <dd><ul class="first last">
 <li>sudo i2cdetect -y 1</li>
 </ul>
@@ -588,7 +588,7 @@ en utilisant quick2wire.i2c</dd>
 </dl>
 </li>
 </ol>
-<p>Exemple avec un magnetometre HMC5883L :</p>
+<p>Exemple avec un magnétomètre HMC5883L :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>pi@raspiBlanc ~ $ cd /etc/modprobe.d/
 pi@raspiBlanc /etc/modprobe.d $ sudo i2cdetect -y 1
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
@@ -614,7 +614,7 @@ pi@raspiBlanc /etc/modprobe.d $ sudo i2cdetect -y 1
 <div><p><strong>N.B :</strong> par défaut l’uart est configuré en mode console pour le débug. pour l’utiliser,
 il faut d’abord le libérer.</p>
 <blockquote>
-<div><p>#.  Intérroger le journal sur les dernier événement de la liaison série pour vérifier
+<div><p>#.  Interroger le journal sur les dernier événement de la liaison série pour vérifier
 que l’opération n’a pas déjà été effectuer</p>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dmesg</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">tty</span>
@@ -642,7 +642,7 @@ que l’opération n’a pas déjà été effectuer</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Redémarer :</p>
+<li><p class="first">Redémarrer :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">reboot</span>
 </pre></div>
 </div>
@@ -656,7 +656,7 @@ que l’opération n’a pas déjà été effectuer</p>
 <span class="p">[</span>    <span class="mf">0.195175</span><span class="p">]</span> <span class="mi">3</span><span class="n">f201000</span><span class="o">.</span><span class="n">uart</span><span class="p">:</span> <span class="n">ttyAMA0</span> <span class="n">at</span> <span class="n">MMIO</span> <span class="mh">0x3f201000</span> <span class="p">(</span><span class="n">irq</span> <span class="o">=</span> <span class="mi">83</span><span class="p">,</span> <span class="n">base_baud</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">PL011</span> <span class="n">rev2</span>
 </pre></div>
 </div>
-<p>On constate que la derniere ligne à disparue, le mode debug sur la sortie UART
+<p>On constate que la dernière ligne à disparue, le mode débug sur la sortie UART
 est donc bien désactivée.</p>
 </li>
 </ol>
@@ -681,12 +681,12 @@ est donc bien désactivée.</p>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-7">http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-7</a></dt>
-<dd># utilisation du PWM sur raspberry (en francais)</dd>
+<dd># utilisation du PWM sur raspberry (en français)</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://www.youtube.com/watch?v=BLtV0Z38S94">https://www.youtube.com/watch?v=BLtV0Z38S94</a></dt>
-<dd># utilisation du PWM sur raspberry (video)</dd>
+<dd># utilisation du PWM sur raspberry (vidéo)</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
@@ -701,7 +701,7 @@ est donc bien désactivée.</p>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://www.youtube.com/watch?v=W7cV9_W12sM">https://www.youtube.com/watch?v=W7cV9_W12sM</a></dt>
-<dd># utilisation d’un DC Motor avec le Pi (video)</dd>
+<dd># utilisation d’un DC Motor avec le Pi (vidéo)</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
@@ -717,44 +717,44 @@ est donc bien désactivée.</p>
 <dd><p class="first">Exemple d” utilisation (en python 3) :</p>
 <div class="last highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">debut</span> <span class="n">de</span> <span class="n">script</span> <span class="p">]</span>
     <span class="kn">import</span> <span class="nn">RPI.GPIO</span> <span class="k">as</span> <span class="nn">GPIO</span>
-        <span class="c1"># importation de la bibliotheque RPI</span>
+        <span class="c1"># importation de la bibliothèque RPI</span>
     <span class="n">GPIO</span><span class="o">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="o">.</span><span class="n">BCM</span><span class="p">)</span>
         <span class="c1"># Utilisation des GPIO en mode &quot;BCM&quot;</span>
 
     <span class="n">une_broche_du_pi</span> <span class="o">=</span> <span class="mi">25</span>
     <span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">une_broche_du_pi</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
         <span class="c1"># On choisi la sur la quelle on veut faire du PWM</span>
-        <span class="c1"># Il vaut mieu eviter de choisir une broche qui est aussi utilisee</span>
-        <span class="c1"># pour autre chose comme de l&#39;I2C, du SPI ou du serial</span>
+        <span class="c1"># Il vaut mieux éviter de choisir une broche qui est aussi utilisée</span>
+        <span class="c1"># pour autre chose comme de l&#39;I2C, du SPI ou du Serial</span>
 
     <span class="n">frequence</span> <span class="o">=</span> <span class="mi">50</span>
     <span class="n">rapportCyclique</span> <span class="o">=</span> <span class="mi">50</span>
 
     <span class="n">p</span> <span class="o">=</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">PWM</span><span class="p">(</span><span class="n">une_broche_du_pi</span><span class="p">,</span> <span class="n">frequence</span><span class="p">)</span>
-        <span class="c1"># on initialise le PWM sur la broche choisie et on indique la frequence</span>
+        <span class="c1"># on initialise le PWM sur la broche choisie et on indique la fréquence</span>
 
     <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">rapportCyclique</span><span class="p">)</span>
         <span class="c1"># On l&#39;impulsion en indiquant le rapport cyclique (Duty Cycle)</span>
         <span class="c1">#</span>
-        <span class="c1"># Le rapport cyclique correspond au rapport de la durée de l&#39;impultion</span>
+        <span class="c1"># Le rapport cyclique correspond au rapport de la durée de l’impulsion</span>
         <span class="c1"># sur la periode. Cette valeur est exprimée en pourcentage</span>
         <span class="c1"># voir https://fr.wikipedia.org/wiki/Rapport_cyclique_d&#39;ouverture</span>
 
     <span class="n">rapportCyclique</span> <span class="o">=</span> <span class="mi">80</span>
     <span class="n">p</span><span class="o">.</span><span class="n">ChangeDutyCycle</span><span class="p">(</span><span class="n">rapportCyclique</span><span class="p">)</span>
-        <span class="c1"># pour changer le rapport cyclique &quot;a la volee&quot;, on utilise</span>
+        <span class="c1"># pour changer le rapport cyclique &quot;a la volée&quot;, on utilise</span>
         <span class="c1"># la methode RPI.GPIO.PWM.ChangeDutyCycle()</span>
 
     <span class="n">frequence</span> <span class="o">=</span> <span class="mi">100</span>
     <span class="n">p</span><span class="o">.</span><span class="n">ChangeFrequency</span><span class="p">(</span><span class="n">frequence</span><span class="p">)</span>
         <span class="c1"># On peut changer la frequence &quot;a la volee&quot;. On parle alors de PFM</span>
-        <span class="c1"># on utilise la methode RPI.GPIO.PWM.ChangeFrequency()</span>
+        <span class="c1"># on utilise la méthode RPI.GPIO.PWM.ChangeFrequency()</span>
 
     <span class="n">p</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-        <span class="c1"># on arrete l&#39;impulsion</span>
+        <span class="c1"># on arrête l&#39;impulsion</span>
 
     <span class="n">GPIO</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span>
-        <span class="c1"># on libere toutes les GPIO</span>
+        <span class="c1"># on libère toutes les GPIO</span>
 <span class="p">[</span><span class="n">fin</span> <span class="n">de</span> <span class="n">script</span> <span class="p">]</span>
 </pre></div>
 </div>
@@ -763,16 +763,16 @@ est donc bien désactivée.</p>
 </li>
 <li><dl class="first docutils">
 <dt>servo moteur :</dt>
-<dd><p class="first">La periode pour un servo moteur est generalement de 20ms
+<dd><p class="first">La période pour un servo moteur est généralement de 20ms
 (a controler avec la documentation). les angles : 0 ; 90 ; 180 son généralement
-associes a des duree d’impulsion de 0.5 ; 1.5 ; 2.5 ms ce qui donne les rapports cycliques
+associes a des durée d’impulsion de 0.5 ; 1.5 ; 2.5 ms ce qui donne les rapports cycliques
 (duty cycle) suivants :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">0.5</span><span class="o">/</span><span class="mi">20</span> <span class="o">=</span> <span class="mf">2.5</span><span class="o">%</span>
 <span class="mf">1.5</span><span class="o">/</span><span class="mi">20</span> <span class="o">=</span> <span class="mf">7.5</span><span class="o">%</span>
 <span class="mf">2.5</span><span class="o">/</span><span class="mi">20</span> <span class="o">=</span> <span class="mf">12.5</span> <span class="o">%</span>
 </pre></div>
 </div>
-<p class="last">L’ensemble des valeurs de 0 a 180° son donc comprisent entre 0.5 et 2.5 ms soit
+<p class="last">L’ensemble des valeurs de 0 a 180° son donc comprises entre 0.5 et 2.5 ms soit
 entre 2.5% et 12.5%.</p>
 </dd>
 </dl>
@@ -780,7 +780,7 @@ entre 2.5% et 12.5%.</p>
 <li><dl class="first docutils">
 <dt>DC motor :</dt>
 <dd><p class="first">Le rapport cyclique permet de gérer la vitesse du moteur(valeur de 0 à 100).
-Il est préférable d’utiliser 2 broches PWM pour gerer le sens de rotation.</p>
+Il est préférable d’utiliser 2 broches PWM pour gérer le sens de rotation.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="11%" />
@@ -812,7 +812,7 @@ Il est préférable d’utiliser 2 broches PWM pour gerer le sens de rotation.</
 </tr>
 </tbody>
 </table>
-<p class="last">La frequence est a adapter en fonction du bruit du moteur
+<p class="last">La fréquence est a adapter en fonction du bruit du moteur
 (quant il «&nbsp;chante&nbsp;», c’est pas bon)</p>
 </dd>
 </dl>
@@ -839,7 +839,7 @@ Il est préférable d’utiliser 2 broches PWM pour gerer le sens de rotation.</
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://raspberrypi-aa.github.io/session2/input.html">http://raspberrypi-aa.github.io/session2/input.html</a></dt>
-<dd># petit panorama sur les entrées (interuption et pull-up-down)</dd>
+<dd># petit panorama sur les entrées (interruption et pull-up-down)</dd>
 </dl>
 </li>
 </ul>
@@ -848,10 +848,10 @@ Il est préférable d’utiliser 2 broches PWM pour gerer le sens de rotation.</
 <li><dl class="first docutils">
 <dt>Pull-Up et Pull-Down sur le RPi</dt>
 <dd><p class="first">Le RPi possède en interne une résistance de tirrage qui peut être activée
-de 2 façons diférentes :</p>
+de 2 façons différentes :</p>
 <blockquote>
 <div><ul class="simple">
-<li>Pull-Up ([résitance entre le +3.3v et la broche] + gnd)</li>
+<li>Pull-Up ([résistance entre le +3.3v et la broche] + gnd)</li>
 <li>Pull-Down (+3.3v + [résistance entre la broche et le gnd])</li>
 </ul>
 </div></blockquote>
@@ -947,19 +947,19 @@ de 2 façons diférentes :</p>
 <li><a class="reference internal" href="#rpi-rov">RPI ROV</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#acceder-au-fichier-de-configuration-du-rpi">Acceder au fichier de configuration du RPI</a></li>
-<li><a class="reference internal" href="#connaitre-la-configuration-materiel-du-rpi">Connaitre la configuration matériel du RPI</a></li>
+<li><a class="reference internal" href="#acceder-au-fichier-de-configuration-du-rpi">Accéder au fichier de configuration du RPI</a></li>
+<li><a class="reference internal" href="#connaitre-la-configuration-materiel-du-rpi">Connaître la configuration matériel du RPI</a></li>
 <li><a class="reference internal" href="#vocabulaire">Vocabulaire</a></li>
 <li><a class="reference internal" href="#la-bibliotheque-rpi-gpio">La bibliotheque RPi.GPIO</a><ul>
-<li><a class="reference internal" href="#implentation-rpi2">Implentation RPi2</a></li>
+<li><a class="reference internal" href="#implantation-rpi2">Implantation RPi2</a></li>
 <li><a class="reference internal" href="#installation-de-rpi-gpio">Installation de RPi.GPIO</a></li>
 <li><a class="reference internal" href="#utilisation-de-rpi-gpio-avec-python">Utilisation de RPi.GPIO avec Python</a></li>
-<li><a class="reference internal" href="#quick-ref-les-fonctions-assosier-aux-gpio-en-python">Quick ref, les fonctions assosier aux GPIO en python</a></li>
+<li><a class="reference internal" href="#quick-ref-les-fonctions-associer-aux-gpio-en-python">Quick ref, les fonctions associer aux GPIO en python</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#i2c">I2C</a><ul>
+<li><a class="reference internal" href="#protocole-i2c">Protocole I2C</a><ul>
 <li><a class="reference internal" href="#installation-activation-de-l-i2c">Installation / Activation de l’I2C</a></li>
-<li><a class="reference internal" href="#connaitre-l-adresse-des-matetiels-branches">Connaitre l’adresse des matétiels branchés</a></li>
+<li><a class="reference internal" href="#connaitre-l-adresse-des-materiels-branches">Connaître l’adresse des matériels branchés</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#uart">UART</a><ul>

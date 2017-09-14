@@ -45,7 +45,7 @@ RPI ROV
 
 ------------------------------------------------------------------------------------------
 
-Acceder au fichier de configuration du RPI
+Accéder au fichier de configuration du RPI
 ==========================================
     ::
     
@@ -53,7 +53,7 @@ Acceder au fichier de configuration du RPI
 
 ------------------------------------------------------------------------------------------
 
-Connaitre la configuration matériel du RPI
+Connaître la configuration matériel du RPI
 ==========================================
 
   :CPU:                 * cat /proc/cpuinfo
@@ -79,7 +79,7 @@ La bibliotheque RPi.GPIO
             * http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/
             * http://raspberrypi-aa.github.io/session2/input.html
                     
-Implentation RPi2
+Implantation RPi2
 -----------------
 
     +-------+--------+---------------+---------+---------------+--------+-------+
@@ -141,7 +141,7 @@ Installation de RPi.GPIO
 Utilisation de RPi.GPIO avec Python
 -----------------------------------
 
-        #. Importer la bibliotheque : ::
+        #. Importer la bibliothèque : ::
             
                 import RPi.GPIO as GPIO
                     # Attention, c'est bien RPi avec un i minuscule
@@ -153,7 +153,7 @@ Utilisation de RPi.GPIO avec Python
               C'est la methode ".setmode()" qui permet de configurer le mode de
               fonctionnement des GPIO.
               
-Quick ref, les fonctions assosier aux GPIO en python
+Quick ref, les fonctions associer aux GPIO en python
 ----------------------------------------------------
 
 :Liens Web:
@@ -162,7 +162,7 @@ Quick ref, les fonctions assosier aux GPIO en python
             * https://sourceforge.net/p/raspberry-gpio-python/wiki/browse_pages/
                 # doc officielle
           
-liste des diférentes commandes : ::
+liste des différentes commandes : ::
 
     # RPi.GPIO Basics cheat sheet - Don't try to run this. It'll fail!
     # Alex Eames http://RasPi.TV
@@ -219,8 +219,8 @@ liste des diférentes commandes : ::
 
 ------------------------------------------------------------------------------------------
 
-I2C
-===
+Protocole I2C
+=============
 
 :liens Web:
             * http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/
@@ -263,16 +263,16 @@ Installation / Activation de l'I2C
         #. Ajouter l'utilisateur courant au groupe i2c
             * sudo adduser $USER i2c
                     
-Connaitre l'adresse des matétiels branchés
+Connaître l'adresse des matériels branchés
 ------------------------------------------
             
         #. se placer dans le dossier modprob.d
             * cd /etc/modprobe.d/
                 
-        #. executer la commande i2cdetect avec des droits éléver
+        #. exécuter la commande i2cdetect avec des droits élever
             * sudo i2cdetect -y 1
     
-        Exemple avec un magnetometre HMC5883L : ::
+        Exemple avec un magnétomètre HMC5883L : ::
 
             pi@raspiBlanc ~ $ cd /etc/modprobe.d/
             pi@raspiBlanc /etc/modprobe.d $ sudo i2cdetect -y 1
@@ -297,7 +297,7 @@ Libérer l'UART
     **N.B :** par défaut l'uart est configuré en mode console pour le débug. pour l'utiliser,
     il faut d'abord le libérer.
     
-        #.  Intérroger le journal sur les dernier événement de la liaison série pour vérifier
+        #.  Interroger le journal sur les dernier événement de la liaison série pour vérifier
         que l'opération n'a pas déjà été effectuer
         
             ::
@@ -324,7 +324,7 @@ Libérer l'UART
             
                 [ Ok ] --> [ Finish ]
             
-        #. Redémarer : ::
+        #. Redémarrer : ::
         
                 sudo reboot
             
@@ -337,7 +337,7 @@ Libérer l'UART
                 [    0.002051] console [tty1] enabled
                 [    0.195175] 3f201000.uart: ttyAMA0 at MMIO 0x3f201000 (irq = 83, base_baud = 0) is a PL011 rev2
 
-            On constate que la derniere ligne à disparue, le mode debug sur la sortie UART
+            On constate que la dernière ligne à disparue, le mode débug sur la sortie UART
             est donc bien désactivée.
 
 ------------------------------------------------------------------------------------------
@@ -351,10 +351,10 @@ PWM, Servo moteur et DC Motor
                 (Pulse Width Modulation -- PWM)
 
             * http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-7
-                # utilisation du PWM sur raspberry (en francais)
+                # utilisation du PWM sur raspberry (en français)
                         
             * https://www.youtube.com/watch?v=BLtV0Z38S94
-                # utilisation du PWM sur raspberry (video)
+                # utilisation du PWM sur raspberry (vidéo)
                         
             * https://www.youtube.com/watch?v=ddlDgUymbxc
                 # utilisation du servo moteur avec le RPi (video)
@@ -363,7 +363,7 @@ PWM, Servo moteur et DC Motor
                 # principe de fonctionnement d'un servo moteur (video)
                         
             * https://www.youtube.com/watch?v=W7cV9_W12sM
-                # utilisation d'un DC Motor avec le Pi (video)
+                # utilisation d'un DC Motor avec le Pi (vidéo)
                 
             * https://sourceforge.net/p/raspberry-gpio-python/wiki/PWM/
                 # doc officiel GPIO.PWM (y'a pas grand chose)
@@ -373,50 +373,50 @@ PWM, Servo moteur et DC Motor
         
             [ debut de script ]
                 import RPI.GPIO as GPIO
-                    # importation de la bibliotheque RPI
+                    # importation de la bibliothèque RPI
                 GPIO.setmode(GPIO.BCM)
                     # Utilisation des GPIO en mode "BCM"
                 
                 une_broche_du_pi = 25
                 GPIO.setup(une_broche_du_pi, GPIO.OUT)
                     # On choisi la sur la quelle on veut faire du PWM
-                    # Il vaut mieu eviter de choisir une broche qui est aussi utilisee
-                    # pour autre chose comme de l'I2C, du SPI ou du serial
+                    # Il vaut mieux éviter de choisir une broche qui est aussi utilisée
+                    # pour autre chose comme de l'I2C, du SPI ou du Serial
                 
                 frequence = 50
                 rapportCyclique = 50
                 
                 p = GPIO.PWM(une_broche_du_pi, frequence)
-                    # on initialise le PWM sur la broche choisie et on indique la frequence
+                    # on initialise le PWM sur la broche choisie et on indique la fréquence
                     
                 p.start(rapportCyclique)
                     # On l'impulsion en indiquant le rapport cyclique (Duty Cycle)
                     #
-                    # Le rapport cyclique correspond au rapport de la durée de l'impultion
+                    # Le rapport cyclique correspond au rapport de la durée de l’impulsion
                     # sur la periode. Cette valeur est exprimée en pourcentage
                     # voir https://fr.wikipedia.org/wiki/Rapport_cyclique_d'ouverture
                 
                 rapportCyclique = 80
                 p.ChangeDutyCycle(rapportCyclique)
-                    # pour changer le rapport cyclique "a la volee", on utilise
+                    # pour changer le rapport cyclique "a la volée", on utilise
                     # la methode RPI.GPIO.PWM.ChangeDutyCycle()
                 
                 frequence = 100
                 p.ChangeFrequency(frequence)
                     # On peut changer la frequence "a la volee". On parle alors de PFM
-                    # on utilise la methode RPI.GPIO.PWM.ChangeFrequency()
+                    # on utilise la méthode RPI.GPIO.PWM.ChangeFrequency()
                     
                 p.stop()
-                    # on arrete l'impulsion
+                    # on arrête l'impulsion
                     
                 GPIO.cleanup()
-                    # on libere toutes les GPIO
+                    # on libère toutes les GPIO
             [fin de script ]
             
     #. servo moteur :
-        La periode pour un servo moteur est generalement de 20ms
+        La période pour un servo moteur est généralement de 20ms
         (a controler avec la documentation). les angles : 0 ; 90 ; 180 son généralement
-        associes a des duree d'impulsion de 0.5 ; 1.5 ; 2.5 ms ce qui donne les rapports cycliques
+        associes a des durée d'impulsion de 0.5 ; 1.5 ; 2.5 ms ce qui donne les rapports cycliques
         (duty cycle) suivants : ::
 
         
@@ -424,12 +424,12 @@ PWM, Servo moteur et DC Motor
             1.5/20 = 7.5%
             2.5/20 = 12.5 %
         
-        L'ensemble des valeurs de 0 a 180° son donc comprisent entre 0.5 et 2.5 ms soit
+        L'ensemble des valeurs de 0 a 180° son donc comprises entre 0.5 et 2.5 ms soit
         entre 2.5% et 12.5%.
         
     #. DC motor :
         Le rapport cyclique permet de gérer la vitesse du moteur(valeur de 0 à 100).
-        Il est préférable d'utiliser 2 broches PWM pour gerer le sens de rotation.
+        Il est préférable d'utiliser 2 broches PWM pour gérer le sens de rotation.
         
         +---+--+----------------------+
         | A | B|      Actions         |
@@ -443,7 +443,7 @@ PWM, Servo moteur et DC Motor
         | 1 | 1| rotation off         |
         +---+--+----------------------+
         
-        La frequence est a adapter en fonction du bruit du moteur
+        La fréquence est a adapter en fonction du bruit du moteur
         (quant il "chante", c'est pas bon)
 
 ------------------------------------------------------------------------------------------
@@ -456,13 +456,13 @@ Input pull-up / pull-down
                 # un petit exemple en fr et en python
                 
             * http://raspberrypi-aa.github.io/session2/input.html
-                # petit panorama sur les entrées (interuption et pull-up-down)
+                # petit panorama sur les entrées (interruption et pull-up-down)
 
     #. Pull-Up et Pull-Down sur le RPi
         Le RPi possède en interne une résistance de tirrage qui peut être activée
-        de 2 façons diférentes :
+        de 2 façons différentes :
         
-            - Pull-Up ([résitance entre le +3.3v et la broche] + gnd)
+            - Pull-Up ([résistance entre le +3.3v et la broche] + gnd)
             - Pull-Down (+3.3v + [résistance entre la broche et le gnd])
             
         Activation de la Pull-Up : ::

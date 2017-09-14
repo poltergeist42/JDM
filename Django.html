@@ -77,11 +77,11 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<div class="section" id="demmarer-un-nouveau-projet">
-<h2>Démmarer un nouveau projet<a class="headerlink" href="#demmarer-un-nouveau-projet" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="demarrer-un-nouveau-projet">
+<h2>Démarrer un nouveau projet<a class="headerlink" href="#demarrer-un-nouveau-projet" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Créer l’environement virtuel</p>
+<li><p class="first">Créer l’environnement virtuel</p>
 <blockquote>
 <div><ul>
 <li><p class="first">Créer un dossier avec un nom significatif :</p>
@@ -90,11 +90,11 @@
 </div>
 </li>
 <li><p class="first">Ce placer dans le répertoire de destination et lancer la création
-de l’environement virtuel :</p>
+de l’environnement virtuel :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
 
 <span class="n">virtualenv</span> <span class="o">--</span><span class="n">system</span><span class="o">-</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="o">.</span>
-    <span class="c1"># Le point en fin de ligne représente le répertoire courrant</span>
+    <span class="c1"># Le point en fin de ligne représente le répertoire courant</span>
 </pre></div>
 </div>
 </li>
@@ -107,9 +107,9 @@ de l’environement virtuel :</p>
 <li><p class="first">Créer un dossier significatif</p>
 </li>
 <li><dl class="first docutils">
-<dt>Lancer l’environement virtuel avant de créer le projet Django</dt>
+<dt>Lancer l’environnement virtuel avant de créer le projet Django</dt>
 <dd><ul class="first last">
-<li><p class="first">Executer le script d’activation :</p>
+<li><p class="first">Exécuter le script d’activation :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">Scripts</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
 </pre></div>
 </div>
@@ -123,8 +123,8 @@ du projet Django(site principal) :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
 
 <span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startproject</span> <span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span> <span class="o">.</span>
-    <span class="c1"># Le point en fin de ligne représente le répertoire courrant</span>
-    <span class="c1"># Un dossier du [nom_du_projet] sera créer dans le répertoire courrant</span>
+    <span class="c1"># Le point en fin de ligne représente le répertoire courant</span>
+    <span class="c1"># Un dossier du [nom_du_projet] sera créer dans le répertoire courant</span>
 </pre></div>
 </div>
 </li>
@@ -136,7 +136,7 @@ du projet Django(site principal) :</p>
 <div><ul>
 <li><p class="first">Editer le fichier «&nbsp;settings.py&nbsp;» situé dans le dossier «&nbsp;./[nom_du_projet]/&nbsp;»</p>
 </li>
-<li><p class="first">Modfier les lignes :</p>
+<li><p class="first">Modifier les lignes :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;en-us&#39;</span>
 <span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;UTC&#39;</span>
 </pre></div>
@@ -174,7 +174,7 @@ du projet Django(site principal) :</p>
 <h3>Démarrer une nouvelle APP<a class="headerlink" href="#demarrer-une-nouvelle-app" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ul>
-<li><p class="first">Se placer au même niveau que le fichiers «&nbsp;manage.py&nbsp;» et executer la commande manage :</p>
+<li><p class="first">Se placer au même niveau que le fichiers «&nbsp;manage.py&nbsp;» et exécuter la commande manage :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="p">[</span><span class="n">votre_application</span><span class="p">]</span>
     <span class="c1"># Un dossier [votre_application] sera créer dans le répertoire courant</span>
 </pre></div>
@@ -195,7 +195,7 @@ se présente sous la forme : Model, Vue, Template.</p>
 <li><p class="first">Model (Django : Model) :</p>
 <blockquote>
 <div><ul>
-<li><p class="first"><strong>models.py</strong> : C’est le scrip qui permet la création des tables
+<li><p class="first"><strong>models.py</strong> : C’est le script qui permet la création des tables
 dans la base de données.</p>
 <dl class="docutils">
 <dt>Par analogie avec la POO</dt>
@@ -217,7 +217,7 @@ sont des attributs de l’instances</li>
 <div><ul class="simple">
 <li>Tous les fichiers en «&nbsp;.html&nbsp;» dans ./templates</li>
 <li>Les feuilles de styles («&nbsp;.css&nbsp;») dans ./static</li>
-<li><strong>urls.py</strong> : sert de liaison avec views.py. Ce ficher génére les urls à la volée,
+<li><strong>urls.py</strong> : sert de liaison avec views.py. Ce ficher généré les urls à la volée,
 par l’interprétation d’expression régulière (RegEx)</li>
 </ul>
 </div></blockquote>
@@ -328,7 +328,7 @@ $ -&gt; la fin du texte
   <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Django</a><ul>
-<li><a class="reference internal" href="#demmarer-un-nouveau-projet">Démmarer un nouveau projet</a><ul>
+<li><a class="reference internal" href="#demarrer-un-nouveau-projet">Démarrer un nouveau projet</a><ul>
 <li><a class="reference internal" href="#demarrer-une-nouvelle-app">Démarrer une nouvelle APP</a></li>
 </ul>
 </li>

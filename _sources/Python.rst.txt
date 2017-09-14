@@ -4,7 +4,7 @@ PYTHON
 
 :Liens_Web:
             * http://python.jpvweb.com/python/mesrecettespython/doku.php?id=Sommaire
-                # (fr) de nombreux example et explication sur des utilisation sépcifique
+                # (fr) de nombreux exemple et explication sur des utilisation spécifique
                 # de fonctionnalité python
                 
 ------------------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ Obtenir de l'aide sur une class ou une méthode  (python)
 
 ------------------------------------------------------------------------------------------
 
-Lignes de code à insérer au debut de chaque script sous linux
+Lignes de code à insérer au debut de chaque script sous Linux
 =============================================================
 
 ::
@@ -34,7 +34,7 @@ Lignes de code à insérer au debut de chaque script sous linux
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-**N.B :** copier ces lignes entierement sans oublier le "#" devant.
+**N.B :** copier ces lignes entièrement sans oublier le "#" devant.
 
 ------------------------------------------------------------------------------------------
 
@@ -43,25 +43,25 @@ os library
 
 :Liens Web:
             * http://python.developpez.com/faq/?page=Repertoire
-                # résumer des commandes pour le traitemant des répertoires
+                # résumer des commandes pour le traitement des répertoires
                 
             * https://docs.python.org/3.4/library/os.html
                 # doc officiel de la librairie
                 
-Traitemant des répertoires
+Traitement des répertoires
 --------------------------
 
-        #. Connaitre le repertoitre de travail ::
+        #. Connaître le répertoire de travail ::
         
             import os
-                # on commence par importer la bibliotheque 'os'
+                # on commence par importer la bibliothèque 'os'
             os.getcwd()
                 
-        #. Redefinir le repertoir courant ::
+        #. Redéfinir le répertoire courant ::
         
             import os
             os.chdir("mon_rep/de/travail")
-                # meme sous windows, il faut remplacer les "\" dans le chemin de
+                # meme sous Windows, il faut remplacer les "\" dans le chemin de
                 destination par des "/"
                 
                 ex : os.chdir("C:/mntJeanCloud/Perso/LAB/Pierre/python/projet/appliActivity")
@@ -69,7 +69,7 @@ Traitemant des répertoires
         #. Savoir si un chemin représente un répertoire ? ::
         
             os.path.isdir(path)
-                # renvoit True si path désigne un répertoire existant
+                # renvoi True si path désigne un répertoire existant
                 
         #. Créer un répertoire ::
         
@@ -132,7 +132,7 @@ shutil library
             * https://docs.python.org/3.4/library/shutil.html
                 # Documentation officielle de la lib.
                 
-Traitemant des répertoires
+Traitement des répertoires
 --------------------------
 
         #. Supprimer un répertoire non vide ::
@@ -178,28 +178,28 @@ pip (Python installing packages)
 Installation de PIP
 -------------------
 
-    #. Recuperation et installation du packet ::
+    #. Récupération et installation du paquet ::
     
         wget https://bootstrap.pypa.io/get-pip.py
             # recuperation du script d'installation
             
         python get-pip.py
-            # se placer dans le repertoire d'installation et lancer le script
-            # une elevation est peut être necessaire
+            # se placer dans le répertoire d'installation et lancer le script
+            # une élévation est peut être nécessaire
                     
     #. Installation depuis apt-get ::
     
         sudo apt-get install python3-pip
-            # pip sera installer dans le repertoir suivant :
+            # pip sera installer dans le répertoire suivant :
             # /usr/bin/pip3
                 
                     
 Utilisation de PIP
 ------------------
 
-    La commande pip s'execute directement dans le shell
+    La commande pip s’exécute directement dans le shell
     
-    #. Executer pip pour python3 dans un environement linux ::
+    #. Exécuter pip pour python3 dans un environnement Linux ::
     
         pip-3.2 [une_commande]
                 ou
@@ -213,10 +213,10 @@ Utilisation de PIP
     #. chercher un paquet ::
     
         pip search [nom_du_paquet_rechercher]
-            # on peut recherher plusieurs termes en les separent par des espaces
+            # on peut rechercher plusieurs termes en les séparent par des espaces
             # ex : pip search py3 numpy
-            # attention, la recherche est egalement faite sur
-            # les definissions des paquets
+            # attention, la recherche est également faite sur
+            # les définissions des paquets
                     
     #. installer un paquet ::
     
@@ -230,8 +230,8 @@ Les environnements virtuels Python : virtualenv et virtualenvwrapper (version Li
 :Liens Web:
             * http://sametmax.com/les-environnement-virtuels-python-virtualenv-et-virtualenvwrapper/
 
-installation des environements virtuels
----------------------------------------
+installation des environnements virtuels
+----------------------------------------
 
     #.  Installation de virtualenv et virtualenvwrapper
     
@@ -240,13 +240,13 @@ installation des environements virtuels
         sudo pip install virtualenv
         sudo pip install virtualenvwrapper
 
-configuration des environements virtuels
-----------------------------------------
+configuration des environnements virtuels
+-----------------------------------------
 
-    #. Créer un dossier pour les environements virtuels
+    #. Créer un dossier pour les environnements virtuels
     
         * Se placer dans le répertoire de l'utilisateur (/home/pi)
-        * Créer un dossier pour les environements virtuels
+        * Créer un dossier pour les environnements virtuels
         
     ::
                 
@@ -264,35 +264,35 @@ configuration des environements virtuels
             
             export WORKON_HOME=~/virtualenv
                 # si le dossier n'a pas été créer au même endroit ou avec le même
-                # nom, modifier la ligne précédente en conséquense
+                # nom, modifier la ligne précédente en conséquence
                 
             mkdir -p $WORKON_HOME
             source  /usr/local/bin/virtualenvwrapper.sh
                 # si virtualenvwrapper.sh n'est pas installer au même endroit,
                 # adapter le chemin d'accès au fichier
                     
-Utilisation environements virtuels
-----------------------------------
+Utilisation environnements virtuels
+-----------------------------------
 
-    #. Création d'un nouvel environements virtuel ::
+    #. Création d'un nouvel environnements virtuel ::
         
-        mkvirtualenv [nom_de_l_environement] -p /usr/bin/python3.2
+        mkvirtualenv [nom_de_l_environnement] -p /usr/bin/python3.2
             # ex : mkvirtualenv env1 -P /usr/bin/python3.2
             
-            # un dossier du nom de votre environement virtuel est alors créer
+            # un dossier du nom de votre environnement virtuel est alors créer
             # dans le dossier virtualenv créer en section 2.1
             
-            # l'option "-p usr/bin/python3.2" permet de configurer l'environements
+            # l'option "-p usr/bin/python3.2" permet de configurer environnements
             # virtuel pour python3. par défaut sur Rpi, c'est python2 qui est 
             # utilisé
                 
-    #. Activation / désactivation de l'environment
-        Pour être utilisé, un environement doit être activé : ::
+    #. Activation / désactivation de l’environnent
+        Pour être utilisé, un environnement doit être activé : ::
                     
-            workon [nom_de_l_environement]
+            workon [nom_de_l_environnement]
                     # ex : workon env1
                     
-        A la fin de son utilisation, ou pour passer sur un autre environement, il faut
+        A la fin de son utilisation, ou pour passer sur un autre environnement, il faut
         le désactiver : ::
         
             deactivate
@@ -300,15 +300,15 @@ Utilisation environements virtuels
                 # Attention, ce n'est pas deSactivate,
                 # mais bien deactivate sans "S"
                 
-    #. supprimer un environement ::
+    #. supprimer un environnement ::
     
-        rmvirtualenv [nom_de_l_environement]
+        rmvirtualenv [nom_de_l_environnement]
             # ex : rmvirtualenv env1
-            # le dossier de lenvironement sera également supprimer
+            # le dossier de l’environnement sera également supprimer
 
 ------------------------------------------------------------------------------------------
 
-Un shell Python qui fait de l'auto completion
+Un shell Python qui fait de l'auto complétion
 =============================================
 
     * ipython
@@ -324,17 +324,17 @@ convertir un string en bytes
                     
 ------------------------------------------------------------------------------------------
                     
-Connaitre l'adresse mémoire d'un objet
+Connaître l'adresse mémoire d'un objet
 ======================================
 ::
 
     a = 'a'
     id(a)
-        # on récupère l'adresse au format decimal
+        # on récupère l'adresse au format décimal
     >>> 45748752
     
     hex( id(a) )
-        # récupère l'adresse et on la convertit directement au format hexadecimal
+        # récupère l'adresse et on la convertit directement au format hexadécimal
         
     >>> '0x2ba1210'
                     
@@ -382,9 +382,9 @@ Affectation, copy et deepcopy
             >>> hex( id(b) )
             '0x5ec5e380'
             
-        Attention la copy d'une list crée un nouvel objet mais les adresse des données
-        pointée par la list reste les mêmes, donc la modification d'une valeur dans
-        la list B modifiera aussi la valeur de la list A ::
+        Attention la copy d'une liste crée un nouvel objet mais les adresse des données
+        pointée par la liste reste les mêmes, donc la modification d'une valeur dans
+        la liste B modifiera aussi la valeur de la liste A ::
         
             >>> a = [1, 2, 3]
             >>> b = copy.copy(a)
@@ -420,7 +420,7 @@ Affectation, copy et deepcopy
 
 ------------------------------------------------------------------------------------------
 
-faire un executable à partir d'un script
+faire un exécutable à partir d'un script
 ========================================
 
 :les softs:
@@ -447,7 +447,7 @@ La procédure d'utilisation :
     
 ------------------------------------------------------------------------------------------
 
-créer un setup.py (installable avec pip) et mettre sa bibliotheque en ligne sur pypi
+créer un setup.py (installable avec pip) et mettre sa bibliothèque en ligne sur pypi
 ====================================================================================
 
 :Liens_Web:
@@ -463,9 +463,9 @@ Fichiers de configuration (.ini)
             * http://stackoverflow.com/questions/8884188/how-to-read-and-write-ini-file-with-python
                # exemple util pour comprendre le fonctionnement                                              
             * http://www.marclebrun.be/wiki/doku.php?id=python:fichier_de_configuration_configparser
-               # Exemple en francais (python2)
+               # Exemple en français (python2)
             * http://www.developpez.net/forums/blogs/208887-tyrtamos/b23/simplifier-gestion-fichiers-ini-python/
-               # Autre exemple (pytohn3) en francais
+               # Autre exemple (pytohn3) en français
             * https://docs.python.org/3.4/library/configparser.html
                # Doc officiel (EN)
 
@@ -476,14 +476,14 @@ Format JSON
 
 :Liens WEB:
             * http://sdz.tdct.org/sdz/serialisez-vos-objets-au-format-json.html
-                # utiliser json avec python, les bases et en francais
+                # utiliser json avec python, les bases et en français
             * http://deusyss.developpez.com/tutoriels/Python/les-modules-de-configuration/
             * https://docs.python.org/3.4/library/json.html
                 # la doc Python 3.4 (en)
             * https://stackoverflow.com/questions/12309269/how-do-i-write-json-data-to-a-file-in-python
                 # La fonction postée par JRCS le 24/01/2017 est intéressante
                 
-            #. Example d'utilisation intéressant : ::
+            #. Exemple d'utilisation intéressant : ::
             
                 from json import dump, load
                 from time import sleep
@@ -545,24 +545,24 @@ Les décorateurs
             * http://sametmax.com/comprendre-les-decorateur-python-pas-a-pas-partie-2/
                 # une explication plus pousser, partie 1 et 2 (Sam & Max)
             * http://python.jpvweb.com/python/mesrecettespython/doku.php?id=decorateurs_modeles
-                # (fr) plus facil à comprendre que Sam & Max
+                # (fr) plus facile à comprendre que Sam & Max
                 
-            example d'utilisation : ::
+            exemple d'utilisation : ::
             
                 >>> def decorateur(fonct) :
-                ...     """ fonction decorateur permettant de donnée le temp d'execution d'une fonction """
+                ...     """ fonction décorateur permettant de donnée le temps d’exécution d'une fonction """
                 ...     @functools.wraps( fonct )
                 ...     def appelFonc( *args, **kwargs ) :
                 ...             t = time.time()
                 ...             tache = fonct( *args, **kwargs )
-                ...             print(f"temps d'execution : {time.time()-t}")
+                ...             print(f"temps d’exécution : {time.time()-t}")
                 ...             return tache
                 ...     return appelFonc
                 ...
                 >>>
                 >>> @decorateur
                 ... def f(a, b, c) :
-                ...     """ affiche le contenue et le type des variables passees en argument """
+                ...     """ affiche le contenue et le type des variables passées en argument """
                 ...     print( f"{a} - {type(a)}")
                 ...     print( f"{b} - {type(b)}")
                 ...     print( f"{c} - {type(c)}")
@@ -598,11 +598,11 @@ Packing et UnPacking (utilisation de : '*args' et '**kwargs')
                 # complet en fr
             * http://sametmax.com/operateur-splat-ou-etoile-en-python/
                 
-**N.B :** on parle de l'opérateur **'splat'** lorsque l'on parle de l'asterisque **'*'**
+**N.B :** on parle de l'opérateur **'splat'** lorsque l'on parle de l’astérisque **'*'**
                 
     #. "*args"
     
-        **'*args'** permet de passer, à une fonctions, des arguments en nomrbes et de
+        **'*args'** permet de passer, à une fonctions, des arguments en nombres et de
         types inconnue puis converti l'ensemble en tuple. Dans le prototype d'une
         fonction, cet argument est utilisé comme "positional argument".
         ex : ::
@@ -620,7 +620,7 @@ Packing et UnPacking (utilisation de : '*args' et '**kwargs')
             
     #. "**kwargs"
     
-        **'*kwargs'** permet de passer, à une fonctions, des arguments en nomrbes et de
+        **'*kwargs'** permet de passer, à une fonctions, des arguments en nombres et de
         types inconnue puis converti l'ensemble en dictionnaire. Dans le prototype d'une
         fonction, cet argument est utilisé pour les argument par défaut.
         ex : ::
@@ -631,7 +631,7 @@ Packing et UnPacking (utilisation de : '*args' et '**kwargs')
             >>> fd(a=1, b=2, c=3)
             {'c': 3, 'a': 1, 'b': 2}
             
-**N.B :** Les termes **"args"** et **"kwargse"** sont des convensions et peuvent être
+**N.B :** Les termes **"args"** et **"kwargse"** sont des conventions et peuvent être
 remplacés par un nom plus parlant mais se n'est pas conseillé.
 
 ------------------------------------------------------------------------------------------
@@ -641,7 +641,7 @@ Passer des paramètres à un programme avec argparse
 
 :Liens Web:
     https://openclassrooms.com/courses/apprenez-a-programmer-en-python/un-peu-de-programmation-systeme
-        # une bonne introdutions sur la gestion des flux entrant et sortant ainsi que
+        # une bonne introductions sur la gestion des flux entrant et sortant ainsi que
           sur argparse
           
     https://docs.python.org/3.4/library/argparse.html
@@ -670,10 +670,10 @@ Passer des paramètres à un programme avec argparse
         import argparse 
 
         parser = argparse.ArgumentParser()
-            # Creation de l'instance
+            # Création de l'instance
 
         args = parser.parse_args()
-            # Recuperer les arguments
+            # Récupérer les arguments
         
     #. ajouter des arguments a parser ::
     
@@ -682,7 +682,7 @@ Passer des paramètres à un programme avec argparse
     #. positional arguments
     
        Les 'positional arguments' sont des arguments obligatoires lors de l'appel 
-       du script. ils sont declare entre guillemets (ou simples cotes) et sans tiret. 
+       du script. ils sont déclaré entre guillemets (ou simples cotes) et sans tiret. 
        Ils n'ont pas non plus un appel long et un appel court.
        
         ex : ::
@@ -694,10 +694,10 @@ Passer des paramètres à un programme avec argparse
         les 'optional arguments' sont des argument facultatifs. Ils sont déclare entre 
         guillemets (ou simples cotes) avec tiret. Les appels court sont composes 
         d'un tiret et d'une lettre. Les appels long sont composes d'un double tiret et
-        d'un nom significatif. Les 2 appels peuvent etre soit declare ensemble ou declarer
+        d'un nom significatif. Les 2 appels peuvent être soit déclare ensemble ou déclarer
         seuls (l'un ou l'autre)
         
-        **N.B :** meme si il n'y a pas de d'argument optionel de declare, il y en a 
+        **N.B :** même si il n'y a pas de d'argument optionnel de déclaré, il y en a 
               toujours au moins un puisque le help (-h ou --help) est ajouter
               automatiquement.
               
@@ -733,7 +733,7 @@ Les context managers et le mot clé 'with' en Python
         
 ------------------------------------------------------------------------------------------
         
-Connaitre le nombre de CPU d'un système
+Connaître le nombre de CPU d'un système
 =======================================
 
 ::
@@ -750,7 +750,7 @@ logging Library
                 # L'explication qui vas bien
             
             * https://docs.python.org/3.4/library/logging.html
-                # La doc officeille
+                # La doc officielle
                 
 :Description:
             Cette Lib permet de faire du log sur des éléments.
@@ -791,15 +791,15 @@ permettent d'introduire ces notions dans les interpréteurs
     #. Protégé
     
         On préfix notre objet (attribut ou méthode) avec un simple underscore (_). L'objet
-        n'apparaitra pas dans l'API mais sera utilisable de l'extérieur si on l'appel
+        n’apparaîtra pas dans l'API mais sera utilisable de l'extérieur si on l'appel
         spécifiquement ::
         
             _maVaribleProtegee = 2
             
     #. Privé
     
-        On préfix notre objet avec un double underscore (__). Il n'apparaitra pas dans
-        l'API et renvairra un "AttributError" si on l'appel spécifiquement ::
+        On préfix notre objet avec un double underscore (__). Il n’apparaîtra pas dans
+        l'API et renverra un "AttributError" si on l'appel spécifiquement ::
         
             __maVariablePrivee = 3
             
@@ -850,7 +850,7 @@ Exemple d'utilisation : ::
     
 ------------------------------------------------------------------------------------------
 
-connaitre l'os de travail
+Connaître l'os de travail
 =========================
 
 ::

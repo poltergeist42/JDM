@@ -10,7 +10,7 @@ Magnetomettre : HMC5883L
                 # Instructable (install I2C et test en Python3)
                                                 
             * http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/
-                # Exemple de mise en oeuvre + list des fonctions
+                # Exemple de mise en oeuvre + liste des fonctions
                     
             * http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf
                 # Datasheet du composant
@@ -18,11 +18,11 @@ Magnetomettre : HMC5883L
             * https://www.sparkfun.com/products/10530
                 # fiche produit Sparkfun (arduino)
     
-Implentation HMC5883L
+Implantation HMC5883L
 ---------------------
     
-    La sérigraphie est masqué lorsque le magnétometre est enfiché dans une breadbord.
-    L'implentation si dessous est donc présenter en **vue de dessus (donc sérigraphie cachée)**
+    La sérigraphie est masqué lorsque le magnétomètre est enfiché dans une breadbord.
+    L’implantation si dessous est donc présenter en **vue de dessus (donc sérigraphie cachée)**
     
         ::
         
@@ -52,7 +52,7 @@ Installation des librairies quick2wire et i2clibraries
                 sudo apt-get install python3
                 sudo reboot
                     
-        #. l'installation et configuations des librairies et outils Quick2wire
+        #. l'installation et configurations des librairies et outils Quick2wire
             **N.B :** le lignes qui suivent sont copiées telles quelles depuis la page instructables
             
             Se positionner à l'endroit ou l'on veut installer quick2wire
@@ -101,8 +101,8 @@ Configuration du HMC5883L
 
         #. la déclinaison terrestre
             Pour pouvoir être le plus précis possible, il faut recalibrer la boussole en tenant compte
-            de notre décallage par rapport au pole magnétique. On appel ça : **"la déclinaison terrestre"**
-            Pour cela on à besoin de nos coordonées (les coordonées du LAB):
+            de notre décalage par rapport au pole magnétique. On appel ça : **"la déclinaison terrestre"**
+            Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):
             
                 * Longitude :  49° 1'22.48"N
                 * Latitude  :   2° 1'50.51"E
@@ -117,7 +117,7 @@ Motteur Pas à Pas : 28BYJ-48
 
 **N.B :** se PAP doit être piloté par un driver comme le UNL2003
 
-Specification du PAP
+Spécification du PAP
 --------------------
 
     +---------------------------------------+----------------+
@@ -125,18 +125,18 @@ Specification du PAP
     +---------------------------------------+----------------+
     | Nbe de pas / tours (moteur)           | 64 (360/5.625) |
     +---------------------------------------+----------------+
-    | ratio (demultiplicateur)              | 1/64           |
+    | ratio (démultiplicateur)              | 1/64           |
     +---------------------------------------+----------------+
-    | angle par pas (en sortie d'abre)      | 0.087890625°   |
+    | angle par pas (en sortie d’arbre)     | 0.087890625°   |
     +---------------------------------------+----------------+
     | Nbe de pas / tour (en sortie d'arbre) | 4096           |
     +---------------------------------------+----------------+
 
-Correspodanse entre le driver et les GPIO
------------------------------------------
+Correspondance entre le driver et les GPIO
+------------------------------------------
     
         +------------+-------------------------+
-        | BCM (GPIO) | Serigraphie sur UNL2003 |
+        | BCM (GPIO) | Sérigraphie sur UNL2003 |
         +============+=========================+
         |  GPIO17    |           N1            |
         +------------+-------------------------+
@@ -170,7 +170,7 @@ Organisation des phases en python3
 ----------------------------------
         ::
         
-            # Séquense de sortie
+            # Séquence de sortie
             ndp = 8
             phase = list(range(ndp))
             phase[0] = [1,0,0,0]
@@ -225,7 +225,7 @@ Activation du module caméra sur le RPi
 installation de la camera
 -------------------------
 
-        #.   Insérer la limende dans le ports situé au niveau du port HDMI.
+        #.   Insérer la limande dans le ports situé au niveau du port HDMI.
         
             **N.B :** la partie métallique doit être en direction du port HDMI
 
@@ -253,15 +253,15 @@ Capteur ultrason : HC-SR04
             * https://youtu.be/xACy8l3LsXI
             * http://www.modmypi.com/blog/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi
              
-Vocabulaire et definission pour le HC-SR04
-------------------------------------------
+Vocabulaire et définissions pour le HC-SR04
+-------------------------------------------
 
     :Trig:
-        En Sortie (hautparleur - Trig)
-            # 1 impulsion est egale a 10us (0.00001)
+        En Sortie (haut-parleur - Trig)
+            # 1 impulsion est égale a 10us (0.00001)
                     
     :Echo:
-        En Entree (Micro - Echo)
+        En Entrée (Micro - Echo)
         
             # Attention les entrée du RPi etant en 3.3v,
             il faut faire un pont diviseur entre la broche
@@ -280,7 +280,7 @@ Vocabulaire et definission pour le HC-SR04
             On divise par 2 car seule la distance en l'obstacle et le mur nous intéresse
             et non la distance total parcourue par l'onde radio.
             
-Specification du HC-SR04
+Spécification du HC-SR04
 ------------------------
 
     :Alimentation:

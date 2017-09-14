@@ -60,7 +60,7 @@
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/">http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/</a></dt>
-<dd># Exemple de mise en oeuvre + list des fonctions</dd>
+<dd># Exemple de mise en oeuvre + liste des fonctions</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
@@ -78,11 +78,11 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="implentation-hmc5883l">
-<h3>Implentation HMC5883L<a class="headerlink" href="#implentation-hmc5883l" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="implantation-hmc5883l">
+<h3>Implantation HMC5883L<a class="headerlink" href="#implantation-hmc5883l" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><p>La sérigraphie est masqué lorsque le magnétometre est enfiché dans une breadbord.
-L’implentation si dessous est donc présenter en <strong>vue de dessus (donc sérigraphie cachée)</strong></p>
+<div><p>La sérigraphie est masqué lorsque le magnétomètre est enfiché dans une breadbord.
+L’implantation si dessous est donc présenter en <strong>vue de dessus (donc sérigraphie cachée)</strong></p>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Haut</span>
     <span class="mi">3</span><span class="n">v3</span>
@@ -118,7 +118,7 @@ L’implentation si dessous est donc présenter en <strong>vue de dessus (donc s
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>l’installation et configuations des librairies et outils Quick2wire</dt>
+<dt>l’installation et configurations des librairies et outils Quick2wire</dt>
 <dd><p class="first"><strong>N.B :</strong> le lignes qui suivent sont copiées telles quelles depuis la page instructables</p>
 <dl class="last docutils">
 <dt>Se positionner à l’endroit ou l’on veut installer quick2wire</dt>
@@ -176,8 +176,8 @@ L’implentation si dessous est donc présenter en <strong>vue de dessus (donc s
 <li><dl class="first docutils">
 <dt>la déclinaison terrestre</dt>
 <dd><p class="first">Pour pouvoir être le plus précis possible, il faut recalibrer la boussole en tenant compte
-de notre décallage par rapport au pole magnétique. On appel ça : <strong>«&nbsp;la déclinaison terrestre&nbsp;»</strong>
-Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
+de notre décalage par rapport au pole magnétique. On appel ça : <strong>«&nbsp;la déclinaison terrestre&nbsp;»</strong>
+Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <blockquote>
 <div><ul class="simple">
 <li>Longitude :  49° 1’22.48&nbsp;»N</li>
@@ -197,7 +197,7 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 <h2>Motteur Pas à Pas : 28BYJ-48<a class="headerlink" href="#motteur-pas-a-pas-28byj-48" title="Lien permanent vers ce titre">¶</a></h2>
 <p><strong>N.B :</strong> se PAP doit être piloté par un driver comme le UNL2003</p>
 <div class="section" id="specification-du-pap">
-<h3>Specification du PAP<a class="headerlink" href="#specification-du-pap" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Spécification du PAP<a class="headerlink" href="#specification-du-pap" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table border="1" class="docutils">
 <colgroup>
@@ -211,10 +211,10 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 <tr class="row-even"><td>Nbe de pas / tours (moteur)</td>
 <td>64 (360/5.625)</td>
 </tr>
-<tr class="row-odd"><td>ratio (demultiplicateur)</td>
+<tr class="row-odd"><td>ratio (démultiplicateur)</td>
 <td>1/64</td>
 </tr>
-<tr class="row-even"><td>angle par pas (en sortie d’abre)</td>
+<tr class="row-even"><td>angle par pas (en sortie d’arbre)</td>
 <td>0.087890625°</td>
 </tr>
 <tr class="row-odd"><td>Nbe de pas / tour (en sortie d’arbre)</td>
@@ -224,8 +224,8 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 </table>
 </div></blockquote>
 </div>
-<div class="section" id="correspodanse-entre-le-driver-et-les-gpio">
-<h3>Correspodanse entre le driver et les GPIO<a class="headerlink" href="#correspodanse-entre-le-driver-et-les-gpio" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="correspondance-entre-le-driver-et-les-gpio">
+<h3>Correspondance entre le driver et les GPIO<a class="headerlink" href="#correspondance-entre-le-driver-et-les-gpio" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table border="1" class="docutils">
 <colgroup>
@@ -234,7 +234,7 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">BCM (GPIO)</th>
-<th class="head">Serigraphie sur UNL2003</th>
+<th class="head">Sérigraphie sur UNL2003</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -334,7 +334,7 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 <div class="section" id="organisation-des-phases-en-python3">
 <h3>Organisation des phases en python3<a class="headerlink" href="#organisation-des-phases-en-python3" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Séquense de sortie</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Séquence de sortie</span>
 <span class="n">ndp</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="n">phase</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">ndp</span><span class="p">))</span>
 <span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
@@ -415,7 +415,7 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 <h3>installation de la camera<a class="headerlink" href="#installation-de-la-camera" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic simple">
-<li>Insérer la limende dans le ports situé au niveau du port HDMI.</li>
+<li>Insérer la limande dans le ports situé au niveau du port HDMI.</li>
 </ol>
 <blockquote>
 <div><strong>N.B :</strong> la partie métallique doit être en direction du port HDMI</div></blockquote>
@@ -460,21 +460,21 @@ Pour cela on à besoin de nos coordonées (les coordonées du LAB):</p>
 </tr>
 </tbody>
 </table>
-<div class="section" id="vocabulaire-et-definission-pour-le-hc-sr04">
-<h3>Vocabulaire et definission pour le HC-SR04<a class="headerlink" href="#vocabulaire-et-definission-pour-le-hc-sr04" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="vocabulaire-et-definissions-pour-le-hc-sr04">
+<h3>Vocabulaire et définissions pour le HC-SR04<a class="headerlink" href="#vocabulaire-et-definissions-pour-le-hc-sr04" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Trig:</th><td class="field-body"><dl class="first docutils">
-<dt>En Sortie (hautparleur - Trig)</dt>
-<dd><p class="first last"># 1 impulsion est egale a 10us (0.00001)</p>
+<dt>En Sortie (haut-parleur - Trig)</dt>
+<dd><p class="first last"># 1 impulsion est égale a 10us (0.00001)</p>
 </dd>
 </dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Echo:</th><td class="field-body"><p class="first">En Entree (Micro - Echo)</p>
+<tr class="field-even field"><th class="field-name">Echo:</th><td class="field-body"><p class="first">En Entrée (Micro - Echo)</p>
 <blockquote>
 <div><p># Attention les entrée du RPi etant en 3.3v,
 il faut faire un pont diviseur entre la broche
@@ -501,7 +501,7 @@ et non la distance total parcourue par l’onde radio.</p>
 </div></blockquote>
 </div>
 <div class="section" id="specification-du-hc-sr04">
-<h3>Specification du HC-SR04<a class="headerlink" href="#specification-du-hc-sr04" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Spécification du HC-SR04<a class="headerlink" href="#specification-du-hc-sr04" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -532,14 +532,14 @@ et non la distance total parcourue par l’onde radio.</p>
   <ul>
 <li><a class="reference internal" href="#">Composants Spécifiques</a><ul>
 <li><a class="reference internal" href="#magnetomettre-hmc5883l">Magnetomettre : HMC5883L</a><ul>
-<li><a class="reference internal" href="#implentation-hmc5883l">Implentation HMC5883L</a></li>
+<li><a class="reference internal" href="#implantation-hmc5883l">Implantation HMC5883L</a></li>
 <li><a class="reference internal" href="#installation-des-librairies-quick2wire-et-i2clibraries">Installation des librairies quick2wire et i2clibraries</a></li>
 <li><a class="reference internal" href="#configuration-du-hmc5883l">Configuration du HMC5883L</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#motteur-pas-a-pas-28byj-48">Motteur Pas à Pas : 28BYJ-48</a><ul>
-<li><a class="reference internal" href="#specification-du-pap">Specification du PAP</a></li>
-<li><a class="reference internal" href="#correspodanse-entre-le-driver-et-les-gpio">Correspodanse entre le driver et les GPIO</a></li>
+<li><a class="reference internal" href="#specification-du-pap">Spécification du PAP</a></li>
+<li><a class="reference internal" href="#correspondance-entre-le-driver-et-les-gpio">Correspondance entre le driver et les GPIO</a></li>
 <li><a class="reference internal" href="#phases">Phases</a></li>
 <li><a class="reference internal" href="#organisation-des-phases-en-python3">Organisation des phases en python3</a></li>
 </ul>
@@ -552,8 +552,8 @@ et non la distance total parcourue par l’onde radio.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#capteur-ultrason-hc-sr04">Capteur ultrason : HC-SR04</a><ul>
-<li><a class="reference internal" href="#vocabulaire-et-definission-pour-le-hc-sr04">Vocabulaire et definission pour le HC-SR04</a></li>
-<li><a class="reference internal" href="#specification-du-hc-sr04">Specification du HC-SR04</a></li>
+<li><a class="reference internal" href="#vocabulaire-et-definissions-pour-le-hc-sr04">Vocabulaire et définissions pour le HC-SR04</a></li>
+<li><a class="reference internal" href="#specification-du-hc-sr04">Spécification du HC-SR04</a></li>
 </ul>
 </li>
 </ul>

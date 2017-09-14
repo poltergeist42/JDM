@@ -15,10 +15,10 @@ reStructuredText (.rst)
 
 :Liens WEB:
         * https://fr.wikipedia.org/wiki/ReStructuredText
-            # (Definission Wikipedia)
+            # (Définition Wikipedia)
 
         * https://aful.org/wikis/interop/ReStructuredText
-            # Exemple et definission en francais
+            # Exemple et définition en français
 
         * https://mg.pov.lt/restview/
             # api en python permettant de convertir dynamiquement
@@ -28,7 +28,7 @@ reStructuredText (.rst)
             # Pour ajouter la syntaxe "reStructuredText" à notePad++
             
         * http://docutils.sourceforge.net/docs/user/rst/quickref.html
-            # Un petit guide de reférence
+            # Un petit guide de référence
             
         * http://python.physique.free.fr/aide/Partie1.html
             # détail de syntaxe avancé
@@ -76,7 +76,7 @@ Préparation de l'arborescence
             
         **N.B** : 'arboProject' inclue la création de ses 2 dossiers
       
-    #. Lier le dépôt local (Git) au dépot distant (GitHub) ::
+    #. Lier le dépôt local (Git) au dépôt distant (GitHub) ::
     
         git remote add origin https://github.com/[votre_nom_sous_github]/[votre_depot_github]
         git push -u origin master
@@ -164,8 +164,8 @@ Préparation de l'arborescence
         
             git branch gh-pages
         
-        - Création d'un lien symbolic entre notre nouvelle branch et une branch homonymes
-          dans notre dépoôt distant puis on bascule automatiquement sur cette nouvelle branch ::
+        - Création d'un lien symbolique entre notre nouvelle branch et une branch homonymes
+          dans notre dépôt distant puis on bascule automatiquement sur cette nouvelle branch ::
           
             git symbolic-ref HEAD refs/heads/gh-pages
             
@@ -173,7 +173,7 @@ Préparation de l'arborescence
         
             del .git\index
             
-        - on nettoye le contenue de notre nouvelle branch pour ne pas refaire un commit
+        - on nettoie le contenue de notre nouvelle branch pour ne pas refaire un commit
           sur les éléments de la branch principale ::
           
             git clean -fdx
@@ -190,7 +190,7 @@ Préparation de l'arborescence
             Créer, dans le même dossier que le fichier 'index.rst', le fichier
             'includeMe.rst'.
         
-            - Resigner le fichier de la façon suivante : ::
+            - Renseigner le fichier de la façon suivante : ::
             
                 ======================
                 README_[nom_du_projet]
@@ -202,7 +202,7 @@ Préparation de l'arborescence
             
         #. Extraction de la documentation depuis les docString du code
             Créer, dans le même dossier que le fichier 'index.rst', un fichier ayant un
-            nom significatif qui permete de se référer au code : ::
+            nom significatif qui permette de se référer au code : ::
             
                 ex :
                 fakeLib
@@ -268,7 +268,7 @@ Préparation de l'arborescence
                 
             - Intercaler les lignes suivantes entre les 2 : ::
             
-                rem reconstruction de la branch "gh-pages" et mise a jour du depot distant
+                rem reconstruction de la branch "gh-pages" et mise a jour du dépôt distant
                 cd %BUILDDIR%\html
                 git add .
                 git commit -m "rebuilt docs"

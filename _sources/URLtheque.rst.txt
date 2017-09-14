@@ -6,7 +6,7 @@ Ici se trouve réunies un ensemble d'URL ayant retenu mon attention. Ces URL ne 
 ordonnées et n'ont pas forcément de rapport avec les catégories principal du JDM.
 
 **N.B** : Si beaucoup de liens peuvent être regroupés dans l'une des catégorie
-      principales, ces derniers seront extrait et une rubrique URLtheque sera ajouter à
+      principales, ces derniers seront extrait et une rubrique URLthèque sera ajouter à
       la fin de la catégorie.
 
 ------------------------------------------------------------------------------------------
@@ -15,7 +15,7 @@ Informatique
 ============
 
     * https://blog.bandinelli.net/index.php?
-        # site généraliste traitant de sysAdmin et reseau
+        # site généraliste traitant de sysAdmin et réseau
         
     #. Microsoft
     
@@ -35,7 +35,7 @@ Programmation
             # Bibliothèque de code en tous genre
             
         * http://pise.info/algo/codage.htm
-            # pour comprendre la programmation et l'algorythmie
+            # pour comprendre la programmation et l’algorithmie
         
     #. HTML et Web
     
@@ -43,7 +43,7 @@ Programmation
             # De nombreux examples d'utilisation du **CANVAS** et HTML5
             
         * http://putaindecode.io/fr/articles/github/pages/site-web-gratuit/
-            # Site traitant de la programation des site WEB
+            # Site traitant de la programmation des site WEB
 
 ------------------------------------------------------------------------------------------
 
@@ -75,7 +75,7 @@ Matériel
             * https://www.banggood.com/XG-Z40-10cc-Syringe-Solder-Paste-Flux-Paste-Sn63Pb37-25-45um-p-973158.html?rmmds=search
                 # seringue étain / plomb
     
-    #. Mécannique
+    #. Mécanique
     
         #. Achat
 
@@ -90,12 +90,12 @@ Matériel
             * http://www.bernierelectronik.fr/medias/files/perceuse-ccd-2-bungard.pdf
                 # pour l'inspiration
     
-    #. Microcontroler / carte électronique
+    #. Microcontrôleur / carte électronique
     
         #. ESP32
         
             * http://esp32.net/
-                # Apparament la bible
+                # Apparemment la bible
                 
             * https://forum.micropython.org/viewtopic.php?t=2352
                 # Implantation de MicoroPython sur ESP32
@@ -126,10 +126,10 @@ Mécanique
     #. Fusion 360
     
         * http://www.tracepartsonline.net/(S(mbqx05m5kuhpfgbcazmsrjqj))/content.aspx
-            # élément mécanique et élctronique à importés dans fusion
+            # élément mécanique et électronique à importés dans fusion
             
         * https://grabcad.com/
-            # Ensemble de diseign mécanique disponiblent sous de nombreux format
+            # Ensemble de design mécanique disponible sous de nombreux format
             
 
 ------------------------------------------------------------------------------------------
@@ -138,5 +138,5 @@ Soudure / Plasma
 ================
 
     * http://www.soudeurs.com/site/quest-ce-que-le-coupage-plasma-865/
-        # Définission / Démonstration
+        # Définissions / Démonstration
         

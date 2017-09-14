@@ -52,18 +52,18 @@ informatiques.</p>
 <div class="section" id="materiel">
 <h2>Matériel<a class="headerlink" href="#materiel" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Information pour la gestion maintenance des matériel</p>
-<div class="section" id="verifier-les-garentie-constructeur">
-<h3>Vérifier les garentie constructeur<a class="headerlink" href="#verifier-les-garentie-constructeur" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="verifier-les-garantie-constructeur">
+<h3>Vérifier les garantie constructeur<a class="headerlink" href="#verifier-les-garantie-constructeur" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Garentie Dell</p>
+<li><p class="first">Garantie Dell</p>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference external" href="http://www.dell.com/support/home/fr/fr/frdhs1/products/?app=warranty&amp;c=fr&amp;l=fr&amp;s=dhs">http://www.dell.com/support/home/fr/fr/frdhs1/products/?app=warranty&amp;c=fr&amp;l=fr&amp;s=dhs</a></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Garentie HP</p>
+<li><p class="first">Garantie HP</p>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference external" href="http://h20565.www2.hpe.com/hpsc/wc/public/home?lang=fr-fr&amp;cc=fr">http://h20565.www2.hpe.com/hpsc/wc/public/home?lang=fr-fr&amp;cc=fr</a></li>
@@ -81,7 +81,7 @@ informatiques.</p>
 <h3>Excel<a class="headerlink" href="#excel" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Colorer une ligne sur deux dans un tableau excel</p>
+<li><p class="first">Colorer une ligne sur deux dans un tableau Excel</p>
 <blockquote>
 <div><ul>
 <li><p class="first"><a class="reference external" href="http://www.pcastuces.com/pratique/astuces/4180.htm">http://www.pcastuces.com/pratique/astuces/4180.htm</a></p>
@@ -109,19 +109,19 @@ informatiques.</p>
 </div>
 <div class="section" id="sysadmin">
 <h2>SysAdmin<a class="headerlink" href="#sysadmin" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ensemble d’informations relativent à l’administration Système</p>
+<p>Ensemble d’informations relative à l’administration Système</p>
 <div class="section" id="powershell">
 <h3>PowerShell<a class="headerlink" href="#powershell" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Identififer les PC qui ne se sont pas connecter au domaine depuis
+<li><p class="first">Identifier les PC qui ne se sont pas connecter au domaine depuis
 au moins 180 Jours :</p>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span>import-module ActiveDirectory
 $vdate = (Get-Date).adddays(-180)
 Get-ADComputer -filter {(Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CN
     # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
-    # se sont pas connécter de puis au moins 180 Jours
+    # se sont pas connecter de puis au moins 180 Jours
 </pre></div>
 </div>
 <ol class="arabic">
@@ -134,7 +134,7 @@ Get-ADComputer -filter {(Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $
 </ol>
 </div></blockquote>
 </li>
-<li><p class="first">Identificer les comptes utilisateurs qui ne se sont pas connecter au domaine depuis
+<li><p class="first">Identifier les comptes utilisateurs qui ne se sont pas connecter au domaine depuis
 au moins 180 Jours :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>import-module ActiveDirectory
 $vdate = (Get-Date).adddays(-180)
@@ -160,7 +160,7 @@ Get-ADuser -filter {(Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdat
   <ul>
 <li><a class="reference internal" href="#">Informatique</a><ul>
 <li><a class="reference internal" href="#materiel">Matériel</a><ul>
-<li><a class="reference internal" href="#verifier-les-garentie-constructeur">Vérifier les garentie constructeur</a></li>
+<li><a class="reference internal" href="#verifier-les-garantie-constructeur">Vérifier les garantie constructeur</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#poste-de-travail">Poste de travail</a><ul>

@@ -105,7 +105,7 @@ faire une élévation valable toute la durée de la session
         
 ------------------------------------------------------------------------------------------
 
-Connaitre la liste des groupes aux quels appartient un utilisateur
+Connaître la liste des groupes aux quels appartient un utilisateur
 ==================================================================
 
     ::
@@ -138,8 +138,8 @@ Créer une tâche planifié (cron)
                 - https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux/executer-un-programme-a-une-heure-differee
                 - https://technique.arscenic.org/commandes-linux-de-base/article/cron-gestion-des-taches-planifiees
                 
-:cron:          C'est le soft qui execute les taches planifiées
-:crontab:       C'est le gestionaire des taches planifiées. Il y en a un par utilisateur
+:cron:          C'est le soft qui exécute les taches planifiées
+:crontab:       C'est le gestionnaire des taches planifiées. Il y en a un par utilisateur
 
     #. Option de crontab : ::
     
@@ -151,7 +151,7 @@ Créer une tâche planifié (cron)
             
         crontab -r
             # Pour supprimer le crontab
-            # !!! Suppression immediate, pas d'avertissement, pas de confirmation
+            # !!! Suppression immédiate, pas d'avertissement, pas de confirmation
 
 
 ------------------------------------------------------------------------------------------
@@ -168,7 +168,7 @@ Mettre les droits sur un dossier
 
 ------------------------------------------------------------------------------------------
 
-connaitre la version du systeme
+connaître la version du système
 ===============================
 
 installation de lsb-release
@@ -185,7 +185,7 @@ utilisation de lsb-release
                     
 ------------------------------------------------------------------------------------------
 
-connaitre la version d'un paquet
+connaître la version d'un paquet
 ================================
 
 installation de apt-show-versions
@@ -212,7 +212,7 @@ Pour copier des fichiers en root depuis l'interface graphique
             
         Ouvrir l'explorateur de fichier.
         dans le menu **"Aide"**, cliquer sur l'item **"A propos"**
-        dans la fentre d'information qui s'affiche, relever le nom de l'explorateur
+        dans la fenêtre d'information qui s'affiche, relever le nom de l'explorateur
         
             ex : Thunar
             
@@ -224,12 +224,12 @@ Pour copier des fichiers en root depuis l'interface graphique
             
             ex : gksu Thunar
             
-        L'explorateur de fichier doit s'ouvrir. Un banseau orange vous signal que l'on se
+        L'explorateur de fichier doit s'ouvrir. Un bandeau orange vous signal que l'on se
         trouve sur le compte root.
 
 ------------------------------------------------------------------------------------------
 
-pour passer la langue et le clavier en francais
+pour passer la langue et le clavier en français
 ===============================================
 
 :liens WEB:
@@ -243,11 +243,11 @@ pour passer la langue et le clavier en francais
             
             * Ouvrir le menu "5 Internalisation Options"
             * Ouvrir "I1 Change Locale"
-            * Si une langue comme **"en_GB.UTF-8 UTF-8"** est cochee, decochez-la
+            * Si une langue comme **"en_GB.UTF-8 UTF-8"** est cochée, décochez-la
               en appuyant sur **"Espace"**
             * Cochez la langue **"fr_FR.UTF-8 UTF-8**"
-            * Selectioner **"OK"** puis valider
-            * Verifier le jeu de parametres regionaux puis valider sur **"OK"**
+            * Sélectionner **"OK"** puis valider
+            * Vérifier le jeu de paramétres régionaux puis valider sur **"OK"**
             * Valider sur "Finish" puis redemarrer
             
         #. Modifier manuellement le fichier keyboard
@@ -259,7 +259,7 @@ pour passer la langue et le clavier en francais
             
 ------------------------------------------------------------------------------------------
 
-Pour rendre un fichier "Executable"
+Pour rendre un fichier "Exécutable"
 ===================================
     ::
 
@@ -347,25 +347,25 @@ Pour active le WIFI
 
 ------------------------------------------------------------------------------------------
 
-Se connecter a un reseau wifi en ligne de commande
+Se connecter a un réseau wifi en ligne de commande
 ==================================================
 
 :liens Web:
            * http://korben.info/comment-se-connecter-a-un-reseau-wifi-en-ligne-de-commande-sous-linux.html
 
-    Demarer la carte wifi
+    Démarrer la carte wifi
     ::
 
         sudo ifconfig wlan0 up
                     
-    Rechercher les différents reseau a porter
+    Rechercher les différents réseau a porter
     ::
     
         iwlist ath0 scan
                     
 ------------------------------------------------------------------------------------------
 
-Connaitre la liste des matériel usb
+Connaître la liste des matériel usb
 ===================================
     ::
 
@@ -373,7 +373,7 @@ Connaitre la liste des matériel usb
 
 ------------------------------------------------------------------------------------------
 
-Connaitre l'éspace disque utilise et celui disponible
+Connaître l’espace disque utilise et celui disponible
 =====================================================
     ::
 
@@ -381,13 +381,13 @@ Connaitre l'éspace disque utilise et celui disponible
                     
 ------------------------------------------------------------------------------------------
 
-Les posrts séries
-=================
+Les ports séries
+================
 
 :Liens Web:
            * http://www.instructables.com/id/Read-and-write-from-serial-port-with-Raspberry-Pi/
 
-Rappel (equivalence de la notation Windows / Linux
+Rappel (équivalence de la notation Windows / Linux
     
     +---------+------------+
     | Windows |    Linux   |
@@ -401,7 +401,7 @@ Rappel (equivalence de la notation Windows / Linux
     | COM4    | /dev/ttyS3 |
     +---------+------------+
                         
-Connaitre la liste des ports série :
+Connaître la liste des ports série :
 ------------------------------------
     ::
     
@@ -410,8 +410,8 @@ Connaitre la liste des ports série :
               Cependant, les tty associés au port USB disposent d'une nomenclature différente.
               Ils contiennent habituellement USB ou ACM (Abstract Control Model)
                         
-interoger le journal sur les ports série :
-------------------------------------------
+interroger le journal sur les ports série :
+-------------------------------------------
     ::
 
         dmesg | grep tty
@@ -460,10 +460,10 @@ Liste des commandes des bases pour screen
 
 ------------------------------------------------------------------------------------------
 
-pour créer un script qui s'execute au démarrage du sytème
-=========================================================
+pour créer un script qui s’exécute au démarrage du système
+==========================================================
 
-Pour faire en sorte qu'un script s'execute au démarrage, il faut 2 éléments distincts :
+Pour faire en sorte qu'un script s’exécute au démarrage, il faut 2 éléments distincts :
     * Un script shell placé dans **/etc/init.d**
         # **N.B :** le "d" dans "int.d" signifie : deamon.
         C'est le nom des services sous linux
@@ -513,7 +513,7 @@ Préparation du script shell
         DESC="Description of the service"
         NAME=daemonexecutablename                       <-- le nom de votre deamon        
         DAEMON=/usr/sbin/$NAME                          <-- le chemin de votre script si
-                                                            ce dernier est different du
+                                                            ce dernier est différent du
                                                             chemin ci contre
 
         #! /bin/sh
@@ -552,7 +552,7 @@ Préparation du script shell
             /etc/init.d/
     
     #. depuis le dossier **/etc/init.d**, ouvrir une fenêtre terminale
-    et rendre le script executable avec la commande suivante :
+    et rendre le script exécutable avec la commande suivante :
     
         ::
     
@@ -563,8 +563,8 @@ Préparation du script shell
 Préparation du script python
 ----------------------------
      
-    #. Si se n'est pas déjà fait, editer le script et ajouter la ligne suivante
-    sur la premiere ligne de votre fichier
+    #. Si se n'est pas déjà fait, éditer le script et ajouter la ligne suivante
+    sur la première ligne de votre fichier
     
         ::
         
@@ -572,7 +572,7 @@ Préparation du script python
 
     #. Copier le fichier dans le dossier **/usr/sbin/**
     
-    #. rendre le script executalbe
+    #. rendre le script exécutable
         ::
         
             chmod a+x [nom_du_script.py]
