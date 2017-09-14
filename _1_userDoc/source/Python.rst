@@ -231,7 +231,7 @@ Les environnements virtuels Python : virtualenv et virtualenvwrapper (version Li
             * http://sametmax.com/les-environnement-virtuels-python-virtualenv-et-virtualenvwrapper/
 
 installation des environnements virtuels
----------------------------------------
+----------------------------------------
 
     #.  Installation de virtualenv et virtualenvwrapper
     
@@ -241,7 +241,7 @@ installation des environnements virtuels
         sudo pip install virtualenvwrapper
 
 configuration des environnements virtuels
-----------------------------------------
+-----------------------------------------
 
     #. Créer un dossier pour les environnements virtuels
     

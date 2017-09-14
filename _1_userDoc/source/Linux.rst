@@ -411,7 +411,7 @@ Connaître la liste des ports série :
               Ils contiennent habituellement USB ou ACM (Abstract Control Model)
                         
 interroger le journal sur les ports série :
-------------------------------------------
+-------------------------------------------
     ::
 
         dmesg | grep tty
