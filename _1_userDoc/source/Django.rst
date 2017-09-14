@@ -17,28 +17,28 @@ Django
 
 ------------------------------------------------------------------------------------------
 
-Démmarer un nouveau projet
+Démarrer un nouveau projet
 ==========================
 
-    #. Créer l'environement virtuel
+    #. Créer l’environnement virtuel
     
         - Créer un dossier avec un nom significatif : ::
         
             ex : env_[nom_du_projet]
             
         - Ce placer dans le répertoire de destination et lancer la création
-          de l'environement virtuel : ::
+          de l’environnement virtuel : ::
           
             cd env_[nom_du_projet]
             
             virtualenv --system-site-packages .
-                # Le point en fin de ligne représente le répertoire courrant
+                # Le point en fin de ligne représente le répertoire courant
                 
     #. Créer un projet Django
     
         - Créer un dossier significatif
-        - Lancer l'environement virtuel avant de créer le projet Django
-            + Executer le script d'activation : ::
+        - Lancer l’environnement virtuel avant de créer le projet Django
+            + Exécuter le script d'activation : ::
             
                 .\Scripts\activate.bat
                 
@@ -48,13 +48,13 @@ Démmarer un nouveau projet
             cd [nom_du_projet]
             
             django-admin startproject [nom_du_projet] .
-                # Le point en fin de ligne représente le répertoire courrant
-                # Un dossier du [nom_du_projet] sera créer dans le répertoire courrant
+                # Le point en fin de ligne représente le répertoire courant
+                # Un dossier du [nom_du_projet] sera créer dans le répertoire courant
                 
     #. Configurer le fichier "settings.py"
     
         - Editer le fichier "settings.py" situé dans le dossier "./[nom_du_projet]/"
-        - Modfier les lignes : ::
+        - Modifier les lignes : ::
         
             LANGUAGE_CODE = 'en-us'
             TIME_ZONE = 'UTC'
@@ -79,7 +79,7 @@ Démmarer un nouveau projet
 Démarrer une nouvelle APP
 -------------------------
 
-    - Se placer au même niveau que le fichiers "manage.py" et executer la commande manage : ::
+    - Se placer au même niveau que le fichiers "manage.py" et exécuter la commande manage : ::
     
         manage.py startapp [votre_application]
             # Un dossier [votre_application] sera créer dans le répertoire courant
@@ -97,7 +97,7 @@ La correspondance avec le MVC est la suivante :
 
     #. Model (Django : Model) :
     
-        - **models.py** : C'est le scrip qui permet la création des tables
+        - **models.py** : C'est le script qui permet la création des tables
           dans la base de données. 
           
           Par analogie avec la POO
@@ -111,7 +111,7 @@ La correspondance avec le MVC est la suivante :
         
         - Tous les fichiers en ".html" dans ./templates
         - Les feuilles de styles (".css") dans ./static
-        - **urls.py** : sert de liaison avec views.py. Ce ficher génére les urls à la volée,
+        - **urls.py** : sert de liaison avec views.py. Ce ficher généré les urls à la volée,
           par l'interprétation d'expression régulière (RegEx)
           
     #. Controler (Django : Vue)

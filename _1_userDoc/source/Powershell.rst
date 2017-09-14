@@ -2,8 +2,9 @@
 PowerShell
 ==========
 
-Commandes utilies
+Commandes utiles
 =================
+
 Obtenir de l'aide
 -----------------
 
@@ -35,20 +36,20 @@ Obtenir de l'aide
 
             get-help Get-Help -online
 
-Activer / Desactiver le mode debugage
+Activer / Désactiver le mode débogage
 -------------------------------------
 
-    #. activer le mode debugage ::
+    #. activer le mode débogage ::
         
             set-psdebug -trace 2
     
-    #. Desactiver le mode debugage ::
+    #. Désactiver le mode débogage ::
         
             set-psdebug -trace 0
             
 ----------------------------------------------------------
             
-Autoriser l'execution des script
+Autoriser l’exécution des script
 --------------------------------
 
         ::
@@ -57,7 +58,7 @@ Autoriser l'execution des script
             
 ----------------------------------------------------------
             
-Connaitre toutes les methodes d'un objet
+Connaître toutes les méthodes d'un objet
 ========================================
 
     ::
@@ -69,9 +70,9 @@ Connaitre toutes les methodes d'un objet
 Caractère spécifiques
 =====================
 
-    #. Caractère d'echapement
+    #. Caractère échappement
     
-        Le caractère d'échapement est le "`" (accent grave seul [ALT_GR-7])
+        Le caractère d’échappement est le "`" (accent grave seul [ALT_GR-7])
             * Placé en fin de ligne il permet de ligne, il sert de continuation pour aller
               à la ligne ::
               
@@ -79,7 +80,7 @@ Caractère spécifiques
                        $Comptuer -List | where-object `
                        {$_.Name -eq "StdRegProv"}
                        
-           * Placé avant une variable elle sera interprétée comme une chaine de caratère ::
+           * Placé avant une variable elle sera interprétée comme une chaine de caractère ::
            
                 ps:> $v_maVariable = "test"
                 
@@ -89,7 +90,7 @@ Caractère spécifiques
                 ps:> write-host "affichage de la variable : `$v_maVariable"
                 ps:> affichage de la variable : $v_maVariable
 
-            * Placé devant un caractère, il serat interpréter comme une commande ::
+            * Placé devant un caractère, il sera interpréter comme une commande ::
             
                 ps:> $v_maVariable = "test"
                 ps:> write-host "blabla`t$v_maVariable"
@@ -97,7 +98,7 @@ Caractère spécifiques
                 
 ----------------------------------------------------------
 
-Declarer une variable
+Déclarer une variable
 =====================
 
     #. variable typee dynamiquement ::
@@ -116,7 +117,7 @@ variables spécifiques
 ---------------------
 
     :$_:        contient l'objet en cours dans le pipeline
-    :$Error:    contient les objets d'erreur de la seesion PowerShell en cours
+    :$Error:    contient les objets d'erreur de la session PowerShell en cours
     
 ----------------------------------------------------------
 
@@ -124,7 +125,7 @@ Equivalent du print (ou du echo)
 ================================
 
     #. Methode classique avec la commande 'write-host'
-        Dans cette commande, les simples cotes ne permettent pas d'interpreter de
+        Dans cette commande, les simples cotes ne permettent pas d’interpréter de
         variable. L'utilisation des doubles cotes permet l'interpretation de variable ou
         d'objet ::
     
@@ -134,11 +135,11 @@ Equivalent du print (ou du echo)
             PS C:\Users\polter> write-host "$valeur"
             2
 
-    #. Methode 'plus propre' avec l'option 'format' (-f)
+    #. Méthode 'plus propre' avec l'option 'format' (-f)
     
-        Avec cette methode on utilise les doubles cotes pour encadrer le texte, les
-        accolades avec un numero d'index a l'interieur (commancant a 0). Les variables sont
-        placees a l'exterieur du bloc (apres le '-f') et separees par des virgules ::
+        Avec cette méthode on utilise les doubles cotes pour encadrer le texte, les
+        accolades avec un numéro d'index a l’intérieur (commençant a 0). Les variables sont
+        placées a l’extérieur du bloc (après le '-f') et séparées par des virgules ::
         
             PS C:\Users\polter> $valeur = 2
             PS C:\Users\polter> $valeur2 = 2

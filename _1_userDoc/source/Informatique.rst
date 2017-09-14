@@ -11,14 +11,14 @@ Matériel
 
 Information pour la gestion maintenance des matériel
 
-Vérifier les garentie constructeur
+Vérifier les garantie constructeur
 ----------------------------------
 
-    #. Garentie Dell
+    #. Garantie Dell
     
         * http://www.dell.com/support/home/fr/fr/frdhs1/products/?app=warranty&c=fr&l=fr&s=dhs
         
-    #. Garentie HP
+    #. Garantie HP
 
         * http://h20565.www2.hpe.com/hpsc/wc/public/home?lang=fr-fr&cc=fr
         
@@ -31,7 +31,7 @@ Toutes les informations concernant l'utilisation et la maintenance des postes ut
 Excel
 -----
 
-    #. Colorer une ligne sur deux dans un tableau excel
+    #. Colorer une ligne sur deux dans un tableau Excel
         
         * http://www.pcastuces.com/pratique/astuces/4180.htm
         
@@ -47,12 +47,12 @@ Excel
 SysAdmin
 ========
 
-Ensemble d'informations relativent à l'administration Système
+Ensemble d'informations relative à l'administration Système
 
 PowerShell
 ----------
 
-    #. Identififer les PC qui ne se sont pas connecter au domaine depuis
+    #. Identifier les PC qui ne se sont pas connecter au domaine depuis
        au moins 180 Jours : 
        
         ::
@@ -61,14 +61,14 @@ PowerShell
             $vdate = (Get-Date).adddays(-180)
             Get-ADComputer -filter {(Enabled -eq "True") -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CN
                 # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
-                # se sont pas connécter de puis au moins 180 Jours
+                # se sont pas connecter de puis au moins 180 Jours
         
         #. pour ne pas filtrer le résultat et voir toutes les propriété : ::
         
             Get-ADComputer -filter * -property *
                 # N.B : Fonctionne aussi avec get-ADUser
             
-    #. Identificer les comptes utilisateurs qui ne se sont pas connecter au domaine depuis
+    #. Identifier les comptes utilisateurs qui ne se sont pas connecter au domaine depuis
        au moins 180 Jours : ::
 
             import-module ActiveDirectory
