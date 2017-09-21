@@ -48,6 +48,15 @@ Activer / Désactiver le mode débogage
             set-psdebug -trace 0
             
 ----------------------------------------------------------
+
+Windows PowerShell Integrated Scripting Environment (ISE)
+---------------------------------------------------------
+
+    #. Pour lancer PowerShell ISE depuis la console ::
+    
+        PS c:\ISE
+
+----------------------------------------------------------
             
 Autoriser l’exécution des script
 --------------------------------
@@ -57,13 +66,33 @@ Autoriser l’exécution des script
             set-ExecutionPolicy
             
 ----------------------------------------------------------
-            
-Connaître toutes les méthodes d'un objet
-========================================
+
+Lancer un script depuis la console powershell
+---------------------------------------------
 
     ::
+    
+        PS C:\. .\[mon_script].ps1
+            # Ne pas oublier le premier "."
+
+----------------------------------------------------------
+            
+Connaître toutes les méthodes d'un objet
+----------------------------------------
+
+    ::
+    
         [Objet_ou_command] | get-member (ou gm)
             # exemple pour une variable : $v_a | get-member
+
+----------------------------------------------------------
+
+Séléctionner une commande depuis une fenêtre graphique
+------------------------------------------------------
+
+    ::
+    
+        Show-Command
 
 ----------------------------------------------------------
             
@@ -96,6 +125,7 @@ Caractère spécifiques
                 ps:> write-host "blabla`t$v_maVariable"
                 ps:> blabla    test
                 
+                
 ----------------------------------------------------------
 
 Déclarer une variable
@@ -118,6 +148,29 @@ variables spécifiques
 
     :$_:        contient l'objet en cours dans le pipeline
     :$Error:    contient les objets d'erreur de la session PowerShell en cours
+
+Ecrire un bloc de texte sur plusieur ligne dans une variable (le here-string)
+-----------------------------------------------------------------------------
+    
+        Pour écrire un bloc de texte sur plusieur ligne dans une variable, il faut
+        entourer le bloc avec @' ... '@ ou @" ... "@. ::
+        
+            Simples cotes
+            PS C:\> $myvar = @'
+            >> blabla ...
+            >> Je s'appel groot !
+            >> etc ...
+            >> '@
+            
+            Doubles cotes :
+            PS C:\> $myvar = @"
+            >> blabla ...
+            >> Je s'appel groot !
+            >> etc ...
+            >> "@
+            
+        **Rappel** : Les simples cotes ne permettent pas d'interpréter les variables
+        qu'elles contiennent alors que les double le permettent.
     
 ----------------------------------------------------------
 
@@ -148,6 +201,20 @@ Equivalent du print (ou du echo)
             
 ----------------------------------------------------------
 
+Renvoyer la sortie d'une commande vers une fenêtre graphique
+============================================================
+
+    ::
+    
+        PS C:\Users\polter> [commande] | Out-GridView
+            # La fenêtre qui apparait permet alors d'appliquer des filtres en direct
+            
+        ex :
+        
+        PS C:\Users\polter> get-cliditem | Out-GridView
+
+----------------------------------------------------------
+
 Déclarer une fonction
 =====================
 
@@ -162,3 +229,49 @@ Déclarer une fonction
         ex :
         
             function f_maFonction { get-cliditem }
+            
+----------------------------------------------------------
+
+Admisitration Exchange
+======================
+
+    #. Page d'information pour toutes les versions d'exchange
+    
+        * https://technet.microsoft.com/en-us/library/mt587043(v=exchg.150).aspx
+    
+    #. Exchange Online cmdlets
+    
+        * https://technet.microsoft.com/EN-US/library/jj200780(v=exchg.160).aspx
+    
+    #. Exchange Online Protection cmdlets
+    
+        * https://technet.microsoft.com/EN-US/library/dn621038(v=exchg.160).aspx
+        
+    #. Office 365 Security & Compliance Center PowerShell
+    
+        * https://technet.microsoft.com/en-us/library/mt587091(v=exchg.160).aspx
+        
+    #. Exchange 2016 cmdlets
+    
+        * https://technet.microsoft.com/EN-US/library/bb124413(v=exchg.160).aspx
+        
+    #. Exchange 2013 cmdlets
+    
+        * https://technet.microsoft.com/EN-US/library/bb124413(v=exchg.150).aspx
+        
+    #. Exchange 2010 Cmdlets
+    
+        * https://technet.microsoft.com/en-us/library/bb124413(v=exchg.141).aspx
+        
+----------------------------------------------------------
+
+Automatisation de Windows et de Windows Server avec Windows PowerShell
+======================================================================
+
+:Liens_Web:
+    * https://technet.microsoft.com/fr-fr/library/dn249523(v=wps.630).aspx
+
+    #. DHCP Server Cmdlets
+        * https://technet.microsoft.com/en-us/library/jj590751(v=wps.620).aspx
+    
+    

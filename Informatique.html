@@ -1,6 +1,6 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
@@ -36,7 +36,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body>
+  <body role="document">
   
 
     <div class="document">
@@ -46,9 +46,24 @@
             
   <div class="section" id="informatique">
 <h1>Informatique<a class="headerlink" href="#informatique" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Ce document réuni un ensemble d’informations, Manip et autre tips concernant
+<p>Ce document réuni un ensemble d&#8217;informations, Manip et autre tips concernant
 la gestion / Maintenance des postes utilisateur et la gestion maintenance des parcs
 informatiques.</p>
+<div class="section" id="cours">
+<h2>Cours<a class="headerlink" href="#cours" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Microsoft Virtual Academy</p>
+<blockquote>
+<div><p>Cours en ligne gratuis dispenser par microsoft</p>
+<ul class="simple">
+<li><a class="reference external" href="https://mva.microsoft.com/">https://mva.microsoft.com/</a></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
 <div class="section" id="materiel">
 <h2>Matériel<a class="headerlink" href="#materiel" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Information pour la gestion maintenance des matériel</p>
@@ -76,7 +91,7 @@ informatiques.</p>
 </div>
 <div class="section" id="poste-de-travail">
 <h2>Poste de travail<a class="headerlink" href="#poste-de-travail" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Toutes les informations concernant l’utilisation et la maintenance des postes utilisateurs.</p>
+<p>Toutes les informations concernant l&#8217;utilisation et la maintenance des postes utilisateurs.</p>
 <div class="section" id="excel">
 <h3>Excel<a class="headerlink" href="#excel" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
@@ -109,11 +124,35 @@ informatiques.</p>
 </div>
 <div class="section" id="sysadmin">
 <h2>SysAdmin<a class="headerlink" href="#sysadmin" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ensemble d’informations relative à l’administration Système</p>
+<p>Ensemble d&#8217;informations relative à l&#8217;administration Système</p>
 <div class="section" id="powershell">
 <h3>PowerShell<a class="headerlink" href="#powershell" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
+<li><p class="first">Installer le module PowerShell ActiveDirectory sous Windows 10</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/">https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/</a></dt>
+<dd># Explication par l&#8217;auteur du script</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://gallery.technet.microsoft.com/Install-the-Active-fd32e541">https://gallery.technet.microsoft.com/Install-the-Active-fd32e541</a></dt>
+<dd># Le script lui même</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
 <li><p class="first">Identifier les PC qui ne se sont pas connecter au domaine depuis
 au moins 180 Jours :</p>
 <blockquote>
@@ -144,6 +183,36 @@ Get-ADuser -filter {(Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdat
 </pre></div>
 </div>
 </li>
+<li><p class="first">Connaitre la date du dernier démarrage d&#8217;un serveur</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">CimInstance</span> <span class="o">-</span><span class="n">ClassName</span> <span class="n">Win32_OperatingSystem</span> <span class="o">|</span> <span class="n">Select</span> <span class="n">CSName</span><span class="p">,</span> <span class="n">LastBootUpTime</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="router-firewall-proxy">
+<h2>Router, Firewall, Proxy<a class="headerlink" href="#router-firewall-proxy" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="sophos">
+<h3>Sophos<a class="headerlink" href="#sophos" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Configurer le VPN en SSL</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://www.sophos.com/en-us/medialibrary/PDFs/documentation/utm90_Remote_Access_Via_SSL_geng.pdf">https://www.sophos.com/en-us/medialibrary/PDFs/documentation/utm90_Remote_Access_Via_SSL_geng.pdf</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
 </ol>
 </div></blockquote>
 </div>
@@ -159,6 +228,7 @@ Get-ADuser -filter {(Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdat
   <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Informatique</a><ul>
+<li><a class="reference internal" href="#cours">Cours</a></li>
 <li><a class="reference internal" href="#materiel">Matériel</a><ul>
 <li><a class="reference internal" href="#verifier-les-garantie-constructeur">Vérifier les garantie constructeur</a></li>
 </ul>
@@ -169,6 +239,10 @@ Get-ADuser -filter {(Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdat
 </li>
 <li><a class="reference internal" href="#sysadmin">SysAdmin</a><ul>
 <li><a class="reference internal" href="#powershell">PowerShell</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#router-firewall-proxy">Router, Firewall, Proxy</a><ul>
+<li><a class="reference internal" href="#sophos">Sophos</a></li>
 </ul>
 </li>
 </ul>
@@ -208,7 +282,7 @@ Get-ADuser -filter {(Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdat
       &copy;2017, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
