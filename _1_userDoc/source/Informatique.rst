@@ -6,6 +6,15 @@ Ce document réuni un ensemble d'informations, Manip et autre tips concernant
 la gestion / Maintenance des postes utilisateur et la gestion maintenance des parcs
 informatiques.
 
+Cours
+=====
+
+    #. Microsoft Virtual Academy
+    
+        Cours en ligne gratuis dispenser par microsoft
+        
+        * https://mva.microsoft.com/
+
 Matériel
 ========
 
@@ -52,6 +61,16 @@ Ensemble d'informations relative à l'administration Système
 PowerShell
 ----------
 
+    #. Installer le module PowerShell ActiveDirectory sous Windows 10
+    
+        :Liens_Web:
+            * https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/
+                # Explication par l'auteur du script
+                
+            * https://gallery.technet.microsoft.com/Install-the-Active-fd32e541
+                # Le script lui même
+    
+    
     #. Identifier les PC qui ne se sont pas connecter au domaine depuis
        au moins 180 Jours : 
        
@@ -76,4 +95,19 @@ PowerShell
             Get-ADuser -filter {(Enabled -eq "True") -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CanonicalName
                 # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
                 # se sont pas connécter de puis au moins 180 Jours
+                
+    #. Connaitre la date du dernier démarrage d'un serveur ::
+    
+            Get-CimInstance -ClassName Win32_OperatingSystem | Select CSName, LastBootUpTime
+
+Router, Firewall, Proxy
+=======================
+
+Sophos
+------
+
+    #. Configurer le VPN en SSL
+    
+        :Liens_Web:
+            * https://www.sophos.com/en-us/medialibrary/PDFs/documentation/utm90_Remote_Access_Via_SSL_geng.pdf
             
