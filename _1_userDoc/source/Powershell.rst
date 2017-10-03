@@ -95,6 +95,50 @@ Séléctionner une commande depuis une fenêtre graphique
         Show-Command
 
 ----------------------------------------------------------
+
+Créer des variables en PowerShell sous forme de tableau
+=======================================================
+
+:Liens_Web:
+    * http://gmergit.blogspot.fr/2011/11/recemment-jai-eu-besoin-de-creer-des.html
+
+----------------------------------------------------------
+
+Les Tableau
+===========
+
+    #. Les Tableau fixe
+        Ces tableau ne permettent pas d'ajouter ou de supprimer des données ::
+        
+            PS C:\> $monTableau = @(1, 'a')
+            PS C:\> $monTableau
+            1
+            a
+            PS C:\> $monTableau.Add('z')
+            Exception lors de l'appel de « Add » avec « 1 » argument(s) : « La collection était d'une taille fixe. »
+            Au caractère Ligne:1 : 1
+            + $monTableau.Add('z')
+            + ~~~~~~~~~~~~~~~~~~~~
+                + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+                + FullyQualifiedErrorId : NotSupportedException
+
+                
+    #. Les Tableau dynamiques
+        Ces tableau permettent d'ajouter ou de supprimer des éléments ::
+        
+            PS C:\> [System.Collections.ArrayList]$monTableau = @(1, 'a')
+            PS C:\> $monTableau
+            1
+            a
+            PS C:\> $monTableau.Add('Z')
+            2
+            PS C:\> $monTableau
+            1
+            a
+            Z
+            PS C:\>
+
+----------------------------------------------------------
             
 Caractère spécifiques
 =====================
@@ -274,4 +318,48 @@ Automatisation de Windows et de Windows Server avec Windows PowerShell
     #. DHCP Server Cmdlets
         * https://technet.microsoft.com/en-us/library/jj590751(v=wps.620).aspx
     
+----------------------------------------------------------
     
+stocker un chemin puis y retourné
+=================================
+
+    #. Pour stocker le repertoire de travail courant ::
+    
+        Push-Location
+        
+    #. Pour retourner dans le repertoire de travail stocker précédement ::
+    
+        Pop-Location
+        
+----------------------------------------------------------
+        
+Tester si un chemin exist
+=========================
+
+    ::
+
+        Test-Path [chemin_a_tester]
+        
+        ex :
+        
+        PS C:\> Test-Path c:\test
+        False
+        
+----------------------------------------------------------
+        
+Créer des interfaces graphiques
+===============================
+    
+    #. Avec WindowsForm
+    
+        :Liens_Web:
+            * https://justanitblog.wordpress.com/2016/01/28/powershell-creation-dune-interface-graphique/
+               # un example windowsForm et WPF
+               
+    #. Avec WPF (en XAML avec visual studio)
+
+
+        :Liens_Web:
+            * https://www.supinfo.com/articles/single/1933-interface-graphique-xaml-script-powershell
+                # une astuce pour ne pas avoir à ecrire le code XAML
+                
