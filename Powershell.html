@@ -1,6 +1,6 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
@@ -36,7 +36,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">
+  <body>
   
 
     <div class="document">
@@ -49,7 +49,7 @@
 <div class="section" id="commandes-utiles">
 <h2>Commandes utiles<a class="headerlink" href="#commandes-utiles" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="obtenir-de-l-aide">
-<h3>Obtenir de l&#8217;aide<a class="headerlink" href="#obtenir-de-l-aide" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Obtenir de l’aide<a class="headerlink" href="#obtenir-de-l-aide" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -60,7 +60,7 @@
 </ul>
 </div></blockquote>
 <ol class="last arabic">
-<li><p class="first">Obtenir de l&#8217;aide depuis le shell</p>
+<li><p class="first">Obtenir de l’aide depuis le shell</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="p">[</span><span class="n">nom_de_la_commande</span><span class="p">]</span>
 
 <span class="n">ex</span> <span class="p">:</span>
@@ -68,7 +68,7 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first">Les diférents modes de l&#8217;aide</p>
+<li><p class="first">Les diférents modes de l’aide</p>
 <blockquote>
 <div><ul>
 <li><p class="first">Pour consulter les exemples&nbsp;:</p>
@@ -76,7 +76,7 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first">Pour plus d&#8217;informations&nbsp;:</p>
+<li><p class="first">Pour plus d’informations&nbsp;:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">detailed</span>
 </pre></div>
 </div>
@@ -151,7 +151,7 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="connaitre-toutes-les-methodes-d-un-objet">
-<h3>Connaître toutes les méthodes d&#8217;un objet<a class="headerlink" href="#connaitre-toutes-les-methodes-d-un-objet" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Connaître toutes les méthodes d’un objet<a class="headerlink" href="#connaitre-toutes-les-methodes-d-un-objet" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Objet_ou_command</span><span class="p">]</span> <span class="o">|</span> <span class="n">get</span><span class="o">-</span><span class="n">member</span> <span class="p">(</span><span class="n">ou</span> <span class="n">gm</span><span class="p">)</span>
     <span class="c1"># exemple pour une variable : $v_a | get-member</span>
@@ -170,6 +170,67 @@
 </div>
 </div>
 <hr class="docutils" />
+<div class="section" id="creer-des-variables-en-powershell-sous-forme-de-tableau">
+<h2>Créer des variables en PowerShell sous forme de tableau<a class="headerlink" href="#creer-des-variables-en-powershell-sous-forme-de-tableau" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://gmergit.blogspot.fr/2011/11/recemment-jai-eu-besoin-de-creer-des.html">http://gmergit.blogspot.fr/2011/11/recemment-jai-eu-besoin-de-creer-des.html</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="les-tableau">
+<h2>Les Tableau<a class="headerlink" href="#les-tableau" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Les Tableau fixe</dt>
+<dd><p class="first">Ces tableau ne permettent pas d’ajouter ou de supprimer des données</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span>PS C:\&gt; $monTableau = @(1, &#39;a&#39;)
+PS C:\&gt; $monTableau
+1
+a
+PS C:\&gt; $monTableau.Add(&#39;z&#39;)
+Exception lors de l&#39;appel de « Add » avec « 1 » argument(s) : « La collection était d&#39;une taille fixe. »
+Au caractère Ligne:1 : 1
++ $monTableau.Add(&#39;z&#39;)
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Les Tableau dynamiques</dt>
+<dd><p class="first">Ces tableau permettent d’ajouter ou de supprimer des éléments</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span>PS C:\&gt; [System.Collections.ArrayList]$monTableau = @(1, &#39;a&#39;)
+PS C:\&gt; $monTableau
+1
+a
+PS C:\&gt; $monTableau.Add(&#39;Z&#39;)
+2
+PS C:\&gt; $monTableau
+1
+a
+Z
+PS C:\&gt;
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
 <div class="section" id="caractere-specifiques">
 <h2>Caractère spécifiques<a class="headerlink" href="#caractere-specifiques" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
@@ -177,7 +238,7 @@
 <li><p class="first">Caractère échappement</p>
 <blockquote>
 <div><dl class="docutils">
-<dt>Le caractère d’échappement est le &#8220;`&#8221; (accent grave seul [ALT_GR-7])</dt>
+<dt>Le caractère d’échappement est le «&nbsp;`&nbsp;» (accent grave seul [ALT_GR-7])</dt>
 <dd><blockquote class="first">
 <div><ul>
 <li><p class="first">Placé en fin de ligne il permet de ligne, il sert de continuation pour aller
@@ -249,9 +310,9 @@ ps:&gt; blabla    test
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">$_:</th><td class="field-body">contient l&#8217;objet en cours dans le pipeline</td>
+<tr class="field-odd field"><th class="field-name">$_:</th><td class="field-body">contient l’objet en cours dans le pipeline</td>
 </tr>
-<tr class="field-even field"><th class="field-name">$Error:</th><td class="field-body">contient les objets d&#8217;erreur de la session PowerShell en cours</td>
+<tr class="field-even field"><th class="field-name">$Error:</th><td class="field-body">contient les objets d’erreur de la session PowerShell en cours</td>
 </tr>
 </tbody>
 </table>
@@ -261,7 +322,7 @@ ps:&gt; blabla    test
 <h3>Ecrire un bloc de texte sur plusieur ligne dans une variable (le here-string)<a class="headerlink" href="#ecrire-un-bloc-de-texte-sur-plusieur-ligne-dans-une-variable-le-here-string" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><p>Pour écrire un bloc de texte sur plusieur ligne dans une variable, il faut
-entourer le bloc avec &#64;&#8217; ... &#8216;&#64; ou &#64;&#8221; ... &#8220;&#64;.</p>
+entourer le bloc avec &#64;” … “&#64; ou &#64;&nbsp;» … «&nbsp;&#64;.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>Simples cotes
 PS C:\&gt; $myvar = @&#39;
 &gt;&gt; blabla ...
@@ -277,8 +338,8 @@ PS C:\&gt; $myvar = @&quot;
 &gt;&gt; &quot;@
 </pre></div>
 </div>
-<p><strong>Rappel</strong> : Les simples cotes ne permettent pas d&#8217;interpréter les variables
-qu&#8217;elles contiennent alors que les double le permettent.</p>
+<p><strong>Rappel</strong> : Les simples cotes ne permettent pas d’interpréter les variables
+qu’elles contiennent alors que les double le permettent.</p>
 </div></blockquote>
 </div>
 </div>
@@ -288,10 +349,10 @@ qu&#8217;elles contiennent alors que les double le permettent.</p>
 <blockquote>
 <div><ol class="arabic">
 <li><dl class="first docutils">
-<dt>Methode classique avec la commande &#8216;write-host&#8217;</dt>
+<dt>Methode classique avec la commande “write-host”</dt>
 <dd><p class="first">Dans cette commande, les simples cotes ne permettent pas d’interpréter de
-variable. L&#8217;utilisation des doubles cotes permet l&#8217;interpretation de variable ou
-d&#8217;objet</p>
+variable. L’utilisation des doubles cotes permet l’interpretation de variable ou
+d’objet</p>
 <div class="last highlight-default"><div class="highlight"><pre><span></span>PS C:\Users\polter&gt; $valeur = 2
 PS C:\Users\polter&gt; write-host &#39;$valeur&#39;
 $valeur
@@ -302,11 +363,11 @@ PS C:\Users\polter&gt; write-host &quot;$valeur&quot;
 </dd>
 </dl>
 </li>
-<li><p class="first">Méthode &#8216;plus propre&#8217; avec l&#8217;option &#8216;format&#8217; (-f)</p>
+<li><p class="first">Méthode “plus propre” avec l’option “format” (-f)</p>
 <blockquote>
 <div><p>Avec cette méthode on utilise les doubles cotes pour encadrer le texte, les
-accolades avec un numéro d&#8217;index a l’intérieur (commençant a 0). Les variables sont
-placées a l’extérieur du bloc (après le &#8216;-f&#8217;) et séparées par des virgules</p>
+accolades avec un numéro d’index a l’intérieur (commençant a 0). Les variables sont
+placées a l’extérieur du bloc (après le “-f”) et séparées par des virgules</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>PS C:\Users\polter&gt; $valeur = 2
 PS C:\Users\polter&gt; $valeur2 = 2
 PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeur + $valeur2)
@@ -320,7 +381,7 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 </div>
 <hr class="docutils" />
 <div class="section" id="renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique">
-<h2>Renvoyer la sortie d&#8217;une commande vers une fenêtre graphique<a class="headerlink" href="#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Renvoyer la sortie d’une commande vers une fenêtre graphique<a class="headerlink" href="#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">polter</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">commande</span><span class="p">]</span> <span class="o">|</span> <span class="n">Out</span><span class="o">-</span><span class="n">GridView</span>
     <span class="c1"># La fenêtre qui apparait permet alors d&#39;appliquer des filtres en direct</span>
@@ -354,7 +415,7 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 <h2>Admisitration Exchange<a class="headerlink" href="#admisitration-exchange" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Page d&#8217;information pour toutes les versions d&#8217;exchange</p>
+<li><p class="first">Page d’information pour toutes les versions d’exchange</p>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference external" href="https://technet.microsoft.com/en-us/library/mt587043(v=exchg.150).aspx">https://technet.microsoft.com/en-us/library/mt587043(v=exchg.150).aspx</a></li>
@@ -431,6 +492,84 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 </tbody>
 </table>
 </div>
+<hr class="docutils" />
+<div class="section" id="stocker-un-chemin-puis-y-retourne">
+<h2>stocker un chemin puis y retourné<a class="headerlink" href="#stocker-un-chemin-puis-y-retourne" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Pour stocker le repertoire de travail courant</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Push</span><span class="o">-</span><span class="n">Location</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Pour retourner dans le repertoire de travail stocker précédement</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Pop</span><span class="o">-</span><span class="n">Location</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="tester-si-un-chemin-exist">
+<h2>Tester si un chemin exist<a class="headerlink" href="#tester-si-un-chemin-exist" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Test</span><span class="o">-</span><span class="n">Path</span> <span class="p">[</span><span class="n">chemin_a_tester</span><span class="p">]</span>
+
+<span class="n">ex</span> <span class="p">:</span>
+
+<span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="o">&gt;</span> <span class="n">Test</span><span class="o">-</span><span class="n">Path</span> <span class="n">c</span><span class="p">:</span>\<span class="n">test</span>
+<span class="kc">False</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="creer-des-interfaces-graphiques">
+<h2>Créer des interfaces graphiques<a class="headerlink" href="#creer-des-interfaces-graphiques" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Avec WindowsForm</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://justanitblog.wordpress.com/2016/01/28/powershell-creation-dune-interface-graphique/">https://justanitblog.wordpress.com/2016/01/28/powershell-creation-dune-interface-graphique/</a></dt>
+<dd># un example windowsForm et WPF</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p class="first">Avec WPF (en XAML avec visual studio)</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.supinfo.com/articles/single/1933-interface-graphique-xaml-script-powershell">https://www.supinfo.com/articles/single/1933-interface-graphique-xaml-script-powershell</a></dt>
+<dd># une astuce pour ne pas avoir à ecrire le code XAML</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -443,15 +582,17 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
   <ul>
 <li><a class="reference internal" href="#">PowerShell</a><ul>
 <li><a class="reference internal" href="#commandes-utiles">Commandes utiles</a><ul>
-<li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l&#8217;aide</a></li>
+<li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l’aide</a></li>
 <li><a class="reference internal" href="#activer-desactiver-le-mode-debogage">Activer / Désactiver le mode débogage</a></li>
 <li><a class="reference internal" href="#windows-powershell-integrated-scripting-environment-ise">Windows PowerShell Integrated Scripting Environment (ISE)</a></li>
 <li><a class="reference internal" href="#autoriser-lexecution-des-script">Autoriser l’exécution des script</a></li>
 <li><a class="reference internal" href="#lancer-un-script-depuis-la-console-powershell">Lancer un script depuis la console powershell</a></li>
-<li><a class="reference internal" href="#connaitre-toutes-les-methodes-d-un-objet">Connaître toutes les méthodes d&#8217;un objet</a></li>
+<li><a class="reference internal" href="#connaitre-toutes-les-methodes-d-un-objet">Connaître toutes les méthodes d’un objet</a></li>
 <li><a class="reference internal" href="#selectionner-une-commande-depuis-une-fenetre-graphique">Séléctionner une commande depuis une fenêtre graphique</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#creer-des-variables-en-powershell-sous-forme-de-tableau">Créer des variables en PowerShell sous forme de tableau</a></li>
+<li><a class="reference internal" href="#les-tableau">Les Tableau</a></li>
 <li><a class="reference internal" href="#caractere-specifiques">Caractère spécifiques</a></li>
 <li><a class="reference internal" href="#declarer-une-variable">Déclarer une variable</a><ul>
 <li><a class="reference internal" href="#variables-specifiques">variables spécifiques</a></li>
@@ -459,10 +600,13 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 </ul>
 </li>
 <li><a class="reference internal" href="#equivalent-du-print-ou-du-echo">Equivalent du print (ou du echo)</a></li>
-<li><a class="reference internal" href="#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique">Renvoyer la sortie d&#8217;une commande vers une fenêtre graphique</a></li>
+<li><a class="reference internal" href="#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique">Renvoyer la sortie d’une commande vers une fenêtre graphique</a></li>
 <li><a class="reference internal" href="#declarer-une-fonction">Déclarer une fonction</a></li>
 <li><a class="reference internal" href="#admisitration-exchange">Admisitration Exchange</a></li>
 <li><a class="reference internal" href="#automatisation-de-windows-et-de-windows-server-avec-windows-powershell">Automatisation de Windows et de Windows Server avec Windows PowerShell</a></li>
+<li><a class="reference internal" href="#stocker-un-chemin-puis-y-retourne">stocker un chemin puis y retourné</a></li>
+<li><a class="reference internal" href="#tester-si-un-chemin-exist">Tester si un chemin exist</a></li>
+<li><a class="reference internal" href="#creer-des-interfaces-graphiques">Créer des interfaces graphiques</a></li>
 </ul>
 </li>
 </ul>
@@ -500,7 +644,7 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
       &copy;2017, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |

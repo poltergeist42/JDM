@@ -58,6 +58,13 @@ SysAdmin
 
 Ensemble d'informations relative à l'administration Système
 
+
+Renouveler un certificats sur Exchange 2010
+-------------------------------------------
+
+:Liens_Web:
+        *https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/
+
 PowerShell
 ----------
 
@@ -99,6 +106,12 @@ PowerShell
     #. Connaitre la date du dernier démarrage d'un serveur ::
     
             Get-CimInstance -ClassName Win32_OperatingSystem | Select CSName, LastBootUpTime
+                # Windows2012 r2 et +
+                
+            ou :
+                
+            $LastBootTime = (Get-WmiObject win32_Operatingsystem).LastBootUpTime
+            [System.Management.ManagementDateTimeConverter]::ToDateTime($LastBootTime)
 
 Router, Firewall, Proxy
 =======================

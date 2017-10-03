@@ -1,6 +1,6 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
@@ -36,7 +36,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">
+  <body>
   
 
     <div class="document">
@@ -46,7 +46,7 @@
             
   <div class="section" id="informatique">
 <h1>Informatique<a class="headerlink" href="#informatique" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Ce document réuni un ensemble d&#8217;informations, Manip et autre tips concernant
+<p>Ce document réuni un ensemble d’informations, Manip et autre tips concernant
 la gestion / Maintenance des postes utilisateur et la gestion maintenance des parcs
 informatiques.</p>
 <div class="section" id="cours">
@@ -91,7 +91,7 @@ informatiques.</p>
 </div>
 <div class="section" id="poste-de-travail">
 <h2>Poste de travail<a class="headerlink" href="#poste-de-travail" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Toutes les informations concernant l&#8217;utilisation et la maintenance des postes utilisateurs.</p>
+<p>Toutes les informations concernant l’utilisation et la maintenance des postes utilisateurs.</p>
 <div class="section" id="excel">
 <h3>Excel<a class="headerlink" href="#excel" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
@@ -124,7 +124,18 @@ informatiques.</p>
 </div>
 <div class="section" id="sysadmin">
 <h2>SysAdmin<a class="headerlink" href="#sysadmin" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ensemble d&#8217;informations relative à l&#8217;administration Système</p>
+<p>Ensemble d’informations relative à l’administration Système</p>
+<div class="section" id="renouveler-un-certificats-sur-exchange-2010">
+<h3>Renouveler un certificats sur Exchange 2010<a class="headerlink" href="#renouveler-un-certificats-sur-exchange-2010" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><a href="#id1"><span class="problematic" id="id2">*</span></a><a class="reference external" href="https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/">https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="powershell">
 <h3>PowerShell<a class="headerlink" href="#powershell" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
@@ -138,7 +149,7 @@ informatiques.</p>
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/">https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/</a></dt>
-<dd># Explication par l&#8217;auteur du script</dd>
+<dd># Explication par l’auteur du script</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
@@ -183,8 +194,14 @@ Get-ADuser -filter {(Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdat
 </pre></div>
 </div>
 </li>
-<li><p class="first">Connaitre la date du dernier démarrage d&#8217;un serveur</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">CimInstance</span> <span class="o">-</span><span class="n">ClassName</span> <span class="n">Win32_OperatingSystem</span> <span class="o">|</span> <span class="n">Select</span> <span class="n">CSName</span><span class="p">,</span> <span class="n">LastBootUpTime</span>
+<li><p class="first">Connaitre la date du dernier démarrage d’un serveur</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Get-CimInstance -ClassName Win32_OperatingSystem | Select CSName, LastBootUpTime
+    # Windows2012 r2 et +
+
+ou :
+
+$LastBootTime = (Get-WmiObject win32_Operatingsystem).LastBootUpTime
+[System.Management.ManagementDateTimeConverter]::ToDateTime($LastBootTime)
 </pre></div>
 </div>
 </li>
@@ -238,6 +255,7 @@ Get-ADuser -filter {(Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdat
 </ul>
 </li>
 <li><a class="reference internal" href="#sysadmin">SysAdmin</a><ul>
+<li><a class="reference internal" href="#renouveler-un-certificats-sur-exchange-2010">Renouveler un certificats sur Exchange 2010</a></li>
 <li><a class="reference internal" href="#powershell">PowerShell</a></li>
 </ul>
 </li>
@@ -282,7 +300,7 @@ Get-ADuser -filter {(Enabled -eq &quot;True&quot;) -and (LastLogonDate -le $vdat
       &copy;2017, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
