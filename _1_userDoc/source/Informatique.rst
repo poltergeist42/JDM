@@ -6,6 +6,8 @@ Ce document réuni un ensemble d'informations, Manip et autre tips concernant
 la gestion / Maintenance des postes utilisateur et la gestion maintenance des parcs
 informatiques.
 
+####
+
 Cours
 =====
 
@@ -15,6 +17,8 @@ Cours
         
         * https://mva.microsoft.com/
 
+####
+        
 Matériel
 ========
 
@@ -31,6 +35,8 @@ Vérifier les garantie constructeur
 
         * http://h20565.www2.hpe.com/hpsc/wc/public/home?lang=fr-fr&cc=fr
         
+
+####
         
 Poste de travail
 ================
@@ -52,6 +58,7 @@ Excel
             
                 =NON(MOD(LIGNE() ;2))
         
+####
         
 SysAdmin
 ========
@@ -113,6 +120,16 @@ PowerShell
             $LastBootTime = (Get-WmiObject win32_Operatingsystem).LastBootUpTime
             [System.Management.ManagementDateTimeConverter]::ToDateTime($LastBootTime)
 
+    #. Se connecter à Exchange ::
+    
+            $Credentials = Get-Credential
+            $ExSession = New-PSSession –ConfigurationName Microsoft.Exchange –ConnectionUri ‘http://SRV-MAIL.poree.local/PowerShell/?SerializationLevel=Full’ -Credential $Credentials –Authentication Kerberos
+            Import-PSSession $ExSession
+            ...
+            Remove-PSSession $ExSession
+            
+####
+            
 Router, Firewall, Proxy
 =======================
 

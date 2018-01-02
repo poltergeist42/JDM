@@ -447,30 +447,6 @@ La procédure d'utilisation :
     
 ------------------------------------------------------------------------------------------
 
-créer un setup.py (installable avec pip) et mettre sa bibliothèque en ligne sur pypi
-====================================================================================
-
-:Liens_Web:
-            * http://sametmax.com/creer-un-setup-py-et-mettre-sa-bibliotheque-python-en-ligne-sur-pypi/
-                # Un cook book (fr)
-
-------------------------------------------------------------------------------------------
-
-Fichiers de configuration (.ini)
-================================
-
-:Liens WEB:  
-            * http://stackoverflow.com/questions/8884188/how-to-read-and-write-ini-file-with-python
-               # exemple util pour comprendre le fonctionnement                                              
-            * http://www.marclebrun.be/wiki/doku.php?id=python:fichier_de_configuration_configparser
-               # Exemple en français (python2)
-            * http://www.developpez.net/forums/blogs/208887-tyrtamos/b23/simplifier-gestion-fichiers-ini-python/
-               # Autre exemple (pytohn3) en français
-            * https://docs.python.org/3.4/library/configparser.html
-               # Doc officiel (EN)
-
-------------------------------------------------------------------------------------------
-
 Format JSON
 ===========
 
@@ -723,15 +699,6 @@ Passer des paramètres à un programme avec argparse
             args.log.close()
 
 ------------------------------------------------------------------------------------------
-
-Les context managers et le mot clé 'with' en Python
-===================================================
-
-:Liens Web:
-    http://sametmax.com/les-context-managers-et-le-mot-cle-with-en-python/
-        # Article de présentation et d'utilisation sur les context managers
-        
-------------------------------------------------------------------------------------------
         
 Connaître le nombre de CPU d'un système
 =======================================
@@ -755,18 +722,6 @@ logging Library
 :Description:
             Cette Lib permet de faire du log sur des éléments.
             
-------------------------------------------------------------------------------------------
-
-hashlib Library
-===============
-
-:Liens Web:
-            * http://sametmax.com/md5-en-bash-php-python-et-javascript/
-                # un petit exemple vite fait
-                
-            * https://docs.python.org/3.4/library/hashlib.html
-                # la doc de la lib
-                
 ------------------------------------------------------------------------------------------
 
 Utilisation de l'underscore (_)
@@ -867,10 +822,17 @@ Connaître l'os de travail
     
 ------------------------------------------------------------------------------------------
 
-matplotlib
-==========
+URLtheque
+=========
 
-:Liens_Web:
+Ici se trouvent un enssemble de liens intéressant dont le sujet ne nécéssitent pas
+d'éxplications supplémentaires.
+
+:Les context managers et le mot clé 'with' en Python:
+            * http://sametmax.com/les-context-managers-et-le-mot-cle-with-en-python/
+                # Article de présentation et d'utilisation sur les context managers
+                
+:matplotlib:
             * http://www.science-emergence.com/Articles/Tutoriel-Matplotlib/
                 # petite introduction (fr)
                 
@@ -879,5 +841,26 @@ matplotlib
                 
             * https://matplotlib.org/users/tutorials.html
                 # tuto du site officiel
+
+:hashlib Library:
+            * http://sametmax.com/md5-en-bash-php-python-et-javascript/
+                # un petit exemple vite fait
                 
-    
+            * https://docs.python.org/3.4/library/hashlib.html
+                # la doc de la lib
+                
+:créer un setup.py (installable avec pip) et mettre sa bibliothèque en ligne sur pypi:
+            * http://sametmax.com/creer-un-setup-py-et-mettre-sa-bibliotheque-python-en-ligne-sur-pypi/
+                # Un cook book (fr)
+
+:Fichiers de configuration (.ini):
+            * http://stackoverflow.com/questions/8884188/how-to-read-and-write-ini-file-with-python
+               # exemple util pour comprendre le fonctionnement                                              
+            * http://www.marclebrun.be/wiki/doku.php?id=python:fichier_de_configuration_configparser
+               # Exemple en français (python2)
+            * http://www.developpez.net/forums/blogs/208887-tyrtamos/b23/simplifier-gestion-fichiers-ini-python/
+               # Autre exemple (pytohn3) en français
+            * https://docs.python.org/3.4/library/configparser.html
+               # Doc officiel (EN)
+
+
