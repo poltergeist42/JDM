@@ -49,6 +49,7 @@
 <p>Ce document réuni un ensemble d’informations, Manip et autre tips concernant
 la gestion / Maintenance des postes utilisateur et la gestion maintenance des parcs
 informatiques.</p>
+<hr class="docutils" />
 <div class="section" id="cours">
 <h2>Cours<a class="headerlink" href="#cours" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
@@ -64,6 +65,7 @@ informatiques.</p>
 </ol>
 </div></blockquote>
 </div>
+<hr class="docutils" />
 <div class="section" id="materiel">
 <h2>Matériel<a class="headerlink" href="#materiel" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Information pour la gestion maintenance des matériel</p>
@@ -89,6 +91,7 @@ informatiques.</p>
 </div></blockquote>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="poste-de-travail">
 <h2>Poste de travail<a class="headerlink" href="#poste-de-travail" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Toutes les informations concernant l’utilisation et la maintenance des postes utilisateurs.</p>
@@ -122,6 +125,7 @@ informatiques.</p>
 </div></blockquote>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="sysadmin">
 <h2>SysAdmin<a class="headerlink" href="#sysadmin" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ensemble d’informations relative à l’administration Système</p>
@@ -205,10 +209,20 @@ $LastBootTime = (Get-WmiObject win32_Operatingsystem).LastBootUpTime
 </pre></div>
 </div>
 </li>
+<li><p class="first">Se connecter à Exchange</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$Credentials = Get-Credential
+$ExSession = New-PSSession –ConfigurationName Microsoft.Exchange –ConnectionUri ‘http://SRV-MAIL.poree.local/PowerShell/?SerializationLevel=Full’ -Credential $Credentials –Authentication Kerberos
+Import-PSSession $ExSession
+...
+Remove-PSSession $ExSession
+</pre></div>
+</div>
+</li>
 </ol>
 </div></blockquote>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="router-firewall-proxy">
 <h2>Router, Firewall, Proxy<a class="headerlink" href="#router-firewall-proxy" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="sophos">

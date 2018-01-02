@@ -23,6 +23,7 @@ Mon journal de manip
    Powershell
    Python
    Raspberry
+   Soudure
    URLtheque
    VIM
 

@@ -24,6 +24,11 @@ Informatique
             
         * https://technet.microsoft.com/en-us/library/cc708578(v=ws.10).aspx
             # Server Cleanup Wizard
+            
+    #. Commandes Google
+    
+        * http://www.rankspirit.com/commandes-google.php
+        * http://www.webrankinfo.com/commandes/google
 
 ------------------------------------------------------------------------------------------
 
