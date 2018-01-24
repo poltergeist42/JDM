@@ -2,6 +2,13 @@
 HTML_CSS
 ========
 
+:Liens_Web:
+            * http://www.html5-css3-pense-bete.fr/
+                # pense bête html5 et Css3
+              
+            * http://41mag.fr/liste-des-balises-html5/balise-br-html5
+                # Glossaire de toutes les balises html5
+
 Rappel des balises courantes en HTML
 ====================================
 
