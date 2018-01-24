@@ -35,6 +35,17 @@ Obtenir de l'aide
         * Pour l’aide en ligne ::
 
             get-help Get-Help -online
+            
+Obtenir de l'aide sur le formatage et l'utilisation des commentaires
+--------------------------------------------------------------------
+
+:Liens_Web:
+            * https://msdn.microsoft.com/en-us/library/aa965353%28VS.85%29.aspx?f=255&MSPPError=-2147217396
+
+    #. Command powershell ::
+    
+        help about_comment_based
+            
 
 Activer / Désactiver le mode débogage
 -------------------------------------
@@ -363,3 +374,14 @@ Créer des interfaces graphiques
             * https://www.supinfo.com/articles/single/1933-interface-graphique-xaml-script-powershell
                 # une astuce pour ne pas avoir à ecrire le code XAML
                 
+----------------------------------------------------------
+
+Conaitre les iformations de tous les medias
+==========================================
+    ::
+
+        ## Pour obtenir les infos de tous les médias
+        Get-WmiObject Win32_LogicalDisk -comp "localhost" | select -Property * | fl
+
+        ## Pour obtenir les infos d'un média en particulier (ex : le disque dur C:
+        Get-WmiObject Win32_LogicalDisk -comp "localhost" | where {$_.Name -like "C:"} | select -Property * | fl
