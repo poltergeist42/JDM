@@ -377,7 +377,7 @@ Créer des interfaces graphiques
 ----------------------------------------------------------
 
 Conaitre les iformations de tous les medias
-==========================================
+===========================================
     ::
 
         ## Pour obtenir les infos de tous les médias
