@@ -128,7 +128,7 @@ Traitement des répertoires
 shutil library
 ==============
 
-:Liens Web:
+:Liens_Web:
             * https://docs.python.org/3.4/library/shutil.html
                 # Documentation officielle de la lib.
                 
@@ -713,14 +713,96 @@ logging Library
 ===============
 
 :Liens Web:
-            * http://sametmax.com/ecrire-des-logs-en-python/
-                # L'explication qui vas bien
+            * https://www.digitalocean.com/community/tutorials/how-to-use-logging-in-python-3
+                # une intro en douceur
             
-            * https://docs.python.org/3.4/library/logging.html
+            * http://sametmax.com/ecrire-des-logs-en-python/
+                # Une explication et une démonstration impeu fouilli
+            
+            * https://docs.python.org/3.6/library/logging.html
                 # La doc officielle
+                
+            * https://docs.python.org/3.6/howto/logging-cookbook.html#logging-cookbook
+                # Le cookbook (indigest)
+                
+            * https://docs.python.org/3.6/howto/logging.html#useful-handlers
+                # Basic Logging Tutorial
                 
 :Description:
             Cette Lib permet de faire du log sur des éléments.
+            
+    Cette Lib doit être intégrée dans le code (pas de décorateur et pas de "débraillage").
+    Les niveaux d'alertes son à définir soit même. Ils correspondent à un entier allant de
+    10 à 50 par palier de 10.
+    
+:Définition_des_niveaux_d'alerte:
+
+    +----------+---------+--------------------+------------------------------------------+
+    | Level    | Numeric | Function           | Used to                                  |
+    |          | Value   |                    |                                          |
+    +==========+=========+====================+==========================================+
+    | Critical |  50     | logging.critical() | Show a serious error, the program may be |
+    |          |         |                    | unable to continue running               |
+    +----------+---------+--------------------+------------------------------------------+
+    | Error    |  40     | logging.error()    | Show a more serious problem              |
+    |          |         |                    |                                          |
+    +----------+---------+--------------------+------------------------------------------+
+    | Warning  |  30     | logging.warning()  | Indicate something unexpected happened,  |
+    |          |         |                    | or could happen                          |
+    +----------+---------+--------------------+------------------------------------------+
+    | Info     |  20     | logging.info()     | Confirm that things are working          |    
+    |          |         |                    | as expected                              |
+    +----------+---------+--------------------+------------------------------------------+
+    | Debug    |  10     | logging.debug()    | Diagnose problems,                       |
+    |          |         |                    | show detailed information                |    
+    +----------+---------+--------------------+------------------------------------------+
+            
+:Snipet:
+    
+    Ce Snipet vient de Sam&Max
+
+    ::
+    
+        #!/usr/bin/env python
+        # -*- coding: utf-8 -*-
+         
+        import logging
+         
+        from logging.handlers import RotatingFileHandler
+         
+        logger = logging.getLogger()
+            # création de l'objet logger qui va nous servir à écrire dans les logs
+            
+        logger.setLevel(logging.DEBUG)
+            # on met le niveau du logger à DEBUG, comme ça il écrit tout
+        
+        formatter = logging.Formatter('%(asctime)s :: %(levelname)s :: %(funcName)s :: %(lineno)d :: %(message)s')
+            # création d'un formateur qui va ajouter le temps, le niveau
+            # de chaque message quand on écrira un message dans le log
+            #
+            # Les diférents attribue utilisablent avec le formateur :
+            # https://docs.python.org/3.6/library/logging.html#logrecord-attributes
+        
+        file_handler = RotatingFileHandler('activity.log', 'a', 1000000, 1)
+            # création d'un handler qui va rediriger une écriture du log vers
+            # un fichier en mode 'append', avec 1 backup et une taille max de 1Mo
+        
+        file_handler.setLevel(logging.DEBUG)
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+            # on lui met le niveau sur DEBUG, on lui dit qu'il doit utiliser le formateur
+            # créé précédement et on ajoute ce handler au logger
+         
+        stream_handler = logging.StreamHandler()
+        stream_handler.setLevel(logging.DEBUG)
+        logger.addHandler(stream_handler)
+            # création d'un second handler qui va rediriger chaque écriture de log
+            # sur la console
+         
+        logger.info('Hello')
+        logger.warning('Testing %s', 'foo')
+            # Après 3 heures, on peut enfin logguer
+            # Il est temps de spammer votre code avec des logs partout
             
 ------------------------------------------------------------------------------------------
 

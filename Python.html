@@ -211,7 +211,7 @@ son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://docs.python.org/3.4/library/shutil.html">https://docs.python.org/3.4/library/shutil.html</a></dt>
 <dd># Documentation officielle de la lib.</dd>
@@ -1024,19 +1024,134 @@ automatiquement.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first simple">
 <li><dl class="first docutils">
-<dt><a class="reference external" href="http://sametmax.com/ecrire-des-logs-en-python/">http://sametmax.com/ecrire-des-logs-en-python/</a></dt>
-<dd># L’explication qui vas bien</dd>
+<dt><a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-use-logging-in-python-3">https://www.digitalocean.com/community/tutorials/how-to-use-logging-in-python-3</a></dt>
+<dd># une intro en douceur</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt><a class="reference external" href="https://docs.python.org/3.4/library/logging.html">https://docs.python.org/3.4/library/logging.html</a></dt>
+<dt><a class="reference external" href="http://sametmax.com/ecrire-des-logs-en-python/">http://sametmax.com/ecrire-des-logs-en-python/</a></dt>
+<dd># Une explication et une démonstration impeu fouilli</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.python.org/3.6/library/logging.html">https://docs.python.org/3.6/library/logging.html</a></dt>
 <dd># La doc officielle</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.python.org/3.6/howto/logging-cookbook.html#logging-cookbook">https://docs.python.org/3.6/howto/logging-cookbook.html#logging-cookbook</a></dt>
+<dd># Le cookbook (indigest)</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.python.org/3.6/howto/logging.html#useful-handlers">https://docs.python.org/3.6/howto/logging.html#useful-handlers</a></dt>
+<dd># Basic Logging Tutorial</dd>
 </dl>
 </li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body"><p class="first last">Cette Lib permet de faire du log sur des éléments.</p>
+<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body"><blockquote class="first">
+<div><p>Cette Lib permet de faire du log sur des éléments.</p>
+</div></blockquote>
+<p>Cette Lib doit être intégrée dans le code (pas de décorateur et pas de «&nbsp;débraillage&nbsp;»).
+Les niveaux d’alertes son à définir soit même. Ils correspondent à un entier allant de
+10 à 50 par palier de 10.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Définition_des_niveaux_d’alerte:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><table border="1" class="first docutils">
+<colgroup>
+<col width="12%" />
+<col width="11%" />
+<col width="25%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Level</th>
+<th class="head">Numeric
+Value</th>
+<th class="head">Function</th>
+<th class="head">Used to</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Critical</td>
+<td>50</td>
+<td>logging.critical()</td>
+<td>Show a serious error, the program may be
+unable to continue running</td>
+</tr>
+<tr class="row-odd"><td>Error</td>
+<td>40</td>
+<td>logging.error()</td>
+<td>Show a more serious problem</td>
+</tr>
+<tr class="row-even"><td>Warning</td>
+<td>30</td>
+<td>logging.warning()</td>
+<td>Indicate something unexpected happened,
+or could happen</td>
+</tr>
+<tr class="row-odd"><td>Info</td>
+<td>20</td>
+<td>logging.info()</td>
+<td>Confirm that things are working
+as expected</td>
+</tr>
+<tr class="row-even"><td>Debug</td>
+<td>10</td>
+<td>logging.debug()</td>
+<td>Diagnose problems,
+show detailed information</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Snipet:</th><td class="field-body"><p class="first">Ce Snipet vient de Sam&amp;Max</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">logging.handlers</span> <span class="k">import</span> <span class="n">RotatingFileHandler</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
+    <span class="c1"># création de l&#39;objet logger qui va nous servir à écrire dans les logs</span>
+
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+    <span class="c1"># on met le niveau du logger à DEBUG, comme ça il écrit tout</span>
+
+<span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> :: </span><span class="si">%(levelname)s</span><span class="s1"> :: </span><span class="si">%(funcName)s</span><span class="s1"> :: </span><span class="si">%(lineno)d</span><span class="s1"> :: </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="c1"># création d&#39;un formateur qui va ajouter le temps, le niveau</span>
+    <span class="c1"># de chaque message quand on écrira un message dans le log</span>
+    <span class="c1">#</span>
+    <span class="c1"># Les diférents attribue utilisablent avec le formateur :</span>
+    <span class="c1"># https://docs.python.org/3.6/library/logging.html#logrecord-attributes</span>
+
+<span class="n">file_handler</span> <span class="o">=</span> <span class="n">RotatingFileHandler</span><span class="p">(</span><span class="s1">&#39;activity.log&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># création d&#39;un handler qui va rediriger une écriture du log vers</span>
+    <span class="c1"># un fichier en mode &#39;append&#39;, avec 1 backup et une taille max de 1Mo</span>
+
+<span class="n">file_handler</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<span class="n">file_handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">file_handler</span><span class="p">)</span>
+    <span class="c1"># on lui met le niveau sur DEBUG, on lui dit qu&#39;il doit utiliser le formateur</span>
+    <span class="c1"># créé précédement et on ajoute ce handler au logger</span>
+
+<span class="n">stream_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
+<span class="n">stream_handler</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">stream_handler</span><span class="p">)</span>
+    <span class="c1"># création d&#39;un second handler qui va rediriger chaque écriture de log</span>
+    <span class="c1"># sur la console</span>
+
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Testing </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+    <span class="c1"># Après 3 heures, on peut enfin logguer</span>
+    <span class="c1"># Il est temps de spammer votre code avec des logs partout</span>
+</pre></div>
+</div>
 </td>
 </tr>
 </tbody>
