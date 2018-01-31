@@ -36,17 +36,45 @@ Obtenir de l'aide
 
             get-help Get-Help -online
             
-Obtenir de l'aide sur le formatage et l'utilisation des commentaires
---------------------------------------------------------------------
+    #. Obtenir la liste de toutes les blibliothèques d'aide dans PowerShell ::
+    
+        help about
+        
+    #. Obtenir de l'aide sur le formatage et l'utilisation des commentaires
 
-:Liens_Web:
+        :Liens_Web:
             * https://msdn.microsoft.com/en-us/library/aa965353%28VS.85%29.aspx?f=255&MSPPError=-2147217396
 
-    #. Command powershell ::
+        * Command powershell ::
     
-        help about_comment_based
+            help about_comment_based
             
+    #. Obtenir de l'aide sur les méthodes ou les propriétés d'un objet ".net"
+    
+        #. Identifier le type (TypeName) de l'objet avec Get-Member
+        
+            ::
+            
+                > $a = ""
+                > $a | gm
+                
+                    TypeName : System.String
+                    
+        #. Rechercher dans Google le TypeName identifier et aller sur la page 
+           Microsoft MSDN correspondant a la classe de l'objet
+        
+            ::
+            
+                Recherche : System.String
+                
+                Résultat :
+                
+                    String classe (System) - MSDN - Microsoft
+                    https://msdn.microsoft.com/fr-fr/library/system.string(v=vs.110).aspx
 
+        #. Séléctionner dans le menu de gauche la rubrique désirée (Constructeur, Méthode,
+           Propriétés)
+            
 Activer / Désactiver le mode débogage
 -------------------------------------
 

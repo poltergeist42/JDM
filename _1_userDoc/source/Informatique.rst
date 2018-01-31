@@ -8,9 +8,29 @@ informatiques.
 
 ####
 
-Cours
-=====
+Cours et connaissances génériques
+=================================
 
+    #. Les Expressions Régulières (RegEx)
+    
+        * http://go.microsoft.com/fwlink/?LinkId=133231
+            # Un descriptif complet sur les élément de syntax
+            
+        * https://regex101.com/
+            # pour tester (et décrypter) les RegEx
+            
+        * Obtenir de l'aide sur les RegEx en PowerShell
+        
+            ::
+            
+                help about_regular_expressions
+                
+        * Lib python pour les RexEx
+        
+            ::
+            
+                import re
+    
     #. Microsoft Virtual Academy
     
         Cours en ligne gratuis dispenser par microsoft
