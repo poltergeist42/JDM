@@ -8,6 +8,13 @@ HTML_CSS
               
             * http://41mag.fr/liste-des-balises-html5/balise-br-html5
                 # Glossaire de toutes les balises html5
+                
+            * http://www.phpoc.com/forum/viewforum.php?f=51
+                # De nombreux examples d'utilisation du **CANVAS** et HTML5
+                
+            * http://putaindecode.io/fr/articles/github/pages/site-web-gratuit/
+                # Site traitant de la programmation des site WEB
+
 
 Rappel des balises courantes en HTML
 ====================================
