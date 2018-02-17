@@ -27,7 +27,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Soudure" href="Soudure.html" />
+    <link rel="next" title="Regex" href="Regex.html" />
     <link rel="prev" title="PYTHON" href="Python.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -114,6 +114,61 @@
 </tbody>
 </table>
 </div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-passer-la-langue-et-le-clavier-en-francais">
+<h2>pour passer la langue et le clavier en français<a class="headerlink" href="#pour-passer-la-langue-et-le-clavier-en-francais" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="http://the-raspberry.com/changer-langue-raspberry-pi">http://the-raspberry.com/changer-langue-raspberry-pi</a></li>
+<li><a class="reference external" href="https://www.raspberrypi.org/forums/viewtopic.php?f=65&amp;t=21700">https://www.raspberrypi.org/forums/viewtopic.php?f=65&amp;t=21700</a></li>
+</ul>
+</div></blockquote>
+<ol class="last arabic">
+<li><p class="first">Changer la langue depuis l’interface de configuration du Pi</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>se connecter a l’interface de configuration</dt>
+<dd><ul class="first last">
+<li>sudo raspi-config</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Ouvrir le menu «&nbsp;5 Internalisation Options&nbsp;»</li>
+<li>Ouvrir «&nbsp;I1 Change Locale&nbsp;»</li>
+<li>Si une langue comme <strong>«&nbsp;en_GB.UTF-8 UTF-8&nbsp;»</strong> est cochée, décochez-la
+en appuyant sur <strong>«&nbsp;Espace&nbsp;»</strong></li>
+<li>Cochez la langue <strong>«&nbsp;fr_FR.UTF-8 UTF-8</strong>&nbsp;»</li>
+<li>Sélectionner <strong>«&nbsp;OK&nbsp;»</strong> puis valider</li>
+<li>Vérifier le jeu de paramétres régionaux puis valider sur <strong>«&nbsp;OK&nbsp;»</strong></li>
+<li>Valider sur «&nbsp;Finish&nbsp;» puis redemarrer</li>
+</ul>
+</li>
+<li><p class="first">Modifier manuellement le fichier keyboard</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>Editer le fichier keyboard</dt>
+<dd><ul class="first last">
+<li>sudo nano /etc/default/keyboard</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>remplacer «&nbsp;gb&nbsp;» par «&nbsp;fr&nbsp;»</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <hr class="docutils" />
 <div class="section" id="vocabulaire">
@@ -949,6 +1004,7 @@ de 2 façons différentes :</p>
 </li>
 <li><a class="reference internal" href="#acceder-au-fichier-de-configuration-du-rpi">Accéder au fichier de configuration du RPI</a></li>
 <li><a class="reference internal" href="#connaitre-la-configuration-materiel-du-rpi">Connaître la configuration matériel du RPI</a></li>
+<li><a class="reference internal" href="#pour-passer-la-langue-et-le-clavier-en-francais">pour passer la langue et le clavier en français</a></li>
 <li><a class="reference internal" href="#vocabulaire">Vocabulaire</a></li>
 <li><a class="reference internal" href="#la-bibliotheque-rpi-gpio">La bibliotheque RPi.GPIO</a><ul>
 <li><a class="reference internal" href="#implantation-rpi2">Implantation RPi2</a></li>
@@ -978,7 +1034,7 @@ de 2 façons différentes :</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="Python.html" title="Chapitre précédent">PYTHON</a></li>
-      <li>Next: <a href="Soudure.html" title="Chapitre suivant">Soudure</a></li>
+      <li>Next: <a href="Regex.html" title="Chapitre suivant">Regex</a></li>
   </ul></li>
 </ul>
 </div>

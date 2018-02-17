@@ -364,59 +364,13 @@ trouve sur le compte root.</p>
 </div></blockquote>
 </div>
 <hr class="docutils" />
-<div class="section" id="pour-passer-la-langue-et-le-clavier-en-francais">
-<h2>pour passer la langue et le clavier en français<a class="headerlink" href="#pour-passer-la-langue-et-le-clavier-en-francais" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">liens WEB:</th><td class="field-body"><blockquote class="first">
-<div><ul class="simple">
-<li><a class="reference external" href="http://the-raspberry.com/changer-langue-raspberry-pi">http://the-raspberry.com/changer-langue-raspberry-pi</a></li>
-<li><a class="reference external" href="https://www.raspberrypi.org/forums/viewtopic.php?f=65&amp;t=21700">https://www.raspberrypi.org/forums/viewtopic.php?f=65&amp;t=21700</a></li>
-</ul>
-</div></blockquote>
-<ol class="last arabic">
-<li><p class="first">Changer la langue depuis l’interface de configuration du Pi</p>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt>se connecter a l’interface de configuration</dt>
-<dd><ul class="first last">
-<li>sudo raspi-config</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li>Ouvrir le menu «&nbsp;5 Internalisation Options&nbsp;»</li>
-<li>Ouvrir «&nbsp;I1 Change Locale&nbsp;»</li>
-<li>Si une langue comme <strong>«&nbsp;en_GB.UTF-8 UTF-8&nbsp;»</strong> est cochée, décochez-la
-en appuyant sur <strong>«&nbsp;Espace&nbsp;»</strong></li>
-<li>Cochez la langue <strong>«&nbsp;fr_FR.UTF-8 UTF-8</strong>&nbsp;»</li>
-<li>Sélectionner <strong>«&nbsp;OK&nbsp;»</strong> puis valider</li>
-<li>Vérifier le jeu de paramétres régionaux puis valider sur <strong>«&nbsp;OK&nbsp;»</strong></li>
-<li>Valider sur «&nbsp;Finish&nbsp;» puis redemarrer</li>
-</ul>
-</li>
-<li><p class="first">Modifier manuellement le fichier keyboard</p>
+<div class="section" id="changer-la-disposition-du-clavier">
+<h2>Changer la disposition du clavier<a class="headerlink" href="#changer-la-disposition-du-clavier" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
-<div><ul class="simple">
-<li><dl class="first docutils">
-<dt>Editer le fichier keyboard</dt>
-<dd><ul class="first last">
-<li>sudo nano /etc/default/keyboard</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li>remplacer «&nbsp;gb&nbsp;» par «&nbsp;fr&nbsp;»</li>
-</ul>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dpkg</span><span class="o">-</span><span class="n">reconfigure</span> <span class="n">keyboard</span><span class="o">-</span><span class="n">configuration</span>
+</pre></div>
+</div>
 </div></blockquote>
-</li>
-</ol>
-</td>
-</tr>
-</tbody>
-</table>
 </div>
 <hr class="docutils" />
 <div class="section" id="pour-rendre-un-fichier-executable">
@@ -426,6 +380,26 @@ en appuyant sur <strong>«&nbsp;Espace&nbsp;»</strong></li>
 </pre></div>
 </div>
 </div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="activer-la-connection-ssh">
+<h2>Activer la connection ssh<a class="headerlink" href="#activer-la-connection-ssh" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux">https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux</a></li>
+</ul>
+</div></blockquote>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="c1"># aptitude install openssh-client openssh-server</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <hr class="docutils" />
 <div class="section" id="pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">
@@ -885,8 +859,9 @@ sur la première ligne de votre fichier</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique">Pour copier des fichiers en root depuis l’interface graphique</a></li>
-<li><a class="reference internal" href="#pour-passer-la-langue-et-le-clavier-en-francais">pour passer la langue et le clavier en français</a></li>
+<li><a class="reference internal" href="#changer-la-disposition-du-clavier">Changer la disposition du clavier</a></li>
 <li><a class="reference internal" href="#pour-rendre-un-fichier-executable">Pour rendre un fichier «&nbsp;Exécutable&nbsp;»</a></li>
+<li><a class="reference internal" href="#activer-la-connection-ssh">Activer la connection ssh</a></li>
 <li><a class="reference internal" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">Pour pouvoir se connecter en RDP sur un poste Linux</a></li>
 <li><a class="reference internal" href="#pour-faire-du-xforwarding">pour faire du XForwarding</a></li>
 <li><a class="reference internal" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">Pour mettre une IP fixe sur une interfaces réseau</a></li>

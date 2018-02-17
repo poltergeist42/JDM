@@ -14,6 +14,7 @@ Mon journal de manip
    Composants
    ComputerVision
    Django
+   Docker
    DocUtils_RST_Sphinx
    GIT
    HTML_CSS
@@ -23,6 +24,7 @@ Mon journal de manip
    Powershell
    Python
    Raspberry
+   Regex
    Soudure
    URLtheque
    VIM

@@ -42,13 +42,10 @@ Programmation
         * http://pise.info/algo/codage.htm
             # pour comprendre la programmation et l’algorithmie
         
-    #. HTML et Web
-    
-        * http://www.phpoc.com/forum/viewforum.php?f=51
-            # De nombreux examples d'utilisation du **CANVAS** et HTML5
-            
-        * http://putaindecode.io/fr/articles/github/pages/site-web-gratuit/
-            # Site traitant de la programmation des site WEB
+    #. DeepLearning et CNN
+
+        * https://keras.io/
+            # le site officiel de la Lib
 
 ------------------------------------------------------------------------------------------
 
@@ -144,4 +141,7 @@ Soudure / Plasma
 
     * http://www.soudeurs.com/site/quest-ce-que-le-coupage-plasma-865/
         # Définissions / Démonstration
+        
+    * https://www.youtube.com/watch?v=XeQ2P-F35Is
+        # Vidéo de démonstration des différente technique de soudage avec un mig
         

@@ -157,19 +157,3 @@ Types de champ les plus courant (models.py)
     * models.DateTimeField - Définit que le champ en question est une date ou une heure.
     * models.ForeignKey - C'est un lien vers un autre modèle.
 
-    
-Les Regex (Expression régulières)
-=================================
-
-:Liens_WEB:
-            * https://fr.wikipedia.org/wiki/Expression_rationnelle
-            
-Présentation rapide de la symbolique des expression régulière : ::
-
-    ^ -> le début du texte
-    $ -> la fin du texte
-    \d -> un chiffre
-    + -> indique que l'expression précédente doit se répéter au moins une fois
-    () -> capture une partie du pattern
-    
-    

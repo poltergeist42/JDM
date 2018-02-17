@@ -94,28 +94,64 @@
 </ul>
 </div></blockquote>
 </li>
-</ol>
+<li><p class="first">Obtenir la liste de toutes les blibliothèques d’aide dans PowerShell</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">help</span> <span class="n">about</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Obtenir de l’aide sur le formatage et l’utilisation des commentaires</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://msdn.microsoft.com/en-us/library/aa965353%28VS.85%29.aspx?f=255&amp;MSPPError=-2147217396">https://msdn.microsoft.com/en-us/library/aa965353%28VS.85%29.aspx?f=255&amp;MSPPError=-2147217396</a></li>
+</ul>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="obtenir-de-l-aide-sur-le-formatage-et-l-utilisation-des-commentaires">
-<h3>Obtenir de l’aide sur le formatage et l’utilisation des commentaires<a class="headerlink" href="#obtenir-de-l-aide-sur-le-formatage-et-l-utilisation-des-commentaires" title="Lien permanent vers ce titre">¶</a></h3>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
-<div><ul class="simple">
-<li><a class="reference external" href="https://msdn.microsoft.com/en-us/library/aa965353%28VS.85%29.aspx?f=255&amp;MSPPError=-2147217396">https://msdn.microsoft.com/en-us/library/aa965353%28VS.85%29.aspx?f=255&amp;MSPPError=-2147217396</a></li>
-</ul>
-</div></blockquote>
-<ol class="last arabic">
+<ul>
 <li><p class="first">Command powershell</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">help</span> <span class="n">about_comment_based</span>
 </pre></div>
 </div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Obtenir de l’aide sur les méthodes ou les propriétés d’un objet «&nbsp;.net&nbsp;»</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Identifier le type (TypeName) de l’objet avec Get-Member</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>&gt; $a = &quot;&quot;
+&gt; $a | gm
+
+    TypeName : System.String
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Rechercher dans Google le TypeName identifier et aller sur la page
+Microsoft MSDN correspondant a la classe de l’objet</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Recherche</span> <span class="p">:</span> <span class="n">System</span><span class="o">.</span><span class="n">String</span>
+
+<span class="n">Résultat</span> <span class="p">:</span>
+
+    <span class="n">String</span> <span class="n">classe</span> <span class="p">(</span><span class="n">System</span><span class="p">)</span> <span class="o">-</span> <span class="n">MSDN</span> <span class="o">-</span> <span class="n">Microsoft</span>
+    <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">msdn</span><span class="o">.</span><span class="n">microsoft</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fr</span><span class="o">-</span><span class="n">fr</span><span class="o">/</span><span class="n">library</span><span class="o">/</span><span class="n">system</span><span class="o">.</span><span class="n">string</span><span class="p">(</span><span class="n">v</span><span class="o">=</span><span class="n">vs</span><span class="o">.</span><span class="mi">110</span><span class="p">)</span><span class="o">.</span><span class="n">aspx</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Séléctionner dans le menu de gauche la rubrique désirée (Constructeur, Méthode,
+Propriétés)</p>
+</li>
+</ol>
+</div></blockquote>
 </li>
 </ol>
 </td>
@@ -594,8 +630,10 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 </div></blockquote>
 </div>
 <hr class="docutils" />
+<div class="section" id="wmiobject">
+<h2>WmiObject<a class="headerlink" href="#wmiobject" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="conaitre-les-iformations-de-tous-les-medias">
-<h2>Conaitre les iformations de tous les medias<a class="headerlink" href="#conaitre-les-iformations-de-tous-les-medias" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Conaitre les iformations de tous les medias<a class="headerlink" href="#conaitre-les-iformations-de-tous-les-medias" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span>## Pour obtenir les infos de tous les médias
 Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | select -Property * | fl
@@ -605,6 +643,23 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 </pre></div>
 </div>
 </div></blockquote>
+</div>
+<div class="section" id="connaitre-la-clef-de-licence-de-windows">
+<h3>Connaitre la clef de licence de Windows<a class="headerlink" href="#connaitre-la-clef-de-licence-de-windows" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>(Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="connaitre-les-information-du-bios">
+<h3>Connaitre les information du BIOS<a class="headerlink" href="#connaitre-les-information-du-bios" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">WmiObject</span> <span class="n">win32_bios</span> <span class="o">|</span> <span class="n">select</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
 </div>
 </div>
 
@@ -619,7 +674,6 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 <li><a class="reference internal" href="#">PowerShell</a><ul>
 <li><a class="reference internal" href="#commandes-utiles">Commandes utiles</a><ul>
 <li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l’aide</a></li>
-<li><a class="reference internal" href="#obtenir-de-l-aide-sur-le-formatage-et-l-utilisation-des-commentaires">Obtenir de l’aide sur le formatage et l’utilisation des commentaires</a></li>
 <li><a class="reference internal" href="#activer-desactiver-le-mode-debogage">Activer / Désactiver le mode débogage</a></li>
 <li><a class="reference internal" href="#windows-powershell-integrated-scripting-environment-ise">Windows PowerShell Integrated Scripting Environment (ISE)</a></li>
 <li><a class="reference internal" href="#autoriser-lexecution-des-script">Autoriser l’exécution des script</a></li>
@@ -644,7 +698,12 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 <li><a class="reference internal" href="#stocker-un-chemin-puis-y-retourne">stocker un chemin puis y retourné</a></li>
 <li><a class="reference internal" href="#tester-si-un-chemin-exist">Tester si un chemin exist</a></li>
 <li><a class="reference internal" href="#creer-des-interfaces-graphiques">Créer des interfaces graphiques</a></li>
+<li><a class="reference internal" href="#wmiobject">WmiObject</a><ul>
 <li><a class="reference internal" href="#conaitre-les-iformations-de-tous-les-medias">Conaitre les iformations de tous les medias</a></li>
+<li><a class="reference internal" href="#connaitre-la-clef-de-licence-de-windows">Connaitre la clef de licence de Windows</a></li>
+<li><a class="reference internal" href="#connaitre-les-information-du-bios">Connaitre les information du BIOS</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
