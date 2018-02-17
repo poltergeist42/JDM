@@ -404,8 +404,11 @@ Créer des interfaces graphiques
                 
 ----------------------------------------------------------
 
+WmiObject
+=========
+
 Conaitre les iformations de tous les medias
-===========================================
+-------------------------------------------
     ::
 
         ## Pour obtenir les infos de tous les médias
@@ -413,3 +416,15 @@ Conaitre les iformations de tous les medias
 
         ## Pour obtenir les infos d'un média en particulier (ex : le disque dur C:
         Get-WmiObject Win32_LogicalDisk -comp "localhost" | where {$_.Name -like "C:"} | select -Property * | fl
+        
+Connaitre la clef de licence de Windows
+---------------------------------------
+    ::
+    
+        (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey
+        
+Connaitre les information du BIOS
+---------------------------------
+    ::
+    
+        Get-WmiObject win32_bios | select *

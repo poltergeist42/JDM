@@ -58,6 +58,38 @@ Connaître la configuration matériel du RPI
 
   :CPU:                 * cat /proc/cpuinfo
 
+
+------------------------------------------------------------------------------------------
+
+pour passer la langue et le clavier en français
+===============================================
+
+:liens WEB:
+            * http://the-raspberry.com/changer-langue-raspberry-pi
+            * https://www.raspberrypi.org/forums/viewtopic.php?f=65&t=21700
+
+        #.  Changer la langue depuis l'interface de configuration du Pi
+        
+            * se connecter a l'interface de configuration
+                + sudo raspi-config
+            
+            * Ouvrir le menu "5 Internalisation Options"
+            * Ouvrir "I1 Change Locale"
+            * Si une langue comme **"en_GB.UTF-8 UTF-8"** est cochée, décochez-la
+              en appuyant sur **"Espace"**
+            * Cochez la langue **"fr_FR.UTF-8 UTF-8**"
+            * Sélectionner **"OK"** puis valider
+            * Vérifier le jeu de paramétres régionaux puis valider sur **"OK"**
+            * Valider sur "Finish" puis redemarrer
+            
+        #. Modifier manuellement le fichier keyboard
+        
+            * Editer le fichier keyboard
+                + sudo nano /etc/default/keyboard
+                
+            * remplacer "gb" par "fr"
+
+
 ------------------------------------------------------------------------------------------
 
 Vocabulaire
