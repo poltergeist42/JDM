@@ -88,6 +88,21 @@ Activer / Désactiver le mode débogage
             
 ----------------------------------------------------------
 
+Slicing
+=======
+    
+    ::
+    
+        $a = "test.txt"
+        $a.Substring(0, $a.length -4)
+        > test
+        $a.Substring(2, $a.length -4)
+        > st.t
+        $a.Substring($a.length -4)
+        > .txt
+        
+----------------------------------------------------------
+
 Windows PowerShell Integrated Scripting Environment (ISE)
 ---------------------------------------------------------
 

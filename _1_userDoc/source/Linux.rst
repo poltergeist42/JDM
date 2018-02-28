@@ -102,32 +102,127 @@ faire une élévation valable toute la durée de la session
     ::
     
         sudo -s
+        # N.B : Le prompt devrais passer en root@[nom_de_machine]
         
 ------------------------------------------------------------------------------------------
 
-Connaître la liste des groupes aux quels appartient un utilisateur
-==================================================================
+Gestion des permissions
+=======================
 
-    ::
+Groupes
+-------
+
+    #. Connaître la liste des groupes aux quels appartient un utilisateur
+        ::
     
-        groups [nom_d'utilisateur]
+            groups [nom_d'utilisateur]
+            
+            ex :
+            
+            $ groups polter
+            polter : polter adm cdrom sudo dip plugdev
+            
+    #. Ajouter un utilisateur à un groupes
+        ::
         
-        ex :
-        
-        $ groups polter
-        polter : polter adm cdrom sudo dip plugdev
+            sudo usermode -aG [nom_du_groupe] [nom_de_l'utilisateur]
+            
+            ex :
+            
+            $ usermode -aG docker polter
+            
+ACL (Propriétaire, RWX)
+-----------------------
+
+    #. Changer le propriétaire d'un dossier (ownership)
+        ::
+    
+            chown root:[nom_d'utilisateur] [nom_du_dossier]/
+            
+            ex :
+            
+                chown root:volab echanges/
+                
+    #. Mettre les droits sur un dossier
+        ::
+    
+            chmod -R 0777 [nom_du_dossier]
+            
+            ex :
+            
+                chmod -R 0777 echanges
+
+    #. Pour rendre un fichier "Exécutable"
+        ::
+
+                chmod a+x [nomDuFichier]
 
 ------------------------------------------------------------------------------------------
 
-Changer le propriétaire d'un dossier (ownership)
-================================================
+Date et heure
+=============
+
+Conaitre la date et l'heure du système
+--------------------------------------
     ::
     
-        chown root:[nom_d'utilisateur] [nom_du_dossier]/
+        date
         
-        ex :
+Synchronyser la date et l'heure avec un serveur de temp (NTP)
+-------------------------------------------------------------
+
+:Liens_Web:
+            * https://www1.zonewebmaster.eu/serveur-debian-general:regler-date-heure
+            * https://www.system-linux.eu/index.php?post/2010/01/05/Mettre-vos-serveurs-%C3%A0-la-bonne-heure-avec-NTP
+                # N.B : Les explications ci-dessous sont un mixe en les 2 liens
+                
+    #. Télécharger et installer les paquets
+        ::
         
-            chown root:volab echanges/
+            sudo apt-get update
+            sudo apt-get install ntp ntpdate
+            
+    #. Editer le fichier ntp.conf et ajouter les serveurs NTP.fr
+        ::
+        
+            nano /etc/ntp.conf
+            
+            ## Ajouter les serveur NTP français
+            server 0.fr.pool.ntp.org prefer # Le terme 'prefer' indique le serveur NTP
+                                            # à utiliser de préférence
+            server 1.fr.pool.ntp.org
+            server 2.fr.pool.ntp.org
+            server 3.fr.pool.ntp.org
+            
+    #. Synchronyser le deamon avec les serveurs NTP
+        ::
+    
+            service ntp stop
+            ntpdate pool.ntp.org
+            service ntp start
+            
+    #. Vérifier le décallage avec tous les serveur NTP
+        ::
+        
+            ntpq -p
+
+------------------------------------------------------------------------------------------
+
+Arrêter / Démarrer les services (deamon)
+========================================
+
+    #. Arrêter / démarrer un service
+        ::
+        
+            service [nom_du_service] [action]
+            
+            ex :
+            service ntp stop
+            
+    #. Connaitre la liste est l'état de tous les services
+        ::
+        
+            service --status-all
 
 ------------------------------------------------------------------------------------------
 
@@ -154,17 +249,6 @@ Créer une tâche planifié (cron)
             # !!! Suppression immédiate, pas d'avertissement, pas de confirmation
 
 
-------------------------------------------------------------------------------------------
-
-Mettre les droits sur un dossier
-================================
-    ::
-    
-        chmod -R 0777 [nom_du_dossier]
-        
-        ex :
-        
-            chmod -R 0777 echanges
 
 ------------------------------------------------------------------------------------------
 
@@ -237,14 +321,6 @@ Changer la disposition du clavier
 
 ------------------------------------------------------------------------------------------
 
-Pour rendre un fichier "Exécutable"
-===================================
-    ::
-
-            chmod a+x [nomDuFichier]
-                    
-------------------------------------------------------------------------------------------
-
 Activer la connection ssh
 =========================
 
@@ -253,7 +329,7 @@ Activer la connection ssh
             
     :: 
     
-        # aptitude install openssh-client openssh-server
+        sudo aptitude install openssh-client openssh-server
 
 ------------------------------------------------------------------------------------------
 
