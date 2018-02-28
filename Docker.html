@@ -46,6 +46,8 @@
             
   <div class="section" id="docker">
 <h1>Docker<a class="headerlink" href="#docker" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -61,6 +63,73 @@
 </tr>
 </tbody>
 </table>
+<div class="section" id="installation-manuelle">
+<h3>Installation manuelle<a class="headerlink" href="#installation-manuelle" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">MAJ et installation des paquets nécessaires</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo apt-get update
+
+$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+</pre></div>
+</div>
+</li>
+<li><p class="first">Récupérer la clef GPG de docker</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+</pre></div>
+</div>
+</li>
+<li><p class="first">Vérifier que l’empreinte de la clef est la bonne</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo apt-key fingerprint 0EBFCD88
+
+--&gt; pub   4096R/0EBFCD88 2017-02-22
+--&gt;       Key fingerprint = 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+--&gt; uid                  Docker Release (CE deb) &lt;docker@docker.com&gt;
+--&gt; sub   4096R/F273FCD8 2017-02-22
+</pre></div>
+</div>
+</li>
+<li><p class="first">Installer docker</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo apt-get update
+$ sudo apt-get install docker-ce
+</pre></div>
+</div>
+</li>
+<li><p class="first">Tester si docker fonctionne</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo docker run hello-world
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="version-facile-automatique">
+<h3>Version facile / Automatique<a class="headerlink" href="#version-facile-automatique" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Télécharger le script d’installation automatique</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="n">dockerinstall</span><span class="o">.</span><span class="n">sh</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">get</span><span class="o">.</span><span class="n">docker</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Executer le script</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sh</span> <span class="o">./</span><span class="n">dockerinstall</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Intégrer l’utilisateur au groupe docker</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">usermod</span> <span class="o">-</span><span class="n">aG</span> <span class="n">docker</span> <span class="n">pierre</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
 <hr class="docutils" />
 <div class="section" id="obtenir-la-list-des-images-containers-presents-sur-le-poste">
 <h2>Obtenir la list des images/containers présents sur le poste<a class="headerlink" href="#obtenir-la-list-des-images-containers-presents-sur-le-poste" title="Lien permanent vers ce titre">¶</a></h2>
@@ -108,6 +177,11 @@
   <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Docker</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#installation-manuelle">Installation manuelle</a></li>
+<li><a class="reference internal" href="#version-facile-automatique">Version facile / Automatique</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#obtenir-la-list-des-images-containers-presents-sur-le-poste">Obtenir la list des images/containers présents sur le poste</a></li>
 <li><a class="reference internal" href="#lancer-une-image-container">Lancer une image/container</a></li>
 <li><a class="reference internal" href="#sortir-d-un-container-mode-iterractif">Sortir d’un container (mode iterractif)</a></li>

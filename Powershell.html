@@ -176,6 +176,21 @@ Propriétés)</p>
 </ol>
 </div></blockquote>
 </div>
+</div>
+<hr class="docutils" />
+<div class="section" id="slicing">
+<h2>Slicing<a class="headerlink" href="#slicing" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>$a = &quot;test.txt&quot;
+$a.Substring(0, $a.length -4)
+&gt; test
+$a.Substring(2, $a.length -4)
+&gt; st.t
+$a.Substring($a.length -4)
+&gt; .txt
+</pre></div>
+</div>
+</div></blockquote>
 <hr class="docutils" />
 <div class="section" id="windows-powershell-integrated-scripting-environment-ise">
 <h3>Windows PowerShell Integrated Scripting Environment (ISE)<a class="headerlink" href="#windows-powershell-integrated-scripting-environment-ise" title="Lien permanent vers ce titre">¶</a></h3>
@@ -675,6 +690,9 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 <li><a class="reference internal" href="#commandes-utiles">Commandes utiles</a><ul>
 <li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l’aide</a></li>
 <li><a class="reference internal" href="#activer-desactiver-le-mode-debogage">Activer / Désactiver le mode débogage</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#slicing">Slicing</a><ul>
 <li><a class="reference internal" href="#windows-powershell-integrated-scripting-environment-ise">Windows PowerShell Integrated Scripting Environment (ISE)</a></li>
 <li><a class="reference internal" href="#autoriser-lexecution-des-script">Autoriser l’exécution des script</a></li>
 <li><a class="reference internal" href="#lancer-un-script-depuis-la-console-powershell">Lancer un script depuis la console powershell</a></li>
