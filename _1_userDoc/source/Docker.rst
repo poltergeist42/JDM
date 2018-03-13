@@ -60,25 +60,176 @@ Version facile / Automatique
         sudo usermod -aG docker pierre
 
 ------------------------------------------------------------------------------------------
+
+Obtenir de l'aide sur une commande
+==================================
+    ::
+
+        docker [nom_de_la_commanded] --help
+        
+        ex :
+        
+        docker rm --help
+        
+        > Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+        >
+        > Remove one or more images
+        >
+        > Options:
+        >  -f, --force      Force removal of the image
+        >      --no-prune   Do not delete untagged parents
+
+------------------------------------------------------------------------------------------
+
+Diférence entre une **Image** et un **Container**
+=================================================
+
+    * Une image est l'équivalent d'un iso ou d'une VM servant de modèle
+    
+    * Un Container est une instance dérivée de l'image. Les modifications apportées au
+      Container n'entrainent pas de modification sur l'image.
+      
+    N.B : il est possible de générer une nouvelle image à partir d'un Containers.
+
+------------------------------------------------------------------------------------------
+
+Images
+======
+
+:Liens_Web:
+            * https://hub.docker.com/
+                # pour trouver des images et consulter ses informations
                 
-Obtenir la list des images/containers présents sur le poste
-=========================================================== 
+Trouver une image depuis la console
+-----------------------------------
     ::
     
-        sudo docker image ls
+        docker search [options] [image_recherche]
+        
+        ex1 :
+        docker search --stars=100 ubuntu
+            # l'option '--stars=100' permet d'apliquer un filtre pour n'afficher les
+            # images ayant obtenu un score (attribué par la communauté) de 100 minium
+            
+        ex2 :
+        docker search --stars=100 django
+        
+Récupérer une Image depuis la console
+-------------------------------------
+    ::
+    
+        docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+        
+        ex :
+        docker pull ubuntu:latest
+            # le tag 'latest' permet de ne récupérer que le dernier commit de l'image et
+            # non pas le dépôt complet
+            
+Suprimer une Image
+------------------
+    ::
+    
+        docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Obtenir la list des images présents sur le poste
+------------------------------------------------
+    ::
+    
+        docker image ls [OPTIONS] [REPOSITORY[:TAG]]
+        
+        ou
+        
+        docker images [OPTIONS] [REPOSITORY[:TAG]]
+        
+Créer une nouvelle image à partir d'un container
+------------------------------------------------
+    ::
+    
+        Usage:  docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+        
+        Soit :  docker commit [Options] [Nom_du_container] [depot/Nom_del'image]
+        
+        ex :
+         docker commit -m "image Ubuntu avec MongoDB" myMongoDB poltergeist42/mongodb
         
 ------------------------------------------------------------------------------------------
+
+Containers
+==========
+
+Obtenir la liste des Containers
+-------------------------------
+    ::
+
+        docker ps -a
         
-Lancer une image/container
-==========================
+Supprimer un ou plusieurs Containers
+-----------------------------------
+
+    #. Supprimer un ou plusieurs Containers
+        ::
+        
+            docker rm [OPTIONS] CONTAINER [CONTAINER...]
+            
+            ex :
+            docker rm infallible_haibt
+            
+            N.B : Plussieurs Containers peuvent être supprimer d'un seul coup. Il Suffit
+            d'indiquer les noms des Containers en le séparant par des virgules.
+            
+    #. Supprimer tous les Containers d'un seul coup
+        ::
+        
+            docker rm `docker ps -aq`
+                # attention, le caractère [`] s'obtient avec 
+                # la combinaison de touche [AltGR]-[7]
+                
+------------------------------------------------------------------------------------------
+        
+Lancer/initialiser un Container
+===============================
 
     #. En mode intéractif ::
     
-        sudo docker -it [nom_du_container]
+        sudo docker run -it [nom_de_l'image]
         
     #. En mode intéractif avec accès au bash ::
 
-        sudo docker -it [nom_du_container] bash
+        sudo docker run -it [nom_de_l'image] bash
+        
+    #. Sur un port diférent ::
+    
+        sudo docker run -p 88:80 [nom_de_l'image]
+        
+        # Pour attaquer un serveur Web lancer depuis un container, il faut saisir l'IP de
+        # la machine hote suivie du port translater
+        
+        ex :
+        http://192.168.1.32:88
+       
+    #. En mode détacher (en tache de fond, dans un process non bloquant)
+    
+        sudo docker run -d [nom_de_l'image]
+        
+    #. Donner un nom spécifique au container pendant son initialisation ::
+    
+        docker run --name [nom_du_container] [nom_de_l'image]
+        
+        ex :
+        
+        docker run -d -p 88:80  --name galette amapdesquatsaisons/galette
+        
+    #. Arréter un container ::
+    
+        sudo docker stop [nom_du_container]
+        
+    #. Démarrer un container ::
+    
+        sudo docker start [nom_du_container]
+        
+    #. Redémarrer un containrer ::
+    
+        sudo docker restart [nom_du_container]
         
 ------------------------------------------------------------------------------------------
      
@@ -88,3 +239,5 @@ Sortir d'un container (mode iterractif)
     
         CTRL-d (control-d)
      
+------------------------------------------------------------------------------------------
+

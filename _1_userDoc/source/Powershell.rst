@@ -5,6 +5,9 @@ PowerShell
 Commandes utiles
 =================
 
+:Liens_Web:
+            * http://www.octetmalin.net/windows/scripts/powershell-gestion-des-fichiers-dossiers-repertoires.php
+
 Obtenir de l'aide
 -----------------
 
@@ -85,6 +88,18 @@ Activer / Désactiver le mode débogage
     #. Désactiver le mode débogage ::
         
             set-psdebug -trace 0
+            
+            
+Générer l'aide automatique dans un script ou dans une fonction
+--------------------------------------------------------------
+
+:Liens_Web:
+            * https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6
+                # Toutes les explications
+                
+            * https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6#syntax-for-comment-based-help-in-script-modules
+                # Les mots clef à utiliser dans le bloc d'aide
+                
             
 ----------------------------------------------------------
 
@@ -443,3 +458,22 @@ Connaitre les information du BIOS
     ::
     
         Get-WmiObject win32_bios | select *
+        
+----------------------------------------------------------
+
+Activer PSRemote depuis un poste
+================================
+    ::
+    
+        Enable-PSRemoting -force
+            # '-force' permet de supprimer les intéractions utilisateurs
+            
+----------------------------------------------------------
+
+Supprimer un dossier et son contenu
+===================================
+    ::
+    
+        Get-ChildItem [Chemin du dossier] -recurse | where {$_.mode -like 'd*' } | remove-item -Recurse -force -Verbose
+            # '-force' permet de supprimer tous les éléments sans confirmation
+            # '-Verbose' permet d'afficher toutes les opérations en cours dans la console
