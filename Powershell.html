@@ -48,6 +48,17 @@
 <h1>PowerShell<a class="headerlink" href="#powershell" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="commandes-utiles">
 <h2>Commandes utiles<a class="headerlink" href="#commandes-utiles" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.octetmalin.net/windows/scripts/powershell-gestion-des-fichiers-dossiers-repertoires.php">http://www.octetmalin.net/windows/scripts/powershell-gestion-des-fichiers-dossiers-repertoires.php</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="section" id="obtenir-de-l-aide">
 <h3>Obtenir de l’aide<a class="headerlink" href="#obtenir-de-l-aide" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
@@ -175,6 +186,29 @@ Propriétés)</p>
 </li>
 </ol>
 </div></blockquote>
+</div>
+<div class="section" id="generer-l-aide-automatique-dans-un-script-ou-dans-une-fonction">
+<h3>Générer l’aide automatique dans un script ou dans une fonction<a class="headerlink" href="#generer-l-aide-automatique-dans-un-script-ou-dans-une-fonction" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6">https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6</a></dt>
+<dd># Toutes les explications</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6#syntax-for-comment-based-help-in-script-modules">https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6#syntax-for-comment-based-help-in-script-modules</a></dt>
+<dd># Les mots clef à utiliser dans le bloc d’aide</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <hr class="docutils" />
@@ -676,6 +710,27 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 </div></blockquote>
 </div>
 </div>
+<hr class="docutils" />
+<div class="section" id="activer-psremote-depuis-un-poste">
+<h2>Activer PSRemote depuis un poste<a class="headerlink" href="#activer-psremote-depuis-un-poste" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Enable</span><span class="o">-</span><span class="n">PSRemoting</span> <span class="o">-</span><span class="n">force</span>
+    <span class="c1"># &#39;-force&#39; permet de supprimer les intéractions utilisateurs</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="supprimer-un-dossier-et-son-contenu">
+<h2>Supprimer un dossier et son contenu<a class="headerlink" href="#supprimer-un-dossier-et-son-contenu" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>Get-ChildItem [Chemin du dossier] -recurse | where {$_.mode -like &#39;d*&#39; } | remove-item -Recurse -force -Verbose
+    # &#39;-force&#39; permet de supprimer tous les éléments sans confirmation
+    # &#39;-Verbose&#39; permet d&#39;afficher toutes les opérations en cours dans la console
+</pre></div>
+</div>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -690,6 +745,7 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 <li><a class="reference internal" href="#commandes-utiles">Commandes utiles</a><ul>
 <li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l’aide</a></li>
 <li><a class="reference internal" href="#activer-desactiver-le-mode-debogage">Activer / Désactiver le mode débogage</a></li>
+<li><a class="reference internal" href="#generer-l-aide-automatique-dans-un-script-ou-dans-une-fonction">Générer l’aide automatique dans un script ou dans une fonction</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#slicing">Slicing</a><ul>
@@ -722,6 +778,8 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 <li><a class="reference internal" href="#connaitre-les-information-du-bios">Connaitre les information du BIOS</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#activer-psremote-depuis-un-poste">Activer PSRemote depuis un poste</a></li>
+<li><a class="reference internal" href="#supprimer-un-dossier-et-son-contenu">Supprimer un dossier et son contenu</a></li>
 </ul>
 </li>
 </ul>

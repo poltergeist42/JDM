@@ -125,11 +125,11 @@ Groupes
     #. Ajouter un utilisateur à un groupes
         ::
         
-            sudo usermode -aG [nom_du_groupe] [nom_de_l'utilisateur]
+            sudo usermod -aG [nom_du_groupe] [nom_de_l'utilisateur]
             
             ex :
             
-            $ usermode -aG docker polter
+            $ usermod -aG docker polter
             
 ACL (Propriétaire, RWX)
 -----------------------
