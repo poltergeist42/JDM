@@ -164,7 +164,7 @@ Obtenir la liste des Containers
         docker ps -a
         
 Supprimer un ou plusieurs Containers
------------------------------------
+------------------------------------
 
     #. Supprimer un ou plusieurs Containers
         ::
