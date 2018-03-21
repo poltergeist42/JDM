@@ -960,6 +960,67 @@ sur la première ligne de votre fichier</p>
 </tbody>
 </table>
 </div>
+<hr class="docutils" />
+<div class="section" id="telecharger-un-fichier-en-ligne-de-commande-wget">
+<h2>Télécharger un fichier en ligne de commande (wget)<a class="headerlink" href="#telecharger-un-fichier-en-ligne-de-commande-wget" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="https://doc.ubuntu-fr.org/wget">https://doc.ubuntu-fr.org/wget</a></li>
+</ul>
+</div></blockquote>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">library</span><span class="o">/</span><span class="n">mongo</span><span class="o">/</span><span class="n">blob</span><span class="o">/</span><span class="mf">2e3</span><span class="n">e1bdbb31389c8bc8d43f5a3cc439134b7956b</span><span class="o">/</span><span class="mf">3.6</span><span class="o">/</span><span class="n">Dockerfile</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh">
+<h2>Désactiver la demande de mot de passe de la commande sudo au travers du ssh<a class="headerlink" href="#desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Ajouter l’utilisateur au fichiers sudoers</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Ouvrir le fichier /etc/sudoers</p>
+</li>
+<li><p class="first">Ajouter A LA FIN DU FICHIER l’utilisateur sour la forme :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">nom_d</span><span class="s1">&#39;utilisateur] ALL=(ALL) NOPASSWD: ALL</span>
+
+<span class="n">ex</span> <span class="p">:</span>
+<span class="n">polter</span> <span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span> <span class="n">NOPASSWD</span><span class="p">:</span> <span class="n">ALL</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">modifier le fichier /etc/ssh//sshd_config</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Repérer et commenter la ligne :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#PermitRootLogin prohibit-password</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Ajouter juste après :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PermitRootLogin</span> <span class="n">yes</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -1024,6 +1085,8 @@ sur la première ligne de votre fichier</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#linux-rediriger-sortie-vers-null">linux rediriger sortie vers null</a></li>
+<li><a class="reference internal" href="#telecharger-un-fichier-en-ligne-de-commande-wget">Télécharger un fichier en ligne de commande (wget)</a></li>
+<li><a class="reference internal" href="#desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh">Désactiver la demande de mot de passe de la commande sudo au travers du ssh</a></li>
 </ul>
 </li>
 </ul>
