@@ -653,3 +653,44 @@ linux rediriger sortie vers null
 :Liens_Web:
             * http://www.lanterne-rouge.info/article-que-signifie-dev-null-2-1-70233357.html
                 # Une explication (fr) sur les sortie STDOUT et STDERR
+                
+------------------------------------------------------------------------------------------
+
+Télécharger un fichier en ligne de commande (wget)
+==================================================
+
+:Liens_Web:
+            * https://doc.ubuntu-fr.org/wget
+            
+    ::
+    
+        ex :
+        wget https://github.com/docker-library/mongo/blob/2e3e1bdbb31389c8bc8d43f5a3cc439134b7956b/3.6/Dockerfile
+        
+------------------------------------------------------------------------------------------
+
+Désactiver la demande de mot de passe de la commande sudo au travers du ssh
+===========================================================================
+
+    #. Ajouter l'utilisateur au fichiers sudoers
+    
+        - Ouvrir le fichier /etc/sudoers
+        - Ajouter A LA FIN DU FICHIER l'utilisateur sour la forme : ::
+        
+            [nom_d'utilisateur] ALL=(ALL) NOPASSWD: ALL
+            
+            ex :
+            polter ALL=(ALL) NOPASSWD: ALL
+            
+    #. modifier le fichier /etc/ssh//sshd_config
+    
+        - Repérer et commenter la ligne : ::
+        
+            #PermitRootLogin prohibit-password
+            
+        - Ajouter juste après : ::
+        
+            PermitRootLogin yes
+            
+
+            
