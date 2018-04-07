@@ -22,6 +22,9 @@ Les liens utiles
                 
             * https://alexgirard.com/git-book/
                 # 'Livre' en français
+                
+            * http://www.formation-lpi.com/IMG/pdf/mind-map-git.pdf
+                # MindMap (memento)
 
 ------------------------------------------------------------------------------------------
                 

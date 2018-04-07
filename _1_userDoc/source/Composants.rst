@@ -2,6 +2,58 @@
 Composants Spécifiques
 ======================
 
+Programmation des ATMega
+========================
+
+Pour programmer un ATmega (328P ; 2560 etc) on peut utiliser Trois environement diférent :
+
+    :AVR_Studio:    Proposer par Microchip (anciennement Atmel) permet de faire du debug
+                    au traver de la sonde JTAG mais n'accepte que
+                    les programmateur officiels
+                    
+    :Arduino:       En utilisant le mode "Arduino as ISP. Ne permet pas de programmer
+                    autre chose que du '.ino'
+                    
+    :AVRDUDE:       Tout en ligne de commande, mais accepte tous les programmateur (même
+                    'Arduino as ISP'
+                    
+Installation du programmateur USBASP sous windows 10
+----------------------------------------------------
+
+:Liens_Web:
+            * http://zadig.akeo.ie/
+                # Le logiciel Zadig permet d'installer des pilotes USB
+                # pour plusieur programmateur diférents
+                
+AVRDUDE
+-------
+
+    #. Installation
+        
+        :Liens_Web:
+                    * https://sourceforge.net/projects/winavr/files/
+                        # dernière version : 2010-01-20
+                        
+    #. Utilisation
+
+        :Liens_Web:
+                    * https://skyduino.wordpress.com/2011/12/02/tutoriel-avrdude-en-ligne-de-commande/
+    
+        #. Téléverser un programe ::
+        
+            avrdude -c [NOM_DU_PROGRAMATEUR] -p [NOM_DU_MICROCONTROLEUR] -v (mode verbose) -U flash:[r|w|v]:[NOM_DU_HEX_A_TELEVERSER]
+            
+            ex : avrdude -c usbasp -p m2560 -v -U flash:w:Marlin_witbox_2-510.hex
+            
+        #. Obtenir la liste des noms des microcontroleurs utilisables ::
+        
+            avrdude -c [NOM_DU_PROGRAMATEUR]
+            
+            ex : avrdude -c usbasp
+    
+        
+
+
 Magnetomettre : HMC5883L
 ========================
 
