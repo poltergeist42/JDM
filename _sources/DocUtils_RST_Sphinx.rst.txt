@@ -33,6 +33,9 @@ reStructuredText (.rst)
         * http://python.physique.free.fr/aide/Partie1.html
             # détail de syntaxe avancé
 
+        * http://docutils.sourceforge.net/docs/ref/rst/directives.html
+            # Explication détailler des directives (ex : images, include, etc ...)
+
 ------------------------------------------------------------------------------------------
 
 Sphinx
@@ -296,3 +299,17 @@ Préparation de l'arborescence
                 
             - Une nouvelle vérification des branch locale devrait nous indiquer qu'il y a
               2 branch et que nous sommes sur la branch **'gh-pages'**
+
+------------------------------------------------------------------------------------------
+
+Directives
+==========
+
+    #. Insérez du code html ::
+
+        .. raw:: html
+
+           <br/>
+           # Attention, il faut sauter une ligne entre 'raw' et le code html
+
+

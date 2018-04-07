@@ -11,25 +11,16 @@ informatiques.
 Cours et connaissances génériques
 =================================
 
+    #. Microsoft Azure
+    
+        * https://experiences.microsoft.fr/formations/azure-lab/
+            # Liste de Webinar en français sur l'utilisation et l'administration d'Azure
+    
     #. Les Expressions Régulières (RegEx)
     
-        * http://go.microsoft.com/fwlink/?LinkId=133231
-            # Un descriptif complet sur les élément de syntax
-            
-        * https://regex101.com/
-            # pour tester (et décrypter) les RegEx
-            
-        * Obtenir de l'aide sur les RegEx en PowerShell
+        Une rubrique spéciale RegEx a été créer dans le journal de manip
         
-            ::
-            
-                help about_regular_expressions
-                
-        * Lib python pour les RexEx
-        
-            ::
-            
-                import re
+        * https://poltergeist42.github.io/JDM/Regex.html
     
     #. Microsoft Virtual Academy
     
@@ -37,6 +28,12 @@ Cours et connaissances génériques
         
         * https://mva.microsoft.com/
 
+        
+    #. VIM / VI
+    
+        * http://www.formation-lpi.com/IMG/pdf/103.8-vi.pdf
+            # MinMap : Memento des principales commandes ou actions
+        
 ####
         
 Matériel

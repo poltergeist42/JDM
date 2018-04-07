@@ -46,6 +46,104 @@
             
   <div class="section" id="composants-specifiques">
 <h1>Composants Spécifiques<a class="headerlink" href="#composants-specifiques" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="programmation-des-atmega">
+<h2>Programmation des ATMega<a class="headerlink" href="#programmation-des-atmega" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour programmer un ATmega (328P ; 2560 etc) on peut utiliser Trois environement diférent :</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">AVR_Studio:</th><td class="field-body">Proposer par Microchip (anciennement Atmel) permet de faire du debug
+au traver de la sonde JTAG mais n’accepte que
+les programmateur officiels</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Arduino:</th><td class="field-body">En utilisant le mode «&nbsp;Arduino as ISP. Ne permet pas de programmer
+autre chose que du “.ino”</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">AVRDUDE:</th><td class="field-body">Tout en ligne de commande, mais accepte tous les programmateur (même
+“Arduino as ISP”</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="installation-du-programmateur-usbasp-sous-windows-10">
+<h3>Installation du programmateur USBASP sous windows 10<a class="headerlink" href="#installation-du-programmateur-usbasp-sous-windows-10" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://zadig.akeo.ie/">http://zadig.akeo.ie/</a></dt>
+<dd># Le logiciel Zadig permet d’installer des pilotes USB
+# pour plusieur programmateur diférents</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="avrdude">
+<h3>AVRDUDE<a class="headerlink" href="#avrdude" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Installation</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://sourceforge.net/projects/winavr/files/">https://sourceforge.net/projects/winavr/files/</a></dt>
+<dd># dernière version : 2010-01-20</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p class="first">Utilisation</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://skyduino.wordpress.com/2011/12/02/tutoriel-avrdude-en-ligne-de-commande/">https://skyduino.wordpress.com/2011/12/02/tutoriel-avrdude-en-ligne-de-commande/</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic">
+<li><p class="first">Téléverser un programe</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="p">[</span><span class="n">NOM_DU_MICROCONTROLEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">v</span> <span class="p">(</span><span class="n">mode</span> <span class="n">verbose</span><span class="p">)</span> <span class="o">-</span><span class="n">U</span> <span class="n">flash</span><span class="p">:[</span><span class="n">r</span><span class="o">|</span><span class="n">w</span><span class="o">|</span><span class="n">v</span><span class="p">]:[</span><span class="n">NOM_DU_HEX_A_TELEVERSER</span><span class="p">]</span>
+
+<span class="n">ex</span> <span class="p">:</span> <span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="n">usbasp</span> <span class="o">-</span><span class="n">p</span> <span class="n">m2560</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">U</span> <span class="n">flash</span><span class="p">:</span><span class="n">w</span><span class="p">:</span><span class="n">Marlin_witbox_2</span><span class="o">-</span><span class="mf">510.</span><span class="n">hex</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Obtenir la liste des noms des microcontroleurs utilisables</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span>
+
+<span class="n">ex</span> <span class="p">:</span> <span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="n">usbasp</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
 <div class="section" id="magnetomettre-hmc5883l">
 <h2>Magnetomettre : HMC5883L<a class="headerlink" href="#magnetomettre-hmc5883l" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -531,6 +629,11 @@ et non la distance total parcourue par l’onde radio.</p>
   <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Composants Spécifiques</a><ul>
+<li><a class="reference internal" href="#programmation-des-atmega">Programmation des ATMega</a><ul>
+<li><a class="reference internal" href="#installation-du-programmateur-usbasp-sous-windows-10">Installation du programmateur USBASP sous windows 10</a></li>
+<li><a class="reference internal" href="#avrdude">AVRDUDE</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#magnetomettre-hmc5883l">Magnetomettre : HMC5883L</a><ul>
 <li><a class="reference internal" href="#implantation-hmc5883l">Implantation HMC5883L</a></li>
 <li><a class="reference internal" href="#installation-des-librairies-quick2wire-et-i2clibraries">Installation des librairies quick2wire et i2clibraries</a></li>

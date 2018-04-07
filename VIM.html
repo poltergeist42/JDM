@@ -27,6 +27,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="XML_JSON" href="XML_JSON.html" />
     <link rel="prev" title="URLtheque" href="URLtheque.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -53,12 +54,174 @@
 <li><a class="reference external" href="http://www.vim.org/download.php">http://www.vim.org/download.php</a></li>
 <li><a class="reference external" href="https://vimebook.com/fr/download/d54e189e-3a6b-4705-86b0-270cec5d5003/vim-pour-les-humains.pdf">https://vimebook.com/fr/download/d54e189e-3a6b-4705-86b0-270cec5d5003/vim-pour-les-humains.pdf</a></li>
 <li><a class="reference external" href="https://vim-adventures.com/">https://vim-adventures.com/</a></li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www.dansmongrenier.com/informatique_memento_vi.html">http://www.dansmongrenier.com/informatique_memento_vi.html</a></dt>
+<dd># Mémento des commandes et actions VI</dd>
+</dl>
+</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <hr class="docutils" />
+<div class="section" id="presentation">
+<h2>Présentation<a class="headerlink" href="#presentation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vim a 4 modes principaux :</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="22%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Modes</th>
+<th class="head">Touche(s) d’accès</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Normales</td>
+<td><ul class="first last simple">
+<li>[esc]</li>
+</ul>
+</td>
+<td><ul class="first last simple">
+<li>C’est le mode de base. il permet :<ul>
+<li>D’accéder aux autres modes</li>
+<li>De naviguer dans le fichier</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>Commandes</td>
+<td><ul class="first last simple">
+<li>[esc] –&gt; [:]</li>
+</ul>
+</td>
+<td>Permet de lancer les commandes</td>
+</tr>
+<tr class="row-even"><td>Visuel</td>
+<td><ul class="first last simple">
+<li>[esc] –&gt; [v]</li>
+</ul>
+</td>
+<td>Permet d’effectuer des sélections</td>
+</tr>
+<tr class="row-odd"><td>Insertion</td>
+<td><ul class="first last simple">
+<li>[esc] –&gt; [i]</li>
+<li>[esc] –&gt; [a]</li>
+<li>[esc] –&gt; [o]</li>
+<li>[esc] –&gt; [I]</li>
+<li>[esc] –&gt; [A]</li>
+<li>[esc] –&gt; [O]</li>
+</ul>
+</td>
+<td><ul class="first last simple">
+<li>[i] insérer du texte a l’emplacement du curseur</li>
+<li>[a] insérer du texte après le curseur</li>
+<li>[o] insérer du texte sur la ligne du dessous</li>
+<li>[I] insérer du texte en début de ligne</li>
+<li>[A] insérer du texte en fin de ligne</li>
+<li>[O] Insérer du texte sur la ligne du dessus</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="configuration-et-extension">
+<h2>Configuration et extension<a class="headerlink" href="#configuration-et-extension" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il y a 2 type de configuration :</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Configuration permanente:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">En renseignant le fichier <strong>“.vimrc”</strong>. Les options
+seront appliquée sur tous les documents</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Configuration isolée:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">En saisissant les options de configuration en mode
+commande. Les options ne seront appliquées que sur le
+document actif pendant toute la durée d’utilisation du fichier</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="liste-des-commandes-et-fonctions-utiles">
+<h2>Liste des commandes et fonctions utiles<a class="headerlink" href="#liste-des-commandes-et-fonctions-utiles" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Correcteur orthographique</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://vim-fr.org/index.php/Correction_orthographique">https://vim-fr.org/index.php/Correction_orthographique</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Le correcteur orthographique nécessite que les langues désirées soit présentes dans
+le dossier «&nbsp;%programFiles(x86)%Vimvim80spell&nbsp;»</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Activer la correction orthographique</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">setlocal</span> <span class="n">spell</span> <span class="n">spelllang</span><span class="o">=</span><span class="n">fr</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Désactiver la correction orthographique</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>:setlocal spell!
+</pre></div>
+</div>
+</li>
+<li><p class="first">liste des commandes / actions disponibles pour le correcteur</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="93%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>z=</td>
+<td>sur un mot souligné affiche une liste de corrections possibles</td>
+</tr>
+<tr class="row-even"><td>zg</td>
+<td>rajoute un mot dans le dictionnaire</td>
+</tr>
+<tr class="row-odd"><td>zug</td>
+<td>pour annuler l’ajout au dictionnaire</td>
+</tr>
+<tr class="row-even"><td>]s</td>
+<td>pour aller au prochain mot mal orthographié</td>
+</tr>
+<tr class="row-odd"><td>[s</td>
+<td>pour le précédent</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -66,11 +229,22 @@
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">VIM (VI)</a><ul>
+<li><a class="reference internal" href="#presentation">Présentation</a></li>
+<li><a class="reference internal" href="#configuration-et-extension">Configuration et extension</a></li>
+<li><a class="reference internal" href="#liste-des-commandes-et-fonctions-utiles">Liste des commandes et fonctions utiles</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="URLtheque.html" title="Chapitre précédent">URLtheque</a></li>
+      <li>Next: <a href="XML_JSON.html" title="Chapitre suivant">XML_JSON</a></li>
   </ul></li>
 </ul>
 </div>
