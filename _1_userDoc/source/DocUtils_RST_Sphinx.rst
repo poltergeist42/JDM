@@ -36,6 +36,9 @@ reStructuredText (.rst)
         * http://docutils.sourceforge.net/docs/ref/rst/directives.html
             # Explication détailler des directives (ex : images, include, etc ...)
 
+        * http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
+            # Syntax avancée
+
 ------------------------------------------------------------------------------------------
 
 Sphinx

@@ -55,6 +55,34 @@ Il y a 2 type de configuration :
 Liste des commandes et fonctions utiles
 =======================================
 
+    #. Caractères cachés
+
+        #. Afficher masquer les caractères cachés
+
+            :Liens_Web:
+                        * http://vimdoc.sourceforge.net/htmldoc/options.html#'list'
+                            # /!\\ : #'list' fait parti de l'url
+
+            ::
+
+                ##Afficher les carctères cachés
+                set list
+
+                ## Masquer les carctères cachés
+                set list!
+
+        #. Configurer les caractères cachés
+
+            :Liens_Web:
+                        * http://vimdoc.sourceforge.net/htmldoc/options.html#'listchars'
+                            # /!\\ : #'listchars' fait parti de l'url
+
+            ::
+
+                ex:
+                set listchars=space:·,tab:>-
+
+
     #. Correcteur orthographique
 
         :Liens_Web:
@@ -73,43 +101,15 @@ Liste des commandes et fonctions utiles
 
             * liste des commandes / actions disponibles pour le correcteur
 
-                +-----+----------------------------------------------------------------+
-                | z=  | sur un mot souligné affiche une liste de corrections possibles |
-                +-----+----------------------------------------------------------------+
-                | zg  | rajoute un mot dans le dictionnaire                            |
-                +-----+----------------------------------------------------------------+
-                | zug | pour annuler l'ajout au dictionnaire                           |
-                +-----+----------------------------------------------------------------+
-                | ]s  | pour aller au prochain mot mal orthographié                    |
-                +-----+----------------------------------------------------------------+
-                | [s  | pour le précédent                                              |
-                +-----+----------------------------------------------------------------+
-
-    #. Caractères cachés
-
-        #. Afficher masquer les caractères cachés
-
-            :Liens_Web:
-                        * http://vimdoc.sourceforge.net/htmldoc/options.html#'list'
-                            # /!\ : #'list' fait parti de l'url
-
-            ::
-
-                ##Afficher les carctères cachés
-                set list
-
-                ## Masquer les carctères cachés
-                set list!
-
-        #. Configurer les caractères cachés
-
-            :Liens_Web:
-                        * http://vimdoc.sourceforge.net/htmldoc/options.html#'listchars'
-                            # /!\ : #'listchars' fait parti de l'url
-
-            ::
-
-            ex:
-            set listchars=space:·,tab:>-
-
+                +------+----------------------------------------------------------------+
+                | z=   | sur un mot souligné affiche une liste de corrections possibles |
+                +------+----------------------------------------------------------------+
+                | zg   | rajoute un mot dans le dictionnaire                            |
+                +------+----------------------------------------------------------------+
+                | zug  | pour annuler l'ajout au dictionnaire                           |
+                +------+----------------------------------------------------------------+
+                | ]s   | pour aller au prochain mot mal orthographié                    |
+                +------+----------------------------------------------------------------+
+                | \[s  | pour le précédent                                              |
+                +------+----------------------------------------------------------------+
 
