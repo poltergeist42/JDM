@@ -34,6 +34,13 @@ AVRDUDE
                     * https://sourceforge.net/projects/winavr/files/
                         # dernière version : 2010-01-20
                         
+        **/!\\ Ne pas cocher la case 'ajouter au path' mais ajouter les chemins manuellement**
+        
+        #. Chemins à ajouter dans le path 
+            
+            * C:\WinAVR-20100110\bin
+            * C:\WinAVR-20100110\utils\bin
+                        
     #. Utilisation
 
         :Liens_Web:
