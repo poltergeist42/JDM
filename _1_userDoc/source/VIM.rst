@@ -85,5 +85,31 @@ Liste des commandes et fonctions utiles
                 | [s  | pour le précédent                                              |
                 +-----+----------------------------------------------------------------+
 
+    #. Caractères cachés
+
+        #. Afficher masquer les caractères cachés
+
+            :Liens_Web:
+                        * http://vimdoc.sourceforge.net/htmldoc/options.html#'list'
+                            # /!\ : #'list' fait parti de l'url
+
+            ::
+
+                ##Afficher les carctères cachés
+                set list
+
+                ## Masquer les carctères cachés
+                set list!
+
+        #. Configurer les caractères cachés
+
+            :Liens_Web:
+                        * http://vimdoc.sourceforge.net/htmldoc/options.html#'listchars'
+                            # /!\ : #'listchars' fait parti de l'url
+
+            ::
+
+            ex:
+            set listchars=space:·,tab:>-
 
 

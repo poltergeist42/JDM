@@ -477,3 +477,15 @@ Supprimer un dossier et son contenu
         Get-ChildItem [Chemin du dossier] -recurse | where {$_.mode -like 'd*' } | remove-item -Recurse -force -Verbose
             # '-force' permet de supprimer tous les éléments sans confirmation
             # '-Verbose' permet d'afficher toutes les opérations en cours dans la console
+
+----------------------------------------------------------
+
+Manipuler les variables d'environement
+======================================
+
+:Liens_Web:
+            * https://ss64.com/ps/syntax-env.html
+                # Démonstration de manipulation des variable d'environement
+
+            * https://technet.microsoft.com/fr-fr/library/hh847808.aspx
+                # Documentation Powershell
