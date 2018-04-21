@@ -5,6 +5,9 @@ HTML_CSS
 :Liens_Web:
             * http://www.html5-css3-pense-bete.fr/
                 # pense bête html5 et Css3
+
+            * http://slideplayer.fr/slide/1694038/
+                # petit slide (68 pages) de présentation du CSS
               
             * http://41mag.fr/liste-des-balises-html5/balise-br-html5
                 # Glossaire de toutes les balises html5
@@ -15,10 +18,13 @@ HTML_CSS
             * http://putaindecode.io/fr/articles/github/pages/site-web-gratuit/
                 # Site traitant de la programmation des site WEB
 
+####
+
+HTML
+====
 
 Rappel des balises courantes en HTML
-====================================
-
+------------------------------------
 
     * <h1>Titre 1</h1> - pour vos titres les plus importants
     
@@ -37,3 +43,52 @@ Rappel des balises courantes en HTML
     * <ul><li>premier item</li><li>second item</li></ul> permet de créer des listes, comme celle que nous sommes en train de faire !
     
     * <div></div> permet de créer une section au sein de la page
+
+####
+
+CSS
+===
+
+Positionnement  et dimensionnement dans la fenêtre (ou dans la boite)
+---------------------------------------------------------------------
+
+    .. image:: .\Images\HTML_CSS\dimensionnement.png
+        :width: 400 px
+        :align: center
+
+    * **margin** : Marge extérieur
+    * **padding** : Marge intérieur
+    * **height** : Hauteur
+    * **width** : Largeur
+
+Chaque dimensions peut être utilisée dans sa forme courte (dans le sens horraire) :
+
+    .. image:: .\Images\HTML_CSS\rotation_propriete.png
+        :width: 400 px
+        :align: center
+
+    ::
+
+        p {
+            margin:[top] [right] [bottom] [left]
+            }
+
+        ex :
+        p {
+            margin:3px 2px 3px 2px
+            }
+
+Cahque dimensions peut aussi être utiliée dans sa forme longue avec les mot clef 
+**top, right, bottom, left** :
+
+    ::
+
+        ex :
+        p {
+            margin-top:3px;
+            margin-right:2px;
+            margin-bottom:3px;
+            margin-left:2px;
+            }
+
+

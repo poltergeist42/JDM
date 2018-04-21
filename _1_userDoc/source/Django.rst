@@ -15,6 +15,12 @@ Django
             * https://www.youtube.com/watch?v=yDv5FIAeyoY
                 # Vidéo tutoriel de 08h00 sur Django 1.11
 
+            * http://www.marinamele.com/2014/03/document-your-django-projects.html
+                # Pour utiliser Sphinx avec django
+
+            * https://docs.djangoproject.com/en/dev/internals/contributing/writing-documentation/
+                # Documenter un projet Django avec Sphinx (Doc officiel Django)
+
 ------------------------------------------------------------------------------------------
 
 Démarrer un nouveau projet
