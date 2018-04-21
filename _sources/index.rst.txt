@@ -21,6 +21,7 @@ Mon journal de manip
    Informatique
    kicad
    Linux
+   Latex
    Powershell
    Python
    Raspberry
