@@ -27,7 +27,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="PowerShell" href="Powershell.html" />
+    <link rel="next" title="LaTex" href="Latex.html" />
     <link rel="prev" title="Kicad" href="kicad.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -513,8 +513,10 @@ trouve sur le compte root.</p>
 </div></blockquote>
 </div>
 <hr class="docutils" />
+<div class="section" id="ssh">
+<h2>SSH<a class="headerlink" href="#ssh" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="activer-la-connection-ssh">
-<h2>Activer la connection ssh<a class="headerlink" href="#activer-la-connection-ssh" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Activer la connection ssh<a class="headerlink" href="#activer-la-connection-ssh" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -531,6 +533,46 @@ trouve sur le compte root.</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh">
+<h3>Désactiver la demande de mot de passe de la commande sudo au travers du ssh<a class="headerlink" href="#desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Ajouter l’utilisateur au fichiers sudoers</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Ouvrir le fichier /etc/sudoers</p>
+</li>
+<li><p class="first">Ajouter A LA FIN DU FICHIER l’utilisateur sour la forme :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">nom_d</span><span class="s1">&#39;utilisateur] ALL=(ALL) NOPASSWD: ALL</span>
+
+<span class="n">ex</span> <span class="p">:</span>
+<span class="n">polter</span> <span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span> <span class="n">NOPASSWD</span><span class="p">:</span> <span class="n">ALL</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">modifier le fichier /etc/ssh//sshd_config</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Repérer et commenter la ligne :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#PermitRootLogin prohibit-password</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Ajouter juste après :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PermitRootLogin</span> <span class="n">yes</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">
@@ -981,46 +1023,6 @@ sur la première ligne de votre fichier</p>
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
-<div class="section" id="desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh">
-<h2>Désactiver la demande de mot de passe de la commande sudo au travers du ssh<a class="headerlink" href="#desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh" title="Lien permanent vers ce titre">¶</a></h2>
-<blockquote>
-<div><ol class="arabic">
-<li><p class="first">Ajouter l’utilisateur au fichiers sudoers</p>
-<blockquote>
-<div><ul>
-<li><p class="first">Ouvrir le fichier /etc/sudoers</p>
-</li>
-<li><p class="first">Ajouter A LA FIN DU FICHIER l’utilisateur sour la forme :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">nom_d</span><span class="s1">&#39;utilisateur] ALL=(ALL) NOPASSWD: ALL</span>
-
-<span class="n">ex</span> <span class="p">:</span>
-<span class="n">polter</span> <span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span> <span class="n">NOPASSWD</span><span class="p">:</span> <span class="n">ALL</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p class="first">modifier le fichier /etc/ssh//sshd_config</p>
-<blockquote>
-<div><ul>
-<li><p class="first">Repérer et commenter la ligne :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#PermitRootLogin prohibit-password</span>
-</pre></div>
-</div>
-</li>
-<li><p class="first">Ajouter juste après :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PermitRootLogin</span> <span class="n">yes</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</li>
-</ol>
-</div></blockquote>
-</div>
 </div>
 
 
@@ -1060,7 +1062,11 @@ sur la première ligne de votre fichier</p>
 </li>
 <li><a class="reference internal" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique">Pour copier des fichiers en root depuis l’interface graphique</a></li>
 <li><a class="reference internal" href="#changer-la-disposition-du-clavier">Changer la disposition du clavier</a></li>
+<li><a class="reference internal" href="#ssh">SSH</a><ul>
 <li><a class="reference internal" href="#activer-la-connection-ssh">Activer la connection ssh</a></li>
+<li><a class="reference internal" href="#desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh">Désactiver la demande de mot de passe de la commande sudo au travers du ssh</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">Pour pouvoir se connecter en RDP sur un poste Linux</a></li>
 <li><a class="reference internal" href="#pour-faire-du-xforwarding">pour faire du XForwarding</a></li>
 <li><a class="reference internal" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">Pour mettre une IP fixe sur une interfaces réseau</a></li>
@@ -1086,7 +1092,6 @@ sur la première ligne de votre fichier</p>
 </li>
 <li><a class="reference internal" href="#linux-rediriger-sortie-vers-null">linux rediriger sortie vers null</a></li>
 <li><a class="reference internal" href="#telecharger-un-fichier-en-ligne-de-commande-wget">Télécharger un fichier en ligne de commande (wget)</a></li>
-<li><a class="reference internal" href="#desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh">Désactiver la demande de mot de passe de la commande sudo au travers du ssh</a></li>
 </ul>
 </li>
 </ul>
@@ -1095,7 +1100,7 @@ sur la première ligne de votre fichier</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="kicad.html" title="Chapitre précédent">Kicad</a></li>
-      <li>Next: <a href="Powershell.html" title="Chapitre suivant">PowerShell</a></li>
+      <li>Next: <a href="Latex.html" title="Chapitre suivant">LaTex</a></li>
   </ul></li>
 </ul>
 </div>

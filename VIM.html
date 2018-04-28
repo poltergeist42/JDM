@@ -59,6 +59,11 @@
 <dd># Mémento des commandes et actions VI</dd>
 </dl>
 </li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://urfist.unistra.fr/uploads/media/command_memento_fr.pdf">https://urfist.unistra.fr/uploads/media/command_memento_fr.pdf</a></dt>
+<dd># Autres memento (plus denses)</dd>
+</dl>
+</li>
 </ul>
 </td>
 </tr>
@@ -242,6 +247,14 @@ le dossier «&nbsp;%programFiles(x86)%Vimvim80spell&nbsp;»</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>:setlocal spell!
 </pre></div>
 </div>
+</li>
+<li><p class="first">Activer automatiquement la correction automatique pour un certain type de documenet</p>
+<blockquote>
+<div><p>Dans “.vimrc” :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">au</span> <span class="n">BufRead</span> <span class="o">*.</span><span class="n">txt</span> <span class="n">setlocal</span> <span class="n">spell</span> <span class="n">spelllang</span><span class="o">=</span><span class="n">fr</span>
+</pre></div>
+</div>
+</div></blockquote>
 </li>
 <li><p class="first">liste des commandes / actions disponibles pour le correcteur</p>
 <blockquote>

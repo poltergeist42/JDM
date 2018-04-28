@@ -58,6 +58,16 @@
 <dd># Install Docker pour ubuntu</dd>
 </dl>
 </li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://xataz.developpez.com/tutoriels/utilisation-docker/#LI">https://xataz.developpez.com/tutoriels/utilisation-docker/#LI</a></dt>
+<dd># Tuto FR (mieux que le livre “Docker” des éditions ENI</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.docker.com/">https://docs.docker.com/</a></dt>
+<dd># Documentation officielle</dd>
+</dl>
+</li>
 </ul>
 </td>
 </tr>
@@ -116,7 +126,7 @@ $ sudo apt-get install docker-ce
 </pre></div>
 </div>
 </li>
-<li><p class="first">Executer le script</p>
+<li><p class="first">Exécuter le script</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sh</span> <span class="o">./</span><span class="n">dockerinstall</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
@@ -128,6 +138,24 @@ $ sudo apt-get install docker-ce
 </li>
 </ol>
 </div></blockquote>
+</div>
+<div class="section" id="installation-sous-windows">
+<h3>Installation sous Windows<a class="headerlink" href="#installation-sous-windows" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://download.docker.com/win/stable/DockerToolbox.exe">https://download.docker.com/win/stable/DockerToolbox.exe</a></dt>
+<dd># Ce soft installe virtualBox et une mini VM (boot2docker)</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <hr class="docutils" />
@@ -156,7 +184,8 @@ $ sudo apt-get install docker-ce
 <h2>Diférence entre une <strong>Image</strong> et un <strong>Container</strong><a class="headerlink" href="#diference-entre-une-image-et-un-container" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>Une image est l’équivalent d’un iso ou d’une VM servant de modèle</li>
+<li>Une image est l’équivalent d’un iso ou d’une VM servant de modèle.
+L’image est en Lecture seule.</li>
 <li>Un Container est une instance dérivée de l’image. Les modifications apportées au
 Container n’entrainent pas de modification sur l’image.</li>
 </ul>
@@ -290,19 +319,25 @@ Container n’entrainent pas de modification sur l’image.</li>
 <hr class="docutils" />
 <div class="section" id="lancer-initialiser-un-container">
 <h2>Lancer/initialiser un Container<a class="headerlink" href="#lancer-initialiser-un-container" title="Lien permanent vers ce titre">¶</a></h2>
-<blockquote>
-<div><ol class="arabic">
-<li><p class="first">En mode intéractif</p>
+<dl class="docutils">
+<dt><strong>N.B</strong> <span class="classifier-delimiter">:</span> <span class="classifier">pour connaitre toutes les options disponible avec la commande “run” il faut lancer l’aide</span></dt>
+<dd><blockquote class="first">
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="last arabic">
+<li><p class="first">En mode interactif</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">En mode intéractif avec accès au bash</p>
+<li><p class="first">En mode interactif avec accès au bash</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image] bash</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Sur un port diférent</p>
+<li><p class="first">Sur un port différent</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="mi">88</span><span class="p">:</span><span class="mi">80</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
 
 <span class="c1"># Pour attaquer un serveur Web lancer depuis un container, il faut saisir l&#39;IP de</span>
@@ -327,7 +362,7 @@ Container n’entrainent pas de modification sur l’image.</li>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Arréter un container</p>
+<li><p class="first">Arrêter un container</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">stop</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -337,13 +372,14 @@ Container n’entrainent pas de modification sur l’image.</li>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Redémarrer un containrer</p>
+<li><p class="first">Redémarrer un container</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">restart</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
 </ol>
-</div></blockquote>
+</dd>
+</dl>
 </div>
 <hr class="docutils" />
 <div class="section" id="sortir-d-un-container-mode-iterractif">
@@ -353,7 +389,6 @@ Container n’entrainent pas de modification sur l’image.</li>
 </pre></div>
 </div>
 </div></blockquote>
-<hr class="docutils" />
 </div>
 </div>
 
@@ -369,6 +404,7 @@ Container n’entrainent pas de modification sur l’image.</li>
 <li><a class="reference internal" href="#installation">Installation</a><ul>
 <li><a class="reference internal" href="#installation-manuelle">Installation manuelle</a></li>
 <li><a class="reference internal" href="#version-facile-automatique">Version facile / Automatique</a></li>
+<li><a class="reference internal" href="#installation-sous-windows">Installation sous Windows</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#obtenir-de-l-aide-sur-une-commande">Obtenir de l’aide sur une commande</a></li>

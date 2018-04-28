@@ -8,6 +8,13 @@ Installation
 :Liens_Web:
             * https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/#set-up-the-repository
                 # Install Docker pour ubuntu
+
+            * https://xataz.developpez.com/tutoriels/utilisation-docker/#LI
+                # Tuto FR (mieux que le livre 'Docker' des éditions ENI
+
+            * https://docs.docker.com/
+                # Documentation officielle
+
                 
 Installation manuelle
 ---------------------
@@ -51,7 +58,7 @@ Version facile / Automatique
     
         wget -O dockerinstall.sh https://get.docker.com
         
-    #. Executer le script ::
+    #. Exécuter le script ::
     
         sudo sh ./dockerinstall.sh
         
@@ -59,7 +66,14 @@ Version facile / Automatique
     
         sudo usermod -aG docker pierre
 
-------------------------------------------------------------------------------------------
+Installation sous Windows
+-------------------------
+
+:Liens_Web:
+            * https://download.docker.com/win/stable/DockerToolbox.exe
+                # Ce soft installe virtualBox et une mini VM (boot2docker)
+
+####
 
 Obtenir de l'aide sur une commande
 ==================================
@@ -79,19 +93,20 @@ Obtenir de l'aide sur une commande
         >  -f, --force      Force removal of the image
         >      --no-prune   Do not delete untagged parents
 
-------------------------------------------------------------------------------------------
+####
 
 Diférence entre une **Image** et un **Container**
 =================================================
 
-    * Une image est l'équivalent d'un iso ou d'une VM servant de modèle
+    * Une image est l'équivalent d'un iso ou d'une VM servant de modèle.
+      L'image est en Lecture seule.
     
     * Un Container est une instance dérivée de l'image. Les modifications apportées au
       Container n'entrainent pas de modification sur l'image.
       
     N.B : il est possible de générer une nouvelle image à partir d'un Containers.
 
-------------------------------------------------------------------------------------------
+####
 
 Images
 ======
@@ -152,7 +167,7 @@ Créer une nouvelle image à partir d'un container
         ex :
          docker commit -m "image Ubuntu avec MongoDB" myMongoDB poltergeist42/mongodb
         
-------------------------------------------------------------------------------------------
+####
 
 Containers
 ==========
@@ -184,20 +199,25 @@ Supprimer un ou plusieurs Containers
                 # attention, le caractère [`] s'obtient avec 
                 # la combinaison de touche [AltGR]-[7]
                 
-------------------------------------------------------------------------------------------
+####
         
 Lancer/initialiser un Container
 ===============================
 
-    #. En mode intéractif ::
+**N.B** : pour connaitre toutes les options disponible avec la commande 'run' il faut lancer l'aide
+        ::
+
+            docker run --help
+
+    #. En mode interactif ::
     
         sudo docker run -it [nom_de_l'image]
         
-    #. En mode intéractif avec accès au bash ::
+    #. En mode interactif avec accès au bash ::
 
         sudo docker run -it [nom_de_l'image] bash
         
-    #. Sur un port diférent ::
+    #. Sur un port différent ::
     
         sudo docker run -p 88:80 [nom_de_l'image]
         
@@ -219,7 +239,7 @@ Lancer/initialiser un Container
         
         docker run -d -p 88:80  --name galette amapdesquatsaisons/galette
         
-    #. Arréter un container ::
+    #. Arrêter un container ::
     
         sudo docker stop [nom_du_container]
         
@@ -227,11 +247,11 @@ Lancer/initialiser un Container
     
         sudo docker start [nom_du_container]
         
-    #. Redémarrer un containrer ::
+    #. Redémarrer un container ::
     
         sudo docker restart [nom_du_container]
         
-------------------------------------------------------------------------------------------
+####
      
 Sortir d'un container (mode iterractif)
 =======================================
@@ -239,5 +259,5 @@ Sortir d'un container (mode iterractif)
     
         CTRL-d (control-d)
      
-------------------------------------------------------------------------------------------
+
 

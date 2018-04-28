@@ -124,7 +124,7 @@ Groupes
             
     #. Ajouter un utilisateur à un groupes
         ::
-        
+
             sudo usermod -aG [nom_du_groupe] [nom_de_l'utilisateur]
             
             ex :
@@ -321,8 +321,11 @@ Changer la disposition du clavier
 
 ------------------------------------------------------------------------------------------
 
+SSH
+===
+
 Activer la connection ssh
-=========================
+-------------------------
 
 :Liens_Web:
             * https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux
@@ -331,6 +334,29 @@ Activer la connection ssh
     
         sudo aptitude install openssh-client openssh-server
 
+Désactiver la demande de mot de passe de la commande sudo au travers du ssh
+---------------------------------------------------------------------------
+
+    #. Ajouter l'utilisateur au fichiers sudoers
+    
+        - Ouvrir le fichier /etc/sudoers
+        - Ajouter A LA FIN DU FICHIER l'utilisateur sour la forme : ::
+        
+            [nom_d'utilisateur] ALL=(ALL) NOPASSWD: ALL
+            
+            ex :
+            polter ALL=(ALL) NOPASSWD: ALL
+            
+    #. modifier le fichier /etc/ssh//sshd_config
+    
+        - Repérer et commenter la ligne : ::
+        
+            #PermitRootLogin prohibit-password
+            
+        - Ajouter juste après : ::
+        
+            PermitRootLogin yes
+ 
 ------------------------------------------------------------------------------------------
 
 Pour pouvoir se connecter en RDP sur un poste Linux
@@ -667,30 +693,4 @@ Télécharger un fichier en ligne de commande (wget)
         ex :
         wget https://github.com/docker-library/mongo/blob/2e3e1bdbb31389c8bc8d43f5a3cc439134b7956b/3.6/Dockerfile
         
-------------------------------------------------------------------------------------------
 
-Désactiver la demande de mot de passe de la commande sudo au travers du ssh
-===========================================================================
-
-    #. Ajouter l'utilisateur au fichiers sudoers
-    
-        - Ouvrir le fichier /etc/sudoers
-        - Ajouter A LA FIN DU FICHIER l'utilisateur sour la forme : ::
-        
-            [nom_d'utilisateur] ALL=(ALL) NOPASSWD: ALL
-            
-            ex :
-            polter ALL=(ALL) NOPASSWD: ALL
-            
-    #. modifier le fichier /etc/ssh//sshd_config
-    
-        - Repérer et commenter la ligne : ::
-        
-            #PermitRootLogin prohibit-password
-            
-        - Ajouter juste après : ::
-        
-            PermitRootLogin yes
-            
-
-            

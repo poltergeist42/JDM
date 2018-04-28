@@ -4,10 +4,16 @@ VIM (VI)
 
 :liens Web:
             * http://www.vim.org/download.php
+            
             * https://vimebook.com/fr/download/d54e189e-3a6b-4705-86b0-270cec5d5003/vim-pour-les-humains.pdf
+            
             * https://vim-adventures.com/
+            
             * http://www.dansmongrenier.com/informatique_memento_vi.html 
                 # Mémento des commandes et actions VI
+            
+            * https://urfist.unistra.fr/uploads/media/command_memento_fr.pdf
+                # Autres memento (plus denses)
 
 ####
 
@@ -99,6 +105,12 @@ Liste des commandes et fonctions utiles
 
                 :setlocal spell!
 
+            * Activer automatiquement la correction automatique pour un certain type de documenet
+
+                Dans '.vimrc' : ::
+
+                    au BufRead *.txt setlocal spell spelllang=fr
+                
             * liste des commandes / actions disponibles pour le correcteur
 
                 +------+----------------------------------------------------------------+
