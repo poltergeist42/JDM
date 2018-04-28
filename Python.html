@@ -528,7 +528,7 @@ même adresse en mémoire</p>
 </li>
 <li><dl class="first docutils">
 <dt>copy</dt>
-<dd><p class="first">La copy permet de créer un nouvel objet qui pointe sur l’adresse du premier objet
+<dd><p class="first">La commande «&nbsp;copy&nbsp;» permet de créer un nouvel objet qui pointe sur l’adresse du premier objet
 tant que la valeur du second n’a pas été modifier</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">copy</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
@@ -643,57 +643,6 @@ complète y compris le contenu des données itérables</p>
 </dl>
 </li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<div class="section" id="format-json">
-<h2>Format JSON<a class="headerlink" href="#format-json" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first simple">
-<li><dl class="first docutils">
-<dt><a class="reference external" href="http://sdz.tdct.org/sdz/serialisez-vos-objets-au-format-json.html">http://sdz.tdct.org/sdz/serialisez-vos-objets-au-format-json.html</a></dt>
-<dd># utiliser json avec python, les bases et en français</dd>
-</dl>
-</li>
-<li><a class="reference external" href="http://deusyss.developpez.com/tutoriels/Python/les-modules-de-configuration/">http://deusyss.developpez.com/tutoriels/Python/les-modules-de-configuration/</a></li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://docs.python.org/3.4/library/json.html">https://docs.python.org/3.4/library/json.html</a></dt>
-<dd># la doc Python 3.4 (en)</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://stackoverflow.com/questions/12309269/how-do-i-write-json-data-to-a-file-in-python">https://stackoverflow.com/questions/12309269/how-do-i-write-json-data-to-a-file-in-python</a></dt>
-<dd># La fonction postée par JRCS le 24/01/2017 est intéressante</dd>
-</dl>
-</li>
-</ul>
-<ol class="last arabic">
-<li><p class="first">Exemple d’utilisation intéressant :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">json</span> <span class="k">import</span> <span class="n">dump</span><span class="p">,</span> <span class="n">load</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">sleep</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">random</span>
-
-<span class="k">def</span> <span class="nf">json_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">delay</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">):</span>
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">data</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-                    <span class="k">return</span> <span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-                    <span class="k">return</span> <span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="k">except</span><span class="p">:</span>
-            <span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="n">delay</span><span class="p">)</span> <span class="c1"># concurrency</span>
-</pre></div>
-</div>
-</li>
-</ol>
 </td>
 </tr>
 </tbody>
@@ -838,7 +787,7 @@ complète y compris le contenu des données itérables</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="packing-et-unpacking-utilisation-de-args-et-kwargs">
-<h2>Packing et UnPacking (utilisation de : “<a href="#id2"><span class="problematic" id="id3">*</span></a>args” et “<a href="#id4"><span class="problematic" id="id5">**</span></a>kwargs”)<a class="headerlink" href="#packing-et-unpacking-utilisation-de-args-et-kwargs" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Packing et UnPacking (utilisation de : “*args” et “**kwargs”)<a class="headerlink" href="#packing-et-unpacking-utilisation-de-args-et-kwargs" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -858,7 +807,7 @@ complète y compris le contenu des données itérables</p>
 <p><strong>N.B :</strong> on parle de l’opérateur <strong>“splat”</strong> lorsque l’on parle de l’astérisque <strong>“*”</strong></p>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">«&nbsp;<a href="#id6"><span class="problematic" id="id7">*</span></a>args&nbsp;»</p>
+<li><p class="first">«&nbsp;<a href="#id2"><span class="problematic" id="id3">*</span></a>args&nbsp;»</p>
 <blockquote>
 <div><p><strong>“*args”</strong> permet de passer, à une fonctions, des arguments en nombres et de
 types inconnue puis converti l’ensemble en tuple. Dans le prototype d’une
@@ -878,7 +827,7 @@ ex :</p>
 </div>
 </div></blockquote>
 </li>
-<li><p class="first">«&nbsp;<a href="#id8"><span class="problematic" id="id9">**</span></a>kwargs&nbsp;»</p>
+<li><p class="first">«&nbsp;<a href="#id4"><span class="problematic" id="id5">**</span></a>kwargs&nbsp;»</p>
 <blockquote>
 <div><p><strong>“*kwargs”</strong> permet de passer, à une fonctions, des arguments en nombres et de
 types inconnue puis converti l’ensemble en dictionnaire. Dans le prototype d’une
@@ -938,7 +887,7 @@ détailler nos propre options :</p>
 </div>
 </div></blockquote>
 </li>
-<li><p class="first">Elements de bases</p>
+<li><p class="first">Éléments de bases</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">argparse</span>
 
 <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
@@ -967,7 +916,7 @@ Ils n’ont pas non plus un appel long et un appel court.</p>
 </li>
 <li><p class="first">optional arguments</p>
 <blockquote>
-<div><p>les “optional arguments” sont des argument facultatifs. Ils sont déclare entre
+<div><p>Les “optional arguments” sont des argument facultatifs. Ils sont déclare entre
 guillemets (ou simples cotes) avec tiret. Les appels court sont composes
 d’un tiret et d’une lettre. Les appels long sont composes d’un double tiret et
 d’un nom significatif. Les 2 appels peuvent être soit déclare ensemble ou déclarer
@@ -1030,7 +979,7 @@ automatiquement.</p>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://sametmax.com/ecrire-des-logs-en-python/">http://sametmax.com/ecrire-des-logs-en-python/</a></dt>
-<dd># Une explication et une démonstration impeu fouilli</dd>
+<dd># Une explication et une démonstration un peu fouillis</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
@@ -1054,7 +1003,7 @@ automatiquement.</p>
 <tr class="field-even field"><th class="field-name">Description:</th><td class="field-body"><blockquote class="first">
 <div><p>Cette Lib permet de faire du log sur des éléments.</p>
 </div></blockquote>
-<p>Cette Lib doit être intégrée dans le code (pas de décorateur et pas de «&nbsp;débraillage&nbsp;»).
+<p>Cette Lib doit être intégrée dans le code (pas de décorateur et pas de «&nbsp;débraillasse&nbsp;»).
 Les niveaux d’alertes son à définir soit même. Ils correspondent à un entier allant de
 10 à 50 par palier de 10.</p>
 </td>
@@ -1188,7 +1137,7 @@ help())</p>
 </li>
 <li><p class="first">Protégé</p>
 <blockquote>
-<div><p>On préfix notre objet (attribut ou méthode) avec un simple underscore (_). L’objet
+<div><p>On préfixe notre objet (attribut ou méthode) avec un simple underscore (_). L’objet
 n’apparaîtra pas dans l’API mais sera utilisable de l’extérieur si on l’appel
 spécifiquement</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">_maVaribleProtegee</span> <span class="o">=</span> <span class="mi">2</span>
@@ -1272,8 +1221,8 @@ l’API et renverra un «&nbsp;AttributError&nbsp;» si on l’appel spécifique
 <hr class="docutils" />
 <div class="section" id="urltheque">
 <h2>URLtheque<a class="headerlink" href="#urltheque" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ici se trouvent un enssemble de liens intéressant dont le sujet ne nécéssitent pas
-d’éxplications supplémentaires.</p>
+<p>Ici se trouvent un ensemble de liens intéressant dont le sujet ne nécessitent pas
+d’explications supplémentaires.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1336,7 +1285,7 @@ d’éxplications supplémentaires.</p>
 <tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://stackoverflow.com/questions/8884188/how-to-read-and-write-ini-file-with-python">http://stackoverflow.com/questions/8884188/how-to-read-and-write-ini-file-with-python</a></dt>
-<dd># exemple util pour comprendre le fonctionnement</dd>
+<dd># exemple utile pour comprendre le fonctionnement</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
@@ -1399,7 +1348,6 @@ d’éxplications supplémentaires.</p>
 <li><a class="reference internal" href="#connaitre-l-adresse-memoire-d-un-objet">Connaître l’adresse mémoire d’un objet</a></li>
 <li><a class="reference internal" href="#affectation-copy-et-deepcopy">Affectation, copy et deepcopy</a></li>
 <li><a class="reference internal" href="#faire-un-executable-a-partir-d-un-script">faire un exécutable à partir d’un script</a></li>
-<li><a class="reference internal" href="#format-json">Format JSON</a></li>
 <li><a class="reference internal" href="#web-framework">web framework</a><ul>
 <li><a class="reference internal" href="#bottle">Bottle</a></li>
 <li><a class="reference internal" href="#flask">Flask</a></li>

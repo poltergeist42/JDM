@@ -24,9 +24,33 @@ Powershell
 Python
 ------
 
-    TODO: ne pas laisser vide
+:Liens WEB:
+            * http://sdz.tdct.org/sdz/serialisez-vos-objets-au-format-json.html
+                # utiliser json avec python, les bases et en français
+            * http://deusyss.developpez.com/tutoriels/Python/les-modules-de-configuration/
+            * https://docs.python.org/3.4/library/json.html
+                # la doc Python 3.4 (en)
+            * https://stackoverflow.com/questions/12309269/how-do-i-write-json-data-to-a-file-in-python
+                # La fonction postée par JRCS le 24/01/2017 est intéressante
+                
+            #. Exemple d'utilisation intéressant : ::
+            
+                from json import dump, load
+                from time import sleep
+                from random import random
 
-
+                def json_file(path, data = None, delay = 0.1):
+                    while True:
+                        try:
+                            if data == None:
+                                with open(path, "r", encoding = "utf-8") as f:
+                                    return load(f)
+                            else:
+                                with open(path, "w", encoding = "utf-8") as f:
+                                    return dump(data, f, indent=4, sort_keys=True)
+                        except:
+                            sleep(random()*delay) # concurrency
+ 
 ------------------------------------------------------------------------------------------
 
 Format XML

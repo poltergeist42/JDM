@@ -358,7 +358,7 @@ Affectation, copy et deepcopy
             '0x5ec5e370'
             
     #. copy
-        La copy permet de créer un nouvel objet qui pointe sur l'adresse du premier objet 
+        La commande "copy" permet de créer un nouvel objet qui pointe sur l'adresse du premier objet 
         tant que la valeur du second n'a pas été modifier ::
         
             >>> import copy
@@ -445,38 +445,6 @@ La procédure d'utilisation :
             * http://python.jpvweb.com/python/mesrecettespython/doku.php?id=cx_freeze
                 # cookBook CX_Freeze (fr)
     
-------------------------------------------------------------------------------------------
-
-Format JSON
-===========
-
-:Liens WEB:
-            * http://sdz.tdct.org/sdz/serialisez-vos-objets-au-format-json.html
-                # utiliser json avec python, les bases et en français
-            * http://deusyss.developpez.com/tutoriels/Python/les-modules-de-configuration/
-            * https://docs.python.org/3.4/library/json.html
-                # la doc Python 3.4 (en)
-            * https://stackoverflow.com/questions/12309269/how-do-i-write-json-data-to-a-file-in-python
-                # La fonction postée par JRCS le 24/01/2017 est intéressante
-                
-            #. Exemple d'utilisation intéressant : ::
-            
-                from json import dump, load
-                from time import sleep
-                from random import random
-
-                def json_file(path, data = None, delay = 0.1):
-                    while True:
-                        try:
-                            if data == None:
-                                with open(path, "r", encoding = "utf-8") as f:
-                                    return load(f)
-                            else:
-                                with open(path, "w", encoding = "utf-8") as f:
-                                    return dump(data, f, indent=4, sort_keys=True)
-                        except:
-                            sleep(random()*delay) # concurrency
-                
 ------------------------------------------------------------------------------------------
 
 web framework
@@ -566,7 +534,7 @@ Tester un type attendu
             
 ------------------------------------------------------------------------------------------
 
-Packing et UnPacking (utilisation de : '*args' et '**kwargs')
+Packing et UnPacking (utilisation de : '\*args' et '\*\*kwargs')
 =============================================================
 
 :Liens Web:
@@ -641,7 +609,7 @@ Passer des paramètres à un programme avec argparse
             optional arguments:
               -h, --help  show this help message and exit
               
-    #. Elements de bases ::
+    #. Éléments de bases ::
     
         import argparse 
 
@@ -667,7 +635,7 @@ Passer des paramètres à un programme avec argparse
             
     #. optional arguments
     
-        les 'optional arguments' sont des argument facultatifs. Ils sont déclare entre 
+        Les 'optional arguments' sont des argument facultatifs. Ils sont déclare entre 
         guillemets (ou simples cotes) avec tiret. Les appels court sont composes 
         d'un tiret et d'une lettre. Les appels long sont composes d'un double tiret et
         d'un nom significatif. Les 2 appels peuvent être soit déclare ensemble ou déclarer
@@ -717,7 +685,7 @@ logging Library
                 # une intro en douceur
             
             * http://sametmax.com/ecrire-des-logs-en-python/
-                # Une explication et une démonstration impeu fouilli
+                # Une explication et une démonstration un peu fouillis
             
             * https://docs.python.org/3.6/library/logging.html
                 # La doc officielle
@@ -731,7 +699,7 @@ logging Library
 :Description:
             Cette Lib permet de faire du log sur des éléments.
             
-    Cette Lib doit être intégrée dans le code (pas de décorateur et pas de "débraillage").
+    Cette Lib doit être intégrée dans le code (pas de décorateur et pas de "débraillasse").
     Les niveaux d'alertes son à définir soit même. Ils correspondent à un entier allant de
     10 à 50 par palier de 10.
     
@@ -827,7 +795,7 @@ permettent d'introduire ces notions dans les interpréteurs
             
     #. Protégé
     
-        On préfix notre objet (attribut ou méthode) avec un simple underscore (_). L'objet
+        On préfixe notre objet (attribut ou méthode) avec un simple underscore (_). L'objet
         n’apparaîtra pas dans l'API mais sera utilisable de l'extérieur si on l'appel
         spécifiquement ::
         
@@ -907,8 +875,8 @@ Connaître l'os de travail
 URLtheque
 =========
 
-Ici se trouvent un enssemble de liens intéressant dont le sujet ne nécéssitent pas
-d'éxplications supplémentaires.
+Ici se trouvent un ensemble de liens intéressant dont le sujet ne nécessitent pas
+d'explications supplémentaires.
 
 :Les context managers et le mot clé 'with' en Python:
             * http://sametmax.com/les-context-managers-et-le-mot-cle-with-en-python/
@@ -937,7 +905,7 @@ d'éxplications supplémentaires.
 
 :Fichiers de configuration (.ini):
             * http://stackoverflow.com/questions/8884188/how-to-read-and-write-ini-file-with-python
-               # exemple util pour comprendre le fonctionnement                                              
+               # exemple utile pour comprendre le fonctionnement                                              
             * http://www.marclebrun.be/wiki/doku.php?id=python:fichier_de_configuration_configparser
                # Exemple en français (python2)
             * http://www.developpez.net/forums/blogs/208887-tyrtamos/b23/simplifier-gestion-fichiers-ini-python/
