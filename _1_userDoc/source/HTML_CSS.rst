@@ -78,7 +78,7 @@ Chaque dimensions peut être utilisée dans sa forme courte (dans le sens horrai
             margin:3px 2px 3px 2px
             }
 
-Cahque dimensions peut aussi être utiliée dans sa forme longue avec les mot clef 
+Chaque dimensions peut aussi être utiliée dans sa forme longue avec les mot clef 
 **top, right, bottom, left** :
 
     ::
