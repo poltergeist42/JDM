@@ -546,7 +546,7 @@ Packing et UnPacking (utilisation de : '\*args' et '\*\*kwargs')
                 
     #. "*args"
     
-        **'*args'** permet de passer, à une fonctions, des arguments en nombres et de
+        **'\*args'** permet de passer, à une fonctions, des arguments en nombres et de
         types inconnue puis converti l'ensemble en tuple. Dans le prototype d'une
         fonction, cet argument est utilisé comme "positional argument".
         ex : ::
@@ -562,9 +562,9 @@ Packing et UnPacking (utilisation de : '\*args' et '\*\*kwargs')
             a - <class 'str'>
             True - <class 'bool'>
             
-    #. "**kwargs"
+    #. "\*\*kwargs"
     
-        **'*kwargs'** permet de passer, à une fonctions, des arguments en nombres et de
+        **'\*\*kwargs'** permet de passer, à une fonctions, des arguments en nombres et de
         types inconnue puis converti l'ensemble en dictionnaire. Dans le prototype d'une
         fonction, cet argument est utilisé pour les argument par défaut.
         ex : ::
@@ -575,7 +575,7 @@ Packing et UnPacking (utilisation de : '\*args' et '\*\*kwargs')
             >>> fd(a=1, b=2, c=3)
             {'c': 3, 'a': 1, 'b': 2}
             
-**N.B :** Les termes **"args"** et **"kwargse"** sont des conventions et peuvent être
+**N.B :** Les termes **"args"** et **"kwargs"** sont des conventions et peuvent être
 remplacés par un nom plus parlant mais se n'est pas conseillé.
 
 ------------------------------------------------------------------------------------------
