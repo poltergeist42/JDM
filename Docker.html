@@ -68,6 +68,21 @@
 <dd># Documentation officielle</dd>
 </dl>
 </li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.docker.com/get-started/">https://docs.docker.com/get-started/</a></dt>
+<dd># La page de démarrage / prise en main dans la doc officielle</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.wanadev.fr/23-tuto-docker-comprendre-docker-partie1/">https://www.wanadev.fr/23-tuto-docker-comprendre-docker-partie1/</a></dt>
+<dd># Tuto (introduction) en 3 partie (FR)</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/cli/">https://docs.docker.com/engine/reference/commandline/cli/</a></dt>
+<dd># référence CLI</dd>
+</dl>
+</li>
 </ul>
 </td>
 </tr>
@@ -272,6 +287,59 @@ Container n’entrainent pas de modification sur l’image.</li>
 </div>
 </div></blockquote>
 </div>
+<div class="section" id="definir-un-repository-et-un-tag-sur-une-image">
+<h3>Définir un Repository et un TAG sur une image<a class="headerlink" href="#definir-un-repository-et-un-tag-sur-une-image" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>$ docker tag --help
+
+    Usage:  docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+    Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Ex:
+docker tag friendlyhello poltergeist42/get-started:part1
+# friendlyhello --&gt; SOURCE_IMAGE
+# TARGET_IMAGE :
+#   poltergeist42   --&gt; UserName
+#   get-started     --&gt; Repository
+#   part1           --&gt; TAG
+</pre></div>
+</div>
+</div></blockquote>
+<p>Les information qui compose le TARGET_IMAGE permettrons de faire un push sur dockerHub</p>
+</div>
+<div class="section" id="faire-un-push-sur-dockerhub">
+<h3>Faire un push sur dockerHub<a class="headerlink" href="#faire-un-push-sur-dockerhub" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="docutils">
+<dt>Pour faire un push sur dockerHub, il faut d’abord s’authentifier :</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">login</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>On peut ensuite faire un push en précisant</p>
+<blockquote>
+<div><ul>
+<li><p class="first">le nom d’utilisateur</p>
+</li>
+<li><p class="first">le dépôt distant</p>
+</li>
+<li><p class="first">le TAG</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Ex</span><span class="p">:</span>
+<span class="n">docker</span> <span class="n">push</span> <span class="n">poltergeist42</span><span class="o">/</span><span class="n">get</span><span class="o">-</span><span class="n">started</span><span class="p">:</span><span class="n">part1</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>Pour terminer, on peut arrêter l’authentification :</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">logout</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="containers">
@@ -415,6 +483,8 @@ Container n’entrainent pas de modification sur l’image.</li>
 <li><a class="reference internal" href="#suprimer-une-image">Suprimer une Image</a></li>
 <li><a class="reference internal" href="#obtenir-la-list-des-images-presents-sur-le-poste">Obtenir la list des images présents sur le poste</a></li>
 <li><a class="reference internal" href="#creer-une-nouvelle-image-a-partir-d-un-container">Créer une nouvelle image à partir d’un container</a></li>
+<li><a class="reference internal" href="#definir-un-repository-et-un-tag-sur-une-image">Définir un Repository et un TAG sur une image</a></li>
+<li><a class="reference internal" href="#faire-un-push-sur-dockerhub">Faire un push sur dockerHub</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#containers">Containers</a><ul>
