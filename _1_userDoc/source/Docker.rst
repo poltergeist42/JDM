@@ -15,6 +15,16 @@ Installation
             * https://docs.docker.com/
                 # Documentation officielle
 
+            * https://docs.docker.com/get-started/
+                # La page de démarrage / prise en main dans la doc officielle
+
+            * https://www.wanadev.fr/23-tuto-docker-comprendre-docker-partie1/
+                # Tuto (introduction) en 3 partie (FR)
+
+            * https://docs.docker.com/engine/reference/commandline/cli/
+                # référence CLI
+
+
                 
 Installation manuelle
 ---------------------
@@ -166,7 +176,50 @@ Créer une nouvelle image à partir d'un container
         
         ex :
          docker commit -m "image Ubuntu avec MongoDB" myMongoDB poltergeist42/mongodb
+
+Définir un Repository et un TAG sur une image
+---------------------------------------------
+    ::
+
+        $ docker tag --help
+
+            Usage:  docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+            Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+        Ex:
+        docker tag friendlyhello poltergeist42/get-started:part1
+        # friendlyhello --> SOURCE_IMAGE
+        # TARGET_IMAGE :
+        #   poltergeist42   --> UserName
+        #   get-started     --> Repository
+        #   part1           --> TAG
+
+Les information qui compose le TARGET_IMAGE permettrons de faire un push sur dockerHub
+
+Faire un push sur dockerHub
+---------------------------
+
+Pour faire un push sur dockerHub, il faut d'abord s'authentifier :
+    ::
+
+        docker login
         
+On peut ensuite faire un push en précisant
+
+    * le nom d'utilisateur
+    * le dépôt distant
+    * le TAG
+      ::
+
+        Ex:
+        docker push poltergeist42/get-started:part1
+
+Pour terminer, on peut arrêter l'authentification :
+    ::
+
+        docker logout
+
 ####
 
 Containers
