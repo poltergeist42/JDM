@@ -21,6 +21,12 @@ Django
             * https://docs.djangoproject.com/en/dev/internals/contributing/writing-documentation/
                 # Documenter un projet Django avec Sphinx (Doc officiel Django)
 
+            * https://www.supinfo.com/articles/single/5779-bien-debuter-avec-django-docker
+                # Création d'un Container Django
+
+            * https://docs.docker.com/compose/django/
+                # Création d'un container Django (Doc officiel Docker)
+
 ------------------------------------------------------------------------------------------
 
 Démarrer un nouveau projet

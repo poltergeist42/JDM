@@ -24,6 +24,11 @@ Installation
             * https://docs.docker.com/engine/reference/commandline/cli/
                 # référence CLI
 
+            * https://www.supinfo.com/articles/single/5779-bien-debuter-avec-django-docker
+                # Création d'un container pour Django
+
+            * https://docs.docker.com/compose/django/
+                # Création d'un container Django (Doc officiel Docker)
 
                 
 Installation manuelle
@@ -252,15 +257,34 @@ Supprimer un ou plusieurs Containers
                 # attention, le caractère [`] s'obtient avec 
                 # la combinaison de touche [AltGR]-[7]
                 
+    #. Supprimer tous les Containers dont l'état est arrêter
+        ::
+
+            docker container prune
+
+            Usage:  docker container prune [OPTIONS]
+
+                    Remove all stopped containers
+
+            Options:
+                    --filter filter   Provide filter values (e.g. 'until=<timestamp>')
+                    -f, --force           Do not prompt for confirmation
+
 ####
         
 Lancer/initialiser un Container
 ===============================
 
-**N.B** : pour connaitre toutes les options disponible avec la commande 'run' il faut lancer l'aide
-        ::
+:N.B: pour connaitre toutes les options disponible avec la commande 'run' il faut lancer l'aide
+                ::
 
-            docker run --help
+                    docker run --help
+
+
+:/!\\ Attention /!\\: 
+            La commande 'run' crée une nouvelle instance (donc un nouveau container).
+            Pour démarrer / redémarrer un container existant, il faut utiliser la commande 'start'.
+
 
     #. En mode interactif ::
     
@@ -280,7 +304,7 @@ Lancer/initialiser un Container
         ex :
         http://192.168.1.32:88
        
-    #. En mode détacher (en tache de fond, dans un process non bloquant)
+    #. En mode détacher (en tache de fond, dans un process non bloquant) ::
     
         sudo docker run -d [nom_de_l'image]
         
@@ -310,7 +334,41 @@ Sortir d'un container (mode iterractif)
 =======================================
     ::
     
-        CTRL-d (control-d)
+        CTRL-d (control-d) ou 'exit'
      
+####
 
+Inspecter un container
+======================
+
+    #. Obtenir toute la configuration au format JSON
+        ::
+
+            cmd :
+            docker inspect [ID / Name]
+
+            Help :
+            Usage:  docker inspect [OPTIONS] NAME|ID [NAME|ID...]
+
+            Return low-level information on Docker objects
+
+            Options:
+              -f, --format string   Format the output using the given Go template
+              -s, --size            Display total file sizes if the type is container
+                  --type string     Return JSON for specified type
+
+    #. Obtenir la configuration d'un élément spécifique
+        ::
+
+            cmd:
+            docker inspect [ID / Name] | grep [Nom de l'élément]
+
+            ex:
+            $docker run --net=none --name=ctr_busybox busybox
+                # Pour créer un container sans adresse IP
+
+            $ docker inspect ctr_busybox | grep IPAddress
+                        "SecondaryIPAddresses": null,
+                        "IPAddress": "",
+                                "IPAddress": "",
 
