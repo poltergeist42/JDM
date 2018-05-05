@@ -56,6 +56,23 @@ Il y a 2 type de configuration :
                                     commande. Les options ne seront appliquées que sur le 
                                     document actif pendant toute la durée d'utilisation du fichier
 
+Emplacement ou créer le fichiers '.vimrc' en fonction de l'environement
+-----------------------------------------------------------------------
+
+    #. Sous Windows
+
+        * %userprofile%\.vimrc
+
+
+    #. Sous Linux
+
+        * /home/[nom_d'utilisateur]/.vimrc
+
+    #. Sous Mac
+
+        * /Users/[nom_d'utilisateur]/.vimrc
+
+
 ####
 
 Liste des commandes et fonctions utiles
@@ -124,4 +141,17 @@ Liste des commandes et fonctions utiles
                 +------+----------------------------------------------------------------+
                 | \[s  | pour le précédent                                              |
                 +------+----------------------------------------------------------------+
+
+    # Rechercher, mettre en évidence un mot ou un ensemble de mot
+
+        * Se placer en mode normal
+
+        * Saisir le caractère slash ('/') suivie du terme à rechercher ::
+
+            [Mode_Normal]
+            /[Recherche]
+
+            ex:
+            [Mode_Normal]
+            /self
 

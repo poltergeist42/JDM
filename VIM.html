@@ -160,6 +160,34 @@ document actif pendant toute la durée d’utilisation du fichier</td>
 </tbody>
 </table>
 </div></blockquote>
+<div class="section" id="emplacement-ou-creer-le-fichiers-vimrc-en-fonction-de-l-environement">
+<h3>Emplacement ou créer le fichiers “.vimrc” en fonction de l’environement<a class="headerlink" href="#emplacement-ou-creer-le-fichiers-vimrc-en-fonction-de-l-environement" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Sous Windows</p>
+<blockquote>
+<div><ul class="simple">
+<li>%userprofile%.vimrc</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Sous Linux</p>
+<blockquote>
+<div><ul class="simple">
+<li>/home/[nom_d’utilisateur]/.vimrc</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Sous Mac</p>
+<blockquote>
+<div><ul class="simple">
+<li>/Users/[nom_d’utilisateur]/.vimrc</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="liste-des-commandes-et-fonctions-utiles">
@@ -288,6 +316,23 @@ le dossier «&nbsp;%programFiles(x86)%Vimvim80spell&nbsp;»</p>
 </div></blockquote>
 </li>
 </ol>
+<p># Rechercher, mettre en évidence un mot ou un ensemble de mot</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Se placer en mode normal</p>
+</li>
+<li><p class="first">Saisir le caractère slash (“/”) suivie du terme à rechercher</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Mode_Normal</span><span class="p">]</span>
+<span class="o">/</span><span class="p">[</span><span class="n">Recherche</span><span class="p">]</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="p">[</span><span class="n">Mode_Normal</span><span class="p">]</span>
+<span class="o">/</span><span class="bp">self</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
 </div></blockquote>
 </div>
 </div>
@@ -302,7 +347,10 @@ le dossier «&nbsp;%programFiles(x86)%Vimvim80spell&nbsp;»</p>
   <ul>
 <li><a class="reference internal" href="#">VIM (VI)</a><ul>
 <li><a class="reference internal" href="#presentation">Présentation</a></li>
-<li><a class="reference internal" href="#configuration-et-extension">Configuration et extension</a></li>
+<li><a class="reference internal" href="#configuration-et-extension">Configuration et extension</a><ul>
+<li><a class="reference internal" href="#emplacement-ou-creer-le-fichiers-vimrc-en-fonction-de-l-environement">Emplacement ou créer le fichiers “.vimrc” en fonction de l’environement</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#liste-des-commandes-et-fonctions-utiles">Liste des commandes et fonctions utiles</a></li>
 </ul>
 </li>

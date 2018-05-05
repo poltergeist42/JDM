@@ -83,6 +83,16 @@
 <dd># référence CLI</dd>
 </dl>
 </li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.supinfo.com/articles/single/5779-bien-debuter-avec-django-docker">https://www.supinfo.com/articles/single/5779-bien-debuter-avec-django-docker</a></dt>
+<dd># Création d’un container pour Django</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.docker.com/compose/django/">https://docs.docker.com/compose/django/</a></dt>
+<dd># Création d’un container Django (Doc officiel Docker)</dd>
+</dl>
+</li>
 </ul>
 </td>
 </tr>
@@ -380,6 +390,22 @@ docker tag friendlyhello poltergeist42/get-started:part1
 </dd>
 </dl>
 </li>
+<li><dl class="first docutils">
+<dt>Supprimer tous les Containers dont l’état est arrêter</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">container</span> <span class="n">prune</span>
+
+<span class="n">Usage</span><span class="p">:</span>  <span class="n">docker</span> <span class="n">container</span> <span class="n">prune</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span>
+
+        <span class="n">Remove</span> <span class="nb">all</span> <span class="n">stopped</span> <span class="n">containers</span>
+
+<span class="n">Options</span><span class="p">:</span>
+        <span class="o">--</span><span class="nb">filter</span> <span class="nb">filter</span>   <span class="n">Provide</span> <span class="nb">filter</span> <span class="n">values</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="s1">&#39;until=&lt;timestamp&gt;&#39;</span><span class="p">)</span>
+        <span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="n">force</span>           <span class="n">Do</span> <span class="ow">not</span> <span class="n">prompt</span> <span class="k">for</span> <span class="n">confirmation</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
 </ol>
 </div></blockquote>
 </div>
@@ -387,12 +413,20 @@ docker tag friendlyhello poltergeist42/get-started:part1
 <hr class="docutils" />
 <div class="section" id="lancer-initialiser-un-container">
 <h2>Lancer/initialiser un Container<a class="headerlink" href="#lancer-initialiser-un-container" title="Lien permanent vers ce titre">¶</a></h2>
-<dl class="docutils">
-<dt><strong>N.B</strong> <span class="classifier-delimiter">:</span> <span class="classifier">pour connaitre toutes les options disponible avec la commande “run” il faut lancer l’aide</span></dt>
-<dd><blockquote class="first">
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">help</span>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">N.B:</th><td class="field-body"><p class="first">pour connaitre toutes les options disponible avec la commande “run” il faut lancer l’aide</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">help</span>
 </pre></div>
 </div>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">/!\ Attention /!\:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><blockquote class="first">
+<div><p>La commande “run” crée une nouvelle instance (donc un nouveau container).
+Pour démarrer / redémarrer un container existant, il faut utiliser la commande “start”.</p>
 </div></blockquote>
 <ol class="last arabic">
 <li><p class="first">En mode interactif</p>
@@ -417,9 +451,9 @@ docker tag friendlyhello poltergeist42/get-started:part1
 </div>
 </li>
 <li><p class="first">En mode détacher (en tache de fond, dans un process non bloquant)</p>
-<blockquote>
-<div><p>sudo docker run -d [nom_de_l’image]</p>
-</div></blockquote>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
+</pre></div>
+</div>
 </li>
 <li><p class="first">Donner un nom spécifique au container pendant son initialisation</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
@@ -446,16 +480,63 @@ docker tag friendlyhello poltergeist42/get-started:part1
 </div>
 </li>
 </ol>
-</dd>
-</dl>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <hr class="docutils" />
 <div class="section" id="sortir-d-un-container-mode-iterractif">
 <h2>Sortir d’un container (mode iterractif)<a class="headerlink" href="#sortir-d-un-container-mode-iterractif" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">-</span><span class="n">d</span> <span class="p">(</span><span class="n">control</span><span class="o">-</span><span class="n">d</span><span class="p">)</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">-</span><span class="n">d</span> <span class="p">(</span><span class="n">control</span><span class="o">-</span><span class="n">d</span><span class="p">)</span> <span class="n">ou</span> <span class="s1">&#39;exit&#39;</span>
 </pre></div>
 </div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="inspecter-un-container">
+<h2>Inspecter un container<a class="headerlink" href="#inspecter-un-container" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Obtenir toute la configuration au format JSON</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">cmd</span> <span class="p">:</span>
+<span class="n">docker</span> <span class="n">inspect</span> <span class="p">[</span><span class="n">ID</span> <span class="o">/</span> <span class="n">Name</span><span class="p">]</span>
+
+<span class="n">Help</span> <span class="p">:</span>
+<span class="n">Usage</span><span class="p">:</span>  <span class="n">docker</span> <span class="n">inspect</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">NAME</span><span class="o">|</span><span class="n">ID</span> <span class="p">[</span><span class="n">NAME</span><span class="o">|</span><span class="n">ID</span><span class="o">...</span><span class="p">]</span>
+
+<span class="n">Return</span> <span class="n">low</span><span class="o">-</span><span class="n">level</span> <span class="n">information</span> <span class="n">on</span> <span class="n">Docker</span> <span class="n">objects</span>
+
+<span class="n">Options</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="nb">format</span> <span class="n">string</span>   <span class="n">Format</span> <span class="n">the</span> <span class="n">output</span> <span class="n">using</span> <span class="n">the</span> <span class="n">given</span> <span class="n">Go</span> <span class="n">template</span>
+  <span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="o">--</span><span class="n">size</span>            <span class="n">Display</span> <span class="n">total</span> <span class="n">file</span> <span class="n">sizes</span> <span class="k">if</span> <span class="n">the</span> <span class="nb">type</span> <span class="ow">is</span> <span class="n">container</span>
+      <span class="o">--</span><span class="nb">type</span> <span class="n">string</span>     <span class="n">Return</span> <span class="n">JSON</span> <span class="k">for</span> <span class="n">specified</span> <span class="nb">type</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Obtenir la configuration d’un élément spécifique</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span>cmd:
+docker inspect [ID / Name] | grep [Nom de l&#39;élément]
+
+ex:
+$docker run --net=none --name=ctr_busybox busybox
+    # Pour créer un container sans adresse IP
+
+$ docker inspect ctr_busybox | grep IPAddress
+            &quot;SecondaryIPAddresses&quot;: null,
+            &quot;IPAddress&quot;: &quot;&quot;,
+                    &quot;IPAddress&quot;: &quot;&quot;,
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
 </div></blockquote>
 </div>
 </div>
@@ -494,6 +575,7 @@ docker tag friendlyhello poltergeist42/get-started:part1
 </li>
 <li><a class="reference internal" href="#lancer-initialiser-un-container">Lancer/initialiser un Container</a></li>
 <li><a class="reference internal" href="#sortir-d-un-container-mode-iterractif">Sortir d’un container (mode iterractif)</a></li>
+<li><a class="reference internal" href="#inspecter-un-container">Inspecter un container</a></li>
 </ul>
 </li>
 </ul>
