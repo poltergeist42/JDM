@@ -539,6 +539,88 @@ $ docker inspect ctr_busybox | grep IPAddress
 </ol>
 </div></blockquote>
 </div>
+<hr class="docutils" />
+<div class="section" id="gestion-redirection-des-ports">
+<h2>Gestion / redirection des ports<a class="headerlink" href="#gestion-redirection-des-ports" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Publication et exposition des ports</p>
+<blockquote>
+<div><p>On peut mapper / rediriger des ports au moment de la création d’un container, avec la
+commande «&nbsp;-p ou –publish&nbsp;» :</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span><span class="p">:</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="n">nginx</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8080</span><span class="p">:</span><span class="mi">80</span> <span class="n">nginx</span>
+    <span class="c1"># Ceci va rediriger le port &#39;extérieur&#39; 8080 vers le port &#39;interne&#39; 80 du container nginx</span>
+    <span class="c1"># L&#39;URL sera donc : http://localhost:8080</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>On peut rediriger autant de port que nécessaire :</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span><span class="p">:</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="n">nginx</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8080</span><span class="p">:</span><span class="mi">80</span> <span class="o">-</span><span class="n">p</span> <span class="mi">443</span><span class="p">:</span><span class="mi">443</span> <span class="n">nginx</span>
+    <span class="c1"># Ceci va rediriger le port &#39;extérieur&#39; 8080 vers le port &#39;interne&#39; 80 du container nginx</span>
+    <span class="c1"># et le port &#39;extérieur&#39; 443&#39; vers le port &#39;interne&#39; 443.</span>
+    <span class="c1"># L&#39;URL sera donc : http://localhost:8080 ou</span>
+    <span class="c1"># https://localhost</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>On peut mapper / rediriger tous les ports dynamiquement avec la commande
+«&nbsp;-P (“P” Majuscule) ou –publish-all&nbsp;»</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="n">nginx</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">P</span> <span class="n">nginx</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Pour «&nbsp;publier&nbsp;» les ports, il faut utiliser “–expose” avec la commande “run” ou directement
+“EXPOSE” si on est dans un “Dockerfile”. La commande “Expose” permet de publier soit
+un seul port, soit un ensemble de port :</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">expose</span><span class="o">=</span><span class="mi">7000</span> <span class="o">&lt;</span><span class="n">container</span> <span class="n">ID</span> <span class="ow">or</span> <span class="n">name</span><span class="o">&gt;</span>
+    <span class="c1"># cette commande va exposer le port 7000 du container</span>
+
+<span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">expose</span><span class="o">=</span><span class="mi">7000</span><span class="o">-</span><span class="mi">8000</span> <span class="o">&lt;</span><span class="n">container</span> <span class="n">ID</span> <span class="ow">or</span> <span class="n">name</span><span class="o">&gt;</span>
+    <span class="c1"># cette commande va exposer les ports de 7000 à 8000</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p class="first">Vérifier / Identifier les ports publier et / ou mapper</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>La premier façon de connaitre les ports publier et mapper et avec la commande docker ps</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>La seconde façon est en utilisant la commande docker port</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">port</span> <span class="p">[</span><span class="n">ID</span> <span class="n">ou</span> <span class="n">nom</span> <span class="n">du</span> <span class="n">container</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>La Troisième façon et avec la commande docker inspect</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">inspect</span> <span class="p">[</span><span class="n">ID</span> <span class="n">ou</span> <span class="n">nom</span> <span class="n">du</span> <span class="n">container</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -576,6 +658,7 @@ $ docker inspect ctr_busybox | grep IPAddress
 <li><a class="reference internal" href="#lancer-initialiser-un-container">Lancer/initialiser un Container</a></li>
 <li><a class="reference internal" href="#sortir-d-un-container-mode-iterractif">Sortir d’un container (mode iterractif)</a></li>
 <li><a class="reference internal" href="#inspecter-un-container">Inspecter un container</a></li>
+<li><a class="reference internal" href="#gestion-redirection-des-ports">Gestion / redirection des ports</a></li>
 </ul>
 </li>
 </ul>

@@ -372,3 +372,66 @@ Inspecter un container
                         "IPAddress": "",
                                 "IPAddress": "",
 
+####
+
+Gestion / redirection des ports
+===============================
+
+    #. Publication et exposition des ports
+
+        On peut mapper / rediriger des ports au moment de la création d'un container, avec la
+        commande "-p ou --publish" :
+
+            ::
+
+                ex:
+                docker run --name nginx -d -p 8080:80 nginx
+                    # Ceci va rediriger le port 'extérieur' 8080 vers le port 'interne' 80 du container nginx
+                    # L'URL sera donc : http://localhost:8080
+
+        On peut rediriger autant de port que nécessaire :
+
+            ::
+
+                ex:
+                docker run --name nginx -d -p 8080:80 -p 443:443 nginx
+                    # Ceci va rediriger le port 'extérieur' 8080 vers le port 'interne' 80 du container nginx
+                    # et le port 'extérieur' 443' vers le port 'interne' 443.
+                    # L'URL sera donc : http://localhost:8080 ou
+                    # https://localhost
+
+        On peut mapper / rediriger tous les ports dynamiquement avec la commande
+        "-P ('P' Majuscule) ou --publish-all"
+
+            ::
+
+                docker run --name nginx -d -P nginx
+
+        Pour "publier" les ports, il faut utiliser '--expose' avec la commande 'run' ou directement
+        'EXPOSE' si on est dans un 'Dockerfile'. La commande 'Expose' permet de publier soit
+        un seul port, soit un ensemble de port :
+
+            ::
+
+                docker run --expose=7000 <container ID or name>
+                    # cette commande va exposer le port 7000 du container
+
+                docker run --expose=7000-8000 <container ID or name>
+                    # cette commande va exposer les ports de 7000 à 8000
+
+    #. Vérifier / Identifier les ports publier et / ou mapper
+
+        * La premier façon de connaitre les ports publier et mapper et avec la commande docker ps
+            ::
+
+                docker ps -a
+
+        * La seconde façon est en utilisant la commande docker port
+            ::
+
+                docker port [ID ou nom du container]
+
+        * La Troisième façon et avec la commande docker inspect
+            ::
+
+                docker inspect [ID ou nom du container]
