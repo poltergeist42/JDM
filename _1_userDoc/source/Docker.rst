@@ -270,6 +270,19 @@ Supprimer un ou plusieurs Containers
                     --filter filter   Provide filter values (e.g. 'until=<timestamp>')
                     -f, --force           Do not prompt for confirmation
 
+    #. Copier un ficher depuis ou vers un container
+
+        :Liens_WEB:
+                    * https://www.system-linux.eu/index.php?post/2017/06/27/Copier-un-fichier-du-syst%C3%A8me-hote-dans-un-container-Docker
+
+        * Depuis un container, vers l'hôte ::
+
+            docker cp <containerId>:/file/path/within/container /host/path/target
+
+        * Depuis l'hôte vers le container ::
+
+            docker cp /host/path/sources <containerId>:/container/path/
+
 ####
         
 Lancer/initialiser un Container
