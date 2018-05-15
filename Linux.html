@@ -1049,15 +1049,121 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </div></blockquote>
 </div>
 <hr class="docutils" />
-<div class="section" id="creer-un-dossier-partage">
-<h2>Créer un dossier partagé<a class="headerlink" href="#creer-un-dossier-partage" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="creer-un-dossier-partage-avec-samba">
+<h2>Créer un dossier partagé avec samba<a class="headerlink" href="#creer-un-dossier-partage-avec-samba" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way">https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way</a>!</li>
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated%2C%20Simple%20and%20Brief%20Way%21">https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated%2C%20Simple%20and%20Brief%20Way%21</a></li>
 </ul>
+</div></blockquote>
+<ol class="last arabic">
+<li><dl class="first docutils">
+<dt>installation de samba</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">samba</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first">Création du mot de passe pour l’utilisateur</p>
+<blockquote>
+<div><p>Samba gère les mot de passe dans un espace de stockage différent du reste du système.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">smbpassword</span> <span class="o">-</span><span class="n">a</span> <span class="o">&lt;</span><span class="n">user_name</span><span class="o">&gt;</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">sudo</span> <span class="n">smbpassword</span> <span class="o">-</span><span class="n">a</span> <span class="n">pi</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Création du dossier à partager</p>
+<blockquote>
+<div><p>Par commodité, ce dossier est défini dans “/home” directement.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">share</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Attribution des droits sur le dossier pour l’utilisateur et pour le groupe de l’utilisateur</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">chown</span> <span class="o">&lt;</span><span class="n">user_name</span><span class="o">&gt;</span> <span class="o">/</span><span class="n">dossier</span><span class="o">/</span><span class="n">partagé</span>
+<span class="n">sudo</span> <span class="n">chown</span> <span class="p">:</span><span class="o">&lt;</span><span class="n">user_name</span><span class="o">&gt;</span> <span class="o">/</span><span class="n">dossier</span><span class="o">/</span><span class="n">partagé</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">sudo</span> <span class="n">chown</span> <span class="n">pi</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">share</span>
+<span class="n">sudo</span> <span class="n">chown</span> <span class="p">:</span><span class="n">pi</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">share</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Modification du fichier “smb.conf”</dt>
+<dd><ol class="first last arabic">
+<li><p class="first">Création d’une copie du fichier (par sécurité)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">cp</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">samba</span><span class="o">/</span><span class="n">smb</span><span class="o">.</span><span class="n">conf</span> <span class="o">~</span>
+    <span class="c1"># cette copie se trouve dans &#39;/home/&lt;user&gt;/&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edition de smb.conf</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">samba</span><span class="o">/</span><span class="n">smb</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Ajout, à la fin du fichier, des informations sur le dossier partagé</dt>
+<dd><blockquote class="first">
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">folder_name</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/&lt;</span><span class="n">user_name</span><span class="o">&gt;/&lt;</span><span class="n">folder_name</span><span class="o">&gt;</span>
+<span class="n">valid</span> <span class="n">users</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">user_name</span><span class="o">&gt;</span>
+<span class="n">read</span> <span class="n">only</span> <span class="o">=</span> <span class="n">no</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">/!\Attention/!\:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
+<li>Le bloc commençant par <strong>[&lt;folder_name&gt;]</strong> doit être séparer du code
+existant par au moins une ligne vide (hors commentaire)a</li>
+<li>Un espace doit entouré chaque signe “=”. ex: “ = “</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p class="first">Redémarrage du service samba</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">smbd</span> <span class="n">restart</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Accès au dossier partagé</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>\\<span class="n">IP_Distante</span>\<span class="n">share</span>
+<span class="n">ou</span>
+\\<span class="n">hostname</span>\<span class="n">share</span>
+
+<span class="n">ex</span><span class="p">:</span>
+\\<span class="mf">192.168</span><span class="o">.</span><span class="mf">1.31</span>\<span class="n">share</span>
+\\<span class="n">pi_crachTest</span>\<span class="n">share</span>
+</pre></div>
+</div>
+</li>
+</ol>
 </td>
 </tr>
 </tbody>
@@ -1133,7 +1239,7 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 <li><a class="reference internal" href="#linux-rediriger-sortie-vers-null">linux rediriger sortie vers null</a></li>
 <li><a class="reference internal" href="#telecharger-un-fichier-en-ligne-de-commande-wget">Télécharger un fichier en ligne de commande (wget)</a></li>
 <li><a class="reference internal" href="#emplacement-des-programmes">Emplacement des programmes</a></li>
-<li><a class="reference internal" href="#creer-un-dossier-partage">Créer un dossier partagé</a></li>
+<li><a class="reference internal" href="#creer-un-dossier-partage-avec-samba">Créer un dossier partagé avec samba</a></li>
 </ul>
 </li>
 </ul>

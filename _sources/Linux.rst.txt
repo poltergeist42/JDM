@@ -17,7 +17,7 @@ rappel des commandes de bases
         |                          |                                                  |
         |                          |        * ls -a                                   |
         +--------------------------+--------------------------------------------------+
-        |cd                        | change directory                                 |
+        | cd                       | change directory                                 |
         +--------------------------+--------------------------------------------------+
         | pwd                      | print working directory                          |
         +--------------------------+--------------------------------------------------+
@@ -43,7 +43,7 @@ rappel des commandes de bases
         +--------------------------+--------------------------------------------------+
         | echo                     | echo what is typed back in the terminal          |
         +--------------------------+--------------------------------------------------+
-        |grep                      | search program that uses regular expressions     |
+        | grep                     | search program that uses regular expressions     |
         +--------------------------+--------------------------------------------------+
         | sudo                     | perform as root user                             |
         +--------------------------+--------------------------------------------------+
@@ -713,10 +713,77 @@ Emplacement des programmes
 
 ------------------------------------------------------------------------------------------
 
-Créer un dossier partagé
-========================
+Créer un dossier partagé avec samba
+===================================
 
 :Liens_Web:
-            * https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!
+            * https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated%2C%20Simple%20and%20Brief%20Way%21
 
+    #. installation de samba
+        ::
 
+            sudo apt-get update
+            sudo apt-get install samba
+
+    #. Création du mot de passe pour l'utilisateur
+
+        Samba gère les mot de passe dans un espace de stockage différent du reste du système. ::
+
+            sudo smbpassword -a <user_name>
+
+            ex:
+            sudo smbpassword -a pi
+
+    #. Création du dossier à partager
+
+        Par commodité, ce dossier est défini dans '/home' directement. ::
+
+            sudo mkdir /home/share
+
+    #. Attribution des droits sur le dossier pour l'utilisateur et pour le groupe de l'utilisateur
+        ::
+
+            sudo chown <user_name> /dossier/partagé
+            sudo chown :<user_name> /dossier/partagé
+
+            ex:
+            sudo chown pi /home/share
+            sudo chown :pi /home/share
+
+    #. Modification du fichier 'smb.conf'
+        #. Création d'une copie du fichier (par sécurité) ::
+
+            sudo cp /etc/samba/smb.conf ~
+                # cette copie se trouve dans '/home/<user>/'
+
+        #. Edition de smb.conf ::
+
+            sudo vim /etc/samba/smb.conf
+
+        #. Ajout, à la fin du fichier, des informations sur le dossier partagé
+                ::
+                    
+                    [<folder_name>]
+                    path = /home/<user_name>/<folder_name>
+                    valid users = <user_name>
+                    read only = no
+
+            :/!\\Attention/!\\:
+                        * Le bloc commençant par **[<folder_name>]** doit être séparer du code
+                          existant par au moins une ligne vide (hors commentaire)a
+
+                        * Un espace doit entouré chaque signe '='. ex: ' = '
+
+    #. Redémarrage du service samba ::
+
+        sudo service smbd restart
+
+    #. Accès au dossier partagé ::
+
+        \\IP_Distante\share
+        ou
+        \\hostname\share
+
+        ex:
+        \\192.168.1.31\share
+        \\pi_crachTest\share
