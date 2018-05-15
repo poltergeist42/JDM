@@ -693,4 +693,30 @@ Télécharger un fichier en ligne de commande (wget)
         ex :
         wget https://github.com/docker-library/mongo/blob/2e3e1bdbb31389c8bc8d43f5a3cc439134b7956b/3.6/Dockerfile
         
+------------------------------------------------------------------------------------------
+
+Emplacement des programmes
+==========================
+
+    #. Connaitre l'emplacement d'un programme
+        ::
+        
+            whereis [Nom_du_programme]
+
+            ex:
+            whereis python
+
+    #. Emplacement par défaut des programmes
+
+        Les programmes sont généralement placés dans **'usr/bin/'**. Par convention, les programmes tiers
+        que nous installons, doivent être installés dans : **'/usr/local/'**
+
+------------------------------------------------------------------------------------------
+
+Créer un dossier partagé
+========================
+
+:Liens_Web:
+            * https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!
+
 
