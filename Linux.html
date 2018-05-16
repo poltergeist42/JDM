@@ -46,8 +46,10 @@
             
   <div class="section" id="linux">
 <h1>LINUX<a class="headerlink" href="#linux" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="shell">
+<h2>Shell<a class="headerlink" href="#shell" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="rappel-des-commandes-de-bases">
-<h2>rappel des commandes de bases<a class="headerlink" href="#rappel-des-commandes-de-bases" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>rappel des commandes de bases<a class="headerlink" href="#rappel-des-commandes-de-bases" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -63,8 +65,8 @@
 <col width="66%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">— Command —</th>
-<th class="head">— Meaning —</th>
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Meaning</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -147,7 +149,7 @@ même cachés</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="rappel-des-raccourcis-de-navigation-dans-le-shell">
-<h2>rappel des raccourcis de navigation dans le shell<a class="headerlink" href="#rappel-des-raccourcis-de-navigation-dans-le-shell" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>rappel des raccourcis de navigation dans le shell<a class="headerlink" href="#rappel-des-raccourcis-de-navigation-dans-le-shell" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table border="1" class="docutils">
 <colgroup>
@@ -204,8 +206,88 @@ même cachés</p>
 </div></blockquote>
 </div>
 <hr class="docutils" />
+<div class="section" id="faire-du-multi-screen-sur-une-fenetre-terminal">
+<h3>Faire du multi-screen  sur une fenêtre terminal<a class="headerlink" href="#faire-du-multi-screen-sur-une-fenetre-terminal" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="installation-de-screen">
+<h4>Installation de screen<a class="headerlink" href="#installation-de-screen" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">screen</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lancer-l-application-screen">
+<h4>Lancer l’application «&nbsp;screen&nbsp;»<a class="headerlink" href="#lancer-l-application-screen" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">screen</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="liste-des-commandes-des-bases-pour-screen">
+<h4>Liste des commandes des bases pour screen<a class="headerlink" href="#liste-des-commandes-des-bases-pour-screen" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Raccourcis clavier</th>
+<th class="head">Fonctions</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>screen</td>
+<td>Lancer screen</td>
+</tr>
+<tr class="row-odd"><td>CTRL+[a]    –&gt; [c]</td>
+<td>Ouvrir un nouveau screen</td>
+</tr>
+<tr class="row-even"><td>CTRL+[a]    –&gt; [espace]</td>
+<td>Basculer vers le screen suivant</td>
+</tr>
+<tr class="row-odd"><td>CTRL+[a][a]</td>
+<td>Basculer entre le teminal actif et le dernier consulté</td>
+</tr>
+<tr class="row-even"><td>CTRL+[a]    –&gt; d</td>
+<td>Détacher la session screen (permet) de fermer la console
+sans arréter les process</td>
+</tr>
+<tr class="row-odd"><td>screen -r</td>
+<td>Se reconnecter à la session screen tel qu’elle était
+lors du détachement avec CTRL[a][d]. On parle de rattacher
+le screen</td>
+</tr>
+<tr class="row-even"><td>exit</td>
+<td>Ferme le screen courrant</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="linux-rediriger-sortie-vers-null">
+<h2>linux rediriger sortie vers null<a class="headerlink" href="#linux-rediriger-sortie-vers-null" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www.lanterne-rouge.info/article-que-signifie-dev-null-2-1-70233357.html">http://www.lanterne-rouge.info/article-que-signifie-dev-null-2-1-70233357.html</a></dt>
+<dd># Une explication (fr) sur les sortie STDOUT et STDERR</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="gestion-des-permissions">
+<h2>Gestion des permissions<a class="headerlink" href="#gestion-des-permissions" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="activer-le-compte-root">
-<h2>activer le compte root<a class="headerlink" href="#activer-le-compte-root" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>activer le compte root<a class="headerlink" href="#activer-le-compte-root" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">passwd</span> <span class="n">root</span>
 </pre></div>
@@ -214,21 +296,56 @@ même cachés</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="faire-une-elevation-valable-toute-la-duree-de-la-session">
-<h2>faire une élévation valable toute la durée de la session<a class="headerlink" href="#faire-une-elevation-valable-toute-la-duree-de-la-session" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>faire une élévation valable toute la durée de la session<a class="headerlink" href="#faire-une-elevation-valable-toute-la-duree-de-la-session" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">s</span>
-<span class="c1"># N.B : Le prompt devrais passer en root@[nom_de_machine]</span>
+    <span class="c1"># N.B : Le prompt devrais passer en root@[nom_de_machine]</span>
 </pre></div>
 </div>
 </div></blockquote>
 </div>
 <hr class="docutils" />
-<div class="section" id="gestion-des-permissions">
-<h2>Gestion des permissions<a class="headerlink" href="#gestion-des-permissions" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="pour-copier-des-fichiers-en-root-depuis-l-interface-graphique">
+<h3>Pour copier des fichiers en root depuis l’interface graphique<a class="headerlink" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p>Installation du logiciel «&nbsp;gksu&nbsp;»</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">gksu</span>
+</pre></div>
+</div>
+<p>Ouvrir l’explorateur de fichier.
+dans le menu <strong>«&nbsp;Aide&nbsp;»</strong>, cliquer sur l’item <strong>«&nbsp;A propos&nbsp;»</strong>
+dans la fenêtre d’information qui s’affiche, relever le nom de l’explorateur</p>
+<blockquote>
+<div>ex : Thunar</div></blockquote>
+<dl class="docutils">
+<dt>Dans une fenêtre terminal entrer :</dt>
+<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="n">gksu</span> <span class="o">*</span><span class="n">nom_de_l_explorateur</span><span class="o">*</span>
+</pre></div>
+</div>
+<p class="last">ex : gksu Thunar</p>
+</dd>
+</dl>
+<p>L’explorateur de fichier doit s’ouvrir. Un bandeau orange vous signal que l’on se
+trouve sur le compte root.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
 <div class="section" id="groupes">
 <h3>Groupes<a class="headerlink" href="#groupes" title="Lien permanent vers ce titre">¶</a></h3>
-<blockquote>
-<div><ol class="arabic">
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://doc.ubuntu-fr.org/permissions">https://doc.ubuntu-fr.org/permissions</a></dt>
+<dd># Explication simple sur la gestion de permissions</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<ol class="last arabic">
 <li><dl class="first docutils">
 <dt>Connaître la liste des groupes aux quels appartient un utilisateur</dt>
 <dd><div class="first last highlight-default"><div class="highlight"><pre><span></span>groups [nom_d&#39;utilisateur]
@@ -254,8 +371,19 @@ $ usermod -aG docker polter
 </dd>
 </dl>
 </li>
+<li><dl class="first docutils">
+<dt>Connaitre tous les droits et autorisation sur des fichiers et des répertoire</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">al</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
 </ol>
-</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="acl-proprietaire-rwx">
 <h3>ACL (Propriétaire, RWX)<a class="headerlink" href="#acl-proprietaire-rwx" title="Lien permanent vers ce titre">¶</a></h3>
@@ -298,10 +426,12 @@ $ usermod -aG docker polter
 </div>
 </div>
 <hr class="docutils" />
+<div class="section" id="configuration-systeme">
+<h2>Configuration Système<a class="headerlink" href="#configuration-systeme" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="date-et-heure">
-<h2>Date et heure<a class="headerlink" href="#date-et-heure" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Date et heure<a class="headerlink" href="#date-et-heure" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="conaitre-la-date-et-l-heure-du-systeme">
-<h3>Conaitre la date et l’heure du système<a class="headerlink" href="#conaitre-la-date-et-l-heure-du-systeme" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Conaitre la date et l’heure du système<a class="headerlink" href="#conaitre-la-date-et-l-heure-du-systeme" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">date</span>
 </pre></div>
@@ -309,7 +439,7 @@ $ usermod -aG docker polter
 </div></blockquote>
 </div>
 <div class="section" id="synchronyser-la-date-et-l-heure-avec-un-serveur-de-temp-ntp">
-<h3>Synchronyser la date et l’heure avec un serveur de temp (NTP)<a class="headerlink" href="#synchronyser-la-date-et-l-heure-avec-un-serveur-de-temp-ntp" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Synchronyser la date et l’heure avec un serveur de temp (NTP)<a class="headerlink" href="#synchronyser-la-date-et-l-heure-avec-un-serveur-de-temp-ntp" title="Lien permanent vers ce titre">¶</a></h4>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -350,7 +480,7 @@ $ usermod -aG docker polter
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Synchronyser le deamon avec les serveurs NTP</dt>
+<dt>Synchroniser le deamon avec les serveurs NTP</dt>
 <dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">service</span> <span class="n">ntp</span> <span class="n">stop</span>
 <span class="n">ntpdate</span> <span class="n">pool</span><span class="o">.</span><span class="n">ntp</span><span class="o">.</span><span class="n">org</span>
 <span class="n">service</span> <span class="n">ntp</span> <span class="n">start</span>
@@ -360,7 +490,7 @@ $ usermod -aG docker polter
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Vérifier le décallage avec tous les serveur NTP</dt>
+<dt>Vérifier le décalage avec tous les serveur NTP</dt>
 <dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">ntpq</span> <span class="o">-</span><span class="n">p</span>
 </pre></div>
 </div>
@@ -375,8 +505,20 @@ $ usermod -aG docker polter
 </div>
 </div>
 <hr class="docutils" />
+<div class="section" id="changer-la-disposition-du-clavier">
+<h3>Changer la disposition du clavier<a class="headerlink" href="#changer-la-disposition-du-clavier" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dpkg</span><span class="o">-</span><span class="n">reconfigure</span> <span class="n">keyboard</span><span class="o">-</span><span class="n">configuration</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="administration-systeme">
+<h2>Administration système<a class="headerlink" href="#administration-systeme" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="arreter-demarrer-les-services-deamon">
-<h2>Arrêter / Démarrer les services (deamon)<a class="headerlink" href="#arreter-demarrer-les-services-deamon" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Arrêter / Démarrer les services (deamon)<a class="headerlink" href="#arreter-demarrer-les-services-deamon" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
 <li><dl class="first docutils">
@@ -403,7 +545,7 @@ $ usermod -aG docker polter
 </div>
 <hr class="docutils" />
 <div class="section" id="creer-une-tache-planifie-cron">
-<h2>Créer une tâche planifié (cron)<a class="headerlink" href="#creer-une-tache-planifie-cron" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Créer une tâche planifié (cron)<a class="headerlink" href="#creer-une-tache-planifie-cron" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -439,413 +581,8 @@ $ usermod -aG docker polter
 </table>
 </div>
 <hr class="docutils" />
-<div class="section" id="connaitre-la-version-du-systeme">
-<h2>connaître la version du système<a class="headerlink" href="#connaitre-la-version-du-systeme" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="installation-de-lsb-release">
-<h3>installation de lsb-release<a class="headerlink" href="#installation-de-lsb-release" title="Lien permanent vers ce titre">¶</a></h3>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">lsb</span><span class="o">-</span><span class="n">release</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="utilisation-de-lsb-release">
-<h3>utilisation de lsb-release<a class="headerlink" href="#utilisation-de-lsb-release" title="Lien permanent vers ce titre">¶</a></h3>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">lsb_release</span> <span class="o">-</span><span class="n">a</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="connaitre-la-version-d-un-paquet">
-<h2>connaître la version d’un paquet<a class="headerlink" href="#connaitre-la-version-d-un-paquet" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="installation-de-apt-show-versions">
-<h3>installation de apt-show-versions<a class="headerlink" href="#installation-de-apt-show-versions" title="Lien permanent vers ce titre">¶</a></h3>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">apt</span><span class="o">-</span><span class="n">show</span><span class="o">-</span><span class="n">versions</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="utilisation-de-apt-show-versions">
-<h3>utilisation de apt-show-versions<a class="headerlink" href="#utilisation-de-apt-show-versions" title="Lien permanent vers ce titre">¶</a></h3>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">show</span><span class="o">-</span><span class="n">versions</span> <span class="o">*</span><span class="n">nom_du_paquet</span><span class="o">*</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="pour-copier-des-fichiers-en-root-depuis-l-interface-graphique">
-<h2>Pour copier des fichiers en root depuis l’interface graphique<a class="headerlink" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique" title="Lien permanent vers ce titre">¶</a></h2>
-<blockquote>
-<div><p>Installation du logiciel «&nbsp;gksu&nbsp;»</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">gksu</span>
-</pre></div>
-</div>
-<p>Ouvrir l’explorateur de fichier.
-dans le menu <strong>«&nbsp;Aide&nbsp;»</strong>, cliquer sur l’item <strong>«&nbsp;A propos&nbsp;»</strong>
-dans la fenêtre d’information qui s’affiche, relever le nom de l’explorateur</p>
-<blockquote>
-<div>ex : Thunar</div></blockquote>
-<dl class="docutils">
-<dt>Dans une fenêtre terminal entrer :</dt>
-<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="n">gksu</span> <span class="o">*</span><span class="n">nom_de_l_explorateur</span><span class="o">*</span>
-</pre></div>
-</div>
-<p class="last">ex : gksu Thunar</p>
-</dd>
-</dl>
-<p>L’explorateur de fichier doit s’ouvrir. Un bandeau orange vous signal que l’on se
-trouve sur le compte root.</p>
-</div></blockquote>
-</div>
-<hr class="docutils" />
-<div class="section" id="changer-la-disposition-du-clavier">
-<h2>Changer la disposition du clavier<a class="headerlink" href="#changer-la-disposition-du-clavier" title="Lien permanent vers ce titre">¶</a></h2>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dpkg</span><span class="o">-</span><span class="n">reconfigure</span> <span class="n">keyboard</span><span class="o">-</span><span class="n">configuration</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<hr class="docutils" />
-<div class="section" id="ssh">
-<h2>SSH<a class="headerlink" href="#ssh" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="activer-la-connection-ssh">
-<h3>Activer la connection ssh<a class="headerlink" href="#activer-la-connection-ssh" title="Lien permanent vers ce titre">¶</a></h3>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
-<div><ul class="simple">
-<li><a class="reference external" href="https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux">https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux</a></li>
-</ul>
-</div></blockquote>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">aptitude</span> <span class="n">install</span> <span class="n">openssh</span><span class="o">-</span><span class="n">client</span> <span class="n">openssh</span><span class="o">-</span><span class="n">server</span>
-</pre></div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh">
-<h3>Désactiver la demande de mot de passe de la commande sudo au travers du ssh<a class="headerlink" href="#desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh" title="Lien permanent vers ce titre">¶</a></h3>
-<blockquote>
-<div><ol class="arabic">
-<li><p class="first">Ajouter l’utilisateur au fichiers sudoers</p>
-<blockquote>
-<div><ul>
-<li><p class="first">Ouvrir le fichier /etc/sudoers</p>
-</li>
-<li><p class="first">Ajouter A LA FIN DU FICHIER l’utilisateur sour la forme :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">nom_d</span><span class="s1">&#39;utilisateur] ALL=(ALL) NOPASSWD: ALL</span>
-
-<span class="n">ex</span> <span class="p">:</span>
-<span class="n">polter</span> <span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span> <span class="n">NOPASSWD</span><span class="p">:</span> <span class="n">ALL</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p class="first">modifier le fichier /etc/ssh//sshd_config</p>
-<blockquote>
-<div><ul>
-<li><p class="first">Repérer et commenter la ligne :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#PermitRootLogin prohibit-password</span>
-</pre></div>
-</div>
-</li>
-<li><p class="first">Ajouter juste après :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PermitRootLogin</span> <span class="n">yes</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</li>
-</ol>
-</div></blockquote>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">
-<h2>Pour pouvoir se connecter en RDP sur un poste Linux<a class="headerlink" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
-<div><ul class="simple">
-<li><a class="reference external" href="https://www.maketecheasier.com/enabling-remote-desktop-access-on-raspberry-pi/">https://www.maketecheasier.com/enabling-remote-desktop-access-on-raspberry-pi/</a></li>
-<li><a class="reference external" href="https://doc.ubuntu-fr.org/xrdp">https://doc.ubuntu-fr.org/xrdp</a></li>
-</ul>
-</div></blockquote>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">xrdp</span>
-</pre></div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<div class="section" id="pour-faire-du-xforwarding">
-<h2>pour faire du XForwarding<a class="headerlink" href="#pour-faire-du-xforwarding" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="http://blog.sckyzo.com/x11-forwarding-en-ssh-via-putty-windows/">http://blog.sckyzo.com/x11-forwarding-en-ssh-via-putty-windows/</a></li>
-<li><a class="reference external" href="http://frans-web.com/?p=18">http://frans-web.com/?p=18</a></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<div class="section" id="pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">
-<h2>Pour mettre une IP fixe sur une interfaces réseau<a class="headerlink" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><blockquote class="first">
-<div><ul class="simple">
-<li><a class="reference external" href="http://www.cyberciti.biz/tips/howto-ubuntu-linux-convert-dhcp-network-configuration-to-static-ip-configuration.html">http://www.cyberciti.biz/tips/howto-ubuntu-linux-convert-dhcp-network-configuration-to-static-ip-configuration.html</a></li>
-</ul>
-</div></blockquote>
-<p>Ouvrir le fichiers de configuration des interfaces :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">network</span><span class="o">/</span><span class="n">interfaces</span>
-</pre></div>
-</div>
-<p>Remplacer :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>    <span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">dhcp</span>
-
-<span class="n">par</span>
-    <span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">static</span>
-    <span class="n">address</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">32.254</span>
-    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
-    <span class="n">network</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">32.0</span> <span class="p">(</span><span class="n">optionel</span><span class="p">)</span>
-    <span class="n">gateway</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">32.1</span> <span class="p">(</span><span class="n">optionel</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Redémarrer le réseau</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">networking</span> <span class="n">restart</span>
-</pre></div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<div class="section" id="pour-active-le-wifi">
-<h2>Pour active le WIFI<a class="headerlink" href="#pour-active-le-wifi" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">liens Web:</th><td class="field-body"><blockquote class="first">
-<div><ul class="simple">
-<li><a class="reference external" href="https://wiki.debian.org/fr/WiFi/HowToUse">https://wiki.debian.org/fr/WiFi/HowToUse</a></li>
-</ul>
-</div></blockquote>
-<p>Ouvrir le fichiers de configuration des interfaces :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">network</span><span class="o">/</span><span class="n">interfaces</span>
-</pre></div>
-</div>
-<p>remplacer :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>    <span class="n">iface</span> <span class="n">wlan0</span> <span class="n">inet</span> <span class="n">manual</span>
-
-<span class="n">par</span>
-    <span class="n">iface</span> <span class="n">wlan0</span> <span class="n">inet</span> <span class="n">dhcp</span>
-</pre></div>
-</div>
-<p>Redémarrer les interfaces réseau</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">ifdown</span> <span class="o">-</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">ifup</span> <span class="o">-</span><span class="n">a</span>
-</pre></div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<div class="section" id="se-connecter-a-un-reseau-wifi-en-ligne-de-commande">
-<h2>Se connecter a un réseau wifi en ligne de commande<a class="headerlink" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">liens Web:</th><td class="field-body"><blockquote class="first">
-<div><ul class="simple">
-<li><a class="reference external" href="http://korben.info/comment-se-connecter-a-un-reseau-wifi-en-ligne-de-commande-sous-linux.html">http://korben.info/comment-se-connecter-a-un-reseau-wifi-en-ligne-de-commande-sous-linux.html</a></li>
-</ul>
-</div></blockquote>
-<p>Démarrer la carte wifi</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ifconfig</span> <span class="n">wlan0</span> <span class="n">up</span>
-</pre></div>
-</div>
-<p>Rechercher les différents réseau a porter</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">iwlist</span> <span class="n">ath0</span> <span class="n">scan</span>
-</pre></div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<div class="section" id="connaitre-la-liste-des-materiel-usb">
-<h2>Connaître la liste des matériel usb<a class="headerlink" href="#connaitre-la-liste-des-materiel-usb" title="Lien permanent vers ce titre">¶</a></h2>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">lsusb</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<hr class="docutils" />
-<div class="section" id="connaitre-lespace-disque-utilise-et-celui-disponible">
-<h2>Connaître l’espace disque utilise et celui disponible<a class="headerlink" href="#connaitre-lespace-disque-utilise-et-celui-disponible" title="Lien permanent vers ce titre">¶</a></h2>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<hr class="docutils" />
-<div class="section" id="les-ports-series">
-<h2>Les ports séries<a class="headerlink" href="#les-ports-series" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="http://www.instructables.com/id/Read-and-write-from-serial-port-with-Raspberry-Pi/">http://www.instructables.com/id/Read-and-write-from-serial-port-with-Raspberry-Pi/</a></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Rappel (équivalence de la notation Windows / Linux</p>
-<blockquote>
-<div><table border="1" class="docutils">
-<colgroup>
-<col width="43%" />
-<col width="57%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Windows</th>
-<th class="head">Linux</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>COM1</td>
-<td>/dev/ttyS0</td>
-</tr>
-<tr class="row-odd"><td>COM2</td>
-<td>/dev/ttyS1</td>
-</tr>
-<tr class="row-even"><td>COM3</td>
-<td>/dev/ttyS2</td>
-</tr>
-<tr class="row-odd"><td>COM4</td>
-<td>/dev/ttyS3</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-<div class="section" id="connaitre-la-liste-des-ports-serie">
-<h3>Connaître la liste des ports série :<a class="headerlink" href="#connaitre-la-liste-des-ports-serie" title="Lien permanent vers ce titre">¶</a></h3>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">tty</span><span class="o">*</span>
-    <span class="c1"># La commande retourne généralement plus de 50 tty.</span>
-      <span class="n">Cependant</span><span class="p">,</span> <span class="n">les</span> <span class="n">tty</span> <span class="n">associés</span> <span class="n">au</span> <span class="n">port</span> <span class="n">USB</span> <span class="n">disposent</span> <span class="n">d</span><span class="s1">&#39;une nomenclature différente.</span>
-      <span class="n">Ils</span> <span class="n">contiennent</span> <span class="n">habituellement</span> <span class="n">USB</span> <span class="n">ou</span> <span class="n">ACM</span> <span class="p">(</span><span class="n">Abstract</span> <span class="n">Control</span> <span class="n">Model</span><span class="p">)</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="interroger-le-journal-sur-les-ports-serie">
-<h3>interroger le journal sur les ports série :<a class="headerlink" href="#interroger-le-journal-sur-les-ports-serie" title="Lien permanent vers ce titre">¶</a></h3>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dmesg</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">tty</span>
-    <span class="c1"># Information plus complète qu&#39;avec l&#39;instruction précédente</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="faire-du-multi-screen-sur-une-fenetre-terminal">
-<h2>faire du multi-screen  sur une fenêtre terminal<a class="headerlink" href="#faire-du-multi-screen-sur-une-fenetre-terminal" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="installation-de-screen">
-<h3>Installation de screen<a class="headerlink" href="#installation-de-screen" title="Lien permanent vers ce titre">¶</a></h3>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">screen</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="lancer-l-application-screen">
-<h3>Lancer l’application «&nbsp;screen&nbsp;»<a class="headerlink" href="#lancer-l-application-screen" title="Lien permanent vers ce titre">¶</a></h3>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">screen</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="liste-des-commandes-des-bases-pour-screen">
-<h3>Liste des commandes des bases pour screen<a class="headerlink" href="#liste-des-commandes-des-bases-pour-screen" title="Lien permanent vers ce titre">¶</a></h3>
-<blockquote>
-<div><table border="1" class="docutils">
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Raccourcis clavier</th>
-<th class="head">Fonctions</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>screen</td>
-<td>Lancer screen</td>
-</tr>
-<tr class="row-odd"><td>CTRL+[a]    –&gt; [c]</td>
-<td>Ouvrir un nouveau screen</td>
-</tr>
-<tr class="row-even"><td>CTRL+[a]    –&gt; [espace]</td>
-<td>Basculer vers le screen suivant</td>
-</tr>
-<tr class="row-odd"><td>CTRL+[a][a]</td>
-<td>Basculer entre le teminal actif et le dernier consulté</td>
-</tr>
-<tr class="row-even"><td>CTRL+[a]    –&gt; d</td>
-<td>Détacher la session screen (permet) de fermer la console
-sans arréter les process</td>
-</tr>
-<tr class="row-odd"><td>screen -r</td>
-<td>Se reconnecter à la session screen tel qu’elle était
-lors du détachement avec CTRL[a][d]. On parle de rattacher
-le screen</td>
-</tr>
-<tr class="row-even"><td>exit</td>
-<td>Ferme le screen courrant</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-</div>
-</div>
-<hr class="docutils" />
 <div class="section" id="pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme">
-<h2>pour créer un script qui s’exécute au démarrage du système<a class="headerlink" href="#pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Pour créer un script qui s’exécute au démarrage du système<a class="headerlink" href="#pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme" title="Lien permanent vers ce titre">¶</a></h3>
 <dl class="docutils">
 <dt>Pour faire en sorte qu’un script s’exécute au démarrage, il faut 2 éléments distincts :</dt>
 <dd><ul class="first last">
@@ -854,8 +591,8 @@ le screen</td>
 <dd><p class="first"># <strong>N.B :</strong> le «&nbsp;d&nbsp;» dans «&nbsp;int.d&nbsp;» signifie : deamon.
 C’est le nom des services sous linux</p>
 <dl class="last docutils">
-<dt>exemple de script <span class="classifier-delimiter">:</span> <span class="classifier"><strong>/etc/init.d/skeleton</strong></span></dt>
-<dd><p class="first last"># Le fichier skeleton, dans linux, est donné a titre de model.
+<dt>Exemple de script <span class="classifier-delimiter">:</span> <span class="classifier"><strong>/etc/init.d/skeleton</strong></span></dt>
+<dd><p class="first last"># Le fichier skeleton, dans linux, est donné a titre de modèle.
 Il est conseillé de se faire une copie du fichier
 dans ses documents et de travailler à partir de cette exemple</p>
 </dd>
@@ -866,11 +603,11 @@ dans ses documents et de travailler à partir de cette exemple</p>
 <li><dl class="first docutils">
 <dt>un script (notre code python) placé dans <strong>/usr/sbin</strong></dt>
 <dd><p class="first last"># <strong>N.B :</strong> le «&nbsp;s&nbsp;» dans «&nbsp;sbin&nbsp;», signifie : system.
-Le bin repésente les Binnaires,
-c’est à dire les executables.
+Le bin représente les Binnaires,
+c’est à dire les exécutables.
 Le dossier sbin est donc le dossier
-qui contien les executable du systeme,
-autremant dit les services.</p>
+qui contiens les exécutable du système,
+autrement dit les services.</p>
 </dd>
 </dl>
 </li>
@@ -878,12 +615,12 @@ autremant dit les services.</p>
 </dd>
 </dl>
 <div class="section" id="preparation-du-script-shell">
-<h3>Préparation du script shell<a class="headerlink" href="#preparation-du-script-shell" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Préparation du script shell<a class="headerlink" href="#preparation-du-script-shell" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
-<div><ol class="arabic simple">
-<li>ouvrir une copie du fichier «&nbsp;skeleton&nbsp;». et modifier les ligne suivante :</li>
-</ol>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#! /bin/sh
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Ouvrir une copie du fichier «&nbsp;skeleton&nbsp;» et modifier les ligne suivante :</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span>#! /bin/sh
 ### BEGIN INIT INFO
 # Provides:          skeleton                   &lt;-- le titre
 # Required-Start:    $remote_fs $syslog
@@ -908,8 +645,8 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC=&quot;Description of the service&quot;
 NAME=daemonexecutablename                       &lt;-- le nom de votre deamon
 DAEMON=/usr/sbin/$NAME                          &lt;-- le chemin de votre script si
-                                                    ce dernier est différent du
-                                                    chemin ci contre
+                                                ce dernier est différent du
+                                                chemin ci contre
 
 #! /bin/sh
 ### BEGIN INIT INFO
@@ -940,88 +677,97 @@ PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
 </pre></div>
 </div>
-<p>#. après avoir effectuer les modification, enregistrer le fichier
+</dd>
+</dl>
+</li>
+<li><p class="first">Après avoir effectuer les modification, enregistrer le fichier
 sous un autre nom (ex : blink_init) dans le dossier :</p>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span>
 </pre></div>
 </div>
-</div></blockquote>
-<p>#. depuis le dossier <strong>/etc/init.d</strong>, ouvrir une fenêtre terminale
+</li>
+<li><p class="first">Depuis le dossier <strong>/etc/init.d</strong>, ouvrir une fenêtre terminale
 et rendre le script exécutable avec la commande suivante :</p>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">x</span> <span class="p">[</span><span class="n">nom_du_script</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">x</span> <span class="p">[</span><span class="n">nom_du_script</span><span class="p">]</span>
+
+<span class="n">ex</span> <span class="p">:</span> <span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">x</span> <span class="n">blink_init</span>
 </pre></div>
 </div>
-<p>ex : chmod a+x blink_init</p>
-</div></blockquote>
+</li>
+</ol>
 </div></blockquote>
 </div>
 <div class="section" id="preparation-du-script-python">
-<h3>Préparation du script python<a class="headerlink" href="#preparation-du-script-python" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Préparation du script python<a class="headerlink" href="#preparation-du-script-python" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
-<div><p>#. Si se n’est pas déjà fait, éditer le script et ajouter la ligne suivante
+<div><ol class="arabic">
+<li><p class="first">Si se n’est pas déjà fait, éditer le script et ajouter la ligne suivante
 sur la première ligne de votre fichier</p>
-<blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
 </pre></div>
 </div>
-</div></blockquote>
-<ol class="arabic">
+</li>
 <li><p class="first">Copier le fichier dans le dossier <strong>/usr/sbin/</strong></p>
 </li>
-<li><dl class="first docutils">
-<dt>rendre le script exécutable</dt>
-<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">x</span> <span class="p">[</span><span class="n">nom_du_script</span><span class="o">.</span><span class="n">py</span><span class="p">]</span>
+<li><p class="first">Rendre le script exécutable</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">x</span> <span class="p">[</span><span class="n">nom_du_script</span><span class="o">.</span><span class="n">py</span><span class="p">]</span>
+
+<span class="n">ex</span><span class="p">:</span> <span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">x</span> <span class="n">blink</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p class="last">ex: chmod a+x blink.py</p>
-</dd>
-</dl>
 </li>
 </ol>
 </div></blockquote>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="linux-rediriger-sortie-vers-null">
-<h2>linux rediriger sortie vers null<a class="headerlink" href="#linux-rediriger-sortie-vers-null" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<div class="section" id="connaitre-la-version-du-systeme">
+<h3>Connaître la version du système<a class="headerlink" href="#connaitre-la-version-du-systeme" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
 <li><dl class="first docutils">
-<dt><a class="reference external" href="http://www.lanterne-rouge.info/article-que-signifie-dev-null-2-1-70233357.html">http://www.lanterne-rouge.info/article-que-signifie-dev-null-2-1-70233357.html</a></dt>
-<dd># Une explication (fr) sur les sortie STDOUT et STDERR</dd>
-</dl>
-</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<div class="section" id="telecharger-un-fichier-en-ligne-de-commande-wget">
-<h2>Télécharger un fichier en ligne de commande (wget)<a class="headerlink" href="#telecharger-un-fichier-en-ligne-de-commande-wget" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
-<div><ul class="simple">
-<li><a class="reference external" href="https://doc.ubuntu-fr.org/wget">https://doc.ubuntu-fr.org/wget</a></li>
-</ul>
-</div></blockquote>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span>
-<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">library</span><span class="o">/</span><span class="n">mongo</span><span class="o">/</span><span class="n">blob</span><span class="o">/</span><span class="mf">2e3</span><span class="n">e1bdbb31389c8bc8d43f5a3cc439134b7956b</span><span class="o">/</span><span class="mf">3.6</span><span class="o">/</span><span class="n">Dockerfile</span>
+<dt>Installation de lsb-release</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">lsb</span><span class="o">-</span><span class="n">release</span>
 </pre></div>
 </div>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Utilisation de lsb-release</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">lsb_release</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="connaitre-la-version-d-un-paquet">
+<h3>Connaître la version d’un paquet<a class="headerlink" href="#connaitre-la-version-d-un-paquet" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Installation de apt-show-versions</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">apt</span><span class="o">-</span><span class="n">show</span><span class="o">-</span><span class="n">versions</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Utilisation de apt-show-versions</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">show</span><span class="o">-</span><span class="n">versions</span> <span class="o">*</span><span class="n">nom_du_paquet</span><span class="o">*</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="emplacement-des-programmes">
@@ -1049,6 +795,203 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </div></blockquote>
 </div>
 <hr class="docutils" />
+<div class="section" id="reseau">
+<h2>Réseau<a class="headerlink" href="#reseau" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="ssh">
+<h3>SSH<a class="headerlink" href="#ssh" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="activer-la-connections-ssh">
+<h4>Activer la connections ssh<a class="headerlink" href="#activer-la-connections-ssh" title="Lien permanent vers ce titre">¶</a></h4>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux">https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux</a></li>
+</ul>
+</div></blockquote>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">aptitude</span> <span class="n">install</span> <span class="n">openssh</span><span class="o">-</span><span class="n">client</span> <span class="n">openssh</span><span class="o">-</span><span class="n">server</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh">
+<h4>Désactiver la demande de mot de passe de la commande sudo au travers du ssh<a class="headerlink" href="#desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Ajouter l’utilisateur au fichiers sudoers</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Ouvrir le fichier /etc/sudoers</p>
+</li>
+<li><p class="first">Ajouter A LA FIN DU FICHIER l’utilisateur sous la forme :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">nom_d</span><span class="s1">&#39;utilisateur] ALL=(ALL) NOPASSWD: ALL</span>
+
+<span class="n">ex</span> <span class="p">:</span>
+<span class="n">polter</span> <span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span> <span class="n">NOPASSWD</span><span class="p">:</span> <span class="n">ALL</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Modifier le fichier /etc/ssh//sshd_config</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Repérer et commenter la ligne :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#PermitRootLogin prohibit-password</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Ajouter juste après :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PermitRootLogin</span> <span class="n">yes</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">
+<h3>Pour pouvoir se connecter en RDP sur un poste Linux<a class="headerlink" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="https://www.maketecheasier.com/enabling-remote-desktop-access-on-raspberry-pi/">https://www.maketecheasier.com/enabling-remote-desktop-access-on-raspberry-pi/</a></li>
+<li><a class="reference external" href="https://doc.ubuntu-fr.org/xrdp">https://doc.ubuntu-fr.org/xrdp</a></li>
+</ul>
+</div></blockquote>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">xrdp</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-faire-du-xforwarding">
+<h3>Pour faire du XForwarding<a class="headerlink" href="#pour-faire-du-xforwarding" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens WEB:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://blog.sckyzo.com/x11-forwarding-en-ssh-via-putty-windows/">http://blog.sckyzo.com/x11-forwarding-en-ssh-via-putty-windows/</a></li>
+<li><a class="reference external" href="http://frans-web.com/?p=18">http://frans-web.com/?p=18</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">
+<h3>Pour mettre une IP fixe sur une interfaces réseau<a class="headerlink" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="http://www.cyberciti.biz/tips/howto-ubuntu-linux-convert-dhcp-network-configuration-to-static-ip-configuration.html">http://www.cyberciti.biz/tips/howto-ubuntu-linux-convert-dhcp-network-configuration-to-static-ip-configuration.html</a></li>
+</ul>
+</div></blockquote>
+<p>Ouvrir le fichiers de configuration des interfaces :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">network</span><span class="o">/</span><span class="n">interfaces</span>
+</pre></div>
+</div>
+<p>Remplacer :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">dhcp</span>
+
+<span class="n">par</span><span class="p">:</span>
+
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">static</span>
+<span class="n">address</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">32.254</span>
+<span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+<span class="n">network</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">32.0</span> <span class="p">(</span><span class="n">optionel</span><span class="p">)</span>
+<span class="n">gateway</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">32.1</span> <span class="p">(</span><span class="n">optionel</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Redémarrer le réseau</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">networking</span> <span class="n">restart</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-active-le-wifi">
+<h3>Pour active le WIFI<a class="headerlink" href="#pour-active-le-wifi" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="https://wiki.debian.org/fr/WiFi/HowToUse">https://wiki.debian.org/fr/WiFi/HowToUse</a></li>
+</ul>
+</div></blockquote>
+<p>Ouvrir le fichiers de configuration des interfaces :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">network</span><span class="o">/</span><span class="n">interfaces</span>
+</pre></div>
+</div>
+<p>Remplacer :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">iface</span> <span class="n">wlan0</span> <span class="n">inet</span> <span class="n">manual</span>
+
+<span class="n">par</span> <span class="p">:</span>
+
+<span class="n">iface</span> <span class="n">wlan0</span> <span class="n">inet</span> <span class="n">dhcp</span>
+</pre></div>
+</div>
+<p>Redémarrer les interfaces réseau</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">ifdown</span> <span class="o">-</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">ifup</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="se-connecter-a-un-reseau-wifi-en-ligne-de-commande">
+<h3>Se connecter a un réseau wifi en ligne de commande<a class="headerlink" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">liens Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="http://korben.info/comment-se-connecter-a-un-reseau-wifi-en-ligne-de-commande-sous-linux.html">http://korben.info/comment-se-connecter-a-un-reseau-wifi-en-ligne-de-commande-sous-linux.html</a></li>
+</ul>
+</div></blockquote>
+<p>Démarrer la carte wifi</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ifconfig</span> <span class="n">wlan0</span> <span class="n">up</span>
+</pre></div>
+</div>
+<p>Rechercher les différents réseau a porter</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">iwlist</span> <span class="n">ath0</span> <span class="n">scan</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr class="docutils" />
 <div class="section" id="creer-un-dossier-partage-avec-samba">
 <h2>Créer un dossier partagé avec samba<a class="headerlink" href="#creer-un-dossier-partage-avec-samba" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1062,7 +1005,7 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </div></blockquote>
 <ol class="last arabic">
 <li><dl class="first docutils">
-<dt>installation de samba</dt>
+<dt>Installation de samba</dt>
 <dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">samba</span>
 </pre></div>
@@ -1152,7 +1095,7 @@ existant par au moins une ligne vide (hors commentaire)a</li>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Accès au dossier partagé</p>
+<li><p class="first">Accès au dossier partagé (depuis Windows)</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>\\<span class="n">IP_Distante</span>\<span class="n">share</span>
 <span class="n">ou</span>
 \\<span class="n">hostname</span>\<span class="n">share</span>
@@ -1169,6 +1112,111 @@ existant par au moins une ligne vide (hors commentaire)a</li>
 </tbody>
 </table>
 </div>
+<hr class="docutils" />
+<div class="section" id="telecharger-un-fichier-en-ligne-de-commande-wget">
+<h2>Télécharger un fichier en ligne de commande (wget)<a class="headerlink" href="#telecharger-un-fichier-en-ligne-de-commande-wget" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="https://doc.ubuntu-fr.org/wget">https://doc.ubuntu-fr.org/wget</a></li>
+</ul>
+</div></blockquote>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">library</span><span class="o">/</span><span class="n">mongo</span><span class="o">/</span><span class="n">blob</span><span class="o">/</span><span class="mf">2e3</span><span class="n">e1bdbb31389c8bc8d43f5a3cc439134b7956b</span><span class="o">/</span><span class="mf">3.6</span><span class="o">/</span><span class="n">Dockerfile</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="gestion-materiel">
+<h2>Gestion Matériel<a class="headerlink" href="#gestion-materiel" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="connaitre-la-liste-des-materiel-usb">
+<h3>Connaître la liste des matériel usb<a class="headerlink" href="#connaitre-la-liste-des-materiel-usb" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">lsusb</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="connaitre-lespace-disque-utilise-et-celui-disponible">
+<h3>Connaître l’espace disque utilise et celui disponible<a class="headerlink" href="#connaitre-lespace-disque-utilise-et-celui-disponible" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="les-ports-series">
+<h3>Les ports séries<a class="headerlink" href="#les-ports-series" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.instructables.com/id/Read-and-write-from-serial-port-with-Raspberry-Pi/">http://www.instructables.com/id/Read-and-write-from-serial-port-with-Raspberry-Pi/</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Rappel (équivalence de la notation Windows / Linux</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="43%" />
+<col width="57%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Windows</th>
+<th class="head">Linux</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>COM1</td>
+<td>/dev/ttyS0</td>
+</tr>
+<tr class="row-odd"><td>COM2</td>
+<td>/dev/ttyS1</td>
+</tr>
+<tr class="row-even"><td>COM3</td>
+<td>/dev/ttyS2</td>
+</tr>
+<tr class="row-odd"><td>COM4</td>
+<td>/dev/ttyS3</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="connaitre-la-liste-des-ports-serie">
+<h4>Connaître la liste des ports série<a class="headerlink" href="#connaitre-la-liste-des-ports-serie" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">tty</span><span class="o">*</span>
+    <span class="c1"># La commande retourne généralement plus de 50 tty.</span>
+      <span class="n">Cependant</span><span class="p">,</span> <span class="n">les</span> <span class="n">tty</span> <span class="n">associés</span> <span class="n">au</span> <span class="n">port</span> <span class="n">USB</span> <span class="n">disposent</span> <span class="n">d</span><span class="s1">&#39;une nomenclature différente.</span>
+      <span class="n">Ils</span> <span class="n">contiennent</span> <span class="n">habituellement</span> <span class="n">USB</span> <span class="n">ou</span> <span class="n">ACM</span> <span class="p">(</span><span class="n">Abstract</span> <span class="n">Control</span> <span class="n">Model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="interroger-le-journal-sur-les-ports-serie">
+<h4>Interroger le journal sur les ports série<a class="headerlink" href="#interroger-le-journal-sur-les-ports-serie" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dmesg</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">tty</span>
+    <span class="c1"># Information plus complète qu&#39;avec l&#39;instruction précédente</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -1180,66 +1228,73 @@ existant par au moins une ligne vide (hors commentaire)a</li>
   <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">LINUX</a><ul>
+<li><a class="reference internal" href="#shell">Shell</a><ul>
 <li><a class="reference internal" href="#rappel-des-commandes-de-bases">rappel des commandes de bases</a></li>
 <li><a class="reference internal" href="#rappel-des-raccourcis-de-navigation-dans-le-shell">rappel des raccourcis de navigation dans le shell</a></li>
-<li><a class="reference internal" href="#activer-le-compte-root">activer le compte root</a></li>
-<li><a class="reference internal" href="#faire-une-elevation-valable-toute-la-duree-de-la-session">faire une élévation valable toute la durée de la session</a></li>
-<li><a class="reference internal" href="#gestion-des-permissions">Gestion des permissions</a><ul>
-<li><a class="reference internal" href="#groupes">Groupes</a></li>
-<li><a class="reference internal" href="#acl-proprietaire-rwx">ACL (Propriétaire, RWX)</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#date-et-heure">Date et heure</a><ul>
-<li><a class="reference internal" href="#conaitre-la-date-et-l-heure-du-systeme">Conaitre la date et l’heure du système</a></li>
-<li><a class="reference internal" href="#synchronyser-la-date-et-l-heure-avec-un-serveur-de-temp-ntp">Synchronyser la date et l’heure avec un serveur de temp (NTP)</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#arreter-demarrer-les-services-deamon">Arrêter / Démarrer les services (deamon)</a></li>
-<li><a class="reference internal" href="#creer-une-tache-planifie-cron">Créer une tâche planifié (cron)</a></li>
-<li><a class="reference internal" href="#connaitre-la-version-du-systeme">connaître la version du système</a><ul>
-<li><a class="reference internal" href="#installation-de-lsb-release">installation de lsb-release</a></li>
-<li><a class="reference internal" href="#utilisation-de-lsb-release">utilisation de lsb-release</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#connaitre-la-version-d-un-paquet">connaître la version d’un paquet</a><ul>
-<li><a class="reference internal" href="#installation-de-apt-show-versions">installation de apt-show-versions</a></li>
-<li><a class="reference internal" href="#utilisation-de-apt-show-versions">utilisation de apt-show-versions</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique">Pour copier des fichiers en root depuis l’interface graphique</a></li>
-<li><a class="reference internal" href="#changer-la-disposition-du-clavier">Changer la disposition du clavier</a></li>
-<li><a class="reference internal" href="#ssh">SSH</a><ul>
-<li><a class="reference internal" href="#activer-la-connection-ssh">Activer la connection ssh</a></li>
-<li><a class="reference internal" href="#desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh">Désactiver la demande de mot de passe de la commande sudo au travers du ssh</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">Pour pouvoir se connecter en RDP sur un poste Linux</a></li>
-<li><a class="reference internal" href="#pour-faire-du-xforwarding">pour faire du XForwarding</a></li>
-<li><a class="reference internal" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">Pour mettre une IP fixe sur une interfaces réseau</a></li>
-<li><a class="reference internal" href="#pour-active-le-wifi">Pour active le WIFI</a></li>
-<li><a class="reference internal" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande">Se connecter a un réseau wifi en ligne de commande</a></li>
-<li><a class="reference internal" href="#connaitre-la-liste-des-materiel-usb">Connaître la liste des matériel usb</a></li>
-<li><a class="reference internal" href="#connaitre-lespace-disque-utilise-et-celui-disponible">Connaître l’espace disque utilise et celui disponible</a></li>
-<li><a class="reference internal" href="#les-ports-series">Les ports séries</a><ul>
-<li><a class="reference internal" href="#connaitre-la-liste-des-ports-serie">Connaître la liste des ports série :</a></li>
-<li><a class="reference internal" href="#interroger-le-journal-sur-les-ports-serie">interroger le journal sur les ports série :</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#faire-du-multi-screen-sur-une-fenetre-terminal">faire du multi-screen  sur une fenêtre terminal</a><ul>
+<li><a class="reference internal" href="#faire-du-multi-screen-sur-une-fenetre-terminal">Faire du multi-screen  sur une fenêtre terminal</a><ul>
 <li><a class="reference internal" href="#installation-de-screen">Installation de screen</a></li>
 <li><a class="reference internal" href="#lancer-l-application-screen">Lancer l’application «&nbsp;screen&nbsp;»</a></li>
 <li><a class="reference internal" href="#liste-des-commandes-des-bases-pour-screen">Liste des commandes des bases pour screen</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme">pour créer un script qui s’exécute au démarrage du système</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#linux-rediriger-sortie-vers-null">linux rediriger sortie vers null</a></li>
+<li><a class="reference internal" href="#gestion-des-permissions">Gestion des permissions</a><ul>
+<li><a class="reference internal" href="#activer-le-compte-root">activer le compte root</a></li>
+<li><a class="reference internal" href="#faire-une-elevation-valable-toute-la-duree-de-la-session">faire une élévation valable toute la durée de la session</a></li>
+<li><a class="reference internal" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique">Pour copier des fichiers en root depuis l’interface graphique</a></li>
+<li><a class="reference internal" href="#groupes">Groupes</a></li>
+<li><a class="reference internal" href="#acl-proprietaire-rwx">ACL (Propriétaire, RWX)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration-systeme">Configuration Système</a><ul>
+<li><a class="reference internal" href="#date-et-heure">Date et heure</a><ul>
+<li><a class="reference internal" href="#conaitre-la-date-et-l-heure-du-systeme">Conaitre la date et l’heure du système</a></li>
+<li><a class="reference internal" href="#synchronyser-la-date-et-l-heure-avec-un-serveur-de-temp-ntp">Synchronyser la date et l’heure avec un serveur de temp (NTP)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#changer-la-disposition-du-clavier">Changer la disposition du clavier</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#administration-systeme">Administration système</a><ul>
+<li><a class="reference internal" href="#arreter-demarrer-les-services-deamon">Arrêter / Démarrer les services (deamon)</a></li>
+<li><a class="reference internal" href="#creer-une-tache-planifie-cron">Créer une tâche planifié (cron)</a></li>
+<li><a class="reference internal" href="#pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme">Pour créer un script qui s’exécute au démarrage du système</a><ul>
 <li><a class="reference internal" href="#preparation-du-script-shell">Préparation du script shell</a></li>
 <li><a class="reference internal" href="#preparation-du-script-python">Préparation du script python</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#linux-rediriger-sortie-vers-null">linux rediriger sortie vers null</a></li>
-<li><a class="reference internal" href="#telecharger-un-fichier-en-ligne-de-commande-wget">Télécharger un fichier en ligne de commande (wget)</a></li>
+<li><a class="reference internal" href="#connaitre-la-version-du-systeme">Connaître la version du système</a></li>
+<li><a class="reference internal" href="#connaitre-la-version-d-un-paquet">Connaître la version d’un paquet</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#emplacement-des-programmes">Emplacement des programmes</a></li>
+<li><a class="reference internal" href="#reseau">Réseau</a><ul>
+<li><a class="reference internal" href="#ssh">SSH</a><ul>
+<li><a class="reference internal" href="#activer-la-connections-ssh">Activer la connections ssh</a></li>
+<li><a class="reference internal" href="#desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh">Désactiver la demande de mot de passe de la commande sudo au travers du ssh</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">Pour pouvoir se connecter en RDP sur un poste Linux</a></li>
+<li><a class="reference internal" href="#pour-faire-du-xforwarding">Pour faire du XForwarding</a></li>
+<li><a class="reference internal" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">Pour mettre une IP fixe sur une interfaces réseau</a></li>
+<li><a class="reference internal" href="#pour-active-le-wifi">Pour active le WIFI</a></li>
+<li><a class="reference internal" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande">Se connecter a un réseau wifi en ligne de commande</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#creer-un-dossier-partage-avec-samba">Créer un dossier partagé avec samba</a></li>
+<li><a class="reference internal" href="#telecharger-un-fichier-en-ligne-de-commande-wget">Télécharger un fichier en ligne de commande (wget)</a></li>
+<li><a class="reference internal" href="#gestion-materiel">Gestion Matériel</a><ul>
+<li><a class="reference internal" href="#connaitre-la-liste-des-materiel-usb">Connaître la liste des matériel usb</a></li>
+<li><a class="reference internal" href="#connaitre-lespace-disque-utilise-et-celui-disponible">Connaître l’espace disque utilise et celui disponible</a></li>
+<li><a class="reference internal" href="#les-ports-series">Les ports séries</a><ul>
+<li><a class="reference internal" href="#connaitre-la-liste-des-ports-serie">Connaître la liste des ports série</a></li>
+<li><a class="reference internal" href="#interroger-le-journal-sur-les-ports-serie">Interroger le journal sur les ports série</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
