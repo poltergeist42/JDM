@@ -516,7 +516,30 @@ Pour démarrer / redémarrer un container existant, il faut utiliser la commande
 <div class="section" id="sortir-d-un-container-mode-iterractif">
 <h2>Sortir d’un container (mode iterractif)<a class="headerlink" href="#sortir-d-un-container-mode-iterractif" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">-</span><span class="n">d</span> <span class="p">(</span><span class="n">control</span><span class="o">-</span><span class="n">d</span><span class="p">)</span> <span class="n">ou</span> <span class="s1">&#39;exit&#39;</span>
+<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>forcer la sortie et l’arrêt du container</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">-</span><span class="n">d</span> <span class="p">(</span><span class="n">control</span><span class="o">-</span><span class="n">d</span><span class="p">)</span> <span class="n">ou</span> <span class="s1">&#39;exit&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+<dl class="docutils">
+<dt># Sortir d’un container sans l’arrêter</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">-</span><span class="n">p</span> <span class="o">+</span> <span class="n">CTRL</span><span class="o">-</span><span class="n">q</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="recuperer-le-focus-sur-un-container-qui-tourne-en-tache-de-fond-en-mode-detache">
+<h2>Récupérer le focus sur un container qui tourne en tache de fond (en mode détaché)<a class="headerlink" href="#recuperer-le-focus-sur-un-container-qui-tourne-en-tache-de-fond-en-mode-detache" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">attach</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -684,6 +707,7 @@ un seul port, soit un ensemble de port :</p>
 </li>
 <li><a class="reference internal" href="#lancer-initialiser-un-container">Lancer/initialiser un Container</a></li>
 <li><a class="reference internal" href="#sortir-d-un-container-mode-iterractif">Sortir d’un container (mode iterractif)</a></li>
+<li><a class="reference internal" href="#recuperer-le-focus-sur-un-container-qui-tourne-en-tache-de-fond-en-mode-detache">Récupérer le focus sur un container qui tourne en tache de fond (en mode détaché)</a></li>
 <li><a class="reference internal" href="#inspecter-un-container">Inspecter un container</a></li>
 <li><a class="reference internal" href="#gestion-redirection-des-ports">Gestion / redirection des ports</a></li>
 </ul>

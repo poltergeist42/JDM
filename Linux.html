@@ -263,10 +263,9 @@ le screen</td>
 </div></blockquote>
 </div>
 </div>
-</div>
 <hr class="docutils" />
 <div class="section" id="linux-rediriger-sortie-vers-null">
-<h2>linux rediriger sortie vers null<a class="headerlink" href="#linux-rediriger-sortie-vers-null" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>linux rediriger sortie vers null<a class="headerlink" href="#linux-rediriger-sortie-vers-null" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -282,6 +281,88 @@ le screen</td>
 </tr>
 </tbody>
 </table>
+</div>
+<hr class="docutils" />
+<div class="section" id="faire-un-script-en-shell">
+<h3>Faire un script en Shell<a class="headerlink" href="#faire-un-script-en-shell" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://doc.ubuntu-fr.org/tutoriel/script_shell">https://doc.ubuntu-fr.org/tutoriel/script_shell</a></dt>
+<dd># Tuto simple en Français</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="rendre-un-script-executable">
+<h3>Rendre un script exécutable<a class="headerlink" href="#rendre-un-script-executable" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Pour le rendre exécutable</span>
+<span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="o">&lt;</span><span class="n">Nom_du_script</span><span class="o">&gt;</span>
+
+<span class="c1"># Pour l&#39;exécuter</span>
+<span class="o">./&lt;</span><span class="n">Nom_du_script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="creer-un-alias-permanent">
+<h3>Créer un alias permanent<a class="headerlink" href="#creer-un-alias-permanent" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="https://doc.ubuntu-fr.org/alias">https://doc.ubuntu-fr.org/alias</a></li>
+</ul>
+</div></blockquote>
+<ol class="last arabic">
+<li><p class="first">Editer le fichier “.bashrc”</p>
+<blockquote>
+<div><p>Il faut éditer le fichier “.bashrc” et ajouter cette commande
+à la suite de la ligne : “some more ls aliases”</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">f</span> <span class="o">~/.</span><span class="n">bash_aliases</span> <span class="p">];</span> <span class="n">then</span>
+    <span class="o">.</span> <span class="o">~/.</span><span class="n">bash_aliases</span>
+<span class="n">fi</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Créer ou éditer le fichier “.bash_aliases”</p>
+<blockquote>
+<div><p>Ajouter le nouvel alias sous la forme</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">nom_de_votre_alias</span><span class="o">=</span><span class="s1">&#39;commande de votre alias&#39;</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">alias</span> <span class="n">python</span><span class="o">=</span><span class="s1">&#39;/user/local/bin/python3.6&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Relancer “.bashrc”</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="gestion-des-permissions">
@@ -768,10 +849,9 @@ sur la première ligne de votre fichier</p>
 </ol>
 </div></blockquote>
 </div>
-</div>
 <hr class="docutils" />
 <div class="section" id="emplacement-des-programmes">
-<h2>Emplacement des programmes<a class="headerlink" href="#emplacement-des-programmes" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Emplacement des programmes<a class="headerlink" href="#emplacement-des-programmes" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
 <li><dl class="first docutils">
@@ -793,6 +873,7 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </li>
 </ol>
 </div></blockquote>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="reseau">
@@ -990,10 +1071,9 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </tbody>
 </table>
 </div>
-</div>
 <hr class="docutils" />
 <div class="section" id="creer-un-dossier-partage-avec-samba">
-<h2>Créer un dossier partagé avec samba<a class="headerlink" href="#creer-un-dossier-partage-avec-samba" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Créer un dossier partagé avec samba<a class="headerlink" href="#creer-un-dossier-partage-avec-samba" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1016,10 +1096,10 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 <li><p class="first">Création du mot de passe pour l’utilisateur</p>
 <blockquote>
 <div><p>Samba gère les mot de passe dans un espace de stockage différent du reste du système.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">smbpassword</span> <span class="o">-</span><span class="n">a</span> <span class="o">&lt;</span><span class="n">user_name</span><span class="o">&gt;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">smbpasswd</span> <span class="o">-</span><span class="n">a</span> <span class="o">&lt;</span><span class="n">user_name</span><span class="o">&gt;</span>
 
 <span class="n">ex</span><span class="p">:</span>
-<span class="n">sudo</span> <span class="n">smbpassword</span> <span class="o">-</span><span class="n">a</span> <span class="n">pi</span>
+<span class="n">sudo</span> <span class="n">smbpasswd</span> <span class="o">-</span><span class="n">a</span> <span class="n">pi</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1062,7 +1142,7 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 <li><dl class="first docutils">
 <dt>Ajout, à la fin du fichier, des informations sur le dossier partagé</dt>
 <dd><blockquote class="first">
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">folder_name</span><span class="o">&gt;</span><span class="p">]</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">Nom_du_dossier_partage</span><span class="o">&gt;</span><span class="p">]</span>
 <span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/&lt;</span><span class="n">user_name</span><span class="o">&gt;/&lt;</span><span class="n">folder_name</span><span class="o">&gt;</span>
 <span class="n">valid</span> <span class="n">users</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">user_name</span><span class="o">&gt;</span>
 <span class="n">read</span> <span class="n">only</span> <span class="o">=</span> <span class="n">no</span>
@@ -1114,7 +1194,7 @@ existant par au moins une ligne vide (hors commentaire)a</li>
 </div>
 <hr class="docutils" />
 <div class="section" id="telecharger-un-fichier-en-ligne-de-commande-wget">
-<h2>Télécharger un fichier en ligne de commande (wget)<a class="headerlink" href="#telecharger-un-fichier-en-ligne-de-commande-wget" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Télécharger un fichier en ligne de commande (wget)<a class="headerlink" href="#telecharger-un-fichier-en-ligne-de-commande-wget" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1133,9 +1213,28 @@ existant par au moins une ligne vide (hors commentaire)a</li>
 </tbody>
 </table>
 </div>
+</div>
 <hr class="docutils" />
 <div class="section" id="gestion-materiel">
 <h2>Gestion Matériel<a class="headerlink" href="#gestion-materiel" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="info-gestion-cpu">
+<h3>Info / Gestion CPU<a class="headerlink" href="#info-gestion-cpu" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.tecmint.com/check-linux-cpu-information/">https://www.tecmint.com/check-linux-cpu-information/</a></dt>
+<dd># 9 Commandes pour la gestion du CPU</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="connaitre-la-liste-des-materiel-usb">
 <h3>Connaître la liste des matériel usb<a class="headerlink" href="#connaitre-la-liste-des-materiel-usb" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
@@ -1237,9 +1336,12 @@ existant par au moins une ligne vide (hors commentaire)a</li>
 <li><a class="reference internal" href="#liste-des-commandes-des-bases-pour-screen">Liste des commandes des bases pour screen</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#linux-rediriger-sortie-vers-null">linux rediriger sortie vers null</a></li>
+<li><a class="reference internal" href="#faire-un-script-en-shell">Faire un script en Shell</a></li>
+<li><a class="reference internal" href="#rendre-un-script-executable">Rendre un script exécutable</a></li>
+<li><a class="reference internal" href="#creer-un-alias-permanent">Créer un alias permanent</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#linux-rediriger-sortie-vers-null">linux rediriger sortie vers null</a></li>
 <li><a class="reference internal" href="#gestion-des-permissions">Gestion des permissions</a><ul>
 <li><a class="reference internal" href="#activer-le-compte-root">activer le compte root</a></li>
 <li><a class="reference internal" href="#faire-une-elevation-valable-toute-la-duree-de-la-session">faire une élévation valable toute la durée de la session</a></li>
@@ -1267,9 +1369,9 @@ existant par au moins une ligne vide (hors commentaire)a</li>
 </li>
 <li><a class="reference internal" href="#connaitre-la-version-du-systeme">Connaître la version du système</a></li>
 <li><a class="reference internal" href="#connaitre-la-version-d-un-paquet">Connaître la version d’un paquet</a></li>
+<li><a class="reference internal" href="#emplacement-des-programmes">Emplacement des programmes</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#emplacement-des-programmes">Emplacement des programmes</a></li>
 <li><a class="reference internal" href="#reseau">Réseau</a><ul>
 <li><a class="reference internal" href="#ssh">SSH</a><ul>
 <li><a class="reference internal" href="#activer-la-connections-ssh">Activer la connections ssh</a></li>
@@ -1281,11 +1383,12 @@ existant par au moins une ligne vide (hors commentaire)a</li>
 <li><a class="reference internal" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">Pour mettre une IP fixe sur une interfaces réseau</a></li>
 <li><a class="reference internal" href="#pour-active-le-wifi">Pour active le WIFI</a></li>
 <li><a class="reference internal" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande">Se connecter a un réseau wifi en ligne de commande</a></li>
-</ul>
-</li>
 <li><a class="reference internal" href="#creer-un-dossier-partage-avec-samba">Créer un dossier partagé avec samba</a></li>
 <li><a class="reference internal" href="#telecharger-un-fichier-en-ligne-de-commande-wget">Télécharger un fichier en ligne de commande (wget)</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#gestion-materiel">Gestion Matériel</a><ul>
+<li><a class="reference internal" href="#info-gestion-cpu">Info / Gestion CPU</a></li>
 <li><a class="reference internal" href="#connaitre-la-liste-des-materiel-usb">Connaître la liste des matériel usb</a></li>
 <li><a class="reference internal" href="#connaitre-lespace-disque-utilise-et-celui-disponible">Connaître l’espace disque utilise et celui disponible</a></li>
 <li><a class="reference internal" href="#les-ports-series">Les ports séries</a><ul>

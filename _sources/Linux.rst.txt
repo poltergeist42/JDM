@@ -134,12 +134,64 @@ Liste des commandes des bases pour screen
 ####
 
 linux rediriger sortie vers null
-================================
+--------------------------------
 
 :Liens_Web:
             * http://www.lanterne-rouge.info/article-que-signifie-dev-null-2-1-70233357.html
                 # Une explication (fr) sur les sortie STDOUT et STDERR
                 
+####
+
+Faire un script en Shell
+------------------------
+
+:Liens_Web:
+            * https://doc.ubuntu-fr.org/tutoriel/script_shell
+                # Tuto simple en Français
+
+####
+
+Rendre un script exécutable
+---------------------------
+    ::
+
+        # Pour le rendre exécutable
+        chmod +x <Nom_du_script>
+
+        # Pour l'exécuter
+        ./<Nom_du_script>
+
+####
+
+Créer un alias permanent
+------------------------
+
+:Liens_Web:
+            * https://doc.ubuntu-fr.org/alias
+
+    #. Editer le fichier '.bashrc'
+
+        Il faut éditer le fichier '.bashrc' et ajouter cette commande 
+        à la suite de la ligne : 'some more ls aliases' ::
+
+            if [ -f ~/.bash_aliases ]; then
+                . ~/.bash_aliases
+            fi
+
+    #. Créer ou éditer le fichier '.bash_aliases'
+
+        Ajouter le nouvel alias sous la forme ::
+
+            alias nom_de_votre_alias='commande de votre alias'
+
+            ex:
+            alias python='/user/local/bin/python3.6'
+
+    #. Relancer '.bashrc'
+        ::
+
+            source ~/.bashrc
+
 ####
 
 Gestion des permissions
@@ -500,7 +552,7 @@ Connaître la version d'un paquet
 ####
 
 Emplacement des programmes
-==========================
+--------------------------
 
     #. Connaitre l'emplacement d'un programme
         ::
@@ -658,7 +710,7 @@ Se connecter a un réseau wifi en ligne de commande
 ####
 
 Créer un dossier partagé avec samba
-===================================
+-----------------------------------
 
 :Liens_Web:
             * https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated%2C%20Simple%20and%20Brief%20Way%21
@@ -673,10 +725,10 @@ Créer un dossier partagé avec samba
 
         Samba gère les mot de passe dans un espace de stockage différent du reste du système. ::
 
-            sudo smbpassword -a <user_name>
+            sudo smbpasswd -a <user_name>
 
             ex:
-            sudo smbpassword -a pi
+            sudo smbpasswd -a pi
 
     #. Création du dossier à partager
 
@@ -707,7 +759,7 @@ Créer un dossier partagé avec samba
         #. Ajout, à la fin du fichier, des informations sur le dossier partagé
                 ::
                     
-                    [<folder_name>]
+                    [<Nom_du_dossier_partage>]
                     path = /home/<user_name>/<folder_name>
                     valid users = <user_name>
                     read only = no
@@ -735,7 +787,7 @@ Créer un dossier partagé avec samba
 ####
 
 Télécharger un fichier en ligne de commande (wget)
-==================================================
+--------------------------------------------------
 
 :Liens_Web:
             * https://doc.ubuntu-fr.org/wget
@@ -749,6 +801,13 @@ Télécharger un fichier en ligne de commande (wget)
 
 Gestion Matériel
 ================
+
+Info / Gestion CPU
+------------------
+
+:Liens_Web:
+            * https://www.tecmint.com/check-linux-cpu-information/
+                # 9 Commandes pour la gestion du CPU
 
 Connaître la liste des matériel usb
 -----------------------------------

@@ -1,0 +1,418 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ESP8266 &#8212; documentation JDM 20170523</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '20170523',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="GIT (versionning)" href="GIT.html" />
+    <link rel="prev" title="DocUtils ; reStructuredText (.rst) ; Sphinx" href="DocUtils_RST_Sphinx.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="esp8266">
+<h1>ESP8266<a class="headerlink" href="#esp8266" title="Lien permanent vers ce titre">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/nodemcu">https://github.com/nodemcu</a></dt>
+<dd># Github pour les NodeMCU</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="pinout">
+<h2>PINOUT<a class="headerlink" href="#pinout" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">NodeMCU:</th><td class="field-body"><a class="first last reference internal image-reference" href="_images/PINMAP.png"><img alt="_images/PINMAP.png" class="align-center" src="_images/PINMAP.png" style="width: 400px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="flasher-un-nouveau-firmware">
+<h2>Flasher un nouveau Firmware<a class="headerlink" href="#flasher-un-nouveau-firmware" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FTDI_NodeMCU:</th><td class="field-body"><a class="first last reference internal image-reference" href="_images/cablage_nodeMcu.png"><img alt="_images/cablage_nodeMcu.png" class="align-center" src="_images/cablage_nodeMcu.png" style="width: 400px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Ce schéma a été élaboré à partir de différent schéma trouvés sur internet. Cette configuration est
+la seul qui ai fonctionné. il permet de flasher un ESP8266 à l’aide d’un <a class="reference external" href="https://www.aliexpress.com/item/High-Quality-FT232RL-FT232-FTDI-USB-3-3V-5-5V-to-TTL-Serial-Adapter-Module-Mini/32826575637.html?spm=2114.search0104.3.8.d3fd548aEljx0p&amp;ws_ab_test=searchweb0_0,searchweb201602_1_10152_10151_10065_10344_10068_10342_10343_5722611_10340_10341_10696_5722911_5722811_5722711_10084_10083_10618_10305_10304_10307_10820_10306_10821_10302_10059_100031_10103_10624_10623_10622_10621_10620_5722511,searchweb201603_1,ppcSwitch_2&amp;algo_expid=4b6e329b-3497-4d7b-a2ca-ef8ab9eab26f-1&amp;algo_pvid=4b6e329b-3497-4d7b-a2ca-ef8ab9eab26f&amp;priceBeautifyAB=0/">FTDI232</a> sans passer par le CH340</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">/!\_Attention_/!\:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ol class="first last arabic">
+<li><p class="first">L’ESP8266 fonctionnant uniquement en <strong>3.3v</strong>, il faut configurer le <strong>FTDI en 3.3v</strong></p>
+<br/></li>
+<li><p class="first">Le Rx du FTDI doit être connecté au Tx0 de l’ESP et le Tx du FTDI doit être connecté sur le
+Rx0 de l’ESP</p>
+<br/></li>
+<li><p class="first">Sur l’ESP, le Tx1 doit être relié à VCC pour qu’il soit neutralisé et qu’il ne perturbe pas
+l’ESP durant la communication entre le FTDI et l’ESP</p>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="maj-du-firmware">
+<h3>MAJ du Firmware<a class="headerlink" href="#maj-du-firmware" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/espressif/esptool">https://github.com/espressif/esptool</a></dt>
+<dd># Toolbox permettant de falsher le Firmware</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic">
+<li><p class="first">Téléchargement et installation d’ESPTool</p>
+<blockquote>
+<div><p>EspTool permet d’effacer l’ESP ou d’y téléverser un nouveau Fimware. Par défaut, la cible
+est l’ESP8266. Pour sélectionner un autre composant (comme l’ESP32), il faut consulter
+la <a class="reference external" href="https://github.com/espressif/esptool">documentation</a></p>
+<p>Il peut être installer directement avec pip :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">esptool</span>
+</pre></div>
+</div>
+<p>Ou peut être utiliser directement si on récupère de le dépôt et que l’on travail depuis le
+dossier extrait à partir de l’archive.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Récupérer le binaire à téléverser</p>
+<blockquote>
+<div><p>Par défaut le firmware installer dans le NodeMCU est en LUA. Il est possible de mettre
+un firmaware MicroPython.</p>
+<dl class="docutils">
+<dt><strong>N.B:</strong> La progrmmation de l’ESP depuis l’IDE Arduino écrase le firmware présent dans</dt>
+<dd><p class="first last">l’ESP pour mettre le siens à la place.</p>
+</dd>
+</dl>
+<ol class="arabic">
+<li><p class="first">Firmware original (LUA)</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://github.com/nodemcu/nodemcu-firmware/releases/tag/0.9.6-dev_20150704">https://github.com/nodemcu/nodemcu-firmware/releases/tag/0.9.6-dev_20150704</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p class="first">Firmware MicroPython</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://micropython.org/download">http://micropython.org/download</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p class="first">Programmer l’ESP depuis l’IDE Arduino</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.fais-le-toi-meme.fr/fr/electronique/tutoriel/programmes-arduino-executes-sur-esp8266-arduino-ide">https://www.fais-le-toi-meme.fr/fr/electronique/tutoriel/programmes-arduino-executes-sur-esp8266-arduino-ide</a></dt>
+<dd># Page (FR) expliquant comment configurer l’IDE Arduino pour pouvoir
+# programmer l’ESP</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<p># Deployer un nouveau Firmware</p>
+<blockquote class="last">
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html">http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html</a></dt>
+<dd># Procédure complète pour déployer un nouveau Firmware depuis <strong>esptool</strong></dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic">
+<li><p class="first">Rappel : Identifier les ports COM utilisés</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Sous Windows :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s1">&#39;Gestion de l&#39;</span><span class="n">ordinateur</span>\<span class="n">Gestionnaire</span> <span class="n">de</span> <span class="n">péripérique</span>\<span class="n">Ports</span> <span class="p">(</span><span class="n">COM</span> <span class="n">et</span> <span class="n">LPT</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Sous Linux :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB</span><span class="o">*</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Ecraser la flash</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">esptool</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">port</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB0</span> <span class="n">erase_flash</span>
+    <span class="c1"># example sous linux</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Déployer le nouveau Firmware</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">esptool</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">port</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB0</span> <span class="o">--</span><span class="n">baud</span> <span class="mi">460800</span> <span class="n">write_flash</span> <span class="o">--</span><span class="n">flash_size</span><span class="o">=</span><span class="n">detect</span> <span class="o">-</span><span class="n">fm</span> <span class="n">dio</span> <span class="mi">0</span> <span class="n">esp8266</span><span class="o">-</span><span class="mi">20170108</span><span class="o">-</span><span class="n">v1</span><span class="o">.</span><span class="mf">8.7</span><span class="o">.</span><span class="n">bin</span>
+    <span class="c1"># L&#39;ESP supporte bien un baurate de 460800 pour le déploement du Firmware</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="utilisation-avec-micropython">
+<h2>Utilisation avec MicroPython<a class="headerlink" href="#utilisation-avec-micropython" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/index.html">http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/index.html</a></dt>
+<dd># Guide / Tutorial de prise en main de MicroPython sur ESP8266</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://docs.micropython.org/en/latest/pyboard/genrst/index.html">http://docs.micropython.org/en/latest/pyboard/genrst/index.html</a></dt>
+<dd># Différence entre CPython et MicroPython</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">INFOS:</th><td class="field-body"><ul class="first last simple">
+<li>Micropython n’est pas très évolué. Il ne supporte pas les Class
+ou les scripts trop complexes</li>
+<li>L’ESP8266, n’a pas de coprocesseur Arithmétique. Les opération mathématiques
+complexe ou avancées ne sont pas possibles</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="repl-webrepl-et-file-system">
+<h3>REPL, WebREPL et File System<a class="headerlink" href="#repl-webrepl-et-file-system" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il est possible d’interagir directement avec l’ESP. Soit depuis le port série, c’est le REPL. Soit
+au travers d’un WebSocket, c’est le WebREPL. Le deux modes renvoie <strong>la même</strong> console
+d’interprétation Python.</p>
+<dl class="docutils">
+<dt><strong>N.B:</strong> Une fois dans la console Python, il faut tapez <strong>“help()”</strong> pour connaitre les opérations</dt>
+<dd><blockquote class="first">
+<div>spécifiques applicable à MicroPython et à LESP8266.</div></blockquote>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">REPL:</th><td class="field-body"><ul class="first simple">
+<li>Accessible depuis un terminal sur le port COM de l’ESP avec un <strong>Baudrate de 115200</strong></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">WebREPL:</th><td class="field-body"><ul class="first">
+<li><p class="first">Accessible depuis un navigateur Web. Le Wifi doit au préalable avoir été configuré
+depuis le REPL. Il est accessible depuis l’url : <a class="reference external" href="http://micropython.org/webrepl/">http://micropython.org/webrepl/</a>.
+Le WebSocket associé se présente sous la forme suivante :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ws</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">Adresse_ip</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">8266</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">ws</span><span class="p">:</span><span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">1.26</span><span class="p">:</span><span class="mi">8266</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">File_System_(FS):</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Un système de fichier est présent dans MicroPython. Il permet de déposer des fichiers
+(en “.py” par exemple) qui seront Exécutés / consultés après la fin de séquence de
+démarrage.</p>
+<blockquote>
+<div><ul class="simple">
+<li>boot.py: C’est un fichier obligatoire qui est créer automatiquement.
+Il est possible de le modifier, mais ce n’est pas conseiller. Ce fichier est le
+premier qui sera exécuté au démarrage de l’ESP.</li>
+<li>main.py: Ce fichier sera appeler automatiquement par “boot.py” si il existe.
+Il n’est pas obligatoire si on utilise l’ESP manuellement (seulement depuis la
+console python).</li>
+</ul>
+</div></blockquote>
+<p class="last">Adafruit a créer un CLI permettant de déposer et récupérer des fichiers dans le FS
+au travers de la liaison série : <a class="reference external" href="https://github.com/adafruit/ampy">https://github.com/adafruit/ampy</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="conclusion-sur-micropython-et-l-esp8266">
+<h3>Conclusion sur MicroPython et l’ESP8266<a class="headerlink" href="#conclusion-sur-micropython-et-l-esp8266" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div>L’ESP8266 est une bestiole sympa qui mérite d’être utilisé. Malheuresement MicroPython est trop
+limité et trop restrictif. Cela pénalise l’ESP. Pour utiliser l’ESP de façon avancée,
+<strong>il est conseillé de l’utiliser au travers de l’IDE ARDUINO</strong>.</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ESP8266</a><ul>
+<li><a class="reference internal" href="#pinout">PINOUT</a></li>
+<li><a class="reference internal" href="#flasher-un-nouveau-firmware">Flasher un nouveau Firmware</a><ul>
+<li><a class="reference internal" href="#maj-du-firmware">MAJ du Firmware</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#utilisation-avec-micropython">Utilisation avec MicroPython</a><ul>
+<li><a class="reference internal" href="#repl-webrepl-et-file-system">REPL, WebREPL et File System</a></li>
+<li><a class="reference internal" href="#conclusion-sur-micropython-et-l-esp8266">Conclusion sur MicroPython et l’ESP8266</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="DocUtils_RST_Sphinx.html" title="Chapitre précédent">DocUtils ; reStructuredText (.rst) ; Sphinx</a></li>
+      <li>Next: <a href="GIT.html" title="Chapitre suivant">GIT (versionning)</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ESP8266.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Poltergeist42.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/ESP8266.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
