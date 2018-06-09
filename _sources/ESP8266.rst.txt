@@ -14,6 +14,8 @@ PINOUT
      :width: 400 px
      :align: center
 
+####
+
 Flasher un nouveau Firmware
 ===========================
 
@@ -85,8 +87,7 @@ MAJ du Firmware
 
             :Liens_Web:
                 * https://www.fais-le-toi-meme.fr/fr/electronique/tutoriel/programmes-arduino-executes-sur-esp8266-arduino-ide
-                    # Page (FR) expliquant comment configurer l'IDE Arduino pour pouvoir
-                    # programmer l'ESP
+                    # Page (FR) expliquant comment configurer l'IDE Arduino pour pouvoir programmer l'ESP
 
     # Deployer un nouveau Firmware
 
@@ -98,7 +99,7 @@ MAJ du Firmware
 
             * Sous Windows : ::
 
-                'Gestion de l'ordinateur\Gestionnaire de péripérique\Ports (COM et LPT)
+                'Gestion de l'ordinateur\Gestionnaire de péripérique\Ports (COM et LPT)'
 
             * Sous Linux : ::
 
@@ -113,6 +114,8 @@ MAJ du Firmware
 
             esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect -fm dio 0 esp8266-20170108-v1.8.7.bin
                 # L'ESP supporte bien un baurate de 460800 pour le déploement du Firmware
+
+####
 
 Utilisation avec MicroPython
 ============================
@@ -141,7 +144,7 @@ au travers d'un WebSocket, c'est le WebREPL. Le deux modes renvoie **la même** 
 d'interprétation Python.
 
 **N.B:** Une fois dans la console Python, il faut tapez **'help()'** pour connaitre les opérations 
-     spécifiques applicable à MicroPython et à LESP8266.
+spécifiques applicable à MicroPython et à LESP8266.
 
     :REPL:
             * Accessible depuis un terminal sur le port COM de l'ESP avec un **Baudrate de 115200**
@@ -159,7 +162,7 @@ d'interprétation Python.
     :File_System_(FS):
             
             Un système de fichier est présent dans MicroPython. Il permet de déposer des fichiers
-            (en '.py' par exemple) qui seront Exécutés / consultés après la fin de séquence de
+            (en '.py' par exemple) qui seront Exécutés / consultés après la fin de la séquence de
             démarrage.
 
                 * boot.py: C'est un fichier obligatoire qui est créer automatiquement.
@@ -176,8 +179,7 @@ d'interprétation Python.
 Conclusion sur MicroPython et l'ESP8266
 ---------------------------------------
 
-    L'ESP8266 est une bestiole sympa qui mérite d'être utilisé. Malheuresement MicroPython est trop
+    L'ESP8266 est une bestiole sympa qui mérite d'être utilisée. Malheuresement MicroPython est trop
     limité et trop restrictif. Cela pénalise l'ESP. Pour utiliser l'ESP de façon avancée,
     **il est conseillé de l'utiliser au travers de l'IDE ARDUINO**.
-
 

@@ -48,14 +48,14 @@
 <h1>Composants Spécifiques<a class="headerlink" href="#composants-specifiques" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="programmation-des-atmega">
 <h2>Programmation des ATMega<a class="headerlink" href="#programmation-des-atmega" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour programmer un ATmega (328P ; 2560 etc) on peut utiliser Trois environement diférent :</p>
+<p>Pour programmer un ATmega (328P ; 2560 etc) on peut utiliser Trois environnement différent :</p>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">AVR_Studio:</th><td class="field-body">Proposer par Microchip (anciennement Atmel) permet de faire du debug
-au traver de la sonde JTAG mais n’accepte que
+au travers de la sonde JTAG mais n’accepte que
 les programmateur officiels</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Arduino:</th><td class="field-body">En utilisant le mode «&nbsp;Arduino as ISP. Ne permet pas de programmer
@@ -67,6 +67,12 @@ autre chose que du “.ino”</td>
 </tbody>
 </table>
 </div></blockquote>
+<div class="section" id="atmega-328p-pu-pinout">
+<h3>ATMega 328p-PU Pinout<a class="headerlink" href="#atmega-328p-pu-pinout" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/ATMEGA328-PU-PINOUT.jpg"><img alt="_images/ATMEGA328-PU-PINOUT.jpg" class="align-center" src="_images/ATMEGA328-PU-PINOUT.jpg" style="width: 400px;" /></a>
+</div></blockquote>
+</div>
 <div class="section" id="installation-du-programmateur-usbasp-sous-windows-10">
 <h3>Installation du programmateur USBASP sous windows 10<a class="headerlink" href="#installation-du-programmateur-usbasp-sous-windows-10" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
@@ -77,7 +83,7 @@ autre chose que du “.ino”</td>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://zadig.akeo.ie/">http://zadig.akeo.ie/</a></dt>
 <dd># Le logiciel Zadig permet d’installer des pilotes USB
-# pour plusieur programmateur diférents</dd>
+# pour plusieurs programmateur différents</dd>
 </dl>
 </li>
 </ul>
@@ -134,7 +140,7 @@ autre chose que du “.ino”</td>
 </tbody>
 </table>
 <ol class="arabic">
-<li><p class="first">Téléverser un programe</p>
+<li><p class="first">Téléverser un programme</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="p">[</span><span class="n">NOM_DU_MICROCONTROLEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">v</span> <span class="p">(</span><span class="n">mode</span> <span class="n">verbose</span><span class="p">)</span> <span class="o">-</span><span class="n">U</span> <span class="n">flash</span><span class="p">:[</span><span class="n">r</span><span class="o">|</span><span class="n">w</span><span class="o">|</span><span class="n">v</span><span class="p">]:[</span><span class="n">NOM_DU_HEX_A_TELEVERSER</span><span class="p">]</span>
 
 <span class="n">ex</span> <span class="p">:</span> <span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="n">usbasp</span> <span class="o">-</span><span class="n">p</span> <span class="n">m2560</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">U</span> <span class="n">flash</span><span class="p">:</span><span class="n">w</span><span class="p">:</span><span class="n">Marlin_witbox_2</span><span class="o">-</span><span class="mf">510.</span><span class="n">hex</span>
@@ -169,7 +175,7 @@ autre chose que du “.ino”</td>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/">http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/</a></dt>
-<dd># Exemple de mise en oeuvre + liste des fonctions</dd>
+<dd># Exemple de mise en œuvre + liste des fonctions</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
@@ -227,7 +233,7 @@ L’implantation si dessous est donc présenter en <strong>vue de dessus (donc s
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>l’installation et configurations des librairies et outils Quick2wire</dt>
+<dt>L’installation et configurations des librairies et outils Quick2wire</dt>
 <dd><p class="first"><strong>N.B :</strong> le lignes qui suivent sont copiées telles quelles depuis la page instructables</p>
 <dl class="last docutils">
 <dt>Se positionner à l’endroit ou l’on veut installer quick2wire</dt>
@@ -285,7 +291,7 @@ L’implantation si dessous est donc présenter en <strong>vue de dessus (donc s
 <li><dl class="first docutils">
 <dt>la déclinaison terrestre</dt>
 <dd><p class="first">Pour pouvoir être le plus précis possible, il faut recalibrer la boussole en tenant compte
-de notre décalage par rapport au pole magnétique. On appel ça : <strong>«&nbsp;la déclinaison terrestre&nbsp;»</strong>
+de notre décalage par rapport au pôle magnétique. On appel ça : <strong>«&nbsp;la déclinaison terrestre&nbsp;»</strong>
 Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <blockquote>
 <div><ul class="simple">
@@ -585,7 +591,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </tr>
 <tr class="field-even field"><th class="field-name">Echo:</th><td class="field-body"><p class="first">En Entrée (Micro - Echo)</p>
 <blockquote>
-<div><p># Attention les entrée du RPi etant en 3.3v,
+<div><p># Attention les entrée du RPi étant en 3.3v,
 il faut faire un pont diviseur entre la broche
 «&nbsp;Echo&nbsp;» et le GND pour pouvoir se brancher
 sur le RPi</p>
@@ -629,6 +635,91 @@ et non la distance total parcourue par l’onde radio.</p>
 </div></blockquote>
 </div>
 </div>
+<hr class="docutils" />
+<div class="section" id="captheur-de-methane-mq4">
+<h2>Captheur de Méthane : MQ4<a class="headerlink" href="#captheur-de-methane-mq4" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.pololu.com/file/0J311/MQ4.pdf">https://www.pololu.com/file/0J311/MQ4.pdf</a></dt>
+<dd># DATASHEET du composant</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.aliexpress.com/item/Free-shipping-MQ-4-gas-methane-sensor-module-MQ4-for-arduino/32561647140.html?spm=a2g0s.9042311.0.0.27424c4dETPH08">https://www.aliexpress.com/item/Free-shipping-MQ-4-gas-methane-sensor-module-MQ4-for-arduino/32561647140.html?spm=a2g0s.9042311.0.0.27424c4dETPH08</a></dt>
+<dd># Ref Aliexpress</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.sparkfun.com/datasheets/Sensors/Biometric/MQ-4.pdf">https://www.sparkfun.com/datasheets/Sensors/Biometric/MQ-4.pdf</a></dt>
+<dd># Une autre version de la DATASHHET (avec des dessins plus gros et schéma plus détaillés)</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">INFOS:</th><td class="field-body"><ul class="first simple">
+<li>Les capteurs de Type “MQx” ont besoin d’être alimentés en continue</li>
+<li>Les capteurs de Type “MQx” doivent nécessite un délais de minimum 48H pour fournir
+des informations fiables</li>
+<li>Toutes les valeurs données ici concerne uniquement le Méthane. Pour tout autre gaze
+détecté par le MQ4, il faut se reporter à la documentation</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">/attention\:</th><td class="field-body"><ul class="first last simple">
+<li>Sur la version PCB la résistance Rl, qui devrait être une résistance ajustable de 10 à 47k,
+est une résistance fixe de 1K. D’après la documentation, cette résistance devrait être
+étalonnée pour 5000 ppm soit à peut près 20K</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="liste-des-gazes-pouvant-etre-detecter-par-le-mq4">
+<h2>Liste des gazes pouvant être détecter par le MQ4<a class="headerlink" href="#liste-des-gazes-pouvant-etre-detecter-par-le-mq4" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>GPL</li>
+<li>Méthane (CH4)</li>
+<li>Hydrogène (H2)</li>
+<li>Monoxyde de Carbone (CO)</li>
+<li>Alcool</li>
+<li>Fumé de cigarette</li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="definition-des-constantes-et-valeurs-de-references">
+<h2>Définition des constantes et valeurs de références<a class="headerlink" href="#definition-des-constantes-et-valeurs-de-references" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.jayconsystems.com/tutorials/gas-sensor-tutorial/">https://www.jayconsystems.com/tutorials/gas-sensor-tutorial/</a></dt>
+<dd># Tous les calculs ont été effectuer sellons les calculs de cette page mais sur la courbe CH4</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">RS:</th><td class="field-body"><p class="first">C’est la résistance mesurer mesurer par le capteur. Cette valeur est Variable.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">R0:</th><td class="field-body"><p class="first last">C’est la résistance du capteur en condition de gaz normal. Cette valeur est Variable.
+Elle doit être calculer.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -641,6 +732,7 @@ et non la distance total parcourue par l’onde radio.</p>
   <ul>
 <li><a class="reference internal" href="#">Composants Spécifiques</a><ul>
 <li><a class="reference internal" href="#programmation-des-atmega">Programmation des ATMega</a><ul>
+<li><a class="reference internal" href="#atmega-328p-pu-pinout">ATMega 328p-PU Pinout</a></li>
 <li><a class="reference internal" href="#installation-du-programmateur-usbasp-sous-windows-10">Installation du programmateur USBASP sous windows 10</a></li>
 <li><a class="reference internal" href="#avrdude">AVRDUDE</a></li>
 </ul>
@@ -670,6 +762,9 @@ et non la distance total parcourue par l’onde radio.</p>
 <li><a class="reference internal" href="#specification-du-hc-sr04">Spécification du HC-SR04</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#captheur-de-methane-mq4">Captheur de Méthane : MQ4</a></li>
+<li><a class="reference internal" href="#liste-des-gazes-pouvant-etre-detecter-par-le-mq4">Liste des gazes pouvant être détecter par le MQ4</a></li>
+<li><a class="reference internal" href="#definition-des-constantes-et-valeurs-de-references">Définition des constantes et valeurs de références</a></li>
 </ul>
 </li>
 </ul>

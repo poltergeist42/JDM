@@ -73,6 +73,7 @@
 </tbody>
 </table>
 </div>
+<hr class="docutils" />
 <div class="section" id="flasher-un-nouveau-firmware">
 <h2>Flasher un nouveau Firmware<a class="headerlink" href="#flasher-un-nouveau-firmware" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -183,8 +184,7 @@ un firmaware MicroPython.</p>
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://www.fais-le-toi-meme.fr/fr/electronique/tutoriel/programmes-arduino-executes-sur-esp8266-arduino-ide">https://www.fais-le-toi-meme.fr/fr/electronique/tutoriel/programmes-arduino-executes-sur-esp8266-arduino-ide</a></dt>
-<dd># Page (FR) expliquant comment configurer l’IDE Arduino pour pouvoir
-# programmer l’ESP</dd>
+<dd># Page (FR) expliquant comment configurer l’IDE Arduino pour pouvoir programmer l’ESP</dd>
 </dl>
 </li>
 </ul>
@@ -220,7 +220,7 @@ un firmaware MicroPython.</p>
 <blockquote>
 <div><ul>
 <li><p class="first">Sous Windows :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s1">&#39;Gestion de l&#39;</span><span class="n">ordinateur</span>\<span class="n">Gestionnaire</span> <span class="n">de</span> <span class="n">péripérique</span>\<span class="n">Ports</span> <span class="p">(</span><span class="n">COM</span> <span class="n">et</span> <span class="n">LPT</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s1">&#39;Gestion de l&#39;</span><span class="n">ordinateur</span>\<span class="n">Gestionnaire</span> <span class="n">de</span> <span class="n">péripérique</span>\<span class="n">Ports</span> <span class="p">(</span><span class="n">COM</span> <span class="n">et</span> <span class="n">LPT</span><span class="p">)</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
 </li>
@@ -252,6 +252,7 @@ un firmaware MicroPython.</p>
 </table>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="utilisation-avec-micropython">
 <h2>Utilisation avec MicroPython<a class="headerlink" href="#utilisation-avec-micropython" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -287,11 +288,10 @@ complexe ou avancées ne sont pas possibles</li>
 <p>Il est possible d’interagir directement avec l’ESP. Soit depuis le port série, c’est le REPL. Soit
 au travers d’un WebSocket, c’est le WebREPL. Le deux modes renvoie <strong>la même</strong> console
 d’interprétation Python.</p>
-<dl class="docutils">
-<dt><strong>N.B:</strong> Une fois dans la console Python, il faut tapez <strong>“help()”</strong> pour connaitre les opérations</dt>
-<dd><blockquote class="first">
-<div>spécifiques applicable à MicroPython et à LESP8266.</div></blockquote>
-<table class="last docutils field-list" frame="void" rules="none">
+<p><strong>N.B:</strong> Une fois dans la console Python, il faut tapez <strong>“help()”</strong> pour connaitre les opérations
+spécifiques applicable à MicroPython et à LESP8266.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -316,7 +316,7 @@ Le WebSocket associé se présente sous la forme suivante :</p>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">File_System_(FS):</th></tr>
 <tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Un système de fichier est présent dans MicroPython. Il permet de déposer des fichiers
-(en “.py” par exemple) qui seront Exécutés / consultés après la fin de séquence de
+(en “.py” par exemple) qui seront Exécutés / consultés après la fin de la séquence de
 démarrage.</p>
 <blockquote>
 <div><ul class="simple">
@@ -334,13 +334,12 @@ au travers de la liaison série : <a class="reference external" href="https://gi
 </tr>
 </tbody>
 </table>
-</dd>
-</dl>
+</div></blockquote>
 </div>
 <div class="section" id="conclusion-sur-micropython-et-l-esp8266">
 <h3>Conclusion sur MicroPython et l’ESP8266<a class="headerlink" href="#conclusion-sur-micropython-et-l-esp8266" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div>L’ESP8266 est une bestiole sympa qui mérite d’être utilisé. Malheuresement MicroPython est trop
+<div>L’ESP8266 est une bestiole sympa qui mérite d’être utilisée. Malheuresement MicroPython est trop
 limité et trop restrictif. Cela pénalise l’ESP. Pour utiliser l’ESP de façon avancée,
 <strong>il est conseillé de l’utiliser au travers de l’IDE ARDUINO</strong>.</div></blockquote>
 </div>
