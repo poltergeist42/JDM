@@ -5,10 +5,10 @@ Composants Spécifiques
 Programmation des ATMega
 ========================
 
-Pour programmer un ATmega (328P ; 2560 etc) on peut utiliser Trois environement diférent :
+Pour programmer un ATmega (328P ; 2560 etc) on peut utiliser Trois environnement différent :
 
     :AVR_Studio:    Proposer par Microchip (anciennement Atmel) permet de faire du debug
-                    au traver de la sonde JTAG mais n'accepte que
+                    au travers de la sonde JTAG mais n'accepte que
                     les programmateur officiels
                     
     :Arduino:       En utilisant le mode "Arduino as ISP. Ne permet pas de programmer
@@ -16,14 +16,21 @@ Pour programmer un ATmega (328P ; 2560 etc) on peut utiliser Trois environement 
                     
     :AVRDUDE:       Tout en ligne de commande, mais accepte tous les programmateur (même
                     'Arduino as ISP'
-                    
+
+ATMega 328p-PU Pinout
+---------------------
+
+ .. image:: .\Images\Composants\ATMEGA\ATMEGA328-PU-PINOUT.jpg
+     :width: 400 px
+     :align: center
+
 Installation du programmateur USBASP sous windows 10
 ----------------------------------------------------
 
 :Liens_Web:
             * http://zadig.akeo.ie/
                 # Le logiciel Zadig permet d'installer des pilotes USB
-                # pour plusieur programmateur diférents
+                # pour plusieurs programmateur différents
                 
 AVRDUDE
 -------
@@ -46,7 +53,7 @@ AVRDUDE
         :Liens_Web:
                     * https://skyduino.wordpress.com/2011/12/02/tutoriel-avrdude-en-ligne-de-commande/
     
-        #. Téléverser un programe ::
+        #. Téléverser un programme ::
         
             avrdude -c [NOM_DU_PROGRAMATEUR] -p [NOM_DU_MICROCONTROLEUR] -v (mode verbose) -U flash:[r|w|v]:[NOM_DU_HEX_A_TELEVERSER]
             
@@ -69,7 +76,7 @@ Magnetomettre : HMC5883L
                 # Instructable (install I2C et test en Python3)
                                                 
             * http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/
-                # Exemple de mise en oeuvre + liste des fonctions
+                # Exemple de mise en œuvre + liste des fonctions
                     
             * http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf
                 # Datasheet du composant
@@ -111,7 +118,7 @@ Installation des librairies quick2wire et i2clibraries
                 sudo apt-get install python3
                 sudo reboot
                     
-        #. l'installation et configurations des librairies et outils Quick2wire
+        #. L'installation et configurations des librairies et outils Quick2wire
             **N.B :** le lignes qui suivent sont copiées telles quelles depuis la page instructables
             
             Se positionner à l'endroit ou l'on veut installer quick2wire
@@ -160,7 +167,7 @@ Configuration du HMC5883L
 
         #. la déclinaison terrestre
             Pour pouvoir être le plus précis possible, il faut recalibrer la boussole en tenant compte
-            de notre décalage par rapport au pole magnétique. On appel ça : **"la déclinaison terrestre"**
+            de notre décalage par rapport au pôle magnétique. On appel ça : **"la déclinaison terrestre"**
             Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):
             
                 * Longitude :  49° 1'22.48"N
@@ -169,7 +176,7 @@ Configuration du HMC5883L
             se qui donne à la date du 18/08/2015 : 0° 9,24'
                         
                         
-------------------------------------------------------------------------------------------
+####
 
 Motteur Pas à Pas : 28BYJ-48
 ============================
@@ -252,7 +259,7 @@ Organisation des phases en python3
                     --> GPIO27 = 0
                     --> GPIO22 = 0
 
-------------------------------------------------------------------------------------------
+####
 
 Picamera
 ========
@@ -303,7 +310,7 @@ utilisation avec python
             
                 import picamera
                 
-------------------------------------------------------------------------------------------
+####
 
 Capteur ultrason : HC-SR04
 ==========================
@@ -322,7 +329,7 @@ Vocabulaire et définissions pour le HC-SR04
     :Echo:
         En Entrée (Micro - Echo)
         
-            # Attention les entrée du RPi etant en 3.3v,
+            # Attention les entrée du RPi étant en 3.3v,
             il faut faire un pont diviseur entre la broche
             "Echo" et le GND pour pouvoir se brancher
             sur le RPi
@@ -353,3 +360,63 @@ Spécification du HC-SR04
         
     :Fréquence:
         40 kHz
+
+####
+
+Captheur de Méthane : MQ4
+=========================
+
+:Liens_Web:
+            * https://www.pololu.com/file/0J311/MQ4.pdf
+                # DATASHEET du composant
+
+            * https://www.aliexpress.com/item/Free-shipping-MQ-4-gas-methane-sensor-module-MQ4-for-arduino/32561647140.html?spm=a2g0s.9042311.0.0.27424c4dETPH08
+                # Ref Aliexpress
+
+            * https://www.sparkfun.com/datasheets/Sensors/Biometric/MQ-4.pdf
+                # Une autre version de la DATASHHET (avec des dessins plus gros et schéma plus détaillés)
+
+:INFOS:
+        * Les capteurs de Type 'MQx' ont besoin d'être alimentés en continue
+
+        * Les capteurs de Type 'MQx' doivent nécessite un délais de minimum 48H pour fournir
+          des informations fiables
+
+        * Toutes les valeurs données ici concerne uniquement le Méthane. Pour tout autre gaze 
+          détecté par le MQ4, il faut se reporter à la documentation
+
+:/attention\\:
+        * Sur la version PCB la résistance Rl, qui devrait être une résistance ajustable de 10 à 47k,
+          est une résistance fixe de 1K. D'après la documentation, cette résistance devrait être
+          étalonnée pour 5000 ppm soit à peut près 20K
+
+####
+
+Liste des gazes pouvant être détecter par le MQ4
+================================================
+
+    * GPL
+
+    * Méthane (CH4)
+
+    * Hydrogène (H2)
+
+    * Monoxyde de Carbone (CO)
+
+    * Alcool
+
+    * Fumé de cigarette
+
+####
+
+Définition des constantes et valeurs de références
+==================================================
+
+:Liens_Web:
+            * https://www.jayconsystems.com/tutorials/gas-sensor-tutorial/
+                # Tous les calculs ont été effectuer sellons les calculs de cette page mais sur la courbe CH4
+
+:RS:        C'est la résistance mesurer mesurer par le capteur. Cette valeur est Variable.
+
+:R0:        C'est la résistance du capteur en condition de gaz normal. Cette valeur est Variable.
+            Elle doit être calculer. 
