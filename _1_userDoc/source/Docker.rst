@@ -345,9 +345,24 @@ Lancer/initialiser un Container
      
 Sortir d'un container (mode iterractif)
 =======================================
-    ::
+
+    #. forcer la sortie et l'arrêt du container
+        ::
     
-        CTRL-d (control-d) ou 'exit'
+            CTRL-d (control-d) ou 'exit'
+
+    # Sortir d'un container sans l'arrêter
+        ::
+
+            CTRL-p + CTRL-q
+
+####
+
+Récupérer le focus sur un container qui tourne en tache de fond (en mode détaché)
+=================================================================================
+    ::
+
+        docker attach [nom_du_container]
      
 ####
 

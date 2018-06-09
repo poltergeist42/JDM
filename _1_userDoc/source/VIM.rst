@@ -155,3 +155,18 @@ Liste des commandes et fonctions utiles
             [Mode_Normal]
             /self
 
+    # Définir le système (dos, unix ou mac) pour l'enregistrement d'un fichier
+
+        :Liens_Web:
+                    * http://www.finiderire.com/?post/2008/10/18/Conversion-rituelle-d-un-fichier-egare
+
+        :: 
+        
+            set ff=x (avec x = dos, unix ou mac )
+
+            ex:
+            set ff=unix
+                # conversion au format unix / Linux
+
+            set ff=dos
+                # conversion au format dos / windows

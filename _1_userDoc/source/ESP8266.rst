@@ -1,0 +1,183 @@
+=======
+ESP8266
+=======
+
+:Liens_Web:
+            * https://github.com/nodemcu
+                # Github pour les NodeMCU
+
+PINOUT
+======
+
+:NodeMCU:
+ .. image:: .\Images\ESP8266\PINMAP.png
+     :width: 400 px
+     :align: center
+
+Flasher un nouveau Firmware
+===========================
+
+:FTDI_NodeMCU:
+ .. image:: .\Images\ESP8266\cablage_nodeMcu.png
+     :width: 400 px
+     :align: center
+
+Ce schéma a été élaboré à partir de différent schéma trouvés sur internet. Cette configuration est
+la seul qui ai fonctionné. il permet de flasher un ESP8266 à l'aide d'un `FTDI232 <https://www.aliexpress.com/item/High-Quality-FT232RL-FT232-FTDI-USB-3-3V-5-5V-to-TTL-Serial-Adapter-Module-Mini/32826575637.html?spm=2114.search0104.3.8.d3fd548aEljx0p&ws_ab_test=searchweb0_0,searchweb201602_1_10152_10151_10065_10344_10068_10342_10343_5722611_10340_10341_10696_5722911_5722811_5722711_10084_10083_10618_10305_10304_10307_10820_10306_10821_10302_10059_100031_10103_10624_10623_10622_10621_10620_5722511,searchweb201603_1,ppcSwitch_2&algo_expid=4b6e329b-3497-4d7b-a2ca-ef8ab9eab26f-1&algo_pvid=4b6e329b-3497-4d7b-a2ca-ef8ab9eab26f&priceBeautifyAB=0/>`_ sans passer par le CH340
+
+:/!\\_Attention_/!\\:
+    
+    #. L'ESP8266 fonctionnant uniquement en **3.3v**, il faut configurer le **FTDI en 3.3v**
+
+       .. raw:: html
+
+          <br/>
+
+    #. Le Rx du FTDI doit être connecté au Tx0 de l'ESP et le Tx du FTDI doit être connecté sur le 
+       Rx0 de l'ESP
+
+       .. raw:: html
+
+          <br/>
+
+    #. Sur l'ESP, le Tx1 doit être relié à VCC pour qu'il soit neutralisé et qu'il ne perturbe pas
+       l'ESP durant la communication entre le FTDI et l'ESP
+
+MAJ du Firmware
+---------------
+
+:Liens_Web:
+            * https://github.com/espressif/esptool
+                # Toolbox permettant de falsher le Firmware
+
+    #. Téléchargement et installation d'ESPTool
+
+        EspTool permet d'effacer l'ESP ou d'y téléverser un nouveau Fimware. Par défaut, la cible
+        est l'ESP8266. Pour sélectionner un autre composant (comme l'ESP32), il faut consulter
+        la `documentation <https://github.com/espressif/esptool>`_ 
+        
+        Il peut être installer directement avec pip : ::
+
+            pip install esptool
+
+        Ou peut être utiliser directement si on récupère de le dépôt et que l'on travail depuis le 
+        dossier extrait à partir de l'archive.
+
+    #. Récupérer le binaire à téléverser
+
+        Par défaut le firmware installer dans le NodeMCU est en LUA. Il est possible de mettre
+        un firmaware MicroPython.
+
+        **N.B:** La progrmmation de l'ESP depuis l'IDE Arduino écrase le firmware présent dans 
+             l'ESP pour mettre le siens à la place.
+
+        #. Firmware original (LUA)
+
+            :Liens_Web:
+                * https://github.com/nodemcu/nodemcu-firmware/releases/tag/0.9.6-dev_20150704
+
+        #. Firmware MicroPython
+
+            :Liens_Web:
+                * http://micropython.org/download
+
+        #. Programmer l'ESP depuis l'IDE Arduino
+
+            :Liens_Web:
+                * https://www.fais-le-toi-meme.fr/fr/electronique/tutoriel/programmes-arduino-executes-sur-esp8266-arduino-ide
+                    # Page (FR) expliquant comment configurer l'IDE Arduino pour pouvoir
+                    # programmer l'ESP
+
+    # Deployer un nouveau Firmware
+
+        :Liens_Web:
+            * http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html
+                # Procédure complète pour déployer un nouveau Firmware depuis **esptool**
+
+        #. Rappel : Identifier les ports COM utilisés
+
+            * Sous Windows : ::
+
+                'Gestion de l'ordinateur\Gestionnaire de péripérique\Ports (COM et LPT)
+
+            * Sous Linux : ::
+
+                ls /dev/ttyUSB*
+
+        #. Ecraser la flash ::
+
+            esptool.py --port /dev/ttyUSB0 erase_flash
+                # example sous linux
+
+        #. Déployer le nouveau Firmware ::
+
+            esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect -fm dio 0 esp8266-20170108-v1.8.7.bin
+                # L'ESP supporte bien un baurate de 460800 pour le déploement du Firmware
+
+Utilisation avec MicroPython
+============================
+
+:Liens_Web:
+            * http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/index.html
+                # Guide / Tutorial de prise en main de MicroPython sur ESP8266
+
+            * http://docs.micropython.org/en/latest/pyboard/genrst/index.html
+                # Différence entre CPython et MicroPython
+
+:INFOS:
+
+
+        * Micropython n'est pas très évolué. Il ne supporte pas les Class 
+          ou les scripts trop complexes
+
+        * L'ESP8266, n'a pas de coprocesseur Arithmétique. Les opération mathématiques
+          complexe ou avancées ne sont pas possibles
+
+REPL, WebREPL et File System
+----------------------------
+
+Il est possible d'interagir directement avec l'ESP. Soit depuis le port série, c'est le REPL. Soit 
+au travers d'un WebSocket, c'est le WebREPL. Le deux modes renvoie **la même** console
+d'interprétation Python.
+
+**N.B:** Une fois dans la console Python, il faut tapez **'help()'** pour connaitre les opérations 
+     spécifiques applicable à MicroPython et à LESP8266.
+
+    :REPL:
+            * Accessible depuis un terminal sur le port COM de l'ESP avec un **Baudrate de 115200**
+
+    :WebREPL:
+            * Accessible depuis un navigateur Web. Le Wifi doit au préalable avoir été configuré
+              depuis le REPL. Il est accessible depuis l'url : http://micropython.org/webrepl/.
+              Le WebSocket associé se présente sous la forme suivante : ::
+
+                ws://<Adresse_ip>:8266
+
+                ex:
+                ws://192.168.1.26:8266
+
+    :File_System_(FS):
+            
+            Un système de fichier est présent dans MicroPython. Il permet de déposer des fichiers
+            (en '.py' par exemple) qui seront Exécutés / consultés après la fin de séquence de
+            démarrage.
+
+                * boot.py: C'est un fichier obligatoire qui est créer automatiquement.
+                  Il est possible de le modifier, mais ce n'est pas conseiller. Ce fichier est le
+                  premier qui sera exécuté au démarrage de l'ESP.
+
+                * main.py: Ce fichier sera appeler automatiquement par 'boot.py' si il existe.
+                  Il n'est pas obligatoire si on utilise l'ESP manuellement (seulement depuis la
+                  console python).
+
+            Adafruit a créer un CLI permettant de déposer et récupérer des fichiers dans le FS
+            au travers de la liaison série : https://github.com/adafruit/ampy
+
+Conclusion sur MicroPython et l'ESP8266
+---------------------------------------
+
+    L'ESP8266 est une bestiole sympa qui mérite d'être utilisé. Malheuresement MicroPython est trop
+    limité et trop restrictif. Cela pénalise l'ESP. Pour utiliser l'ESP de façon avancée,
+    **il est conseillé de l'utiliser au travers de l'IDE ARDUINO**.
+
+

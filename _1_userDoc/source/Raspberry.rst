@@ -19,7 +19,7 @@ Model 2 (ID-FIX)
                             : eth.addr == 08:86:3b:6b:4d:58
                                          # filtre a appliquer dans Wireshark
 
-------------------------------------------------------------------------------------------
+####
 
 RPI ROV
 -------
@@ -34,7 +34,7 @@ RPI ROV
                             : eth.addr == d8:eb:97:1c:3e:b4
                                         # filtre a appliquer dans Wireshark
 
-------------------------------------------------------------------------------------------
+####
 
 Accéder au fichier de configuration du RPI
 ==========================================
@@ -42,7 +42,7 @@ Accéder au fichier de configuration du RPI
     
         sudo raspi-config
 
-------------------------------------------------------------------------------------------
+####
 
 Connaître la configuration matériel du RPI
 ==========================================
@@ -50,7 +50,7 @@ Connaître la configuration matériel du RPI
   :CPU:                 * cat /proc/cpuinfo
 
 
-------------------------------------------------------------------------------------------
+####
 
 pour passer la langue et le clavier en français
 ===============================================
@@ -200,7 +200,7 @@ liste des différentes commandes : ::
                                     # -1 = GPIO.UNKNOWN
 
 
-------------------------------------------------------------------------------------------
+####
 
 Protocole I2C
 =============
@@ -429,7 +429,7 @@ PWM, Servo moteur et DC Motor
         La fréquence est a adapter en fonction du bruit du moteur
         (quant il "chante", c'est pas bon)
 
-------------------------------------------------------------------------------------------
+####
 
 Input pull-up / pull-down
 =========================
@@ -456,7 +456,7 @@ Input pull-up / pull-down
         
             GPIO.setup(channel, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
             
-------------------------------------------------------------------------------------------
+####
 
 Les interruptions (python + GPIO)
 =================================
@@ -480,11 +480,24 @@ Les interruptions (python + GPIO)
             * http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-9
                 # Les 3 types d'interruptions expliquées en Français
                 
-------------------------------------------------------------------------------------------
+####
 
 Plein d'astuce pour la gestion au quotidien
 ===========================================
 
 :liens Web:
             * http://www.framboise314.fr/raspbian-tout-un-tas-de-trucs/#Effacement_de_lrsquocran
-            
+                # Exemple complet d'utilisation d'un Raspberry Pi et des GPIO dans docker
+
+####
+
+Utiliser les GPIO dans un container (Docker)
+============================================
+
+:Liens_Web:
+            * https://iotbytes.wordpress.com/create-your-first-docker-container-for-raspberry-pi-to-blink-an-led/
+
+            * https://stackoverflow.com/questions/30059784/docker-access-to-raspberry-pi-gpio-pins
+                # La réponse de Tobias du 12/01/2018 présentes les 3 moyen d'accéder aux GPIO
+
+
