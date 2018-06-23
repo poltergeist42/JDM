@@ -11,6 +11,7 @@ Mon journal de manip
    :caption: Contents:
 
    includeMe
+   Aquariophilie
    Composants
    ComputerVision
    DataBase
