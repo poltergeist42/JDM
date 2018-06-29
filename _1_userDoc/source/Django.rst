@@ -169,3 +169,14 @@ Types de champ les plus courant (models.py)
     * models.DateTimeField - Définit que le champ en question est une date ou une heure.
     * models.ForeignKey - C'est un lien vers un autre modèle.
 
+Lexique
+=======
+
+:qs:            * le QuerySet représente l'ensemble des requêtes effectués sur la BDD
+
+:ForeignKey:    * c'est une clef Étrangère / Extérieur partagée entre plusieurs éléments (One to Many)
+
+:prefetch_related:
+                * C'est le pré-chargement / la pré-lecture. Pour la gestion du cache
+
+
