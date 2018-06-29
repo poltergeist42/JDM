@@ -315,4 +315,11 @@ Directives
            <br/>
            # Attention, il faut sauter une ligne entre 'raw' et le code html
 
+------------------------------------------------------------------------------------------
 
+Utiliser Sphinx pour traité les donnes de Doxygen
+=================================================
+
+:Liens_Web:
+        * http://breathe.readthedocs.io/en/latest/
+            # Breathe permet de transformer le XML générer par Doxygen en un contenu explotable par Sphinx
