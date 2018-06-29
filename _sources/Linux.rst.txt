@@ -636,7 +636,10 @@ Pour mettre une IP fixe sur une interfaces réseau
 -------------------------------------------------
 
 :Liens Web:
-           * http://www.cyberciti.biz/tips/howto-ubuntu-linux-convert-dhcp-network-configuration-to-static-ip-configuration.html
+            * http://www.cyberciti.biz/tips/howto-ubuntu-linux-convert-dhcp-network-configuration-to-static-ip-configuration.html
+
+            * https://inetdoc.developpez.com/tutoriels/linux/configurer-interface-reseau-ethernet/?utm_source=dlvr.it&utm_medium=twitter
+                # Tuto complet sur la configuration des interfaces réseau
 
     Ouvrir le fichiers de configuration des interfaces :
     ::
