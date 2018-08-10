@@ -535,7 +535,7 @@ Tester un type attendu
 ------------------------------------------------------------------------------------------
 
 Packing et UnPacking (utilisation de : '\*args' et '\*\*kwargs')
-=============================================================
+================================================================
 
 :Liens Web:
             * http://deusyss.developpez.com/tutoriels/Python/args_kwargs/
@@ -544,7 +544,7 @@ Packing et UnPacking (utilisation de : '\*args' et '\*\*kwargs')
                 
 **N.B :** on parle de l'opérateur **'splat'** lorsque l'on parle de l’astérisque **'*'**
                 
-    #. "*args"
+    #. '\*args'
     
         **'\*args'** permet de passer, à une fonctions, des arguments en nombres et de
         types inconnue puis converti l'ensemble en tuple. Dans le prototype d'une

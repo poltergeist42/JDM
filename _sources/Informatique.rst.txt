@@ -87,7 +87,7 @@ Renouveler un certificats sur Exchange 2010
 -------------------------------------------
 
 :Liens_Web:
-        *https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/
+        * https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/
 
 PowerShell
 ----------
