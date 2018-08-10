@@ -22,6 +22,7 @@ Mon journal de manip
    GIT
    HTML_CSS
    Informatique
+   Javascript
    kicad
    Linux
    MAC_OS

@@ -142,20 +142,38 @@ Liste des commandes et fonctions utiles
                 | \[s  | pour le précédent                                              |
                 +------+----------------------------------------------------------------+
 
-    # Rechercher, mettre en évidence un mot ou un ensemble de mot
+    #. Rechercher, mettre en évidence un mot ou un ensemble de mot
 
-        * Se placer en mode normal
+        #.Rechercher un mot ou une phrase
 
-        * Saisir le caractère slash ('/') suivie du terme à rechercher ::
+            * Se placer en mode normal
 
-            [Mode_Normal]
-            /[Recherche]
+            * Saisir le caractère slash ('/') suivie du terme à rechercher ::
 
-            ex:
-            [Mode_Normal]
-            /self
+                [Mode_Normal]
+                /[Recherche]
 
-    # Définir le système (dos, unix ou mac) pour l'enregistrement d'un fichier
+                ex:
+                [Mode_Normal]
+                /self
+
+        #. Mettre en surbrillance le terme recherché ::
+
+            :set hlsearch
+
+            # pour l'arréter
+            :set nohlsearch
+
+        #. supprimer la subrillance précédente ::
+
+            :nohlsearch
+
+        #. faire une recherche incremental (au fur et à mesure de la frappe) ::
+
+            # la recherche incrémental vas séléctioner la première chaine de charactère correspondante
+            :set incsearch
+
+    #. Définir le système (dos, unix ou mac) pour l'enregistrement d'un fichier
 
         :Liens_Web:
                     * http://www.finiderire.com/?post/2008/10/18/Conversion-rituelle-d-un-fichier-egare
@@ -170,3 +188,75 @@ Liste des commandes et fonctions utiles
 
             set ff=dos
                 # conversion au format dos / windows
+
+    #. Activer la souris
+
+        ::
+        
+            set mouse=a
+
+    #. Ouvrir fermer des bloc de text (folding / unfolding)
+
+        :Liens_Web:
+                    * https://unix.stackexchange.com/questions/141097/how-to-enable-and-use-code-folding-in-vim
+
+                    * http://vimcasts.org/episodes/how-to-fold/
+
+        #. instruction à ajourter dans '.vimrc' ::
+
+                set foldmethod=indent   
+                set foldnestmax=10
+                set nofoldenable
+                set foldlevel=2
+
+
+        #. Liste des raccourcis en mode normal
+                   
+            +---------+---------------------------------+
+            | command | effect                          |
+            +=========+=================================+
+            | zi      | switch folding on or off        |
+            +---------+---------------------------------+
+            | za      | toggle current fold open/closed |
+            +---------+---------------------------------+
+            | zc      | close current fold              |
+            +---------+---------------------------------+
+            | zR      | open all folds                  |
+            +---------+---------------------------------+
+            | zM      | close all folds                 |
+            +---------+---------------------------------+
+            | zv      | expand folds to reveal cursor   |
+            +---------+---------------------------------+
+
+    #. Gestion des balises (mark) dans le texte
+
+        #. Placer une balise ::
+
+            # mode normal
+            m<a-z>
+
+            ex:
+            mb
+
+        #. accéder à une balise ::
+
+            # mode normal
+            '(apostrophe)<lettre_de_la_balise>
+
+            ex:
+            'b
+
+        #. Lister toutes les balises ::
+
+            # mode normal
+            :marks
+
+        #. repérer une balise spécifique ::
+
+            # mode normal
+            :marks <lettre_de_la_balise>
+
+            ex:
+            marks b
+
+

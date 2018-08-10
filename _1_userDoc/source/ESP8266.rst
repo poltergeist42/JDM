@@ -14,6 +14,12 @@ PINOUT
      :width: 400 px
      :align: center
 
+
+:Wemos_D1_mini:
+ .. image:: .\Images\ESP8266\wemos_D1_mini_pinout.png
+     :width: 400 px
+     :align: center
+
 ####
 
 Flasher un nouveau Firmware
