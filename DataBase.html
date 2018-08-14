@@ -116,6 +116,8 @@ ajouter les 2 chemins suivants au “PATH” dans les Variables d’environnemen
 # site officiel</li>
 <li><a class="reference external" href="https://medium.com/&#64;furkanpur/installation-redis-on-windows-10-13fbb055be7c">https://medium.com/&#64;furkanpur/installation-redis-on-windows-10-13fbb055be7c</a>
 # Un guide pour l’installation de Redis sous Windows10 (avec le Bash Ubuntu)</li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Mozilla/Redis_Tips">https://developer.mozilla.org/en-US/docs/Mozilla/Redis_Tips</a>
+# Un résumé des commandes Redis</li>
 </ul>
 </td>
 </tr>
@@ -185,6 +187,39 @@ sudo ./install_server.sh
 </pre></div>
 </div>
 </div>
+<div class="section" id="utilisation-avec-python">
+<h4>Utilisation avec Python<a class="headerlink" href="#utilisation-avec-python" title="Lien permanent vers ce titre">¶</a></h4>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><blockquote class="first">
+<div><ul class="simple">
+<li><a class="reference external" href="https://github.com/andymccurdy/redis-py">https://github.com/andymccurdy/redis-py</a>
+# Doc de la lib</li>
+</ul>
+</div></blockquote>
+<ol class="arabic">
+<li><p class="first">Installation</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">redis</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p># Exemple d’utilisation</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">redis</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">StrictRedis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="go">&#39;bar&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -210,6 +245,7 @@ sudo ./install_server.sh
 <li><a class="reference internal" href="#install-linux">Install Linux</a></li>
 <li><a class="reference internal" href="#demarrer-le-serveur">Démarrer le serveur</a></li>
 <li><a class="reference internal" href="#lancer-le-cli">Lancer le CLI</a></li>
+<li><a class="reference internal" href="#utilisation-avec-python">Utilisation avec Python</a></li>
 </ul>
 </li>
 </ul>

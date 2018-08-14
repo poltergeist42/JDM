@@ -251,7 +251,7 @@ Liste des commandes et fonctions utiles
             # mode normal
             :marks
 
-        #. repérer une balise spécifique ::
+        #. Repérer une balise spécifique ::
 
             # mode normal
             :marks <lettre_de_la_balise>
@@ -259,4 +259,31 @@ Liste des commandes et fonctions utiles
             ex:
             marks b
 
+    #. Faire de l'auto complétion
 
+        :Liens_Web:
+                * https://linuxfr.org/forums/astucesdivers/posts/%C3%A9diteurvim-lautocompl%C3%A9tion-sous-vim
+
+        L'auto complétion se fait en cumulant tous les buffers ouvert (1 fichier ouvert = 1 buffer)
+
+        #. Pour descendre le cycle des propositions ::
+
+            CTRL+n
+
+        #. Pour remonter le cycle des propositions ::
+
+            CTRL+p
+
+        #. Auto complétion sur un PATH ::
+
+            CTRL+X+F
+
+        #. Ajouter des listes de mots
+
+            Il est possible d'utiliser la commande **ctags** pour générer des fichiers contenant 
+            des listes de tag. Il faut ensuite les intégrer / activer dans '.virmrc' ::
+
+                set tag=<liste_de_fichiers_tag>
+
+                # Plus d'informations dans l'aide de vim :
+                :help ctag

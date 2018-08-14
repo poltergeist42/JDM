@@ -477,7 +477,7 @@ le dossier «&nbsp;%programFiles(x86)%Vimvim80spell&nbsp;»</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">repérer une balise spécifique</p>
+<li><p class="first">Repérer une balise spécifique</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># mode normal</span>
 <span class="p">:</span><span class="n">marks</span> <span class="o">&lt;</span><span class="n">lettre_de_la_balise</span><span class="o">&gt;</span>
 
@@ -485,6 +485,51 @@ le dossier «&nbsp;%programFiles(x86)%Vimvim80spell&nbsp;»</p>
 <span class="n">marks</span> <span class="n">b</span>
 </pre></div>
 </div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first">Faire de l’auto complétion</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://linuxfr.org/forums/astucesdivers/posts/%C3%A9diteurvim-lautocompl%C3%A9tion-sous-vim">https://linuxfr.org/forums/astucesdivers/posts/%C3%A9diteurvim-lautocompl%C3%A9tion-sous-vim</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>L’auto complétion se fait en cumulant tous les buffers ouvert (1 fichier ouvert = 1 buffer)</p>
+<ol class="arabic">
+<li><p class="first">Pour descendre le cycle des propositions</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">+</span><span class="n">n</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Pour remonter le cycle des propositions</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">+</span><span class="n">p</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Auto complétion sur un PATH</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">+</span><span class="n">X</span><span class="o">+</span><span class="n">F</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Ajouter des listes de mots</p>
+<blockquote>
+<div><p>Il est possible d’utiliser la commande <strong>ctags</strong> pour générer des fichiers contenant
+des listes de tag. Il faut ensuite les intégrer / activer dans “.virmrc”</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">tag</span><span class="o">=&lt;</span><span class="n">liste_de_fichiers_tag</span><span class="o">&gt;</span>
+
+<span class="c1"># Plus d&#39;informations dans l&#39;aide de vim :</span>
+<span class="p">:</span><span class="n">help</span> <span class="n">ctag</span>
+</pre></div>
+</div>
+</div></blockquote>
 </li>
 </ol>
 </div></blockquote>

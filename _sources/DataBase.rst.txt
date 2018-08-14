@@ -47,6 +47,9 @@ Redis
         * https://medium.com/@furkanpur/installation-redis-on-windows-10-13fbb055be7c
           # Un guide pour l'installation de Redis sous Windows10 (avec le Bash Ubuntu)
 
+        * https://developer.mozilla.org/en-US/docs/Mozilla/Redis_Tips
+          # Un résumé des commandes Redis
+
 Installation
 ------------
 
@@ -109,5 +112,25 @@ Lancer le CLI
 ::
 
     redis-cli
+
+Utilisation avec Python
++++++++++++++++++++++++
+
+:Liens_Web:
+        * https://github.com/andymccurdy/redis-py
+          # Doc de la lib
+
+    #. Installation ::
+
+        sudo pip install redis
+
+    # Exemple d'utilisation ::
+
+        >>> import redis
+        >>> r = redis.StrictRedis(host='localhost', port=6379, db=0)
+        >>> r.set('foo', 'bar')
+        True
+        >>> r.get('foo')
+        'bar'
 
 
