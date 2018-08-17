@@ -4,7 +4,7 @@ JavaScript
 
 :Liens_Web:
             * https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript
-              # Cours (fr) pour l'apprentissage du language
+              # Cours (fr) pour l'apprentissage du langage
 
             * https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference
               # Doc + tuto (fr)
@@ -48,7 +48,7 @@ Intéraction avec l'utilisateur
         ex:
         var entreeClavier = prompt("tapez du text ici : ");
 
-    #. Confirmation conditionel ::
+    #. Confirmation conditionnel ::
 
         confirm()
 
@@ -70,7 +70,7 @@ Type
 
            * boolean
 
-    #. Connaitres le type d'une variables ::
+    #. Connaitre le type d'une variables ::
 
         typeof
 
@@ -78,7 +78,7 @@ Type
         var myVar = 2;
         alert(typeof myVar);
 
-    #. Convertion de TYPE
+    #. Conversion de TYPE
 
         #. String --> Number ::
 
@@ -96,7 +96,40 @@ Type
             myNumber = 1234;
             myStr = myNumber + '';
 
-            ex: (version simplifiée)
+            ex: (version simplifiee)
             var myVar = 12;
             myVar += '';
             alert(typeof myVar);
+
+Détails syntaxique
+==================
+
+Les fonctions
+-------------
+
+    #. Fonctions simples ::
+
+        // Déclaration
+        function myFunct(myArg1, myArg2){
+                    // un super code
+                    }
+
+        // appel
+        myFunct()
+
+    #. Fonctions anonymes ::
+
+        // déclaration
+        function (myArg){
+                    // un super code
+                    }
+
+    #. Exécution immédiate d'une fonction, sans appel préalable ::
+
+        (function (myArg){
+                    // super code ...
+                    })();
+
+        /* Cette syntaxe permet d'executer du code isolé
+           sans appel préallable d'une 
+           fonction. La fonction anonyme est exécutée automatiquement (et immédiatement)
