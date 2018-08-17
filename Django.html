@@ -287,6 +287,24 @@ les formulaires HTML et interagit avec la base de données</li>
 </dd>
 </dl>
 </li>
+<li><p class="first">Commentaires dans les templates</p>
+<blockquote>
+<div><p>** /!\Attention/!\ ** les commentaires html ne s’appliquent pas sur les instructions Django</p>
+<p>il y a deux formes de commentaires. Les deux formes peuvent être appliquées soit sur une
+seule ligne, soit en mode bloc</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># forme 1</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">comment</span> <span class="o">%</span><span class="p">}</span>
+    <span class="n">un</span> <span class="nb">super</span> <span class="n">commentaire</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endcomment</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="c1"># forme 2</span>
+<span class="p">{</span><span class="c1">#</span>
+    <span class="n">un</span> <span class="n">autre</span> <span class="nb">super</span> <span class="n">commentaire</span>
+<span class="c1">#}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
 </ol>
 </td>
 </tr>

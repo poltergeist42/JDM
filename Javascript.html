@@ -52,7 +52,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
 <li><a class="reference external" href="https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript">https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript</a>
-# Cours (fr) pour l’apprentissage du language</li>
+# Cours (fr) pour l’apprentissage du langage</li>
 <li><a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference">https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference</a>
 # Doc + tuto (fr)</li>
 <li><a class="reference external" href="https://jsfiddle.net/">https://jsfiddle.net/</a>
@@ -99,7 +99,7 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first">Confirmation conditionel</p>
+<li><p class="first">Confirmation conditionnel</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">confirm</span><span class="p">()</span>
 
 <span class="n">ex</span><span class="p">:</span>
@@ -127,7 +127,7 @@
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Connaitres le type d’une variables</p>
+<li><p class="first">Connaitre le type d’une variables</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">typeof</span>
 
 <span class="n">ex</span><span class="p">:</span>
@@ -136,7 +136,7 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first">Convertion de TYPE</p>
+<li><p class="first">Conversion de TYPE</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">String –&gt; Number</p>
@@ -155,7 +155,7 @@
 <span class="n">myNumber</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">;</span>
 <span class="n">myStr</span> <span class="o">=</span> <span class="n">myNumber</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 
-<span class="n">ex</span><span class="p">:</span> <span class="p">(</span><span class="n">version</span> <span class="n">simplifiée</span><span class="p">)</span>
+<span class="n">ex</span><span class="p">:</span> <span class="p">(</span><span class="n">version</span> <span class="n">simplifiee</span><span class="p">)</span>
 <span class="n">var</span> <span class="n">myVar</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
 <span class="n">myVar</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 <span class="n">alert</span><span class="p">(</span><span class="n">typeof</span> <span class="n">myVar</span><span class="p">);</span>
@@ -164,6 +164,46 @@
 </li>
 </ol>
 </div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="details-syntaxique">
+<h2>Détails syntaxique<a class="headerlink" href="#details-syntaxique" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="les-fonctions">
+<h3>Les fonctions<a class="headerlink" href="#les-fonctions" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Fonctions simples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Déclaration</span>
+<span class="n">function</span> <span class="n">myFunct</span><span class="p">(</span><span class="n">myArg1</span><span class="p">,</span> <span class="n">myArg2</span><span class="p">){</span>
+            <span class="o">//</span> <span class="n">un</span> <span class="nb">super</span> <span class="n">code</span>
+            <span class="p">}</span>
+
+<span class="o">//</span> <span class="n">appel</span>
+<span class="n">myFunct</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Fonctions anonymes</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">déclaration</span>
+<span class="n">function</span> <span class="p">(</span><span class="n">myArg</span><span class="p">){</span>
+            <span class="o">//</span> <span class="n">un</span> <span class="nb">super</span> <span class="n">code</span>
+            <span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Exécution immédiate d’une fonction, sans appel préalable</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">function</span> <span class="p">(</span><span class="n">myArg</span><span class="p">){</span>
+            <span class="o">//</span> <span class="nb">super</span> <span class="n">code</span> <span class="o">...</span>
+            <span class="p">})();</span>
+
+<span class="o">/*</span> <span class="n">Cette</span> <span class="n">syntaxe</span> <span class="n">permet</span> <span class="n">d</span><span class="s1">&#39;executer du code isolé</span>
+   <span class="n">sans</span> <span class="n">appel</span> <span class="n">préallable</span> <span class="n">d</span><span class="s1">&#39;une</span>
+   <span class="n">fonction</span><span class="o">.</span> <span class="n">La</span> <span class="n">fonction</span> <span class="n">anonyme</span> <span class="n">est</span> <span class="n">exécutée</span> <span class="n">automatiquement</span> <span class="p">(</span><span class="n">et</span> <span class="n">immédiatement</span><span class="p">)</span>
+</pre></div>
+</div>
 </li>
 </ol>
 </div></blockquote>
@@ -184,6 +224,10 @@
 <li><a class="reference internal" href="#commentaires">Commentaires</a></li>
 <li><a class="reference internal" href="#interaction-avec-l-utilisateur">Intéraction avec l’utilisateur</a></li>
 <li><a class="reference internal" href="#type">Type</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#details-syntaxique">Détails syntaxique</a><ul>
+<li><a class="reference internal" href="#les-fonctions">Les fonctions</a></li>
 </ul>
 </li>
 </ul>

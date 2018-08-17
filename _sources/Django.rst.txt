@@ -156,6 +156,22 @@ Rappel des commandes de base
         
             manage.py runserver 0.0.0.0:8000
             
+    #. Commentaires dans les templates
+
+        ** /!\\Attention/!\\ ** les commentaires html ne s'appliquent pas sur les instructions Django
+
+        il y a deux formes de commentaires. Les deux formes peuvent être appliquées soit sur une
+        seule ligne, soit en mode bloc ::
+
+            # forme 1
+            {% comment %}
+                un super commentaire
+            {% endcomment %}
+
+            # forme 2
+            {#
+                un autre super commentaire
+            #}
 
             
 Types de champ les plus courant (models.py)
