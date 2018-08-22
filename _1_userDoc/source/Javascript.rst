@@ -133,3 +133,4 @@ Les fonctions
         /* Cette syntaxe permet d'executer du code isolé
            sans appel préallable d'une 
            fonction. La fonction anonyme est exécutée automatiquement (et immédiatement)
+        */

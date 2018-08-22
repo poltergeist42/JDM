@@ -15,6 +15,9 @@ VIM (VI)
             * https://urfist.unistra.fr/uploads/media/command_memento_fr.pdf
                 # Autres memento (plus denses)
 
+            * http://www.formation-lpi.com/IMG/pdf/103.8-vi.pdf
+                # MindMap : Memento des principales commandes ou actions
+
 ####
 
 Présentation

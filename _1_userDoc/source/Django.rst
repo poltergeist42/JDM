@@ -27,7 +27,7 @@ Django
             * https://docs.docker.com/compose/django/
                 # Création d'un container Django (Doc officiel Docker)
 
-------------------------------------------------------------------------------------------
+####
 
 Démarrer un nouveau projet
 ==========================
@@ -97,7 +97,7 @@ Démarrer une nouvelle APP
             # Un dossier [votre_application] sera créer dans le répertoire courant
     
 
-------------------------------------------------------------------------------------------
+####
 
 Principes de fonctionnement
 ===========================
@@ -132,7 +132,7 @@ La correspondance avec le MVC est la suivante :
           les formulaires HTML et interagit avec la base de données
         
 
-------------------------------------------------------------------------------------------
+####
 
 Rappel des commandes de base
 ============================
@@ -158,7 +158,8 @@ Rappel des commandes de base
             
     #. Commentaires dans les templates
 
-        ** /!\\Attention/!\\ ** les commentaires html ne s'appliquent pas sur les instructions Django
+        :/!\\Attention/!\\: les commentaires html  (<!-- [...] -->) ne s'appliquent pas sur
+                            les instructions Django
 
         il y a deux formes de commentaires. Les deux formes peuvent être appliquées soit sur une
         seule ligne, soit en mode bloc ::
@@ -174,6 +175,8 @@ Rappel des commandes de base
             #}
 
             
+####
+
 Types de champ les plus courant (models.py)
 ===========================================
 
@@ -184,6 +187,35 @@ Types de champ les plus courant (models.py)
     * models.TextField - Cela nous permet de définir un champ texte sans limite de caractères. Parfait pour le contenu d'un blog post !
     * models.DateTimeField - Définit que le champ en question est une date ou une heure.
     * models.ForeignKey - C'est un lien vers un autre modèle.
+
+####
+
+Authentification alternative (LDAP, Google, Twitter, Facebook, etc)
+===================================================================
+
+Il y a plusieurs type d'authentification possible. 
+
+    * En utilisant un compte et un mot de passe spécifique à Django
+
+    * En utilisant un compte de réseaux social (Google, Twitter, Facebook, etc ...)
+
+    * En utilisant LDAP
+
+:Liens_web:
+        * https://docs.djangoproject.com/en/2.0/topics/auth/customizing/#other-authentication-sources
+          # Doc officiel Django
+
+:Livres:
+        * Django 2 by exemple, **chapitre 4** (Building a custom authentication backend), **page 133**
+
+Utiliser LDAP pour l'authentification
+-------------------------------------
+
+:Liens_web:
+        * https://makina-corpus.com/blog/metier/2014/combiner-une-authentification-ldap-et-lauthentification-classique-django
+          # page FR expliquant comment créer un Backends pour LDAP
+
+####
 
 Lexique
 =======
