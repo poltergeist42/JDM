@@ -4,23 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Django &#8212; documentation JDM 20170523</title>
-    
+    <title>Django &#8212; Documentation JDM 20170523</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '20170523',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -35,8 +24,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -105,13 +93,13 @@
 <blockquote>
 <div><ul>
 <li><p class="first">Créer un dossier avec un nom significatif :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Ce placer dans le répertoire de destination et lancer la création
 de l’environnement virtuel :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
 
 <span class="n">virtualenv</span> <span class="o">--</span><span class="n">system</span><span class="o">-</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="o">.</span>
     <span class="c1"># Le point en fin de ligne représente le répertoire courant</span>
@@ -130,7 +118,7 @@ de l’environnement virtuel :</p>
 <dt>Lancer l’environnement virtuel avant de créer le projet Django</dt>
 <dd><ul class="first last">
 <li><p class="first">Exécuter le script d’activation :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">Scripts</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">Scripts</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
 </pre></div>
 </div>
 </li>
@@ -140,7 +128,7 @@ de l’environnement virtuel :</p>
 </li>
 <li><p class="first">Ce placer dans le répertoire de destination et lancer la création
 du projet Django(site principal) :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
 
 <span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startproject</span> <span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span> <span class="o">.</span>
     <span class="c1"># Le point en fin de ligne représente le répertoire courant</span>
@@ -157,18 +145,18 @@ du projet Django(site principal) :</p>
 <li><p class="first">Editer le fichier «&nbsp;settings.py&nbsp;» situé dans le dossier «&nbsp;./[nom_du_projet]/&nbsp;»</p>
 </li>
 <li><p class="first">Modifier les lignes :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;en-us&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;en-us&#39;</span>
 <span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;UTC&#39;</span>
 </pre></div>
 </div>
 <p>par :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;fr-fr&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;fr-fr&#39;</span>
 <span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;Europe/Paris&#39;</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Ajouter après la ligne «&nbsp;STATIC_URL = “/static/”&nbsp;» la ligne :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;static&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;static&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -181,7 +169,7 @@ du projet Django(site principal) :</p>
 <li><p class="first">Se placer au même niveau que le fichiers «&nbsp;manage.py&nbsp;»</p>
 </li>
 <li><p class="first">Effectuer la première migration :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
 </pre></div>
 </div>
 </li>
@@ -195,7 +183,7 @@ du projet Django(site principal) :</p>
 <blockquote>
 <div><ul>
 <li><p class="first">Se placer au même niveau que le fichiers «&nbsp;manage.py&nbsp;» et exécuter la commande manage :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="p">[</span><span class="n">votre_application</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="p">[</span><span class="n">votre_application</span><span class="p">]</span>
     <span class="c1"># Un dossier [votre_application] sera créer dans le répertoire courant</span>
 </pre></div>
 </div>
@@ -268,18 +256,18 @@ les formulaires HTML et interagit avec la base de données</li>
 <ol class="last arabic">
 <li><dl class="first docutils">
 <dt>Le serveur de développement</dt>
-<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
+<dd><div class="first highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
 </pre></div>
 </div>
 <p><strong>N.B</strong> : Le port par défaut est le 8000</p>
 <ol class="last arabic">
 <li><p class="first">Démarrage du serveur sur un autre port</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mi">8080</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mi">8080</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Démarrer le serveur en écoutant sur une autre IP</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">8000</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">8000</span>
 </pre></div>
 </div>
 </li>
@@ -289,10 +277,19 @@ les formulaires HTML et interagit avec la base de données</li>
 </li>
 <li><p class="first">Commentaires dans les templates</p>
 <blockquote>
-<div><p>** /!\Attention/!\ ** les commentaires html ne s’appliquent pas sur les instructions Django</p>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">/!\Attention/!\:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">les commentaires html  (&lt;!– […] –&gt;) ne s’appliquent pas sur
+les instructions Django</td>
+</tr>
+</tbody>
+</table>
 <p>il y a deux formes de commentaires. Les deux formes peuvent être appliquées soit sur une
 seule ligne, soit en mode bloc</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># forme 1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># forme 1</span>
 <span class="p">{</span><span class="o">%</span> <span class="n">comment</span> <span class="o">%</span><span class="p">}</span>
     <span class="n">un</span> <span class="nb">super</span> <span class="n">commentaire</span>
 <span class="p">{</span><span class="o">%</span> <span class="n">endcomment</span> <span class="o">%</span><span class="p">}</span>
@@ -311,6 +308,7 @@ seule ligne, soit en mode bloc</p>
 </tbody>
 </table>
 </div>
+<hr class="docutils" />
 <div class="section" id="types-de-champ-les-plus-courant-models-py">
 <h2>Types de champ les plus courant (models.py)<a class="headerlink" href="#types-de-champ-les-plus-courant-models-py" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -333,6 +331,51 @@ seule ligne, soit en mode bloc</p>
 </tbody>
 </table>
 </div>
+<hr class="docutils" />
+<div class="section" id="authentification-alternative-ldap-google-twitter-facebook-etc">
+<h2>Authentification alternative (LDAP, Google, Twitter, Facebook, etc)<a class="headerlink" href="#authentification-alternative-ldap-google-twitter-facebook-etc" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il y a plusieurs type d’authentification possible.</p>
+<blockquote>
+<div><ul class="simple">
+<li>En utilisant un compte et un mot de passe spécifique à Django</li>
+<li>En utilisant un compte de réseaux social (Google, Twitter, Facebook, etc …)</li>
+<li>En utilisant LDAP</li>
+</ul>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_web:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.0/topics/auth/customizing/#other-authentication-sources">https://docs.djangoproject.com/en/2.0/topics/auth/customizing/#other-authentication-sources</a>
+# Doc officiel Django</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Livres:</th><td class="field-body"><ul class="first last simple">
+<li>Django 2 by exemple, <strong>chapitre 4</strong> (Building a custom authentication backend), <strong>page 133</strong></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="utiliser-ldap-pour-l-authentification">
+<h3>Utiliser LDAP pour l’authentification<a class="headerlink" href="#utiliser-ldap-pour-l-authentification" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://makina-corpus.com/blog/metier/2014/combiner-une-authentification-ldap-et-lauthentification-classique-django">https://makina-corpus.com/blog/metier/2014/combiner-une-authentification-ldap-et-lauthentification-classique-django</a>
+# page FR expliquant comment créer un Backends pour LDAP</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr class="docutils" />
 <div class="section" id="lexique">
 <h2>Lexique<a class="headerlink" href="#lexique" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -366,20 +409,54 @@ seule ligne, soit en mode bloc</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table des Matières</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Django</a><ul>
-<li><a class="reference internal" href="#demarrer-un-nouveau-projet">Démarrer un nouveau projet</a><ul>
-<li><a class="reference internal" href="#demarrer-une-nouvelle-app">Démarrer une nouvelle APP</a></li>
+<h1 class="logo"><a href="index.html">JDM</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Aquariophilie.html">Aquariophilie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composants.html">Composants Spécifiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ComputerVision.html">Computer Vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DataBase.html">DataBase</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Django</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#demarrer-un-nouveau-projet">Démarrer un nouveau projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#principes-de-fonctionnement">Principes de fonctionnement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rappel-des-commandes-de-base">Rappel des commandes de base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#types-de-champ-les-plus-courant-models-py">Types de champ les plus courant (models.py)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#authentification-alternative-ldap-google-twitter-facebook-etc">Authentification alternative (LDAP, Google, Twitter, Facebook, etc)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lexique">Lexique</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#principes-de-fonctionnement">Principes de fonctionnement</a></li>
-<li><a class="reference internal" href="#rappel-des-commandes-de-base">Rappel des commandes de base</a></li>
-<li><a class="reference internal" href="#types-de-champ-les-plus-courant-models-py">Types de champ les plus courant (models.py)</a></li>
-<li><a class="reference internal" href="#lexique">Lexique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DocUtils_RST_Sphinx.html">DocUtils ; reStructuredText (.rst) ; Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESP8266.html">ESP8266</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GIT.html">GIT (versionning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Informatique.html">Informatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Javascript.html">JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kicad.html">Kicad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Linux.html">LINUX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MAC_OS.html">MAC OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Latex.html">LaTex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">PYTHON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Raspberry.html">Raspberry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Regex.html">Regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SiteWeb.html">Site Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Soudure.html">Soudure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="URLtheque.html">URLtheque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VIM.html">VIM (VI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XML_JSON.html">XML_JSON</a></li>
 </ul>
-</li>
-</ul>
+
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
@@ -389,21 +466,16 @@ seule ligne, soit en mode bloc</p>
   </ul></li>
 </ul>
 </div>
-  <div role="note" aria-label="source link">
-    <h3>Cette page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/Django.rst.txt"
-            rel="nofollow">Montrer le code source</a></li>
-    </ul>
-   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -414,7 +486,7 @@ seule ligne, soit en mode bloc</p>
       &copy;2017, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.7</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |

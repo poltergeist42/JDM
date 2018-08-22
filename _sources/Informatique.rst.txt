@@ -31,8 +31,8 @@ Cours et connaissances génériques
         
     #. VIM / VI
     
-        * http://www.formation-lpi.com/IMG/pdf/103.8-vi.pdf
-            # MinMap : Memento des principales commandes ou actions
+        * https://poltergeist42.github.io/JDM/VIM.html
+            # une rubrique spéciale VIM a été créer dans le journal de manip
         
 ####
         
@@ -59,6 +59,13 @@ Poste de travail
 ================
 
 Toutes les informations concernant l'utilisation et la maintenance des postes utilisateurs.
+
+Lancer la restauration système depuis windows
+---------------------------------------------
+
+L'utilitaire de restauration système se nomme : ::
+
+    rstrui.exe
 
 Excel
 -----
@@ -92,58 +99,69 @@ Renouveler un certificats sur Exchange 2010
 PowerShell
 ----------
 
-    #. Installer le module PowerShell ActiveDirectory sous Windows 10
+Installer le module PowerShell ActiveDirectory sous Windows 10
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
-        :Liens_Web:
-            * https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/
-                # Explication par l'auteur du script
-                
-            * https://gallery.technet.microsoft.com/Install-the-Active-fd32e541
-                # Le script lui même
-    
-    
-    #. Identifier les PC qui ne se sont pas connecter au domaine depuis
-       au moins 180 Jours : 
-       
-        ::
-       
-            import-module ActiveDirectory
-            $vdate = (Get-Date).adddays(-180)
-            Get-ADComputer -filter {(Enabled -eq "True") -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CN
-                # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
-                # se sont pas connecter de puis au moins 180 Jours
-        
-        #. pour ne pas filtrer le résultat et voir toutes les propriété : ::
-        
-            Get-ADComputer -filter * -property *
-                # N.B : Fonctionne aussi avec get-ADUser
+    :Liens_Web:
+        * https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/
+            # Explication par l'auteur du script
             
-    #. Identifier les comptes utilisateurs qui ne se sont pas connecter au domaine depuis
-       au moins 180 Jours : ::
-
-            import-module ActiveDirectory
-            $vdate = (Get-Date).adddays(-180)
-            Get-ADuser -filter {(Enabled -eq "True") -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CanonicalName
-                # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
-                # se sont pas connécter de puis au moins 180 Jours
-                
-    #. Connaitre la date du dernier démarrage d'un serveur ::
+        * https://gallery.technet.microsoft.com/Install-the-Active-fd32e541
+            # Le script lui même
     
-            Get-CimInstance -ClassName Win32_OperatingSystem | Select CSName, LastBootUpTime
-                # Windows2012 r2 et +
-                
-            ou :
-                
-            $LastBootTime = (Get-WmiObject win32_Operatingsystem).LastBootUpTime
-            [System.Management.ManagementDateTimeConverter]::ToDateTime($LastBootTime)
-
-    #. Se connecter à Exchange ::
     
-            $Credentials = Get-Credential
-            $ExSession = New-PSSession –ConfigurationName Microsoft.Exchange –ConnectionUri ‘http://SRV-MAIL.poree.local/PowerShell/?SerializationLevel=Full’ -Credential $Credentials –Authentication Kerberos
-            Import-PSSession $ExSession
-            ...
-            Remove-PSSession $ExSession
+Identifier les PC qui ne se sont pas connecter au domaine depuis au moins 180 Jours
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+       
+    ::
+       
+        import-module ActiveDirectory
+        $vdate = (Get-Date).adddays(-180)
+        Get-ADComputer -filter {(Enabled -eq "True") -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CN
+            # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
+            # se sont pas connecter de puis au moins 180 Jours
+        
+Pour ne pas filtrer le résultat et voir toutes les propriété
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    ::
+        
+        Get-ADComputer -filter * -property *
+            # N.B : Fonctionne aussi avec get-ADUser
+            
+Identifier les comptes utilisateurs qui ne se sont pas connecter au domaine depuis au moins 180 Jours
+
+    ::
+
+        import-module ActiveDirectory
+        $vdate = (Get-Date).adddays(-180)
+        Get-ADuser -filter {(Enabled -eq "True") -and (LastLogonDate -le $vdate)} -property * | ft LastLogonDate, CanonicalName
+            # applique un filtre sur les élément qui ne sont pas désactivé et qui ne
+            # se sont pas connécter de puis au moins 180 Jours
+                
+Connaitre la date du dernier démarrage d'un serveur
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    ::
+    
+        Get-CimInstance -ClassName Win32_OperatingSystem | Select CSName, LastBootUpTime
+            # Windows2012 r2 et +
+            
+        ou :
+            
+        $LastBootTime = (Get-WmiObject win32_Operatingsystem).LastBootUpTime
+        [System.Management.ManagementDateTimeConverter]::ToDateTime($LastBootTime)
+
+Se connecter à Exchange
++++++++++++++++++++++++
+
+    ::
+    
+        $Credentials = Get-Credential
+        $ExSession = New-PSSession –ConfigurationName Microsoft.Exchange –ConnectionUri ‘http://SRV-MAIL.poree.local/PowerShell/?SerializationLevel=Full’ -Credential $Credentials –Authentication Kerberos
+        Import-PSSession $ExSession
+        ...
+        Remove-PSSession $ExSession
             
 ####
             

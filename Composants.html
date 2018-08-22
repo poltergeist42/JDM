@@ -4,23 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Composants Spécifiques &#8212; documentation JDM 20170523</title>
-    
+    <title>Composants Spécifiques &#8212; Documentation JDM 20170523</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '20170523',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -35,8 +24,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -141,14 +129,14 @@ autre chose que du “.ino”</td>
 </table>
 <ol class="arabic">
 <li><p class="first">Téléverser un programme</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="p">[</span><span class="n">NOM_DU_MICROCONTROLEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">v</span> <span class="p">(</span><span class="n">mode</span> <span class="n">verbose</span><span class="p">)</span> <span class="o">-</span><span class="n">U</span> <span class="n">flash</span><span class="p">:[</span><span class="n">r</span><span class="o">|</span><span class="n">w</span><span class="o">|</span><span class="n">v</span><span class="p">]:[</span><span class="n">NOM_DU_HEX_A_TELEVERSER</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="p">[</span><span class="n">NOM_DU_MICROCONTROLEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">v</span> <span class="p">(</span><span class="n">mode</span> <span class="n">verbose</span><span class="p">)</span> <span class="o">-</span><span class="n">U</span> <span class="n">flash</span><span class="p">:[</span><span class="n">r</span><span class="o">|</span><span class="n">w</span><span class="o">|</span><span class="n">v</span><span class="p">]:[</span><span class="n">NOM_DU_HEX_A_TELEVERSER</span><span class="p">]</span>
 
 <span class="n">ex</span> <span class="p">:</span> <span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="n">usbasp</span> <span class="o">-</span><span class="n">p</span> <span class="n">m2560</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">U</span> <span class="n">flash</span><span class="p">:</span><span class="n">w</span><span class="p">:</span><span class="n">Marlin_witbox_2</span><span class="o">-</span><span class="mf">510.</span><span class="n">hex</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Obtenir la liste des noms des microcontroleurs utilisables</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span>
 
 <span class="n">ex</span> <span class="p">:</span> <span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="n">usbasp</span>
 </pre></div>
@@ -199,7 +187,7 @@ autre chose que du “.ino”</td>
 <div><p>La sérigraphie est masqué lorsque le magnétomètre est enfiché dans une breadbord.
 L’implantation si dessous est donc présenter en <strong>vue de dessus (donc sérigraphie cachée)</strong></p>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Haut</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Haut</span>
     <span class="mi">3</span><span class="n">v3</span>
     <span class="n">DRDY</span>
     <span class="n">SDA</span>
@@ -219,7 +207,7 @@ L’implantation si dessous est donc présenter en <strong>vue de dessus (donc s
 <li><dl class="first docutils">
 <dt>Préparation :</dt>
 <dd><p class="first">Si ce n’est pas déjà fait, il faut installer les outils Python :</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">i2c</span><span class="o">-</span><span class="n">tools</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">smbus</span>
@@ -237,7 +225,7 @@ L’implantation si dessous est donc présenter en <strong>vue de dessus (donc s
 <dd><p class="first"><strong>N.B :</strong> le lignes qui suivent sont copiées telles quelles depuis la page instructables</p>
 <dl class="last docutils">
 <dt>Se positionner à l’endroit ou l’on veut installer quick2wire</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span><span class="o">.</span><span class="n">git</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span><span class="o">.</span><span class="n">git</span>
     <span class="c1">#get quick2wire from github.com</span>
 
     <span class="c1">#if don&#39;t have git, try &quot;sudo apt-get install git&quot;</span>
@@ -449,7 +437,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <div class="section" id="organisation-des-phases-en-python3">
 <h3>Organisation des phases en python3<a class="headerlink" href="#organisation-des-phases-en-python3" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Séquence de sortie</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Séquence de sortie</span>
 <span class="n">ndp</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="n">phase</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">ndp</span><span class="p">))</span>
 <span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
@@ -465,7 +453,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <dl class="docutils">
 <dt><strong>N.B :</strong> la liste contenu dans chaque phase, correspond à l’état</dt>
 <dd><p class="first">(1 = Hight = True ; 0 = Low = False) à appliquer sur le broches du GPIO</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span>  <span class="p">:</span> <span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span>  <span class="p">:</span> <span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
     <span class="o">--&gt;</span> <span class="n">GPIO17</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="o">--&gt;</span> <span class="n">GPIO18</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="o">--&gt;</span> <span class="n">GPIO27</span> <span class="o">=</span> <span class="mi">0</span>
@@ -507,7 +495,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>se connecter au module de configuration</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
 </pre></div>
 </div>
 </dd>
@@ -516,7 +504,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </ol>
 <dl class="docutils">
 <dt>#.* faire la séquence suivante</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;5 Enable Camera&quot;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;5 Enable Camera&quot;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
         <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Enable</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
         <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Finish</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
         <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Oui</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
@@ -542,7 +530,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>Faire les mises à jour système de rigueur puis</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">picamera</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">picamera</span>
 </pre></div>
 </div>
 </dd>
@@ -554,7 +542,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <div class="section" id="utilisation-avec-python">
 <h3>utilisation avec python<a class="headerlink" href="#utilisation-avec-python" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">picamera</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">picamera</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -728,46 +716,56 @@ Elle doit être calculer.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table des Matières</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Composants Spécifiques</a><ul>
-<li><a class="reference internal" href="#programmation-des-atmega">Programmation des ATMega</a><ul>
-<li><a class="reference internal" href="#atmega-328p-pu-pinout">ATMega 328p-PU Pinout</a></li>
-<li><a class="reference internal" href="#installation-du-programmateur-usbasp-sous-windows-10">Installation du programmateur USBASP sous windows 10</a></li>
-<li><a class="reference internal" href="#avrdude">AVRDUDE</a></li>
+<h1 class="logo"><a href="index.html">JDM</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Aquariophilie.html">Aquariophilie</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Composants Spécifiques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#programmation-des-atmega">Programmation des ATMega</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magnetomettre-hmc5883l">Magnetomettre : HMC5883L</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#motteur-pas-a-pas-28byj-48">Motteur Pas à Pas : 28BYJ-48</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#picamera">Picamera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#capteur-ultrason-hc-sr04">Capteur ultrason : HC-SR04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#captheur-de-methane-mq4">Captheur de Méthane : MQ4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#liste-des-gazes-pouvant-etre-detecter-par-le-mq4">Liste des gazes pouvant être détecter par le MQ4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definition-des-constantes-et-valeurs-de-references">Définition des constantes et valeurs de références</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#magnetomettre-hmc5883l">Magnetomettre : HMC5883L</a><ul>
-<li><a class="reference internal" href="#implantation-hmc5883l">Implantation HMC5883L</a></li>
-<li><a class="reference internal" href="#installation-des-librairies-quick2wire-et-i2clibraries">Installation des librairies quick2wire et i2clibraries</a></li>
-<li><a class="reference internal" href="#configuration-du-hmc5883l">Configuration du HMC5883L</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ComputerVision.html">Computer Vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DataBase.html">DataBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Django.html">Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DocUtils_RST_Sphinx.html">DocUtils ; reStructuredText (.rst) ; Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESP8266.html">ESP8266</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GIT.html">GIT (versionning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Informatique.html">Informatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Javascript.html">JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kicad.html">Kicad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Linux.html">LINUX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MAC_OS.html">MAC OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Latex.html">LaTex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">PYTHON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Raspberry.html">Raspberry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Regex.html">Regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SiteWeb.html">Site Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Soudure.html">Soudure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="URLtheque.html">URLtheque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VIM.html">VIM (VI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XML_JSON.html">XML_JSON</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#motteur-pas-a-pas-28byj-48">Motteur Pas à Pas : 28BYJ-48</a><ul>
-<li><a class="reference internal" href="#specification-du-pap">Spécification du PAP</a></li>
-<li><a class="reference internal" href="#correspondance-entre-le-driver-et-les-gpio">Correspondance entre le driver et les GPIO</a></li>
-<li><a class="reference internal" href="#phases">Phases</a></li>
-<li><a class="reference internal" href="#organisation-des-phases-en-python3">Organisation des phases en python3</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#picamera">Picamera</a><ul>
-<li><a class="reference internal" href="#activation-du-module-camera-sur-le-rpi">Activation du module caméra sur le RPi</a></li>
-<li><a class="reference internal" href="#installation-de-la-camera">installation de la camera</a></li>
-<li><a class="reference internal" href="#instalation-de-la-librairie-picamera">Instalation de la librairie PiCamera</a></li>
-<li><a class="reference internal" href="#utilisation-avec-python">utilisation avec python</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#capteur-ultrason-hc-sr04">Capteur ultrason : HC-SR04</a><ul>
-<li><a class="reference internal" href="#vocabulaire-et-definissions-pour-le-hc-sr04">Vocabulaire et définissions pour le HC-SR04</a></li>
-<li><a class="reference internal" href="#specification-du-hc-sr04">Spécification du HC-SR04</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#captheur-de-methane-mq4">Captheur de Méthane : MQ4</a></li>
-<li><a class="reference internal" href="#liste-des-gazes-pouvant-etre-detecter-par-le-mq4">Liste des gazes pouvant être détecter par le MQ4</a></li>
-<li><a class="reference internal" href="#definition-des-constantes-et-valeurs-de-references">Définition des constantes et valeurs de références</a></li>
-</ul>
-</li>
-</ul>
+
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
@@ -777,21 +775,16 @@ Elle doit être calculer.</p>
   </ul></li>
 </ul>
 </div>
-  <div role="note" aria-label="source link">
-    <h3>Cette page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/Composants.rst.txt"
-            rel="nofollow">Montrer le code source</a></li>
-    </ul>
-   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -802,7 +795,7 @@ Elle doit être calculer.</p>
       &copy;2017, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.7</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |

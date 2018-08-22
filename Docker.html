@@ -4,23 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Docker &#8212; documentation JDM 20170523</title>
-    
+    <title>Docker &#8212; Documentation JDM 20170523</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '20170523',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -35,8 +24,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -103,7 +91,7 @@
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">MAJ et installation des paquets nécessaires</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo apt-get update
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update
 
 $ sudo apt-get install \
     apt-transport-https \
@@ -114,12 +102,12 @@ $ sudo apt-get install \
 </div>
 </li>
 <li><p class="first">Récupérer la clef GPG de docker</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 </pre></div>
 </div>
 </li>
 <li><p class="first">Vérifier que l’empreinte de la clef est la bonne</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo apt-key fingerprint 0EBFCD88
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt-key fingerprint 0EBFCD88
 
 --&gt; pub   4096R/0EBFCD88 2017-02-22
 --&gt;       Key fingerprint = 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
@@ -129,13 +117,13 @@ $ sudo apt-get install \
 </div>
 </li>
 <li><p class="first">Installer docker</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo apt-get update
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update
 $ sudo apt-get install docker-ce
 </pre></div>
 </div>
 </li>
 <li><p class="first">Tester si docker fonctionne</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo docker run hello-world
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo docker run hello-world
 </pre></div>
 </div>
 </li>
@@ -147,17 +135,17 @@ $ sudo apt-get install docker-ce
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Télécharger le script d’installation automatique</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="n">dockerinstall</span><span class="o">.</span><span class="n">sh</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">get</span><span class="o">.</span><span class="n">docker</span><span class="o">.</span><span class="n">com</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="n">dockerinstall</span><span class="o">.</span><span class="n">sh</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">get</span><span class="o">.</span><span class="n">docker</span><span class="o">.</span><span class="n">com</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Exécuter le script</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sh</span> <span class="o">./</span><span class="n">dockerinstall</span><span class="o">.</span><span class="n">sh</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sh</span> <span class="o">./</span><span class="n">dockerinstall</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Intégrer l’utilisateur au groupe docker</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">usermod</span> <span class="o">-</span><span class="n">aG</span> <span class="n">docker</span> <span class="n">pierre</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">usermod</span> <span class="o">-</span><span class="n">aG</span> <span class="n">docker</span> <span class="n">pierre</span>
 </pre></div>
 </div>
 </li>
@@ -187,7 +175,7 @@ $ sudo apt-get install docker-ce
 <div class="section" id="obtenir-de-l-aide-sur-une-commande">
 <h2>Obtenir de l’aide sur une commande<a class="headerlink" href="#obtenir-de-l-aide-sur-une-commande" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="p">[</span><span class="n">nom_de_la_commanded</span><span class="p">]</span> <span class="o">--</span><span class="n">help</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="p">[</span><span class="n">nom_de_la_commanded</span><span class="p">]</span> <span class="o">--</span><span class="n">help</span>
 
 <span class="n">ex</span> <span class="p">:</span>
 
@@ -238,7 +226,7 @@ Container n’entrainent pas de modification sur l’image.</li>
 <div class="section" id="trouver-une-image-depuis-la-console">
 <h3>Trouver une image depuis la console<a class="headerlink" href="#trouver-une-image-depuis-la-console" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">search</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="p">[</span><span class="n">image_recherche</span><span class="p">]</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">search</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="p">[</span><span class="n">image_recherche</span><span class="p">]</span>
 
 <span class="n">ex1</span> <span class="p">:</span>
 <span class="n">docker</span> <span class="n">search</span> <span class="o">--</span><span class="n">stars</span><span class="o">=</span><span class="mi">100</span> <span class="n">ubuntu</span>
@@ -254,7 +242,7 @@ Container n’entrainent pas de modification sur l’image.</li>
 <div class="section" id="recuperer-une-image-depuis-la-console">
 <h3>Récupérer une Image depuis la console<a class="headerlink" href="#recuperer-une-image-depuis-la-console" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">NAME</span><span class="p">[:</span><span class="n">TAG</span><span class="o">|</span><span class="nd">@DIGEST</span><span class="p">]</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">NAME</span><span class="p">[:</span><span class="n">TAG</span><span class="o">|</span><span class="nd">@DIGEST</span><span class="p">]</span>
 
 <span class="n">ex</span> <span class="p">:</span>
 <span class="n">docker</span> <span class="n">pull</span> <span class="n">ubuntu</span><span class="p">:</span><span class="n">latest</span>
@@ -267,7 +255,7 @@ Container n’entrainent pas de modification sur l’image.</li>
 <div class="section" id="suprimer-une-image">
 <h3>Suprimer une Image<a class="headerlink" href="#suprimer-une-image" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">rmi</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">IMAGE</span> <span class="p">[</span><span class="n">IMAGE</span><span class="o">...</span><span class="p">]</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">rmi</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">IMAGE</span> <span class="p">[</span><span class="n">IMAGE</span><span class="o">...</span><span class="p">]</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -275,7 +263,7 @@ Container n’entrainent pas de modification sur l’image.</li>
 <div class="section" id="obtenir-la-list-des-images-presents-sur-le-poste">
 <h3>Obtenir la list des images présents sur le poste<a class="headerlink" href="#obtenir-la-list-des-images-presents-sur-le-poste" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">image</span> <span class="n">ls</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="p">[</span><span class="n">REPOSITORY</span><span class="p">[:</span><span class="n">TAG</span><span class="p">]]</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">image</span> <span class="n">ls</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="p">[</span><span class="n">REPOSITORY</span><span class="p">[:</span><span class="n">TAG</span><span class="p">]]</span>
 
 <span class="n">ou</span>
 
@@ -287,7 +275,7 @@ Container n’entrainent pas de modification sur l’image.</li>
 <div class="section" id="creer-une-nouvelle-image-a-partir-d-un-container">
 <h3>Créer une nouvelle image à partir d’un container<a class="headerlink" href="#creer-une-nouvelle-image-a-partir-d-un-container" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span>  <span class="n">docker</span> <span class="n">commit</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">CONTAINER</span> <span class="p">[</span><span class="n">REPOSITORY</span><span class="p">[:</span><span class="n">TAG</span><span class="p">]]</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span>  <span class="n">docker</span> <span class="n">commit</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">CONTAINER</span> <span class="p">[</span><span class="n">REPOSITORY</span><span class="p">[:</span><span class="n">TAG</span><span class="p">]]</span>
 
 <span class="n">Soit</span> <span class="p">:</span>  <span class="n">docker</span> <span class="n">commit</span> <span class="p">[</span><span class="n">Options</span><span class="p">]</span> <span class="p">[</span><span class="n">Nom_du_container</span><span class="p">]</span> <span class="p">[</span><span class="n">depot</span><span class="o">/</span><span class="n">Nom_del</span><span class="s1">&#39;image]</span>
 
@@ -300,7 +288,7 @@ Container n’entrainent pas de modification sur l’image.</li>
 <div class="section" id="definir-un-repository-et-un-tag-sur-une-image">
 <h3>Définir un Repository et un TAG sur une image<a class="headerlink" href="#definir-un-repository-et-un-tag-sur-une-image" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span>$ docker tag --help
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker tag --help
 
     Usage:  docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 
@@ -322,7 +310,7 @@ docker tag friendlyhello poltergeist42/get-started:part1
 <h3>Faire un push sur dockerHub<a class="headerlink" href="#faire-un-push-sur-dockerhub" title="Lien permanent vers ce titre">¶</a></h3>
 <dl class="docutils">
 <dt>Pour faire un push sur dockerHub, il faut d’abord s’authentifier :</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">login</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">login</span>
 </pre></div>
 </div>
 </dd>
@@ -335,7 +323,7 @@ docker tag friendlyhello poltergeist42/get-started:part1
 <li><p class="first">le dépôt distant</p>
 </li>
 <li><p class="first">le TAG</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Ex</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ex</span><span class="p">:</span>
 <span class="n">docker</span> <span class="n">push</span> <span class="n">poltergeist42</span><span class="o">/</span><span class="n">get</span><span class="o">-</span><span class="n">started</span><span class="p">:</span><span class="n">part1</span>
 </pre></div>
 </div>
@@ -344,7 +332,7 @@ docker tag friendlyhello poltergeist42/get-started:part1
 </div></blockquote>
 <dl class="docutils">
 <dt>Pour terminer, on peut arrêter l’authentification :</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">logout</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">logout</span>
 </pre></div>
 </div>
 </dd>
@@ -357,7 +345,7 @@ docker tag friendlyhello poltergeist42/get-started:part1
 <div class="section" id="obtenir-la-liste-des-containers">
 <h3>Obtenir la liste des Containers<a class="headerlink" href="#obtenir-la-liste-des-containers" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -368,7 +356,7 @@ docker tag friendlyhello poltergeist42/get-started:part1
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>Supprimer un ou plusieurs Containers</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">rm</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">CONTAINER</span> <span class="p">[</span><span class="n">CONTAINER</span><span class="o">...</span><span class="p">]</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">rm</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">CONTAINER</span> <span class="p">[</span><span class="n">CONTAINER</span><span class="o">...</span><span class="p">]</span>
 
 <span class="n">ex</span> <span class="p">:</span>
 <span class="n">docker</span> <span class="n">rm</span> <span class="n">infallible_haibt</span>
@@ -382,7 +370,7 @@ docker tag friendlyhello poltergeist42/get-started:part1
 </li>
 <li><dl class="first docutils">
 <dt>Supprimer tous les Containers d’un seul coup</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span>docker rm `docker ps -aq`
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span>docker rm `docker ps -aq`
     # attention, le caractère [`] s&#39;obtient avec
     # la combinaison de touche [AltGR]-[7]
 </pre></div>
@@ -392,7 +380,7 @@ docker tag friendlyhello poltergeist42/get-started:part1
 </li>
 <li><dl class="first docutils">
 <dt>Supprimer tous les Containers dont l’état est arrêter</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">container</span> <span class="n">prune</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">container</span> <span class="n">prune</span>
 
 <span class="n">Usage</span><span class="p">:</span>  <span class="n">docker</span> <span class="n">container</span> <span class="n">prune</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span>
 
@@ -421,12 +409,12 @@ docker tag friendlyhello poltergeist42/get-started:part1
 </table>
 <ul>
 <li><p class="first">Depuis un container, vers l’hôte</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">cp</span> <span class="o">&lt;</span><span class="n">containerId</span><span class="o">&gt;</span><span class="p">:</span><span class="o">/</span><span class="n">file</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">within</span><span class="o">/</span><span class="n">container</span> <span class="o">/</span><span class="n">host</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">target</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">cp</span> <span class="o">&lt;</span><span class="n">containerId</span><span class="o">&gt;</span><span class="p">:</span><span class="o">/</span><span class="n">file</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">within</span><span class="o">/</span><span class="n">container</span> <span class="o">/</span><span class="n">host</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">target</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Depuis l’hôte vers le container</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">cp</span> <span class="o">/</span><span class="n">host</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">sources</span> <span class="o">&lt;</span><span class="n">containerId</span><span class="o">&gt;</span><span class="p">:</span><span class="o">/</span><span class="n">container</span><span class="o">/</span><span class="n">path</span><span class="o">/</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">cp</span> <span class="o">/</span><span class="n">host</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">sources</span> <span class="o">&lt;</span><span class="n">containerId</span><span class="o">&gt;</span><span class="p">:</span><span class="o">/</span><span class="n">container</span><span class="o">/</span><span class="n">path</span><span class="o">/</span>
 </pre></div>
 </div>
 </li>
@@ -445,7 +433,7 @@ docker tag friendlyhello poltergeist42/get-started:part1
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">N.B:</th><td class="field-body"><p class="first">pour connaitre toutes les options disponible avec la commande “run” il faut lancer l’aide</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">help</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">help</span>
 </pre></div>
 </div>
 </td>
@@ -457,17 +445,17 @@ Pour démarrer / redémarrer un container existant, il faut utiliser la commande
 </div></blockquote>
 <ol class="last arabic">
 <li><p class="first">En mode interactif</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">En mode interactif avec accès au bash</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image] bash</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image] bash</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Sur un port différent</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="mi">88</span><span class="p">:</span><span class="mi">80</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="mi">88</span><span class="p">:</span><span class="mi">80</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
 
 <span class="c1"># Pour attaquer un serveur Web lancer depuis un container, il faut saisir l&#39;IP de</span>
 <span class="c1"># la machine hote suivie du port translater</span>
@@ -478,12 +466,12 @@ Pour démarrer / redémarrer un container existant, il faut utiliser la commande
 </div>
 </li>
 <li><p class="first">En mode détacher (en tache de fond, dans un process non bloquant)</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Donner un nom spécifique au container pendant son initialisation</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
 
 <span class="n">ex</span> <span class="p">:</span>
 
@@ -492,17 +480,17 @@ Pour démarrer / redémarrer un container existant, il faut utiliser la commande
 </div>
 </li>
 <li><p class="first">Arrêter un container</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">stop</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">stop</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Démarrer un container</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">start</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">start</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Redémarrer un container</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">restart</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">restart</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
@@ -519,7 +507,7 @@ Pour démarrer / redémarrer un container existant, il faut utiliser la commande
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>forcer la sortie et l’arrêt du container</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">-</span><span class="n">d</span> <span class="p">(</span><span class="n">control</span><span class="o">-</span><span class="n">d</span><span class="p">)</span> <span class="n">ou</span> <span class="s1">&#39;exit&#39;</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">-</span><span class="n">d</span> <span class="p">(</span><span class="n">control</span><span class="o">-</span><span class="n">d</span><span class="p">)</span> <span class="n">ou</span> <span class="s1">&#39;exit&#39;</span>
 </pre></div>
 </div>
 </dd>
@@ -528,7 +516,7 @@ Pour démarrer / redémarrer un container existant, il faut utiliser la commande
 </ol>
 <dl class="docutils">
 <dt># Sortir d’un container sans l’arrêter</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">-</span><span class="n">p</span> <span class="o">+</span> <span class="n">CTRL</span><span class="o">-</span><span class="n">q</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">-</span><span class="n">p</span> <span class="o">+</span> <span class="n">CTRL</span><span class="o">-</span><span class="n">q</span>
 </pre></div>
 </div>
 </dd>
@@ -539,7 +527,7 @@ Pour démarrer / redémarrer un container existant, il faut utiliser la commande
 <div class="section" id="recuperer-le-focus-sur-un-container-qui-tourne-en-tache-de-fond-en-mode-detache">
 <h2>Récupérer le focus sur un container qui tourne en tache de fond (en mode détaché)<a class="headerlink" href="#recuperer-le-focus-sur-un-container-qui-tourne-en-tache-de-fond-en-mode-detache" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">attach</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">attach</span> <span class="p">[</span><span class="n">nom_du_container</span><span class="p">]</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -551,7 +539,7 @@ Pour démarrer / redémarrer un container existant, il faut utiliser la commande
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>Obtenir toute la configuration au format JSON</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">cmd</span> <span class="p">:</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmd</span> <span class="p">:</span>
 <span class="n">docker</span> <span class="n">inspect</span> <span class="p">[</span><span class="n">ID</span> <span class="o">/</span> <span class="n">Name</span><span class="p">]</span>
 
 <span class="n">Help</span> <span class="p">:</span>
@@ -570,7 +558,7 @@ Pour démarrer / redémarrer un container existant, il faut utiliser la commande
 </li>
 <li><dl class="first docutils">
 <dt>Obtenir la configuration d’un élément spécifique</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span>cmd:
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span>cmd:
 docker inspect [ID / Name] | grep [Nom de l&#39;élément]
 
 ex:
@@ -599,7 +587,7 @@ $ docker inspect ctr_busybox | grep IPAddress
 <div><p>On peut mapper / rediriger des ports au moment de la création d’un container, avec la
 commande «&nbsp;-p ou –publish&nbsp;» :</p>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span><span class="p">:</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span><span class="p">:</span>
 <span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="n">nginx</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8080</span><span class="p">:</span><span class="mi">80</span> <span class="n">nginx</span>
     <span class="c1"># Ceci va rediriger le port &#39;extérieur&#39; 8080 vers le port &#39;interne&#39; 80 du container nginx</span>
     <span class="c1"># L&#39;URL sera donc : http://localhost:8080</span>
@@ -608,7 +596,7 @@ commande «&nbsp;-p ou –publish&nbsp;» :</p>
 </div></blockquote>
 <p>On peut rediriger autant de port que nécessaire :</p>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span><span class="p">:</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span><span class="p">:</span>
 <span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="n">nginx</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8080</span><span class="p">:</span><span class="mi">80</span> <span class="o">-</span><span class="n">p</span> <span class="mi">443</span><span class="p">:</span><span class="mi">443</span> <span class="n">nginx</span>
     <span class="c1"># Ceci va rediriger le port &#39;extérieur&#39; 8080 vers le port &#39;interne&#39; 80 du container nginx</span>
     <span class="c1"># et le port &#39;extérieur&#39; 443&#39; vers le port &#39;interne&#39; 443.</span>
@@ -620,7 +608,7 @@ commande «&nbsp;-p ou –publish&nbsp;» :</p>
 <p>On peut mapper / rediriger tous les ports dynamiquement avec la commande
 «&nbsp;-P (“P” Majuscule) ou –publish-all&nbsp;»</p>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="n">nginx</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">P</span> <span class="n">nginx</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="n">nginx</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">P</span> <span class="n">nginx</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -628,7 +616,7 @@ commande «&nbsp;-p ou –publish&nbsp;» :</p>
 “EXPOSE” si on est dans un “Dockerfile”. La commande “Expose” permet de publier soit
 un seul port, soit un ensemble de port :</p>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">expose</span><span class="o">=</span><span class="mi">7000</span> <span class="o">&lt;</span><span class="n">container</span> <span class="n">ID</span> <span class="ow">or</span> <span class="n">name</span><span class="o">&gt;</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">expose</span><span class="o">=</span><span class="mi">7000</span> <span class="o">&lt;</span><span class="n">container</span> <span class="n">ID</span> <span class="ow">or</span> <span class="n">name</span><span class="o">&gt;</span>
     <span class="c1"># cette commande va exposer le port 7000 du container</span>
 
 <span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">expose</span><span class="o">=</span><span class="mi">7000</span><span class="o">-</span><span class="mi">8000</span> <span class="o">&lt;</span><span class="n">container</span> <span class="n">ID</span> <span class="ow">or</span> <span class="n">name</span><span class="o">&gt;</span>
@@ -643,7 +631,7 @@ un seul port, soit un ensemble de port :</p>
 <div><ul>
 <li><dl class="first docutils">
 <dt>La premier façon de connaitre les ports publier et mapper et avec la commande docker ps</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
 </pre></div>
 </div>
 </dd>
@@ -651,7 +639,7 @@ un seul port, soit un ensemble de port :</p>
 </li>
 <li><dl class="first docutils">
 <dt>La seconde façon est en utilisant la commande docker port</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">port</span> <span class="p">[</span><span class="n">ID</span> <span class="n">ou</span> <span class="n">nom</span> <span class="n">du</span> <span class="n">container</span><span class="p">]</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">port</span> <span class="p">[</span><span class="n">ID</span> <span class="n">ou</span> <span class="n">nom</span> <span class="n">du</span> <span class="n">container</span><span class="p">]</span>
 </pre></div>
 </div>
 </dd>
@@ -659,7 +647,7 @@ un seul port, soit un ensemble de port :</p>
 </li>
 <li><dl class="first docutils">
 <dt>La Troisième façon et avec la commande docker inspect</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">inspect</span> <span class="p">[</span><span class="n">ID</span> <span class="n">ou</span> <span class="n">nom</span> <span class="n">du</span> <span class="n">container</span><span class="p">]</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">inspect</span> <span class="p">[</span><span class="n">ID</span> <span class="n">ou</span> <span class="n">nom</span> <span class="n">du</span> <span class="n">container</span><span class="p">]</span>
 </pre></div>
 </div>
 </dd>
@@ -679,40 +667,58 @@ un seul port, soit un ensemble de port :</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table des Matières</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Docker</a><ul>
-<li><a class="reference internal" href="#installation">Installation</a><ul>
-<li><a class="reference internal" href="#installation-manuelle">Installation manuelle</a></li>
-<li><a class="reference internal" href="#version-facile-automatique">Version facile / Automatique</a></li>
-<li><a class="reference internal" href="#installation-sous-windows">Installation sous Windows</a></li>
+<h1 class="logo"><a href="index.html">JDM</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Aquariophilie.html">Aquariophilie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composants.html">Composants Spécifiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ComputerVision.html">Computer Vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DataBase.html">DataBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Django.html">Django</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obtenir-de-l-aide-sur-une-commande">Obtenir de l’aide sur une commande</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diference-entre-une-image-et-un-container">Diférence entre une <strong>Image</strong> et un <strong>Container</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#containers">Containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lancer-initialiser-un-container">Lancer/initialiser un Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sortir-d-un-container-mode-iterractif">Sortir d’un container (mode iterractif)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recuperer-le-focus-sur-un-container-qui-tourne-en-tache-de-fond-en-mode-detache">Récupérer le focus sur un container qui tourne en tache de fond (en mode détaché)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inspecter-un-container">Inspecter un container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gestion-redirection-des-ports">Gestion / redirection des ports</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#obtenir-de-l-aide-sur-une-commande">Obtenir de l’aide sur une commande</a></li>
-<li><a class="reference internal" href="#diference-entre-une-image-et-un-container">Diférence entre une <strong>Image</strong> et un <strong>Container</strong></a></li>
-<li><a class="reference internal" href="#images">Images</a><ul>
-<li><a class="reference internal" href="#trouver-une-image-depuis-la-console">Trouver une image depuis la console</a></li>
-<li><a class="reference internal" href="#recuperer-une-image-depuis-la-console">Récupérer une Image depuis la console</a></li>
-<li><a class="reference internal" href="#suprimer-une-image">Suprimer une Image</a></li>
-<li><a class="reference internal" href="#obtenir-la-list-des-images-presents-sur-le-poste">Obtenir la list des images présents sur le poste</a></li>
-<li><a class="reference internal" href="#creer-une-nouvelle-image-a-partir-d-un-container">Créer une nouvelle image à partir d’un container</a></li>
-<li><a class="reference internal" href="#definir-un-repository-et-un-tag-sur-une-image">Définir un Repository et un TAG sur une image</a></li>
-<li><a class="reference internal" href="#faire-un-push-sur-dockerhub">Faire un push sur dockerHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DocUtils_RST_Sphinx.html">DocUtils ; reStructuredText (.rst) ; Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESP8266.html">ESP8266</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GIT.html">GIT (versionning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Informatique.html">Informatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Javascript.html">JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kicad.html">Kicad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Linux.html">LINUX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MAC_OS.html">MAC OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Latex.html">LaTex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">PYTHON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Raspberry.html">Raspberry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Regex.html">Regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SiteWeb.html">Site Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Soudure.html">Soudure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="URLtheque.html">URLtheque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VIM.html">VIM (VI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XML_JSON.html">XML_JSON</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#containers">Containers</a><ul>
-<li><a class="reference internal" href="#obtenir-la-liste-des-containers">Obtenir la liste des Containers</a></li>
-<li><a class="reference internal" href="#supprimer-un-ou-plusieurs-containers">Supprimer un ou plusieurs Containers</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#lancer-initialiser-un-container">Lancer/initialiser un Container</a></li>
-<li><a class="reference internal" href="#sortir-d-un-container-mode-iterractif">Sortir d’un container (mode iterractif)</a></li>
-<li><a class="reference internal" href="#recuperer-le-focus-sur-un-container-qui-tourne-en-tache-de-fond-en-mode-detache">Récupérer le focus sur un container qui tourne en tache de fond (en mode détaché)</a></li>
-<li><a class="reference internal" href="#inspecter-un-container">Inspecter un container</a></li>
-<li><a class="reference internal" href="#gestion-redirection-des-ports">Gestion / redirection des ports</a></li>
-</ul>
-</li>
-</ul>
+
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
@@ -722,21 +728,16 @@ un seul port, soit un ensemble de port :</p>
   </ul></li>
 </ul>
 </div>
-  <div role="note" aria-label="source link">
-    <h3>Cette page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/Docker.rst.txt"
-            rel="nofollow">Montrer le code source</a></li>
-    </ul>
-   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -747,7 +748,7 @@ un seul port, soit un ensemble de port :</p>
       &copy;2017, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.7</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |

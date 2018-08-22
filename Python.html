@@ -4,23 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>PYTHON &#8212; documentation JDM 20170523</title>
-    
+    <title>PYTHON &#8212; Documentation JDM 20170523</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '20170523',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -35,8 +24,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -82,7 +70,7 @@
 <h2>Obtenir de l’aide sur une class ou une méthode  (python)<a class="headerlink" href="#obtenir-de-l-aide-sur-une-class-ou-une-methode-python" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><p>Dans la console Python, saisir  :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s2">&quot;nom_de_la_class&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s2">&quot;nom_de_la_class&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -90,7 +78,7 @@
 <hr class="docutils" />
 <div class="section" id="lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux">
 <h2>Lignes de code à insérer au debut de chaque script sous Linux<a class="headerlink" href="#lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
 <span class="c1"># -*- coding: utf-8 -*-</span>
 </pre></div>
 </div>
@@ -124,14 +112,14 @@
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Connaître le répertoire de travail</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
     <span class="c1"># on commence par importer la bibliothèque &#39;os&#39;</span>
 <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Redéfinir le répertoire courant</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;mon_rep/de/travail&quot;</span><span class="p">)</span>
     <span class="c1"># meme sous Windows, il faut remplacer les &quot;\&quot; dans le chemin de</span>
     <span class="n">destination</span> <span class="n">par</span> <span class="n">des</span> <span class="s2">&quot;/&quot;</span>
@@ -141,13 +129,13 @@
 </div>
 </li>
 <li><p class="first">Savoir si un chemin représente un répertoire ?</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
     <span class="c1"># renvoi True si path désigne un répertoire existant</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Créer un répertoire</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="mi">0777</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="mi">0777</span><span class="p">)</span>
     <span class="c1"># créé un répertoire le plus à droite dans path</span>
 
 <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="mi">0777</span><span class="p">)</span>
@@ -156,19 +144,19 @@
 </div>
 </li>
 <li><p class="first">Supprimer un répertoire</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
     <span class="c1"># supprime le répertoire path si celui-ci est vide</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Supprimer un fichiers</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">([</span><span class="n">nom_du_fichier</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">([</span><span class="n">nom_du_fichier</span><span class="p">])</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Renommer/déplacer un répertoire</p>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
     <span class="c1"># permet de renommer le répertoire src en le répertoire dst,</span>
     <span class="c1"># tous les répertoire parent de dst doivent cependant déjà exister,</span>
     <span class="c1"># une erreur étant sinon retournée.</span>
@@ -189,7 +177,7 @@ les 2 autres fonctions pouvant échouer à leur tâche.</p>
 </ol>
 <p>Pour connaître la taille d’un répertoire, il suffit de le parcourir
 son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os.path</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os.path</span>
 
 <span class="k">def</span> <span class="nf">sizedirectory</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
     <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span>
@@ -227,12 +215,12 @@ son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Supprimer un répertoire non vide</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Renommer/déplacer un répertoire</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
     <span class="c1"># renomme exactement comme os.renames le répertoire src en dst si</span>
     <span class="c1"># le répertoire de destination est sur le même système de fichiers.</span>
     <span class="c1"># Autrement elle copie simplement src sur dst puis efface src.</span>
@@ -298,7 +286,7 @@ son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Récupération et installation du paquet</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">bootstrap</span><span class="o">.</span><span class="n">pypa</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">get</span><span class="o">-</span><span class="n">pip</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">bootstrap</span><span class="o">.</span><span class="n">pypa</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">get</span><span class="o">-</span><span class="n">pip</span><span class="o">.</span><span class="n">py</span>
     <span class="c1"># recuperation du script d&#39;installation</span>
 
 <span class="n">python</span> <span class="n">get</span><span class="o">-</span><span class="n">pip</span><span class="o">.</span><span class="n">py</span>
@@ -308,7 +296,7 @@ son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
 </div>
 </li>
 <li><p class="first">Installation depuis apt-get</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span>
     <span class="c1"># pip sera installer dans le répertoire suivant :</span>
     <span class="c1"># /usr/bin/pip3</span>
 </pre></div>
@@ -323,20 +311,20 @@ son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
 <div><p>La commande pip s’exécute directement dans le shell</p>
 <ol class="arabic">
 <li><p class="first">Exécuter pip pour python3 dans un environnement Linux</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span><span class="o">-</span><span class="mf">3.2</span> <span class="p">[</span><span class="n">une_commande</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span><span class="o">-</span><span class="mf">3.2</span> <span class="p">[</span><span class="n">une_commande</span><span class="p">]</span>
         <span class="n">ou</span>
 <span class="n">pip3</span> <span class="p">[</span><span class="n">une</span> <span class="n">commande</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">obtenir la liste des options</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">help</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">help</span>
     <span class="c1"># fonctionne aussi avec pip tout seul</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">chercher un paquet</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">search</span> <span class="p">[</span><span class="n">nom_du_paquet_rechercher</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">search</span> <span class="p">[</span><span class="n">nom_du_paquet_rechercher</span><span class="p">]</span>
     <span class="c1"># on peut rechercher plusieurs termes en les séparent par des espaces</span>
     <span class="c1"># ex : pip search py3 numpy</span>
     <span class="c1"># attention, la recherche est également faite sur</span>
@@ -345,7 +333,7 @@ son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
 </div>
 </li>
 <li><p class="first">installer un paquet</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="p">[</span><span class="n">nom_du_paquet_a_installer</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="p">[</span><span class="n">nom_du_paquet_a_installer</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
@@ -374,7 +362,7 @@ son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
 <li>Installation de virtualenv et virtualenvwrapper</li>
 </ol>
 <p>N.B : il est préférable de les installer en sudo et non en root (su)</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
 <span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenvwrapper</span>
 </pre></div>
 </div>
@@ -393,12 +381,12 @@ son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
 </div></blockquote>
 </li>
 </ol>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">virtualenv</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">virtualenv</span>
 </pre></div>
 </div>
 <ol class="arabic">
 <li><p class="first">Editer le fichier .bashrc</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">.</span><span class="n">bashrc</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">.</span><span class="n">bashrc</span>
 </pre></div>
 </div>
 </li>
@@ -408,7 +396,7 @@ son arborescence en ajoutant la taille de chaque fichier rencontré.</p>
 <blockquote>
 <div><ul>
 <li><p class="first">Se placer à la fin du fichier et saisir :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span># virtualenvwrapper
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># virtualenvwrapper
 
 export WORKON_HOME=~/virtualenv
     # si le dossier n&#39;a pas été créer au même endroit ou avec le même
@@ -430,7 +418,7 @@ source  /usr/local/bin/virtualenvwrapper.sh
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Création d’un nouvel environnements virtuel</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="p">[</span><span class="n">nom_de_l_environnement</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="p">[</span><span class="n">nom_de_l_environnement</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">2</span>
     <span class="c1"># ex : mkvirtualenv env1 -P /usr/bin/python3.2</span>
 
     <span class="c1"># un dossier du nom de votre environnement virtuel est alors créer</span>
@@ -445,13 +433,13 @@ source  /usr/local/bin/virtualenvwrapper.sh
 <li><dl class="first docutils">
 <dt>Activation / désactivation de l’environnent</dt>
 <dd><p class="first">Pour être utilisé, un environnement doit être activé :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">workon</span> <span class="p">[</span><span class="n">nom_de_l_environnement</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">workon</span> <span class="p">[</span><span class="n">nom_de_l_environnement</span><span class="p">]</span>
         <span class="c1"># ex : workon env1</span>
 </pre></div>
 </div>
 <p>A la fin de son utilisation, ou pour passer sur un autre environnement, il faut
 le désactiver :</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">deactivate</span>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deactivate</span>
     <span class="c1"># c&#39;est tout !</span>
     <span class="c1"># Attention, ce n&#39;est pas deSactivate,</span>
     <span class="c1"># mais bien deactivate sans &quot;S&quot;</span>
@@ -461,7 +449,7 @@ le désactiver :</p>
 </dl>
 </li>
 <li><p class="first">supprimer un environnement</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rmvirtualenv</span> <span class="p">[</span><span class="n">nom_de_l_environnement</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rmvirtualenv</span> <span class="p">[</span><span class="n">nom_de_l_environnement</span><span class="p">]</span>
     <span class="c1"># ex : rmvirtualenv env1</span>
     <span class="c1"># le dossier de l’environnement sera également supprimer</span>
 </pre></div>
@@ -484,14 +472,14 @@ le désactiver :</p>
 <hr class="docutils" />
 <div class="section" id="convertir-un-string-en-bytes">
 <h2>convertir un string en bytes<a class="headerlink" href="#convertir-un-string-en-bytes" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">mystring</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">mystring</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="connaitre-l-adresse-memoire-d-un-objet">
 <h2>Connaître l’adresse mémoire d’un objet<a class="headerlink" href="#connaitre-l-adresse-memoire-d-un-objet" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
 <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="c1"># on récupère l&#39;adresse au format décimal</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">45748752</span>
@@ -512,7 +500,7 @@ le désactiver :</p>
 <dt>Affectation :</dt>
 <dd><p class="first">L’affectation ne créer pas un nouvel objet. Elle se contente de pointer sur la
 même adresse en mémoire</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
@@ -530,7 +518,7 @@ même adresse en mémoire</p>
 <dt>copy</dt>
 <dd><p class="first">La commande «&nbsp;copy&nbsp;» permet de créer un nouvel objet qui pointe sur l’adresse du premier objet
 tant que la valeur du second n’a pas été modifier</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">copy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">copy</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span> <span class="n">a</span> <span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span>
@@ -555,7 +543,7 @@ tant que la valeur du second n’a pas été modifier</p>
 <p>Attention la copy d’une liste crée un nouvel objet mais les adresse des données
 pointée par la liste reste les mêmes, donc la modification d’une valeur dans
 la liste B modifiera aussi la valeur de la liste A</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
 <span class="go">[1, 2, 3]</span>
@@ -579,7 +567,7 @@ la liste B modifiera aussi la valeur de la liste A</p>
 <dt>deepcopy</dt>
 <dd><p class="first">Le deepcopy permet de faire une copie «&nbsp;en profondeur&nbsp;», c’est à dire une copie
 complète y compris le contenu des données itérables</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
 <span class="go">[1, 2, 3]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
@@ -736,7 +724,7 @@ complète y compris le contenu des données itérables</p>
 </li>
 </ul>
 <p>exemple d’utilisation :</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">decorateur</span><span class="p">(</span><span class="n">fonct</span><span class="p">)</span> <span class="p">:</span>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">decorateur</span><span class="p">(</span><span class="n">fonct</span><span class="p">)</span> <span class="p">:</span>
 <span class="gp">... </span>    <span class="sd">&quot;&quot;&quot; fonction décorateur permettant de donnée le temps d’exécution d&#39;une fonction &quot;&quot;&quot;</span>
 <span class="gp">... </span>    <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span> <span class="n">fonct</span> <span class="p">)</span>
 <span class="gp">... </span>    <span class="k">def</span> <span class="nf">appelFonc</span><span class="p">(</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span> <span class="p">)</span> <span class="p">:</span>
@@ -772,7 +760,7 @@ complète y compris le contenu des données itérables</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Pour Test si une variable ou une instance et bien du type attendu :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span> <span class="p">[</span><span class="n">variable_a_traiter</span><span class="p">],</span> <span class="p">[</span><span class="n">type_attendu</span><span class="p">]</span> <span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span> <span class="p">[</span><span class="n">variable_a_traiter</span><span class="p">],</span> <span class="p">[</span><span class="n">type_attendu</span><span class="p">]</span> <span class="p">)</span>
 
 <span class="n">ex</span> <span class="p">:</span>
 
@@ -813,7 +801,7 @@ complète y compris le contenu des données itérables</p>
 types inconnue puis converti l’ensemble en tuple. Dans le prototype d’une
 fonction, cet argument est utilisé comme «&nbsp;positional argument&nbsp;».
 ex :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">:</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="n">args</span> <span class="p">)</span>
 <span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="p">)</span> <span class="p">:</span>
 <span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> - </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span>
@@ -833,7 +821,7 @@ ex :</p>
 types inconnue puis converti l’ensemble en dictionnaire. Dans le prototype d’une
 fonction, cet argument est utilisé pour les argument par défaut.
 ex :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">fd</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">fd</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="n">kwargs</span> <span class="p">)</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fd</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -878,7 +866,7 @@ remplacés par un nom plus parlant mais se n’est pas conseillé.</p>
 <div><p>Même si on ne met pas l’option “-h” ou «&nbsp;- -help&nbsp;», cette options est implémentée par
 défaut dès lors que l’on crée un parser avec argparse. Cette options vas lister et
 détailler nos propre options :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">code</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">code</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span>
 <span class="n">usage</span><span class="p">:</span> <span class="n">code</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span>
 
 <span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
@@ -888,7 +876,7 @@ détailler nos propre options :</p>
 </div></blockquote>
 </li>
 <li><p class="first">Éléments de bases</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">argparse</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">argparse</span>
 
 <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
     <span class="c1"># Création de l&#39;instance</span>
@@ -899,7 +887,7 @@ détailler nos propre options :</p>
 </div>
 </li>
 <li><p class="first">ajouter des arguments a parser</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">([</span><span class="n">listes_des_options_separees_par_des_virgules</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">([</span><span class="n">listes_des_options_separees_par_des_virgules</span><span class="p">])</span>
 </pre></div>
 </div>
 </li>
@@ -909,7 +897,7 @@ du script. ils sont déclaré entre guillemets (ou simples cotes) et sans tiret.
 Ils n’ont pas non plus un appel long et un appel court.</p>
 <blockquote>
 <div><p>ex :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;le nombre à mettre au carré&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;le nombre à mettre au carré&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -928,13 +916,13 @@ automatiquement.</p>
 </dd>
 </dl>
 <p>ex :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;-v&quot;</span><span class="p">,</span> <span class="s2">&quot;--verbose&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;augmente la verbosité&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;-v&quot;</span><span class="p">,</span> <span class="s2">&quot;--verbose&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;augmente la verbosité&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p class="first">l’exemple tire du help( «&nbsp;argparse&nbsp;» )</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">following</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">simple</span> <span class="n">usage</span> <span class="n">example</span> <span class="n">that</span> <span class="n">sums</span> <span class="n">integers</span> <span class="kn">from</span> <span class="nn">the</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">following</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">simple</span> <span class="n">usage</span> <span class="n">example</span> <span class="n">that</span> <span class="n">sums</span> <span class="n">integers</span> <span class="kn">from</span> <span class="nn">the</span>
 <span class="n">command</span><span class="o">-</span><span class="n">line</span> <span class="ow">and</span> <span class="n">writes</span> <span class="n">the</span> <span class="n">result</span> <span class="n">to</span> <span class="n">a</span> <span class="n">file</span><span class="p">::</span>
 
     <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
@@ -960,7 +948,7 @@ automatiquement.</p>
 <hr class="docutils" />
 <div class="section" id="connaitre-le-nombre-de-cpu-d-un-systeme">
 <h2>Connaître le nombre de CPU d’un système<a class="headerlink" href="#connaitre-le-nombre-de-cpu-d-un-systeme" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1059,7 +1047,7 @@ show detailed information</td>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Snipet:</th><td class="field-body"><p class="first">Ce Snipet vient de Sam&amp;Max</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding: utf-8 -*-</span>
 
 <span class="kn">import</span> <span class="nn">logging</span>
@@ -1130,7 +1118,7 @@ permettent d’introduire ces notions dans les interpréteurs</p>
 <blockquote>
 <div><p>C’est l’affectation classique.  Cette affectation sera visible dans l’API (dir()
 help())</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">maVariablePublique</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">maVariablePublique</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1140,7 +1128,7 @@ help())</p>
 <div><p>On préfixe notre objet (attribut ou méthode) avec un simple underscore (_). L’objet
 n’apparaîtra pas dans l’API mais sera utilisable de l’extérieur si on l’appel
 spécifiquement</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">_maVaribleProtegee</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_maVaribleProtegee</span> <span class="o">=</span> <span class="mi">2</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1149,7 +1137,7 @@ spécifiquement</p>
 <blockquote>
 <div><p>On préfix notre objet avec un double underscore (__). Il n’apparaîtra pas dans
 l’API et renverra un «&nbsp;AttributError&nbsp;» si on l’appel spécifiquement</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">__maVariablePrivee</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">__maVariablePrivee</span> <span class="o">=</span> <span class="mi">3</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1157,7 +1145,7 @@ l’API et renverra un «&nbsp;AttributError&nbsp;» si on l’appel spécifique
 </ol>
 </div></blockquote>
 <p>Exemple d’utilisation :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span> <span class="p">:</span>
 <span class="gp">... </span>    <span class="n">pub</span>     <span class="o">=</span> <span class="mi">1</span>
 <span class="gp">... </span>    <span class="n">_prot</span>   <span class="o">=</span> <span class="mi">2</span>
 <span class="gp">... </span>    <span class="n">__priv</span>  <span class="o">=</span> <span class="mi">3</span>
@@ -1206,7 +1194,7 @@ l’API et renverra un «&nbsp;AttributError&nbsp;» si on l’appel spécifique
 <hr class="docutils" />
 <div class="section" id="connaitre-l-os-de-travail">
 <h2>Connaître l’os de travail<a class="headerlink" href="#connaitre-l-os-de-travail" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="n">Win</span> <span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="n">Win</span> <span class="p">:</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">os</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span>
 <span class="s1">&#39;nt&#39;</span>
@@ -1317,57 +1305,71 @@ d’explications supplémentaires.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table des Matières</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">PYTHON</a><ul>
-<li><a class="reference internal" href="#ensemble-de-commande-utiles">Ensemble de commande utiles</a></li>
-<li><a class="reference internal" href="#obtenir-de-l-aide-sur-une-class-ou-une-methode-python">Obtenir de l’aide sur une class ou une méthode  (python)</a></li>
-<li><a class="reference internal" href="#lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux">Lignes de code à insérer au debut de chaque script sous Linux</a></li>
-<li><a class="reference internal" href="#os-library">os library</a><ul>
-<li><a class="reference internal" href="#traitement-des-repertoires">Traitement des répertoires</a></li>
+<h1 class="logo"><a href="index.html">JDM</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Aquariophilie.html">Aquariophilie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composants.html">Composants Spécifiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ComputerVision.html">Computer Vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DataBase.html">DataBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Django.html">Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DocUtils_RST_Sphinx.html">DocUtils ; reStructuredText (.rst) ; Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESP8266.html">ESP8266</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GIT.html">GIT (versionning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Informatique.html">Informatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Javascript.html">JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kicad.html">Kicad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Linux.html">LINUX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MAC_OS.html">MAC OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Latex.html">LaTex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PYTHON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ensemble-de-commande-utiles">Ensemble de commande utiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obtenir-de-l-aide-sur-une-class-ou-une-methode-python">Obtenir de l’aide sur une class ou une méthode  (python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux">Lignes de code à insérer au debut de chaque script sous Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#os-library">os library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shutil-library">shutil library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#psutil-process-and-system-utilities">psutil (process and system utilities)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pip-python-installing-packages">pip (Python installing packages)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper-version-linux">Les environnements virtuels Python : virtualenv et virtualenvwrapper (version Linux)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#un-shell-python-qui-fait-de-l-auto-completion">Un shell Python qui fait de l’auto complétion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convertir-un-string-en-bytes">convertir un string en bytes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connaitre-l-adresse-memoire-d-un-objet">Connaître l’adresse mémoire d’un objet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#affectation-copy-et-deepcopy">Affectation, copy et deepcopy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#faire-un-executable-a-partir-d-un-script">faire un exécutable à partir d’un script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#web-framework">web framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#les-decorateurs">Les décorateurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tester-un-type-attendu">Tester un type attendu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#packing-et-unpacking-utilisation-de-args-et-kwargs">Packing et UnPacking (utilisation de : “*args” et “**kwargs”)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#passer-des-parametres-a-un-programme-avec-argparse">Passer des paramètres à un programme avec argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connaitre-le-nombre-de-cpu-d-un-systeme">Connaître le nombre de CPU d’un système</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logging-library">logging Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utilisation-de-l-underscore">Utilisation de l’underscore (_)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connaitre-l-os-de-travail">Connaître l’os de travail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#urltheque">URLtheque</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#shutil-library">shutil library</a><ul>
-<li><a class="reference internal" href="#id1">Traitement des répertoires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Raspberry.html">Raspberry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Regex.html">Regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SiteWeb.html">Site Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Soudure.html">Soudure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="URLtheque.html">URLtheque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VIM.html">VIM (VI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XML_JSON.html">XML_JSON</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#psutil-process-and-system-utilities">psutil (process and system utilities)</a></li>
-<li><a class="reference internal" href="#pip-python-installing-packages">pip (Python installing packages)</a><ul>
-<li><a class="reference internal" href="#installation-de-pip">Installation de PIP</a></li>
-<li><a class="reference internal" href="#utilisation-de-pip">Utilisation de PIP</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper-version-linux">Les environnements virtuels Python : virtualenv et virtualenvwrapper (version Linux)</a><ul>
-<li><a class="reference internal" href="#installation-des-environnements-virtuels">installation des environnements virtuels</a></li>
-<li><a class="reference internal" href="#configuration-des-environnements-virtuels">configuration des environnements virtuels</a></li>
-<li><a class="reference internal" href="#utilisation-environnements-virtuels">Utilisation environnements virtuels</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#un-shell-python-qui-fait-de-l-auto-completion">Un shell Python qui fait de l’auto complétion</a></li>
-<li><a class="reference internal" href="#convertir-un-string-en-bytes">convertir un string en bytes</a></li>
-<li><a class="reference internal" href="#connaitre-l-adresse-memoire-d-un-objet">Connaître l’adresse mémoire d’un objet</a></li>
-<li><a class="reference internal" href="#affectation-copy-et-deepcopy">Affectation, copy et deepcopy</a></li>
-<li><a class="reference internal" href="#faire-un-executable-a-partir-d-un-script">faire un exécutable à partir d’un script</a></li>
-<li><a class="reference internal" href="#web-framework">web framework</a><ul>
-<li><a class="reference internal" href="#bottle">Bottle</a></li>
-<li><a class="reference internal" href="#flask">Flask</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#les-decorateurs">Les décorateurs</a></li>
-<li><a class="reference internal" href="#tester-un-type-attendu">Tester un type attendu</a></li>
-<li><a class="reference internal" href="#packing-et-unpacking-utilisation-de-args-et-kwargs">Packing et UnPacking (utilisation de : “*args” et “**kwargs”)</a></li>
-<li><a class="reference internal" href="#passer-des-parametres-a-un-programme-avec-argparse">Passer des paramètres à un programme avec argparse</a></li>
-<li><a class="reference internal" href="#connaitre-le-nombre-de-cpu-d-un-systeme">Connaître le nombre de CPU d’un système</a></li>
-<li><a class="reference internal" href="#logging-library">logging Library</a></li>
-<li><a class="reference internal" href="#utilisation-de-l-underscore">Utilisation de l’underscore (_)</a><ul>
-<li><a class="reference internal" href="#publique-protege-et-prive">Publique, Protégé et Privé</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#connaitre-l-os-de-travail">Connaître l’os de travail</a></li>
-<li><a class="reference internal" href="#urltheque">URLtheque</a></li>
-</ul>
-</li>
-</ul>
+
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
@@ -1377,21 +1379,16 @@ d’explications supplémentaires.</p>
   </ul></li>
 </ul>
 </div>
-  <div role="note" aria-label="source link">
-    <h3>Cette page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/Python.rst.txt"
-            rel="nofollow">Montrer le code source</a></li>
-    </ul>
-   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -1402,7 +1399,7 @@ d’explications supplémentaires.</p>
       &copy;2017, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.7</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |

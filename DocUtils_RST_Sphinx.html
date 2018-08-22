@@ -4,23 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>DocUtils ; reStructuredText (.rst) ; Sphinx &#8212; documentation JDM 20170523</title>
-    
+    <title>DocUtils ; reStructuredText (.rst) ; Sphinx &#8212; Documentation JDM 20170523</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '20170523',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -35,8 +24,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -137,7 +125,7 @@ les fichiers «&nbsp;.rst&nbsp;» en page Web</dd>
 <div class="section" id="installer-sphinx">
 <h3>Installer Sphinx<a class="headerlink" href="#installer-sphinx" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -145,7 +133,7 @@ les fichiers «&nbsp;.rst&nbsp;» en page Web</dd>
 <div class="section" id="demarrage-et-initialisation-rapide">
 <h3>Démarrage et initialisation rapide<a class="headerlink" href="#demarrage-et-initialisation-rapide" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -166,7 +154,7 @@ les fichiers «&nbsp;.rst&nbsp;» en page Web</dd>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Création de 2 sous-dossier à la racine du projet</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>    <span class="n">fakeLib</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">fakeLib</span>
         <span class="n">project</span>
         <span class="n">webDoc</span>
 
@@ -175,7 +163,7 @@ les fichiers «&nbsp;.rst&nbsp;» en page Web</dd>
 </div>
 </li>
 <li><p class="first">Lier le dépôt local (Git) au dépôt distant (GitHub)</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="p">[</span><span class="n">votre_nom_sous_github</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">votre_depot_github</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="p">[</span><span class="n">votre_nom_sous_github</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">votre_depot_github</span><span class="p">]</span>
 <span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
 </pre></div>
 </div>
@@ -187,12 +175,12 @@ les fichiers «&nbsp;.rst&nbsp;» en page Web</dd>
 et ouvrir une invite de commande.</p>
 </li>
 <li><p class="first">Exécuter la commande :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Il faut accepter la plupart des choix par défaut sauf pour 4 d’entre eux :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Separate</span> <span class="n">source</span> <span class="ow">and</span> <span class="n">build</span> <span class="n">directories</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span><span class="n">y</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Separate</span> <span class="n">source</span> <span class="ow">and</span> <span class="n">build</span> <span class="n">directories</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span><span class="n">y</span>
 <span class="n">Project</span> <span class="n">language</span> <span class="p">[</span><span class="n">en</span><span class="p">]:</span> <span class="n">fr</span>
 <span class="n">autodoc</span><span class="p">:</span> <span class="n">automatically</span> <span class="n">insert</span> <span class="n">docstrings</span> <span class="kn">from</span> <span class="nn">modules</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
 <span class="n">githubpages</span><span class="p">:</span> <span class="n">create</span> <span class="o">.</span><span class="n">nojekyll</span> <span class="n">file</span> <span class="n">to</span> <span class="n">publish</span> <span class="n">the</span> <span class="n">document</span> <span class="n">on</span> <span class="n">GitHub</span> <span class="n">pages</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
@@ -207,26 +195,26 @@ et ouvrir une invite de commande.</p>
 <blockquote>
 <div><ul>
 <li><p class="first">Repérez les 3 lignes :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># import os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># import os</span>
 <span class="c1"># import sys</span>
 <span class="c1"># sys.path.insert(0, os.path.abspath(&#39;.&#39;))</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Remplacez les par :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../../&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Puis la ligne :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">A remplacer par :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_build&#39;</span><span class="p">,</span> <span class="s1">&#39;Thumbs.db&#39;</span><span class="p">,</span> <span class="s1">&#39;.DS_Store&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_build&#39;</span><span class="p">,</span> <span class="s1">&#39;Thumbs.db&#39;</span><span class="p">,</span> <span class="s1">&#39;.DS_Store&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
@@ -237,13 +225,13 @@ et ouvrir une invite de commande.</p>
 <blockquote>
 <div><ul>
 <li><p class="first">Repérez les 2 lignes :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SOURCEDIR</span> <span class="o">=</span> <span class="n">source</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SOURCEDIR</span> <span class="o">=</span> <span class="n">source</span>
 <span class="n">BUILDDIR</span> <span class="o">=</span> <span class="n">build</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Remplacez les par :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SOURCEDIR</span> <span class="o">=</span> <span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SOURCEDIR</span> <span class="o">=</span> <span class="o">.</span>
 <span class="c1"># Attention, il y a un point après le égal.</span>
 <span class="c1"># Cela signifie : &quot;répertoire courant&quot;</span>
 
@@ -258,12 +246,12 @@ et ouvrir une invite de commande.</p>
 <blockquote>
 <div><ul>
 <li><p class="first">Rechercher la ligne :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">BUILDDIR</span><span class="o">=</span><span class="n">build</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">BUILDDIR</span><span class="o">=</span><span class="n">build</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">A remplacer par :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">BUILDDIR</span><span class="o">=</span> <span class="o">..</span>\<span class="o">..</span>\<span class="n">webDoc</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">BUILDDIR</span><span class="o">=</span> <span class="o">..</span>\<span class="o">..</span>\<span class="n">webDoc</span>
 </pre></div>
 </div>
 </li>
@@ -271,7 +259,7 @@ et ouvrir une invite de commande.</p>
 </div></blockquote>
 </li>
 <li><p class="first">Faire un commit et le pousser dans le dépôt distant</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>git add .
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git add .
 git commit -m &quot;install et conf de Sphinx&quot;
 git push -–all
 </pre></div>
@@ -285,7 +273,7 @@ git push -–all
 <li><p class="first">Se placer dans le dossier “webDoc”</p>
 </li>
 <li><p class="first">Cloner le dépôt distant dans “html” et se déplacer dans se dossier</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="p">[</span><span class="n">url_copiée_depuis_GitHub</span><span class="p">]</span> <span class="n">html</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="p">[</span><span class="n">url_copiée_depuis_GitHub</span><span class="p">]</span> <span class="n">html</span>
 <span class="c1"># Attention, html est en minuscule.</span>
 
 <span class="n">cd</span> <span class="n">html</span>
@@ -293,24 +281,24 @@ git push -–all
 </div>
 </li>
 <li><p class="first">Création de la branch local “gh-pages”</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Création d’un lien symbolique entre notre nouvelle branch et une branch homonymes
 dans notre dépôt distant puis on bascule automatiquement sur cette nouvelle branch</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">symbolic</span><span class="o">-</span><span class="n">ref</span> <span class="n">HEAD</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">symbolic</span><span class="o">-</span><span class="n">ref</span> <span class="n">HEAD</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Suppression de l’indexation existante de notre nouvelle branch</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="o">.</span><span class="n">git</span>\<span class="n">index</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="o">.</span><span class="n">git</span>\<span class="n">index</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">on nettoie le contenue de notre nouvelle branch pour ne pas refaire un commit
 sur les éléments de la branch principale</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clean</span> <span class="o">-</span><span class="n">fdx</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clean</span> <span class="o">-</span><span class="n">fdx</span>
 </pre></div>
 </div>
 </li>
@@ -339,7 +327,7 @@ l’ordre dans lequel ils seront afficher sous GitHub.</li>
 “includeMe.rst”.</p>
 <ul class="last">
 <li><p class="first">Renseigner le fichier de la façon suivante :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">======================</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">======================</span>
 <span class="n">README_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
 <span class="o">======================</span>
 
@@ -357,13 +345,13 @@ l’ordre dans lequel ils seront afficher sous GitHub.</li>
 <dt>Extraction de la documentation depuis les docString du code</dt>
 <dd><p class="first">Créer, dans le même dossier que le fichier “index.rst”, un fichier ayant un
 nom significatif qui permette de se référer au code :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span>
 <span class="n">fakeLib</span>
 </pre></div>
 </div>
 <ul class="last">
 <li><p class="first">Renseigner se nouveau fichier sous la forme :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">fakeLib</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">fakeLib</span>
  <span class="o">=======</span>
 
  <span class="o">..</span> <span class="n">automodule</span><span class="p">::</span> <span class="n">_3_software</span><span class="o">.</span><span class="n">fakeLib</span>
@@ -381,7 +369,7 @@ nom significatif qui permette de se référer au code :</p>
 </ul>
 </li>
 <li><p class="first">Génération de la doc et MAJ de la branch <strong>master</strong> en local et distant :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
 <span class="c1"># si tous se passe bien, on obtien le message suivant :</span>
 <span class="c1"># &quot;Build finished. The HTML pages are in ..\..\webDoc\html.&quot;</span>
 <span class="n">cd</span> <span class="o">..</span>
@@ -393,7 +381,7 @@ nom significatif qui permette de se référer au code :</p>
 </div>
 </li>
 <li><p class="first">MAJ de la branch <strong>gh-pages</strong> en local et en distant :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>\<span class="o">..</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>\<span class="o">..</span>
 <span class="n">cd</span> <span class="n">webDoc</span>\<span class="n">html</span>
 <span class="n">git</span> <span class="n">branch</span>
 <span class="c1"># on vérifie que l&#39;on est bien sur la branch &#39;gh-pages&#39;</span>
@@ -409,7 +397,7 @@ nom significatif qui permette de se référer au code :</p>
 <dd><p class="first">Nous pouvons à présent consulter notre jolie documentation en ligne à
 l’adresse : <a class="reference external" href="https:/">https:/</a>/&lt;utilisateur_Gihub&gt;.github.io/[nom_du_dépot]/</p>
 <p>example :</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">poltergeist42</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">fakeLib</span><span class="o">/</span>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">poltergeist42</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">fakeLib</span><span class="o">/</span>
 </pre></div>
 </div>
 </dd>
@@ -422,7 +410,7 @@ et <strong>“make.bat”</strong>.</p>
 <ul class="last">
 <li><p class="first">Dans <strong>“Makefile”</strong>, se placer à la fin du document et ajouter les lignes
 suivantes à la fin du document :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span># reconstruction de la branch &quot;gh-pages&quot; et mise a jour du depot distant
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># reconstruction de la branch &quot;gh-pages&quot; et mise a jour du depot distant
 buildandcommithtml: html
 
     cd $(BUILDDIR)/html; git add . ; git commit -m &quot;rebuilt docs&quot;; git push origin gh-pages
@@ -430,13 +418,13 @@ buildandcommithtml: html
 </div>
 </li>
 <li><p class="first">Dans <strong>“make.bat”</strong> repérer les 2 lignes :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">SPHINXBUILD</span><span class="o">%</span> <span class="o">-</span><span class="n">M</span> <span class="o">%</span><span class="mi">1</span> <span class="o">%</span><span class="n">SOURCEDIR</span><span class="o">%</span> <span class="o">%</span><span class="n">BUILDDIR</span><span class="o">%</span> <span class="o">%</span><span class="n">SPHINXOPTS</span><span class="o">%</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">SPHINXBUILD</span><span class="o">%</span> <span class="o">-</span><span class="n">M</span> <span class="o">%</span><span class="mi">1</span> <span class="o">%</span><span class="n">SOURCEDIR</span><span class="o">%</span> <span class="o">%</span><span class="n">BUILDDIR</span><span class="o">%</span> <span class="o">%</span><span class="n">SPHINXOPTS</span><span class="o">%</span>
 <span class="n">goto</span> <span class="n">end</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Intercaler les lignes suivantes entre les 2 :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rem</span> <span class="n">reconstruction</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branch</span> <span class="s2">&quot;gh-pages&quot;</span> <span class="n">et</span> <span class="n">mise</span> <span class="n">a</span> <span class="n">jour</span> <span class="n">du</span> <span class="n">dépôt</span> <span class="n">distant</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rem</span> <span class="n">reconstruction</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branch</span> <span class="s2">&quot;gh-pages&quot;</span> <span class="n">et</span> <span class="n">mise</span> <span class="n">a</span> <span class="n">jour</span> <span class="n">du</span> <span class="n">dépôt</span> <span class="n">distant</span>
 <span class="n">cd</span> <span class="o">%</span><span class="n">BUILDDIR</span><span class="o">%</span>\<span class="n">html</span>
 <span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
 <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;rebuilt docs&quot;</span>
@@ -453,7 +441,7 @@ buildandcommithtml: html
 <div><ul>
 <li><p class="first">Depuis la racine du projet cloner le dépôt distant dans 2 dossiers ayant la
 même arborescence que le projet initial :</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span>
 <span class="n">D</span><span class="p">:</span>\<span class="n">fakeLib</span><span class="o">&gt;</span>
 <span class="o">&gt;</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">poltergeist42</span><span class="o">/</span><span class="n">fakeLib</span><span class="o">.</span><span class="n">git</span> <span class="o">.</span>\<span class="n">project</span>
 <span class="o">&gt;</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">poltergeist42</span><span class="o">/</span><span class="n">fakeLib</span><span class="o">.</span><span class="n">git</span> <span class="o">.</span>\<span class="n">webDoc</span>\<span class="n">html</span>
@@ -462,13 +450,13 @@ même arborescence que le projet initial :</p>
 </li>
 <li><p class="first">Ce déplacer dans le dossier <strong>“html”</strong> et vérifier la branch courante. Il
 ne devrait y avoir que la branch <strong>“master”</strong></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">.</span>\<span class="n">webDoc</span>\<span class="n">html</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">.</span>\<span class="n">webDoc</span>\<span class="n">html</span>
 <span class="n">git</span> <span class="n">branch</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Re-créer la branch locale <strong>“gh-pages”</strong> et l’associer avec le dépôt distant</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span> <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span> <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
 </pre></div>
 </div>
 </li>
@@ -491,7 +479,7 @@ ne devrait y avoir que la branch <strong>“master”</strong></p>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Insérez du code html</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
 
    <span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span>
    <span class="c1"># Attention, il faut sauter une ligne entre &#39;raw&#39; et le code html</span>
@@ -528,25 +516,54 @@ ne devrait y avoir que la branch <strong>“master”</strong></p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table des Matières</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">DocUtils ; reStructuredText (.rst) ; Sphinx</a><ul>
-<li><a class="reference internal" href="#docutils">DocUtils</a></li>
-<li><a class="reference internal" href="#restructuredtext-rst">reStructuredText (.rst)</a></li>
-<li><a class="reference internal" href="#sphinx">Sphinx</a><ul>
-<li><a class="reference internal" href="#installer-sphinx">Installer Sphinx</a></li>
-<li><a class="reference internal" href="#demarrage-et-initialisation-rapide">Démarrage et initialisation rapide</a></li>
+<h1 class="logo"><a href="index.html">JDM</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Aquariophilie.html">Aquariophilie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composants.html">Composants Spécifiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ComputerVision.html">Computer Vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DataBase.html">DataBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Django.html">Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Docker.html">Docker</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DocUtils ; reStructuredText (.rst) ; Sphinx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#docutils">DocUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restructuredtext-rst">reStructuredText (.rst)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx">Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rediger-et-publier-de-la-doc-avec-sphinx-sur-github-pages">Rédiger et publier de la doc avec Sphinx sur GitHub-pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directives">Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utiliser-sphinx-pour-traite-les-donnes-de-doxygen">Utiliser Sphinx pour traité les donnes de Doxygen</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#rediger-et-publier-de-la-doc-avec-sphinx-sur-github-pages">Rédiger et publier de la doc avec Sphinx sur GitHub-pages</a><ul>
-<li><a class="reference internal" href="#preparation-de-l-arborescence">Préparation de l’arborescence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESP8266.html">ESP8266</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GIT.html">GIT (versionning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Informatique.html">Informatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Javascript.html">JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kicad.html">Kicad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Linux.html">LINUX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MAC_OS.html">MAC OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Latex.html">LaTex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">PYTHON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Raspberry.html">Raspberry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Regex.html">Regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SiteWeb.html">Site Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Soudure.html">Soudure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="URLtheque.html">URLtheque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VIM.html">VIM (VI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XML_JSON.html">XML_JSON</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#directives">Directives</a></li>
-<li><a class="reference internal" href="#utiliser-sphinx-pour-traite-les-donnes-de-doxygen">Utiliser Sphinx pour traité les donnes de Doxygen</a></li>
-</ul>
-</li>
-</ul>
+
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
@@ -556,21 +573,16 @@ ne devrait y avoir que la branch <strong>“master”</strong></p>
   </ul></li>
 </ul>
 </div>
-  <div role="note" aria-label="source link">
-    <h3>Cette page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/DocUtils_RST_Sphinx.rst.txt"
-            rel="nofollow">Montrer le code source</a></li>
-    </ul>
-   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -581,7 +593,7 @@ ne devrait y avoir que la branch <strong>“master”</strong></p>
       &copy;2017, Poltergeist42.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.7</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
