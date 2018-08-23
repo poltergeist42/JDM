@@ -70,17 +70,19 @@ L'utilitaire de restauration système se nomme : ::
 Excel
 -----
 
-    #. Colorer une ligne sur deux dans un tableau Excel
+Colorer une ligne sur deux dans un tableau Excel
+++++++++++++++++++++++++++++++++++++++++++++++++
         
+:Liens_Web:
         * http://www.pcastuces.com/pratique/astuces/4180.htm
+    
+    #. La commande à saisir pour calculer une les lignes pair : ::
         
-            - La commande à saisir pour calculer une les lignes pair : ::
+        =MOD(LIGNE() ;2)
             
-                =MOD(LIGNE() ;2)
-                
-            - Pour les lignes impair : ::
-            
-                =NON(MOD(LIGNE() ;2))
+    #. Pour les lignes impair : ::
+        
+        =NON(MOD(LIGNE() ;2))
         
 ####
         
@@ -89,12 +91,76 @@ SysAdmin
 
 Ensemble d'informations relative à l'administration Système
 
+Sysinternals
+------------
+
+    :Liens_Web:
+        * https://docs.microsoft.com/en-us/sysinternals/
+          # Ensemble d'utilitaire pour l'administration et la gestion de parc informatique
+
+        ex:
+            - Disk2vhd
+            - AdRestore
+            - Whois
+            - BGinfo
+            - etc ...
+
+Exchange
+--------
 
 Renouveler un certificats sur Exchange 2010
--------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++
+
+    :Liens_Web:
+            * https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/
+
+WSUS
+----
+
+Libération de l’espace disque sur le serveur WSUS
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    :Liens_Web:
+        * https://www.supinfo.com/articles/single/1912-liberation-espace-disque-serveur-wsus
+          # description simple (et en Français) pour l'utilisation de l'assistant de nettoyage WSUS
+
+Hyper-V
+-------
+
+Sysprep
++++++++
+
+Configurer un VHD Sysprep
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :Liens_Web:
-        * https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/
+        * https://www.remylarrieu.com/fr/configurer-un-vhd-sysprep/
+          # Une explication simple et en français
+
+        * https://github.com/remylarrieu/PowerShell/tree/master/Virtualization
+          # Un script permettant de créer automatiquement un VHD 'Sysprepé'
+
+    #. Installer tous les éléments nécessaires et faire les MAJ (on peut aussi intégrer des
+       fonctionnalité)
+
+    #. Executer la commande Syprep ::
+
+        C:\Windows\System32\Sysprep.exe /Generalize /OOBE /Shutdown
+
+    #. Copier le VHD 'sysprepé' ::
+
+        ex:
+        Model_VHD
+
+Mettre à jour une image VHD
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+:Liens_Web:
+        * https://github.com/remylarrieu/PowerShell/tree/master/Virtualization
+          # Script permettant de mettre à jour une image VHD sans devoir l'associer à une VM
+
+        * https://www.remylarrieu.com/fr/mettre-a-jour-une-image-vhd/
+          # Exemple d'utilisation du script 'Update-SysprepImage.ps1'
 
 PowerShell
 ----------
