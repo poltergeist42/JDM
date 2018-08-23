@@ -20,7 +20,7 @@ Pour programmer un ATmega (328P ; 2560 etc) on peut utiliser Trois environnement
 ATMega 328p-PU Pinout
 ---------------------
 
- .. image:: .\Images\Composants\ATMEGA\ATMEGA328-PU-PINOUT.jpg
+ .. image:: ./Images/Composants/ATMEGA/ATMEGA328-PU-PINOUT.jpg
      :width: 400 px
      :align: center
 
