@@ -52,7 +52,7 @@ CSS
 Positionnement  et dimensionnement dans la fenêtre (ou dans la boite)
 ---------------------------------------------------------------------
 
-    .. image:: .\Images\HTML_CSS\dimensionnement.png
+    .. image:: ./Images/HTML_CSS/dimensionnement.png
         :width: 400 px
         :align: center
 
@@ -63,7 +63,7 @@ Positionnement  et dimensionnement dans la fenêtre (ou dans la boite)
 
 Chaque dimensions peut être utilisée dans sa forme courte (dans le sens horraire) :
 
-    .. image:: .\Images\HTML_CSS\rotation_propriete.png
+    .. image:: ./Images/HTML_CSS/rotation_propriete.png
         :width: 400 px
         :align: center
 

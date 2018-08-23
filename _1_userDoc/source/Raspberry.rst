@@ -105,7 +105,7 @@ La bibliotheque RPi.GPIO
 Implantation RPi2
 -----------------
 
-         .. image:: .\Images\raspberrypi\GPIO.png
+         .. image:: ./Images/raspberrypi/GPIO.png
              :width: 400 px
              :align: center
 

@@ -12,19 +12,19 @@ apprentissage
     #. Identifier si une soudure est bonne ou non
 
         Dessin
-         .. image:: .\Images\soudure\etatSoudure.jpg
+         .. image:: ./Images/soudure/etatSoudure.jpg
              :width: 400 px
              :align: center
 
         Photo
-         .. image:: .\Images\soudure\etatSoudure2.jpg
+         .. image:: ./Images/soudure/etatSoudure2.jpg
              :width: 400 px
              :align: center
 
 
     #. Mouvement de soudure
 
-         .. image:: .\Images\soudure\mvtSoudure.jpg
+         .. image:: ./Images/soudure/mvtSoudure.jpg
              :width: 400 px
              :align: center
 
