@@ -30,8 +30,6 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <div class="section" id="informatique">
@@ -122,6 +120,21 @@ informatiques.</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="nettoyer-reparer">
+<h3>Nettoyer / Réparer<a class="headerlink" href="#nettoyer-reparer" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://www.tech2tech.fr/medicat-lutilitaire-utlime-pour-le-depannage-informatique/">https://www.tech2tech.fr/medicat-lutilitaire-utlime-pour-le-depannage-informatique/</a>
+# Medicat : Un bon remplaçant de Hiren” Boot CD</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="excel">
 <h3>Excel<a class="headerlink" href="#excel" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="colorer-une-ligne-sur-deux-dans-un-tableau-excel">
@@ -202,6 +215,16 @@ informatiques.</p>
 </tr>
 </tbody>
 </table>
+</div></blockquote>
+</div>
+<div class="section" id="exporter-en-csv-la-taille-et-le-nombre-d-item-des-bal">
+<h4>Exporter en CSV la taille et le nombre d’item des BAL<a class="headerlink" href="#exporter-en-csv-la-taille-et-le-nombre-d-item-des-bal" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Dans</span> <span class="n">la</span> <span class="n">console</span> <span class="n">exchange</span> <span class="n">PS</span>
+
+<span class="n">Get</span><span class="o">-</span><span class="n">MailboxStatistics</span> <span class="o">-</span><span class="n">server</span> <span class="p">[</span><span class="n">nom_du_serveur</span><span class="p">]</span> <span class="o">|</span> <span class="n">Sort</span><span class="o">-</span><span class="n">Object</span> <span class="n">TotalItemSize</span> <span class="o">-</span><span class="n">Descending</span> <span class="o">|</span> <span class="n">select</span> <span class="n">DisplayName</span><span class="p">,</span> <span class="n">TotalItemSize</span><span class="p">,</span> <span class="n">ItemCount</span> <span class="o">|</span> <span class="n">export</span><span class="o">-</span><span class="n">csv</span> <span class="o">-</span><span class="n">Path</span> <span class="s2">&quot;[chemin_et_nom_du_fichiers.csv]&quot;</span> <span class="o">-</span><span class="n">Delimiter</span> <span class="s2">&quot;;&quot;</span> <span class="o">-</span><span class="n">Encoding</span> <span class="s2">&quot;Default&quot;</span>
+</pre></div>
+</div>
 </div></blockquote>
 </div>
 </div>
@@ -399,7 +422,6 @@ Remove-PSSession $ExSession
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -481,7 +503,7 @@ Remove-PSSession $ExSession
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.7</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
       <a href="_sources/Informatique.rst.txt"
