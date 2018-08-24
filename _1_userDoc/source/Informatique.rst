@@ -67,6 +67,13 @@ L'utilitaire de restauration système se nomme : ::
 
     rstrui.exe
 
+Nettoyer / Réparer
+------------------
+
+:Liens_Web:
+        * https://www.tech2tech.fr/medicat-lutilitaire-utlime-pour-le-depannage-informatique/
+          # Medicat : Un bon remplaçant de Hiren' Boot CD
+
 Excel
 -----
 
@@ -113,6 +120,15 @@ Renouveler un certificats sur Exchange 2010
 
     :Liens_Web:
             * https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/
+
+Exporter en CSV la taille et le nombre d'item des BAL
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    ::
+
+        Dans la console exchange PS
+
+        Get-MailboxStatistics -server [nom_du_serveur] | Sort-Object TotalItemSize -Descending | select DisplayName, TotalItemSize, ItemCount | export-csv -Path "[chemin_et_nom_du_fichiers.csv]" -Delimiter ";" -Encoding "Default"
 
 WSUS
 ----

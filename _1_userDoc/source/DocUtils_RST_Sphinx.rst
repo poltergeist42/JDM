@@ -14,6 +14,9 @@ reStructuredText (.rst)
 =======================
 
 :Liens WEB:
+        * http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+            # Références  officielles
+
         * https://fr.wikipedia.org/wiki/ReStructuredText
             # (Définition Wikipedia)
 
@@ -37,7 +40,7 @@ reStructuredText (.rst)
             # Explication détailler des directives (ex : images, include, etc ...)
 
         * http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
-            # Syntax avancée
+            # Syntaxe avancée
 
 ------------------------------------------------------------------------------------------
 
@@ -74,7 +77,7 @@ Rédiger et publier de la doc avec Sphinx sur GitHub-pages
 Préparation de l'arborescence
 -----------------------------
 
-    #. Création de 2 sous-dossier à la racine du projet ::
+    #. Création de 2 sous dossier à la racine du projet ::
     
             fakeLib
                 project
@@ -221,7 +224,7 @@ Préparation de l'arborescence
                 .. automodule:: _3_software.fakeLib
                    :members:
                
-               # Ne pas oublier les 3 éspaces devant ':members:'
+               # Ne pas oublier les 3 espaces devant ':members:'
                
            - Ajouter l'entrée **'fakeLib'** dans **'index.rst'**
            
@@ -251,7 +254,7 @@ Préparation de l'arborescence
             Nous pouvons à présent consulter notre jolie documentation en ligne à 
             l'adresse : https://<utilisateur_Gihub>.github.io/[nom_du_dépot]/ 
             
-            example : ::
+            Exemple : ::
             
                 https://poltergeist42.github.io/fakeLib/
                 
@@ -296,7 +299,7 @@ Préparation de l'arborescence
                 cd .\webDoc\html
                 git branch
                 
-            - Re-créer la branch locale **'gh-pages'** et l'associer avec le dépôt distant ::
+            - Recréer la branch locale **'gh-pages'** et l'associer avec le dépôt distant ::
             
                 git checkout -b gh-pages remotes/origin/gh-pages
                 
@@ -315,6 +318,18 @@ Directives
            <br/>
            # Attention, il faut sauter une ligne entre 'raw' et le code html
 
+    #. Insérer une image ::
+
+        .. image:: [chemin/vers/une/image]
+           :align: center
+
+        ex:
+        .. image:: ./Images/monImage.jpg
+           :align: center
+
+        # Important : les chemins doivent être renseigné avec des '/' même sous windows
+
+
 ------------------------------------------------------------------------------------------
 
 Utiliser Sphinx pour traité les donnes de Doxygen
@@ -322,4 +337,4 @@ Utiliser Sphinx pour traité les donnes de Doxygen
 
 :Liens_Web:
         * http://breathe.readthedocs.io/en/latest/
-            # Breathe permet de transformer le XML générer par Doxygen en un contenu explotable par Sphinx
+            # Breathe permet de transformer le XML générer par Doxygen en un contenu exploitable par Sphinx
