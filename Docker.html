@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Docker &#8212; Documentation JDM 20170523</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -17,15 +17,23 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="DocUtils ; reStructuredText (.rst) ; Sphinx" href="DocUtils_RST_Sphinx.html" />
-    <link rel="prev" title="Django" href="Django.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="prev" title="Django" href="Django.html" /> 
   </head><body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="DocUtils_RST_Sphinx.html" title="DocUtils ; reStructuredText (.rst) ; Sphinx"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="Django.html" title="Django"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -667,67 +675,54 @@ un seul port, soit un ensemble de port :</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">JDM</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Aquariophilie.html">Aquariophilie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Composants.html">Composants Spécifiques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ComputerVision.html">Computer Vision</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DataBase.html">DataBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Django.html">Django</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Docker</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#obtenir-de-l-aide-sur-une-commande">Obtenir de l’aide sur une commande</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#diference-entre-une-image-et-un-container">Diférence entre une <strong>Image</strong> et un <strong>Container</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#images">Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#containers">Containers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#lancer-initialiser-un-container">Lancer/initialiser un Container</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sortir-d-un-container-mode-iterractif">Sortir d’un container (mode iterractif)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#recuperer-le-focus-sur-un-container-qui-tourne-en-tache-de-fond-en-mode-detache">Récupérer le focus sur un container qui tourne en tache de fond (en mode détaché)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#inspecter-un-container">Inspecter un container</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gestion-redirection-des-ports">Gestion / redirection des ports</a></li>
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Docker</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#installation-manuelle">Installation manuelle</a></li>
+<li><a class="reference internal" href="#version-facile-automatique">Version facile / Automatique</a></li>
+<li><a class="reference internal" href="#installation-sous-windows">Installation sous Windows</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="DocUtils_RST_Sphinx.html">DocUtils ; reStructuredText (.rst) ; Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ESP8266.html">ESP8266</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GIT.html">GIT (versionning)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Informatique.html">Informatique</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Javascript.html">JavaScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kicad.html">Kicad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Linux.html">LINUX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MAC_OS.html">MAC OS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Latex.html">LaTex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">PYTHON</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Raspberry.html">Raspberry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Regex.html">Regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SiteWeb.html">Site Web</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Soudure.html">Soudure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="URLtheque.html">URLtheque</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VIM.html">VIM (VI)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="XML_JSON.html">XML_JSON</a></li>
+<li><a class="reference internal" href="#obtenir-de-l-aide-sur-une-commande">Obtenir de l’aide sur une commande</a></li>
+<li><a class="reference internal" href="#diference-entre-une-image-et-un-container">Diférence entre une <strong>Image</strong> et un <strong>Container</strong></a></li>
+<li><a class="reference internal" href="#images">Images</a><ul>
+<li><a class="reference internal" href="#trouver-une-image-depuis-la-console">Trouver une image depuis la console</a></li>
+<li><a class="reference internal" href="#recuperer-une-image-depuis-la-console">Récupérer une Image depuis la console</a></li>
+<li><a class="reference internal" href="#suprimer-une-image">Suprimer une Image</a></li>
+<li><a class="reference internal" href="#obtenir-la-list-des-images-presents-sur-le-poste">Obtenir la list des images présents sur le poste</a></li>
+<li><a class="reference internal" href="#creer-une-nouvelle-image-a-partir-d-un-container">Créer une nouvelle image à partir d’un container</a></li>
+<li><a class="reference internal" href="#definir-un-repository-et-un-tag-sur-une-image">Définir un Repository et un TAG sur une image</a></li>
+<li><a class="reference internal" href="#faire-un-push-sur-dockerhub">Faire un push sur dockerHub</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#containers">Containers</a><ul>
+<li><a class="reference internal" href="#obtenir-la-liste-des-containers">Obtenir la liste des Containers</a></li>
+<li><a class="reference internal" href="#supprimer-un-ou-plusieurs-containers">Supprimer un ou plusieurs Containers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lancer-initialiser-un-container">Lancer/initialiser un Container</a></li>
+<li><a class="reference internal" href="#sortir-d-un-container-mode-iterractif">Sortir d’un container (mode iterractif)</a></li>
+<li><a class="reference internal" href="#recuperer-le-focus-sur-un-container-qui-tourne-en-tache-de-fond-en-mode-detache">Récupérer le focus sur un container qui tourne en tache de fond (en mode détaché)</a></li>
+<li><a class="reference internal" href="#inspecter-un-container">Inspecter un container</a></li>
+<li><a class="reference internal" href="#gestion-redirection-des-ports">Gestion / redirection des ports</a></li>
+</ul>
+</li>
 </ul>
 
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Django.html" title="Chapitre précédent">Django</a></li>
-      <li>Next: <a href="DocUtils_RST_Sphinx.html" title="Chapitre suivant">DocUtils ; reStructuredText (.rst) ; Sphinx</a></li>
-  </ul></li>
-</ul>
-</div>
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="Django.html"
+                        title="Chapitre précédent">Django</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="DocUtils_RST_Sphinx.html"
+                        title="Chapitre suivant">DocUtils ; reStructuredText (.rst) ; Sphinx</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Docker.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
     <div class="searchformwrapper">
@@ -744,20 +739,24 @@ un seul port, soit un ensemble de port :</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2017, Poltergeist42.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.7</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
-      
-      |
-      <a href="_sources/Docker.rst.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="DocUtils_RST_Sphinx.html" title="DocUtils ; reStructuredText (.rst) ; Sphinx"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="Django.html" title="Django"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Poltergeist42.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.7.
+    </div>
   </body>
 </html>

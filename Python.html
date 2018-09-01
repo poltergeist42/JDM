@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>PYTHON &#8212; Documentation JDM 20170523</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -17,15 +17,23 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Raspberry" href="Raspberry.html" />
-    <link rel="prev" title="PowerShell" href="Powershell.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="prev" title="PowerShell" href="Powershell.html" /> 
   </head><body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Raspberry.html" title="Raspberry"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="Powershell.html" title="PowerShell"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -1305,80 +1313,71 @@ d’explications supplémentaires.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">JDM</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Aquariophilie.html">Aquariophilie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Composants.html">Composants Spécifiques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ComputerVision.html">Computer Vision</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DataBase.html">DataBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Django.html">Django</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Docker.html">Docker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DocUtils_RST_Sphinx.html">DocUtils ; reStructuredText (.rst) ; Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ESP8266.html">ESP8266</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GIT.html">GIT (versionning)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Informatique.html">Informatique</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Javascript.html">JavaScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kicad.html">Kicad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Linux.html">LINUX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MAC_OS.html">MAC OS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Latex.html">LaTex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">PYTHON</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#ensemble-de-commande-utiles">Ensemble de commande utiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#obtenir-de-l-aide-sur-une-class-ou-une-methode-python">Obtenir de l’aide sur une class ou une méthode  (python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux">Lignes de code à insérer au debut de chaque script sous Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#os-library">os library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#shutil-library">shutil library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#psutil-process-and-system-utilities">psutil (process and system utilities)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pip-python-installing-packages">pip (Python installing packages)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper-version-linux">Les environnements virtuels Python : virtualenv et virtualenvwrapper (version Linux)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#un-shell-python-qui-fait-de-l-auto-completion">Un shell Python qui fait de l’auto complétion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#convertir-un-string-en-bytes">convertir un string en bytes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#connaitre-l-adresse-memoire-d-un-objet">Connaître l’adresse mémoire d’un objet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#affectation-copy-et-deepcopy">Affectation, copy et deepcopy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#faire-un-executable-a-partir-d-un-script">faire un exécutable à partir d’un script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#web-framework">web framework</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#les-decorateurs">Les décorateurs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tester-un-type-attendu">Tester un type attendu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#packing-et-unpacking-utilisation-de-args-et-kwargs">Packing et UnPacking (utilisation de : “*args” et “**kwargs”)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#passer-des-parametres-a-un-programme-avec-argparse">Passer des paramètres à un programme avec argparse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#connaitre-le-nombre-de-cpu-d-un-systeme">Connaître le nombre de CPU d’un système</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#logging-library">logging Library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#utilisation-de-l-underscore">Utilisation de l’underscore (_)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#connaitre-l-os-de-travail">Connaître l’os de travail</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#urltheque">URLtheque</a></li>
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PYTHON</a><ul>
+<li><a class="reference internal" href="#ensemble-de-commande-utiles">Ensemble de commande utiles</a></li>
+<li><a class="reference internal" href="#obtenir-de-l-aide-sur-une-class-ou-une-methode-python">Obtenir de l’aide sur une class ou une méthode  (python)</a></li>
+<li><a class="reference internal" href="#lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux">Lignes de code à insérer au debut de chaque script sous Linux</a></li>
+<li><a class="reference internal" href="#os-library">os library</a><ul>
+<li><a class="reference internal" href="#traitement-des-repertoires">Traitement des répertoires</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Raspberry.html">Raspberry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Regex.html">Regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SiteWeb.html">Site Web</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Soudure.html">Soudure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="URLtheque.html">URLtheque</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VIM.html">VIM (VI)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="XML_JSON.html">XML_JSON</a></li>
+<li><a class="reference internal" href="#shutil-library">shutil library</a><ul>
+<li><a class="reference internal" href="#id1">Traitement des répertoires</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psutil-process-and-system-utilities">psutil (process and system utilities)</a></li>
+<li><a class="reference internal" href="#pip-python-installing-packages">pip (Python installing packages)</a><ul>
+<li><a class="reference internal" href="#installation-de-pip">Installation de PIP</a></li>
+<li><a class="reference internal" href="#utilisation-de-pip">Utilisation de PIP</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper-version-linux">Les environnements virtuels Python : virtualenv et virtualenvwrapper (version Linux)</a><ul>
+<li><a class="reference internal" href="#installation-des-environnements-virtuels">installation des environnements virtuels</a></li>
+<li><a class="reference internal" href="#configuration-des-environnements-virtuels">configuration des environnements virtuels</a></li>
+<li><a class="reference internal" href="#utilisation-environnements-virtuels">Utilisation environnements virtuels</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#un-shell-python-qui-fait-de-l-auto-completion">Un shell Python qui fait de l’auto complétion</a></li>
+<li><a class="reference internal" href="#convertir-un-string-en-bytes">convertir un string en bytes</a></li>
+<li><a class="reference internal" href="#connaitre-l-adresse-memoire-d-un-objet">Connaître l’adresse mémoire d’un objet</a></li>
+<li><a class="reference internal" href="#affectation-copy-et-deepcopy">Affectation, copy et deepcopy</a></li>
+<li><a class="reference internal" href="#faire-un-executable-a-partir-d-un-script">faire un exécutable à partir d’un script</a></li>
+<li><a class="reference internal" href="#web-framework">web framework</a><ul>
+<li><a class="reference internal" href="#bottle">Bottle</a></li>
+<li><a class="reference internal" href="#flask">Flask</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#les-decorateurs">Les décorateurs</a></li>
+<li><a class="reference internal" href="#tester-un-type-attendu">Tester un type attendu</a></li>
+<li><a class="reference internal" href="#packing-et-unpacking-utilisation-de-args-et-kwargs">Packing et UnPacking (utilisation de : “*args” et “**kwargs”)</a></li>
+<li><a class="reference internal" href="#passer-des-parametres-a-un-programme-avec-argparse">Passer des paramètres à un programme avec argparse</a></li>
+<li><a class="reference internal" href="#connaitre-le-nombre-de-cpu-d-un-systeme">Connaître le nombre de CPU d’un système</a></li>
+<li><a class="reference internal" href="#logging-library">logging Library</a></li>
+<li><a class="reference internal" href="#utilisation-de-l-underscore">Utilisation de l’underscore (_)</a><ul>
+<li><a class="reference internal" href="#publique-protege-et-prive">Publique, Protégé et Privé</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#connaitre-l-os-de-travail">Connaître l’os de travail</a></li>
+<li><a class="reference internal" href="#urltheque">URLtheque</a></li>
+</ul>
+</li>
 </ul>
 
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Powershell.html" title="Chapitre précédent">PowerShell</a></li>
-      <li>Next: <a href="Raspberry.html" title="Chapitre suivant">Raspberry</a></li>
-  </ul></li>
-</ul>
-</div>
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="Powershell.html"
+                        title="Chapitre précédent">PowerShell</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="Raspberry.html"
+                        title="Chapitre suivant">Raspberry</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Python.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
     <div class="searchformwrapper">
@@ -1395,20 +1394,24 @@ d’explications supplémentaires.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2017, Poltergeist42.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.7</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
-      
-      |
-      <a href="_sources/Python.rst.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="Raspberry.html" title="Raspberry"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="Powershell.html" title="PowerShell"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Poltergeist42.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.7.
+    </div>
   </body>
 </html>

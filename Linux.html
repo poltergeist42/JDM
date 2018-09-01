@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>LINUX &#8212; Documentation JDM 20170523</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -17,15 +17,23 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="MAC OS" href="MAC_OS.html" />
-    <link rel="prev" title="Kicad" href="kicad.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="prev" title="Kicad" href="kicad.html" /> 
   </head><body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="MAC_OS.html" title="MAC OS"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="kicad.html" title="Kicad"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -1317,63 +1325,97 @@ existant par au moins une ligne vide (hors commentaire)a</li>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">JDM</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Aquariophilie.html">Aquariophilie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Composants.html">Composants Spécifiques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ComputerVision.html">Computer Vision</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DataBase.html">DataBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Django.html">Django</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Docker.html">Docker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DocUtils_RST_Sphinx.html">DocUtils ; reStructuredText (.rst) ; Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ESP8266.html">ESP8266</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GIT.html">GIT (versionning)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Informatique.html">Informatique</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Javascript.html">JavaScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kicad.html">Kicad</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">LINUX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#shell">Shell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gestion-des-permissions">Gestion des permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configuration-systeme">Configuration Système</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#administration-systeme">Administration système</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#reseau">Réseau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gestion-materiel">Gestion Matériel</a></li>
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">LINUX</a><ul>
+<li><a class="reference internal" href="#shell">Shell</a><ul>
+<li><a class="reference internal" href="#rappel-des-commandes-de-bases">rappel des commandes de bases</a></li>
+<li><a class="reference internal" href="#rappel-des-raccourcis-de-navigation-dans-le-shell">rappel des raccourcis de navigation dans le shell</a></li>
+<li><a class="reference internal" href="#faire-du-multi-screen-sur-une-fenetre-terminal">Faire du multi-screen  sur une fenêtre terminal</a><ul>
+<li><a class="reference internal" href="#installation-de-screen">Installation de screen</a></li>
+<li><a class="reference internal" href="#lancer-l-application-screen">Lancer l’application «&nbsp;screen&nbsp;»</a></li>
+<li><a class="reference internal" href="#liste-des-commandes-des-bases-pour-screen">Liste des commandes des bases pour screen</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="MAC_OS.html">MAC OS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Latex.html">LaTex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">PYTHON</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Raspberry.html">Raspberry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Regex.html">Regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SiteWeb.html">Site Web</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Soudure.html">Soudure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="URLtheque.html">URLtheque</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VIM.html">VIM (VI)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="XML_JSON.html">XML_JSON</a></li>
+<li><a class="reference internal" href="#linux-rediriger-sortie-vers-null">linux rediriger sortie vers null</a></li>
+<li><a class="reference internal" href="#faire-un-script-en-shell">Faire un script en Shell</a></li>
+<li><a class="reference internal" href="#rendre-un-script-executable">Rendre un script exécutable</a></li>
+<li><a class="reference internal" href="#creer-un-alias-permanent">Créer un alias permanent</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gestion-des-permissions">Gestion des permissions</a><ul>
+<li><a class="reference internal" href="#activer-le-compte-root">activer le compte root</a></li>
+<li><a class="reference internal" href="#faire-une-elevation-valable-toute-la-duree-de-la-session">faire une élévation valable toute la durée de la session</a></li>
+<li><a class="reference internal" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique">Pour copier des fichiers en root depuis l’interface graphique</a></li>
+<li><a class="reference internal" href="#groupes">Groupes</a></li>
+<li><a class="reference internal" href="#acl-proprietaire-rwx">ACL (Propriétaire, RWX)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration-systeme">Configuration Système</a><ul>
+<li><a class="reference internal" href="#date-et-heure">Date et heure</a><ul>
+<li><a class="reference internal" href="#conaitre-la-date-et-l-heure-du-systeme">Conaitre la date et l’heure du système</a></li>
+<li><a class="reference internal" href="#synchronyser-la-date-et-l-heure-avec-un-serveur-de-temp-ntp">Synchronyser la date et l’heure avec un serveur de temp (NTP)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#changer-la-disposition-du-clavier">Changer la disposition du clavier</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#administration-systeme">Administration système</a><ul>
+<li><a class="reference internal" href="#arreter-demarrer-les-services-deamon">Arrêter / Démarrer les services (deamon)</a></li>
+<li><a class="reference internal" href="#creer-une-tache-planifie-cron">Créer une tâche planifié (cron)</a></li>
+<li><a class="reference internal" href="#pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme">Pour créer un script qui s’exécute au démarrage du système</a><ul>
+<li><a class="reference internal" href="#preparation-du-script-shell">Préparation du script shell</a></li>
+<li><a class="reference internal" href="#preparation-du-script-python">Préparation du script python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#connaitre-la-version-du-systeme">Connaître la version du système</a></li>
+<li><a class="reference internal" href="#connaitre-la-version-d-un-paquet">Connaître la version d’un paquet</a></li>
+<li><a class="reference internal" href="#emplacement-des-programmes">Emplacement des programmes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reseau">Réseau</a><ul>
+<li><a class="reference internal" href="#ssh">SSH</a><ul>
+<li><a class="reference internal" href="#activer-la-connections-ssh">Activer la connections ssh</a></li>
+<li><a class="reference internal" href="#desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh">Désactiver la demande de mot de passe de la commande sudo au travers du ssh</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">Pour pouvoir se connecter en RDP sur un poste Linux</a></li>
+<li><a class="reference internal" href="#pour-faire-du-xforwarding">Pour faire du XForwarding</a></li>
+<li><a class="reference internal" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">Pour mettre une IP fixe sur une interfaces réseau</a></li>
+<li><a class="reference internal" href="#pour-active-le-wifi">Pour active le WIFI</a></li>
+<li><a class="reference internal" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande">Se connecter a un réseau wifi en ligne de commande</a></li>
+<li><a class="reference internal" href="#creer-un-dossier-partage-avec-samba">Créer un dossier partagé avec samba</a></li>
+<li><a class="reference internal" href="#telecharger-un-fichier-en-ligne-de-commande-wget">Télécharger un fichier en ligne de commande (wget)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gestion-materiel">Gestion Matériel</a><ul>
+<li><a class="reference internal" href="#info-gestion-cpu">Info / Gestion CPU</a></li>
+<li><a class="reference internal" href="#connaitre-la-liste-des-materiel-usb">Connaître la liste des matériel usb</a></li>
+<li><a class="reference internal" href="#connaitre-lespace-disque-utilise-et-celui-disponible">Connaître l’espace disque utilise et celui disponible</a></li>
+<li><a class="reference internal" href="#les-ports-series">Les ports séries</a><ul>
+<li><a class="reference internal" href="#connaitre-la-liste-des-ports-serie">Connaître la liste des ports série</a></li>
+<li><a class="reference internal" href="#interroger-le-journal-sur-les-ports-serie">Interroger le journal sur les ports série</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="kicad.html" title="Chapitre précédent">Kicad</a></li>
-      <li>Next: <a href="MAC_OS.html" title="Chapitre suivant">MAC OS</a></li>
-  </ul></li>
-</ul>
-</div>
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="kicad.html"
+                        title="Chapitre précédent">Kicad</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="MAC_OS.html"
+                        title="Chapitre suivant">MAC OS</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Linux.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
     <div class="searchformwrapper">
@@ -1390,20 +1432,24 @@ existant par au moins une ligne vide (hors commentaire)a</li>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2017, Poltergeist42.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.7</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
-      
-      |
-      <a href="_sources/Linux.rst.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="MAC_OS.html" title="MAC OS"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="kicad.html" title="Kicad"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Poltergeist42.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.7.
+    </div>
   </body>
 </html>
