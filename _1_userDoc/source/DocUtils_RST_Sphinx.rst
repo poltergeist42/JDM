@@ -338,3 +338,21 @@ Utiliser Sphinx pour traité les donnes de Doxygen
 :Liens_Web:
         * http://breathe.readthedocs.io/en/latest/
             # Breathe permet de transformer le XML générer par Doxygen en un contenu exploitable par Sphinx
+
+
+------------------------------------------------------------------------------------------
+
+Modification de thèmes dans Sphinx
+==================================
+
+:Liens_Web:
+            * http://www.sphinx-doc.org/en/master/theming.html
+                # Doc officiel de Sphinx concernant le changement de thèmes
+
+
+Installer le pack de thèmes pour Sphinx
+---------------------------------------
+
+    ::
+
+        pip install sphinxjp.themes.dotted
