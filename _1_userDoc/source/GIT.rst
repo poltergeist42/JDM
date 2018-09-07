@@ -139,8 +139,9 @@ appliquer le contenu d'une branch dans la branch courante (faire un merge)
             git checkout [branch cible]
                 # ex : git checkout master
         
-    #. lancer la commande "merge" en prenant comme argument la branch a appliquer
+    #. Lancer la commande "merge" en prenant comme argument la branch a appliquer
         ::
+
             git merge [branch_a_appliquer]
                 # ex : git merge dev
                     
@@ -149,7 +150,7 @@ appliquer le contenu d'une branch dans la branch courante (faire un merge)
 supprimer des éléments
 ======================
  
-    #. supprimer un fichier du repository (de l'index, mais pas du dossier de travail)
+    #. Supprimer un fichier du repository (de l'index, mais pas du dossier de travail)
        
         ::
         

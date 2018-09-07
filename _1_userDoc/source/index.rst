@@ -24,9 +24,10 @@ Mon journal de manip
    Informatique
    Javascript
    kicad
+   Latex
    Linux
    MAC_OS
-   Latex
+   Machine_learning
    Powershell
    Python
    Raspberry
