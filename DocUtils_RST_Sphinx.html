@@ -14,6 +14,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="ESP8266" href="ESP8266.html" />
@@ -153,6 +154,13 @@ des formules :</p>
 <li>La formule est intégrée dans une ligne (inline)</li>
 </ul>
 </div></blockquote>
+<div class="section" id="utilisation-de-la-directive-math-dans-sphinx">
+<h5>Utilisation de la directive “math” dans Sphinx<a class="headerlink" href="#utilisation-de-la-directive-math-dans-sphinx" title="Lien permanent vers ce titre">¶</a></h5>
+<p>Dans “<strong>conf.py</strong>”, il faut ajouter un éléments dans “<strong>extensions</strong>” :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinx.ext.mathjax&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="equation-sur-une-seule-ligne">
 <h5>Équation sur une seule ligne<a class="headerlink" href="#equation-sur-une-seule-ligne" title="Lien permanent vers ce titre">¶</a></h5>
 <blockquote>
@@ -166,6 +174,8 @@ des formules :</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Aperçu:</th><td class="field-body"><p class="first">Penser à sauter une ligne vide avant la directive et après la formule</p>
+<div class="last math notranslate nohighlight">
+\[\frac{ \sum_{t=0}^{N}f(t,k) }{N}\]</div>
 </td>
 </tr>
 </tbody>
@@ -183,7 +193,7 @@ des formules :</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Aperçu:</th><td class="field-body"><p class="first">La formule doit être entourée par «&nbsp;`&nbsp;» (ALTgr-7)</p>
-<p class="last">Voici une super équation : </p>
+<p class="last">Voici une super équation : <span class="math notranslate nohighlight">\(\frac{ \sum_{t=0}^{N}f(t,k) }{N}\)</span></p>
 </td>
 </tr>
 </tbody>
@@ -623,6 +633,7 @@ ne devrait y avoir que la branch <strong>“master”</strong></p>
 <li><a class="reference internal" href="#inserez-du-code-html">Insérez du code html</a></li>
 <li><a class="reference internal" href="#inserer-une-image">Insérer une image</a></li>
 <li><a class="reference internal" href="#inserer-des-formules-mathematiques">Insérer des formules mathématiques</a><ul>
+<li><a class="reference internal" href="#utilisation-de-la-directive-math-dans-sphinx">Utilisation de la directive “math” dans Sphinx</a></li>
 <li><a class="reference internal" href="#equation-sur-une-seule-ligne">Équation sur une seule ligne</a></li>
 <li><a class="reference internal" href="#equation-integree-dans-la-ligne">Équation intégrée dans la ligne</a></li>
 </ul>
@@ -697,7 +708,7 @@ ne devrait y avoir que la branch <strong>“master”</strong></p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.7.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.9.
     </div>
   </body>
 </html>
