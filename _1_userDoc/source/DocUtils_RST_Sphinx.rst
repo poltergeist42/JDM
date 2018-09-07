@@ -79,6 +79,13 @@ des formules :
 
     * La formule est intégrée dans une ligne (inline)
 
+Utilisation de la directive 'math' dans Sphinx
+++++++++++++++++++++++++++++++++++++++++++++++
+
+Dans '**conf.py**', il faut ajouter un éléments dans '**extensions**' : ::
+
+    extensions = ['sphinx.ext.mathjax']
+
 Équation sur une seule ligne
 ++++++++++++++++++++++++++++
 
