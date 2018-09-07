@@ -2,16 +2,18 @@
 DocUtils ; reStructuredText (.rst) ; Sphinx
 ===========================================
 
+--------
 DocUtils
-========
+--------
 
 :Liens WEB:
             * http://docutils.sourceforge.net/
             
-------------------------------------------------------------------------------------------
+####
 
+-----------------------
 reStructuredText (.rst)
-=======================
+-----------------------
 
 :Liens WEB:
         * http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
@@ -42,10 +44,72 @@ reStructuredText (.rst)
         * http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
             # Syntaxe avancée
 
-------------------------------------------------------------------------------------------
+Directives
+==========
 
+Insérez du code html
+--------------------
+    ::
+
+        .. raw:: html
+
+           <br/>
+           # Attention, il faut sauter une ligne entre 'raw' et le code html
+
+Insérer une image
+-----------------
+    ::
+
+        .. image:: [chemin/vers/une/image]
+           :align: center
+
+        ex:
+        .. image:: ./Images/monImage.jpg
+           :align: center
+
+        # Important : les chemins doivent être renseigné avec des '/' même sous windows
+
+Insérer des formules mathématiques
+----------------------------------
+
+Les formules mathématiques doivent respecter la syntax **LaTeX**. Il y a 2 types d'insertion 
+des formules :
+
+    * La formule occupe une ligne pour elle toute seule
+
+    * La formule est intégrée dans une ligne (inline)
+
+Équation sur une seule ligne
+++++++++++++++++++++++++++++
+
+    ::
+
+        .. math::
+
+          \frac{ \sum_{t=0}^{N}f(t,k) }{N}
+
+    :Aperçu:    Penser à sauter une ligne vide avant la directive et après la formule
+
+                .. math::
+
+                  \frac{ \sum_{t=0}^{N}f(t,k) }{N}
+
+Équation intégrée dans la ligne
++++++++++++++++++++++++++++++++
+
+    ::
+
+        blablabla :math:`\frac{ \sum_{t=0}^{N}f(t,k) }{N}` encore du blablabla
+
+    :Aperçu:    La formule doit être entourée par "\`" (ALTgr-7)
+
+                Voici une super équation : :math:`\frac{ \sum_{t=0}^{N}f(t,k) }{N}`
+
+####
+
+------
 Sphinx
-======
+------
 
 :Liens WEB:
         * http://www.sphinx-doc.org/en/stable/tutorial.html
@@ -54,7 +118,7 @@ Sphinx
             # un petit cookbook sur la configuration
     
 Installer Sphinx
-----------------
+================
     ::
     
         pip install sphinx
@@ -65,11 +129,9 @@ Démarrage et initialisation rapide
     
         sphinx-quickstart
         
-------------------------------------------------------------------------------------------
 
 Rédiger et publier de la doc avec Sphinx sur GitHub-pages
 =========================================================
-
 
 :Liens WEB :
         * https://daler.github.io/sphinxdoc-test/includeme.html
@@ -306,41 +368,12 @@ Préparation de l'arborescence
             - Une nouvelle vérification des branch locale devrait nous indiquer qu'il y a
               2 branch et que nous sommes sur la branch **'gh-pages'**
 
-------------------------------------------------------------------------------------------
-
-Directives
-==========
-
-    #. Insérez du code html ::
-
-        .. raw:: html
-
-           <br/>
-           # Attention, il faut sauter une ligne entre 'raw' et le code html
-
-    #. Insérer une image ::
-
-        .. image:: [chemin/vers/une/image]
-           :align: center
-
-        ex:
-        .. image:: ./Images/monImage.jpg
-           :align: center
-
-        # Important : les chemins doivent être renseigné avec des '/' même sous windows
-
-
-------------------------------------------------------------------------------------------
-
 Utiliser Sphinx pour traité les donnes de Doxygen
 =================================================
 
 :Liens_Web:
         * http://breathe.readthedocs.io/en/latest/
             # Breathe permet de transformer le XML générer par Doxygen en un contenu exploitable par Sphinx
-
-
-------------------------------------------------------------------------------------------
 
 Modification de thèmes dans Sphinx
 ==================================

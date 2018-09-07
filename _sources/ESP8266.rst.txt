@@ -54,7 +54,7 @@ la seul qui ai fonctionné. il permet de flasher un ESP8266 à l'aide d'un `FTDI
 MAJ du Firmware
 ---------------
 
-:Liens_Web:
+    :Liens_Web:
             * https://github.com/espressif/esptool
                 # Toolbox permettant de falsher le Firmware
 
@@ -76,7 +76,7 @@ MAJ du Firmware
         Par défaut le firmware installer dans le NodeMCU est en LUA. Il est possible de mettre
         un firmaware MicroPython.
 
-        **N.B:** La progrmmation de l'ESP depuis l'IDE Arduino écrase le firmware présent dans 
+        **N.B:** La programmation de l'ESP depuis l'IDE Arduino écrase le firmware présent dans 
              l'ESP pour mettre le siens à la place.
 
         #. Firmware original (LUA)
@@ -95,7 +95,7 @@ MAJ du Firmware
                 * https://www.fais-le-toi-meme.fr/fr/electronique/tutoriel/programmes-arduino-executes-sur-esp8266-arduino-ide
                     # Page (FR) expliquant comment configurer l'IDE Arduino pour pouvoir programmer l'ESP
 
-    # Deployer un nouveau Firmware
+    #. Déployer un nouveau Firmware
 
         :Liens_Web:
             * http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html
@@ -185,7 +185,7 @@ spécifiques applicable à MicroPython et à LESP8266.
 Conclusion sur MicroPython et l'ESP8266
 ---------------------------------------
 
-    L'ESP8266 est une bestiole sympa qui mérite d'être utilisée. Malheuresement MicroPython est trop
+    L'ESP8266 est une bestiole sympa qui mérite d'être utilisée. Malheureusement MicroPython est trop
     limité et trop restrictif. Cela pénalise l'ESP. Pour utiliser l'ESP de façon avancée,
     **il est conseillé de l'utiliser au travers de l'IDE ARDUINO**.
 

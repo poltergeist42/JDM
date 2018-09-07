@@ -115,6 +115,83 @@ les fichiers «&nbsp;.rst&nbsp;» en page Web</dd>
 </tr>
 </tbody>
 </table>
+<div class="section" id="directives">
+<h3>Directives<a class="headerlink" href="#directives" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="inserez-du-code-html">
+<h4>Insérez du code html<a class="headerlink" href="#inserez-du-code-html" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
+
+   <span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span>
+   <span class="c1"># Attention, il faut sauter une ligne entre &#39;raw&#39; et le code html</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="inserer-une-image">
+<h4>Insérer une image<a class="headerlink" href="#inserer-une-image" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="p">[</span><span class="n">chemin</span><span class="o">/</span><span class="n">vers</span><span class="o">/</span><span class="n">une</span><span class="o">/</span><span class="n">image</span><span class="p">]</span>
+   <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">./</span><span class="n">Images</span><span class="o">/</span><span class="n">monImage</span><span class="o">.</span><span class="n">jpg</span>
+   <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+
+<span class="c1"># Important : les chemins doivent être renseigné avec des &#39;/&#39; même sous windows</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="inserer-des-formules-mathematiques">
+<h4>Insérer des formules mathématiques<a class="headerlink" href="#inserer-des-formules-mathematiques" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Les formules mathématiques doivent respecter la syntax <strong>LaTeX</strong>. Il y a 2 types d’insertion
+des formules :</p>
+<blockquote>
+<div><ul class="simple">
+<li>La formule occupe une ligne pour elle toute seule</li>
+<li>La formule est intégrée dans une ligne (inline)</li>
+</ul>
+</div></blockquote>
+<div class="section" id="equation-sur-une-seule-ligne">
+<h5>Équation sur une seule ligne<a class="headerlink" href="#equation-sur-une-seule-ligne" title="Lien permanent vers ce titre">¶</a></h5>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">math</span><span class="p">::</span>
+
+  \<span class="n">frac</span><span class="p">{</span> \<span class="n">sum_</span><span class="p">{</span><span class="n">t</span><span class="o">=</span><span class="mi">0</span><span class="p">}</span><span class="o">^</span><span class="p">{</span><span class="n">N</span><span class="p">}</span><span class="n">f</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">k</span><span class="p">)</span> <span class="p">}{</span><span class="n">N</span><span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Aperçu:</th><td class="field-body"><p class="first">Penser à sauter une ligne vide avant la directive et après la formule</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="equation-integree-dans-la-ligne">
+<h5>Équation intégrée dans la ligne<a class="headerlink" href="#equation-integree-dans-la-ligne" title="Lien permanent vers ce titre">¶</a></h5>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>blablabla :math:`\frac{ \sum_{t=0}^{N}f(t,k) }{N}` encore du blablabla
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Aperçu:</th><td class="field-body"><p class="first">La formule doit être entourée par «&nbsp;`&nbsp;» (ALTgr-7)</p>
+<p class="last">Voici une super équation : </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="sphinx">
@@ -142,9 +219,8 @@ les fichiers «&nbsp;.rst&nbsp;» en page Web</dd>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
 <div class="section" id="demarrage-et-initialisation-rapide">
-<h3>Démarrage et initialisation rapide<a class="headerlink" href="#demarrage-et-initialisation-rapide" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Démarrage et initialisation rapide<a class="headerlink" href="#demarrage-et-initialisation-rapide" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
 </pre></div>
@@ -152,9 +228,8 @@ les fichiers «&nbsp;.rst&nbsp;» en page Web</dd>
 </div></blockquote>
 </div>
 </div>
-<hr class="docutils" />
 <div class="section" id="rediger-et-publier-de-la-doc-avec-sphinx-sur-github-pages">
-<h2>Rédiger et publier de la doc avec Sphinx sur GitHub-pages<a class="headerlink" href="#rediger-et-publier-de-la-doc-avec-sphinx-sur-github-pages" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Rédiger et publier de la doc avec Sphinx sur GitHub-pages<a class="headerlink" href="#rediger-et-publier-de-la-doc-avec-sphinx-sur-github-pages" title="Lien permanent vers ce titre">¶</a></h3>
 <dl class="docutils">
 <dt>:Liens WEB :</dt>
 <dd><ul class="first last simple">
@@ -163,7 +238,7 @@ les fichiers «&nbsp;.rst&nbsp;» en page Web</dd>
 </dd>
 </dl>
 <div class="section" id="preparation-de-l-arborescence">
-<h3>Préparation de l’arborescence<a class="headerlink" href="#preparation-de-l-arborescence" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Préparation de l’arborescence<a class="headerlink" href="#preparation-de-l-arborescence" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Création de 2 sous dossier à la racine du projet</p>
@@ -486,37 +561,8 @@ ne devrait y avoir que la branch <strong>“master”</strong></p>
 </div></blockquote>
 </div>
 </div>
-<hr class="docutils" />
-<div class="section" id="directives">
-<h2>Directives<a class="headerlink" href="#directives" title="Lien permanent vers ce titre">¶</a></h2>
-<blockquote>
-<div><ol class="arabic">
-<li><p class="first">Insérez du code html</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
-
-   <span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span>
-   <span class="c1"># Attention, il faut sauter une ligne entre &#39;raw&#39; et le code html</span>
-</pre></div>
-</div>
-</li>
-<li><p class="first">Insérer une image</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="p">[</span><span class="n">chemin</span><span class="o">/</span><span class="n">vers</span><span class="o">/</span><span class="n">une</span><span class="o">/</span><span class="n">image</span><span class="p">]</span>
-   <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
-
-<span class="n">ex</span><span class="p">:</span>
-<span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">./</span><span class="n">Images</span><span class="o">/</span><span class="n">monImage</span><span class="o">.</span><span class="n">jpg</span>
-   <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
-
-<span class="c1"># Important : les chemins doivent être renseigné avec des &#39;/&#39; même sous windows</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</div></blockquote>
-</div>
-<hr class="docutils" />
 <div class="section" id="utiliser-sphinx-pour-traite-les-donnes-de-doxygen">
-<h2>Utiliser Sphinx pour traité les donnes de Doxygen<a class="headerlink" href="#utiliser-sphinx-pour-traite-les-donnes-de-doxygen" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Utiliser Sphinx pour traité les donnes de Doxygen<a class="headerlink" href="#utiliser-sphinx-pour-traite-les-donnes-de-doxygen" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -533,9 +579,8 @@ ne devrait y avoir que la branch <strong>“master”</strong></p>
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
 <div class="section" id="modification-de-themes-dans-sphinx">
-<h2>Modification de thèmes dans Sphinx<a class="headerlink" href="#modification-de-themes-dans-sphinx" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Modification de thèmes dans Sphinx<a class="headerlink" href="#modification-de-themes-dans-sphinx" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -552,12 +597,13 @@ ne devrait y avoir que la branch <strong>“master”</strong></p>
 </tbody>
 </table>
 <div class="section" id="installer-le-pack-de-themes-pour-sphinx">
-<h3>Installer le pack de thèmes pour Sphinx<a class="headerlink" href="#installer-le-pack-de-themes-pour-sphinx" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Installer le pack de thèmes pour Sphinx<a class="headerlink" href="#installer-le-pack-de-themes-pour-sphinx" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxjp</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">dotted</span>
 </pre></div>
 </div>
 </div></blockquote>
+</div>
 </div>
 </div>
 </div>
@@ -572,9 +618,21 @@ ne devrait y avoir que la branch <strong>“master”</strong></p>
   <ul>
 <li><a class="reference internal" href="#">DocUtils ; reStructuredText (.rst) ; Sphinx</a><ul>
 <li><a class="reference internal" href="#docutils">DocUtils</a></li>
-<li><a class="reference internal" href="#restructuredtext-rst">reStructuredText (.rst)</a></li>
+<li><a class="reference internal" href="#restructuredtext-rst">reStructuredText (.rst)</a><ul>
+<li><a class="reference internal" href="#directives">Directives</a><ul>
+<li><a class="reference internal" href="#inserez-du-code-html">Insérez du code html</a></li>
+<li><a class="reference internal" href="#inserer-une-image">Insérer une image</a></li>
+<li><a class="reference internal" href="#inserer-des-formules-mathematiques">Insérer des formules mathématiques</a><ul>
+<li><a class="reference internal" href="#equation-sur-une-seule-ligne">Équation sur une seule ligne</a></li>
+<li><a class="reference internal" href="#equation-integree-dans-la-ligne">Équation intégrée dans la ligne</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#sphinx">Sphinx</a><ul>
-<li><a class="reference internal" href="#installer-sphinx">Installer Sphinx</a></li>
+<li><a class="reference internal" href="#installer-sphinx">Installer Sphinx</a><ul>
 <li><a class="reference internal" href="#demarrage-et-initialisation-rapide">Démarrage et initialisation rapide</a></li>
 </ul>
 </li>
@@ -582,10 +640,11 @@ ne devrait y avoir que la branch <strong>“master”</strong></p>
 <li><a class="reference internal" href="#preparation-de-l-arborescence">Préparation de l’arborescence</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#directives">Directives</a></li>
 <li><a class="reference internal" href="#utiliser-sphinx-pour-traite-les-donnes-de-doxygen">Utiliser Sphinx pour traité les donnes de Doxygen</a></li>
 <li><a class="reference internal" href="#modification-de-themes-dans-sphinx">Modification de thèmes dans Sphinx</a><ul>
 <li><a class="reference internal" href="#installer-le-pack-de-themes-pour-sphinx">Installer le pack de thèmes pour Sphinx</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
