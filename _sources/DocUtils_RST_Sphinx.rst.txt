@@ -72,6 +72,13 @@ Insérer une image
 Insérer des formules mathématiques
 ----------------------------------
 
+    :Liens_Web:
+                * https://fr.wikibooks.org/wiki/LaTeX/%C3%89crire_des_math%C3%A9matiques
+                    # Convention mathématiques utilisées en LaTeX
+                    
+                * https://fr.wikipedia.org/wiki/Table_de_symboles_math%C3%A9matiques
+                    # Ensemble des symboles mathématiques, le code unicode et la syntaxe LaTeX
+
 Les formules mathématiques doivent respecter la syntax **LaTeX**. Il y a 2 types d'insertion 
 des formules :
 
