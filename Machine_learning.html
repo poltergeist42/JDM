@@ -74,7 +74,8 @@
 (compris entre 0 et 1). Plus cette valeur est proche de 0, plus ont s’éloigne du résultat
 et / ou de la solution.</li>
 <li>V : La valeur d’un certain état</li>
-<li>P - Processus de Décision Markovien (MDP) : Moyenne de la somme des états possibles (s”)</li>
+<li>P - Processus de Décision Markovien (MDP) : Moyenne de la somme des états possibles (s”). Il
+s’agit de l’introduction d’un facteur aléatoire dans un environnement déterministe.</li>
 </ul>
 </div></blockquote>
 <div class="section" id="equation-simplifiee">
@@ -83,7 +84,7 @@ et / ou de la solution.</li>
 aléatoires (<a class="reference external" href="https://fr.wikipedia.org/wiki/Stochastique">Stochastique</a>).</p>
 <blockquote>
 <div><div class="math notranslate nohighlight">
-\[V(s) = \underset {a} {max}(R(s, a) + \gamma V(s'))\]</div>
+\[V(s) = \underset {a} {max} \left (R(s, a) + \gamma V(s') \right)\]</div>
 </div></blockquote>
 </div>
 </div>
@@ -105,6 +106,11 @@ aléatoires (<a class="reference external" href="https://fr.wikipedia.org/wiki/S
 <dd># Définition Wikipédia</dd>
 </dl>
 </li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://fr.wikipedia.org/wiki/Processus_de_Markov">https://fr.wikipedia.org/wiki/Processus_de_Markov</a></dt>
+<dd># Définition Wikipédia</dd>
+</dl>
+</li>
 </ul>
 </td>
 </tr>
@@ -115,10 +121,11 @@ aléatoires (<a class="reference external" href="https://fr.wikipedia.org/wiki/S
 <h4>Equation de Belman augmentée du MDP<a class="headerlink" href="#equation-de-belman-augmentee-du-mdp" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
-<li>TODO: revoir la vidéo 9.</li>
+<li><strong>Le processus de Markov</strong> : Il va définir la façon dont l’environnement est construit.</li>
+<li><strong>Le MDP</strong> : Il va décrire la façon dont l’agent prend une décision.</li>
 </ul>
 <div class="math notranslate nohighlight">
-\[V(s) = \underset {a} {max} \left (R(s, a) + \gamma \sum P(s, a, s')V(s') \right)\]</div>
+\[V(s) = \underset {a} {max} \left (R(s, a) + \gamma \underset {s'} {\sum} P(s, a, s')V(s') \right)\]</div>
 </div></blockquote>
 </div>
 </div>
