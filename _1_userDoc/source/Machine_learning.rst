@@ -31,7 +31,8 @@ Concept / définission
 
     * V : La valeur d'un certain état
 
-    * P - Processus de Décision Markovien (MDP) : Moyenne de la somme des états possibles (s')
+    * P - Processus de Décision Markovien (MDP) : Moyenne de la somme des états possibles (s\'). Il
+      s'agit de l'introduction d'un facteur aléatoire dans un environnement déterministe.
 
 Equation simplifiée
 -------------------
@@ -41,7 +42,7 @@ aléatoires (`Stochastique <https://fr.wikipedia.org/wiki/Stochastique>`_).
 
     .. math::
 
-       V(s) = \underset {a} {max}(R(s, a) + \gamma V(s'))
+       V(s) = \underset {a} {max} \left (R(s, a) + \gamma V(s') \right)
 
 Chaine de Markov et Processus de Décision Markovien (MDP)
 =========================================================
@@ -53,13 +54,18 @@ Chaine de Markov et Processus de Décision Markovien (MDP)
                 * https://fr.wikipedia.org/wiki/Processus_stochastique
                     # Définition Wikipédia
 
+                * https://fr.wikipedia.org/wiki/Processus_de_Markov
+                    # Définition Wikipédia
+
 
 
 Equation de Belman augmentée du MDP
 -----------------------------------
 
-    * TODO: revoir la vidéo 9.
+    * **Le processus de Markov** : Il va définir la façon dont l'environnement est construit.
+
+    * **Le MDP** : Il va décrire la façon dont l'agent prend une décision.
 
     .. math::
 
-       V(s) = \underset {a} {max} \left (R(s, a) + \gamma \sum P(s, a, s')V(s') \right)
+       V(s) = \underset {a} {max} \left (R(s, a) + \gamma \underset {s'} {\sum} P(s, a, s')V(s') \right)
