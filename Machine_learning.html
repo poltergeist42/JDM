@@ -74,8 +74,6 @@
 (compris entre 0 et 1). Plus cette valeur est proche de 0, plus ont s’éloigne du résultat
 et / ou de la solution.</li>
 <li>V : La valeur d’un certain état</li>
-<li>P - Processus de Décision Markovien (MDP) : Moyenne de la somme des états possibles (s”). Il
-s’agit de l’introduction d’un facteur aléatoire dans un environnement déterministe.</li>
 </ul>
 </div></blockquote>
 <div class="section" id="equation-simplifiee">
@@ -95,7 +93,7 @@ aléatoires (<a class="reference external" href="https://fr.wikipedia.org/wiki/S
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://pdfs.semanticscholar.org/968b/ab782e52faf0f7957ca0f38b9e9078454afe.pdf">https://pdfs.semanticscholar.org/968b/ab782e52faf0f7957ca0f38b9e9078454afe.pdf</a></dt>
 <dd># Martijn van Otterlo, 2009, Markov Decision Processes: Concepts and Algorithms</dd>
@@ -114,6 +112,13 @@ aléatoires (<a class="reference external" href="https://fr.wikipedia.org/wiki/S
 </ul>
 </td>
 </tr>
+<tr class="field-even field"><th class="field-name">Définissions:</th><td class="field-body"><ul class="first last simple">
+<li>P - Processus de Décision Markovien (MDP) : Moyenne de la somme des états
+possibles (s”). Il s’agit de l’introduction d’un facteur aléatoire dans un
+environnement déterministe.</li>
+</ul>
+</td>
+</tr>
 </tbody>
 </table>
 </div></blockquote>
@@ -128,6 +133,63 @@ aléatoires (<a class="reference external" href="https://fr.wikipedia.org/wiki/S
 \[V(s) = \underset {a} {max} \left (R(s, a) + \gamma \underset {s'} {\sum} P(s, a, s')V(s') \right)\]</div>
 </div></blockquote>
 </div>
+</div>
+<div class="section" id="q-learning-intuittion">
+<h3>Q-Learning : Intuittion<a class="headerlink" href="#q-learning-intuittion" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Définissions:</th><td class="field-body"><ul class="first last simple">
+<li>Q - Qualité : définit la qualité de l’action à venir <span class="math notranslate nohighlight">\(Q(s, a)\)</span> par opposition à “V”,
+qui définit la valeur de l’état <span class="math notranslate nohighlight">\(V(s)\)</span>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="definission-de-l-equation-de-bellman-en-q-learning">
+<h4>Définission de l’équation de Bellman en Q-Learning<a class="headerlink" href="#definission-de-l-equation-de-bellman-en-q-learning" title="Lien permanent vers ce titre">¶</a></h4>
+<p>On peut définir que :math: <cite>V(s)</cite> considère la meileure action possible. Par opposition, avec
+:math: <cite>Q(s, a)</cite> on calcule une valeur pour chaque action, qu’elle soit la meilleure ou non.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Définission de base</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[Q(s, a) = R(s, a) + \gamma \underset {s'} {\sum} P(s, a, s')V(s')\]</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<p>On constate que l’équation correspond à ce qui est contenu entre les parenthèses dans l’équation
+de Bellman.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Définission de l’équation en mode récursif (avec :math: <cite>V(s”)</cite> remplacer par :math: <cite>Q(s”, a”)</cite>)</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[Q(s, a) = R(s, a) + \gamma \underset {s'} {\sum} \left (P(s, a, s') \underset {a} {max} Q(s', a') \right)\]</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="difference-temporelle">
+<h3>Différence temporelle<a class="headerlink" href="#difference-temporelle" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">À faire</p>
+<ul class="last simple">
+<li>revoir la Vidéo 13</li>
+<li>Déffinir la Différence temporelle</li>
+<li>Définir l’équation de Bellman en intégrant la diférence temporelle</li>
+</ul>
+</div>
+</div></blockquote>
 </div>
 </div>
 </div>
@@ -150,6 +212,11 @@ aléatoires (<a class="reference external" href="https://fr.wikipedia.org/wiki/S
 <li><a class="reference internal" href="#equation-de-belman-augmentee-du-mdp">Equation de Belman augmentée du MDP</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#q-learning-intuittion">Q-Learning : Intuittion</a><ul>
+<li><a class="reference internal" href="#definission-de-l-equation-de-bellman-en-q-learning">Définission de l’équation de Bellman en Q-Learning</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#difference-temporelle">Différence temporelle</a></li>
 </ul>
 </li>
 </ul>

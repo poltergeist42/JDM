@@ -144,6 +144,57 @@ les fichiers «&nbsp;.rst&nbsp;» en page Web</dd>
 </div>
 </div></blockquote>
 </div>
+<div class="section" id="directive-todo">
+<h4>Directive TODO<a class="headerlink" href="#directive-todo" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/extensions/todo.html">http://www.sphinx-doc.org/en/master/usage/extensions/todo.html</a></dt>
+<dd># Doc Sphinx</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">todo</span><span class="p">::</span>
+
+   <span class="n">blablabla</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>N.B</strong> : il existe la directive «&nbsp;.. todolist::&nbsp;», mais elle ne semble pas / plus fonctionner.
+Préférez la directive «&nbsp;.. todo::&nbsp;» sous forme de liste commençant avec des puces.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">todo</span><span class="p">::</span>
+
+   <span class="o">*</span> <span class="n">bla</span>
+
+   <span class="o">*</span> <span class="n">ble</span>
+
+   <span class="o">*</span> <span class="n">bli</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="section" id="utiliser-la-directive-todo-avec-sphinx">
+<h5>Utiliser la directive TODO avec Sphinx<a class="headerlink" href="#utiliser-la-directive-todo-avec-sphinx" title="Lien permanent vers ce titre">¶</a></h5>
+<p>Dans “conf.py” :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinx.ext.todo&#39;</span><span class="p">]</span>
+
+<span class="o">...</span>
+
+<span class="n">todo_include_todos</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="inserer-des-formules-mathematiques">
 <h4>Insérer des formules mathématiques<a class="headerlink" href="#inserer-des-formules-mathematiques" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
@@ -654,6 +705,10 @@ ne devrait y avoir que la branch <strong>“master”</strong></p>
 <li><a class="reference internal" href="#directives">Directives</a><ul>
 <li><a class="reference internal" href="#inserez-du-code-html">Insérez du code html</a></li>
 <li><a class="reference internal" href="#inserer-une-image">Insérer une image</a></li>
+<li><a class="reference internal" href="#directive-todo">Directive TODO</a><ul>
+<li><a class="reference internal" href="#utiliser-la-directive-todo-avec-sphinx">Utiliser la directive TODO avec Sphinx</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#inserer-des-formules-mathematiques">Insérer des formules mathématiques</a><ul>
 <li><a class="reference internal" href="#utilisation-de-la-directive-math-dans-sphinx">Utilisation de la directive “math” dans Sphinx</a></li>
 <li><a class="reference internal" href="#equation-sur-une-seule-ligne">Équation sur une seule ligne</a></li>
