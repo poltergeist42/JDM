@@ -69,6 +69,46 @@ Insérer une image
 
         # Important : les chemins doivent être renseigné avec des '/' même sous windows
 
+Directive TODO
+--------------
+
+    :Liens_Web:
+                * http://www.sphinx-doc.org/en/master/usage/extensions/todo.html
+                    # Doc Sphinx
+
+    ::
+
+        .. todo::
+
+           blablabla
+
+**N.B** : il existe la directive ".. todolist::", mais elle ne semble pas / plus fonctionner. 
+Préférez la directive ".. todo::" sous forme de liste commençant avec des puces.
+
+    ::
+
+        ex:
+
+        .. todo::
+
+           * bla
+
+           * ble
+
+           * bli
+
+Utiliser la directive TODO avec Sphinx
+++++++++++++++++++++++++++++++++++++++
+
+Dans 'conf.py' : ::
+
+    extensions = ['sphinx.ext.todo']
+
+    ...
+
+    todo_include_todos = True
+
+
 Insérer des formules mathématiques
 ----------------------------------
 

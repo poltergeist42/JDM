@@ -31,9 +31,6 @@ Concept / définission
 
     * V : La valeur d'un certain état
 
-    * P - Processus de Décision Markovien (MDP) : Moyenne de la somme des états possibles (s\'). Il
-      s'agit de l'introduction d'un facteur aléatoire dans un environnement déterministe.
-
 Equation simplifiée
 -------------------
 
@@ -57,7 +54,10 @@ Chaine de Markov et Processus de Décision Markovien (MDP)
                 * https://fr.wikipedia.org/wiki/Processus_de_Markov
                     # Définition Wikipédia
 
-
+    :Définissions:
+                * P - Processus de Décision Markovien (MDP) : Moyenne de la somme des états
+                  possibles (s\'). Il s'agit de l'introduction d'un facteur aléatoire dans un 
+                  environnement déterministe.
 
 Equation de Belman augmentée du MDP
 -----------------------------------
@@ -69,3 +69,43 @@ Equation de Belman augmentée du MDP
     .. math::
 
        V(s) = \underset {a} {max} \left (R(s, a) + \gamma \underset {s'} {\sum} P(s, a, s')V(s') \right)
+
+Q-Learning : Intuittion
+=======================
+
+    :Définissions:
+
+                * Q - Qualité : définit la qualité de l'action à venir :math:`Q(s, a)` par opposition à 'V',
+                  qui définit la valeur de l'état :math:`V(s)`.
+
+Définission de l'équation de Bellman en Q-Learning
+--------------------------------------------------
+
+On peut définir que :math: `V(s)` considère la meileure action possible. Par opposition, avec
+:math: `Q(s, a)` on calcule une valeur pour chaque action, qu'elle soit la meilleure ou non.
+
+    #. Définission de base
+
+            .. math::
+
+               Q(s, a) = R(s, a) + \gamma \underset {s'} {\sum} P(s, a, s')V(s')
+
+
+On constate que l'équation correspond à ce qui est contenu entre les parenthèses dans l'équation
+de Bellman.
+
+    #. Définission de l'équation en mode récursif (avec :math: `V(s')` remplacer par :math: `Q(s', a')`)
+
+            .. math::
+
+               Q(s, a) = R(s, a) + \gamma \underset {s'} {\sum} \left (P(s, a, s') \underset {a} {max} Q(s', a') \right)
+
+Différence temporelle
+=====================
+
+    .. todo::
+       * revoir la Vidéo 13
+
+       * Déffinir la Différence temporelle
+
+       * Définir l'équation de Bellman en intégrant la diférence temporelle
