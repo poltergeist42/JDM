@@ -41,6 +41,34 @@ aléatoires (`Stochastique <https://fr.wikipedia.org/wiki/Stochastique>`_).
 
        V(s) = \underset {a} {max} \left (R(s, a) + \gamma V(s') \right)
 
+Pénalité de vie
+===============
+
+La pénalité est une valeur négative (à définir soit même) affectée à chaque action. Cela permet de 
+forcer l'IA à trouver une solution le plus vite possible.
+
+Plus la récompense :math:`R` est proche de 0, moins le risque pris par l'IA sont important. Plus la
+récompense :math:`R` est éloigné, plus les risques pris part l'IA seront important.
+
+Il faut trouver une valeur qui pousse l'IA à trouver une solution tout en ne prenant que des risques
+modérés.
+
+    :Exemples:
+
+        Pour une Récompense Final de 1 si nous affectons une Récompense d'Action de 0, -0.3, -0.5
+        ou -2
+
+            * Si RA=0 : L'IA n'optimisera pas la recherche de solution.
+
+            * Si RA=-0.3 : L'IA optimisera légèrement sa recherche de solution mais aucuns risque
+              ne sera pris dans le choix de l'action.
+
+            * Si RA=-0.5 : l'IA optimisera beaucoup sa recherche de solution, mais ne prendra que 
+              des risques modérés.
+
+            * Si RA=-2 : l'IA prendra tous les risques possibles pour parvenir à une solution le 
+              plus vite possible.
+
 Chaine de Markov et Processus de Décision Markovien (MDP)
 =========================================================
 
@@ -81,10 +109,10 @@ Q-Learning : Intuittion
 Définission de l'équation de Bellman en Q-Learning
 --------------------------------------------------
 
-On peut définir que :math: `V(s)` considère la meileure action possible. Par opposition, avec
+On peut définir que :math:`V(s)` considère la meilleure action possible. Par opposition, avec
 :math: `Q(s, a)` on calcule une valeur pour chaque action, qu'elle soit la meilleure ou non.
 
-    #. Définission de base
+    1. Définition de base
 
             .. math::
 
@@ -94,7 +122,7 @@ On peut définir que :math: `V(s)` considère la meileure action possible. Par o
 On constate que l'équation correspond à ce qui est contenu entre les parenthèses dans l'équation
 de Bellman.
 
-    #. Définission de l'équation en mode récursif (avec :math: `V(s')` remplacer par :math: `Q(s', a')`)
+    2. Définition de l'équation en mode récursif (avec :math:`V(s')` remplacer par :math:`Q(s', a')`)
 
             .. math::
 
