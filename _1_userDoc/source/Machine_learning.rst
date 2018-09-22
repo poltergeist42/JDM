@@ -16,20 +16,20 @@ L'équation de Bellman est à la base de l'apprentissage par renforcement.
 Concept / définission
 =====================
 
-    * s - State (l'état) : Il s'agit de l'état dans lequel l'environnement est.
+    * :math:`s` - State (l'état) : Il s'agit de l'état dans lequel l'environnement est.
 
-    * s' : l'état dans le quel on va arriver
+    * :math:`s'` : l'état dans le quel on va arriver
 
-    * a - Action : Les actions que peut prendre l'agent
+    * :math:`a` - Action : Les actions que peut prendre l'agent
 
-    * R - Reward (Récompense) : Récompense obtenu par l'agent pour rentrez dans un certain état
+    * :math:`R` - Reward (Récompense) : Récompense obtenu par l'agent pour rentrez dans un certain état
       (+1, 0 ou -1)
 
     * :math:`\gamma` (Gamma) - Discount (Réduction): il s'agit du facteur de réduction 
       (compris entre 0 et 1). Plus cette valeur est proche de 0, plus ont s'éloigne du résultat
       et / ou de la solution.
 
-    * V : La valeur d'un certain état
+    * :math:`V` : La valeur d'un certain état
 
 Equation simplifiée
 -------------------
@@ -83,8 +83,8 @@ Chaine de Markov et Processus de Décision Markovien (MDP)
                     # Définition Wikipédia
 
     :Définissions:
-                * P - Processus de Décision Markovien (MDP) : Moyenne de la somme des états
-                  possibles (s\'). Il s'agit de l'introduction d'un facteur aléatoire dans un 
+                * :math:`P` - Processus de Décision Markovien (MDP) : Moyenne de la somme des états
+                  possibles (:math:`s'`). Il s'agit de l'introduction d'un facteur aléatoire dans un 
                   environnement déterministe.
 
 Equation de Belman augmentée du MDP
@@ -103,14 +103,14 @@ Q-Learning : Intuittion
 
     :Définissions:
 
-                * Q - Qualité : définit la qualité de l'action à venir :math:`Q(s, a)` par opposition à 'V',
-                  qui définit la valeur de l'état :math:`V(s)`.
+                * :math:`Q` - Qualité : définit la qualité de l'action à venir :math:`Q(s, a)` par 
+                  opposition à :math:`V` qui définit la valeur de l'état :math:`V(s)`.
 
 Définission de l'équation de Bellman en Q-Learning
 --------------------------------------------------
 
 On peut définir que :math:`V(s)` considère la meilleure action possible. Par opposition, avec
-:math: `Q(s, a)` on calcule une valeur pour chaque action, qu'elle soit la meilleure ou non.
+:math:`Q(s, a)` on calcule une valeur pour chaque action, qu'elle soit la meilleure ou non.
 
 1. Définition de base
 
@@ -162,7 +162,7 @@ Calcul de la Différence temporelle
 
     .. math::
 
-       TD_t (a, s) = \underset {après} {R(s,a) + \gamma \underset {a'} {max} Q(s', a')} - \underset {avant} {Q_{t-1}} (s, a)}
+       TD_t (a, s) = \underset {après} {R(s,a) + \gamma \underset {a'} {max} Q(s', a')} - \underset {avant} {Q_{t-1} (s, a)}
 
 Calcul de la Qualité d'une action avec la correction de la différence temporelle
 --------------------------------------------------------------------------------
@@ -173,7 +173,7 @@ Version condensée :
 
       Q_t (s, a) = Q_{t-1}(s, a) + \alpha TD_t (a, s)
 
-version étendue, avec :math:`TD_t (a, s)` remplacée par son expression :
+Version étendue, avec :math:`TD_t (a, s)` remplacée par son expression :
 
     .. math::
        

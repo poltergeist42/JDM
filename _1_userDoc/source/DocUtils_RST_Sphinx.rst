@@ -120,7 +120,7 @@ Insérer des formules mathématiques
                     # Ensemble des symboles mathématiques, le code unicode et la syntaxe LaTeX
 
                 * https://fr.wikibooks.org/wiki/LaTeX/Math%C3%A9matiques
-                    # Explication simple et complète de l'utilisation des instruction mathématiques en LaTeX
+                    # Explication simple et complète de l'utilisation des instructions mathématiques en LaTeX
 
 Les formules mathématiques doivent respecter la syntax **LaTeX**. Il y a 2 types d'insertion 
 des formules :
