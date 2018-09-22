@@ -65,15 +65,15 @@
 <h3>Concept / définission<a class="headerlink" href="#concept-definission" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li>s - State (l’état) : Il s’agit de l’état dans lequel l’environnement est.</li>
-<li>s” : l’état dans le quel on va arriver</li>
-<li>a - Action : Les actions que peut prendre l’agent</li>
-<li>R - Reward (Récompense) : Récompense obtenu par l’agent pour rentrez dans un certain état
-(+1, 0 ou -1)</li>
+<li><span class="math notranslate nohighlight">\(s\)</span> - State (l’état) : Il s’agit de l’état dans lequel l’environnement est.</li>
+<li><span class="math notranslate nohighlight">\(s'\)</span> : l’état dans le quel on va arriver</li>
+<li><span class="math notranslate nohighlight">\(a\)</span> - Action : Les actions que peut prendre l’agent</li>
+<li><span class="math notranslate nohighlight">\(R\)</span> - Reward (Récompense) : Récompense obtenu par l’agent pour rentrez dans un certain état
+(ex: +1, 0 ou -1)</li>
 <li><span class="math notranslate nohighlight">\(\gamma\)</span> (Gamma) - Discount (Réduction): il s’agit du facteur de réduction
 (compris entre 0 et 1). Plus cette valeur est proche de 0, plus ont s’éloigne du résultat
 et / ou de la solution.</li>
-<li>V : La valeur d’un certain état</li>
+<li><span class="math notranslate nohighlight">\(V\)</span> : La valeur d’un certain état</li>
 </ul>
 </div></blockquote>
 <div class="section" id="equation-simplifiee">
@@ -133,20 +133,20 @@ plus vite possible.</li>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://fr.wikipedia.org/wiki/Processus_stochastique">https://fr.wikipedia.org/wiki/Processus_stochastique</a></dt>
-<dd># Définition Wikipédia</dd>
+<dd># Définition Wikipédia du processus stochastique</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://fr.wikipedia.org/wiki/Processus_de_Markov">https://fr.wikipedia.org/wiki/Processus_de_Markov</a></dt>
-<dd># Définition Wikipédia</dd>
+<dd># Définition Wikipédia du processus de Markov</dd>
 </dl>
 </li>
 </ul>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Définissions:</th><td class="field-body"><ul class="first last simple">
-<li>P - Processus de Décision Markovien (MDP) : Moyenne de la somme des états
-possibles (s”). Il s’agit de l’introduction d’un facteur aléatoire dans un
+<li><span class="math notranslate nohighlight">\(P\)</span> - Processus de Décision Markovien (MDP) : Moyenne de la somme des états
+possibles (<span class="math notranslate nohighlight">\(s'\)</span>). Il s’agit de l’introduction d’un facteur aléatoire dans un
 environnement déterministe.</li>
 </ul>
 </td>
@@ -174,8 +174,8 @@ environnement déterministe.</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Définissions:</th><td class="field-body"><ul class="first last simple">
-<li>Q - Qualité : définit la qualité de l’action à venir <span class="math notranslate nohighlight">\(Q(s, a)\)</span> par opposition à “V”,
-qui définit la valeur de l’état <span class="math notranslate nohighlight">\(V(s)\)</span>.</li>
+<li><span class="math notranslate nohighlight">\(Q\)</span> - Qualité : définit la qualité de l’action à venir <span class="math notranslate nohighlight">\(Q(s, a)\)</span> par
+opposition à <span class="math notranslate nohighlight">\(V\)</span> qui définit la valeur de l’état <span class="math notranslate nohighlight">\(V(s)\)</span>.</li>
 </ul>
 </td>
 </tr>
@@ -185,7 +185,7 @@ qui définit la valeur de l’état <span class="math notranslate nohighlight">\
 <div class="section" id="definission-de-l-equation-de-bellman-en-q-learning">
 <h4>Définission de l’équation de Bellman en Q-Learning<a class="headerlink" href="#definission-de-l-equation-de-bellman-en-q-learning" title="Lien permanent vers ce titre">¶</a></h4>
 <p>On peut définir que <span class="math notranslate nohighlight">\(V(s)\)</span> considère la meilleure action possible. Par opposition, avec
-:math: <cite>Q(s, a)</cite> on calcule une valeur pour chaque action, qu’elle soit la meilleure ou non.</p>
+<span class="math notranslate nohighlight">\(Q(s, a)\)</span> on calcule une valeur pour chaque action, qu’elle soit la meilleure ou non.</p>
 <ol class="arabic">
 <li><p class="first">Définition de base</p>
 <blockquote>
@@ -247,7 +247,7 @@ différence temporelle soit égale à <span class="math notranslate nohighlight"
 <h4>Calcul de la Différence temporelle<a class="headerlink" href="#calcul-de-la-difference-temporelle" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><div class="math notranslate nohighlight">
-\[TD_t (a, s) = \underset {après} {R(s,a) + \gamma \underset {a'} {max} Q(s', a')} - \underset {avant} {Q_{t-1}} (s, a)}\]</div>
+\[TD_t (a, s) = \underset {ap} {R(s,a) + \gamma \underset {a'} {max} Q(s', a')} - \underset {av} {Q_{t-1} (s, a)}\]</div>
 </div></blockquote>
 </div>
 <div class="section" id="calcul-de-la-qualite-d-une-action-avec-la-correction-de-la-difference-temporelle">
@@ -257,7 +257,7 @@ différence temporelle soit égale à <span class="math notranslate nohighlight"
 <div><div class="math notranslate nohighlight">
 \[Q_t (s, a) = Q_{t-1}(s, a) + \alpha TD_t (a, s)\]</div>
 </div></blockquote>
-<p>version étendue, avec <span class="math notranslate nohighlight">\(TD_t (a, s)\)</span> remplacée par son expression :</p>
+<p>Version étendue, avec <span class="math notranslate nohighlight">\(TD_t (a, s)\)</span> remplacée par son expression :</p>
 <blockquote>
 <div><div class="math notranslate nohighlight">
 \[Q_t (s, a) = Q_{t-1}(s, a) + \alpha \left (R(s,a) + \gamma \underset {a'} {max} Q(s', a') - Q_{t-1} (s, a) \right)\]</div>
