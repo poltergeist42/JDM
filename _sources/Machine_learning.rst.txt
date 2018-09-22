@@ -23,7 +23,7 @@ Concept / définission
     * :math:`a` - Action : Les actions que peut prendre l'agent
 
     * :math:`R` - Reward (Récompense) : Récompense obtenu par l'agent pour rentrez dans un certain état
-      (ex: +1, 0 ou -1)
+      (+1, 0 ou -1)
 
     * :math:`\gamma` (Gamma) - Discount (Réduction): il s'agit du facteur de réduction 
       (compris entre 0 et 1). Plus cette valeur est proche de 0, plus ont s'éloigne du résultat
@@ -77,10 +77,10 @@ Chaine de Markov et Processus de Décision Markovien (MDP)
                     # Martijn van Otterlo, 2009, Markov Decision Processes: Concepts and Algorithms
 
                 * https://fr.wikipedia.org/wiki/Processus_stochastique
-                    # Définition Wikipédia du processus stochastique
+                    # Définition Wikipédia
 
                 * https://fr.wikipedia.org/wiki/Processus_de_Markov
-                    # Définition Wikipédia du processus de Markov
+                    # Définition Wikipédia
 
     :Définissions:
                 * :math:`P` - Processus de Décision Markovien (MDP) : Moyenne de la somme des états
@@ -103,7 +103,7 @@ Q-Learning : Intuittion
 
     :Définissions:
 
-                * :math:`Q` - Qualité : définit la qualité de l'action à venir :math:`Q(s, a)` par
+                * :math:`Q` - Qualité : définit la qualité de l'action à venir :math:`Q(s, a)` par 
                   opposition à :math:`V` qui définit la valeur de l'état :math:`V(s)`.
 
 Définission de l'équation de Bellman en Q-Learning
@@ -162,7 +162,7 @@ Calcul de la Différence temporelle
 
     .. math::
 
-       TD_t (a, s) = \underset {ap} {R(s,a) + \gamma \underset {a'} {max} Q(s', a')} - \underset {av} {Q_{t-1} (s, a)}
+       TD_t (a, s) = \underset {après} {R(s,a) + \gamma \underset {a'} {max} Q(s', a')} - \underset {avant} {Q_{t-1} (s, a)}
 
 Calcul de la Qualité d'une action avec la correction de la différence temporelle
 --------------------------------------------------------------------------------
