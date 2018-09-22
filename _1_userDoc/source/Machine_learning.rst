@@ -58,15 +58,15 @@ modérés.
         Pour une Récompense Final de 1 si nous affectons une Récompense d'Action de 0, -0.3, -0.5
         ou -2
 
-            * Si RA=0 : L'IA n'optimisera pas la recherche de solution.
+            * Si RA= :math:`0` : L'IA n'optimisera pas la recherche de solution.
 
-            * Si RA=-0.3 : L'IA optimisera légèrement sa recherche de solution mais aucuns risque
+            * Si RA= :math:`-0.3` : L'IA optimisera légèrement sa recherche de solution mais aucuns risque
               ne sera pris dans le choix de l'action.
 
-            * Si RA=-0.5 : l'IA optimisera beaucoup sa recherche de solution, mais ne prendra que 
+            * Si RA= :math:`-0.5` : l'IA optimisera beaucoup sa recherche de solution, mais ne prendra que 
               des risques modérés.
 
-            * Si RA=-2 : l'IA prendra tous les risques possibles pour parvenir à une solution le 
+            * Si RA= :math:`-2` : l'IA prendra tous les risques possibles pour parvenir à une solution le 
               plus vite possible.
 
 Chaine de Markov et Processus de Décision Markovien (MDP)
@@ -112,28 +112,70 @@ Définission de l'équation de Bellman en Q-Learning
 On peut définir que :math:`V(s)` considère la meilleure action possible. Par opposition, avec
 :math: `Q(s, a)` on calcule une valeur pour chaque action, qu'elle soit la meilleure ou non.
 
-    1. Définition de base
+1. Définition de base
 
-            .. math::
+        .. math::
 
-               Q(s, a) = R(s, a) + \gamma \underset {s'} {\sum} P(s, a, s')V(s')
+           Q(s, a) = R(s, a) + \gamma \underset {s'} {\sum} P(s, a, s')V(s')
 
 
 On constate que l'équation correspond à ce qui est contenu entre les parenthèses dans l'équation
 de Bellman.
 
-    2. Définition de l'équation en mode récursif (avec :math:`V(s')` remplacer par :math:`Q(s', a')`)
+2. Définition de l'équation en mode récursif (avec :math:`V(s')` remplacer par :math:`Q(s', a')`)
 
-            .. math::
+        .. math::
 
-               Q(s, a) = R(s, a) + \gamma \underset {s'} {\sum} \left (P(s, a, s') \underset {a} {max} Q(s', a') \right)
+           Q(s, a) = R(s, a) + \gamma \underset {s'} {\sum} \left (P(s, a, s') \underset {a'} {max} Q(s', a') \right)
 
 Différence temporelle
 =====================
 
-    .. todo::
-       * revoir la Vidéo 13
+    :Définissions: 
 
-       * Déffinir la Différence temporelle
+                * :math:`Q_{t-1} (s, a)` - Avant : C'est l'état précédent de l'action
 
-       * Définir l'équation de Bellman en intégrant la diférence temporelle
+                * :math:`Q_t (s, a)` - Après : C'est le nouvel état de l'action
+
+                * :math:`TD_t (a, s)` - Différence temporelle : C'est l'apport d'information pour 
+                  une action entre Après et Avant.
+
+                * :math:`\alpha` - Alpha : c'est un coefficient multiplicateur pour :math:`TD_t (a, s)`
+                  ce coefficient est compris entre O et 1. La nouvelle valeur obtenue, sera ajouté à
+                  :math:`Q_{t-1} (s, a)` pour devenir le nouveau :math:`Q_t (s, a)`.
+
+                  **Attention** : 
+
+                        * Pour :math:`\alpha = 0`, on aura :math:`Q_t (s, a) = Q_{t-1} (s, a)`. L'IA
+                          n'apprendra donc rien.
+
+                        * Pour :math:`\alpha = 1`, on aura :math:`Q_t (s, a) = R(s,a) + \gamma \underset {a'} {max} Q(s', a')`.
+                          L'IA prendra donc toujours la valeur de la nouvelle action, y compris si 
+                          cette action est erronée (comportement aléatoire).
+
+                  La valeur de :math:`\alpha` doit donc être réajuster pour que la 
+                  différence temporelle soit égale à :math:`0`.
+
+
+Calcul de la Différence temporelle
+----------------------------------
+
+    .. math::
+
+       TD_t (a, s) = \underset {après} {R(s,a) + \gamma \underset {a'} {max} Q(s', a')} - \underset {avant} {Q_{t-1}} (s, a)}
+
+Calcul de la Qualité d'une action avec la correction de la différence temporelle
+--------------------------------------------------------------------------------
+
+Version condensée :
+
+    .. math::
+
+      Q_t (s, a) = Q_{t-1}(s, a) + \alpha TD_t (a, s)
+
+version étendue, avec :math:`TD_t (a, s)` remplacée par son expression :
+
+    .. math::
+       
+       Q_t (s, a) = Q_{t-1}(s, a) + \alpha \left (R(s,a) + \gamma \underset {a'} {max} Q(s', a') - Q_{t-1} (s, a) \right)
+
