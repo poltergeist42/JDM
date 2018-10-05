@@ -53,7 +53,7 @@ Insérez du code html
 
         .. raw:: html
 
-           <br/>
+           <br>
            # Attention, il faut sauter une ligne entre 'raw' et le code html
 
 Insérer une image

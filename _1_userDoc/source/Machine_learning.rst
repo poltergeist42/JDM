@@ -179,3 +179,17 @@ Version étendue, avec :math:`TD_t (a, s)` remplacée par son expression :
        
        Q_t (s, a) = Q_{t-1}(s, a) + \alpha \left (R(s,a) + \gamma \underset {a'} {max} Q(s', a') - Q_{t-1} (s, a) \right)
 
+--------------------------------
+Artificial Neural Networks (ANN)
+--------------------------------
+
+    :Liens_Web:
+            * http://yann.lecun.com/exdb/publis/pdf/lecun-98d.pdf
+                Document traitant de l'importance de normaliser l'échelle des données d'entrée des neurones
+
+.. todo::
+
+   * dans l'annexe, revoir la vidéo "Le Neurone"
+
+   * Faire le schéma d'un neurone (voir la vidéo à 14m23) en ajoutant les termes : Synapses, poid et
+     fonction d'activation

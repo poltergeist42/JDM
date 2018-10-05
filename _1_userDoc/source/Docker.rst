@@ -84,9 +84,28 @@ Version facile / Automatique
 Installation sous Windows
 -------------------------
 
+Sous Windows 7 et Windows 10 Famille
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 :Liens_Web:
             * https://download.docker.com/win/stable/DockerToolbox.exe
                 # Ce soft installe virtualBox et une mini VM (boot2docker)
+
+Sous Windows 10 Pro
+^^^^^^^^^^^^^^^^^^^
+
+    :Liens_Web:
+            * https://docs.docker.com/v17.09/docker-for-windows/install/#start-docker-for-windows
+                # Documentation Docker pour l'installation et l'utilisation de Docker sous Windows
+
+            * https://docs.microsoft.com/fr-fr/virtualization/windowscontainers/quick-start/quick-start-windows-10
+                # Doc spécifique pour l'utilisation des container Windows (Container linux par défaut)
+
+    #. Activer la fonctionnalité "Conteneurs" depuis Windows Feature"
+
+    #. Télécharger et installer `La version Stable de Docker <https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe>`_
+
+    #. Ajouter L'utilisateur au groupe "docker-users"
 
 ####
 
@@ -98,7 +117,7 @@ Obtenir de l'aide sur une commande
         
         ex :
         
-        docker rm --help
+        docker rmi --help
         
         > Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
         >
@@ -307,9 +326,18 @@ Lancer/initialiser un Container
 
         sudo docker run -it [nom_de_l'image] bash
         
-    #. Sur un port différent ::
+    #. Sur un port différent 
+           
+       * L'option -p ('p' minuscule) permet de fiare une translation vers un port Statique
+
+       * L'option -P ('P' MAJUSCULE) affect un port Dynamique (entre 32768 - 61000)
+
+       ::
     
-        sudo docker run -p 88:80 [nom_de_l'image]
+        sudo docker run -p [Port_de_la_machine_hote]:[Port_du_container] [nom_de_l'image]
+
+        ex:
+        sudo docker run -p 88:80 nginx
         
         # Pour attaquer un serveur Web lancer depuis un container, il faut saisir l'IP de
         # la machine hote suivie du port translater
@@ -366,8 +394,13 @@ Récupérer le focus sur un container qui tourne en tache de fond (en mode déta
      
 ####
 
-Inspecter un container
-======================
+Inspecter un objet docker
+=========================
+
+    :Liens_Web:
+
+            * https://docs.docker.com/config/formatting/
+                # Information sur l'utilisation des "Go Templates" (--format)
 
     #. Obtenir toute la configuration au format JSON
         ::
