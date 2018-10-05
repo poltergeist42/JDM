@@ -163,6 +163,8 @@ $ sudo apt-get install docker-ce
 </div>
 <div class="section" id="installation-sous-windows">
 <h3>Installation sous Windows<a class="headerlink" href="#installation-sous-windows" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="sous-windows-7-et-windows-10-famille">
+<h4>Sous Windows 7 et Windows 10 Famille<a class="headerlink" href="#sous-windows-7-et-windows-10-famille" title="Lien permanent vers ce titre">¶</a></h4>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -179,6 +181,37 @@ $ sudo apt-get install docker-ce
 </tbody>
 </table>
 </div>
+<div class="section" id="sous-windows-10-pro">
+<h4>Sous Windows 10 Pro<a class="headerlink" href="#sous-windows-10-pro" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.docker.com/v17.09/docker-for-windows/install/#start-docker-for-windows">https://docs.docker.com/v17.09/docker-for-windows/install/#start-docker-for-windows</a></dt>
+<dd># Documentation Docker pour l’installation et l’utilisation de Docker sous Windows</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.microsoft.com/fr-fr/virtualization/windowscontainers/quick-start/quick-start-windows-10">https://docs.microsoft.com/fr-fr/virtualization/windowscontainers/quick-start/quick-start-windows-10</a></dt>
+<dd># Doc spécifique pour l’utilisation des container Windows (Container linux par défaut)</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li>Activer la fonctionnalité «&nbsp;Conteneurs&nbsp;» depuis Windows Feature&nbsp;»</li>
+<li>Télécharger et installer <a class="reference external" href="https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe">La version Stable de Docker</a></li>
+<li>Ajouter L’utilisateur au groupe «&nbsp;docker-users&nbsp;»</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="obtenir-de-l-aide-sur-une-commande">
@@ -188,7 +221,7 @@ $ sudo apt-get install docker-ce
 
 <span class="n">ex</span> <span class="p">:</span>
 
-<span class="n">docker</span> <span class="n">rm</span> <span class="o">--</span><span class="n">help</span>
+<span class="n">docker</span> <span class="n">rmi</span> <span class="o">--</span><span class="n">help</span>
 
 <span class="o">&gt;</span> <span class="n">Usage</span><span class="p">:</span>  <span class="n">docker</span> <span class="n">rmi</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">IMAGE</span> <span class="p">[</span><span class="n">IMAGE</span><span class="o">...</span><span class="p">]</span>
 <span class="o">&gt;</span>
@@ -464,7 +497,14 @@ Pour démarrer / redémarrer un container existant, il faut utiliser la commande
 </div>
 </li>
 <li><p class="first">Sur un port différent</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="mi">88</span><span class="p">:</span><span class="mi">80</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
+<ul class="simple">
+<li>L’option -p (“p” minuscule) permet de fiare une translation vers un port Statique</li>
+<li>L’option -P (“P” MAJUSCULE) affect un port Dynamique (entre 32768 - 61000)</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="p">[</span><span class="n">Port_de_la_machine_hote</span><span class="p">]:[</span><span class="n">Port_du_container</span><span class="p">]</span> <span class="p">[</span><span class="n">nom_de_l</span><span class="s1">&#39;image]</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="mi">88</span><span class="p">:</span><span class="mi">80</span> <span class="n">nginx</span>
 
 <span class="c1"># Pour attaquer un serveur Web lancer depuis un container, il faut saisir l&#39;IP de</span>
 <span class="c1"># la machine hote suivie du port translater</span>
@@ -542,10 +582,25 @@ Pour démarrer / redémarrer un container existant, il faut utiliser la commande
 </div></blockquote>
 </div>
 <hr class="docutils" />
-<div class="section" id="inspecter-un-container">
-<h2>Inspecter un container<a class="headerlink" href="#inspecter-un-container" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="inspecter-un-objet-docker">
+<h2>Inspecter un objet docker<a class="headerlink" href="#inspecter-un-objet-docker" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
-<div><ol class="arabic">
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.docker.com/config/formatting/">https://docs.docker.com/config/formatting/</a></dt>
+<dd># Information sur l’utilisation des «&nbsp;Go Templates&nbsp;» (–format)</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic">
 <li><dl class="first docutils">
 <dt>Obtenir toute la configuration au format JSON</dt>
 <dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmd</span> <span class="p">:</span>
@@ -682,7 +737,11 @@ un seul port, soit un ensemble de port :</p>
 <li><a class="reference internal" href="#installation">Installation</a><ul>
 <li><a class="reference internal" href="#installation-manuelle">Installation manuelle</a></li>
 <li><a class="reference internal" href="#version-facile-automatique">Version facile / Automatique</a></li>
-<li><a class="reference internal" href="#installation-sous-windows">Installation sous Windows</a></li>
+<li><a class="reference internal" href="#installation-sous-windows">Installation sous Windows</a><ul>
+<li><a class="reference internal" href="#sous-windows-7-et-windows-10-famille">Sous Windows 7 et Windows 10 Famille</a></li>
+<li><a class="reference internal" href="#sous-windows-10-pro">Sous Windows 10 Pro</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#obtenir-de-l-aide-sur-une-commande">Obtenir de l’aide sur une commande</a></li>
@@ -705,7 +764,7 @@ un seul port, soit un ensemble de port :</p>
 <li><a class="reference internal" href="#lancer-initialiser-un-container">Lancer/initialiser un Container</a></li>
 <li><a class="reference internal" href="#sortir-d-un-container-mode-iterractif">Sortir d’un container (mode iterractif)</a></li>
 <li><a class="reference internal" href="#recuperer-le-focus-sur-un-container-qui-tourne-en-tache-de-fond-en-mode-detache">Récupérer le focus sur un container qui tourne en tache de fond (en mode détaché)</a></li>
-<li><a class="reference internal" href="#inspecter-un-container">Inspecter un container</a></li>
+<li><a class="reference internal" href="#inspecter-un-objet-docker">Inspecter un objet docker</a></li>
 <li><a class="reference internal" href="#gestion-redirection-des-ports">Gestion / redirection des ports</a></li>
 </ul>
 </li>
