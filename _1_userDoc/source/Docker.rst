@@ -101,6 +101,26 @@ Sous Windows 10 Pro
             * https://docs.microsoft.com/fr-fr/virtualization/windowscontainers/quick-start/quick-start-windows-10
                 # Doc spécifique pour l'utilisation des container Windows (Container linux par défaut)
 
+    :/!\\Attention/!\\:     Si dockerToolBox est installé, il faut le désinstaller complètement :
+
+                                * Docker
+
+                                * Boot2Linux
+
+                                * ToolBox
+
+                                * Oracle virtualBox
+
+                                * Toutes les variables d'environnement Docker ::
+
+                                    Lancer en tant qu'administrateur :
+
+                                    [Environment]::SetEnvironmentVariable("DOCKER_CERT_PATH", $null, "User")
+                                    [Environment]::SetEnvironmentVariable("DOCKER_HOST", $null, "User")
+                                    [Environment]::SetEnvironmentVariable("DOCKER_MACHINE_NAME", $null, "User")
+                                    [Environment]::SetEnvironmentVariable("DOCKER_TLS_VERIFY", $null, "User")
+                                    [Environment]::SetEnvironmentVariable("DOCKER_TOOLBOX_INSTALL_PATH", $null, "User")
+
     #. Activer la fonctionnalité "Conteneurs" depuis Windows Feature"
 
     #. Télécharger et installer `La version Stable de Docker <https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe>`_
@@ -496,3 +516,12 @@ Gestion / redirection des ports
             ::
 
                 docker inspect [ID ou nom du container]
+
+####
+
+Docker-Compose
+==============
+
+    :Liens_Web:
+            * https://docs.docker.com/compose/install/#prerequisites
+                # Documentation d'installation de Docker-Compose (Win, Linux, MacOs)
