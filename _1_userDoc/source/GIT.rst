@@ -1,6 +1,6 @@
-=================
-GIT (versionning)
-=================
+================
+GIT (versioning)
+================
 
 Les liens utiles
 ================
@@ -113,6 +113,11 @@ Créer, lister et sélectionner une branche
             git branch
                 # la branch ayant un asterics est la branche courante
         
+    #. Pour connaitre la branch avtive
+        ::
+
+            git symbolic-ref HEAD --short
+                
     #. Pour créer une nouvelle branch
         ::
             
@@ -127,6 +132,11 @@ Créer, lister et sélectionner une branche
         ::
             
             git chekout [branch] [fichier cible]
+
+    #. Pour créer une nouvelle branch et basculer directement dessus
+        ::
+
+            git checkout -B [Nom de la nouvelle branch]
 
 ------------------------------------------------------------------------------------------
 
