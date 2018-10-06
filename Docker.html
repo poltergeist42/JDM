@@ -188,7 +188,7 @@ $ sudo apt-get install docker-ce
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://docs.docker.com/v17.09/docker-for-windows/install/#start-docker-for-windows">https://docs.docker.com/v17.09/docker-for-windows/install/#start-docker-for-windows</a></dt>
 <dd># Documentation Docker pour l’installation et l’utilisation de Docker sous Windows</dd>
@@ -198,6 +198,31 @@ $ sudo apt-get install docker-ce
 <dt><a class="reference external" href="https://docs.microsoft.com/fr-fr/virtualization/windowscontainers/quick-start/quick-start-windows-10">https://docs.microsoft.com/fr-fr/virtualization/windowscontainers/quick-start/quick-start-windows-10</a></dt>
 <dd># Doc spécifique pour l’utilisation des container Windows (Container linux par défaut)</dd>
 </dl>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">/!\Attention/!\:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Si dockerToolBox est installé, il faut le désinstaller complètement :</p>
+<ul class="last">
+<li><p class="first">Docker</p>
+</li>
+<li><p class="first">Boot2Linux</p>
+</li>
+<li><p class="first">ToolBox</p>
+</li>
+<li><p class="first">Oracle virtualBox</p>
+</li>
+<li><p class="first">Toutes les variables d’environnement Docker</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Lancer en tant qu&#39;administrateur :
+
+[Environment]::SetEnvironmentVariable(&quot;DOCKER_CERT_PATH&quot;, $null, &quot;User&quot;)
+[Environment]::SetEnvironmentVariable(&quot;DOCKER_HOST&quot;, $null, &quot;User&quot;)
+[Environment]::SetEnvironmentVariable(&quot;DOCKER_MACHINE_NAME&quot;, $null, &quot;User&quot;)
+[Environment]::SetEnvironmentVariable(&quot;DOCKER_TLS_VERIFY&quot;, $null, &quot;User&quot;)
+[Environment]::SetEnvironmentVariable(&quot;DOCKER_TOOLBOX_INSTALL_PATH&quot;, $null, &quot;User&quot;)
+</pre></div>
+</div>
 </li>
 </ul>
 </td>
@@ -723,6 +748,27 @@ un seul port, soit un ensemble de port :</p>
 </ol>
 </div></blockquote>
 </div>
+<hr class="docutils" />
+<div class="section" id="docker-compose">
+<h2>Docker-Compose<a class="headerlink" href="#docker-compose" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://docs.docker.com/compose/install/#prerequisites">https://docs.docker.com/compose/install/#prerequisites</a></dt>
+<dd># Documentation d’installation de Docker-Compose (Win, Linux, MacOs)</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -766,6 +812,7 @@ un seul port, soit un ensemble de port :</p>
 <li><a class="reference internal" href="#recuperer-le-focus-sur-un-container-qui-tourne-en-tache-de-fond-en-mode-detache">Récupérer le focus sur un container qui tourne en tache de fond (en mode détaché)</a></li>
 <li><a class="reference internal" href="#inspecter-un-objet-docker">Inspecter un objet docker</a></li>
 <li><a class="reference internal" href="#gestion-redirection-des-ports">Gestion / redirection des ports</a></li>
+<li><a class="reference internal" href="#docker-compose">Docker-Compose</a></li>
 </ul>
 </li>
 </ul>
