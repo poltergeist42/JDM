@@ -84,6 +84,15 @@ Démarrer un dépôt Git
             
 ------------------------------------------------------------------------------------------
 
+gitignore
+=========
+
+    :Liens_Web:
+            * https://fr.atlassian.com/git/tutorials/saving-changes/gitignore
+                # Description de la syntaxe à utiliser pour '.gitignore'
+
+------------------------------------------------------------------------------------------
+
 Enregistrer des modifications dans le dépôt
 ===========================================
 
