@@ -485,7 +485,30 @@ Manipuler les variables d'environement
 
 :Liens_Web:
             * https://ss64.com/ps/syntax-env.html
-                # Démonstration de manipulation des variable d'environement
+                # Démonstration de manipulation des variable d'environnement
 
             * https://technet.microsoft.com/fr-fr/library/hh847808.aspx
                 # Documentation Powershell
+
+----------------------------------------------------------
+
+Ouvrir un document avec VIM depuis PowerShell
+=============================================
+
+    :Liens_Web:
+            * https://youtu.be/MB5xuLIBUOg
+                # Vidéo montrant la manip
+
+    #. Ouvrir le fichier du profil PowerShell : ::
+
+        PS :> notepad $PROFILE
+
+    #. Créer un alias associer au chemin de VIM : ::
+
+        set-alias vi "C:\Program Files (x86)\Vim\vim80\gvim.exe"
+        set-alias vim "C:\Program Files (x86)\Vim\vim80\gvim.exe"
+
+    #. Tester après avoir fermer et réouvert PowerShell : ::
+
+        vim test.txt
+
