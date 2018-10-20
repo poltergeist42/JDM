@@ -558,12 +558,6 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 </pre></div>
 </div>
 </li>
-<li><p class="first">Pour récupérer une branch distante dans un dépôt local</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="p">[</span><span class="n">nom_de_la_branch_local</span><span class="p">]</span> <span class="p">[</span><span class="n">emplacement_de_la_branch_distante</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">branch_distante</span><span class="p">]</span>
-    <span class="c1"># ex : git checkout -b dev origin/dev</span>
-</pre></div>
-</div>
-</li>
 <li><p class="first">Pour mettre à jour une branch locale depuis depuis une branch distante</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="o">-</span><span class="n">a</span> <span class="p">[</span><span class="n">depot_distant</span><span class="p">]</span> <span class="p">[</span><span class="n">branch_locale</span><span class="p">]</span>
     <span class="c1"># ex : git pull -a origin dev</span>
@@ -575,6 +569,46 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 </tr>
 </tbody>
 </table>
+</div>
+<hr class="docutils" />
+<div class="section" id="importer-une-branch-distante-dans-le-depot-local">
+<h2>Importer une branch distante dans le dépôt local<a class="headerlink" href="#importer-une-branch-distante-dans-le-depot-local" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Synchroniser le dépôt local et le dépôt distant :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Contrôler que la nouvelle branch distante est bien référencée dans le dépôt local :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">a</span>
+
+    <span class="o">*</span> <span class="n">master</span>
+      <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">dev_Jojo</span>   <span class="o">&lt;--</span>
+      <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Créer et Tracker la nouvelle branch :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="o">--</span><span class="n">track</span> <span class="p">[</span><span class="n">nom_de_la_branche</span><span class="p">]</span> <span class="p">[</span><span class="n">chemin_distant</span><span class="p">]</span>
+
+<span class="n">ex</span><span class="p">:</span>
+
+<span class="n">git</span> <span class="o">--</span><span class="n">track</span> <span class="n">dev_jojo</span> <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">dev_Jojo</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">basculer sur la nouvelle branch :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">nom_de_la_branch</span><span class="p">]</span>
+
+<span class="n">ex</span><span class="p">:</span>
+
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">dev_jojo</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
 </div>
 </div>
 
@@ -604,6 +638,7 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 </li>
 <li><a class="reference internal" href="#gestion-depot-distant">Gestion dépôt distant</a></li>
 <li><a class="reference internal" href="#github">github</a></li>
+<li><a class="reference internal" href="#importer-une-branch-distante-dans-le-depot-local">Importer une branch distante dans le dépôt local</a></li>
 </ul>
 </li>
 </ul>

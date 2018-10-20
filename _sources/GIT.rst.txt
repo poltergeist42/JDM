@@ -340,13 +340,40 @@ github
     
             git branch -a
             
-    #. Pour récupérer une branch distante dans un dépôt local ::
-            
-            git checkout -b [nom_de_la_branch_local] [emplacement_de_la_branch_distante]/[branch_distante]
-                # ex : git checkout -b dev origin/dev
-            
     #. Pour mettre à jour une branch locale depuis depuis une branch distante ::
     
             git pull -a [depot_distant] [branch_locale]
                 # ex : git pull -a origin dev
-            
+
+------------------------------------------------------------------------------------------
+
+Importer une branch distante dans le dépôt local
+================================================
+
+    #. Synchroniser le dépôt local et le dépôt distant : ::
+
+        git fetch
+
+    #. Contrôler que la nouvelle branch distante est bien référencée dans le dépôt local : ::
+
+        git branch -a
+
+            * master
+              remotes/origin/dev_Jojo   <--
+              remotes/origin/master
+
+    #. Créer et Tracker la nouvelle branch : ::
+
+        git --track [nom_de_la_branche] [chemin_distant]
+
+        ex:
+
+        git --track dev_jojo remotes/origin/dev_Jojo
+
+    #. basculer sur la nouvelle branch : ::
+
+        git checkout [nom_de_la_branch]
+
+        ex:
+
+        git checkout dev_jojo
