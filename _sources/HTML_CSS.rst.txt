@@ -61,7 +61,7 @@ Positionnement  et dimensionnement dans la fenêtre (ou dans la boite)
     * **height** : Hauteur
     * **width** : Largeur
 
-Chaque dimensions peut être utilisée dans sa forme courte (dans le sens horraire) :
+Chaque dimensions peut être utilisée dans sa forme courte (dans le sens horaire) :
 
     .. image:: ./Images/HTML_CSS/rotation_propriete.png
         :width: 400 px
@@ -78,7 +78,7 @@ Chaque dimensions peut être utilisée dans sa forme courte (dans le sens horrai
             margin:3px 2px 3px 2px
             }
 
-Chaque dimensions peut aussi être utiliée dans sa forme longue avec les mot clef 
+Chaque dimensions peut aussi être utilisée dans sa forme longue avec les mot clef 
 **top, right, bottom, left** :
 
     ::

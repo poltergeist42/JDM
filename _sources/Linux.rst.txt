@@ -169,7 +169,7 @@ Créer un alias permanent
 :Liens_Web:
             * https://doc.ubuntu-fr.org/alias
 
-    #. Editer le fichier '.bashrc'
+    #. Editer le fichier '**.bashrc**'
 
         Il faut éditer le fichier '.bashrc' et ajouter cette commande 
         à la suite de la ligne : 'some more ls aliases' ::
@@ -178,7 +178,7 @@ Créer un alias permanent
                 . ~/.bash_aliases
             fi
 
-    #. Créer ou éditer le fichier '.bash_aliases'
+    #. Créer ou éditer le fichier '**.bash_aliases**'
 
         Ajouter le nouvel alias sous la forme ::
 
@@ -186,6 +186,7 @@ Créer un alias permanent
 
             ex:
             alias python='/user/local/bin/python3.6'
+            alias pip='pip3'
 
     #. Relancer '.bashrc'
         ::

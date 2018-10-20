@@ -738,7 +738,7 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://ss64.com/ps/syntax-env.html">https://ss64.com/ps/syntax-env.html</a></dt>
-<dd># Démonstration de manipulation des variable d’environement</dd>
+<dd># Démonstration de manipulation des variable d’environnement</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
@@ -751,6 +751,45 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 </tr>
 </tbody>
 </table>
+</div>
+<hr class="docutils" />
+<div class="section" id="ouvrir-un-document-avec-vim-depuis-powershell">
+<h2>Ouvrir un document avec VIM depuis PowerShell<a class="headerlink" href="#ouvrir-un-document-avec-vim-depuis-powershell" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://youtu.be/MB5xuLIBUOg">https://youtu.be/MB5xuLIBUOg</a></dt>
+<dd># Vidéo montrant la manip</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic">
+<li><p class="first">Ouvrir le fichier du profil PowerShell :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS :&gt; notepad $PROFILE
+</pre></div>
+</div>
+</li>
+<li><p class="first">Créer un alias associer au chemin de VIM :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">alias</span> <span class="n">vi</span> <span class="s2">&quot;C:\Program Files (x86)\Vim</span><span class="se">\v</span><span class="s2">im80\gvim.exe&quot;</span>
+<span class="nb">set</span><span class="o">-</span><span class="n">alias</span> <span class="n">vim</span> <span class="s2">&quot;C:\Program Files (x86)\Vim</span><span class="se">\v</span><span class="s2">im80\gvim.exe&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Tester après avoir fermer et réouvert PowerShell :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vim</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
 </div>
 </div>
 
@@ -802,6 +841,7 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 <li><a class="reference internal" href="#activer-psremote-depuis-un-poste">Activer PSRemote depuis un poste</a></li>
 <li><a class="reference internal" href="#supprimer-un-dossier-et-son-contenu">Supprimer un dossier et son contenu</a></li>
 <li><a class="reference internal" href="#manipuler-les-variables-d-environement">Manipuler les variables d’environement</a></li>
+<li><a class="reference internal" href="#ouvrir-un-document-avec-vim-depuis-powershell">Ouvrir un document avec VIM depuis PowerShell</a></li>
 </ul>
 </li>
 </ul>

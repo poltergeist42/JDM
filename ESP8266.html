@@ -17,7 +17,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="GIT (versionning)" href="GIT.html" />
+    <link rel="next" title="GIT (versioning)" href="GIT.html" />
     <link rel="prev" title="DocUtils ; reStructuredText (.rst) ; Sphinx" href="DocUtils_RST_Sphinx.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -27,7 +27,7 @@
           <a href="genindex.html" title="Index général"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="GIT.html" title="GIT (versionning)"
+          <a href="GIT.html" title="GIT (versioning)"
              accesskey="N">suivant</a> |</li>
         <li class="right" >
           <a href="DocUtils_RST_Sphinx.html" title="DocUtils ; reStructuredText (.rst) ; Sphinx"
@@ -345,6 +345,76 @@ limité et trop restrictif. Cela pénalise l’ESP. Pour utiliser l’ESP de fa�
 <strong>il est conseillé de l’utiliser au travers de l’IDE ARDUINO</strong>.</div></blockquote>
 </div>
 </div>
+<hr class="docutils" />
+<div class="section" id="wemos-d1-mini-avec-arduino">
+<h2>WEMOS D1 Mini avec Arduino<a class="headerlink" href="#wemos-d1-mini-avec-arduino" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="installation-de-la-carte-dans-l-ide-arduino">
+<h3>Installation de la carte dans l’IDE Arduino<a class="headerlink" href="#installation-de-la-carte-dans-l-ide-arduino" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www.wikidebrouillard.org/index.php?title=Wemos_D1_mini">http://www.wikidebrouillard.org/index.php?title=Wemos_D1_mini</a></dt>
+<dd># Un pas à pas en image et en fr</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs">
+<h3>Installer l’utilitaire de gestion de fichiers (zone SPIFFS)<a class="headerlink" href="#installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/esp8266/arduino-esp8266fs-plugin">https://github.com/esp8266/arduino-esp8266fs-plugin</a></dt>
+<dd># Package + instructions d’installation</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://www.instructables.com/id/Using-ESP8266-SPIFFS/">https://www.instructables.com/id/Using-ESP8266-SPIFFS/</a></dt>
+<dd># Pas à pas d’installation de esp8266fs</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="utilisation-du-systeme-de-fichiers-fs">
+<h3>Utilisation du système de fichiers (FS)<a class="headerlink" href="#utilisation-du-systeme-de-fichiers-fs" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Créer dans le dossier contenant le fichier “.ino” un sous dossier “data”</p>
+</li>
+<li><p class="first">Mettre les fichiers devant être téléverser dans le FS dans le dossier data :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">data</span>\<span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Ouvrir le sketch devant être téléverser</p>
+</li>
+<li><p class="first">Depuis le menu “Outils”, sélectionner “ESP8266 Sketch Data Upload”. Attention, pas de
+confirmation, téléversement direct.</p>
+<p><strong>/!\ Attention /!\</strong> : Il faut fermer la console série pendant le téléversement des
+fichiers sinon l’opération échoue.</p>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
 </div>
 
 
@@ -366,6 +436,12 @@ limité et trop restrictif. Cela pénalise l’ESP. Pour utiliser l’ESP de fa�
 <li><a class="reference internal" href="#conclusion-sur-micropython-et-l-esp8266">Conclusion sur MicroPython et l’ESP8266</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#wemos-d1-mini-avec-arduino">WEMOS D1 Mini avec Arduino</a><ul>
+<li><a class="reference internal" href="#installation-de-la-carte-dans-l-ide-arduino">Installation de la carte dans l’IDE Arduino</a></li>
+<li><a class="reference internal" href="#installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs">Installer l’utilitaire de gestion de fichiers (zone SPIFFS)</a></li>
+<li><a class="reference internal" href="#utilisation-du-systeme-de-fichiers-fs">Utilisation du système de fichiers (FS)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -375,7 +451,7 @@ limité et trop restrictif. Cela pénalise l’ESP. Pour utiliser l’ESP de fa�
                         title="Chapitre précédent">DocUtils ; reStructuredText (.rst) ; Sphinx</a></p>
   <h4>Sujet suivant</h4>
   <p class="topless"><a href="GIT.html"
-                        title="Chapitre suivant">GIT (versionning)</a></p>
+                        title="Chapitre suivant">GIT (versioning)</a></p>
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
     <ul class="this-page-menu">
@@ -406,7 +482,7 @@ limité et trop restrictif. Cela pénalise l’ESP. Pour utiliser l’ESP de fa�
           <a href="genindex.html" title="Index général"
              >index</a></li>
         <li class="right" >
-          <a href="GIT.html" title="GIT (versionning)"
+          <a href="GIT.html" title="GIT (versioning)"
              >suivant</a> |</li>
         <li class="right" >
           <a href="DocUtils_RST_Sphinx.html" title="DocUtils ; reStructuredText (.rst) ; Sphinx"
