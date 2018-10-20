@@ -147,6 +147,18 @@ Créer, lister et sélectionner une branche
 
             git checkout -B [Nom de la nouvelle branch]
 
+    #. Pour lister les fichiers tracker : ::
+
+            git ls-files
+
+    #. Pour lister les fichiers non tracker : ::
+
+            git ls-files --others
+
+            ou en version courte :
+
+            git ls-files -o
+
 ------------------------------------------------------------------------------------------
 
 appliquer le contenu d'une branch dans la branch courante (faire un merge)

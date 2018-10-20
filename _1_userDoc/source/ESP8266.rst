@@ -6,8 +6,9 @@ ESP8266
             * https://github.com/nodemcu
                 # Github pour les NodeMCU
 
+------
 PINOUT
-======
+------
 
 :NodeMCU:
  .. image:: ./Images/ESP8266/PINMAP.png
@@ -22,8 +23,9 @@ PINOUT
 
 ####
 
+---------------------------
 Flasher un nouveau Firmware
-===========================
+---------------------------
 
 :FTDI_NodeMCU:
  .. image:: ./Images/ESP8266/cablage_nodeMcu.png
@@ -52,7 +54,7 @@ la seul qui ai fonctionné. il permet de flasher un ESP8266 à l'aide d'un `FTDI
        l'ESP durant la communication entre le FTDI et l'ESP
 
 MAJ du Firmware
----------------
+===============
 
     :Liens_Web:
             * https://github.com/espressif/esptool
@@ -123,8 +125,9 @@ MAJ du Firmware
 
 ####
 
+----------------------------
 Utilisation avec MicroPython
-============================
+----------------------------
 
 :Liens_Web:
             * http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/index.html
@@ -143,7 +146,7 @@ Utilisation avec MicroPython
           complexe ou avancées ne sont pas possibles
 
 REPL, WebREPL et File System
-----------------------------
+============================
 
 Il est possible d'interagir directement avec l'ESP. Soit depuis le port série, c'est le REPL. Soit 
 au travers d'un WebSocket, c'est le WebREPL. Le deux modes renvoie **la même** console
@@ -183,9 +186,49 @@ spécifiques applicable à MicroPython et à LESP8266.
             au travers de la liaison série : https://github.com/adafruit/ampy
 
 Conclusion sur MicroPython et l'ESP8266
----------------------------------------
+=======================================
 
     L'ESP8266 est une bestiole sympa qui mérite d'être utilisée. Malheureusement MicroPython est trop
     limité et trop restrictif. Cela pénalise l'ESP. Pour utiliser l'ESP de façon avancée,
     **il est conseillé de l'utiliser au travers de l'IDE ARDUINO**.
+
+####
+
+--------------------------
+WEMOS D1 Mini avec Arduino
+--------------------------
+
+Installation de la carte dans l'IDE Arduino
+===========================================
+
+    :Liens_Web:
+                * http://www.wikidebrouillard.org/index.php?title=Wemos_D1_mini
+                    # Un pas à pas en image et en fr
+
+Installer l'utilitaire de gestion de fichiers (zone SPIFFS)
+===========================================================
+
+    :Liens_Web:
+                * https://github.com/esp8266/arduino-esp8266fs-plugin
+                    # Package + instructions d'installation
+
+                * https://www.instructables.com/id/Using-ESP8266-SPIFFS/
+                    # Pas à pas d'installation de esp8266fs
+
+Utilisation du système de fichiers (FS)
+=======================================
+
+    #. Créer dans le dossier contenant le fichier '.ino' un sous dossier 'data'
+
+    #. Mettre les fichiers devant être téléverser dans le FS dans le dossier data : ::
+
+        .\data\index.html
+
+    #. Ouvrir le sketch devant être téléverser
+
+    #. Depuis le menu 'Outils', sélectionner 'ESP8266 Sketch Data Upload'. Attention, pas de 
+       confirmation, téléversement direct.
+
+       **/!\\ Attention /!\\** : Il faut fermer la console série pendant le téléversement des
+       fichiers sinon l'opération échoue.
 
