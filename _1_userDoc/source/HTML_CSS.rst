@@ -4,7 +4,7 @@ HTML_CSS
 
 :Liens_Web:
             * http://www.html5-css3-pense-bete.fr/
-                # pense bête html5 et Css3
+                # pense bête html5 et CSS3
 
             * http://slideplayer.fr/slide/1694038/
                 # petit slide (68 pages) de présentation du CSS
@@ -17,6 +17,9 @@ HTML_CSS
                 
             * http://putaindecode.io/fr/articles/github/pages/site-web-gratuit/
                 # Site traitant de la programmation des site WEB
+
+            * http://www.css-faciles.com/proprietes-css-liste-alphabetique.php
+                # Index des commandes CSS
 
 ####
 
@@ -91,4 +94,13 @@ Chaque dimensions peut aussi être utilisée dans sa forme longue avec les mot c
             margin-left:2px;
             }
 
+Couleurs
+--------
 
+    :Liens_Web:
+            * https://htmlcolorcodes.com/
+                # site permettant d'identifier le code hexa d'une couleur. Propose aussi des tutos CSS
+
+Le terme à recherche pour trouver les codes hexa des couleurs est : ::
+
+    flat color
