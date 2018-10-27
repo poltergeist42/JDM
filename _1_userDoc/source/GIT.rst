@@ -258,7 +258,7 @@ Réparer une erreur non-committée
 annuler / remplacer le dernier commit
 -------------------------------------
 
-    #. annuler le dernier commit ::
+    #. Annuler le dernier commit ::
         
         git revert HEAD
             
@@ -370,10 +370,24 @@ Importer une branch distante dans le dépôt local
 
         git --track dev_jojo remotes/origin/dev_Jojo
 
-    #. basculer sur la nouvelle branch : ::
+    #. Basculer sur la nouvelle branch : ::
 
         git checkout [nom_de_la_branch]
 
         ex:
 
         git checkout dev_jojo
+
+
+------------------------------------------------------------------------------------------
+
+Réparer un liens vers une branche distante
+==========================================
+
+    :Liens_Web:
+            * file:///C:/Program%20Files/Git/mingw64/share/doc/git-doc/git-fetch.html
+                # Manuel de la commande fetch
+
+::
+
+    git fetch --prune

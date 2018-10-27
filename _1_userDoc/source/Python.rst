@@ -178,6 +178,11 @@ pip (Python installing packages)
 Installation de PIP
 -------------------
 
+    :Liens_Web:
+
+            * https://pip.pypa.io/en/stable/installing/
+                # Installation de pip
+
     #. Récupération et installation du paquet ::
     
         wget https://bootstrap.pypa.io/get-pip.py
