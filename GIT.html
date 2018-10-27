@@ -442,7 +442,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 <h3>annuler / remplacer le dernier commit<a class="headerlink" href="#annuler-remplacer-le-dernier-commit" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">annuler le dernier commit</p>
+<li><p class="first">Annuler le dernier commit</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">revert</span> <span class="n">HEAD</span>
 </pre></div>
 </div>
@@ -598,7 +598,7 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 </pre></div>
 </div>
 </li>
-<li><p class="first">basculer sur la nouvelle branch :</p>
+<li><p class="first">Basculer sur la nouvelle branch :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">nom_de_la_branch</span><span class="p">]</span>
 
 <span class="n">ex</span><span class="p">:</span>
@@ -609,6 +609,30 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 </li>
 </ol>
 </div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="reparer-un-liens-vers-une-branche-distante">
+<h2>Réparer un liens vers une branche distante<a class="headerlink" href="#reparer-un-liens-vers-une-branche-distante" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="file:///C:/Program%20Files/Git/mingw64/share/doc/git-doc/git-fetch.html">file:///C:/Program%20Files/Git/mingw64/share/doc/git-doc/git-fetch.html</a></dt>
+<dd># Manuel de la commande fetch</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="o">--</span><span class="n">prune</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -639,6 +663,7 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 <li><a class="reference internal" href="#gestion-depot-distant">Gestion dépôt distant</a></li>
 <li><a class="reference internal" href="#github">github</a></li>
 <li><a class="reference internal" href="#importer-une-branch-distante-dans-le-depot-local">Importer une branch distante dans le dépôt local</a></li>
+<li><a class="reference internal" href="#reparer-un-liens-vers-une-branche-distante">Réparer un liens vers une branche distante</a></li>
 </ul>
 </li>
 </ul>

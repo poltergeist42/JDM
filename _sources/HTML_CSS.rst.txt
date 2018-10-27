@@ -23,11 +23,12 @@ HTML_CSS
 
 ####
 
+----
 HTML
-====
+----
 
 Rappel des balises courantes en HTML
-------------------------------------
+====================================
 
     * <h1>Titre 1</h1> - pour vos titres les plus importants
     
@@ -49,11 +50,12 @@ Rappel des balises courantes en HTML
 
 ####
 
+---
 CSS
-===
+---
 
 Positionnement  et dimensionnement dans la fenêtre (ou dans la boite)
----------------------------------------------------------------------
+=====================================================================
 
     .. image:: ./Images/HTML_CSS/dimensionnement.png
         :width: 400 px
@@ -95,7 +97,7 @@ Chaque dimensions peut aussi être utilisée dans sa forme longue avec les mot c
             }
 
 Couleurs
---------
+========
 
     :Liens_Web:
             * https://htmlcolorcodes.com/
@@ -104,3 +106,36 @@ Couleurs
 Le terme à recherche pour trouver les codes hexa des couleurs est : ::
 
     flat color
+
+---------
+Bootstrap
+---------
+
+    :Liens_Web:
+            * https://getbootstrap.com/docs/4.1/getting-started/download/
+                # Utiliser la version "Compiled CSS and JS"
+
+Utiliser Bootstrap Offline
+==========================
+
+    :Liens_Web:
+            * https://www.quora.com/How-do-I-use-Bootstrap-offline
+                # la réponse sur un forum
+
+    #. Télécharger le paquet `Bootstrap <https://getbootstrap.com/docs/4.1/getting-started/download/>`_
+       puis copier les dossiers "JS" et "CSS" dans le dossier du projet.
+
+    #. Ajouter les lignes suivantes dans le "HEAD" du html (en fonction des CSS désirés) : ::
+
+        # CSS
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/bootstrap-grid.css" rel="stylesheet" />
+        <link href="css/bootstrap-grid.min.css" rel="stylesheet" />
+        <link href="css/bootstrap-reboot.css" rel="stylesheet" />
+        <link href="css/bootstrap-reboot.min.css" rel="stylesheet" />
+
+        # Javascript
+        <script src="js/bootstrap.min.js"></script>
+
+
