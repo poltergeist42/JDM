@@ -3,6 +3,9 @@ HTML_CSS
 ========
 
 :Liens_Web:
+            * https://html.com/attributes/img-src/
+                # Index et syntaxe du html
+
             * http://www.html5-css3-pense-bete.fr/
                 # pense bête html5 et CSS3
 
@@ -54,6 +57,10 @@ Rappel des balises courantes en HTML
 CSS
 ---
 
+    :Liens_Web:
+            * https://emw3.com/css/
+                # Ensemble des selecteurs CSS
+
 Positionnement  et dimensionnement dans la fenêtre (ou dans la boite)
 =====================================================================
 
@@ -100,6 +107,9 @@ Couleurs
 ========
 
     :Liens_Web:
+            * https://emw3.com/colour.html
+                # Calculatrice FaltColor
+                
             * https://htmlcolorcodes.com/
                 # site permettant d'identifier le code hexa d'une couleur. Propose aussi des tutos CSS
 
