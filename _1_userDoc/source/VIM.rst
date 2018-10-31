@@ -262,7 +262,7 @@ Liste des commandes et fonctions utiles
             ex:
             marks b
 
-    #. Faire de l'auto complétion
+    #. Faire de l'auto-complétion
 
         :Liens_Web:
                 * https://linuxfr.org/forums/astucesdivers/posts/%C3%A9diteurvim-lautocompl%C3%A9tion-sous-vim
@@ -290,4 +290,21 @@ Liste des commandes et fonctions utiles
 
                 # Plus d'informations dans l'aide de vim :
                 :help ctag
+
+    #. Activer l'auto-complétion pour presque tous les langages
+
+        :Liens_Web:
+                * https://medium.com/vim-drops/css-autocompletion-on-vim-no-plugins-needed-e8df9ce079c7
+                    # démonstration simple et efficace
+
+        #. Activation dans '.vimrc' ::
+
+            filetype plugin on
+            set omnifunc=syntaxcomplete#Complete
+
+        #. Utilisation ::
+
+            CTRL+x puis CTRL+o
+
+
 

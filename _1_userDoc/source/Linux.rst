@@ -579,8 +579,8 @@ SSH
 Activer la connections ssh
 ++++++++++++++++++++++++++
 
-:Liens_Web:
-            * https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux
+    :Liens_Web:
+                * https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux
             
     :: 
     
@@ -631,6 +631,18 @@ Pour faire du XForwarding
             * http://blog.sckyzo.com/x11-forwarding-en-ssh-via-putty-windows/
             * http://frans-web.com/?p=18
                     
+####
+
+VNCserver
+--------
+
+    :Liens_Web:
+            * https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04
+                # Installation et mise en place du serveur VNC depuis la console linux
+
+            * https://youtu.be/jnpWYko4FNo
+                # Modification du port d'écoute (defaut: 5901)
+
 ####
 
 Pour mettre une IP fixe sur une interfaces réseau
