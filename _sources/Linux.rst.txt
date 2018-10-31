@@ -580,7 +580,7 @@ Activer la connections ssh
 ++++++++++++++++++++++++++
 
     :Liens_Web:
-                * https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux
+               * https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux
             
     :: 
     
@@ -614,7 +614,7 @@ Désactiver la demande de mot de passe de la commande sudo au travers du ssh
 Pour pouvoir se connecter en RDP sur un poste Linux
 ---------------------------------------------------
 
-:Liens_Web:
+    :Liens_Web:
             * https://www.maketecheasier.com/enabling-remote-desktop-access-on-raspberry-pi/
             * https://doc.ubuntu-fr.org/xrdp
 
@@ -627,14 +627,14 @@ Pour pouvoir se connecter en RDP sur un poste Linux
 Pour faire du XForwarding
 -------------------------
 
-:Liens WEB:
+    :Liens WEB:
             * http://blog.sckyzo.com/x11-forwarding-en-ssh-via-putty-windows/
             * http://frans-web.com/?p=18
                     
 ####
 
 VNCserver
---------
+---------
 
     :Liens_Web:
             * https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04
