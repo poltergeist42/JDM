@@ -173,14 +173,14 @@ Créer un alias permanent
 
     #. Editer le fichier '**.bashrc**'
 
-        Il faut éditer le fichier '.bashrc' et ajouter cette commande 
-        à la suite de la ligne : 'some more ls aliases' ::
+        Il faut éditer le fichier '**~/.bashrc**' et ajouter cette commande 
+        à la suite de la ligne : '**some more ls aliases**' ::
 
             if [ -f ~/.bash_aliases ]; then
                 . ~/.bash_aliases
             fi
 
-    #. Créer ou éditer le fichier '**.bash_aliases**'
+    #. Créer ou éditer le fichier '**~/.bash_aliases**'
 
         Ajouter le nouvel alias sous la forme ::
 
@@ -188,7 +188,7 @@ Créer un alias permanent
 
             ex:
             alias python='/user/local/bin/python3.6'
-            alias pip='pip3'
+            alias pip='/usr/local/bin/pip3.6'
 
     #. Relancer '.bashrc'
         ::
@@ -791,9 +791,9 @@ Créer un dossier partagé avec samba
 
     #. Création du dossier à partager
 
-        Par commodité, ce dossier est défini dans '/home' directement. ::
+        Par commodité, ce dossier est défini dans le dossier utilisateur (~) directement. ::
 
-            sudo mkdir /home/share
+            sudo mkdir ~/share
 
     #. Attribution des droits sur le dossier pour l'utilisateur et pour le groupe de l'utilisateur
         ::
@@ -802,8 +802,8 @@ Créer un dossier partagé avec samba
             sudo chown :<user_name> /dossier/partagé
 
             ex:
-            sudo chown pi /home/share
-            sudo chown :pi /home/share
+            sudo chown pi ~/share
+            sudo chown :pi ~/share
 
     #. Modification du fichier 'smb.conf'
         #. Création d'une copie du fichier (par sécurité) ::
