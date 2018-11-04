@@ -1,25 +1,37 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Django &#8212; Documentation JDM 20170523</title>
+    
+    <title>Django &#8212; documentation JDM 20170523</title>
+    
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '20170523',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Docker" href="Docker.html" />
     <link rel="prev" title="DataBase" href="DataBase.html" /> 
-  </head><body>
+  </head>
+  <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -32,7 +44,7 @@
         <li class="right" >
           <a href="DataBase.html" title="DataBase"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">documentation JDM 20170523</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -80,12 +92,12 @@
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://www.supinfo.com/articles/single/5779-bien-debuter-avec-django-docker">https://www.supinfo.com/articles/single/5779-bien-debuter-avec-django-docker</a></dt>
-<dd># Création d’un Container Django</dd>
+<dd># Création d&#8217;un Container Django</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://docs.docker.com/compose/django/">https://docs.docker.com/compose/django/</a></dt>
-<dd># Création d’un container Django (Doc officiel Docker)</dd>
+<dd># Création d&#8217;un container Django (Doc officiel Docker)</dd>
 </dl>
 </li>
 </ul>
@@ -102,13 +114,13 @@
 <blockquote>
 <div><ul>
 <li><p class="first">Créer un dossier avec un nom significatif :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Ce placer dans le répertoire de destination et lancer la création
 de l’environnement virtuel :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
 
 <span class="n">virtualenv</span> <span class="o">--</span><span class="n">system</span><span class="o">-</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="o">.</span>
     <span class="c1"># Le point en fin de ligne représente le répertoire courant</span>
@@ -126,8 +138,8 @@ de l’environnement virtuel :</p>
 <li><dl class="first docutils">
 <dt>Lancer l’environnement virtuel avant de créer le projet Django</dt>
 <dd><ul class="first last">
-<li><p class="first">Exécuter le script d’activation :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">Scripts</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
+<li><p class="first">Exécuter le script d&#8217;activation :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">Scripts</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
 </pre></div>
 </div>
 </li>
@@ -137,7 +149,7 @@ de l’environnement virtuel :</p>
 </li>
 <li><p class="first">Ce placer dans le répertoire de destination et lancer la création
 du projet Django(site principal) :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
 
 <span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startproject</span> <span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span> <span class="o">.</span>
     <span class="c1"># Le point en fin de ligne représente le répertoire courant</span>
@@ -148,24 +160,24 @@ du projet Django(site principal) :</p>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Configurer le fichier «&nbsp;settings.py&nbsp;»</p>
+<li><p class="first">Configurer le fichier &#8220;settings.py&#8221;</p>
 <blockquote>
 <div><ul>
-<li><p class="first">Editer le fichier «&nbsp;settings.py&nbsp;» situé dans le dossier «&nbsp;./[nom_du_projet]/&nbsp;»</p>
+<li><p class="first">Editer le fichier &#8220;settings.py&#8221; situé dans le dossier &#8221;./[nom_du_projet]/&#8221;</p>
 </li>
 <li><p class="first">Modifier les lignes :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;en-us&#39;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;en-us&#39;</span>
 <span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;UTC&#39;</span>
 </pre></div>
 </div>
 <p>par :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;fr-fr&#39;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;fr-fr&#39;</span>
 <span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;Europe/Paris&#39;</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Ajouter après la ligne «&nbsp;STATIC_URL = “/static/”&nbsp;» la ligne :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;static&#39;</span><span class="p">)</span>
+<li><p class="first">Ajouter après la ligne &#8220;STATIC_URL = &#8216;/static/&#8217;&#8221; la ligne :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;static&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -175,10 +187,10 @@ du projet Django(site principal) :</p>
 <li><p class="first">Créer la base de donnée (pour une DB SQLite)</p>
 <blockquote>
 <div><ul>
-<li><p class="first">Se placer au même niveau que le fichiers «&nbsp;manage.py&nbsp;»</p>
+<li><p class="first">Se placer au même niveau que le fichiers &#8220;manage.py&#8221;</p>
 </li>
 <li><p class="first">Effectuer la première migration :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
 </pre></div>
 </div>
 </li>
@@ -191,8 +203,8 @@ du projet Django(site principal) :</p>
 <h3>Démarrer une nouvelle APP<a class="headerlink" href="#demarrer-une-nouvelle-app" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ul>
-<li><p class="first">Se placer au même niveau que le fichiers «&nbsp;manage.py&nbsp;» et exécuter la commande manage :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="p">[</span><span class="n">votre_application</span><span class="p">]</span>
+<li><p class="first">Se placer au même niveau que le fichiers &#8220;manage.py&#8221; et exécuter la commande manage :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="p">[</span><span class="n">votre_application</span><span class="p">]</span>
     <span class="c1"># Un dossier [votre_application] sera créer dans le répertoire courant</span>
 </pre></div>
 </div>
@@ -204,7 +216,7 @@ du projet Django(site principal) :</p>
 <hr class="docutils" />
 <div class="section" id="principes-de-fonctionnement">
 <h2>Principes de fonctionnement<a class="headerlink" href="#principes-de-fonctionnement" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Django travail sur le principe du MVC (Model, Vue, Controler). L’organisation dans Django
+<p>Django travail sur le principe du MVC (Model, Vue, Controler). L&#8217;organisation dans Django
 se présente sous la forme : Model, Vue, Template.</p>
 <p>La correspondance avec le MVC est la suivante :</p>
 <blockquote>
@@ -212,16 +224,16 @@ se présente sous la forme : Model, Vue, Template.</p>
 <li><p class="first">Model (Django : Model) :</p>
 <blockquote>
 <div><ul>
-<li><p class="first"><strong>models.py</strong> : C’est le script qui permet la création des tables
+<li><p class="first"><strong>models.py</strong> : C&#8217;est le script qui permet la création des tables
 dans la base de données.</p>
 <dl class="docutils">
 <dt>Par analogie avec la POO</dt>
 <dd><ul class="first last simple">
-<li>La base de donné est l’objet</li>
-<li>Les tables (définies comme des class dans «&nbsp;models.py&nbsp;»)
-sont des instances de l’objet</li>
-<li>Les champs (définies comme des attribut de class dans «&nbsp;models.py&nbsp;»)
-sont des attributs de l’instances</li>
+<li>La base de donné est l&#8217;objet</li>
+<li>Les tables (définies comme des class dans &#8220;models.py&#8221;)
+sont des instances de l&#8217;objet</li>
+<li>Les champs (définies comme des attribut de class dans &#8220;models.py&#8221;)
+sont des attributs de l&#8217;instances</li>
 </ul>
 </dd>
 </dl>
@@ -232,10 +244,10 @@ sont des attributs de l’instances</li>
 <li><p class="first">Vue (Django : Template) :</p>
 <blockquote>
 <div><ul class="simple">
-<li>Tous les fichiers en «&nbsp;.html&nbsp;» dans ./templates</li>
-<li>Les feuilles de styles («&nbsp;.css&nbsp;») dans ./static</li>
+<li>Tous les fichiers en &#8221;.html&#8221; dans ./templates</li>
+<li>Les feuilles de styles (&#8221;.css&#8221;) dans ./static</li>
 <li><strong>urls.py</strong> : sert de liaison avec views.py. Ce ficher généré les urls à la volée,
-par l’interprétation d’expression régulière (RegEx)</li>
+par l&#8217;interprétation d&#8217;expression régulière (RegEx)</li>
 </ul>
 </div></blockquote>
 </li>
@@ -265,18 +277,18 @@ les formulaires HTML et interagit avec la base de données</li>
 <ol class="last arabic">
 <li><dl class="first docutils">
 <dt>Le serveur de développement</dt>
-<dd><div class="first highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
+<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
 </pre></div>
 </div>
 <p><strong>N.B</strong> : Le port par défaut est le 8000</p>
 <ol class="last arabic">
 <li><p class="first">Démarrage du serveur sur un autre port</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mi">8080</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mi">8080</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Démarrer le serveur en écoutant sur une autre IP</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">8000</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">8000</span>
 </pre></div>
 </div>
 </li>
@@ -291,14 +303,14 @@ les formulaires HTML et interagit avec la base de données</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">/!\Attention/!\:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">les commentaires html  (&lt;!– […] –&gt;) ne s’appliquent pas sur
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">les commentaires html  (&lt;!&#8211; [...] &#8211;&gt;) ne s&#8217;appliquent pas sur
 les instructions Django</td>
 </tr>
 </tbody>
 </table>
 <p>il y a deux formes de commentaires. Les deux formes peuvent être appliquées soit sur une
 seule ligne, soit en mode bloc</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># forme 1</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># forme 1</span>
 <span class="p">{</span><span class="o">%</span> <span class="n">comment</span> <span class="o">%</span><span class="p">}</span>
     <span class="n">un</span> <span class="nb">super</span> <span class="n">commentaire</span>
 <span class="p">{</span><span class="o">%</span> <span class="n">endcomment</span> <span class="o">%</span><span class="p">}</span>
@@ -331,9 +343,9 @@ seule ligne, soit en mode bloc</p>
 </dl>
 </li>
 <li>models.CharField - Cela nous permet de définir un champ texte avec un nombre limité de caractères.</li>
-<li>models.TextField - Cela nous permet de définir un champ texte sans limite de caractères. Parfait pour le contenu d’un blog post !</li>
+<li>models.TextField - Cela nous permet de définir un champ texte sans limite de caractères. Parfait pour le contenu d&#8217;un blog post !</li>
 <li>models.DateTimeField - Définit que le champ en question est une date ou une heure.</li>
-<li>models.ForeignKey - C’est un lien vers un autre modèle.</li>
+<li>models.ForeignKey - C&#8217;est un lien vers un autre modèle.</li>
 </ul>
 </td>
 </tr>
@@ -343,11 +355,11 @@ seule ligne, soit en mode bloc</p>
 <hr class="docutils" />
 <div class="section" id="authentification-alternative-ldap-google-twitter-facebook-etc">
 <h2>Authentification alternative (LDAP, Google, Twitter, Facebook, etc)<a class="headerlink" href="#authentification-alternative-ldap-google-twitter-facebook-etc" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Il y a plusieurs type d’authentification possible.</p>
+<p>Il y a plusieurs type d&#8217;authentification possible.</p>
 <blockquote>
 <div><ul class="simple">
 <li>En utilisant un compte et un mot de passe spécifique à Django</li>
-<li>En utilisant un compte de réseaux social (Google, Twitter, Facebook, etc …)</li>
+<li>En utilisant un compte de réseaux social (Google, Twitter, Facebook, etc ...)</li>
 <li>En utilisant LDAP</li>
 </ul>
 </div></blockquote>
@@ -369,7 +381,7 @@ seule ligne, soit en mode bloc</p>
 </tbody>
 </table>
 <div class="section" id="utiliser-ldap-pour-l-authentification">
-<h3>Utiliser LDAP pour l’authentification<a class="headerlink" href="#utiliser-ldap-pour-l-authentification" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Utiliser LDAP pour l&#8217;authentification<a class="headerlink" href="#utiliser-ldap-pour-l-authentification" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -392,18 +404,18 @@ seule ligne, soit en mode bloc</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">qs:</th><td class="field-body"><ul class="first simple">
-<li>le QuerySet représente l’ensemble des requêtes effectués sur la BDD</li>
+<li>le QuerySet représente l&#8217;ensemble des requêtes effectués sur la BDD</li>
 </ul>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">ForeignKey:</th><td class="field-body"><ul class="first simple">
-<li>c’est une clef Étrangère / Extérieur partagée entre plusieurs éléments (One to Many)</li>
+<li>c&#8217;est une clef Étrangère / Extérieur partagée entre plusieurs éléments (One to Many)</li>
 </ul>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">prefetch_related:</th></tr>
 <tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
-<li>C’est le pré-chargement / la pré-lecture. Pour la gestion du cache</li>
+<li>C&#8217;est le pré-chargement / la pré-lecture. Pour la gestion du cache</li>
 </ul>
 </td>
 </tr>
@@ -429,7 +441,7 @@ seule ligne, soit en mode bloc</p>
 <li><a class="reference internal" href="#rappel-des-commandes-de-base">Rappel des commandes de base</a></li>
 <li><a class="reference internal" href="#types-de-champ-les-plus-courant-models-py">Types de champ les plus courant (models.py)</a></li>
 <li><a class="reference internal" href="#authentification-alternative-ldap-google-twitter-facebook-etc">Authentification alternative (LDAP, Google, Twitter, Facebook, etc)</a><ul>
-<li><a class="reference internal" href="#utiliser-ldap-pour-l-authentification">Utiliser LDAP pour l’authentification</a></li>
+<li><a class="reference internal" href="#utiliser-ldap-pour-l-authentification">Utiliser LDAP pour l&#8217;authentification</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#lexique">Lexique</a></li>
@@ -452,14 +464,12 @@ seule ligne, soit en mode bloc</p>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
-    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -478,12 +488,12 @@ seule ligne, soit en mode bloc</p>
         <li class="right" >
           <a href="DataBase.html" title="DataBase"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">documentation JDM 20170523</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.9.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
     </div>
   </body>
 </html>

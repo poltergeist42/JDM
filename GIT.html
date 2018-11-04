@@ -1,25 +1,37 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>GIT (versioning) &#8212; Documentation JDM 20170523</title>
+    
+    <title>GIT (versioning) &#8212; documentation JDM 20170523</title>
+    
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '20170523',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="HTML_CSS" href="HTML_CSS.html" />
     <link rel="prev" title="ESP8266" href="ESP8266.html" /> 
-  </head><body>
+  </head>
+  <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -32,7 +44,7 @@
         <li class="right" >
           <a href="ESP8266.html" title="ESP8266"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">documentation JDM 20170523</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -54,7 +66,7 @@
 <li><a class="reference external" href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://www.youtube.com/watch?v=rP3T0Ee6pLU&amp;list=PLjwdMgw5TTLXuY5i7RW0QqGdW0NZntqiP">https://www.youtube.com/watch?v=rP3T0Ee6pLU&amp;list=PLjwdMgw5TTLXuY5i7RW0QqGdW0NZntqiP</a></dt>
-<dd># Chaine youtube en français sur l’utilisation de GIT</dd>
+<dd># Chaine youtube en français sur l&#8217;utilisation de GIT</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
@@ -74,7 +86,7 @@
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://alexgirard.com/git-book/">https://alexgirard.com/git-book/</a></dt>
-<dd># “Livre” en français</dd>
+<dd># &#8216;Livre&#8217; en français</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
@@ -94,7 +106,7 @@
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Les options de base pour la configuration</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;votre_pseudo&quot;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;votre_pseudo&quot;</span>
 <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="n">moi</span><span class="nd">@email</span><span class="o">.</span><span class="n">com</span>
     <span class="c1"># on commence par configurer son nom (user.name)</span>
     <span class="c1"># puis son adresse Email (user.email)</span>
@@ -108,7 +120,7 @@
 </li>
 <li><dl class="first docutils">
 <dt>Pour vérifier la configuration</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="nb">list</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="nb">list</span>
 </pre></div>
 </div>
 </dd>
@@ -117,14 +129,14 @@
 <li><dl class="first docutils">
 <dt>Remplacer VI par Nano</dt>
 <dd><ul class="first last">
-<li><p class="first"><a class="reference external" href="https://sourceforge.net/projects/nano/">Télécharger Nano.</a> et l’installer
-dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
+<li><p class="first"><a class="reference external" href="https://sourceforge.net/projects/nano/">Télécharger Nano.</a> et l&#8217;installer
+dans &#8220;C:Program Files (x86)&#8221;</p>
 </li>
 <li><p class="first">Ajouter le chemin de Nano dans le path</p>
 </li>
 <li><dl class="first docutils">
 <dt>Ouvrir une invite de commande et tapez</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">core</span><span class="o">.</span><span class="n">editor</span> <span class="n">nano</span><span class="o">.</span><span class="n">exe</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">core</span><span class="o">.</span><span class="n">editor</span> <span class="n">nano</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
 </dd>
@@ -139,12 +151,12 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="obtenir-de-l-aide">
-<h2>Obtenir de l’aide<a class="headerlink" href="#obtenir-de-l-aide" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Obtenir de l&#8217;aide<a class="headerlink" href="#obtenir-de-l-aide" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>les commandes de bases intégrée a git</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">help</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">help</span>
 <span class="n">git</span> <span class="n">help</span> <span class="o">&lt;</span><span class="n">verbe</span><span class="o">&gt;</span>
 <span class="n">git</span> <span class="o">&lt;</span><span class="n">verbe</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">help</span>
 <span class="n">man</span> <span class="n">git</span><span class="o">-&lt;</span><span class="n">verbe</span><span class="o">&gt;</span>
@@ -162,8 +174,8 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 <blockquote>
 <div><ol class="arabic">
 <li><dl class="first docutils">
-<dt>Initialisation d’un dépôt Git dans un répertoire existant</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+<dt>Initialisation d&#8217;un dépôt Git dans un répertoire existant</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
 </pre></div>
 </div>
 </dd>
@@ -183,7 +195,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://fr.atlassian.com/git/tutorials/saving-changes/gitignore">https://fr.atlassian.com/git/tutorials/saving-changes/gitignore</a></dt>
-<dd># Description de la syntaxe à utiliser pour “.gitignore”</dd>
+<dd># Description de la syntaxe à utiliser pour &#8216;.gitignore&#8217;</dd>
 </dl>
 </li>
 </ul>
@@ -199,8 +211,8 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 <blockquote>
 <div><ol class="arabic">
 <li><dl class="first docutils">
-<dt>Vérifier l’état des fichiers</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+<dt>Vérifier l&#8217;état des fichiers</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
 </dd>
@@ -208,7 +220,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </li>
 <li><dl class="first docutils">
 <dt>Ajouter les données</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">*</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">*</span>
 </pre></div>
 </div>
 </dd>
@@ -216,7 +228,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </li>
 <li><dl class="first docutils">
 <dt>faire un commit</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="s2">&quot;votre commentaire&quot;</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="s2">&quot;votre commentaire&quot;</span>
 </pre></div>
 </div>
 </dd>
@@ -232,7 +244,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>Pour lister une branche</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
     <span class="c1"># la branch ayant un asterics est la branche courante</span>
 </pre></div>
 </div>
@@ -241,7 +253,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </li>
 <li><dl class="first docutils">
 <dt>Pour connaitre la branch avtive</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">symbolic</span><span class="o">-</span><span class="n">ref</span> <span class="n">HEAD</span> <span class="o">--</span><span class="n">short</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">symbolic</span><span class="o">-</span><span class="n">ref</span> <span class="n">HEAD</span> <span class="o">--</span><span class="n">short</span>
 </pre></div>
 </div>
 </dd>
@@ -249,7 +261,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </li>
 <li><dl class="first docutils">
 <dt>Pour créer une nouvelle branch</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branch</span><span class="p">]</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branch</span><span class="p">]</span>
 </pre></div>
 </div>
 </dd>
@@ -257,7 +269,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </li>
 <li><dl class="first docutils">
 <dt>Pour sélectionner et se déplacer sur une branche</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branch</span><span class="p">]</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branch</span><span class="p">]</span>
 </pre></div>
 </div>
 </dd>
@@ -265,7 +277,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </li>
 <li><dl class="first docutils">
 <dt>Pour importer des fichiers depuis une autre branch.</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">chekout</span> <span class="p">[</span><span class="n">branch</span><span class="p">]</span> <span class="p">[</span><span class="n">fichier</span> <span class="n">cible</span><span class="p">]</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">chekout</span> <span class="p">[</span><span class="n">branch</span><span class="p">]</span> <span class="p">[</span><span class="n">fichier</span> <span class="n">cible</span><span class="p">]</span>
 </pre></div>
 </div>
 </dd>
@@ -273,19 +285,19 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </li>
 <li><dl class="first docutils">
 <dt>Pour créer une nouvelle branch et basculer directement dessus</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">B</span> <span class="p">[</span><span class="n">Nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">nouvelle</span> <span class="n">branch</span><span class="p">]</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">B</span> <span class="p">[</span><span class="n">Nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">nouvelle</span> <span class="n">branch</span><span class="p">]</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 </li>
 <li><p class="first">Pour lister les fichiers tracker :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">ls</span><span class="o">-</span><span class="n">files</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">ls</span><span class="o">-</span><span class="n">files</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Pour lister les fichiers non tracker :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">ls</span><span class="o">-</span><span class="n">files</span> <span class="o">--</span><span class="n">others</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">ls</span><span class="o">-</span><span class="n">files</span> <span class="o">--</span><span class="n">others</span>
 
 <span class="n">ou</span> <span class="n">en</span> <span class="n">version</span> <span class="n">courte</span> <span class="p">:</span>
 
@@ -298,12 +310,12 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge">
-<h2>appliquer le contenu d’une branch dans la branch courante (faire un merge)<a class="headerlink" href="#appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>appliquer le contenu d&#8217;une branch dans la branch courante (faire un merge)<a class="headerlink" href="#appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>Se placer sur la branche de destination</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">branch</span> <span class="n">cible</span><span class="p">]</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">branch</span> <span class="n">cible</span><span class="p">]</span>
     <span class="c1"># ex : git checkout master</span>
 </pre></div>
 </div>
@@ -311,8 +323,8 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Lancer la commande «&nbsp;merge&nbsp;» en prenant comme argument la branch a appliquer</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">merge</span> <span class="p">[</span><span class="n">branch_a_appliquer</span><span class="p">]</span>
+<dt>Lancer la commande &#8220;merge&#8221; en prenant comme argument la branch a appliquer</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">merge</span> <span class="p">[</span><span class="n">branch_a_appliquer</span><span class="p">]</span>
     <span class="c1"># ex : git merge dev</span>
 </pre></div>
 </div>
@@ -327,18 +339,18 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 <h2>supprimer des éléments<a class="headerlink" href="#supprimer-des-elements" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Supprimer un fichier du repository (de l’index, mais pas du dossier de travail)</p>
+<li><p class="first">Supprimer un fichier du repository (de l&#8217;index, mais pas du dossier de travail)</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="o">--</span><span class="n">cached</span> <span class="p">[</span><span class="n">nom_du_fichier</span><span class="p">]</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="o">--</span><span class="n">cached</span> <span class="p">[</span><span class="n">nom_du_fichier</span><span class="p">]</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
-<li><p class="first">supprimer un dossier du repository (de l’index, mais pas du dossier de travail)</p>
+<li><p class="first">supprimer un dossier du repository (de l&#8217;index, mais pas du dossier de travail)</p>
 <blockquote>
 <div><ul>
-<li><p class="first">On commence par l’exclure à laide de “.gitignore”</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## gitignore</span>
+<li><p class="first">On commence par l&#8217;exclure à laide de &#8216;.gitignore&#8217;</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">## gitignore</span>
 <span class="c1">## files</span>
 <span class="o">...</span>
 <span class="c1">## dir</span>
@@ -346,8 +358,8 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">on le supprime ensuite de la même façon qu’un fichier</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="o">--</span><span class="n">cached</span> <span class="n">path_to_my_folder</span><span class="o">/</span>
+<li><p class="first">on le supprime ensuite de la même façon qu&#8217;un fichier</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="o">--</span><span class="n">cached</span> <span class="n">path_to_my_folder</span><span class="o">/</span>
 </pre></div>
 </div>
 </li>
@@ -356,7 +368,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </li>
 <li><dl class="first docutils">
 <dt>supprimer tous le cache</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="o">--</span><span class="n">cached</span> <span class="o">.</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="o">--</span><span class="n">cached</span> <span class="o">.</span>
     <span class="c1"># ne pas oublier le point</span>
 </pre></div>
 </div>
@@ -364,15 +376,15 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>réparer l’index si un fichier est supprimer du dossier de travail mais pas de l’index</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span>
+<dt>réparer l&#8217;index si un fichier est supprimer du dossier de travail mais pas de l&#8217;index</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 </li>
 <li><p class="first">supprimer une branch</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">D</span> <span class="p">[</span><span class="n">nom_de_la_branch</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">D</span> <span class="p">[</span><span class="n">nom_de_la_branch</span><span class="p">]</span>
     <span class="c1"># l&#39;option &#39;-D&#39; est l’équivalent de --delete --force</span>
 </pre></div>
 </div>
@@ -382,26 +394,26 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="faire-un-instantane-puis-le-liberer">
-<h2>faire un «&nbsp;instantané&nbsp;» puis le libérer<a class="headerlink" href="#faire-un-instantane-puis-le-liberer" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>faire un &#8220;instantané&#8221; puis le libérer<a class="headerlink" href="#faire-un-instantane-puis-le-liberer" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">faire un instantané</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="p">[</span><span class="n">nom</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="p">[</span><span class="n">nom</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Obtenir la list des stash</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="nb">list</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="nb">list</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Libérer l’instantané, et le supprimer</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pop</span> <span class="p">[</span><span class="nb">id</span> <span class="n">du</span> <span class="n">stash</span> <span class="p">(</span><span class="n">commit</span><span class="p">)</span> <span class="n">ou</span> <span class="n">son</span> <span class="n">nom</span><span class="p">]</span>
+<li><p class="first">Libérer l&#8217;instantané, et le supprimer</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pop</span> <span class="p">[</span><span class="nb">id</span> <span class="n">du</span> <span class="n">stash</span> <span class="p">(</span><span class="n">commit</span><span class="p">)</span> <span class="n">ou</span> <span class="n">son</span> <span class="n">nom</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Appliquer l’instantané</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">apply</span> <span class="p">[</span><span class="n">ID</span> <span class="n">ou</span> <span class="n">nom</span><span class="p">]</span>
+<li><p class="first">Appliquer l&#8217;instantané</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">apply</span> <span class="p">[</span><span class="n">ID</span> <span class="n">ou</span> <span class="n">nom</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
@@ -431,7 +443,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Réparer une erreur non-committée</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span> <span class="n">HEAD</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span> <span class="n">HEAD</span>
 </pre></div>
 </div>
 </li>
@@ -443,12 +455,12 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Annuler le dernier commit</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">revert</span> <span class="n">HEAD</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">revert</span> <span class="n">HEAD</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">remplacer le dernier commit par le présent</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">ammend</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">ammend</span>
 </pre></div>
 </div>
 </li>
@@ -465,7 +477,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 <li><dl class="first docutils">
 <dt>créer un dépôt distant</dt>
 <dd><p class="first">se placer dans le dossier distant</p>
-<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span> <span class="o">--</span><span class="n">bare</span>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span> <span class="o">--</span><span class="n">bare</span>
 </pre></div>
 </div>
 </dd>
@@ -473,12 +485,12 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </li>
 <li><dl class="first docutils">
 <dt>dépôt local</dt>
-<dd><p class="first">Si il s’agit d’un nouveau projet on peut faire un clone</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="p">[</span><span class="o">//</span><span class="n">chemin</span><span class="o">/</span><span class="n">vers</span><span class="o">/</span><span class="n">depot</span><span class="o">/</span><span class="n">distant</span><span class="p">]</span>
+<dd><p class="first">Si il s&#8217;agit d&#8217;un nouveau projet on peut faire un clone</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="p">[</span><span class="o">//</span><span class="n">chemin</span><span class="o">/</span><span class="n">vers</span><span class="o">/</span><span class="n">depot</span><span class="o">/</span><span class="n">distant</span><span class="p">]</span>
 </pre></div>
 </div>
-<p class="last">Si il s’agit d’un projet existant ayant déjà un dépôt distant, on peut changer le
-chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp;» du dépôt local.</p>
+<p class="last">Si il s&#8217;agit d&#8217;un projet existant ayant déjà un dépôt distant, on peut changer le
+chemin du dépôt distant directement en éditant le fichier &#8220;config&#8221; du dépôt local.</p>
 </dd>
 </dl>
 </li>
@@ -496,18 +508,18 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 <div><p><a class="reference external" href="http://guillaumevincent.com/2012/12/23/Git-pour-les-nuls-recuperer_une_branche_distante.html">http://guillaumevincent.com/2012/12/23/Git-pour-les-nuls-recuperer_une_branche_distante.html</a></p>
 </div></blockquote>
 <ol class="last arabic">
-<li><p class="first">Ajouter le dépôt distant «&nbsp;origin&nbsp;»</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="p">[</span><span class="n">url_de_votre_projet_sur_github</span><span class="p">]</span>
+<li><p class="first">Ajouter le dépôt distant &#8220;origin&#8221;</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="p">[</span><span class="n">url_de_votre_projet_sur_github</span><span class="p">]</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Pousser la branch locale «&nbsp;master&nbsp;» vers la branch distante «&nbsp;origin&nbsp;»</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+<li><p class="first">Pousser la branch locale &#8220;master&#8221; vers la branch distante &#8220;origin&#8221;</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Mettre à jour le dépôt local depuis le dépôt distant</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branche</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="p">[</span><span class="n">nom</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branche</span><span class="p">]</span>
     <span class="c1"># le nom de la branch est optionnel si il n&#39;y en a qu&#39;une (origin)</span>
 </pre></div>
 </div>
@@ -516,12 +528,12 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 <dt>Lister les branch distantes</dt>
 <dd><ul class="first last">
 <li><p class="first">Lister les branch distantes toutes seules</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">afficher l’url à la suite du nom de la branch</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+<li><p class="first">afficher l&#8217;url à la suite du nom de la branch</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
 </pre></div>
 </div>
 </li>
@@ -529,37 +541,37 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 </dd>
 </dl>
 </li>
-<li><p class="first">Modifier l’url du dépôt distant</p>
+<li><p class="first">Modifier l&#8217;url du dépôt distant</p>
 <blockquote>
 <div><ul class="simple">
-<li>Ouvrir le dossier «&nbsp;.git&nbsp;» que se trouve à la base du dépôt local</li>
-<li>Editer le fichier «&nbsp;config&nbsp;» et modifier la ligne «&nbsp;URL&nbsp;»</li>
+<li>Ouvrir le dossier &#8221;.git&#8221; que se trouve à la base du dépôt local</li>
+<li>Editer le fichier &#8220;config&#8221; et modifier la ligne &#8220;URL&#8221;</li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Pousser toutes branch d’un coup sur le dépôt distant</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">all</span>
+<li><p class="first">Pousser toutes branch d&#8217;un coup sur le dépôt distant</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">all</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Supprimer une branche distante</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:[</span><span class="n">nom_de_la_branche_distante</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:[</span><span class="n">nom_de_la_branche_distante</span><span class="p">]</span>
     <span class="c1"># N.B : les &#39;:&#39; doivent être colles au nom de la branch distante</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Obtenir la list des branch distantes (liste depuis de dépôt local)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">r</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">r</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Obtenr la list de toutes les branch</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">a</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">a</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Pour mettre à jour une branch locale depuis depuis une branch distante</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="o">-</span><span class="n">a</span> <span class="p">[</span><span class="n">depot_distant</span><span class="p">]</span> <span class="p">[</span><span class="n">branch_locale</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="o">-</span><span class="n">a</span> <span class="p">[</span><span class="n">depot_distant</span><span class="p">]</span> <span class="p">[</span><span class="n">branch_locale</span><span class="p">]</span>
     <span class="c1"># ex : git pull -a origin dev</span>
 </pre></div>
 </div>
@@ -576,12 +588,12 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Synchroniser le dépôt local et le dépôt distant :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Contrôler que la nouvelle branch distante est bien référencée dans le dépôt local :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">a</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">a</span>
 
     <span class="o">*</span> <span class="n">master</span>
       <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">dev_Jojo</span>   <span class="o">&lt;--</span>
@@ -590,7 +602,7 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 </div>
 </li>
 <li><p class="first">Créer et Tracker la nouvelle branch :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="o">--</span><span class="n">track</span> <span class="p">[</span><span class="n">nom_de_la_branche</span><span class="p">]</span> <span class="p">[</span><span class="n">chemin_distant</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="o">--</span><span class="n">track</span> <span class="p">[</span><span class="n">nom_de_la_branche</span><span class="p">]</span> <span class="p">[</span><span class="n">chemin_distant</span><span class="p">]</span>
 
 <span class="n">ex</span><span class="p">:</span>
 
@@ -599,7 +611,7 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 </div>
 </li>
 <li><p class="first">Basculer sur la nouvelle branch :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">nom_de_la_branch</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">nom_de_la_branch</span><span class="p">]</span>
 
 <span class="n">ex</span><span class="p">:</span>
 
@@ -630,7 +642,7 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 </tbody>
 </table>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="o">--</span><span class="n">prune</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="o">--</span><span class="n">prune</span>
 </pre></div>
 </div>
 </div>
@@ -647,14 +659,14 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 <li><a class="reference internal" href="#">GIT (versioning)</a><ul>
 <li><a class="reference internal" href="#les-liens-utiles">Les liens utiles</a></li>
 <li><a class="reference internal" href="#configurer-git">Configurer GIT</a></li>
-<li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l’aide</a></li>
+<li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l&#8217;aide</a></li>
 <li><a class="reference internal" href="#demarrer-un-depot-git">Démarrer un dépôt Git</a></li>
 <li><a class="reference internal" href="#gitignore">gitignore</a></li>
 <li><a class="reference internal" href="#enregistrer-des-modifications-dans-le-depot">Enregistrer des modifications dans le dépôt</a></li>
 <li><a class="reference internal" href="#creer-lister-et-selectionner-une-branche">Créer, lister et sélectionner une branche</a></li>
-<li><a class="reference internal" href="#appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge">appliquer le contenu d’une branch dans la branch courante (faire un merge)</a></li>
+<li><a class="reference internal" href="#appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge">appliquer le contenu d&#8217;une branch dans la branch courante (faire un merge)</a></li>
 <li><a class="reference internal" href="#supprimer-des-elements">supprimer des éléments</a></li>
-<li><a class="reference internal" href="#faire-un-instantane-puis-le-liberer">faire un «&nbsp;instantané&nbsp;» puis le libérer</a></li>
+<li><a class="reference internal" href="#faire-un-instantane-puis-le-liberer">faire un &#8220;instantané&#8221; puis le libérer</a></li>
 <li><a class="reference internal" href="#reparer-annuler-remplacer">Réparer / annuler / remplacer</a><ul>
 <li><a class="reference internal" href="#reparer-une-erreur-non-committee">Réparer une erreur non-committée</a></li>
 <li><a class="reference internal" href="#annuler-remplacer-le-dernier-commit">annuler / remplacer le dernier commit</a></li>
@@ -683,14 +695,12 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
-    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -709,12 +719,12 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
         <li class="right" >
           <a href="ESP8266.html" title="ESP8266"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">documentation JDM 20170523</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.9.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
     </div>
   </body>
 </html>

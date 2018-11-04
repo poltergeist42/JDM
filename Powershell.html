@@ -1,25 +1,37 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>PowerShell &#8212; Documentation JDM 20170523</title>
+    
+    <title>PowerShell &#8212; documentation JDM 20170523</title>
+    
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '20170523',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="PYTHON" href="Python.html" />
     <link rel="prev" title="Machine Learning" href="Machine_learning.html" /> 
-  </head><body>
+  </head>
+  <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -32,7 +44,7 @@
         <li class="right" >
           <a href="Machine_learning.html" title="Machine Learning"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">documentation JDM 20170523</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -57,7 +69,7 @@
 </tbody>
 </table>
 <div class="section" id="obtenir-de-l-aide">
-<h3>Obtenir de l’aide<a class="headerlink" href="#obtenir-de-l-aide" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Obtenir de l&#8217;aide<a class="headerlink" href="#obtenir-de-l-aide" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -68,46 +80,46 @@
 </ul>
 </div></blockquote>
 <ol class="last arabic">
-<li><p class="first">Obtenir de l’aide depuis le shell</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="p">[</span><span class="n">nom_de_la_commande</span><span class="p">]</span>
+<li><p class="first">Obtenir de l&#8217;aide depuis le shell</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="p">[</span><span class="n">nom_de_la_commande</span><span class="p">]</span>
 
 <span class="n">ex</span> <span class="p">:</span>
 <span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">get</span><span class="o">-</span><span class="n">member</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Les diférents modes de l’aide</p>
+<li><p class="first">Les diférents modes de l&#8217;aide</p>
 <blockquote>
 <div><ul>
 <li><p class="first">Pour consulter les exemples&nbsp;:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">examples</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">examples</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Pour plus d’informations&nbsp;:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">detailed</span>
+<li><p class="first">Pour plus d&#8217;informations&nbsp;:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">detailed</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Pour obtenir des informations techniques&nbsp;:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">full</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">full</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Pour l’aide en ligne&nbsp;:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">online</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">online</span>
 </pre></div>
 </div>
 </li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Obtenir la liste de toutes les blibliothèques d’aide dans PowerShell</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span> <span class="n">about</span>
+<li><p class="first">Obtenir la liste de toutes les blibliothèques d&#8217;aide dans PowerShell</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">help</span> <span class="n">about</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Obtenir de l’aide sur le formatage et l’utilisation des commentaires</p>
+<li><p class="first">Obtenir de l&#8217;aide sur le formatage et l&#8217;utilisation des commentaires</p>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -122,19 +134,19 @@
 </table>
 <ul>
 <li><p class="first">Command powershell</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span> <span class="n">about_comment_based</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">help</span> <span class="n">about_comment_based</span>
 </pre></div>
 </div>
 </li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Obtenir de l’aide sur les méthodes ou les propriétés d’un objet «&nbsp;.net&nbsp;»</p>
+<li><p class="first">Obtenir de l&#8217;aide sur les méthodes ou les propriétés d&#8217;un objet &#8221;.net&#8221;</p>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Identifier le type (TypeName) de l’objet avec Get-Member</p>
+<li><p class="first">Identifier le type (TypeName) de l&#8217;objet avec Get-Member</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; $a = &quot;&quot;
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>&gt; $a = &quot;&quot;
 &gt; $a | gm
 
     TypeName : System.String
@@ -143,9 +155,9 @@
 </div></blockquote>
 </li>
 <li><p class="first">Rechercher dans Google le TypeName identifier et aller sur la page
-Microsoft MSDN correspondant a la classe de l’objet</p>
+Microsoft MSDN correspondant a la classe de l&#8217;objet</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Recherche</span> <span class="p">:</span> <span class="n">System</span><span class="o">.</span><span class="n">String</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Recherche</span> <span class="p">:</span> <span class="n">System</span><span class="o">.</span><span class="n">String</span>
 
 <span class="n">Résultat</span> <span class="p">:</span>
 
@@ -172,12 +184,12 @@ Propriétés)</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">activer le mode débogage</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">psdebug</span> <span class="o">-</span><span class="n">trace</span> <span class="mi">2</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">psdebug</span> <span class="o">-</span><span class="n">trace</span> <span class="mi">2</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Désactiver le mode débogage</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">psdebug</span> <span class="o">-</span><span class="n">trace</span> <span class="mi">0</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">psdebug</span> <span class="o">-</span><span class="n">trace</span> <span class="mi">0</span>
 </pre></div>
 </div>
 </li>
@@ -185,7 +197,7 @@ Propriétés)</p>
 </div></blockquote>
 </div>
 <div class="section" id="generer-l-aide-automatique-dans-un-script-ou-dans-une-fonction">
-<h3>Générer l’aide automatique dans un script ou dans une fonction<a class="headerlink" href="#generer-l-aide-automatique-dans-un-script-ou-dans-une-fonction" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Générer l&#8217;aide automatique dans un script ou dans une fonction<a class="headerlink" href="#generer-l-aide-automatique-dans-un-script-ou-dans-une-fonction" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -198,7 +210,7 @@ Propriétés)</p>
 </li>
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6#syntax-for-comment-based-help-in-script-modules">https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6#syntax-for-comment-based-help-in-script-modules</a></dt>
-<dd># Les mots clef à utiliser dans le bloc d’aide</dd>
+<dd># Les mots clef à utiliser dans le bloc d&#8217;aide</dd>
 </dl>
 </li>
 </ul>
@@ -212,7 +224,7 @@ Propriétés)</p>
 <div class="section" id="slicing">
 <h2>Slicing<a class="headerlink" href="#slicing" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$a = &quot;test.txt&quot;
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>$a = &quot;test.txt&quot;
 $a.Substring(0, $a.length -4)
 &gt; test
 $a.Substring(2, $a.length -4)
@@ -228,7 +240,7 @@ $a.Substring($a.length -4)
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Pour lancer PowerShell ISE depuis la console</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">c</span><span class="p">:</span>\<span class="n">ISE</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">c</span><span class="p">:</span>\<span class="n">ISE</span>
 </pre></div>
 </div>
 </li>
@@ -239,7 +251,7 @@ $a.Substring($a.length -4)
 <div class="section" id="autoriser-lexecution-des-script">
 <h3>Autoriser l’exécution des script<a class="headerlink" href="#autoriser-lexecution-des-script" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">ExecutionPolicy</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">ExecutionPolicy</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -248,7 +260,7 @@ $a.Substring($a.length -4)
 <div class="section" id="lancer-un-script-depuis-la-console-powershell">
 <h3>Lancer un script depuis la console powershell<a class="headerlink" href="#lancer-un-script-depuis-la-console-powershell" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="o">.</span> <span class="o">.</span>\<span class="p">[</span><span class="n">mon_script</span><span class="p">]</span><span class="o">.</span><span class="n">ps1</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="o">.</span> <span class="o">.</span>\<span class="p">[</span><span class="n">mon_script</span><span class="p">]</span><span class="o">.</span><span class="n">ps1</span>
     <span class="c1"># Ne pas oublier le premier &quot;.&quot;</span>
 </pre></div>
 </div>
@@ -256,9 +268,9 @@ $a.Substring($a.length -4)
 </div>
 <hr class="docutils" />
 <div class="section" id="connaitre-toutes-les-methodes-d-un-objet">
-<h3>Connaître toutes les méthodes d’un objet<a class="headerlink" href="#connaitre-toutes-les-methodes-d-un-objet" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Connaître toutes les méthodes d&#8217;un objet<a class="headerlink" href="#connaitre-toutes-les-methodes-d-un-objet" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Objet_ou_command</span><span class="p">]</span> <span class="o">|</span> <span class="n">get</span><span class="o">-</span><span class="n">member</span> <span class="p">(</span><span class="n">ou</span> <span class="n">gm</span><span class="p">)</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Objet_ou_command</span><span class="p">]</span> <span class="o">|</span> <span class="n">get</span><span class="o">-</span><span class="n">member</span> <span class="p">(</span><span class="n">ou</span> <span class="n">gm</span><span class="p">)</span>
     <span class="c1"># exemple pour une variable : $v_a | get-member</span>
 </pre></div>
 </div>
@@ -268,7 +280,7 @@ $a.Substring($a.length -4)
 <div class="section" id="selectionner-une-commande-depuis-une-fenetre-graphique">
 <h3>Séléctionner une commande depuis une fenêtre graphique<a class="headerlink" href="#selectionner-une-commande-depuis-une-fenetre-graphique" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Show</span><span class="o">-</span><span class="n">Command</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Show</span><span class="o">-</span><span class="n">Command</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -296,8 +308,8 @@ $a.Substring($a.length -4)
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>Les Tableau fixe</dt>
-<dd><p class="first">Ces tableau ne permettent pas d’ajouter ou de supprimer des données</p>
-<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\&gt; $monTableau = @(1, &#39;a&#39;)
+<dd><p class="first">Ces tableau ne permettent pas d&#8217;ajouter ou de supprimer des données</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span>PS C:\&gt; $monTableau = @(1, &#39;a&#39;)
 PS C:\&gt; $monTableau
 1
 a
@@ -315,8 +327,8 @@ Au caractère Ligne:1 : 1
 </li>
 <li><dl class="first docutils">
 <dt>Les Tableau dynamiques</dt>
-<dd><p class="first">Ces tableau permettent d’ajouter ou de supprimer des éléments</p>
-<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\&gt; [System.Collections.ArrayList]$monTableau = @(1, &#39;a&#39;)
+<dd><p class="first">Ces tableau permettent d&#8217;ajouter ou de supprimer des éléments</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span>PS C:\&gt; [System.Collections.ArrayList]$monTableau = @(1, &#39;a&#39;)
 PS C:\&gt; $monTableau
 1
 a
@@ -343,12 +355,12 @@ PS C:\&gt;
 <li><p class="first">Caractère échappement</p>
 <blockquote>
 <div><dl class="docutils">
-<dt>Le caractère d’échappement est le «&nbsp;`&nbsp;» (accent grave seul [ALT_GR-7])</dt>
+<dt>Le caractère d’échappement est le &#8220;`&#8221; (accent grave seul [ALT_GR-7])</dt>
 <dd><blockquote class="first">
 <div><ul>
 <li><p class="first">Placé en fin de ligne il permet de ligne, il sert de continuation pour aller
 à la ligne</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$Reg = get-wmiobject -Namespace Root\Default -computerName `
+<div class="highlight-default"><div class="highlight"><pre><span></span>$Reg = get-wmiobject -Namespace Root\Default -computerName `
        $Comptuer -List | where-object `
        {$_.Name -eq &quot;StdRegProv&quot;}
 </pre></div>
@@ -358,7 +370,7 @@ PS C:\&gt;
 </div></blockquote>
 <ul>
 <li><p class="first">Placé avant une variable elle sera interprétée comme une chaine de caractère</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ps:&gt; $v_maVariable = &quot;test&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span>ps:&gt; $v_maVariable = &quot;test&quot;
 
 ps:&gt; write-host &quot;affichage de la variable : $v_maVariable&quot;
 ps:&gt; affichage de la variable : test
@@ -372,7 +384,7 @@ ps:&gt; affichage de la variable : $v_maVariable
 <blockquote class="last">
 <div><ul>
 <li><p class="first">Placé devant un caractère, il sera interpréter comme une commande</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ps:&gt; $v_maVariable = &quot;test&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span>ps:&gt; $v_maVariable = &quot;test&quot;
 ps:&gt; write-host &quot;blabla`t$v_maVariable&quot;
 ps:&gt; blabla    test
 </pre></div>
@@ -393,16 +405,16 @@ ps:&gt; blabla    test
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">variable typee dynamiquement</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$maVarible = valeur
+<div class="highlight-default"><div class="highlight"><pre><span></span>$maVarible = valeur
 </pre></div>
 </div>
 </li>
 <li><p class="first">variable fortement typee</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[bool] $maVarible = true
+<div class="highlight-default"><div class="highlight"><pre><span></span>[bool] $maVarible = true
 </pre></div>
 </div>
 <p>N.B : par convention les string se declarent avec des simples cotes</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$maVarible = &#39;text&#39;
+<div class="highlight-default"><div class="highlight"><pre><span></span>$maVarible = &#39;text&#39;
 </pre></div>
 </div>
 </li>
@@ -415,9 +427,9 @@ ps:&gt; blabla    test
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">$_:</th><td class="field-body">contient l’objet en cours dans le pipeline</td>
+<tr class="field-odd field"><th class="field-name">$_:</th><td class="field-body">contient l&#8217;objet en cours dans le pipeline</td>
 </tr>
-<tr class="field-even field"><th class="field-name">$Error:</th><td class="field-body">contient les objets d’erreur de la session PowerShell en cours</td>
+<tr class="field-even field"><th class="field-name">$Error:</th><td class="field-body">contient les objets d&#8217;erreur de la session PowerShell en cours</td>
 </tr>
 </tbody>
 </table>
@@ -427,8 +439,8 @@ ps:&gt; blabla    test
 <h3>Ecrire un bloc de texte sur plusieur ligne dans une variable (le here-string)<a class="headerlink" href="#ecrire-un-bloc-de-texte-sur-plusieur-ligne-dans-une-variable-le-here-string" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><p>Pour écrire un bloc de texte sur plusieur ligne dans une variable, il faut
-entourer le bloc avec &#64;” … “&#64; ou &#64;&nbsp;» … «&nbsp;&#64;.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Simples cotes
+entourer le bloc avec &#64;&#8217; ... &#8216;&#64; ou &#64;&#8221; ... &#8220;&#64;.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Simples cotes
 PS C:\&gt; $myvar = @&#39;
 &gt;&gt; blabla ...
 &gt;&gt; Je s&#39;appel groot !
@@ -443,8 +455,8 @@ PS C:\&gt; $myvar = @&quot;
 &gt;&gt; &quot;@
 </pre></div>
 </div>
-<p><strong>Rappel</strong> : Les simples cotes ne permettent pas d’interpréter les variables
-qu’elles contiennent alors que les double le permettent.</p>
+<p><strong>Rappel</strong> : Les simples cotes ne permettent pas d&#8217;interpréter les variables
+qu&#8217;elles contiennent alors que les double le permettent.</p>
 </div></blockquote>
 </div>
 </div>
@@ -454,11 +466,11 @@ qu’elles contiennent alors que les double le permettent.</p>
 <blockquote>
 <div><ol class="arabic">
 <li><dl class="first docutils">
-<dt>Methode classique avec la commande “write-host”</dt>
+<dt>Methode classique avec la commande &#8216;write-host&#8217;</dt>
 <dd><p class="first">Dans cette commande, les simples cotes ne permettent pas d’interpréter de
-variable. L’utilisation des doubles cotes permet l’interpretation de variable ou
-d’objet</p>
-<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\Users\polter&gt; $valeur = 2
+variable. L&#8217;utilisation des doubles cotes permet l&#8217;interpretation de variable ou
+d&#8217;objet</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span>PS C:\Users\polter&gt; $valeur = 2
 PS C:\Users\polter&gt; write-host &#39;$valeur&#39;
 $valeur
 PS C:\Users\polter&gt; write-host &quot;$valeur&quot;
@@ -468,12 +480,12 @@ PS C:\Users\polter&gt; write-host &quot;$valeur&quot;
 </dd>
 </dl>
 </li>
-<li><p class="first">Méthode “plus propre” avec l’option “format” (-f)</p>
+<li><p class="first">Méthode &#8216;plus propre&#8217; avec l&#8217;option &#8216;format&#8217; (-f)</p>
 <blockquote>
 <div><p>Avec cette méthode on utilise les doubles cotes pour encadrer le texte, les
-accolades avec un numéro d’index a l’intérieur (commençant a 0). Les variables sont
-placées a l’extérieur du bloc (après le “-f”) et séparées par des virgules</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\Users\polter&gt; $valeur = 2
+accolades avec un numéro d&#8217;index a l’intérieur (commençant a 0). Les variables sont
+placées a l’extérieur du bloc (après le &#8216;-f&#8217;) et séparées par des virgules</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>PS C:\Users\polter&gt; $valeur = 2
 PS C:\Users\polter&gt; $valeur2 = 2
 PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeur + $valeur2)
 2 + 2 = 4
@@ -486,9 +498,9 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 </div>
 <hr class="docutils" />
 <div class="section" id="renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique">
-<h2>Renvoyer la sortie d’une commande vers une fenêtre graphique<a class="headerlink" href="#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Renvoyer la sortie d&#8217;une commande vers une fenêtre graphique<a class="headerlink" href="#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">polter</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">commande</span><span class="p">]</span> <span class="o">|</span> <span class="n">Out</span><span class="o">-</span><span class="n">GridView</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">polter</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">commande</span><span class="p">]</span> <span class="o">|</span> <span class="n">Out</span><span class="o">-</span><span class="n">GridView</span>
     <span class="c1"># La fenêtre qui apparait permet alors d&#39;appliquer des filtres en direct</span>
 
 <span class="n">ex</span> <span class="p">:</span>
@@ -502,7 +514,7 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 <div class="section" id="declarer-une-fonction">
 <h2>Déclarer une fonction<a class="headerlink" href="#declarer-une-fonction" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="p">[</span><span class="n">nom_de_la_fonction</span><span class="p">]</span> <span class="p">{</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="p">[</span><span class="n">nom_de_la_fonction</span><span class="p">]</span> <span class="p">{</span>
 <span class="p">[</span><span class="n">command_1</span><span class="p">]</span>
 <span class="p">[</span><span class="n">command_2</span><span class="p">]</span>
 <span class="p">[</span><span class="n">etc_</span><span class="o">...</span><span class="p">]</span>
@@ -520,7 +532,7 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 <h2>Admisitration Exchange<a class="headerlink" href="#admisitration-exchange" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Page d’information pour toutes les versions d’exchange</p>
+<li><p class="first">Page d&#8217;information pour toutes les versions d&#8217;exchange</p>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference external" href="https://technet.microsoft.com/en-us/library/mt587043(v=exchg.150).aspx">https://technet.microsoft.com/en-us/library/mt587043(v=exchg.150).aspx</a></li>
@@ -603,12 +615,12 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Pour stocker le repertoire de travail courant</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Push</span><span class="o">-</span><span class="n">Location</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Push</span><span class="o">-</span><span class="n">Location</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Pour retourner dans le repertoire de travail stocker précédement</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pop</span><span class="o">-</span><span class="n">Location</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Pop</span><span class="o">-</span><span class="n">Location</span>
 </pre></div>
 </div>
 </li>
@@ -619,7 +631,7 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 <div class="section" id="tester-si-un-chemin-exist">
 <h2>Tester si un chemin exist<a class="headerlink" href="#tester-si-un-chemin-exist" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Test</span><span class="o">-</span><span class="n">Path</span> <span class="p">[</span><span class="n">chemin_a_tester</span><span class="p">]</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Test</span><span class="o">-</span><span class="n">Path</span> <span class="p">[</span><span class="n">chemin_a_tester</span><span class="p">]</span>
 
 <span class="n">ex</span> <span class="p">:</span>
 
@@ -681,7 +693,7 @@ PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeu
 <div class="section" id="conaitre-les-iformations-de-tous-les-medias">
 <h3>Conaitre les iformations de tous les medias<a class="headerlink" href="#conaitre-les-iformations-de-tous-les-medias" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## Pour obtenir les infos de tous les médias
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>## Pour obtenir les infos de tous les médias
 Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | select -Property * | fl
 
 ## Pour obtenir les infos d&#39;un média en particulier (ex : le disque dur C:
@@ -693,7 +705,7 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 <div class="section" id="connaitre-la-clef-de-licence-de-windows">
 <h3>Connaitre la clef de licence de Windows<a class="headerlink" href="#connaitre-la-clef-de-licence-de-windows" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>(Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey
 </pre></div>
 </div>
 </div></blockquote>
@@ -701,7 +713,7 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 <div class="section" id="connaitre-les-information-du-bios">
 <h3>Connaitre les information du BIOS<a class="headerlink" href="#connaitre-les-information-du-bios" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">WmiObject</span> <span class="n">win32_bios</span> <span class="o">|</span> <span class="n">select</span> <span class="o">*</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">WmiObject</span> <span class="n">win32_bios</span> <span class="o">|</span> <span class="n">select</span> <span class="o">*</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -711,7 +723,7 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 <div class="section" id="activer-psremote-depuis-un-poste">
 <h2>Activer PSRemote depuis un poste<a class="headerlink" href="#activer-psremote-depuis-un-poste" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enable</span><span class="o">-</span><span class="n">PSRemoting</span> <span class="o">-</span><span class="n">force</span>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Enable</span><span class="o">-</span><span class="n">PSRemoting</span> <span class="o">-</span><span class="n">force</span>
     <span class="c1"># &#39;-force&#39; permet de supprimer les intéractions utilisateurs</span>
 </pre></div>
 </div>
@@ -721,7 +733,7 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 <div class="section" id="supprimer-un-dossier-et-son-contenu">
 <h2>Supprimer un dossier et son contenu<a class="headerlink" href="#supprimer-un-dossier-et-son-contenu" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Get-ChildItem [Chemin du dossier] -recurse | where {$_.mode -like &#39;d*&#39; } | remove-item -Recurse -force -Verbose
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>Get-ChildItem [Chemin du dossier] -recurse | where {$_.mode -like &#39;d*&#39; } | remove-item -Recurse -force -Verbose
     # &#39;-force&#39; permet de supprimer tous les éléments sans confirmation
     # &#39;-Verbose&#39; permet d&#39;afficher toutes les opérations en cours dans la console
 </pre></div>
@@ -730,7 +742,7 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 </div>
 <hr class="docutils" />
 <div class="section" id="manipuler-les-variables-d-environement">
-<h2>Manipuler les variables d’environement<a class="headerlink" href="#manipuler-les-variables-d-environement" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Manipuler les variables d&#8217;environement<a class="headerlink" href="#manipuler-les-variables-d-environement" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -738,7 +750,7 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="https://ss64.com/ps/syntax-env.html">https://ss64.com/ps/syntax-env.html</a></dt>
-<dd># Démonstration de manipulation des variable d’environnement</dd>
+<dd># Démonstration de manipulation des variable d&#8217;environnement</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
@@ -773,18 +785,18 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 </table>
 <ol class="arabic">
 <li><p class="first">Ouvrir le fichier du profil PowerShell :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS :&gt; notepad $PROFILE
+<div class="highlight-default"><div class="highlight"><pre><span></span>PS :&gt; notepad $PROFILE
 </pre></div>
 </div>
 </li>
 <li><p class="first">Créer un alias associer au chemin de VIM :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">alias</span> <span class="n">vi</span> <span class="s2">&quot;C:\Program Files (x86)\Vim</span><span class="se">\v</span><span class="s2">im80\gvim.exe&quot;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">alias</span> <span class="n">vi</span> <span class="s2">&quot;C:\Program Files (x86)\Vim</span><span class="se">\v</span><span class="s2">im80\gvim.exe&quot;</span>
 <span class="nb">set</span><span class="o">-</span><span class="n">alias</span> <span class="n">vim</span> <span class="s2">&quot;C:\Program Files (x86)\Vim</span><span class="se">\v</span><span class="s2">im80\gvim.exe&quot;</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Tester après avoir fermer et réouvert PowerShell :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vim</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vim</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </li>
@@ -803,16 +815,16 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
   <ul>
 <li><a class="reference internal" href="#">PowerShell</a><ul>
 <li><a class="reference internal" href="#commandes-utiles">Commandes utiles</a><ul>
-<li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l’aide</a></li>
+<li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l&#8217;aide</a></li>
 <li><a class="reference internal" href="#activer-desactiver-le-mode-debogage">Activer / Désactiver le mode débogage</a></li>
-<li><a class="reference internal" href="#generer-l-aide-automatique-dans-un-script-ou-dans-une-fonction">Générer l’aide automatique dans un script ou dans une fonction</a></li>
+<li><a class="reference internal" href="#generer-l-aide-automatique-dans-un-script-ou-dans-une-fonction">Générer l&#8217;aide automatique dans un script ou dans une fonction</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#slicing">Slicing</a><ul>
 <li><a class="reference internal" href="#windows-powershell-integrated-scripting-environment-ise">Windows PowerShell Integrated Scripting Environment (ISE)</a></li>
 <li><a class="reference internal" href="#autoriser-lexecution-des-script">Autoriser l’exécution des script</a></li>
 <li><a class="reference internal" href="#lancer-un-script-depuis-la-console-powershell">Lancer un script depuis la console powershell</a></li>
-<li><a class="reference internal" href="#connaitre-toutes-les-methodes-d-un-objet">Connaître toutes les méthodes d’un objet</a></li>
+<li><a class="reference internal" href="#connaitre-toutes-les-methodes-d-un-objet">Connaître toutes les méthodes d&#8217;un objet</a></li>
 <li><a class="reference internal" href="#selectionner-une-commande-depuis-une-fenetre-graphique">Séléctionner une commande depuis une fenêtre graphique</a></li>
 </ul>
 </li>
@@ -825,7 +837,7 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 </ul>
 </li>
 <li><a class="reference internal" href="#equivalent-du-print-ou-du-echo">Equivalent du print (ou du echo)</a></li>
-<li><a class="reference internal" href="#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique">Renvoyer la sortie d’une commande vers une fenêtre graphique</a></li>
+<li><a class="reference internal" href="#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique">Renvoyer la sortie d&#8217;une commande vers une fenêtre graphique</a></li>
 <li><a class="reference internal" href="#declarer-une-fonction">Déclarer une fonction</a></li>
 <li><a class="reference internal" href="#admisitration-exchange">Admisitration Exchange</a></li>
 <li><a class="reference internal" href="#automatisation-de-windows-et-de-windows-server-avec-windows-powershell">Automatisation de Windows et de Windows Server avec Windows PowerShell</a></li>
@@ -840,7 +852,7 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
 </li>
 <li><a class="reference internal" href="#activer-psremote-depuis-un-poste">Activer PSRemote depuis un poste</a></li>
 <li><a class="reference internal" href="#supprimer-un-dossier-et-son-contenu">Supprimer un dossier et son contenu</a></li>
-<li><a class="reference internal" href="#manipuler-les-variables-d-environement">Manipuler les variables d’environement</a></li>
+<li><a class="reference internal" href="#manipuler-les-variables-d-environement">Manipuler les variables d&#8217;environement</a></li>
 <li><a class="reference internal" href="#ouvrir-un-document-avec-vim-depuis-powershell">Ouvrir un document avec VIM depuis PowerShell</a></li>
 </ul>
 </li>
@@ -861,14 +873,12 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
-    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -887,12 +897,12 @@ Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -li
         <li class="right" >
           <a href="Machine_learning.html" title="Machine Learning"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">documentation JDM 20170523</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.9.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
     </div>
   </body>
 </html>

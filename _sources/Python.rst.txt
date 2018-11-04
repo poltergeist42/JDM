@@ -48,8 +48,8 @@ os library
             * https://docs.python.org/3.4/library/os.html
                 # doc officiel de la librairie
                 
-Traitement des répertoires
---------------------------
+OS_lib: Traitement des répertoires
+----------------------------------
 
         #. Connaître le répertoire de travail ::
         
@@ -128,12 +128,12 @@ Traitement des répertoires
 shutil library
 ==============
 
-:Liens_Web:
+    :Liens_Web:
             * https://docs.python.org/3.4/library/shutil.html
                 # Documentation officielle de la lib.
                 
-Traitement des répertoires
---------------------------
+shutil: Traitement des répertoires
+----------------------------------
 
         #. Supprimer un répertoire non vide ::
         
@@ -175,8 +175,8 @@ pip (Python installing packages)
             * http://sametmax.com/votre-python-aime-les-pip/
                 # ce liens montre des exemples d'utilisation de pip
 
-Installation de PIP
--------------------
+Installation de PIP sous linux
+------------------------------
 
     :Liens_Web:
 
@@ -191,6 +191,12 @@ Installation de PIP
         python get-pip.py
             # se placer dans le répertoire d'installation et lancer le script
             # une élévation est peut être nécessaire
+
+        /!\: si aucun alias sur python n'a été créé, il faut lancer python avec son numéros de 
+             version.
+
+             ex:
+             python3.6 get-pip.py
                     
     #. Installation depuis apt-get ::
     
