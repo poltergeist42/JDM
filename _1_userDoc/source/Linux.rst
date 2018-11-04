@@ -2,113 +2,114 @@
 LINUX
 =====
 
+-----
 Shell
-=====
+-----
 
-rappel des commandes de bases
------------------------------
+Rappel des commandes de bases
+=============================
 
-:Liens web:
+    :Liens web:
             * http://wiki.linux-france.org/wiki/Les_commandes_fondamentales_de_Linux
 
-        +--------------------------+--------------------------------------------------+
-        |        Command           |          Meaning                                 |
-        +==========================+==================================================+
-        | ls                       | list files in current directory                  |
-        |                          |    # pour afficher la list de tous les éléments, |
-        |                          |    même cachés                                   |
-        |                          |                                                  |
-        |                          |        * ls -a                                   |
-        +--------------------------+--------------------------------------------------+
-        | cd                       | change directory                                 |
-        +--------------------------+--------------------------------------------------+
-        | pwd                      | print working directory                          |
-        +--------------------------+--------------------------------------------------+
-        | rm                       | filename remove filename                         |
-        |                          |    # Pour forcer la suppression d'un             | 
-        |                          |    # répertoir non vide                          |
-        |                          |                                                  |
-        |                          |        * rm -Rf monrepertoire                    |
-        +--------------------------+--------------------------------------------------+
-        | mkdir *directoryname*    | make directory with directoryname                |
-        +--------------------------+--------------------------------------------------+
-        | rmdir *directoryname*    | remove empty directory                           |
-        +--------------------------+--------------------------------------------------+
-        | cat textfile             | display contents of textfile in the terminal     |
-        +--------------------------+--------------------------------------------------+
-        | mv oldfile newfile       | move (rename) oldfile to newfile                 |
-        +--------------------------+--------------------------------------------------+
-        | cp oldfile newfile       | copy oldfile to newfile                          |
-        +--------------------------+--------------------------------------------------+
-        | man command              | display manual of command                        |
-        +--------------------------+--------------------------------------------------+
-        | date                     | read system date/time                            |
-        +--------------------------+--------------------------------------------------+
-        | echo                     | echo what is typed back in the terminal          |
-        +--------------------------+--------------------------------------------------+
-        | grep                     | search program that uses regular expressions     |
-        +--------------------------+--------------------------------------------------+
-        | sudo                     | perform as root user                             |
-        +--------------------------+--------------------------------------------------+
-        | ./program                | run program                                      |
-        +--------------------------+--------------------------------------------------+
-        | exit                     | quit terminal session                            |
-        +--------------------------+--------------------------------------------------+
+    +--------------------------+--------------------------------------------------+
+    |        Command           |          Meaning                                 |
+    +==========================+==================================================+
+    | ls                       | list files in current directory                  |
+    |                          |    # pour afficher la list de tous les éléments, |
+    |                          |    même cachés                                   |
+    |                          |                                                  |
+    |                          |        * ls -a                                   |
+    +--------------------------+--------------------------------------------------+
+    | cd                       | change directory                                 |
+    +--------------------------+--------------------------------------------------+
+    | pwd                      | print working directory                          |
+    +--------------------------+--------------------------------------------------+
+    | rm                       | filename remove filename                         |
+    |                          |    # Pour forcer la suppression d'un             | 
+    |                          |    # répertoir non vide                          |
+    |                          |                                                  |
+    |                          |        * rm -Rf monrepertoire                    |
+    +--------------------------+--------------------------------------------------+
+    | mkdir *directoryname*    | make directory with directoryname                |
+    +--------------------------+--------------------------------------------------+
+    | rmdir *directoryname*    | remove empty directory                           |
+    +--------------------------+--------------------------------------------------+
+    | cat textfile             | display contents of textfile in the terminal     |
+    +--------------------------+--------------------------------------------------+
+    | mv oldfile newfile       | move (rename) oldfile to newfile                 |
+    +--------------------------+--------------------------------------------------+
+    | cp oldfile newfile       | copy oldfile to newfile                          |
+    +--------------------------+--------------------------------------------------+
+    | man command              | display manual of command                        |
+    +--------------------------+--------------------------------------------------+
+    | date                     | read system date/time                            |
+    +--------------------------+--------------------------------------------------+
+    | echo                     | echo what is typed back in the terminal          |
+    +--------------------------+--------------------------------------------------+
+    | grep                     | search program that uses regular expressions     |
+    +--------------------------+--------------------------------------------------+
+    | sudo                     | perform as root user                             |
+    +--------------------------+--------------------------------------------------+
+    | ./program                | run program                                      |
+    +--------------------------+--------------------------------------------------+
+    | exit                     | quit terminal session                            |
+    +--------------------------+--------------------------------------------------+
 
 ####
 
-rappel des raccourcis de navigation dans le shell
--------------------------------------------------
+Rappel des raccourcis de navigation dans le shell
+=================================================
 
-        +----------------------------+----------------------------------------------+
-        |   Key or Key Combination   |                  Function                    |
-        +============================+==============================================+
-        | Ctrl + A                   | Move cursor to beginning of line             |
-        +----------------------------+----------------------------------------------+
-        | Ctrl + C                   | Stop currently-executing process             |
-        +----------------------------+----------------------------------------------+
-        | Ctrl + D                   | Log out—equivalent to typing exit            |
-        +----------------------------+----------------------------------------------+
-        | Ctrl + E                   | Move cursor to end of line                   |
-        +----------------------------+----------------------------------------------+
-        | Ctrl + H                   | Delete character in front of cursor          |
-        +----------------------------+----------------------------------------------+
-        | Ctrl + L                   | Clear terminal                               |
-        +----------------------------+----------------------------------------------+
-        | Ctrl + R                   | Search command history                       |
-        +----------------------------+----------------------------------------------+
-        | Ctrl + Z                   | Suspend a program                            |
-        +----------------------------+----------------------------------------------+
-        | Arrow Left/Right           | Move cursor left/right one character         |
-        +----------------------------+----------------------------------------------+
-        | Arrow Up/Down              | Scrolls through previous commands            |
-        +----------------------------+----------------------------------------------+
-        | Shift + PageUp/PageDown    | Move one page up or down in terminal output  |
-        +----------------------------+----------------------------------------------+
-        | Tab                        | Command or file name completion              |
-        +----------------------------+----------------------------------------------+
-        | Tab Tab                    | Shows all command or file name possibilities |
-        +----------------------------+----------------------------------------------+
+    +----------------------------+----------------------------------------------+
+    |   Key or Key Combination   |                  Function                    |
+    +============================+==============================================+
+    | Ctrl + A                   | Move cursor to beginning of line             |
+    +----------------------------+----------------------------------------------+
+    | Ctrl + C                   | Stop currently-executing process             |
+    +----------------------------+----------------------------------------------+
+    | Ctrl + D                   | Log out—equivalent to typing exit            |
+    +----------------------------+----------------------------------------------+
+    | Ctrl + E                   | Move cursor to end of line                   |
+    +----------------------------+----------------------------------------------+
+    | Ctrl + H                   | Delete character in front of cursor          |
+    +----------------------------+----------------------------------------------+
+    | Ctrl + L                   | Clear terminal                               |
+    +----------------------------+----------------------------------------------+
+    | Ctrl + R                   | Search command history                       |
+    +----------------------------+----------------------------------------------+
+    | Ctrl + Z                   | Suspend a program                            |
+    +----------------------------+----------------------------------------------+
+    | Arrow Left/Right           | Move cursor left/right one character         |
+    +----------------------------+----------------------------------------------+
+    | Arrow Up/Down              | Scrolls through previous commands            |
+    +----------------------------+----------------------------------------------+
+    | Shift + PageUp/PageDown    | Move one page up or down in terminal output  |
+    +----------------------------+----------------------------------------------+
+    | Tab                        | Command or file name completion              |
+    +----------------------------+----------------------------------------------+
+    | Tab Tab                    | Shows all command or file name possibilities |
+    +----------------------------+----------------------------------------------+
 
 ####
 
 Faire du multi-screen  sur une fenêtre terminal
------------------------------------------------
+===============================================
 
 Installation de screen
-++++++++++++++++++++++
-::
+----------------------
+    ::
 
-    sudo apt-get install screen
+        sudo apt-get install screen
                 
 Lancer l'application "screen"
-+++++++++++++++++++++++++++++
-::
+-----------------------------
+    ::
 
-    screen
+        screen
                 
 Liste des commandes des bases pour screen
-+++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------
 
     +--------------------------+------------------------------------------------------------+
     | Raccourcis clavier       |                        Fonctions                           |
@@ -134,7 +135,7 @@ Liste des commandes des bases pour screen
 ####
 
 linux rediriger sortie vers null
---------------------------------
+================================
 
 :Liens_Web:
             * http://www.lanterne-rouge.info/article-que-signifie-dev-null-2-1-70233357.html
@@ -143,7 +144,7 @@ linux rediriger sortie vers null
 ####
 
 Faire un script en Shell
-------------------------
+========================
 
 :Liens_Web:
             * https://doc.ubuntu-fr.org/tutoriel/script_shell
@@ -152,7 +153,8 @@ Faire un script en Shell
 ####
 
 Rendre un script exécutable
----------------------------
+===========================
+
     ::
 
         # Pour le rendre exécutable
@@ -164,9 +166,9 @@ Rendre un script exécutable
 ####
 
 Créer un alias permanent
-------------------------
+========================
 
-:Liens_Web:
+    :Liens_Web:
             * https://doc.ubuntu-fr.org/alias
 
     #. Editer le fichier '**.bashrc**'
@@ -195,19 +197,20 @@ Créer un alias permanent
 
 ####
 
+-----------------------
 Gestion des permissions
-=======================
+-----------------------
 
 activer le compte root
-----------------------
+======================
     ::
     
         sudo passwd root
 
 ####
 
-faire une élévation valable toute la durée de la session
---------------------------------------------------------
+Faire une élévation valable toute la durée de la session
+========================================================
     ::
     
         sudo -s
@@ -216,33 +219,33 @@ faire une élévation valable toute la durée de la session
 ####
 
 Pour copier des fichiers en root depuis l'interface graphique
--------------------------------------------------------------
+=============================================================
 
-        Installation du logiciel "gksu"
+    Installation du logiciel "gksu"
+    ::
+    
+        apt-get install gksu
+        
+    Ouvrir l'explorateur de fichier.
+    Dans le menu **"Aide"**, cliquer sur l'item **"A propos"**
+    dans la fenêtre d'information qui s'affiche, relever le nom de l'explorateur
+    
+        ex : Thunar
+        
+    Dans une fenêtre terminal entrer :
         ::
         
-            apt-get install gksu
-            
-        Ouvrir l'explorateur de fichier.
-        dans le menu **"Aide"**, cliquer sur l'item **"A propos"**
-        dans la fenêtre d'information qui s'affiche, relever le nom de l'explorateur
+            gksu *nom_de_l_explorateur*
         
-            ex : Thunar
-            
-        Dans une fenêtre terminal entrer :
-            ::
-            
-                gksu *nom_de_l_explorateur*
-            
-            ex : gksu Thunar
-            
-        L'explorateur de fichier doit s'ouvrir. Un bandeau orange vous signal que l'on se
-        trouve sur le compte root.
+        ex : gksu Thunar
+        
+    L'explorateur de fichier doit s'ouvrir. Un bandeau orange vous signal que l'on se
+    trouve sur le compte root.
 
 ####
 
 Groupes
--------
+=======
 
 :Liens_Web:
             * https://doc.ubuntu-fr.org/permissions
@@ -273,7 +276,7 @@ Groupes
                 ls -al
             
 ACL (Propriétaire, RWX)
------------------------
+=======================
 
     #. Changer le propriétaire d'un dossier (ownership)
         ::
@@ -300,20 +303,21 @@ ACL (Propriétaire, RWX)
 
 ####
 
+---------------------
 Configuration Système
-=====================
+---------------------
 
 Date et heure
--------------
+=============
 
 Conaitre la date et l'heure du système
-++++++++++++++++++++++++++++++++++++++
+--------------------------------------
     ::
     
         date
         
 Synchronyser la date et l'heure avec un serveur de temp (NTP)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-------------------------------------------------------------
 
 :Liens_Web:
             * https://www1.zonewebmaster.eu/serveur-debian-general:regler-date-heure
@@ -353,18 +357,19 @@ Synchronyser la date et l'heure avec un serveur de temp (NTP)
 ####
 
 Changer la disposition du clavier
----------------------------------
+=================================
     ::
     
         sudo dpkg-reconfigure keyboard-configuration
 
 ####
 
+----------------------
 Administration système
-======================
+----------------------
 
 Arrêter / Démarrer les services (deamon)
-----------------------------------------
+========================================
 
     #. Arrêter / démarrer un service
         ::
@@ -382,7 +387,7 @@ Arrêter / Démarrer les services (deamon)
 ####
 
 Créer une tâche planifié (cron)
--------------------------------
+===============================
 
 :Liens Web:     
                 - https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux/executer-un-programme-a-une-heure-differee
@@ -406,7 +411,7 @@ Créer une tâche planifié (cron)
 ####
 
 Pour créer un script qui s’exécute au démarrage du système
-----------------------------------------------------------
+==========================================================
 
 Pour faire en sorte qu'un script s’exécute au démarrage, il faut 2 éléments distincts :
     * Un script shell placé dans **/etc/init.d**
@@ -427,7 +432,7 @@ Pour faire en sorte qu'un script s’exécute au démarrage, il faut 2 élément
         autrement dit les services.
                                                 
 Préparation du script shell
-+++++++++++++++++++++++++++
+---------------------------
     
     #. Ouvrir une copie du fichier "skeleton" et modifier les ligne suivante :
         ::
@@ -503,7 +508,7 @@ Préparation du script shell
             ex : chmod a+x blink_init
  
 Préparation du script python
-++++++++++++++++++++++++++++
+----------------------------
      
     #. Si se n'est pas déjà fait, éditer le script et ajouter la ligne suivante
        sur la première ligne de votre fichier
@@ -523,7 +528,7 @@ Préparation du script python
 ####
 
 Connaître la version du système
--------------------------------
+===============================
 
     #. Installation de lsb-release
         ::
@@ -538,7 +543,7 @@ Connaître la version du système
 ####
 
 Connaître la version d'un paquet
---------------------------------
+================================
 
     #. Installation de apt-show-versions
         ::
@@ -553,7 +558,7 @@ Connaître la version d'un paquet
 ####
 
 Emplacement des programmes
---------------------------
+==========================
 
     #. Connaitre l'emplacement d'un programme
         ::
@@ -570,24 +575,25 @@ Emplacement des programmes
 
 ####
 
+------
 Réseau
-======
+------
 
 SSH
----
+===
 
 Activer la connections ssh
-++++++++++++++++++++++++++
+--------------------------
 
     :Liens_Web:
-                * https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux
+              * https://coagul.org/drupal/article/installation-et-utilisation-ssh-sous-linux
             
     :: 
     
         sudo aptitude install openssh-client openssh-server
 
 Désactiver la demande de mot de passe de la commande sudo au travers du ssh
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+---------------------------------------------------------------------------
 
     #. Ajouter l'utilisateur au fichiers sudoers
     
@@ -612,9 +618,9 @@ Désactiver la demande de mot de passe de la commande sudo au travers du ssh
 ####
 
 Pour pouvoir se connecter en RDP sur un poste Linux
----------------------------------------------------
+===================================================
 
-:Liens_Web:
+    :Liens_Web:
             * https://www.maketecheasier.com/enabling-remote-desktop-access-on-raspberry-pi/
             * https://doc.ubuntu-fr.org/xrdp
 
@@ -625,16 +631,53 @@ Pour pouvoir se connecter en RDP sur un poste Linux
 ####
 
 Pour faire du XForwarding
--------------------------
+=========================
 
-:Liens WEB:
-            * http://blog.sckyzo.com/x11-forwarding-en-ssh-via-putty-windows/
-            * http://frans-web.com/?p=18
-                    
+    :Liens WEB:
+            * http://frans-web.com/x11-forwarding-en-ssh-via-putty.html
+                # Guide pas à pas pour la mise en place du Xforwarding (N.B: utilise un serveur X virtuel)
+
+            * https://doc.ubuntu-fr.org/tutoriel/xforwarding
+                # Autre tuto utilisant un serveur X virtuel
+
+            * https://www.it-connect.fr/chapitres/deport-daffichage-avec-ssh-x11-forwarding/
+                # Guide simplifier utilisant le serveur X11
+
+    #. Activation coté serveur (linux distant)
+
+        Dans le fichier **/etc/ssh/sshd_config**, s'assurer que les 2 paramètres suivant sont bon: ::
+
+            X11Forwarding yes
+            X11DisplayOffset 10
+
+        **N.B**: Si le serveur distant n'a pas de serveur graphique, utiliser la méthode proposée
+             sur le `wiki ubuntu <https://doc.ubuntu-fr.org/tutoriel/xforwarding>`_.
+
+    #. Mise en place coté client (Windows)
+
+        #. Installation du serveur X vidéo sur le client
+
+            Télécharger et installer `xming <https://sourceforge.net/projects/xming/files/latest/download>`_
+
+    #. Activer le mode X11 forwarding dans Putty ::
+        
+        Connection
+            \_SSH
+                \_X11   --> Enable X11 forwarding
+
+    #. Ouvrir une application graphique distante
+
+        Ajouter une esperluette à la suite de la commande. ::
+
+            ex:
+            xterm&
+
+            ou firefox&
+
 ####
 
 VNCserver
---------
+=========
 
     :Liens_Web:
             * https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04
@@ -646,7 +689,7 @@ VNCserver
 ####
 
 Pour mettre une IP fixe sur une interfaces réseau
--------------------------------------------------
+=================================================
 
 :Liens Web:
             * http://www.cyberciti.biz/tips/howto-ubuntu-linux-convert-dhcp-network-configuration-to-static-ip-configuration.html
@@ -681,7 +724,7 @@ Pour mettre une IP fixe sur une interfaces réseau
 ####
 
 Pour active le WIFI
--------------------
+===================
 
 :liens Web:
            * https://wiki.debian.org/fr/WiFi/HowToUse
@@ -708,7 +751,7 @@ Pour active le WIFI
 ####
 
 Se connecter a un réseau wifi en ligne de commande
---------------------------------------------------
+==================================================
 
 :liens Web:
            * http://korben.info/comment-se-connecter-a-un-reseau-wifi-en-ligne-de-commande-sous-linux.html
@@ -726,7 +769,7 @@ Se connecter a un réseau wifi en ligne de commande
 ####
 
 Créer un dossier partagé avec samba
------------------------------------
+===================================
 
 :Liens_Web:
             * https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated%2C%20Simple%20and%20Brief%20Way%21
@@ -768,7 +811,7 @@ Créer un dossier partagé avec samba
             sudo cp /etc/samba/smb.conf ~
                 # cette copie se trouve dans '/home/<user>/'
 
-        #. Edition de smb.conf ::
+        #. Édition de smb.conf ::
 
             sudo vim /etc/samba/smb.conf
 
@@ -803,7 +846,7 @@ Créer un dossier partagé avec samba
 ####
 
 Télécharger un fichier en ligne de commande (wget)
---------------------------------------------------
+==================================================
 
 :Liens_Web:
             * https://doc.ubuntu-fr.org/wget
@@ -815,18 +858,19 @@ Télécharger un fichier en ligne de commande (wget)
         
 ####
 
+----------------
 Gestion Matériel
-================
+----------------
 
 Info / Gestion CPU
-------------------
+==================
 
 :Liens_Web:
             * https://www.tecmint.com/check-linux-cpu-information/
                 # 9 Commandes pour la gestion du CPU
 
 Connaître la liste des matériel usb
------------------------------------
+===================================
     ::
 
         lsusb
@@ -834,7 +878,7 @@ Connaître la liste des matériel usb
 ####
 
 Connaître l’espace disque utilise et celui disponible
------------------------------------------------------
+=====================================================
     ::
 
         df -h
@@ -842,9 +886,9 @@ Connaître l’espace disque utilise et celui disponible
 ####
 
 Les ports séries
-----------------
+================
 
-:Liens Web:
+    :Liens Web:
            * http://www.instructables.com/id/Read-and-write-from-serial-port-with-Raspberry-Pi/
 
 Rappel (équivalence de la notation Windows / Linux
@@ -862,7 +906,7 @@ Rappel (équivalence de la notation Windows / Linux
     +---------+------------+
 
 Connaître la liste des ports série
-++++++++++++++++++++++++++++++++++
+----------------------------------
     ::
     
         ls /dev/tty*
@@ -871,7 +915,7 @@ Connaître la liste des ports série
               Ils contiennent habituellement USB ou ACM (Abstract Control Model)
                         
 Interroger le journal sur les ports série
-+++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------
     ::
 
         dmesg | grep tty
