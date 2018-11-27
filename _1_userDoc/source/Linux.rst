@@ -197,9 +197,9 @@ Créer un alias permanent
 
 ####
 
------------------------
-Gestion des permissions
------------------------
+--------------------------------------
+Gestion des groupes et des permissions
+--------------------------------------
 
 activer le compte root
 ======================
@@ -207,40 +207,50 @@ activer le compte root
     
         sudo passwd root
 
+Changer le mot de passe d'un utilisateur
+========================================
+    ::
+
+        sudo passwd [username]
+
+        ex:
+
+        sudo passwd root
+
 ####
 
 Faire une élévation valable toute la durée de la session
 ========================================================
     ::
-    
+
         sudo -s
-            # N.B : Le prompt devrais passer en root@[nom_de_machine]
+        # N.B : Le prompt devrais passer en root@[nom_de_machine]
 
 ####
 
 Pour copier des fichiers en root depuis l'interface graphique
 =============================================================
 
-    Installation du logiciel "gksu"
+Installation du logiciel "gksu"
     ::
-    
+
         apt-get install gksu
-        
+
     Ouvrir l'explorateur de fichier.
     Dans le menu **"Aide"**, cliquer sur l'item **"A propos"**
     dans la fenêtre d'information qui s'affiche, relever le nom de l'explorateur
-    
-        ex : Thunar
-        
-    Dans une fenêtre terminal entrer :
-        ::
-        
-            gksu *nom_de_l_explorateur*
-        
+
+        *ex : Thunar*
+
+Dans une fenêtre terminal entrer :
+    ::
+
+        gksu *nom_de_l_explorateur*
+
         ex : gksu Thunar
-        
-    L'explorateur de fichier doit s'ouvrir. Un bandeau orange vous signal que l'on se
-    trouve sur le compte root.
+
+L'explorateur de fichier doit s'ouvrir. Un bandeau orange vous signal que l'on se
+trouve sur le compte root.
 
 ####
 

@@ -10,6 +10,9 @@ Ensemble des informations sur la création et l'utilisation des fichiers JSON
 :Liens_Web:
             * http://www.tutorialspoint.com/online_json_editor.htm
                 # Générateur online de JSON
+
+            * http://www.objgen.com/json?demo=true
+                # Un autre générateur de JSON
             
 Généralités
 -----------

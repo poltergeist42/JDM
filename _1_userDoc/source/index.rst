@@ -14,6 +14,7 @@ Mon journal de manip
    Aquariophilie
    Composants
    ComputerVision
+   Cookbook
    DataBase
    Django
    Docker
