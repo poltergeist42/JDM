@@ -79,6 +79,9 @@ Version facile / Automatique
         
     #. Intégrer l'utilisateur au groupe docker ::
     
+        sudo usermod -aG docker <utilisateur>
+
+        ex:
         sudo usermod -aG docker pierre
 
 Installation sous Windows
@@ -525,3 +528,11 @@ Docker-Compose
     :Liens_Web:
             * https://docs.docker.com/compose/install/#prerequisites
                 # Documentation d'installation de Docker-Compose (Win, Linux, MacOs)
+
+Installation avec pip
+---------------------
+
+    ::
+
+        sudo pip install docker-compose
+

@@ -1,37 +1,25 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Composants Spécifiques &#8212; documentation JDM 20170523</title>
-    
+    <title>Composants Spécifiques &#8212; Documentation JDM 20170523</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '20170523',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Computer Vision" href="ComputerVision.html" />
     <link rel="prev" title="Aquariophilie" href="Aquariophilie.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -44,7 +32,7 @@
         <li class="right" >
           <a href="Aquariophilie.html" title="Aquariophilie"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">documentation JDM 20170523</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -64,14 +52,14 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">AVR_Studio:</th><td class="field-body">Proposer par Microchip (anciennement Atmel) permet de faire du debug
-au travers de la sonde JTAG mais n&#8217;accepte que
+au travers de la sonde JTAG mais n’accepte que
 les programmateur officiels</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Arduino:</th><td class="field-body">En utilisant le mode &#8220;Arduino as ISP. Ne permet pas de programmer
-autre chose que du &#8216;.ino&#8217;</td>
+<tr class="field-even field"><th class="field-name">Arduino:</th><td class="field-body">En utilisant le mode «&nbsp;Arduino as ISP. Ne permet pas de programmer
+autre chose que du “.ino”</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">AVRDUDE:</th><td class="field-body">Tout en ligne de commande, mais accepte tous les programmateur (même
-&#8216;Arduino as ISP&#8217;</td>
+“Arduino as ISP”</td>
 </tr>
 </tbody>
 </table>
@@ -91,7 +79,7 @@ autre chose que du &#8216;.ino&#8217;</td>
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://zadig.akeo.ie/">http://zadig.akeo.ie/</a></dt>
-<dd># Le logiciel Zadig permet d&#8217;installer des pilotes USB
+<dd># Le logiciel Zadig permet d’installer des pilotes USB
 # pour plusieurs programmateur différents</dd>
 </dl>
 </li>
@@ -122,7 +110,7 @@ autre chose que du &#8216;.ino&#8217;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>/!\ Ne pas cocher la case &#8216;ajouter au path&#8217; mais ajouter les chemins manuellement</strong></p>
+<p><strong>/!\ Ne pas cocher la case “ajouter au path” mais ajouter les chemins manuellement</strong></p>
 <ol class="arabic">
 <li><p class="first">Chemins à ajouter dans le path</p>
 <blockquote>
@@ -150,14 +138,14 @@ autre chose que du &#8216;.ino&#8217;</td>
 </table>
 <ol class="arabic">
 <li><p class="first">Téléverser un programme</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="p">[</span><span class="n">NOM_DU_MICROCONTROLEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">v</span> <span class="p">(</span><span class="n">mode</span> <span class="n">verbose</span><span class="p">)</span> <span class="o">-</span><span class="n">U</span> <span class="n">flash</span><span class="p">:[</span><span class="n">r</span><span class="o">|</span><span class="n">w</span><span class="o">|</span><span class="n">v</span><span class="p">]:[</span><span class="n">NOM_DU_HEX_A_TELEVERSER</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="p">[</span><span class="n">NOM_DU_MICROCONTROLEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">v</span> <span class="p">(</span><span class="n">mode</span> <span class="n">verbose</span><span class="p">)</span> <span class="o">-</span><span class="n">U</span> <span class="n">flash</span><span class="p">:[</span><span class="n">r</span><span class="o">|</span><span class="n">w</span><span class="o">|</span><span class="n">v</span><span class="p">]:[</span><span class="n">NOM_DU_HEX_A_TELEVERSER</span><span class="p">]</span>
 
 <span class="n">ex</span> <span class="p">:</span> <span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="n">usbasp</span> <span class="o">-</span><span class="n">p</span> <span class="n">m2560</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">U</span> <span class="n">flash</span><span class="p">:</span><span class="n">w</span><span class="p">:</span><span class="n">Marlin_witbox_2</span><span class="o">-</span><span class="mf">510.</span><span class="n">hex</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Obtenir la liste des noms des microcontroleurs utilisables</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span>
 
 <span class="n">ex</span> <span class="p">:</span> <span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="n">usbasp</span>
 </pre></div>
@@ -208,7 +196,7 @@ autre chose que du &#8216;.ino&#8217;</td>
 <div><p>La sérigraphie est masqué lorsque le magnétomètre est enfiché dans une breadbord.
 L’implantation si dessous est donc présenter en <strong>vue de dessus (donc sérigraphie cachée)</strong></p>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Haut</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Haut</span>
     <span class="mi">3</span><span class="n">v3</span>
     <span class="n">DRDY</span>
     <span class="n">SDA</span>
@@ -227,8 +215,8 @@ L’implantation si dessous est donc présenter en <strong>vue de dessus (donc s
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>Préparation :</dt>
-<dd><p class="first">Si ce n&#8217;est pas déjà fait, il faut installer les outils Python :</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<dd><p class="first">Si ce n’est pas déjà fait, il faut installer les outils Python :</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">i2c</span><span class="o">-</span><span class="n">tools</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">smbus</span>
@@ -242,11 +230,11 @@ L’implantation si dessous est donc présenter en <strong>vue de dessus (donc s
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>L&#8217;installation et configurations des librairies et outils Quick2wire</dt>
+<dt>L’installation et configurations des librairies et outils Quick2wire</dt>
 <dd><p class="first"><strong>N.B :</strong> le lignes qui suivent sont copiées telles quelles depuis la page instructables</p>
 <dl class="last docutils">
-<dt>Se positionner à l&#8217;endroit ou l&#8217;on veut installer quick2wire</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span><span class="o">.</span><span class="n">git</span>
+<dt>Se positionner à l’endroit ou l’on veut installer quick2wire</dt>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span><span class="o">.</span><span class="n">git</span>
     <span class="c1">#get quick2wire from github.com</span>
 
     <span class="c1">#if don&#39;t have git, try &quot;sudo apt-get install git&quot;</span>
@@ -300,15 +288,15 @@ L’implantation si dessous est donc présenter en <strong>vue de dessus (donc s
 <li><dl class="first docutils">
 <dt>la déclinaison terrestre</dt>
 <dd><p class="first">Pour pouvoir être le plus précis possible, il faut recalibrer la boussole en tenant compte
-de notre décalage par rapport au pôle magnétique. On appel ça : <strong>&#8220;la déclinaison terrestre&#8221;</strong>
+de notre décalage par rapport au pôle magnétique. On appel ça : <strong>«&nbsp;la déclinaison terrestre&nbsp;»</strong>
 Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <blockquote>
 <div><ul class="simple">
-<li>Longitude :  49° 1&#8216;22.48&#8221;N</li>
-<li>Latitude  :   2° 1&#8216;50.51&#8221;E</li>
+<li>Longitude :  49° 1’22.48&nbsp;»N</li>
+<li>Latitude  :   2° 1’50.51&nbsp;»E</li>
 </ul>
 </div></blockquote>
-<p class="last">se qui donne à la date du 18/08/2015 : 0° 9,24&#8217;</p>
+<p class="last">se qui donne à la date du 18/08/2015 : 0° 9,24”</p>
 </dd>
 </dl>
 </li>
@@ -341,7 +329,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <tr class="row-even"><td>angle par pas (en sortie d’arbre)</td>
 <td>0.087890625°</td>
 </tr>
-<tr class="row-odd"><td>Nbe de pas / tour (en sortie d&#8217;arbre)</td>
+<tr class="row-odd"><td>Nbe de pas / tour (en sortie d’arbre)</td>
 <td>4096</td>
 </tr>
 </tbody>
@@ -451,14 +439,14 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </table>
 <dl class="docutils">
 <dt><strong>N.B :</strong> les 8 phases donnent 1 tour complet sur le moteur,</dt>
-<dd>soit 1/64 de tour en sortie d&#8217;arbre.</dd>
+<dd>soit 1/64 de tour en sortie d’arbre.</dd>
 </dl>
 </div></blockquote>
 </div>
 <div class="section" id="organisation-des-phases-en-python3">
 <h3>Organisation des phases en python3<a class="headerlink" href="#organisation-des-phases-en-python3" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Séquence de sortie</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Séquence de sortie</span>
 <span class="n">ndp</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="n">phase</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">ndp</span><span class="p">))</span>
 <span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
@@ -472,9 +460,9 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </pre></div>
 </div>
 <dl class="docutils">
-<dt><strong>N.B :</strong> la liste contenu dans chaque phase, correspond à l&#8217;état</dt>
+<dt><strong>N.B :</strong> la liste contenu dans chaque phase, correspond à l’état</dt>
 <dd><p class="first">(1 = Hight = True ; 0 = Low = False) à appliquer sur le broches du GPIO</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">ex</span>  <span class="p">:</span> <span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span>  <span class="p">:</span> <span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
     <span class="o">--&gt;</span> <span class="n">GPIO17</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="o">--&gt;</span> <span class="n">GPIO18</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="o">--&gt;</span> <span class="n">GPIO27</span> <span class="o">=</span> <span class="mi">0</span>
@@ -516,7 +504,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>se connecter au module de configuration</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
 </pre></div>
 </div>
 </dd>
@@ -525,7 +513,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </ol>
 <dl class="docutils">
 <dt>#.* faire la séquence suivante</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;5 Enable Camera&quot;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;5 Enable Camera&quot;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
         <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Enable</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
         <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Finish</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
         <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Oui</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
@@ -551,7 +539,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <div><ol class="arabic">
 <li><dl class="first docutils">
 <dt>Faire les mises à jour système de rigueur puis</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">picamera</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">picamera</span>
 </pre></div>
 </div>
 </dd>
@@ -563,7 +551,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <div class="section" id="utilisation-avec-python">
 <h3>utilisation avec python<a class="headerlink" href="#utilisation-avec-python" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">picamera</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">picamera</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -602,20 +590,20 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <blockquote>
 <div><p># Attention les entrée du RPi étant en 3.3v,
 il faut faire un pont diviseur entre la broche
-&#8220;Echo&#8221; et le GND pour pouvoir se brancher
+«&nbsp;Echo&nbsp;» et le GND pour pouvoir se brancher
 sur le RPi</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Vitesse du son:</th><td class="field-body"><p class="first">Le son se déplace à une vitesse d&#8217;environ 343 m/s (à température ambiante de 20°),
+<tr class="field-odd field"><th class="field-name">Vitesse du son:</th><td class="field-body"><p class="first">Le son se déplace à une vitesse d’environ 343 m/s (à température ambiante de 20°),
 soit environ 34300 cm/s</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Distance:</th><td class="field-body"><dl class="first last docutils">
 <dt>D = 17150 x time</dt>
 <dd><p class="first last"># 17150 correspond a la vitesse du son / 2 (34300/2).
-On divise par 2 car seule la distance en l&#8217;obstacle et le mur nous intéresse
-et non la distance total parcourue par l&#8217;onde radio.</p>
+On divise par 2 car seule la distance en l’obstacle et le mur nous intéresse
+et non la distance total parcourue par l’onde radio.</p>
 </dd>
 </dl>
 </td>
@@ -671,8 +659,8 @@ et non la distance total parcourue par l&#8217;onde radio.</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">INFOS:</th><td class="field-body"><ul class="first simple">
-<li>Les capteurs de Type &#8216;MQx&#8217; ont besoin d&#8217;être alimentés en continue</li>
-<li>Les capteurs de Type &#8216;MQx&#8217; doivent nécessite un délais de minimum 48H pour fournir
+<li>Les capteurs de Type “MQx” ont besoin d’être alimentés en continue</li>
+<li>Les capteurs de Type “MQx” doivent nécessite un délais de minimum 48H pour fournir
 des informations fiables</li>
 <li>Toutes les valeurs données ici concerne uniquement le Méthane. Pour tout autre gaze
 détecté par le MQ4, il faut se reporter à la documentation</li>
@@ -681,7 +669,7 @@ détecté par le MQ4, il faut se reporter à la documentation</li>
 </tr>
 <tr class="field-odd field"><th class="field-name">/attention\:</th><td class="field-body"><ul class="first last simple">
 <li>Sur la version PCB la résistance Rl, qui devrait être une résistance ajustable de 10 à 47k,
-est une résistance fixe de 1K. D&#8217;après la documentation, cette résistance devrait être
+est une résistance fixe de 1K. D’après la documentation, cette résistance devrait être
 étalonnée pour 5000 ppm soit à peut près 20K</li>
 </ul>
 </td>
@@ -719,10 +707,10 @@ est une résistance fixe de 1K. D&#8217;après la documentation, cette résistan
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">RS:</th><td class="field-body"><p class="first">C&#8217;est la résistance mesurer mesurer par le capteur. Cette valeur est Variable.</p>
+<tr class="field-even field"><th class="field-name">RS:</th><td class="field-body"><p class="first">C’est la résistance mesurer mesurer par le capteur. Cette valeur est Variable.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">R0:</th><td class="field-body"><p class="first last">C&#8217;est la résistance du capteur en condition de gaz normal. Cette valeur est Variable.
+<tr class="field-odd field"><th class="field-name">R0:</th><td class="field-body"><p class="first last">C’est la résistance du capteur en condition de gaz normal. Cette valeur est Variable.
 Elle doit être calculer.</p>
 </td>
 </tr>
@@ -793,12 +781,14 @@ Elle doit être calculer.</p>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -817,12 +807,12 @@ Elle doit être calculer.</p>
         <li class="right" >
           <a href="Aquariophilie.html" title="Aquariophilie"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">documentation JDM 20170523</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.9.
     </div>
   </body>
 </html>

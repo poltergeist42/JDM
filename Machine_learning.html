@@ -1,37 +1,25 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Machine Learning &#8212; documentation JDM 20170523</title>
-    
+    <title>Machine Learning &#8212; Documentation JDM 20170523</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '20170523',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="PowerShell" href="Powershell.html" />
     <link rel="prev" title="MAC OS" href="MAC_OS.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -44,7 +32,7 @@
         <li class="right" >
           <a href="MAC_OS.html" title="MAC OS"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">documentation JDM 20170523</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -56,7 +44,7 @@
   <div class="section" id="machine-learning">
 <h1>Machine Learning<a class="headerlink" href="#machine-learning" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="l-equation-de-bellman">
-<h2>L&#8217;équation de Bellman<a class="headerlink" href="#l-equation-de-bellman" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>L’équation de Bellman<a class="headerlink" href="#l-equation-de-bellman" title="Lien permanent vers ce titre">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -72,28 +60,28 @@
 </tr>
 </tbody>
 </table>
-<p>L&#8217;équation de Bellman est à la base de l&#8217;apprentissage par renforcement.</p>
+<p>L’équation de Bellman est à la base de l’apprentissage par renforcement.</p>
 <div class="section" id="concept-definission">
 <h3>Concept / définission<a class="headerlink" href="#concept-definission" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li><span class="math">\(s\)</span> - State (l&#8217;état) : Il s&#8217;agit de l&#8217;état dans lequel l&#8217;environnement est.</li>
-<li><span class="math">\(s'\)</span> : l&#8217;état dans le quel on va arriver</li>
-<li><span class="math">\(a\)</span> - Action : Les actions que peut prendre l&#8217;agent</li>
-<li><span class="math">\(R\)</span> - Reward (Récompense) : Récompense obtenu par l&#8217;agent pour rentrez dans un certain état
+<li><span class="math notranslate nohighlight">\(s\)</span> - State (l’état) : Il s’agit de l’état dans lequel l’environnement est.</li>
+<li><span class="math notranslate nohighlight">\(s'\)</span> : l’état dans le quel on va arriver</li>
+<li><span class="math notranslate nohighlight">\(a\)</span> - Action : Les actions que peut prendre l’agent</li>
+<li><span class="math notranslate nohighlight">\(R\)</span> - Reward (Récompense) : Récompense obtenu par l’agent pour rentrez dans un certain état
 (+1, 0 ou -1)</li>
-<li><span class="math">\(\gamma\)</span> (Gamma) - Discount (Réduction): il s&#8217;agit du facteur de réduction
-(compris entre 0 et 1). Plus cette valeur est proche de 0, plus ont s&#8217;éloigne du résultat
+<li><span class="math notranslate nohighlight">\(\gamma\)</span> (Gamma) - Discount (Réduction): il s’agit du facteur de réduction
+(compris entre 0 et 1). Plus cette valeur est proche de 0, plus ont s’éloigne du résultat
 et / ou de la solution.</li>
-<li><span class="math">\(V\)</span> : La valeur d&#8217;un certain état</li>
+<li><span class="math notranslate nohighlight">\(V\)</span> : La valeur d’un certain état</li>
 </ul>
 </div></blockquote>
 <div class="section" id="equation-simplifiee">
 <h4>Equation simplifiée<a class="headerlink" href="#equation-simplifiee" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Sous cette forme simplifié, l&#8217;équation est déterministe. Elle ne tien pas compte des éléments
+<p>Sous cette forme simplifié, l’équation est déterministe. Elle ne tien pas compte des éléments
 aléatoires (<a class="reference external" href="https://fr.wikipedia.org/wiki/Stochastique">Stochastique</a>).</p>
 <blockquote>
-<div><div class="math">
+<div><div class="math notranslate nohighlight">
 \[V(s) = \underset {a} {max} \left (R(s, a) + \gamma V(s') \right)\]</div>
 </div></blockquote>
 </div>
@@ -101,26 +89,26 @@ aléatoires (<a class="reference external" href="https://fr.wikipedia.org/wiki/S
 <div class="section" id="penalite-de-vie">
 <h3>Pénalité de vie<a class="headerlink" href="#penalite-de-vie" title="Lien permanent vers ce titre">¶</a></h3>
 <p>La pénalité est une valeur négative (à définir soit même) affectée à chaque action. Cela permet de
-forcer l&#8217;IA à trouver une solution le plus vite possible.</p>
-<p>Plus la récompense <span class="math">\(R\)</span> est proche de 0, moins le risque pris par l&#8217;IA sont important. Plus la
-récompense <span class="math">\(R\)</span> est éloigné, plus les risques pris part l&#8217;IA seront important.</p>
-<p>Il faut trouver une valeur qui pousse l&#8217;IA à trouver une solution tout en ne prenant que des risques
+forcer l’IA à trouver une solution le plus vite possible.</p>
+<p>Plus la récompense <span class="math notranslate nohighlight">\(R\)</span> est proche de 0, moins le risque pris par l’IA sont important. Plus la
+récompense <span class="math notranslate nohighlight">\(R\)</span> est éloigné, plus les risques pris part l’IA seront important.</p>
+<p>Il faut trouver une valeur qui pousse l’IA à trouver une solution tout en ne prenant que des risques
 modérés.</p>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Exemples:</th><td class="field-body"><p class="first">Pour une Récompense Final de 1 si nous affectons une Récompense d&#8217;Action de 0, -0.3, -0.5
+<tr class="field-odd field"><th class="field-name">Exemples:</th><td class="field-body"><p class="first">Pour une Récompense Final de 1 si nous affectons une Récompense d’Action de 0, -0.3, -0.5
 ou -2</p>
 <blockquote class="last">
 <div><ul class="simple">
-<li>Si RA= <span class="math">\(0\)</span> : L&#8217;IA n&#8217;optimisera pas la recherche de solution.</li>
-<li>Si RA= <span class="math">\(-0.3\)</span> : L&#8217;IA optimisera légèrement sa recherche de solution mais aucuns risque
-ne sera pris dans le choix de l&#8217;action.</li>
-<li>Si RA= <span class="math">\(-0.5\)</span> : l&#8217;IA optimisera beaucoup sa recherche de solution, mais ne prendra que
+<li>Si RA= <span class="math notranslate nohighlight">\(0\)</span> : L’IA n’optimisera pas la recherche de solution.</li>
+<li>Si RA= <span class="math notranslate nohighlight">\(-0.3\)</span> : L’IA optimisera légèrement sa recherche de solution mais aucuns risque
+ne sera pris dans le choix de l’action.</li>
+<li>Si RA= <span class="math notranslate nohighlight">\(-0.5\)</span> : l’IA optimisera beaucoup sa recherche de solution, mais ne prendra que
 des risques modérés.</li>
-<li>Si RA= <span class="math">\(-2\)</span> : l&#8217;IA prendra tous les risques possibles pour parvenir à une solution le
+<li>Si RA= <span class="math notranslate nohighlight">\(-2\)</span> : l’IA prendra tous les risques possibles pour parvenir à une solution le
 plus vite possible.</li>
 </ul>
 </div></blockquote>
@@ -157,8 +145,8 @@ plus vite possible.</li>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Définissions:</th><td class="field-body"><ul class="first last simple">
-<li><span class="math">\(P\)</span> - Processus de Décision Markovien (MDP) : Moyenne de la somme des états
-possibles (<span class="math">\(s'\)</span>). Il s&#8217;agit de l&#8217;introduction d&#8217;un facteur aléatoire dans un
+<li><span class="math notranslate nohighlight">\(P\)</span> - Processus de Décision Markovien (MDP) : Moyenne de la somme des états
+possibles (<span class="math notranslate nohighlight">\(s'\)</span>). Il s’agit de l’introduction d’un facteur aléatoire dans un
 environnement déterministe.</li>
 </ul>
 </td>
@@ -170,10 +158,10 @@ environnement déterministe.</li>
 <h4>Equation de Belman augmentée du MDP<a class="headerlink" href="#equation-de-belman-augmentee-du-mdp" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
-<li><strong>Le processus de Markov</strong> : Il va définir la façon dont l&#8217;environnement est construit.</li>
-<li><strong>Le MDP</strong> : Il va décrire la façon dont l&#8217;agent prend une décision.</li>
+<li><strong>Le processus de Markov</strong> : Il va définir la façon dont l’environnement est construit.</li>
+<li><strong>Le MDP</strong> : Il va décrire la façon dont l’agent prend une décision.</li>
 </ul>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[V(s) = \underset {a} {max} \left (R(s, a) + \gamma \underset {s'} {\sum} P(s, a, s')V(s') \right)\]</div>
 </div></blockquote>
 </div>
@@ -186,8 +174,8 @@ environnement déterministe.</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Définissions:</th><td class="field-body"><ul class="first last simple">
-<li><span class="math">\(Q\)</span> - Qualité : définit la qualité de l&#8217;action à venir <span class="math">\(Q(s, a)\)</span> par
-opposition à <span class="math">\(V\)</span> qui définit la valeur de l&#8217;état <span class="math">\(V(s)\)</span>.</li>
+<li><span class="math notranslate nohighlight">\(Q\)</span> - Qualité : définit la qualité de l’action à venir <span class="math notranslate nohighlight">\(Q(s, a)\)</span> par
+opposition à <span class="math notranslate nohighlight">\(V\)</span> qui définit la valeur de l’état <span class="math notranslate nohighlight">\(V(s)\)</span>.</li>
 </ul>
 </td>
 </tr>
@@ -195,23 +183,23 @@ opposition à <span class="math">\(V\)</span> qui définit la valeur de l&#8217;
 </table>
 </div></blockquote>
 <div class="section" id="definission-de-l-equation-de-bellman-en-q-learning">
-<h4>Définission de l&#8217;équation de Bellman en Q-Learning<a class="headerlink" href="#definission-de-l-equation-de-bellman-en-q-learning" title="Lien permanent vers ce titre">¶</a></h4>
-<p>On peut définir que <span class="math">\(V(s)\)</span> considère la meilleure action possible. Par opposition, avec
-<span class="math">\(Q(s, a)\)</span> on calcule une valeur pour chaque action, qu&#8217;elle soit la meilleure ou non.</p>
+<h4>Définission de l’équation de Bellman en Q-Learning<a class="headerlink" href="#definission-de-l-equation-de-bellman-en-q-learning" title="Lien permanent vers ce titre">¶</a></h4>
+<p>On peut définir que <span class="math notranslate nohighlight">\(V(s)\)</span> considère la meilleure action possible. Par opposition, avec
+<span class="math notranslate nohighlight">\(Q(s, a)\)</span> on calcule une valeur pour chaque action, qu’elle soit la meilleure ou non.</p>
 <ol class="arabic">
 <li><p class="first">Définition de base</p>
 <blockquote>
-<div><div class="math">
+<div><div class="math notranslate nohighlight">
 \[Q(s, a) = R(s, a) + \gamma \underset {s'} {\sum} P(s, a, s')V(s')\]</div>
 </div></blockquote>
 </li>
 </ol>
-<p>On constate que l&#8217;équation correspond à ce qui est contenu entre les parenthèses dans l&#8217;équation
+<p>On constate que l’équation correspond à ce qui est contenu entre les parenthèses dans l’équation
 de Bellman.</p>
 <ol class="arabic" start="2">
-<li><p class="first">Définition de l&#8217;équation en mode récursif (avec <span class="math">\(V(s')\)</span> remplacer par <span class="math">\(Q(s', a')\)</span>)</p>
+<li><p class="first">Définition de l’équation en mode récursif (avec <span class="math notranslate nohighlight">\(V(s')\)</span> remplacer par <span class="math notranslate nohighlight">\(Q(s', a')\)</span>)</p>
 <blockquote>
-<div><div class="math">
+<div><div class="math notranslate nohighlight">
 \[Q(s, a) = R(s, a) + \gamma \underset {s'} {\sum} \left (P(s, a, s') \underset {a'} {max} Q(s', a') \right)\]</div>
 </div></blockquote>
 </li>
@@ -226,28 +214,28 @@ de Bellman.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Définissions:</th><td class="field-body"><ul class="first last">
-<li><p class="first"><span class="math">\(Q_{t-1} (s, a)\)</span> - Avant : C&#8217;est l&#8217;état précédent de l&#8217;action</p>
+<li><p class="first"><span class="math notranslate nohighlight">\(Q_{t-1} (s, a)\)</span> - Avant : C’est l’état précédent de l’action</p>
 </li>
-<li><p class="first"><span class="math">\(Q_t (s, a)\)</span> - Après : C&#8217;est le nouvel état de l&#8217;action</p>
+<li><p class="first"><span class="math notranslate nohighlight">\(Q_t (s, a)\)</span> - Après : C’est le nouvel état de l’action</p>
 </li>
-<li><p class="first"><span class="math">\(TD_t (a, s)\)</span> - Différence temporelle : C&#8217;est l&#8217;apport d&#8217;information pour
+<li><p class="first"><span class="math notranslate nohighlight">\(TD_t (a, s)\)</span> - Différence temporelle : C’est l’apport d’information pour
 une action entre Après et Avant.</p>
 </li>
-<li><p class="first"><span class="math">\(\alpha\)</span> - Alpha : c&#8217;est un coefficient multiplicateur pour <span class="math">\(TD_t (a, s)\)</span>
+<li><p class="first"><span class="math notranslate nohighlight">\(\alpha\)</span> - Alpha : c’est un coefficient multiplicateur pour <span class="math notranslate nohighlight">\(TD_t (a, s)\)</span>
 ce coefficient est compris entre O et 1. La nouvelle valeur obtenue, sera ajouté à
-<span class="math">\(Q_{t-1} (s, a)\)</span> pour devenir le nouveau <span class="math">\(Q_t (s, a)\)</span>.</p>
+<span class="math notranslate nohighlight">\(Q_{t-1} (s, a)\)</span> pour devenir le nouveau <span class="math notranslate nohighlight">\(Q_t (s, a)\)</span>.</p>
 <p><strong>Attention</strong> :</p>
 <blockquote>
 <div><ul class="simple">
-<li>Pour <span class="math">\(\alpha = 0\)</span>, on aura <span class="math">\(Q_t (s, a) = Q_{t-1} (s, a)\)</span>. L&#8217;IA
-n&#8217;apprendra donc rien.</li>
-<li>Pour <span class="math">\(\alpha = 1\)</span>, on aura <span class="math">\(Q_t (s, a) = R(s,a) + \gamma \underset {a'} {max} Q(s', a')\)</span>.
-L&#8217;IA prendra donc toujours la valeur de la nouvelle action, y compris si
+<li>Pour <span class="math notranslate nohighlight">\(\alpha = 0\)</span>, on aura <span class="math notranslate nohighlight">\(Q_t (s, a) = Q_{t-1} (s, a)\)</span>. L’IA
+n’apprendra donc rien.</li>
+<li>Pour <span class="math notranslate nohighlight">\(\alpha = 1\)</span>, on aura <span class="math notranslate nohighlight">\(Q_t (s, a) = R(s,a) + \gamma \underset {a'} {max} Q(s', a')\)</span>.
+L’IA prendra donc toujours la valeur de la nouvelle action, y compris si
 cette action est erronée (comportement aléatoire).</li>
 </ul>
 </div></blockquote>
-<p>La valeur de <span class="math">\(\alpha\)</span> doit donc être réajuster pour que la
-différence temporelle soit égale à <span class="math">\(0\)</span>.</p>
+<p>La valeur de <span class="math notranslate nohighlight">\(\alpha\)</span> doit donc être réajuster pour que la
+différence temporelle soit égale à <span class="math notranslate nohighlight">\(0\)</span>.</p>
 </li>
 </ul>
 </td>
@@ -258,20 +246,20 @@ différence temporelle soit égale à <span class="math">\(0\)</span>.</p>
 <div class="section" id="calcul-de-la-difference-temporelle">
 <h4>Calcul de la Différence temporelle<a class="headerlink" href="#calcul-de-la-difference-temporelle" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
-<div><div class="math">
+<div><div class="math notranslate nohighlight">
 \[TD_t (a, s) = \underset {après} {R(s,a) + \gamma \underset {a'} {max} Q(s', a')} - \underset {avant} {Q_{t-1} (s, a)}\]</div>
 </div></blockquote>
 </div>
 <div class="section" id="calcul-de-la-qualite-d-une-action-avec-la-correction-de-la-difference-temporelle">
-<h4>Calcul de la Qualité d&#8217;une action avec la correction de la différence temporelle<a class="headerlink" href="#calcul-de-la-qualite-d-une-action-avec-la-correction-de-la-difference-temporelle" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Calcul de la Qualité d’une action avec la correction de la différence temporelle<a class="headerlink" href="#calcul-de-la-qualite-d-une-action-avec-la-correction-de-la-difference-temporelle" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Version condensée :</p>
 <blockquote>
-<div><div class="math">
+<div><div class="math notranslate nohighlight">
 \[Q_t (s, a) = Q_{t-1}(s, a) + \alpha TD_t (a, s)\]</div>
 </div></blockquote>
-<p>Version étendue, avec <span class="math">\(TD_t (a, s)\)</span> remplacée par son expression :</p>
+<p>Version étendue, avec <span class="math notranslate nohighlight">\(TD_t (a, s)\)</span> remplacée par son expression :</p>
 <blockquote>
-<div><div class="math">
+<div><div class="math notranslate nohighlight">
 \[Q_t (s, a) = Q_{t-1}(s, a) + \alpha \left (R(s,a) + \gamma \underset {a'} {max} Q(s', a') - Q_{t-1} (s, a) \right)\]</div>
 </div></blockquote>
 </div>
@@ -287,7 +275,7 @@ différence temporelle soit égale à <span class="math">\(0\)</span>.</p>
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
 <li><dl class="first docutils">
 <dt><a class="reference external" href="http://yann.lecun.com/exdb/publis/pdf/lecun-98d.pdf">http://yann.lecun.com/exdb/publis/pdf/lecun-98d.pdf</a></dt>
-<dd>Document traitant de l&#8217;importance de normaliser l&#8217;échelle des données d&#8217;entrée des neurones</dd>
+<dd>Document traitant de l’importance de normaliser l’échelle des données d’entrée des neurones</dd>
 </dl>
 </li>
 </ul>
@@ -299,9 +287,9 @@ différence temporelle soit égale à <span class="math">\(0\)</span>.</p>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">À faire</p>
 <ul class="last simple">
-<li>dans l&#8217;annexe, revoir la vidéo &#8220;Le Neurone&#8221;</li>
-<li>Faire le schéma d&#8217;un neurone (voir la vidéo à 14m23) en ajoutant les termes : Synapses, poid et
-fonction d&#8217;activation</li>
+<li>dans l’annexe, revoir la vidéo «&nbsp;Le Neurone&nbsp;»</li>
+<li>Faire le schéma d’un neurone (voir la vidéo à 14m23) en ajoutant les termes : Synapses, poid et
+fonction d’activation</li>
 </ul>
 </div>
 </div>
@@ -316,7 +304,7 @@ fonction d&#8217;activation</li>
   <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Machine Learning</a><ul>
-<li><a class="reference internal" href="#l-equation-de-bellman">L&#8217;équation de Bellman</a><ul>
+<li><a class="reference internal" href="#l-equation-de-bellman">L’équation de Bellman</a><ul>
 <li><a class="reference internal" href="#concept-definission">Concept / définission</a><ul>
 <li><a class="reference internal" href="#equation-simplifiee">Equation simplifiée</a></li>
 </ul>
@@ -327,12 +315,12 @@ fonction d&#8217;activation</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#q-learning-intuittion">Q-Learning : Intuittion</a><ul>
-<li><a class="reference internal" href="#definission-de-l-equation-de-bellman-en-q-learning">Définission de l&#8217;équation de Bellman en Q-Learning</a></li>
+<li><a class="reference internal" href="#definission-de-l-equation-de-bellman-en-q-learning">Définission de l’équation de Bellman en Q-Learning</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#difference-temporelle">Différence temporelle</a><ul>
 <li><a class="reference internal" href="#calcul-de-la-difference-temporelle">Calcul de la Différence temporelle</a></li>
-<li><a class="reference internal" href="#calcul-de-la-qualite-d-une-action-avec-la-correction-de-la-difference-temporelle">Calcul de la Qualité d&#8217;une action avec la correction de la différence temporelle</a></li>
+<li><a class="reference internal" href="#calcul-de-la-qualite-d-une-action-avec-la-correction-de-la-difference-temporelle">Calcul de la Qualité d’une action avec la correction de la différence temporelle</a></li>
 </ul>
 </li>
 </ul>
@@ -357,12 +345,14 @@ fonction d&#8217;activation</li>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -381,12 +371,12 @@ fonction d&#8217;activation</li>
         <li class="right" >
           <a href="MAC_OS.html" title="MAC OS"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">documentation JDM 20170523</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.9.
     </div>
   </body>
 </html>
