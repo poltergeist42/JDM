@@ -74,6 +74,27 @@ Nettoyer / Réparer
         * https://www.tech2tech.fr/medicat-lutilitaire-utlime-pour-le-depannage-informatique/
           # Medicat : Un bon remplaçant de Hiren' Boot CD
 
+Forcer la suppression d'une partition
+-------------------------------------
+
+    :Liens_Web:
+                * http://www.aidewindows.net/win10/partition-recuperation.php
+                    # voir le 2 - Utiliser diskpart
+
+    #. dispart ::
+
+        depuis une invite de command Administrateur
+
+        c:\>diskpart
+        DISKPART>rescan
+        DISKPART>list disk
+        DISKPART>slelect disk x
+        # x = numéro du disque à effacer, attention à ne pas se tromper
+        DISKPART>list partition
+        DISKPART>select partition x
+        # x = numéro de la partition à effacer, attention à ne pas se tromper
+        DISKPART>delete partition override
+
 Excel
 -----
 

@@ -144,6 +144,43 @@ informatiques.</p>
 </tbody>
 </table>
 </div>
+<div class="section" id="forcer-la-suppression-d-une-partition">
+<h3>Forcer la suppression d’une partition<a class="headerlink" href="#forcer-la-suppression-d-une-partition" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="http://www.aidewindows.net/win10/partition-recuperation.php">http://www.aidewindows.net/win10/partition-recuperation.php</a></dt>
+<dd># voir le 2 - Utiliser diskpart</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic">
+<li><p class="first">dispart</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">depuis</span> <span class="n">une</span> <span class="n">invite</span> <span class="n">de</span> <span class="n">command</span> <span class="n">Administrateur</span>
+
+<span class="n">c</span><span class="p">:</span>\<span class="o">&gt;</span><span class="n">diskpart</span>
+<span class="n">DISKPART</span><span class="o">&gt;</span><span class="n">rescan</span>
+<span class="n">DISKPART</span><span class="o">&gt;</span><span class="nb">list</span> <span class="n">disk</span>
+<span class="n">DISKPART</span><span class="o">&gt;</span><span class="n">slelect</span> <span class="n">disk</span> <span class="n">x</span>
+<span class="c1"># x = numéro du disque à effacer, attention à ne pas se tromper</span>
+<span class="n">DISKPART</span><span class="o">&gt;</span><span class="nb">list</span> <span class="n">partition</span>
+<span class="n">DISKPART</span><span class="o">&gt;</span><span class="n">select</span> <span class="n">partition</span> <span class="n">x</span>
+<span class="c1"># x = numéro de la partition à effacer, attention à ne pas se tromper</span>
+<span class="n">DISKPART</span><span class="o">&gt;</span><span class="n">delete</span> <span class="n">partition</span> <span class="n">override</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
 <div class="section" id="excel">
 <h3>Excel<a class="headerlink" href="#excel" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="colorer-une-ligne-sur-deux-dans-un-tableau-excel">
@@ -446,6 +483,7 @@ Remove-PSSession $ExSession
 <li><a class="reference internal" href="#poste-de-travail">Poste de travail</a><ul>
 <li><a class="reference internal" href="#lancer-la-restauration-systeme-depuis-windows">Lancer la restauration système depuis windows</a></li>
 <li><a class="reference internal" href="#nettoyer-reparer">Nettoyer / Réparer</a></li>
+<li><a class="reference internal" href="#forcer-la-suppression-d-une-partition">Forcer la suppression d’une partition</a></li>
 <li><a class="reference internal" href="#excel">Excel</a><ul>
 <li><a class="reference internal" href="#colorer-une-ligne-sur-deux-dans-un-tableau-excel">Colorer une ligne sur deux dans un tableau Excel</a></li>
 </ul>

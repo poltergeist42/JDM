@@ -367,12 +367,98 @@ le screen</td>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="gestion-des-groupes-et-des-permissions">
-<h2>Gestion des groupes et des permissions<a class="headerlink" href="#gestion-des-groupes-et-des-permissions" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="utilisateurs-groupes-et-permissions">
+<h2>Utilisateurs, Groupes et Permissions<a class="headerlink" href="#utilisateurs-groupes-et-permissions" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="activer-le-compte-root">
 <h3>activer le compte root<a class="headerlink" href="#activer-le-compte-root" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">passwd</span> <span class="n">root</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="creer-un-nouvel-utilisateur">
+<h3>Créer un nouvel utilisateur<a class="headerlink" href="#creer-un-nouvel-utilisateur" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://doc.ubuntu-fr.org/adduser#adduser">https://doc.ubuntu-fr.org/adduser#adduser</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">adduser</span> <span class="o">&lt;</span><span class="n">nom_du_nouvel_utilisateur</span><span class="o">&gt;</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">sudo</span> <span class="n">adduser</span> <span class="n">volab</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="creer-un-nouveau-groupe">
+<h3>Créer un nouveau groupe<a class="headerlink" href="#creer-un-nouveau-groupe" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://doc.ubuntu-fr.org/adduser#addgroup">https://doc.ubuntu-fr.org/adduser#addgroup</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">addgroup</span> <span class="o">&lt;</span><span class="n">nom_du_group</span><span class="o">&gt;</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">sudo</span> <span class="n">addgroup</span> <span class="n">volab</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="ajouter-un-utilisateur-a-un-groupe">
+<h3>Ajouter un utilisateur à un groupe<a class="headerlink" href="#ajouter-un-utilisateur-a-un-groupe" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">adduser</span> <span class="o">&lt;</span><span class="n">nom_de_l</span><span class="s1">&#39;utilisateur&gt; &lt;nom_du_groupe&gt;</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">sudo</span> <span class="n">adduser</span> <span class="n">root</span> <span class="n">volab</span>
+</pre></div>
+</div>
+<p>N.B: Lorsqu’on crée un nouvel utilisateur, un groupe du même nom est également créer.</p>
+</div></blockquote>
+</div>
+<div class="section" id="afficher-les-membres-d-un-groupe">
+<h3>Afficher les membres d’un groupe<a class="headerlink" href="#afficher-les-membres-d-un-groupe" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getent</span> <span class="n">group</span> <span class="o">&lt;</span><span class="n">nom_du_group</span><span class="o">&gt;</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">getent</span> <span class="n">group</span> <span class="n">volab</span>
+
+<span class="c1"># Une commende alternantive :</span>
+
+<span class="n">grep</span> <span class="o">&lt;</span><span class="n">nom_du_groupe</span><span class="o">&gt;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">group</span>
+
+<span class="n">ex</span><span class="p">:</span>
+
+<span class="n">grep</span> <span class="n">volab</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">group</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="afficher-les-groupes-d-un-utilisateur">
+<h3>Afficher les groupes d’un utilisateur<a class="headerlink" href="#afficher-les-groupes-d-un-utilisateur" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">groups</span> <span class="o">&lt;</span><span class="n">nom_d</span><span class="s1">&#39;utilisateur&gt;</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">groups</span> <span class="n">volab</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1449,8 +1535,13 @@ existant par au moins une ligne vide (hors commentaire)a</li>
 <li><a class="reference internal" href="#creer-un-alias-permanent">Créer un alias permanent</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#gestion-des-groupes-et-des-permissions">Gestion des groupes et des permissions</a><ul>
+<li><a class="reference internal" href="#utilisateurs-groupes-et-permissions">Utilisateurs, Groupes et Permissions</a><ul>
 <li><a class="reference internal" href="#activer-le-compte-root">activer le compte root</a></li>
+<li><a class="reference internal" href="#creer-un-nouvel-utilisateur">Créer un nouvel utilisateur</a></li>
+<li><a class="reference internal" href="#creer-un-nouveau-groupe">Créer un nouveau groupe</a></li>
+<li><a class="reference internal" href="#ajouter-un-utilisateur-a-un-groupe">Ajouter un utilisateur à un groupe</a></li>
+<li><a class="reference internal" href="#afficher-les-membres-d-un-groupe">Afficher les membres d’un groupe</a></li>
+<li><a class="reference internal" href="#afficher-les-groupes-d-un-utilisateur">Afficher les groupes d’un utilisateur</a></li>
 <li><a class="reference internal" href="#changer-le-mot-de-passe-d-un-utilisateur">Changer le mot de passe d’un utilisateur</a></li>
 <li><a class="reference internal" href="#faire-une-elevation-valable-toute-la-duree-de-la-session">Faire une élévation valable toute la durée de la session</a></li>
 <li><a class="reference internal" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique">Pour copier des fichiers en root depuis l’interface graphique</a></li>

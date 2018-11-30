@@ -197,15 +197,82 @@ Créer un alias permanent
 
 ####
 
---------------------------------------
-Gestion des groupes et des permissions
---------------------------------------
+------------------------------------
+Utilisateurs, Groupes et Permissions
+------------------------------------
 
 activer le compte root
 ======================
     ::
     
         sudo passwd root
+
+Créer un nouvel utilisateur
+===========================
+
+    :Liens_Web:
+                * https://doc.ubuntu-fr.org/adduser#adduser
+
+    ::
+
+        sudo adduser <nom_du_nouvel_utilisateur>
+
+        ex:
+        sudo adduser volab
+
+Créer un nouveau groupe
+=======================
+
+    :Liens_Web:
+                * https://doc.ubuntu-fr.org/adduser#addgroup
+
+    ::
+
+        sudo addgroup <nom_du_group>
+
+        ex:
+        sudo addgroup volab
+
+
+Ajouter un utilisateur à un groupe
+==================================
+
+    ::
+
+        sudo adduser <nom_de_l'utilisateur> <nom_du_groupe>
+
+        ex:
+        sudo adduser root volab
+
+    N.B: Lorsqu'on crée un nouvel utilisateur, un groupe du même nom est également créer.
+
+Afficher les membres d'un groupe
+================================
+
+    ::
+
+        getent group <nom_du_group>
+
+        ex:
+        getent group volab
+
+        # Une commende alternantive :
+
+        grep <nom_du_groupe> /etc/group
+
+        ex:
+
+        grep volab /etc/group
+
+Afficher les groupes d'un utilisateur
+=====================================
+
+    ::
+
+        groups <nom_d'utilisateur>
+
+        ex:
+        groups volab
 
 Changer le mot de passe d'un utilisateur
 ========================================
