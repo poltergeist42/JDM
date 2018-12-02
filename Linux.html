@@ -1337,6 +1337,13 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 <span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/&lt;</span><span class="n">user_name</span><span class="o">&gt;/&lt;</span><span class="n">folder_name</span><span class="o">&gt;</span>
 <span class="n">valid</span> <span class="n">users</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">user_name</span><span class="o">&gt;</span>
 <span class="n">read</span> <span class="n">only</span> <span class="o">=</span> <span class="n">no</span>
+
+<span class="c1"># N.B : Pour autoriser un groupe à la place d&#39;un utilisateur:</span>
+<span class="n">valid</span> <span class="n">users</span> <span class="o">=</span> <span class="o">@&lt;</span><span class="n">group_name</span><span class="o">&gt;</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="o">...</span>
+<span class="n">valid</span> <span class="n">users</span> <span class="o">=</span> <span class="nd">@volab</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1366,7 +1373,10 @@ existant par au moins une ligne vide (hors commentaire)a</li>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Accès au dossier partagé (depuis Windows)</p>
+<li><p class="first">Accès au dossier partagé</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Depuis Windows</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\\<span class="n">IP_Distante</span>\<span class="n">share</span>
 <span class="n">ou</span>
 \\<span class="n">hostname</span>\<span class="n">share</span>
@@ -1378,10 +1388,112 @@ existant par au moins une ligne vide (hors commentaire)a</li>
 </div>
 </li>
 </ol>
+</div></blockquote>
+</li>
+</ol>
 </td>
 </tr>
 </tbody>
 </table>
+<div class="section" id="monter-un-repertoire-distant">
+<h4>Monter un répertoire distant<a class="headerlink" href="#monter-un-repertoire-distant" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><dl class="first last docutils">
+<dt><a class="reference external" href="https://doc.ubuntu-fr.org/tutoriel/monterpartagewindows">https://doc.ubuntu-fr.org/tutoriel/monterpartagewindows</a></dt>
+<dd><p class="first last"># exemple d’utilisation en manuel et en automatique</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic">
+<li><p class="first">Création du répertoire de montage</p>
+<blockquote>
+<div><p>N.B: c’est le répertoire qui va accueillir le répertoire distant.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">media</span><span class="o">/&lt;</span><span class="n">nom_du_nouveau_repertoire</span><span class="o">&gt;</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">volab</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Création d’un fichier «&nbsp;credentials&nbsp;»</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Créer le fichier dans le répertoire “root”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">vim</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">smbcreds</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Renseigner les identifiants de l’utilisateur distant</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">username</span><span class="o">=&lt;</span><span class="n">Nom_d</span><span class="s1">&#39;utilisateur&gt;</span>
+<span class="n">password</span><span class="o">=&lt;</span><span class="n">mot_de_passe</span><span class="o">&gt;</span>
+<span class="n">domaine</span><span class="o">=&gt;</span><span class="n">domaine</span><span class="o">&gt;</span>       <span class="c1"># Facultatif</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<div class="section" id="mode-manuel">
+<h5>Mode Manuel<a class="headerlink" href="#mode-manuel" title="Lien permanent vers ce titre">¶</a></h5>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Montage</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">cifs</span> <span class="o">-</span><span class="n">o</span> <span class="n">username</span><span class="o">=</span><span class="n">utilisateur_ubuntu</span><span class="p">,</span><span class="n">rw</span><span class="p">,</span><span class="n">iocharset</span><span class="o">=</span><span class="n">utf8</span><span class="p">,</span><span class="n">file_mode</span><span class="o">=</span><span class="mi">0777</span><span class="p">,</span><span class="n">dir_mode</span><span class="o">=</span><span class="mi">0777</span> <span class="o">//&lt;</span><span class="n">adressIP_serveurFichier</span><span class="o">&gt;/&lt;</span><span class="n">repertoireSource</span><span class="o">&gt;</span> <span class="o">/</span><span class="n">media</span><span class="o">/&lt;</span><span class="n">partage</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>N.B</strong>: il est conseiller de tester le montage à la main avant de monter le lecteur
+automatiquement au démarrage.</p>
+<ol class="arabic">
+<li><p class="first">Démontage</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">umount</span> <span class="o">/</span><span class="n">media</span><span class="o">/&lt;</span><span class="n">partage</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="mode-automatique">
+<h5>Mode Automatique<a class="headerlink" href="#mode-automatique" title="Lien permanent vers ce titre">¶</a></h5>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Copier le fichier “fstab”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">cp</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">fstab</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">fstab_sauvegarde</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Editer “fstab”</p>
+<blockquote>
+<div><p>Ajouter le nouveau partage à la fin du fichier</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//&lt;</span><span class="n">adresse_distante</span><span class="o">&gt;/&lt;</span><span class="n">partage</span><span class="o">&gt;</span>   <span class="o">/</span><span class="n">media</span><span class="o">/&lt;</span><span class="n">partage</span><span class="o">&gt;</span> <span class="n">cifs</span> <span class="n">credentials</span><span class="o">=/</span><span class="n">root</span><span class="o">/.</span><span class="n">smbcreds</span><span class="p">,</span><span class="n">iocharset</span><span class="o">=</span><span class="n">utf8</span>   <span class="mi">0</span>   <span class="mi">0</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Redémarrage et vérification</p>
+<blockquote>
+<div><ul class="simple">
+<li>Redémarrer le serveur et vérifier que les données du partage distant sont bien présente.</li>
+<li>Faire un test de lecture / écriture pour s’assurer que les permissions son correctement
+accordés.</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="telecharger-un-fichier-en-ligne-de-commande-wget">
@@ -1583,7 +1695,14 @@ existant par au moins une ligne vide (hors commentaire)a</li>
 <li><a class="reference internal" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">Pour mettre une IP fixe sur une interfaces réseau</a></li>
 <li><a class="reference internal" href="#pour-active-le-wifi">Pour active le WIFI</a></li>
 <li><a class="reference internal" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande">Se connecter a un réseau wifi en ligne de commande</a></li>
-<li><a class="reference internal" href="#creer-un-dossier-partage-avec-samba">Créer un dossier partagé avec samba</a></li>
+<li><a class="reference internal" href="#creer-un-dossier-partage-avec-samba">Créer un dossier partagé avec samba</a><ul>
+<li><a class="reference internal" href="#monter-un-repertoire-distant">Monter un répertoire distant</a><ul>
+<li><a class="reference internal" href="#mode-manuel">Mode Manuel</a></li>
+<li><a class="reference internal" href="#mode-automatique">Mode Automatique</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#telecharger-un-fichier-en-ligne-de-commande-wget">Télécharger un fichier en ligne de commande (wget)</a></li>
 </ul>
 </li>

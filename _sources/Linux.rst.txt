@@ -900,6 +900,13 @@ Créer un dossier partagé avec samba
                     valid users = <user_name>
                     read only = no
 
+                    # N.B : Pour autoriser un groupe à la place d'un utilisateur:
+                    valid users = @<group_name>
+
+                    ex:
+                    ...
+                    valid users = @volab
+
             :/!\\Attention/!\\:
                         * Le bloc commençant par **[<folder_name>]** doit être séparer du code
                           existant par au moins une ligne vide (hors commentaire)a
@@ -910,15 +917,78 @@ Créer un dossier partagé avec samba
 
         sudo service smbd restart
 
-    #. Accès au dossier partagé (depuis Windows) ::
+    #. Accès au dossier partagé 
+           
+        #. Depuis Windows ::
 
-        \\IP_Distante\share
-        ou
-        \\hostname\share
+            \\IP_Distante\share
+            ou
+            \\hostname\share
 
-        ex:
-        \\192.168.1.31\share
-        \\pi_crachTest\share
+            ex:
+            \\192.168.1.31\share
+            \\pi_crachTest\share
+
+Monter un répertoire distant
+----------------------------
+
+    :Liens_Web:
+                https://doc.ubuntu-fr.org/tutoriel/monterpartagewindows
+                    # exemple d'utilisation en manuel et en automatique
+
+    #. Création du répertoire de montage
+
+        N.B: c'est le répertoire qui va accueillir le répertoire distant.
+        ::
+
+            sudo mkdir /media/<nom_du_nouveau_repertoire>
+
+            ex:
+            sudo mkdir /media/volab
+
+    #. Création d'un fichier "credentials"
+
+        #. Créer le fichier dans le répertoire 'root' ::
+
+            sudo vim /root/.smbcreds
+
+        #. Renseigner les identifiants de l'utilisateur distant ::
+
+            username=<Nom_d'utilisateur>
+            password=<mot_de_passe>
+            domaine=>domaine>       # Facultatif
+
+Mode Manuel
+^^^^^^^^^^^
+    #. Montage ::
+
+        sudo mount -t cifs -o username=utilisateur_ubuntu,rw,iocharset=utf8,file_mode=0777,dir_mode=0777 //<adressIP_serveurFichier>/<repertoireSource> /media/<partage>
+
+    **N.B**: il est conseiller de tester le montage à la main avant de monter le lecteur 
+    automatiquement au démarrage.
+
+    #. Démontage ::
+
+        umount /media/<partage>
+
+Mode Automatique
+^^^^^^^^^^^^^^^^
+    #. Copier le fichier 'fstab' ::
+
+        sudo cp /etc/fstab /etc/fstab_sauvegarde
+
+    #. Editer 'fstab'
+
+        Ajouter le nouveau partage à la fin du fichier ::
+
+            //<adresse_distante>/<partage>   /media/<partage> cifs credentials=/root/.smbcreds,iocharset=utf8   0   0
+
+    #. Redémarrage et vérification
+
+        * Redémarrer le serveur et vérifier que les données du partage distant sont bien présente.
+
+        * Faire un test de lecture / écriture pour s'assurer que les permissions son correctement
+          accordés.
 
 ####
 
