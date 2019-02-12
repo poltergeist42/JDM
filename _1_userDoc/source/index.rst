@@ -29,6 +29,7 @@ Mon journal de manip
    Linux
    MAC_OS
    Machine_learning
+   MQTT
    Powershell
    Python
    Raspberry
