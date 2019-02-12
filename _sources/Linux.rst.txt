@@ -93,6 +93,14 @@ Rappel des raccourcis de navigation dans le shell
 
 ####
 
+Connaitre la version du shell utilisé
+=====================================
+    ::
+
+        ps -p $$
+
+####
+
 Faire du multi-screen  sur une fenêtre terminal
 ===============================================
 
