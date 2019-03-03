@@ -175,6 +175,22 @@ appliquer le contenu d'une branch dans la branch courante (faire un merge)
 
             git merge [branch_a_appliquer]
                 # ex : git merge dev
+
+Copier seulement un fichier depuis une autre branch dans la branch courante
+---------------------------------------------------------------------------
+
+    #. Faire un chekout du ficher dans la branch courante ::
+
+        git checkout [branch_source] [chemin/du/fichier]
+
+        ex:
+        git branch
+              crash_test
+              dev_jojo
+            * dev_pierre
+              master
+
+        git checkout dev_jojo js/main.js
                     
 ------------------------------------------------------------------------------------------
 

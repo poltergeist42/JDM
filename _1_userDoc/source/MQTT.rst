@@ -13,9 +13,15 @@ Windows
             * https://www.youtube.com/watch?v=n0l5xNOH4Dk
 
 
-    #. Download mosquitto https://mosquitto.org/download/
+    #. Download mosquitto https://mosquitto.org/download/ prendre la version light 32 bits
 
-    #. Download openssl http://slproweb.com/products/Win32Ope
+    #. Download openssl http://slproweb.com/products/Win32Ope prendre la version 32 bits
+
+    #. Download de la DLL 'ssleay32.dll' http://www.telecharger-dll.fr/dll-ssleay32.dll.html
+
+    #. Download de la DLL 'libeay32.dll' http://www.telecharger-dll.fr/dll-libeay32.dll.html
+
+    #. Copier les 2 DLL dans le dossier 'bin' d'openssl
 
     #. Copy openssl32\bin folder to mosquitto C:\openssl\bin --- C:\Program Files(x86)\mosquitto 
 

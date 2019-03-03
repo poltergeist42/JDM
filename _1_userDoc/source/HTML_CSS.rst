@@ -57,12 +57,18 @@ Rappel des balises courantes en HTML
 CSS
 ---
 
-    :Liens_Web:
-            * https://emw3.com/css/
-                # Ensemble des selecteurs CSS
+Sélecteur, pseudo-class et pseudo-elements
+==========================================
 
-Positionnement  et dimensionnement dans la fenêtre (ou dans la boite)
-=====================================================================
+    :Liens_Web:
+            * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
+                # Description de l'ensemble des sélecteur (et combinaison)
+
+            * https://emw3.com/css/
+                # Ensemble des sélecteurs CSS
+
+Positionnement et dimensionnement dans la fenêtre (ou dans la boite)
+====================================================================
 
     .. image:: ./Images/HTML_CSS/dimensionnement.png
         :width: 400 px
