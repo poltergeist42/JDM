@@ -60,8 +60,11 @@
 </tbody>
 </table>
 <ol class="arabic simple">
-<li>Download mosquitto <a class="reference external" href="https://mosquitto.org/download/">https://mosquitto.org/download/</a></li>
-<li>Download openssl <a class="reference external" href="http://slproweb.com/products/Win32Ope">http://slproweb.com/products/Win32Ope</a></li>
+<li>Download mosquitto <a class="reference external" href="https://mosquitto.org/download/">https://mosquitto.org/download/</a> prendre la version light 32 bits</li>
+<li>Download openssl <a class="reference external" href="http://slproweb.com/products/Win32Ope">http://slproweb.com/products/Win32Ope</a> prendre la version 32 bits</li>
+<li>Download de la DLL “ssleay32.dll” <a class="reference external" href="http://www.telecharger-dll.fr/dll-ssleay32.dll.html">http://www.telecharger-dll.fr/dll-ssleay32.dll.html</a></li>
+<li>Download de la DLL “libeay32.dll” <a class="reference external" href="http://www.telecharger-dll.fr/dll-libeay32.dll.html">http://www.telecharger-dll.fr/dll-libeay32.dll.html</a></li>
+<li>Copier les 2 DLL dans le dossier “bin” d’openssl</li>
 <li>Copy openssl32bin folder to mosquitto C:opensslbin — C:Program Files(x86)mosquitto</li>
 <li>Copy required dll files C:openssllibeay32.dll — C:Program Files(x86)mosquitto</li>
 <li>Copy required dll files C:opensslssleay32.dll — C:Program Files(x86)mosquitto</li>

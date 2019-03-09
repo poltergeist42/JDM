@@ -512,3 +512,23 @@ Ouvrir un document avec VIM depuis PowerShell
 
         vim test.txt
 
+
+----------------------------------------------------------
+
+HyperV
+======
+
+utiliser les cmdlets HyperV avec powershell2 (2008, 2008r2 et 2012)
+--------------------------------------------
+
+    :Liens_Web:
+        * https://github.com/gcbond/pshyperv
+            # Source du module à installer dans powershell
+
+        * https://www.alexanderjohn.co.uk/2010/07/06/automatically-loading-pshyperv-library/
+            # Intégration automatique du module dans le profil powershell
+
+    #. Lancer manuellement le module HyperV : ::
+
+        Import-Module “c:\Program Files\modules\hyperv\hyperv.psd1”
+

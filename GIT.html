@@ -321,6 +321,27 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 </li>
 </ol>
 </div></blockquote>
+<div class="section" id="copier-seulement-un-fichier-depuis-une-autre-branch-dans-la-branch-courante">
+<h3>Copier seulement un fichier depuis une autre branch dans la branch courante<a class="headerlink" href="#copier-seulement-un-fichier-depuis-une-autre-branch-dans-la-branch-courante" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Faire un chekout du ficher dans la branch courante</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="p">[</span><span class="n">branch_source</span><span class="p">]</span> <span class="p">[</span><span class="n">chemin</span><span class="o">/</span><span class="n">du</span><span class="o">/</span><span class="n">fichier</span><span class="p">]</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">git</span> <span class="n">branch</span>
+      <span class="n">crash_test</span>
+      <span class="n">dev_jojo</span>
+    <span class="o">*</span> <span class="n">dev_pierre</span>
+      <span class="n">master</span>
+
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">dev_jojo</span> <span class="n">js</span><span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="supprimer-des-elements">
@@ -652,7 +673,10 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 <li><a class="reference internal" href="#gitignore">gitignore</a></li>
 <li><a class="reference internal" href="#enregistrer-des-modifications-dans-le-depot">Enregistrer des modifications dans le dépôt</a></li>
 <li><a class="reference internal" href="#creer-lister-et-selectionner-une-branche">Créer, lister et sélectionner une branche</a></li>
-<li><a class="reference internal" href="#appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge">appliquer le contenu d’une branch dans la branch courante (faire un merge)</a></li>
+<li><a class="reference internal" href="#appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge">appliquer le contenu d’une branch dans la branch courante (faire un merge)</a><ul>
+<li><a class="reference internal" href="#copier-seulement-un-fichier-depuis-une-autre-branch-dans-la-branch-courante">Copier seulement un fichier depuis une autre branch dans la branch courante</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#supprimer-des-elements">supprimer des éléments</a></li>
 <li><a class="reference internal" href="#faire-un-instantane-puis-le-liberer">faire un «&nbsp;instantané&nbsp;» puis le libérer</a></li>
 <li><a class="reference internal" href="#reparer-annuler-remplacer">Réparer / annuler / remplacer</a><ul>
