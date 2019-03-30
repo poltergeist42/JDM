@@ -881,6 +881,17 @@ Connaître l'os de travail
     >>> os.name
     'posix'
     
+
+
+------------------------------------------------------------------------------------------
+
+UUID
+====
+
+    :Liens_Web:
+        * http://sametmax.com/quest-ce-quun-uuid-et-a-quoi-ca-sert/
+            # Petit exemple de génération de UUID
+
 ------------------------------------------------------------------------------------------
 
 URLtheque
