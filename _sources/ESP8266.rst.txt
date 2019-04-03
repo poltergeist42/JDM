@@ -27,6 +27,18 @@ PINOUT
 Flasher un nouveau Firmware
 ---------------------------
 
+La façon simple (quant tous vas bien)
+=====================================
+
+    Pour flasher un firmware sur le NodeMCU, il faut le mettre en mode "flashage" en reliant le
+    GPIO 0 (D3) au GND. Il faut alors suivre les étape de "MAJ du firmware".
+
+        :/!\\Attention/!\\: cette broche ne peux / doit pas être utilisée dans un montage.
+
+
+La façon compliqué (quant ça merde)
+===================================
+
 :FTDI_NodeMCU:
  .. image:: ./Images/ESP8266/cablage_nodeMcu.png
      :width: 400 px
@@ -159,6 +171,14 @@ spécifiques applicable à MicroPython et à LESP8266.
             * Accessible depuis un terminal sur le port COM de l'ESP avec un **Baudrate de 115200**
 
     :WebREPL:
+            * Activer le WebREPL au démarrage: ::
+
+                # Depuis le REPL (terminal serie)
+                >>>import webrepl_setup
+
+                --> 'E' pour activer le WebREPL au démarrage
+                --> saisir et confirmer un mot de passe
+
             * Accessible depuis un navigateur Web. Le Wifi doit au préalable avoir été configuré
               depuis le REPL. Il est accessible depuis l'url : http://micropython.org/webrepl/.
               Le WebSocket associé se présente sous la forme suivante : ::

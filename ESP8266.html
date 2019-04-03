@@ -76,6 +76,26 @@
 <hr class="docutils" />
 <div class="section" id="flasher-un-nouveau-firmware">
 <h2>Flasher un nouveau Firmware<a class="headerlink" href="#flasher-un-nouveau-firmware" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="la-facon-simple-quant-tous-vas-bien">
+<h3>La façon simple (quant tous vas bien)<a class="headerlink" href="#la-facon-simple-quant-tous-vas-bien" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p>Pour flasher un firmware sur le NodeMCU, il faut le mettre en mode «&nbsp;flashage&nbsp;» en reliant le
+GPIO 0 (D3) au GND. Il faut alors suivre les étape de «&nbsp;MAJ du firmware&nbsp;».</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">/!\Attention/!\:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">cette broche ne peux / doit pas être utilisée dans un montage.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="la-facon-complique-quant-ca-merde">
+<h3>La façon compliqué (quant ça merde)<a class="headerlink" href="#la-facon-complique-quant-ca-merde" title="Lien permanent vers ce titre">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -106,6 +126,7 @@ l’ESP durant la communication entre le FTDI et l’ESP</p>
 </tr>
 </tbody>
 </table>
+</div>
 <div class="section" id="maj-du-firmware">
 <h3>MAJ du Firmware<a class="headerlink" href="#maj-du-firmware" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
@@ -302,6 +323,15 @@ spécifiques applicable à MicroPython et à LESP8266.</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">WebREPL:</th><td class="field-body"><ul class="first">
+<li><p class="first">Activer le WebREPL au démarrage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Depuis le REPL (terminal serie)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="kn">import</span> <span class="nn">webrepl_setup</span>
+
+<span class="o">--&gt;</span> <span class="s1">&#39;E&#39;</span> <span class="n">pour</span> <span class="n">activer</span> <span class="n">le</span> <span class="n">WebREPL</span> <span class="n">au</span> <span class="n">démarrage</span>
+<span class="o">--&gt;</span> <span class="n">saisir</span> <span class="n">et</span> <span class="n">confirmer</span> <span class="n">un</span> <span class="n">mot</span> <span class="n">de</span> <span class="n">passe</span>
+</pre></div>
+</div>
+</li>
 <li><p class="first">Accessible depuis un navigateur Web. Le Wifi doit au préalable avoir été configuré
 depuis le REPL. Il est accessible depuis l’url : <a class="reference external" href="http://micropython.org/webrepl/">http://micropython.org/webrepl/</a>.
 Le WebSocket associé se présente sous la forme suivante :</p>
@@ -428,6 +458,8 @@ fichiers sinon l’opération échoue.</p>
 <li><a class="reference internal" href="#">ESP8266</a><ul>
 <li><a class="reference internal" href="#pinout">PINOUT</a></li>
 <li><a class="reference internal" href="#flasher-un-nouveau-firmware">Flasher un nouveau Firmware</a><ul>
+<li><a class="reference internal" href="#la-facon-simple-quant-tous-vas-bien">La façon simple (quant tous vas bien)</a></li>
+<li><a class="reference internal" href="#la-facon-complique-quant-ca-merde">La façon compliqué (quant ça merde)</a></li>
 <li><a class="reference internal" href="#maj-du-firmware">MAJ du Firmware</a></li>
 </ul>
 </li>
