@@ -247,9 +247,9 @@ faire un "instantané" puis le libérer
         
         git stash list
             
-    #. Libérer l'instantané, et le supprimer ::
+    #. Appliquer et libérer l'instantané puis le supprimer ::
         
-        git pop [id du stash (commit) ou son nom]
+        git stash pop [id du stash (commit) ou son nom]
             
     #. Appliquer l'instantané ::
         
