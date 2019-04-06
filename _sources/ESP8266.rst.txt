@@ -135,27 +135,157 @@ MAJ du Firmware
             esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect -fm dio 0 esp8266-20170108-v1.8.7.bin
                 # L'ESP supporte bien un baurate de 460800 pour le déploement du Firmware
 
+OSError: [Errno 2] ENOENT: main.py
+----------------------------------
+
+Après avoir flasher le firmware, on peut avoir le message d'erreur : ::
+
+    OSError: [Errno 2] ENOENT: main.py
+
+Se message apparait lors de la connexion au terminal série (en REPL). Il n'est alors plus possible 
+d'interagir avec le micro-contrôler.
+
+Ce message vient du faite que lors du déploiement du firmware, le fichier 'main.py' n'est pas créer.
+
+Pour corriger ce problème il faut soit le créer soit le copier à partir de 
+`l'utilitaire python 'RSHELL' <RSHELL>`_
+
 ####
 
 ----------------------------
 Utilisation avec MicroPython
 ----------------------------
 
-:Liens_Web:
+    :Liens_Web:
             * http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/index.html
                 # Guide / Tutorial de prise en main de MicroPython sur ESP8266
 
             * http://docs.micropython.org/en/latest/pyboard/genrst/index.html
                 # Différence entre CPython et MicroPython
 
-:INFOS:
+    :INFOS:
 
 
-        * Micropython n'est pas très évolué. Il ne supporte pas les Class 
-          ou les scripts trop complexes
+            * Micropython n'est pas très évolué. Il ne supporte pas les Class 
+              ou les scripts trop complexes
 
-        * L'ESP8266, n'a pas de coprocesseur Arithmétique. Les opération mathématiques
-          complexe ou avancées ne sont pas possibles
+            * L'ESP8266, n'a pas de coprocesseur Arithmétique. Les opération mathématiques
+              complexe ou avancées ne sont pas possibles
+
+RSHELL
+======
+
+    :Liens_Web:
+            * https://wiki.mchobby.be/index.php?title=MicroPython-Hack-RShell#RShell_sur_ESP8266
+                # démonstration et explication
+
+            * https://github.com/dhylands/rshell
+                # Dépôt officiel
+
+    :Définissions:  RShell est un simple shell qui est exécuté sur un hôte et utilise le more 
+                    raw-REPL de Micropython pour envoyer des commandes vers une carte micro python.
+
+                    Cela permet:
+
+                        * d'obtenir des informations sur le système de fichier
+                        * de transférer des fichiers vers ou depuis la carte
+                        * d'établir une session REPL.
+
+                    Comme il est possible d'invoquer REPL, RShell peut également être utilisé comme 
+                    un émulateur terminal. 
+
+Installation et démarrage
+-------------------------
+
+RSHELL est un programme python : ::
+
+    pip install rshell
+
+Ouvrir une session
+++++++++++++++++++
+
+    :/!\\Attention/!\\: Sur un ESP8266, il est impératif de réduire la taille du buffer à 128 octets
+                        pour le pas écraser le système de fichier.
+
+L'ouverture de session se fait avec la commande suivante : ::
+
+    rshell --port /dev/ttyUSB0 --baud 115200 --buffer-size 128 --editor nano
+
+    # sous Windows, il est inutle de préciser l'éditeur car il n'y en as pas d'utilisable en ligne
+    # de commande.
+
+Utilisation
+-----------
+
+    * help : pour obtenir la liste des commandes : ::
+
+        Documented commands (type help <topic>):
+        ========================================
+
+        args    cat  connect  echo  exit      filetype  ls     repl  rsync
+        boards  cd   cp       edit  filesize  help      mkdir  rm    shell
+
+Accéder au système de fichier de la carte
++++++++++++++++++++++++++++++++++++++++++
+
+    * Pour accéder au système de fichier : ::
+
+        /pyboard
+
+        ex:
+        ls -l /pyboard
+
+    * Pour accéder à la flash : ::
+
+        # (Non testé)
+        /flash
+
+    * Pour accéder à la carte sd : ::
+
+        # (Non testé)
+        /sdcard
+
+Créer un fichier
+++++++++++++++++
+
+    #. Se connecter au REPL : ::
+
+        repl
+
+        Entering REPL. Use Control-X to exit.
+        >
+        MicroPython v1.10-8-g8b7039d7d on 2019-01-26; ESP module with ESP8266
+        Type "help()" for more information.
+        >>>
+        >>>
+
+    #. Créer simplement le fichier en python : ::
+
+        >>> fileName = "main.py"
+        >>> f = open(fileName, "w+")
+        >>> f.write("# main.py")
+        9
+        >>> f.close()
+
+    #. Vérifier que le fichier à bien été créer : ::
+
+        ls -l /pyboard
+
+            230 Dec 31 1999  boot.py
+             9 Apr  6 19:23  main.py
+
+    #. Consulter le contenu d'un fichier : ::
+
+        cat /pyboard/main.py
+
+        # main.py
+
+Copier un fichier local sur la carte
+++++++++++++++++++++++++++++++++++++
+
+    ::
+
+        cp main.py /pyboard
 
 REPL, WebREPL et File System
 ============================

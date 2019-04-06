@@ -272,12 +272,25 @@ un firmaware MicroPython.</p>
 </li>
 </ol>
 </div></blockquote>
+<div class="section" id="oserror-errno-2-enoent-main-py">
+<h4>OSError: [Errno 2] ENOENT: main.py<a class="headerlink" href="#oserror-errno-2-enoent-main-py" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Après avoir flasher le firmware, on peut avoir le message d’erreur :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">OSError</span><span class="p">:</span> <span class="p">[</span><span class="n">Errno</span> <span class="mi">2</span><span class="p">]</span> <span class="n">ENOENT</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Se message apparait lors de la connexion au terminal série (en REPL). Il n’est alors plus possible
+d’interagir avec le micro-contrôler.</p>
+<p>Ce message vient du faite que lors du déploiement du firmware, le fichier “main.py” n’est pas créer.</p>
+<p>Pour corriger ce problème il faut soit le créer soit le copier à partir de
+<a class="reference external" href="RSHELL">l’utilitaire python “RSHELL”</a></p>
+</div>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="utilisation-avec-micropython">
 <h2>Utilisation avec MicroPython<a class="headerlink" href="#utilisation-avec-micropython" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -305,6 +318,169 @@ complexe ou avancées ne sont pas possibles</li>
 </tr>
 </tbody>
 </table>
+</div></blockquote>
+<div class="section" id="rshell">
+<h3>RSHELL<a class="headerlink" href="#rshell" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://wiki.mchobby.be/index.php?title=MicroPython-Hack-RShell#RShell_sur_ESP8266">https://wiki.mchobby.be/index.php?title=MicroPython-Hack-RShell#RShell_sur_ESP8266</a></dt>
+<dd># démonstration et explication</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/dhylands/rshell">https://github.com/dhylands/rshell</a></dt>
+<dd># Dépôt officiel</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Définissions:</th><td class="field-body"><p class="first">RShell est un simple shell qui est exécuté sur un hôte et utilise le more
+raw-REPL de Micropython pour envoyer des commandes vers une carte micro python.</p>
+<p>Cela permet:</p>
+<blockquote>
+<div><ul class="simple">
+<li>d’obtenir des informations sur le système de fichier</li>
+<li>de transférer des fichiers vers ou depuis la carte</li>
+<li>d’établir une session REPL.</li>
+</ul>
+</div></blockquote>
+<p class="last">Comme il est possible d’invoquer REPL, RShell peut également être utilisé comme
+un émulateur terminal.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="installation-et-demarrage">
+<h4>Installation et démarrage<a class="headerlink" href="#installation-et-demarrage" title="Lien permanent vers ce titre">¶</a></h4>
+<p>RSHELL est un programme python :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">rshell</span>
+</pre></div>
+</div>
+<div class="section" id="ouvrir-une-session">
+<h5>Ouvrir une session<a class="headerlink" href="#ouvrir-une-session" title="Lien permanent vers ce titre">¶</a></h5>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">/!\Attention/!\:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Sur un ESP8266, il est impératif de réduire la taille du buffer à 128 octets
+pour le pas écraser le système de fichier.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>L’ouverture de session se fait avec la commande suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rshell</span> <span class="o">--</span><span class="n">port</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB0</span> <span class="o">--</span><span class="n">baud</span> <span class="mi">115200</span> <span class="o">--</span><span class="n">buffer</span><span class="o">-</span><span class="n">size</span> <span class="mi">128</span> <span class="o">--</span><span class="n">editor</span> <span class="n">nano</span>
+
+<span class="c1"># sous Windows, il est inutle de préciser l&#39;éditeur car il n&#39;y en as pas d&#39;utilisable en ligne</span>
+<span class="c1"># de commande.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="utilisation">
+<h4>Utilisation<a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><ul>
+<li><p class="first">help : pour obtenir la liste des commandes :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Documented</span> <span class="n">commands</span> <span class="p">(</span><span class="nb">type</span> <span class="n">help</span> <span class="o">&lt;</span><span class="n">topic</span><span class="o">&gt;</span><span class="p">):</span>
+<span class="o">========================================</span>
+
+<span class="n">args</span>    <span class="n">cat</span>  <span class="n">connect</span>  <span class="n">echo</span>  <span class="n">exit</span>      <span class="n">filetype</span>  <span class="n">ls</span>     <span class="n">repl</span>  <span class="n">rsync</span>
+<span class="n">boards</span>  <span class="n">cd</span>   <span class="n">cp</span>       <span class="n">edit</span>  <span class="n">filesize</span>  <span class="n">help</span>      <span class="n">mkdir</span>  <span class="n">rm</span>    <span class="n">shell</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<div class="section" id="acceder-au-systeme-de-fichier-de-la-carte">
+<h5>Accéder au système de fichier de la carte<a class="headerlink" href="#acceder-au-systeme-de-fichier-de-la-carte" title="Lien permanent vers ce titre">¶</a></h5>
+<blockquote>
+<div><ul>
+<li><p class="first">Pour accéder au système de fichier :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">pyboard</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">pyboard</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Pour accéder à la flash :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># (Non testé)</span>
+<span class="o">/</span><span class="n">flash</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Pour accéder à la carte sd :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># (Non testé)</span>
+<span class="o">/</span><span class="n">sdcard</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="creer-un-fichier">
+<h5>Créer un fichier<a class="headerlink" href="#creer-un-fichier" title="Lien permanent vers ce titre">¶</a></h5>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Se connecter au REPL :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">repl</span>
+
+<span class="n">Entering</span> <span class="n">REPL</span><span class="o">.</span> <span class="n">Use</span> <span class="n">Control</span><span class="o">-</span><span class="n">X</span> <span class="n">to</span> <span class="n">exit</span><span class="o">.</span>
+<span class="o">&gt;</span>
+<span class="n">MicroPython</span> <span class="n">v1</span><span class="o">.</span><span class="mi">10</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="n">g8b7039d7d</span> <span class="n">on</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">26</span><span class="p">;</span> <span class="n">ESP</span> <span class="n">module</span> <span class="k">with</span> <span class="n">ESP8266</span>
+<span class="n">Type</span> <span class="s2">&quot;help()&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Créer simplement le fichier en python :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fileName</span> <span class="o">=</span> <span class="s2">&quot;main.py&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span> <span class="s2">&quot;w+&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# main.py&quot;</span><span class="p">)</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Vérifier que le fichier à bien été créer :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">pyboard</span>
+
+    <span class="mi">230</span> <span class="n">Dec</span> <span class="mi">31</span> <span class="mi">1999</span>  <span class="n">boot</span><span class="o">.</span><span class="n">py</span>
+     <span class="mi">9</span> <span class="n">Apr</span>  <span class="mi">6</span> <span class="mi">19</span><span class="p">:</span><span class="mi">23</span>  <span class="n">main</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Consulter le contenu d’un fichier :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">/</span><span class="n">pyboard</span><span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">py</span>
+
+<span class="c1"># main.py</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="copier-un-fichier-local-sur-la-carte">
+<h5>Copier un fichier local sur la carte<a class="headerlink" href="#copier-un-fichier-local-sur-la-carte" title="Lien permanent vers ce titre">¶</a></h5>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="o">/</span><span class="n">pyboard</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
 <div class="section" id="repl-webrepl-et-file-system">
 <h3>REPL, WebREPL et File System<a class="headerlink" href="#repl-webrepl-et-file-system" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Il est possible d’interagir directement avec l’ESP. Soit depuis le port série, c’est le REPL. Soit
@@ -460,10 +636,26 @@ fichiers sinon l’opération échoue.</p>
 <li><a class="reference internal" href="#flasher-un-nouveau-firmware">Flasher un nouveau Firmware</a><ul>
 <li><a class="reference internal" href="#la-facon-simple-quant-tous-vas-bien">La façon simple (quant tous vas bien)</a></li>
 <li><a class="reference internal" href="#la-facon-complique-quant-ca-merde">La façon compliqué (quant ça merde)</a></li>
-<li><a class="reference internal" href="#maj-du-firmware">MAJ du Firmware</a></li>
+<li><a class="reference internal" href="#maj-du-firmware">MAJ du Firmware</a><ul>
+<li><a class="reference internal" href="#oserror-errno-2-enoent-main-py">OSError: [Errno 2] ENOENT: main.py</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#utilisation-avec-micropython">Utilisation avec MicroPython</a><ul>
+<li><a class="reference internal" href="#rshell">RSHELL</a><ul>
+<li><a class="reference internal" href="#installation-et-demarrage">Installation et démarrage</a><ul>
+<li><a class="reference internal" href="#ouvrir-une-session">Ouvrir une session</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#utilisation">Utilisation</a><ul>
+<li><a class="reference internal" href="#acceder-au-systeme-de-fichier-de-la-carte">Accéder au système de fichier de la carte</a></li>
+<li><a class="reference internal" href="#creer-un-fichier">Créer un fichier</a></li>
+<li><a class="reference internal" href="#copier-un-fichier-local-sur-la-carte">Copier un fichier local sur la carte</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#repl-webrepl-et-file-system">REPL, WebREPL et File System</a></li>
 <li><a class="reference internal" href="#conclusion-sur-micropython-et-l-esp8266">Conclusion sur MicroPython et l’ESP8266</a></li>
 </ul>
