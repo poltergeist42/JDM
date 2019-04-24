@@ -38,3 +38,21 @@ Windows
     #. Test publisher / client mosquitto_pub -t 'home/light' -m 'Turn ON' 
 
     #. Test2 publisher / client mosquitto_pub -t 'home/light' -m 'Turn OFF'
+
+####
+
+MQTT sous Python
+================
+
+    #. Création de l'environnement virtuel ::
+
+        mkdir MQTT_env
+        cd MQTT_env
+        python -m venv .
+
+    #. Installation des dépendances ::
+
+        script\activate.bat
+
+        pip install paho-mqtt==1.3.1
+

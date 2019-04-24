@@ -43,16 +43,28 @@ Démarrer un nouveau projet
           
             cd env_[nom_du_projet]
             
-            virtualenv --system-site-packages .
+            python -m virtualenv .
                 # Le point en fin de ligne représente le répertoire courant
                 
-    #. Créer un projet Django
-    
-        - Créer un dossier significatif
+    #. Installation de Django dans le virtualenv
+
         - Lancer l’environnement virtuel avant de créer le projet Django
             + Exécuter le script d'activation : ::
             
-                .\Scripts\activate.bat
+                C:\first_website_with_django\env_fdw>Scripts\activate.bat
+
+                (env_fdw) C:\Users\polter\OneDrive\WEB\first_website_with_django\env>
+                    # Le prompt est alors précéder du nom de l'environement virtuel
+
+        - Installer Django avec pip: ::
+
+            pip install "django>=2.1,<2.2"
+                # permet de fixer la version à installer
+
+
+    #. Créer un projet Django
+    
+        - Créer un dossier significatif
                 
         - Ce placer dans le répertoire de destination et lancer la création
           du projet Django(site principal) : ::
