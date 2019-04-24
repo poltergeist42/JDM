@@ -530,6 +530,51 @@ Les décorateurs
                 
 ------------------------------------------------------------------------------------------
 
+Les fonction lambda
+===================
+
+    Les fonctions lambda sont des fonctions sur une seule ligne (une seule expression serait plus
+    juste). Elle sont associé à une variable. Elle peuvent recevoir 0, 1 ou plusieurs argument. Y
+    compris des arguments ayant une valeur par défaut.
+
+    La syntaxe est la suivante : ::
+
+        [varriable_d'affectation] = lambda [0, 1 ou n arguments] : [expression]
+
+        ex: 
+        # fonction classique:
+        def f(var1, var2):
+            return var1 + var2
+
+        >>>f(1, 2)
+        3
+
+        # fonction lambda:
+        f = lambda var1, var2 : var1 + var2
+
+        >>>f(1, 2)
+        3
+
+        # lambda sans argument:
+        f = lambda : print("Je suis une lambda sans agurment")
+
+        >>>f()
+        Je suis une lambda sans argument
+
+        # lambda avec 1 argument
+        >>> f = lambda var1 : print(f"voici l'argument 'var1' : {var1}")
+        >>> f("arg1")
+        voici l'argument 'var1' : arg1
+
+        # lambda avec un argument par défaut:
+        >>> f = lambda var1="valeur par défaut" : print(f"voici l'argument 'var1' : {var1}")
+        >>> f()
+        voici l'argument 'var1' : valeur par défaut
+        >>> f("arg personalisé")
+        voici l'argument 'var1' : arg personalisé
+
+------------------------------------------------------------------------------------------
+
 Tester un type attendu
 ======================
 

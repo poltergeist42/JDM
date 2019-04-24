@@ -787,6 +787,51 @@ complète y compris le contenu des données itérables</p>
 </table>
 </div>
 <hr class="docutils" />
+<div class="section" id="les-fonction-lambda">
+<h2>Les fonction lambda<a class="headerlink" href="#les-fonction-lambda" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><p>Les fonctions lambda sont des fonctions sur une seule ligne (une seule expression serait plus
+juste). Elle sont associé à une variable. Elle peuvent recevoir 0, 1 ou plusieurs argument. Y
+compris des arguments ayant une valeur par défaut.</p>
+<p>La syntaxe est la suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">varriable_d</span><span class="s1">&#39;affectation] = lambda [0, 1 ou n arguments] : [expression]</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="c1"># fonction classique:</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">var1</span><span class="p">,</span> <span class="n">var2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">var1</span> <span class="o">+</span> <span class="n">var2</span>
+
+<span class="o">&gt;&gt;&gt;</span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">3</span>
+
+<span class="c1"># fonction lambda:</span>
+<span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">var1</span><span class="p">,</span> <span class="n">var2</span> <span class="p">:</span> <span class="n">var1</span> <span class="o">+</span> <span class="n">var2</span>
+
+<span class="o">&gt;&gt;&gt;</span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">3</span>
+
+<span class="c1"># lambda sans argument:</span>
+<span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je suis une lambda sans agurment&quot;</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span><span class="n">f</span><span class="p">()</span>
+<span class="n">Je</span> <span class="n">suis</span> <span class="n">une</span> <span class="k">lambda</span> <span class="n">sans</span> <span class="n">argument</span>
+
+<span class="c1"># lambda avec 1 argument</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">var1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;voici l&#39;argument &#39;var1&#39; : </span><span class="si">{var1}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="s2">&quot;arg1&quot;</span><span class="p">)</span>
+<span class="n">voici</span> <span class="n">l</span><span class="s1">&#39;argument &#39;</span><span class="n">var1</span><span class="s1">&#39; : arg1</span>
+
+<span class="c1"># lambda avec un argument par défaut:</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">var1</span><span class="o">=</span><span class="s2">&quot;valeur par défaut&quot;</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;voici l&#39;argument &#39;var1&#39; : </span><span class="si">{var1}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">()</span>
+<span class="n">voici</span> <span class="n">l</span><span class="s1">&#39;argument &#39;</span><span class="n">var1</span><span class="s1">&#39; : valeur par défaut</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="s2">&quot;arg personalisé&quot;</span><span class="p">)</span>
+<span class="n">voici</span> <span class="n">l</span><span class="s1">&#39;argument &#39;</span><span class="n">var1</span><span class="s1">&#39; : arg personalisé</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
 <div class="section" id="tester-un-type-attendu">
 <h2>Tester un type attendu<a class="headerlink" href="#tester-un-type-attendu" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
@@ -1395,6 +1440,7 @@ d’explications supplémentaires.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#les-decorateurs">Les décorateurs</a></li>
+<li><a class="reference internal" href="#les-fonction-lambda">Les fonction lambda</a></li>
 <li><a class="reference internal" href="#tester-un-type-attendu">Tester un type attendu</a></li>
 <li><a class="reference internal" href="#packing-et-unpacking-utilisation-de-args-et-kwargs">Packing et UnPacking (utilisation de : “*args” et “**kwargs”)</a></li>
 <li><a class="reference internal" href="#passer-des-parametres-a-un-programme-avec-argparse">Passer des paramètres à un programme avec argparse</a></li>

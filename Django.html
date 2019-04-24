@@ -110,8 +110,35 @@
 de l’environnement virtuel :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
 
-<span class="n">virtualenv</span> <span class="o">--</span><span class="n">system</span><span class="o">-</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="o">.</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">virtualenv</span> <span class="o">.</span>
     <span class="c1"># Le point en fin de ligne représente le répertoire courant</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Installation de Django dans le virtualenv</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>Lancer l’environnement virtuel avant de créer le projet Django</dt>
+<dd><ul class="first last">
+<li><p class="first">Exécuter le script d’activation :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">first_website_with_django</span>\<span class="n">env_fdw</span><span class="o">&gt;</span><span class="n">Scripts</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
+
+<span class="p">(</span><span class="n">env_fdw</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">polter</span>\<span class="n">OneDrive</span>\<span class="n">WEB</span>\<span class="n">first_website_with_django</span>\<span class="n">env</span><span class="o">&gt;</span>
+    <span class="c1"># Le prompt est alors précéder du nom de l&#39;environement virtuel</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Installer Django avec pip:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;django&gt;=2.1,&lt;2.2&quot;</span>
+    <span class="c1"># permet de fixer la version à installer</span>
 </pre></div>
 </div>
 </li>
@@ -122,18 +149,6 @@ de l’environnement virtuel :</p>
 <blockquote>
 <div><ul>
 <li><p class="first">Créer un dossier significatif</p>
-</li>
-<li><dl class="first docutils">
-<dt>Lancer l’environnement virtuel avant de créer le projet Django</dt>
-<dd><ul class="first last">
-<li><p class="first">Exécuter le script d’activation :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">Scripts</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</dd>
-</dl>
 </li>
 <li><p class="first">Ce placer dans le répertoire de destination et lancer la création
 du projet Django(site principal) :</p>
