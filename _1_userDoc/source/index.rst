@@ -30,6 +30,7 @@ Mon journal de manip
    MAC_OS
    Machine_learning
    MQTT
+   Optimisation_Travail
    Powershell
    Python
    Raspberry

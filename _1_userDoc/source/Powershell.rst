@@ -326,6 +326,13 @@ Renvoyer la sortie d'une commande vers une fenêtre graphique
         
         PS C:\Users\polter> get-cliditem | Out-GridView
 
+Equivalence de la command linux "grep"
+--------------------------------------
+
+    .. code:: powershell
+
+        netstat -an | findstr 1883
+
 ----------------------------------------------------------
 
 Déclarer une fonction
