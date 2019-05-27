@@ -61,7 +61,7 @@ Les différentes étapes de la lecture rapides
                mêmes lignes ou fait se promener le regard sur le reste de la page.
 
                Pour contrer le problème de divagation, il faut faire des pause régulière (Voir la
-               technique du Pomodoro).
+               technique du **Pomodoro**).
 
                Pour Contrer le problème de retour en arrière, on peut, le temps de se désabituer de
                ce problème, mettre un cache sur le texte déjà lu.
@@ -72,7 +72,7 @@ Les différentes étapes de la lecture rapides
                eviter se problème il se forcer à lire plus vite. La technique du pointeur évoqué 
                dans l'étape "Supprimer la subvocalisation" peut alors à nouveau être utile.
 
-       **/!\\ Attention /!\\** : même on ne trouve aucune nouvelle information visuelle pendant ces
+       **/!\\ Attention /!\\** : même si on ne trouve aucune nouvelle information visuelle pendant ces
        saccades, la recherche a montré que le traitement cognitif se poursuit pendant ce temps. 
        Notre cerveau profite de ces 0,1 secondes de pause pour continuer à travailler et à 
        comprendre.
@@ -97,7 +97,8 @@ La technique de lecture rapide améliore les performences de lecture mais nuis �
 à la mémorisation générale du texte.
 
 Pour améliorer ses performence de lecture, on peut agmenter légerement son rythme de lecture. Il ne
-faut pas trop augmenter la vitesse de lecture de façon à ne pas nuir à la compréhension du texte.
+faut pas trop augmenter la vitesse de lecture de façon à ne pas nuir à la compréhension et à la
+mémorisation du texte.
 
 Il faut faire des pauses régulières pour améliorer sa concentration.
 
@@ -110,6 +111,47 @@ Technique du Pomodoro
     :Liens_Web:
 
             - La technique du `Pomodoro`_
+            - `pomodoro-tracker`_ : un site Web permettant d'appliquer le pomodoro.
+
+    :Definition:
+
+            - **Pomodoro** signifie tomate en italien. Ce nom été donné par **Francesco Cirillo**
+              qui utilisait un minuteur de cuisine en forme de tomatte quand il a développé cette
+              technique.
+
+La technique utilise une minuterie pour diviser le travail en intervalles, traditionnellement de 
+25 minutes, séparés par de courtes pauses de 5 minutes. Un pomodoro ne doit pas être interrompu. 
+Si une idée ou une tache supplémentaire vient interrompre le pomodoro, il faut la noter pour 
+pouvoir la traiter plustard et reprendre le pomodoro en cours.
+
+Les objectifs de la méthode
+===========================
+
+   * Reduire l'impact des interruptions pendant la réalisation d'une tache.
+   * Soulager l'angoisse de la page blanche
+   * Augmenter l'attention et la concentration en réduisant les interruptions
+   * Mieux comprendre vos décisions
+   * Booster et conserver votre motivation
+   * Renforcer votre détermination à atteindre vos objectifs
+   * Mieux réaliser vos estimations, tant qualitativement que quantitativement
+   * Améliorer votre méthode de travail ou d'étude
+   * Renforcer votre détermination à résoudre les situations complexes
+
+Utilisation de la méthode
+=========================
+
+    #. Définir les taches à accomplir
+    #. Regler la minuterie (traditionnellement à 25 min)
+    #. Travailler sur la tâche jusqu’à ce que la minuterie sonne. Si une distraction apparaît, 
+       l’écrire, mais revenir immédiatement sur la tâche.
+
+    #. A la fin du timer, mettre une croix ou autre sur un morceau de papier.
+    #. Faire une pause de 5 min. Lorsque 4 cycles auront été effectués, faire une pause de 15 à 30 min.
+
+    **N.B:** 
+        - Une tache peut être constituée de plusieurs pomodori.
+        - Les pauses régulières favorisent l'assimilition.
+        - Lors des pauses, il est conseillé de faire un peu d'excercice physique.
 
 ####
 
@@ -120,6 +162,28 @@ La methode du canard en plastique
     :Liens_Web:
 
             - `WIKI canard en plastique`_
+            - `Dissonance cognitive`_
+
+Cette méthode est principalement utiliser en programmation pour faire du débuggage. Elle peut 
+également être utiliser dans la préparation d'une présentation orale.
+
+La méthode du canard en plastique consiste à expliquer méticuleusement le code source que l'on 
+a écrit à un collègue, à un simple passant, ou même à un objet inanimé comme un canard en 
+plastique. Le simple fait d'exprimer ses pensées à voix haute est censé aider à trouver les erreurs
+de programmation. Comme les réactions de l'interlocuteur ou son niveau de compréhension du problème
+n'ont aucune importance dans ce processus, on peut le remplacer par un canard en plastique. 
+
+**N.B:** Lors d'une revue de code, **il faut dire ce que fait le code et non pas ce qu'il devrait faire**.
+
+La méthode du canard en caoutchouc exploite la **dissonance cognitive** en confrontant le concepteur
+au fait que le code qu'il a écrit ne correspond pas au code qu'il avait l'intention d'écrire.
+
+Dans le cardre d'une présentation orale, cela permet d'identifier les points qui pourrait être 
+approfondit, améliorer ou même supprimer car redondant ou n'apportant pas d'information nouvelle
+ou pertinante. Cela aide également a fluidifier le discourt tout en modérant le rythmes de la 
+présentation.
+
+####
 
 ----------------
 La méthode Agile
@@ -127,7 +191,8 @@ La méthode Agile
 
     :Liens_Web:
 
-            - `Methode Agile`_
+         - `WIKI Methode Agile`_
+         - `Methode Agile`_
 
 ####
 
@@ -140,7 +205,10 @@ Webography
 .. _`Lecture rapide, les contres`: http://www.slate.fr/story/106589/lecture-rapide-livre-est-ce-possible
 .. _`Champ visuel`: https://fr.wikipedia.org/wiki/Champ_visuel
 .. _`Pomodoro`: http://www.pomodoro-technique.fr/
+.. _`pomodoro-tracker`: https://pomodoro-tracker.com/?lang=fr
 .. _`WIKI canard en plastique`: https://fr.wikipedia.org/wiki/M%C3%A9thode_du_canard_en_plastique
+.. _`Dissonance cognitive`: https://fr.wikipedia.org/wiki/Dissonance_cognitive
+.. _`WIKI Methode Agile`: https://fr.wikipedia.org/wiki/M%C3%A9thode_agile
 .. _`Methode Agile`: https://agiliste.fr/introduction-methodes-agiles/
 
 .. target-notes::
