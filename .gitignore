@@ -1,10 +1,11 @@
 ## [ .gitignore ]
 
-## Liste des fichiers et dossiers à ignorer
+## Liste des fichiers et dossiers ï¿½ ignorer
 
 #.gitignore
 
 ## [ Dossiers a ignorer ]
+.vscode
 _3_software/_3-1_test*/
 _3_software/oldLibVers*/
 _5_*/

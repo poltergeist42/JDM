@@ -17,7 +17,7 @@ PINOUT
 
 
 :Wemos_D1_mini:
- .. image:: ./Images/ESP8266/wemos_D1_mini_pinout.png
+ .. image:: ./Images/ESP8266/d1-mini.jpg
      :width: 400 px
      :align: center
 
