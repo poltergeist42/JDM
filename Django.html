@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Django &#8212; Documentation JDM 20170523</title>
+    <title>1   Django 2 &#8212; Documentation JDM 20170523</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -41,387 +41,1173 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="django">
-<h1>Django<a class="headerlink" href="#django" title="Lien permanent vers ce titre">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_WEB:</th><td class="field-body"><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/ref/">https://docs.djangoproject.com/fr/1.10/ref/</a></dt>
-<dd># Référence de Django (fr)</dd>
-</dl>
+  <div class="section" id="django-2">
+<h1><a class="toc-backref" href="#id30">1&nbsp;&nbsp;&nbsp;Django 2</a><a class="headerlink" href="#django-2" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#django-2" id="id30">1&nbsp;&nbsp;&nbsp;Django 2</a><ul class="auto-toc">
+<li><a class="reference internal" href="#how-djano-is-structured" id="id31">1.1&nbsp;&nbsp;&nbsp;How Djano is structured</a><ul class="auto-toc">
+<li><a class="reference internal" href="#model-view-controller-mvc" id="id32">1.1.1&nbsp;&nbsp;&nbsp;Model, View, Controller (MVC)</a><ul class="auto-toc">
+<li><a class="reference internal" href="#model-template-view-mtv" id="id33">1.1.1.1&nbsp;&nbsp;&nbsp;Model, Template, View (MTV)</a></li>
+</ul>
 </li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/intro/">https://docs.djangoproject.com/fr/1.10/intro/</a></dt>
-<dd># Tutoriel de prise en main / découverte</dd>
-</dl>
+<li><a class="reference internal" href="#models" id="id34">1.1.2&nbsp;&nbsp;&nbsp;Models</a><ul class="auto-toc">
+<li><a class="reference internal" href="#supported-databases" id="id35">1.1.2.1&nbsp;&nbsp;&nbsp;Supported databases</a></li>
+</ul>
 </li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/howto/">https://docs.djangoproject.com/fr/1.10/howto/</a></dt>
-<dd># Guides pratiques</dd>
-</dl>
+<li><a class="reference internal" href="#template" id="id36">1.1.3&nbsp;&nbsp;&nbsp;Template</a></li>
+<li><a class="reference internal" href="#view" id="id37">1.1.4&nbsp;&nbsp;&nbsp;View</a><ul class="auto-toc">
+<li><a class="reference internal" href="#displaying-error-pages" id="id38">1.1.4.1&nbsp;&nbsp;&nbsp;Displaying error pages</a></li>
+<li><a class="reference internal" href="#class-based-views-for-simplifying-common-display-tasks" id="id39">1.1.4.2&nbsp;&nbsp;&nbsp;class-based views for simplifying common display tasks</a></li>
+</ul>
 </li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://www.youtube.com/watch?v=yDv5FIAeyoY">https://www.youtube.com/watch?v=yDv5FIAeyoY</a></dt>
-<dd># Vidéo tutoriel de 08h00 sur Django 1.11</dd>
-</dl>
+<li><a class="reference internal" href="#url-configuration-urlconf" id="id40">1.1.5&nbsp;&nbsp;&nbsp;URL Configuration (URLconf)</a></li>
+<li><a class="reference internal" href="#admin" id="id41">1.1.6&nbsp;&nbsp;&nbsp;Admin</a></li>
+</ul>
 </li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="http://www.marinamele.com/2014/03/document-your-django-projects.html">http://www.marinamele.com/2014/03/document-your-django-projects.html</a></dt>
-<dd># Pour utiliser Sphinx avec django</dd>
-</dl>
+<li><a class="reference internal" href="#install-django" id="id42">1.2&nbsp;&nbsp;&nbsp;Install Django</a><ul class="auto-toc">
+<li><a class="reference internal" href="#creating-a-project-directory" id="id43">1.2.1&nbsp;&nbsp;&nbsp;Creating a project directory</a></li>
+<li><a class="reference internal" href="#installing-django-in-a-virtual-environement" id="id44">1.2.2&nbsp;&nbsp;&nbsp;Installing Django in a Virtual Environement</a></li>
+</ul>
 </li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://docs.djangoproject.com/en/dev/internals/contributing/writing-documentation/">https://docs.djangoproject.com/en/dev/internals/contributing/writing-documentation/</a></dt>
-<dd># Documenter un projet Django avec Sphinx (Doc officiel Django)</dd>
-</dl>
+<li><a class="reference internal" href="#how-to-start-and-basic-s-usages" id="id45">1.3&nbsp;&nbsp;&nbsp;How to start and basic’s usages</a><ul class="auto-toc">
+<li><a class="reference internal" href="#starting-a-project" id="id46">1.3.1&nbsp;&nbsp;&nbsp;Starting a project</a></li>
+<li><a class="reference internal" href="#django-shell-and-developement-server" id="id47">1.3.2&nbsp;&nbsp;&nbsp;Django Shell and Developement Server</a><ul class="auto-toc">
+<li><a class="reference internal" href="#django-shell" id="id48">1.3.2.1&nbsp;&nbsp;&nbsp;Django Shell</a></li>
+<li><a class="reference internal" href="#the-developement-server" id="id49">1.3.2.2&nbsp;&nbsp;&nbsp;The developement Server</a></li>
+</ul>
 </li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://www.supinfo.com/articles/single/5779-bien-debuter-avec-django-docker">https://www.supinfo.com/articles/single/5779-bien-debuter-avec-django-docker</a></dt>
-<dd># Création d’un Container Django</dd>
-</dl>
+<li><a class="reference internal" href="#django-settings-settings-py" id="id50">1.3.3&nbsp;&nbsp;&nbsp;Django Settings (settings.py)</a></li>
+<li><a class="reference internal" href="#django-applications" id="id51">1.3.4&nbsp;&nbsp;&nbsp;Django Applications</a><ul class="auto-toc">
+<li><a class="reference internal" href="#creating-an-app" id="id52">1.3.4.1&nbsp;&nbsp;&nbsp;Creating an App</a></li>
+</ul>
 </li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://docs.docker.com/compose/django/">https://docs.docker.com/compose/django/</a></dt>
-<dd># Création d’un container Django (Doc officiel Docker)</dd>
-</dl>
+<li><a class="reference internal" href="#configuring-the-urls-urls-py" id="id53">1.3.5&nbsp;&nbsp;&nbsp;Configuring the URLs (urls.py)</a><ul class="auto-toc">
+<li><a class="reference internal" href="#the-application-s-url" id="id54">1.3.5.1&nbsp;&nbsp;&nbsp;The application’s url</a></li>
+<li><a class="reference internal" href="#the-site-s-url-the-django-s-project" id="id55">1.3.5.2&nbsp;&nbsp;&nbsp;The site’s url (the Django’s project)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#apps-model-models-py" id="id56">1.3.6&nbsp;&nbsp;&nbsp;apps” model (models.py)</a><ul class="auto-toc">
+<li><a class="reference internal" href="#create-the-app-class" id="id57">1.3.6.1&nbsp;&nbsp;&nbsp;Create the app class</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#admin-site-and-admin-py" id="id58">1.3.7&nbsp;&nbsp;&nbsp;admin site (and admin.py)</a><ul class="auto-toc">
+<li><a class="reference internal" href="#create-a-admin-user-superuser" id="id59">1.3.7.1&nbsp;&nbsp;&nbsp;Create a admin user (superuser)</a></li>
+<li><a class="reference internal" href="#registering-model" id="id60">1.3.7.2&nbsp;&nbsp;&nbsp;Registering model</a></li>
+<li><a class="reference internal" href="#list-display-ordering-and-searh-fields" id="id61">1.3.7.3&nbsp;&nbsp;&nbsp;List_display, ordering and searh_fields</a></li>
+<li><a class="reference internal" href="#adding-content" id="id62">1.3.7.4&nbsp;&nbsp;&nbsp;Adding content</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#django-templates" id="id63">1.3.8&nbsp;&nbsp;&nbsp;Django Templates</a><ul class="auto-toc">
+<li><a class="reference internal" href="#template-settings" id="id64">1.3.8.1&nbsp;&nbsp;&nbsp;Template Settings</a></li>
+<li><a class="reference internal" href="#base-html-file" id="id65">1.3.8.2&nbsp;&nbsp;&nbsp;base.html file</a></li>
+<li><a class="reference internal" href="#the-app-s-html-template" id="id66">1.3.8.3&nbsp;&nbsp;&nbsp;The app’s html template</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#static-files" id="id67">1.3.9&nbsp;&nbsp;&nbsp;Static Files</a></li>
+<li><a class="reference internal" href="#django-s-error-page" id="id68">1.3.10&nbsp;&nbsp;&nbsp;Django’s Error Page</a><ul class="auto-toc">
+<li><a class="reference internal" href="#the-django-s-error-page-in-dev-mode" id="id69">1.3.10.1&nbsp;&nbsp;&nbsp;The Django’s Error page in Dev mode</a></li>
+</ul>
 </li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
-<hr class="docutils" />
-<div class="section" id="demarrer-un-nouveau-projet">
-<h2>Démarrer un nouveau projet<a class="headerlink" href="#demarrer-un-nouveau-projet" title="Lien permanent vers ce titre">¶</a></h2>
-<blockquote>
-<div><ol class="arabic">
-<li><p class="first">Créer l’environnement virtuel</p>
-<blockquote>
-<div><ul>
-<li><p class="first">Créer un dossier avec un nom significatif :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
-</pre></div>
-</div>
 </li>
-<li><p class="first">Ce placer dans le répertoire de destination et lancer la création
-de l’environnement virtuel :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">env_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
-
-<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">virtualenv</span> <span class="o">.</span>
-    <span class="c1"># Le point en fin de ligne représente le répertoire courant</span>
-</pre></div>
-</div>
+<li><a class="reference internal" href="#vocabulary" id="id70">1.4&nbsp;&nbsp;&nbsp;Vocabulary</a></li>
+<li><a class="reference internal" href="#webography" id="id71">1.5&nbsp;&nbsp;&nbsp;Webography</a></li>
+</ul>
 </li>
 </ul>
-</div></blockquote>
-</li>
-<li><p class="first">Installation de Django dans le virtualenv</p>
-<blockquote>
-<div><ul>
-<li><dl class="first docutils">
-<dt>Lancer l’environnement virtuel avant de créer le projet Django</dt>
-<dd><ul class="first last">
-<li><p class="first">Exécuter le script d’activation :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">first_website_with_django</span>\<span class="n">env_fdw</span><span class="o">&gt;</span><span class="n">Scripts</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
-
-<span class="p">(</span><span class="n">env_fdw</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">polter</span>\<span class="n">OneDrive</span>\<span class="n">WEB</span>\<span class="n">first_website_with_django</span>\<span class="n">env</span><span class="o">&gt;</span>
-    <span class="c1"># Le prompt est alors précéder du nom de l&#39;environement virtuel</span>
-</pre></div>
 </div>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p class="first">Installer Django avec pip:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;django&gt;=2.1,&lt;2.2&quot;</span>
-    <span class="c1"># permet de fixer la version à installer</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p class="first">Créer un projet Django</p>
-<blockquote>
-<div><ul>
-<li><p class="first">Créer un dossier significatif</p>
-</li>
-<li><p class="first">Ce placer dans le répertoire de destination et lancer la création
-du projet Django(site principal) :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
-
-<span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startproject</span> <span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span> <span class="o">.</span>
-    <span class="c1"># Le point en fin de ligne représente le répertoire courant</span>
-    <span class="c1"># Un dossier du [nom_du_projet] sera créer dans le répertoire courant</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p class="first">Configurer le fichier «&nbsp;settings.py&nbsp;»</p>
-<blockquote>
-<div><ul>
-<li><p class="first">Editer le fichier «&nbsp;settings.py&nbsp;» situé dans le dossier «&nbsp;./[nom_du_projet]/&nbsp;»</p>
-</li>
-<li><p class="first">Modifier les lignes :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;en-us&#39;</span>
-<span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;UTC&#39;</span>
-</pre></div>
-</div>
-<p>par :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;fr-fr&#39;</span>
-<span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;Europe/Paris&#39;</span>
-</pre></div>
-</div>
-</li>
-<li><p class="first">Ajouter après la ligne «&nbsp;STATIC_URL = “/static/”&nbsp;» la ligne :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;static&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p class="first">Créer la base de donnée (pour une DB SQLite)</p>
-<blockquote>
-<div><ul>
-<li><p class="first">Se placer au même niveau que le fichiers «&nbsp;manage.py&nbsp;»</p>
-</li>
-<li><p class="first">Effectuer la première migration :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</li>
-</ol>
-</div></blockquote>
-<div class="section" id="demarrer-une-nouvelle-app">
-<h3>Démarrer une nouvelle APP<a class="headerlink" href="#demarrer-une-nouvelle-app" title="Lien permanent vers ce titre">¶</a></h3>
-<blockquote>
-<div><ul>
-<li><p class="first">Se placer au même niveau que le fichiers «&nbsp;manage.py&nbsp;» et exécuter la commande manage :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="p">[</span><span class="n">votre_application</span><span class="p">]</span>
-    <span class="c1"># Un dossier [votre_application] sera créer dans le répertoire courant</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="principes-de-fonctionnement">
-<h2>Principes de fonctionnement<a class="headerlink" href="#principes-de-fonctionnement" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Django travail sur le principe du MVC (Model, Vue, Controler). L’organisation dans Django
-se présente sous la forme : Model, Vue, Template.</p>
-<p>La correspondance avec le MVC est la suivante :</p>
-<blockquote>
-<div><ol class="arabic">
-<li><p class="first">Model (Django : Model) :</p>
-<blockquote>
-<div><ul>
-<li><p class="first"><strong>models.py</strong> : C’est le script qui permet la création des tables
-dans la base de données.</p>
-<dl class="docutils">
-<dt>Par analogie avec la POO</dt>
-<dd><ul class="first last simple">
-<li>La base de donné est l’objet</li>
-<li>Les tables (définies comme des class dans «&nbsp;models.py&nbsp;»)
-sont des instances de l’objet</li>
-<li>Les champs (définies comme des attribut de class dans «&nbsp;models.py&nbsp;»)
-sont des attributs de l’instances</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p class="first">Vue (Django : Template) :</p>
-<blockquote>
-<div><ul class="simple">
-<li>Tous les fichiers en «&nbsp;.html&nbsp;» dans ./templates</li>
-<li>Les feuilles de styles («&nbsp;.css&nbsp;») dans ./static</li>
-<li><strong>urls.py</strong> : sert de liaison avec views.py. Ce ficher généré les urls à la volée,
-par l’interprétation d’expression régulière (RegEx)</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p class="first">Controler (Django : Vue)</p>
-<blockquote>
-<div><ul class="simple">
-<li><strong>views.py</strong> : Permet de faire le liens entre le Model et la Vue. Interprètes
-les formulaires HTML et interagit avec la base de données</li>
-</ul>
-</div></blockquote>
-</li>
-</ol>
-</div></blockquote>
-</div>
-<hr class="docutils" />
-<div class="section" id="rappel-des-commandes-de-base">
-<h2>Rappel des commandes de base<a class="headerlink" href="#rappel-des-commandes-de-base" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_WEB:</th><td class="field-body"><blockquote class="first">
-<div><ul class="simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/intro/tutorial01/">https://docs.djangoproject.com/fr/1.10/intro/tutorial01/</a></li>
-</ul>
-</div></blockquote>
-<ol class="last arabic">
-<li><dl class="first docutils">
-<dt>Le serveur de développement</dt>
-<dd><div class="first highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
-</pre></div>
-</div>
-<p><strong>N.B</strong> : Le port par défaut est le 8000</p>
-<ol class="last arabic">
-<li><p class="first">Démarrage du serveur sur un autre port</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mi">8080</span>
-</pre></div>
-</div>
-</li>
-<li><p class="first">Démarrer le serveur en écoutant sur une autre IP</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">8000</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</dd>
-</dl>
-</li>
-<li><p class="first">Commentaires dans les templates</p>
+<div class="section" id="how-djano-is-structured">
+<h2><a class="toc-backref" href="#id31">1.1&nbsp;&nbsp;&nbsp;How Djano is structured</a><a class="headerlink" href="#how-djano-is-structured" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="model-view-controller-mvc">
+<h3><a class="toc-backref" href="#id32">1.1.1&nbsp;&nbsp;&nbsp;Model, View, Controller (MVC)</a><a class="headerlink" href="#model-view-controller-mvc" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Django is a Model View Controller (MVC) framework.</p>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">/!\Attention/!\:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">les commentaires html  (&lt;!– […] –&gt;) ne s’appliquent pas sur
-les instructions Django</td>
-</tr>
-</tbody>
-</table>
-<p>il y a deux formes de commentaires. Les deux formes peuvent être appliquées soit sur une
-seule ligne, soit en mode bloc</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># forme 1</span>
-<span class="p">{</span><span class="o">%</span> <span class="n">comment</span> <span class="o">%</span><span class="p">}</span>
-    <span class="n">un</span> <span class="nb">super</span> <span class="n">commentaire</span>
-<span class="p">{</span><span class="o">%</span> <span class="n">endcomment</span> <span class="o">%</span><span class="p">}</span>
-
-<span class="c1"># forme 2</span>
-<span class="p">{</span><span class="c1">#</span>
-    <span class="n">un</span> <span class="n">autre</span> <span class="nb">super</span> <span class="n">commentaire</span>
-<span class="c1">#}</span>
-</pre></div>
-</div>
-</div></blockquote>
-</li>
+<tr class="field-odd field"><th class="field-name">MVC:</th><td class="field-body"><p class="first">MVC is a software design pattern that aims to separate application into three
+interconnected parts :</p>
+<ol class="last arabic simple">
+<li><strong>Model</strong> : Provides the interface with the database containing the application data.</li>
+<li><strong>View</strong> : Decides what informations to present to the user and collects information
+from the user.</li>
+<li><strong>Controler</strong> : Manage the business logic for the application and acts as an
+information broker between the model and the view.</li>
 </ol>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<hr class="docutils" />
-<div class="section" id="types-de-champ-les-plus-courant-models-py">
-<h2>Types de champ les plus courant (models.py)<a class="headerlink" href="#types-de-champ-les-plus-courant-models-py" title="Lien permanent vers ce titre">¶</a></h2>
+</div></blockquote>
+<div class="section" id="model-template-view-mtv">
+<h4><a class="toc-backref" href="#id33">1.1.1.1&nbsp;&nbsp;&nbsp;Model, Template, View (MTV)</a><a class="headerlink" href="#model-template-view-mtv" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Django’s terminology is slightly different than the MVC’s :</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><strong>Model</strong> :  Is functionnaly the same. Django’s Object Relational Mapping (ORM) provides the
+interface between the user and your Django application.</li>
+<li><strong>Template</strong> : Provide display logic and is the interface between the user and your
+application. It corresponds to the View in the MVC model</li>
+<li><strong>View</strong> : manage the bulk of the applications data processing, application logic and
+messaging. It corresponds to the Controler in the MVC model</li>
+</ol>
 <table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">/!\ WARNING /!\:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">There is no direct link between the «&nbsp;Model&nbsp;» and the «&nbsp;Template&nbsp;». Only the «&nbsp;View&nbsp;» can
+interracting with the two other.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="models">
+<h3><a class="toc-backref" href="#id34">1.1.2&nbsp;&nbsp;&nbsp;Models</a><a class="headerlink" href="#models" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">Django Project TOPICS Models</a> <a class="footnote-reference" href="#id1" id="id2">[1]</a> : The models” topics from the Django documentation</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">ORM:</th><td class="field-body"><p class="first last">Object Relational Mapping : Provide a simple Mapping between an Object and the
+underlying database. The programmer doesn’t to know the database structure, nor does it
+require complex SQL to manipulate and retrieve data.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>The model is the object that is mapped to the database. When you create a model, Django create a
+corresponding table in database. Each of your app’s models are a class that you create in your app’s
+<em>models.py</em> file.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Each model is a Python class that is a subclasses of <strong>django.db.models.Model</strong></li>
+<li>Each attribute of the model represent a database field.</li>
+</ul>
+</div></blockquote>
+<p>The <strong>models.py</strong> file is automaticaly created inside the app’s directory, when you are using the
+<em>startapp</em> wizard.</p>
+<div class="section" id="supported-databases">
+<h4><a class="toc-backref" href="#id35">1.1.2.1&nbsp;&nbsp;&nbsp;Supported databases</a><a class="headerlink" href="#supported-databases" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://docs.djangoproject.com/fr/1.10/ref/models/fields/#field-types">https://docs.djangoproject.com/fr/1.10/ref/models/fields/#field-types</a></dt>
-<dd># Liste complète depuis la doc officiel et en fr</dd>
-</dl>
-</li>
-<li>models.CharField - Cela nous permet de définir un champ texte avec un nombre limité de caractères.</li>
-<li>models.TextField - Cela nous permet de définir un champ texte sans limite de caractères. Parfait pour le contenu d’un blog post !</li>
-<li>models.DateTimeField - Définit que le champ en question est une date ou une heure.</li>
-<li>models.ForeignKey - C’est un lien vers un autre modèle.</li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES">Django Project Settings Databases</a> <a class="footnote-reference" href="#id4" id="id5">[2]</a> : The databases” settings from the official
+documentation.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<hr class="docutils" />
-<div class="section" id="authentification-alternative-ldap-google-twitter-facebook-etc">
-<h2>Authentification alternative (LDAP, Google, Twitter, Facebook, etc)<a class="headerlink" href="#authentification-alternative-ldap-google-twitter-facebook-etc" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Il y a plusieurs type d’authentification possible.</p>
+</div></blockquote>
+<p>Django officially supports four databases :</p>
 <blockquote>
 <div><ul class="simple">
-<li>En utilisant un compte et un mot de passe spécifique à Django</li>
-<li>En utilisant un compte de réseaux social (Google, Twitter, Facebook, etc …)</li>
-<li>En utilisant LDAP</li>
+<li>PostgreSQL</li>
+<li>MySQL</li>
+<li>SQLite</li>
+<li>Oracle</li>
 </ul>
 </div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
+<p>By default, Django install SQLite automatically when you are using the <em>stratproject</em> wizard.</p>
+<p>If you need to connect to an unofficially supported database, there are several third-party
+application available.</p>
+</div>
+</div>
+<div class="section" id="template">
+<h3><a class="toc-backref" href="#id36">1.1.3&nbsp;&nbsp;&nbsp;Template</a><a class="headerlink" href="#template" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_web:</th><td class="field-body"><ul class="first simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.0/topics/auth/customizing/#other-authentication-sources">https://docs.djangoproject.com/en/2.0/topics/auth/customizing/#other-authentication-sources</a>
-# Doc officiel Django</li>
+<tr class="field-odd field"><th class="field-name">DTL:</th><td class="field-body">Django Template Language is a plain text scripting language that uses tags to provide
+presentation logic for deciding what content to display in the template.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>A Django template is a text file designed to separate an application’s data from the way it is
+presented. It is not limited to HTML.</p>
+<p>There are three big principles for the Django templates” :</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>A template system should separate program logic from design.</li>
+<li>Templates should discourage redundancy (DRY : Don’t Repeat Yourself)</li>
+<li>The template system should be safe and secure. Code execution in the template must be
+forbiden.</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="view">
+<h3><a class="toc-backref" href="#id37">1.1.4&nbsp;&nbsp;&nbsp;View</a><a class="headerlink" href="#view" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Django’s views are the information brokers of a Django application. A view sources data from your
+database and delivers it to a template.</p>
+<p>Views are represented by either a function, or a classes methode’s. Each view has an associated
+template.</p>
+<p>The <strong>views.py</strong> file is automaticaly created inside the app’s directory, when you are using the
+<em>startapp</em> wizard.</p>
+<div class="section" id="displaying-error-pages">
+<h4><a class="toc-backref" href="#id38">1.1.4.1&nbsp;&nbsp;&nbsp;Displaying error pages</a><a class="headerlink" href="#displaying-error-pages" title="Lien permanent vers ce titre">¶</a></h4>
+<p>There are four built-in function-based views for displaying error pages :</p>
+<blockquote>
+<div><ul class="simple">
+<li>The 404 (page not found) view</li>
+<li>The 500 (server error) view</li>
+<li>The 403 (HTTP forbiden) view</li>
+<li>The 400 (bad request) view</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="class-based-views-for-simplifying-common-display-tasks">
+<h4><a class="toc-backref" href="#id39">1.1.4.2&nbsp;&nbsp;&nbsp;class-based views for simplifying common display tasks</a><a class="headerlink" href="#class-based-views-for-simplifying-common-display-tasks" title="Lien permanent vers ce titre">¶</a></h4>
+<p>There are several class-based views for simplifying common display tasks. They include:</p>
+<blockquote>
+<div><ul class="simple">
+<li>ListView : for displaying a list of data objects.</li>
+<li>DetailView : for displaying a single object</li>
+<li>RedirectView : for redirecting to another URL</li>
+<li>FormView : for displaying a form</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="url-configuration-urlconf">
+<h3><a class="toc-backref" href="#id40">1.1.5&nbsp;&nbsp;&nbsp;URL Configuration (URLconf)</a><a class="headerlink" href="#url-configuration-urlconf" title="Lien permanent vers ce titre">¶</a></h3>
+<p>There are several URL Configuration’s file (<strong>urls.py</strong>) :</p>
+<blockquote>
+<div><ul class="simple">
+<li>One into the Porject’s directory. It is created automatically with the «&nbsp;startproject wizard&nbsp;»</li>
+<li>One per Application’s directory. Need to be created manually in every apps” directories.</li>
+</ul>
+</div></blockquote>
+<p><strong>URL Configuration</strong> decide which view (from <em>views.py</em> or <em>forms.py</em> files) will deal with the
+request. When Django finds a URL in <em>urls.py</em> that matches the request URL it calls the view
+associated with that URL. The selected view then renders the content to the template.</p>
+</div>
+<div class="section" id="admin">
+<h3><a class="toc-backref" href="#id41">1.1.6&nbsp;&nbsp;&nbsp;Admin</a><a class="headerlink" href="#admin" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/contrib/admin/">Django Project admin site</a> <a class="footnote-reference" href="#id6" id="id7">[3]</a>: admin site’s page from the Djongo’s documentation.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Livres:</th><td class="field-body"><ul class="first last simple">
-<li>Django 2 by exemple, <strong>chapitre 4</strong> (Building a custom authentication backend), <strong>page 133</strong></li>
+<tr class="field-even field"><th class="field-name" colspan="2">Automatic Admin Interface:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">It reads metadata from your models to provide a quick, model-centric interface where trusted
+users can manage content on the Django’s project. It must be use as an internal management
+tool. It mustn’t be use for building the entire front end.</p>
+<p>With Django’s admin you can :</p>
+<blockquote>
+<div><ul class="simple">
+<li>Authenticate users.</li>
+<li>Display and handle forms and validate input.</li>
+<li>Provide a convinient interface to our models for adding content to our app.</li>
 </ul>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">admin.py:</th><td class="field-body"><p class="first last">The <em>admin.py</em> file is created with every apps when your are using the «&nbsp;startapp&nbsp;» wizard. It
+display your models in the Django admin’s pannel.</p>
 </td>
 </tr>
 </tbody>
 </table>
-<div class="section" id="utiliser-ldap-pour-l-authentification">
-<h3>Utiliser LDAP pour l’authentification<a class="headerlink" href="#utiliser-ldap-pour-l-authentification" title="Lien permanent vers ce titre">¶</a></h3>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_web:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://makina-corpus.com/blog/metier/2014/combiner-une-authentification-ldap-et-lauthentification-classique-django">https://makina-corpus.com/blog/metier/2014/combiner-une-authentification-ldap-et-lauthentification-classique-django</a>
-# page FR expliquant comment créer un Backends pour LDAP</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+</div></blockquote>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="lexique">
-<h2>Lexique<a class="headerlink" href="#lexique" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="install-django">
+<h2><a class="toc-backref" href="#id42">1.2&nbsp;&nbsp;&nbsp;Install Django</a><a class="headerlink" href="#install-django" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="creating-a-project-directory">
+<h3><a class="toc-backref" href="#id43">1.2.1&nbsp;&nbsp;&nbsp;Creating a project directory</a><a class="headerlink" href="#creating-a-project-directory" title="Lien permanent vers ce titre">¶</a></h3>
+<p>The first thing to do is to create a project directory. The directory’s name can be modified later,
+but it can be easyer if you tag it whith «&nbsp;ROOT_&nbsp;» followed by the name of the project :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">ROOT_MySuperProject</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-django-in-a-virtual-environement">
+<h3><a class="toc-backref" href="#id44">1.2.2&nbsp;&nbsp;&nbsp;Installing Django in a Virtual Environement</a><a class="headerlink" href="#installing-django-in-a-virtual-environement" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/intro/install">Django Project Install</a> <a class="footnote-reference" href="#id8" id="id9">[4]</a> : Install from the official documentation.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Assuming «&nbsp;virtualenv&nbsp;» is already installed.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">From root of project’s directory , create a subdirectory and then create your virtual
+environement into it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">env_MySuperProject</span>
+<span class="n">cd</span> <span class="n">env_MySuperProject</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">virtualenv</span> <span class="o">.</span>
+<span class="c1"># /!\ don&#39;t forget the dot at the end of the line</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Activate the Virtual Environement and install Django :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">env_MySuperProject</span>\<span class="n">Script</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;django&gt;=2.1, &lt;2.2&quot;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="how-to-start-and-basic-s-usages">
+<h2><a class="toc-backref" href="#id45">1.3&nbsp;&nbsp;&nbsp;How to start and basic’s usages</a><a class="headerlink" href="#how-to-start-and-basic-s-usages" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="starting-a-project">
+<h3><a class="toc-backref" href="#id46">1.3.1&nbsp;&nbsp;&nbsp;Starting a project</a><a class="headerlink" href="#starting-a-project" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">From root of project’s directory, run the «&nbsp;startproject&nbsp;» wizard :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startporject</span> <span class="p">[</span><span class="n">project_name</span><span class="p">]</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startporject</span> <span class="n">mySuperProject</span>
+</pre></div>
+</div>
+<p>A Directory will be created in the root directory.</p>
+</li>
+<li><p class="first">Creating a Database :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">mySuperProject</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+</pre></div>
+</div>
+<p>The <em>migrate</em> command creates a new SQLite database and any necessary database tables
+according to the setting file created by the «&nbsp;startporject&nbsp;» command.</p>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="django-shell-and-developement-server">
+<h3><a class="toc-backref" href="#id47">1.3.2&nbsp;&nbsp;&nbsp;Django Shell and Developement Server</a><a class="headerlink" href="#django-shell-and-developement-server" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="django-shell">
+<h4><a class="toc-backref" href="#id48">1.3.2.1&nbsp;&nbsp;&nbsp;Django Shell</a><a class="headerlink" href="#django-shell" title="Lien permanent vers ce titre">¶</a></h4>
+<p>For testing some stuff, you can run a python shell that include the features of Django :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">shell</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-developement-server">
+<h4><a class="toc-backref" href="#id49">1.3.2.2&nbsp;&nbsp;&nbsp;The developement Server</a><a class="headerlink" href="#the-developement-server" title="Lien permanent vers ce titre">¶</a></h4>
+<p>The developement Server is a lightweight Web server. It is only for the developement environement
+and mustn’t be use in production environement.</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># To run the dev server :</span>
+<span class="n">python</span> <span class="n">Manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
+
+<span class="c1"># in Dev mode with Debug=False in the settings.py file</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">run</span> <span class="o">--</span><span class="n">insecure</span>
+
+<span class="c1"># to use the dev server (in a web browser):</span>
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">8000</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="django-settings-settings-py">
+<h3><a class="toc-backref" href="#id50">1.3.3&nbsp;&nbsp;&nbsp;Django Settings (settings.py)</a><a class="headerlink" href="#django-settings-settings-py" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/">Django Project REF Settings</a> <a class="footnote-reference" href="#id10" id="id11">[5]</a> : The  settings” references from the official
+documentation</li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/settings/">Django Project TOPICS Settings</a> <a class="footnote-reference" href="#id12" id="id13">[6]</a> : The settings” topic from the official
+documentation</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">settings.py:</th><td class="field-body"><p class="first last">This file contains the configuration information for your Django project.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="django-applications">
+<h3><a class="toc-backref" href="#id51">1.3.4&nbsp;&nbsp;&nbsp;Django Applications</a><a class="headerlink" href="#django-applications" title="Lien permanent vers ce titre">¶</a></h3>
+<p>A Django application (app) is where the work is done. Good design practice says that each Django app
+should do one thing (ex: a blog, an article directory, a music collection, etc …). A Django
+project is the collection of apps and configuration settings that make up a Django website.</p>
+<div class="section" id="creating-an-app">
+<h4><a class="toc-backref" href="#id52">1.3.4.1&nbsp;&nbsp;&nbsp;Creating an App</a><a class="headerlink" href="#creating-an-app" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Create an app</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># startapp syntaxe</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="p">[</span><span class="n">app_name</span><span class="p">]</span>
+
+<span class="c1"># ex:</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="n">pages</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Add the new app to the Django project</p>
+<blockquote>
+<div><p>All new app must be adding to the <strong>«&nbsp;settings.py&nbsp;»</strong>.</p>
+<p>Inside the <strong>«&nbsp;settings.py&nbsp;»</strong> file, there is a list named <strong>«&nbsp;INSTALLED_APPS&nbsp;»</strong>. This list
+contains all the apps that are installed in the Django project. We just have to add our new
+app to the top of this list.</p>
+<p>Django create <strong>«&nbsp;apps.py&nbsp;»</strong> inside every app. This file contains a configuration class named
+after your app. To register our app with Django, we need to point to this class. the path of
+this class looks like this :</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">App</span><span class="s1">&#39;s DIR --&gt; apps.py --&gt; [class named after your app]</span>
+
+<span class="c1"># ex for an app called &quot;pages&quot;</span>
+
+<span class="n">pages</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">PagesConfig</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The setting list «&nbsp;INSTALLED_APPS&nbsp;» should be :</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;pages.apps.PagesConfig&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="c1"># more apps</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ol>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">qs:</th><td class="field-body"><ul class="first simple">
-<li>le QuerySet représente l’ensemble des requêtes effectués sur la BDD</li>
+<tr class="field-odd field"><th class="field-name" colspan="2">/!\ WARNING /!\:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Applications must also be entered in the «&nbsp;urls.py&nbsp;» file of the project.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="configuring-the-urls-urls-py">
+<h3><a class="toc-backref" href="#id53">1.3.5&nbsp;&nbsp;&nbsp;Configuring the URLs (urls.py)</a><a class="headerlink" href="#configuring-the-urls-urls-py" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/urls/">Django Project TOPICS URLs</a> <a class="footnote-reference" href="#id14" id="id15">[7]</a> : The URLs settings” Topics from the official
+documentation.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">ForeignKey:</th><td class="field-body"><ul class="first simple">
-<li>c’est une clef Étrangère / Extérieur partagée entre plusieurs éléments (One to Many)</li>
+<tr class="field-even field"><th class="field-name">path():</th><td class="field-body"><p class="first">The <strong>path()</strong> function is used to configure URLs. In its basic form, it as a very
+simple syntax :</p>
+<blockquote class="last">
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="p">(</span><span class="n">route</span><span class="p">,</span> <span class="n">view</span><span class="p">)</span>
+
+<span class="c1"># ex:</span>
+<span class="n">path</span><span class="p">(</span><span class="s1">&#39;mypage/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">myview</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="the-application-s-url">
+<h4><a class="toc-backref" href="#id54">1.3.5.1&nbsp;&nbsp;&nbsp;The application’s url</a><a class="headerlink" href="#the-application-s-url" title="Lien permanent vers ce titre">¶</a></h4>
+<p>We need to create <strong>«&nbsp;urls.py&nbsp;»</strong> in every app’s directory and then we need to complete it with a few
+set of instruction.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Creating app/urls.py</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">[</span><span class="n">app_name</span><span class="p">]</span>
+<span class="n">mkdir</span> <span class="n">urls</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Import «&nbsp;path()&nbsp;» and app.views.py</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="k">import</span> <span class="n">path</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">views</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Set the application’s namespace</p>
+<p>To avoid strange behavior if applications use a view with the same name, we need to set
+«&nbsp;app_name&nbsp;» with the application’s name.</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app_name</span> <span class="o">=</span> <span class="p">[</span><span class="n">Application</span><span class="s1">&#39;s name]</span>
+
+<span class="c1"># ex:</span>
+<span class="n">app_name</span> <span class="o">=</span> <span class="s2">&quot;pages&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Set the urlpatterns</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># The &#39;&#39; is the default page</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<p>The minimum content of the application urls file looks like this :</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="k">import</span> <span class="n">path</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">views</span>
+
+<span class="n">app_name</span> <span class="o">=</span> <span class="s2">&quot;pages&quot;</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># The &#39;&#39; is the default page</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="the-site-s-url-the-django-s-project">
+<h4><a class="toc-backref" href="#id55">1.3.5.2&nbsp;&nbsp;&nbsp;The site’s url (the Django’s project)</a><a class="headerlink" href="#the-site-s-url-the-django-s-project" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Import «&nbsp;include&nbsp;»</li>
+</ol>
+<p>import the «&nbsp;include&nbsp;» function in addition to the «&nbsp;path&nbsp;» function.</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="k">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic">
+<li><p class="first">Add the new url dispatcher to the urlpatterns</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;pages.urls&#39;</span><span class="p">)),</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">/!\ WARNING /!\:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>“admin/”</strong> : must be the first entry in the patterns.</li>
+<li><strong>“”</strong> or <strong>“/”</strong> : Must be the last entry in the patterns.</li>
+</ul>
+<div class="code python last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># exemple of the project&#39;s file &quot;urls.py&quot;</span>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="k">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+    <span class="c1"># ...</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;pages.urls&#39;</span><span class="p">)),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="apps-model-models-py">
+<h3><a class="toc-backref" href="#id56">1.3.6&nbsp;&nbsp;&nbsp;apps” model (models.py)</a><a class="headerlink" href="#apps-model-models-py" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">Django Project TOPICS Models</a> <a class="footnote-reference" href="#id1" id="id3">[1]</a></li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/fields/">Django Project Model field reference</a> <a class="footnote-reference" href="#id16" id="id17">[8]</a>: the Model field reference from the Djanog’s
+documentation.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">prefetch_related:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
-<li>C’est le pré-chargement / la pré-lecture. Pour la gestion du cache</li>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="create-the-app-class">
+<h4><a class="toc-backref" href="#id57">1.3.6.1&nbsp;&nbsp;&nbsp;Create the app class</a><a class="headerlink" href="#create-the-app-class" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Create the app class</p>
+<blockquote>
+<div><p>In the <strong>models.py</strong> file of the app’s directory, create the app class. It must inherit from
+Django’s Model Class.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># for an app called &quot;page&quot;</span>
+
+<span class="k">class</span> <span class="nc">Page</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Define the field for the model</p>
+<blockquote>
+<div><p>These fields will have a corresponding field in the table that Django creates for the model
+in the databases.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># exemple of some field you can create</span>
+<span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">permalink</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">update_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="s1">&#39;Dernière MAJ&#39;</span><span class="p">)</span>
+<span class="n">bodytext</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="s1">&#39;Page Content&#39;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Return a human-readable version of the Pages class</p>
+<blockquote>
+<div><p>If python ask for a string representation of the Pages object, we need to create a special
+methode that return a human-readable string instead of the default string «&nbsp;Page object&nbsp;».</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
+</pre></div>
+</div>
+<p><strong>N.B:</strong> Adding this method does not imply that you need to migrate the database again.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Prepare for migration and then migrate</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># exemple for an app called &quot;pages&quot;</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span> <span class="n">pages</span>
+<span class="o">...</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="admin-site-and-admin-py">
+<h3><a class="toc-backref" href="#id58">1.3.7&nbsp;&nbsp;&nbsp;admin site (and admin.py)</a><a class="headerlink" href="#admin-site-and-admin-py" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="create-a-admin-user-superuser">
+<h4><a class="toc-backref" href="#id59">1.3.7.1&nbsp;&nbsp;&nbsp;Create a admin user (superuser)</a><a class="headerlink" href="#create-a-admin-user-superuser" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Before using the admin site, you need to create a super-User.</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">createsuperuser</span>
+
+<span class="o">&gt;</span><span class="n">Username</span><span class="p">:</span> <span class="o">...</span>
+<span class="o">&gt;</span><span class="n">Password</span><span class="p">:</span> <span class="o">...</span>
+<span class="o">&gt;</span><span class="n">Password</span> <span class="p">(</span><span class="n">again</span><span class="p">):</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="registering-model">
+<h4><a class="toc-backref" href="#id60">1.3.7.2&nbsp;&nbsp;&nbsp;Registering model</a><a class="headerlink" href="#registering-model" title="Lien permanent vers ce titre">¶</a></h4>
+<p>For a model to be accessible from the admin, it need to be registered into the <strong>admin.py</strong>.</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># admin.py</span>
+<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="k">import</span> <span class="n">admin</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="k">import</span> <span class="n">Page</span>    <span class="c1"># Import the class from the &quot;models.py&quot; file of the app</span>
+
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Page</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="list-display-ordering-and-searh-fields">
+<h4><a class="toc-backref" href="#id61">1.3.7.3&nbsp;&nbsp;&nbsp;List_display, ordering and searh_fields</a><a class="headerlink" href="#list-display-ordering-and-searh-fields" title="Lien permanent vers ce titre">¶</a></h4>
+<p>In the Admin site, we need to sort pages and keep track of changes. We also need to be able to
+search a specific page. To do this, create a class called after the class’s name of the <em>models.py</em>
+file in the <strong>admin.py</strong>.</p>
+<blockquote>
+<div><blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PageAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic">
+<li><p class="first">See last update to keep track of change</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># in the PageAdmin&#39;s class</span>
+<span class="c1"># &#39;title&#39; and &#39;update_date&#39; are fields displaying in the list of pages</span>
+<span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;update_date&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Sort the display list (ordering by “title”)</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># in the PageAdmin&#39;s class</span>
+<span class="c1"># &#39;title&#39; is the field use to sort the list</span>
+<span class="n">ordering</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Search a pages</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># in the PageAdmin&#39;s class</span>
+<span class="c1"># &#39;title&#39; is the field should be search</span>
+<span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Add the class to the “admin.site.register</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Page</span><span class="p">,</span> <span class="n">PageAdmin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="adding-content">
+<h4><a class="toc-backref" href="#id62">1.3.7.4&nbsp;&nbsp;&nbsp;Adding content</a><a class="headerlink" href="#adding-content" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">/!\ WARNING /!\:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">When entering the page content (<em>TextField</em>), remember that it needs to be HTML to
+display well in your browser.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="django-templates">
+<h3><a class="toc-backref" href="#id63">1.3.8&nbsp;&nbsp;&nbsp;Django Templates</a><a class="headerlink" href="#django-templates" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/templates/">Django Project TEMPLATES</a> <a class="footnote-reference" href="#id18" id="id19">[9]</a>: the templates reference from the Djanog’s
+documentation.</li>
 </ul>
 </td>
 </tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="template-settings">
+<h4><a class="toc-backref" href="#id64">1.3.8.1&nbsp;&nbsp;&nbsp;Template Settings</a><a class="headerlink" href="#template-settings" title="Lien permanent vers ce titre">¶</a></h4>
+<p>For Django to show your site template, it first must know where to look for template file(s). To
+bind a template to the project, you must complete the <strong>TEMPLATES[“DIR”]</strong> in the <strong>settings.py</strong> file.</p>
+<p>Not all template files will be tied to a particuliar app. The <strong>“DIRS”</strong> setting is usefull for
+linking to templates that exit elsewere in your project structure.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Add a template’s path to <strong>TEMPLATES[“DIRS”]</strong></p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exemple for a template in the project&#39;s dir, and not bind to a specific app.</span>
+<span class="c1"># In the settings.py file</span>
+<span class="n">TEMPLATES</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="c1"># ...</span>
+        <span class="s1">&#39;DIRS&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;fdw/templates&#39;</span><span class="p">)],</span>
+        <span class="s1">&#39;APP_DIRS&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="c1"># ...</span>
+        <span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>N.B:</strong></dt>
+<dd><ul class="first last simple">
+<li>For an app’s template, the path must be “[app’s_dir]/templates”</li>
+<li>If “APP_DIRS” is Ture, Django will look for a folder named <em>templates</em> in each of
+your apps. Default is True.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Create the templates” dir into the project’s dir</dt>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># in the same dir of the *settings.py* file</span>
+<span class="n">mkdir</span> <span class="n">templates</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>N.B:</strong> For an app’s template, you must create the template’s dir in the same dir of the
+<em>views.py</em> file.</p>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="base-html-file">
+<h4><a class="toc-backref" href="#id65">1.3.8.2&nbsp;&nbsp;&nbsp;base.html file</a><a class="headerlink" href="#base-html-file" title="Lien permanent vers ce titre">¶</a></h4>
+<p>The <strong>base.html</strong> file is the “model” that the other web pages will inherit from, to avoid
+to rewrite the same code again and again (DRY). In the child page, only some specific blocks
+will be rewritten.</p>
+<p>The content of this specific bloks will be replace in the child page only if it is necessary.</p>
+<blockquote>
+<div><div class="code html highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- base.html --&gt;
+[...]
+{% block h1_title %}
+    &lt;h1&gt;Base h1 title&lt;/h1&gt;
+{% enblock h1_title %}
+[...]
+{% block parragraph %}
+    &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, accusantium beatae
+        rem, cum quam, quaerat omnis ad consectetur eligendi placeat minima illo modi culpa
+        expedita at reprehenderit corporis suscipit pariatur!
+    &lt;/p&gt;
+{% enblock parragraph %}
+</pre></div>
+</div>
+<div class="code html highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- child.html --&gt;
+{% extends &quot;base.html&quot; %}
+[...]
+{% block h1_title %}
+    &lt;h1&gt;Child h1 title&lt;/h1&gt;
+{% endblock h1_title %}
+[...]
+{% block parragraph %}
+{% enblock parragraph %}
+</pre></div>
+</div>
+</div></blockquote>
+<p>It is a good practice to create the first «&nbsp;web page&nbsp;» under the project_site’s folder :</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---</span><span class="n">poject_site</span>
+<span class="o">|</span>   <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   \<span class="o">---</span><span class="n">templates</span>
+<span class="o">|</span>           <span class="n">base</span><span class="o">.</span><span class="n">html</span>
+<span class="o">|</span>
+<span class="o">+---</span><span class="n">App</span><span class="s1">&#39;s folder</span>
+<span class="o">|</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="the-app-s-html-template">
+<h4><a class="toc-backref" href="#id66">1.3.8.3&nbsp;&nbsp;&nbsp;The app’s html template</a><a class="headerlink" href="#the-app-s-html-template" title="Lien permanent vers ce titre">¶</a></h4>
+<p>If an app need a html template, we need to create a dir  “templates” in the app’s root dir. We also need
+to create a new dir nammed as the app inside the templates dir.</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---</span><span class="n">pages</span>                       <span class="o">&lt;--</span> <span class="n">app</span><span class="s1">&#39;s name</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   <span class="o">+---</span><span class="n">migrations</span>
+<span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   \<span class="o">---</span><span class="n">templates</span>
+<span class="o">|</span>       \<span class="o">---</span><span class="n">pages</span>
+<span class="o">|</span>               <span class="n">contact</span><span class="o">.</span><span class="n">html</span>
+<span class="o">|</span>               <span class="n">page</span><span class="o">.</span><span class="n">html</span>       <span class="o">&lt;--</span> <span class="n">inherit</span> <span class="kn">from</span> <span class="s1">&#39;base.html&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="static-files">
+<h3><a class="toc-backref" href="#id67">1.3.9&nbsp;&nbsp;&nbsp;Static Files</a><a class="headerlink" href="#static-files" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/">Django Project Static Files</a> <a class="footnote-reference" href="#id20" id="id21">[10]</a>: the Static Files” reference from the Djanog’s
+documentation.</li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/">Django Project Deploying static files</a> <a class="footnote-reference" href="#id22" id="id23">[11]</a>: How to deploying Static files in production
+environement</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Static Files are : Images, CSS and JavaScript. Django keep static media in a different directory to
+the rest of the application. The directory is defined in the <em>settings.py</em> file and is called
+<strong>static</strong> by default. Until the site is in developement, the static dir need to be in the
+project_site’s dir, at the same level of the templates” dir.</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---</span><span class="n">project_site</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   <span class="o">+---</span><span class="n">static</span>
+<span class="o">|</span>   <span class="o">|</span>       <span class="n">logo</span><span class="o">.</span><span class="n">jpg</span>
+<span class="o">|</span>   <span class="o">|</span>       <span class="n">main</span><span class="o">.</span><span class="n">css</span>
+<span class="o">|</span>   <span class="o">|</span>       <span class="n">top_banner</span><span class="o">.</span><span class="n">png</span>
+<span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   \<span class="o">---</span><span class="n">templates</span>
+<span class="o">|</span>
+<span class="o">+---</span><span class="n">App</span><span class="s1">&#39;s folder</span>
+<span class="o">|</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s1">&#39;/static/&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>To find the static files for our site, we need to add a static file’s dir :</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look for static files in the &#39;static&#39; directory  in our site root</span>
+<span class="n">STAITCFILES_DIR</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;fdw/static&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>To load static file in the template, we need to add it (with the template syntax) at the top of the
+Template. After that, to call / load a specific file from the static’s dir, we need to use the
+“static” key word.</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># To load static file</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">load</span> <span class="n">static</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="c1"># to call / load a specific file from the static&#39;s dir</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">static</span> <span class="s1">&#39;logo.jpg&#39;</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Exemple code :</strong></p>
+<div class="code html highlight-default notranslate"><div class="highlight"><pre><span></span>{% load static %}
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;
+        &lt;title&gt;Untitled Document&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;{% static &#39;main.css&#39; %}&quot; type=&quot;text/css&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;wrapper&quot;&gt;
+            &lt;header id=&quot;header&quot;&gt;
+                &lt;div id=&quot;logo&quot;&gt;
+                    &lt;img src=&quot;{% static &#39;logo.jpg&#39; %}&quot; alt=&quot;&quot;/&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="django-s-error-page">
+<h3><a class="toc-backref" href="#id68">1.3.10&nbsp;&nbsp;&nbsp;Django’s Error Page</a><a class="headerlink" href="#django-s-error-page" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/error-reporting/">Howto : Error reporting</a> <a class="footnote-reference" href="#id24" id="id25">[12]</a> : The error reporting’s page form the Dango’s documentation</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>When you’re running a public site you should always turn off the <strong>DEBUG</strong> setting (in the
+<em>settings.py’s</em> file). That will make your server run much faster, and will also prevent malicious
+users from seeing details of your application that can be revealed by the error pages.</p>
+<p>If <strong>DEBUG</strong> = True, Django will display à <strong>Template-loader postmortem</strong> to show where things
+went wrong.</p>
+<p>One simple way for testing is to make sure the view is passing the right information back to the
+template is to use Django’s error page to examine output of the view. For forcing the error page
+to appear, add «&nbsp;assert false&nbsp;» just before the return line in the views.py.</p>
+<blockquote>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="c1"># [...]</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="c1"># [...]</span>
+        <span class="p">}</span>
+    <span class="k">assert</span> <span class="n">false</span>    <span class="c1"># If this line is not commented, the return will be false</span>
+                    <span class="c1"># and the function will recive an exit signal</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;base.tml&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>N.B:</strong> Don’t forget to comment the “assert” line for the standard behavior.</p>
+</div></blockquote>
+<div class="section" id="the-django-s-error-page-in-dev-mode">
+<h4><a class="toc-backref" href="#id69">1.3.10.1&nbsp;&nbsp;&nbsp;The Django’s Error page in Dev mode</a><a class="headerlink" href="#the-django-s-error-page-in-dev-mode" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Exception Type</strong> : first two line of error’s page is the Exception Type. It help to
+understand what went wrong.</li>
+<li><strong>Traceback</strong> : In the Traceback, the bold line is the were the exption was raise.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="vocabulary">
+<h2><a class="toc-backref" href="#id70">1.4&nbsp;&nbsp;&nbsp;Vocabulary</a><a class="headerlink" href="#vocabulary" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">QuerySet:</th><td class="field-body"><p class="first">A QuerySet represents a collection of objects from your database. It can have zero,
+one or many filters. Filters narrow down the query results based on the given
+parameters. In SQL terms, a QuerySet equates to a SELECT statement, and a filter is a
+limiting clause such as WHERE or LIMIT.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># example</span>
+<span class="n">Blog</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>  <span class="c1"># returns a QuerySet that contains all Blog objects in the</span>
+                    <span class="c1"># database.</span>
+
+<span class="n">Entry</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pub_date__year</span><span class="o">=</span><span class="mi">2006</span><span class="p">)</span>
+                    <span class="c1"># returns a QuerySet that contains only blog&#39;s entries of</span>
+                    <span class="c1"># the year 2006</span>
+</pre></div>
+</div>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/querysets/">QuerySet API ref</a> <a class="footnote-reference" href="#id26" id="id27">[13]</a></li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/queries/">Making queries</a> <a class="footnote-reference" href="#id28" id="id29">[14]</a></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Scope:</th><td class="field-body"><p class="first last">Apply to the Database, but is used in the «&nbsp;Views.py&nbsp;» and «&nbsp;forms.py&nbsp;» files</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="webography">
+<h2><a class="toc-backref" href="#id71">1.5&nbsp;&nbsp;&nbsp;Webography</a><a class="headerlink" href="#webography" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id3">2</a>)</em> <a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">https://docs.djangoproject.com/en/2.1/topics/db/models/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[2]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES">https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id7">[3]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/contrib/admin/">https://docs.djangoproject.com/en/2.1/ref/contrib/admin/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id9">[4]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/intro/install">https://docs.djangoproject.com/en/2.1/intro/install</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id11">[5]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/">https://docs.djangoproject.com/en/2.1/ref/settings/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id12" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id13">[6]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/settings/">https://docs.djangoproject.com/en/2.1/topics/settings/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id14" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id15">[7]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/urls/">https://docs.djangoproject.com/en/2.1/topics/http/urls/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id16" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id17">[8]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/fields/">https://docs.djangoproject.com/en/2.1/ref/models/fields/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id18" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id19">[9]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/templates/">https://docs.djangoproject.com/en/2.1/ref/templates/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id20" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id21">[10]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/">https://docs.djangoproject.com/en/2.1/howto/static-files/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id22" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id23">[11]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/">https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id24" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id25">[12]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/error-reporting/">https://docs.djangoproject.com/en/2.1/howto/error-reporting/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id26" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id27">[13]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/querysets/">https://docs.djangoproject.com/en/2.1/ref/models/querysets/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id28" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id29">[14]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/queries/">https://docs.djangoproject.com/en/2.1/topics/db/queries/</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -435,19 +1221,74 @@ seule ligne, soit en mode bloc</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Django</a><ul>
-<li><a class="reference internal" href="#demarrer-un-nouveau-projet">Démarrer un nouveau projet</a><ul>
-<li><a class="reference internal" href="#demarrer-une-nouvelle-app">Démarrer une nouvelle APP</a></li>
+<li><a class="reference internal" href="#">1&nbsp;&nbsp;&nbsp;Django 2</a><ul>
+<li><a class="reference internal" href="#how-djano-is-structured">1.1&nbsp;&nbsp;&nbsp;How Djano is structured</a><ul>
+<li><a class="reference internal" href="#model-view-controller-mvc">1.1.1&nbsp;&nbsp;&nbsp;Model, View, Controller (MVC)</a><ul>
+<li><a class="reference internal" href="#model-template-view-mtv">1.1.1.1&nbsp;&nbsp;&nbsp;Model, Template, View (MTV)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#principes-de-fonctionnement">Principes de fonctionnement</a></li>
-<li><a class="reference internal" href="#rappel-des-commandes-de-base">Rappel des commandes de base</a></li>
-<li><a class="reference internal" href="#types-de-champ-les-plus-courant-models-py">Types de champ les plus courant (models.py)</a></li>
-<li><a class="reference internal" href="#authentification-alternative-ldap-google-twitter-facebook-etc">Authentification alternative (LDAP, Google, Twitter, Facebook, etc)</a><ul>
-<li><a class="reference internal" href="#utiliser-ldap-pour-l-authentification">Utiliser LDAP pour l’authentification</a></li>
+<li><a class="reference internal" href="#models">1.1.2&nbsp;&nbsp;&nbsp;Models</a><ul>
+<li><a class="reference internal" href="#supported-databases">1.1.2.1&nbsp;&nbsp;&nbsp;Supported databases</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#lexique">Lexique</a></li>
+<li><a class="reference internal" href="#template">1.1.3&nbsp;&nbsp;&nbsp;Template</a></li>
+<li><a class="reference internal" href="#view">1.1.4&nbsp;&nbsp;&nbsp;View</a><ul>
+<li><a class="reference internal" href="#displaying-error-pages">1.1.4.1&nbsp;&nbsp;&nbsp;Displaying error pages</a></li>
+<li><a class="reference internal" href="#class-based-views-for-simplifying-common-display-tasks">1.1.4.2&nbsp;&nbsp;&nbsp;class-based views for simplifying common display tasks</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#url-configuration-urlconf">1.1.5&nbsp;&nbsp;&nbsp;URL Configuration (URLconf)</a></li>
+<li><a class="reference internal" href="#admin">1.1.6&nbsp;&nbsp;&nbsp;Admin</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#install-django">1.2&nbsp;&nbsp;&nbsp;Install Django</a><ul>
+<li><a class="reference internal" href="#creating-a-project-directory">1.2.1&nbsp;&nbsp;&nbsp;Creating a project directory</a></li>
+<li><a class="reference internal" href="#installing-django-in-a-virtual-environement">1.2.2&nbsp;&nbsp;&nbsp;Installing Django in a Virtual Environement</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#how-to-start-and-basic-s-usages">1.3&nbsp;&nbsp;&nbsp;How to start and basic’s usages</a><ul>
+<li><a class="reference internal" href="#starting-a-project">1.3.1&nbsp;&nbsp;&nbsp;Starting a project</a></li>
+<li><a class="reference internal" href="#django-shell-and-developement-server">1.3.2&nbsp;&nbsp;&nbsp;Django Shell and Developement Server</a><ul>
+<li><a class="reference internal" href="#django-shell">1.3.2.1&nbsp;&nbsp;&nbsp;Django Shell</a></li>
+<li><a class="reference internal" href="#the-developement-server">1.3.2.2&nbsp;&nbsp;&nbsp;The developement Server</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#django-settings-settings-py">1.3.3&nbsp;&nbsp;&nbsp;Django Settings (settings.py)</a></li>
+<li><a class="reference internal" href="#django-applications">1.3.4&nbsp;&nbsp;&nbsp;Django Applications</a><ul>
+<li><a class="reference internal" href="#creating-an-app">1.3.4.1&nbsp;&nbsp;&nbsp;Creating an App</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuring-the-urls-urls-py">1.3.5&nbsp;&nbsp;&nbsp;Configuring the URLs (urls.py)</a><ul>
+<li><a class="reference internal" href="#the-application-s-url">1.3.5.1&nbsp;&nbsp;&nbsp;The application’s url</a></li>
+<li><a class="reference internal" href="#the-site-s-url-the-django-s-project">1.3.5.2&nbsp;&nbsp;&nbsp;The site’s url (the Django’s project)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#apps-model-models-py">1.3.6&nbsp;&nbsp;&nbsp;apps” model (models.py)</a><ul>
+<li><a class="reference internal" href="#create-the-app-class">1.3.6.1&nbsp;&nbsp;&nbsp;Create the app class</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#admin-site-and-admin-py">1.3.7&nbsp;&nbsp;&nbsp;admin site (and admin.py)</a><ul>
+<li><a class="reference internal" href="#create-a-admin-user-superuser">1.3.7.1&nbsp;&nbsp;&nbsp;Create a admin user (superuser)</a></li>
+<li><a class="reference internal" href="#registering-model">1.3.7.2&nbsp;&nbsp;&nbsp;Registering model</a></li>
+<li><a class="reference internal" href="#list-display-ordering-and-searh-fields">1.3.7.3&nbsp;&nbsp;&nbsp;List_display, ordering and searh_fields</a></li>
+<li><a class="reference internal" href="#adding-content">1.3.7.4&nbsp;&nbsp;&nbsp;Adding content</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#django-templates">1.3.8&nbsp;&nbsp;&nbsp;Django Templates</a><ul>
+<li><a class="reference internal" href="#template-settings">1.3.8.1&nbsp;&nbsp;&nbsp;Template Settings</a></li>
+<li><a class="reference internal" href="#base-html-file">1.3.8.2&nbsp;&nbsp;&nbsp;base.html file</a></li>
+<li><a class="reference internal" href="#the-app-s-html-template">1.3.8.3&nbsp;&nbsp;&nbsp;The app’s html template</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#static-files">1.3.9&nbsp;&nbsp;&nbsp;Static Files</a></li>
+<li><a class="reference internal" href="#django-s-error-page">1.3.10&nbsp;&nbsp;&nbsp;Django’s Error Page</a><ul>
+<li><a class="reference internal" href="#the-django-s-error-page-in-dev-mode">1.3.10.1&nbsp;&nbsp;&nbsp;The Django’s Error page in Dev mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vocabulary">1.4&nbsp;&nbsp;&nbsp;Vocabulary</a></li>
+<li><a class="reference internal" href="#webography">1.5&nbsp;&nbsp;&nbsp;Webography</a></li>
 </ul>
 </li>
 </ul>
