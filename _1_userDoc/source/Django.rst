@@ -49,7 +49,7 @@ Models
 
     :Liens_Web:
 
-            * `Django Project TOPICS Models`_ : The models' topics from the Django documentation
+            * `Django Project TOPICS Models`_ : The models\' topics from the Django documentation
 
     :ORM:   
     
@@ -73,7 +73,7 @@ Supported databases
 -------------------
 
     :Liens_Web:
-            * `Django Project Settings Databases`_ : The databases' settings from the official 
+            * `Django Project Settings Databases`_ : The databases\' settings from the official 
               documentation.
 
 Django officially supports four databases :
@@ -209,17 +209,21 @@ Installing Django in a Virtual Environement
 Assuming "virtualenv" is already installed.
 
     #. From root of project's directory , create a subdirectory and then create your virtual 
-       environement into it. ::
+       environement into it. 
 
-        mkdir env_MySuperProject
-        cd env_MySuperProject
-        python -m virtualenv .
-        # /!\ don't forget the dot at the end of the line
+       .. code:: shell
 
-    #. Activate the Virtual Environement and install Django : ::
+            mkdir env_MySuperProject
+            cd env_MySuperProject
+            python -m virtualenv .
+            # /!\ don't forget the dot at the end of the line
 
-        env_MySuperProject\Script\activate.bat
-        pip install "django>=2.1, <2.2"
+    #. Activate the Virtual Environement and install Django :
+
+        .. code:: shell
+
+            env_MySuperProject\Script\activate.bat
+            pip install "django>=2.1, <2.2"
 
 ####
 
@@ -230,19 +234,23 @@ How to start and basic's usages
 Starting a project
 ==================
 
-    #. From root of project's directory, run the "startproject" wizard : ::
+    #. From root of project's directory, run the "startproject" wizard :
 
-        django-admin startporject [project_name]
+        .. code:: shell
 
-        ex:
-        django-admin startporject mySuperProject
+            django-admin startporject [project_name]
 
-       A Directory will be created in the root directory.
+            ex:
+            django-admin startporject mySuperProject
 
-    #. Creating a Database : ::
+            A Directory will be created in the root directory.
 
-        cd mySuperProject
-        python manage.py migrate
+    #. Creating a Database :
+
+        .. code:: shell
+
+            cd mySuperProject
+            python manage.py migrate
 
        The *migrate* command creates a new SQLite database and any necessary database tables
        according to the setting file created by the "startporject" command.
@@ -253,9 +261,11 @@ Django Shell and Developement Server
 Django Shell
 ------------
 
-For testing some stuff, you can run a python shell that include the features of Django : ::
+For testing some stuff, you can run a python shell that include the features of Django : 
 
-    python manage.py shell
+    .. code:: shell
+
+        python manage.py shell
 
 The developement Server
 -----------------------
@@ -279,10 +289,10 @@ Django Settings (settings.py)
 
     :Liens_Web:     
     
-            * `Django Project REF Settings`_ : The  settings' references from the official
+            * `Django Project REF Settings`_ : The  settings\' references from the official
               documentation
 
-            * `Django Project TOPICS Settings`_ : The settings' topic from the official
+            * `Django Project TOPICS Settings`_ : The settings\' topic from the official
               documentation
 
     :settings.py:
@@ -347,7 +357,7 @@ Configuring the URLs (urls.py)
 ==============================
 
     :Liens_Web:
-            * `Django Project TOPICS URLs`_ : The URLs settings' Topics from the official
+            * `Django Project TOPICS URLs`_ : The URLs settings\' Topics from the official
               documentation.
 
     :path():    The **path()** function is used to configure URLs. In its basic form, it as a very
@@ -500,12 +510,20 @@ Create the app class
 
         **N.B:** Adding this method does not imply that you need to migrate the database again.
 
-    #. Prepare for migration and then migrate ::
+    #. Check files before migration
 
-        # exemple for an app called "pages"
-        python manage.py makemigrations pages
-        ...
-        python manage.py migrate
+        .. code:: shell
+
+            python manage.py check
+
+    #. Prepare for migration and then migrate
+
+        .. code:: shell
+        
+            # exemple for an app called "pages"
+            python manage.py makemigrations pages
+            ...
+            python manage.py migrate
 
 admin site (and admin.py)
 =========================
@@ -823,6 +841,35 @@ The Django's Error page in Dev mode
 
     * **Traceback** : In the Traceback, the bold line is the were the exption was raise.
 
+Forms
+=====
+
+    :Liens_Web:
+
+        * `Working with forms`_
+        * `Form fields`_
+
+Django's forms are a easy way to create, in the template, a form from the model.
+
+Django handles three distinct parts of the work involved in forms
+
+    * preparing and restructuring data to make it ready for rendering
+    * creating HTML forms for the data
+    * receiving and processing submitted forms and data from the client
+
+Email
+-----
+
+    :Liens_Web:
+
+        * `Sending email`_ : Django's documentation
+        * `settings.py : EMAIL`_ : EMAIL's instructions for the sttings.py's file
+
+Django provide the EmailMessage class for sending and reciving Email. By default **EMAIL_BACKEND**
+is set to use the **Console backend** witch is sending email from form to the console. For the list
+of available backends see **Sending email** to use it in production.
+
+
 ####
 
 ----------
@@ -876,5 +923,10 @@ Webography
 .. _`Django Project static files`: https://docs.djangoproject.com/en/2.1/howto/static-files/
 .. _`Django Project Deploying Static Files`: https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/
 .. _`Howto : Error reporting`: https://docs.djangoproject.com/en/2.1/howto/error-reporting/
+.. _`Working with forms`: https://docs.djangoproject.com/en/2.1/topics/forms/
+.. _`Form fields`: https://docs.djangoproject.com/en/2.1/ref/forms/fields/
+.. _`Sending email`: https://docs.djangoproject.com/en/2.1/topics/email/
+.. _`settings.py : EMAIL`: https://docs.djangoproject.com/en/2.1/ref/settings/#email-backend
+
 .. _`QuerySet API ref`: https://docs.djangoproject.com/en/2.1/ref/models/querysets/
 .. _`Making queries`: https://docs.djangoproject.com/en/2.1/topics/db/queries/

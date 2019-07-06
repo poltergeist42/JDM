@@ -196,6 +196,16 @@ Mettre à jour une image VHD
 
         * `ex UPD SysprepImg`_ : Exemple d'utilisation du script 'Update-SysprepImage.ps1'
 
+Check point (anciennement nommés Snapshot)
+------------------------------------------
+
+:Liens_Web:
+        * `Utilisation de points de contrôle`_ : technet Microsoft
+
+:/!\\Attention/!\\:
+        
+        L'application d'un point de contrôle ne le supprime pas
+
 PowerShell
 ==========
 
@@ -301,6 +311,7 @@ Webography
 .. _`Script VHD+Sysprep`: https://github.com/remylarrieu/PowerShell/tree/master/Virtualization
 .. _`UPD SysprepImg`: https://github.com/remylarrieu/PowerShell/tree/master/Virtualization
 .. _`ex UPD SysprepImg`: https://www.remylarrieu.com/fr/mettre-a-jour-une-image-vhd/
+.. _`Utilisation de points de contrôle`: https://docs.microsoft.com/fr-fr/virtualization/hyper-v-on-windows/user-guide/checkpoints
 .. _`HowTo install AD on w10`: https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/
 .. _`Script install AD on w10`: https://gallery.technet.microsoft.com/Install-the-Active-fd32e541
 .. _`UTM90 Remote Access via SSL`: https://www.sophos.com/en-us/medialibrary/PDFs/documentation/utm90_Remote_Access_Via_SSL_geng.pdf
