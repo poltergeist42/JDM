@@ -241,7 +241,7 @@ faire un "instantané" puis le libérer
 
     #. faire un instantané ::
         
-        git stash [nom]
+        git stash push
             
     #. Obtenir la list des stash ::
         
@@ -281,6 +281,59 @@ annuler / remplacer le dernier commit
     #. remplacer le dernier commit par le présent ::
     
         git commit --ammend
+
+Réparer un **detached HEAD**
+----------------------------
+
+l'état **detached HEAD** se produit lorsque "HEAD" fait référence à un commit et non plus à la branche elle même.
+
+cette information est alors visible en faisant un "git branch"
+
+    .. code:: shell
+
+        git branch
+
+        * (HEAD detached from 2ca07f8)
+          crash_test
+          dev_jojo
+          dev_pierre
+          master
+
+
+Les étapes pour rattacher HEAD à la branche sont :
+
+    #. Créer une branche temporaire à partir de la branch actuelle et se placer dessus.
+
+        .. code:: shell
+
+            git checkout -b temp
+
+    #. mettre la branch "normalle" à jour par rapport à la branch temporaire.
+
+        .. code:: shell
+
+            git branch -f [nom_de_la_branche_normalile] [nom_de_la_branch_temporaire]
+
+            ex:
+            git branch -f dev_pierre temp
+
+    #. Ce déplacer sur la branche "normalle" et supprimer la branche temporaire.
+
+        .. code:: shell
+
+            git checkout dev_pierre
+            git branch -D temp
+
+    #. Vérifier que l'opération c'est effectuée correctement.
+
+        .. code:: shell
+
+            git branch
+
+              crash_test
+              dev_jojo
+            * dev_pierre
+              master
 
 ------------------------------------------------------------------------------------------
 
