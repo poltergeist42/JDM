@@ -407,7 +407,7 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">faire un instantané</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="p">[</span><span class="n">nom</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="n">push</span>
 </pre></div>
 </div>
 </li>
@@ -472,6 +472,64 @@ dans «&nbsp;C:Program Files (x86)&nbsp;»</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">ammend</span>
 </pre></div>
 </div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="reparer-un-detached-head">
+<h3>Réparer un <strong>detached HEAD</strong><a class="headerlink" href="#reparer-un-detached-head" title="Lien permanent vers ce titre">¶</a></h3>
+<p>l’état <strong>detached HEAD</strong> se produit lorsque «&nbsp;HEAD&nbsp;» fait référence à un commit et non plus à la branche elle même.</p>
+<p>cette information est alors visible en faisant un «&nbsp;git branch&nbsp;»</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
+
+<span class="o">*</span> <span class="p">(</span><span class="n">HEAD</span> <span class="n">detached</span> <span class="kn">from</span> <span class="mi">2</span><span class="n">ca07f8</span><span class="p">)</span>
+  <span class="n">crash_test</span>
+  <span class="n">dev_jojo</span>
+  <span class="n">dev_pierre</span>
+  <span class="n">master</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Les étapes pour rattacher HEAD à la branche sont :</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Créer une branche temporaire à partir de la branch actuelle et se placer dessus.</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">temp</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">mettre la branch «&nbsp;normalle&nbsp;» à jour par rapport à la branch temporaire.</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">f</span> <span class="p">[</span><span class="n">nom_de_la_branche_normalile</span><span class="p">]</span> <span class="p">[</span><span class="n">nom_de_la_branch_temporaire</span><span class="p">]</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">f</span> <span class="n">dev_pierre</span> <span class="n">temp</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Ce déplacer sur la branche «&nbsp;normalle&nbsp;» et supprimer la branche temporaire.</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">dev_pierre</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">D</span> <span class="n">temp</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Vérifier que l’opération c’est effectuée correctement.</p>
+<blockquote>
+<div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
+
+  <span class="n">crash_test</span>
+  <span class="n">dev_jojo</span>
+<span class="o">*</span> <span class="n">dev_pierre</span>
+  <span class="n">master</span>
+</pre></div>
+</div>
+</div></blockquote>
 </li>
 </ol>
 </div></blockquote>
@@ -682,6 +740,7 @@ chemin du dépôt distant directement en éditant le fichier «&nbsp;config&nbsp
 <li><a class="reference internal" href="#reparer-annuler-remplacer">Réparer / annuler / remplacer</a><ul>
 <li><a class="reference internal" href="#reparer-une-erreur-non-committee">Réparer une erreur non-committée</a></li>
 <li><a class="reference internal" href="#annuler-remplacer-le-dernier-commit">annuler / remplacer le dernier commit</a></li>
+<li><a class="reference internal" href="#reparer-un-detached-head">Réparer un <strong>detached HEAD</strong></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#gestion-depot-distant">Gestion dépôt distant</a></li>
