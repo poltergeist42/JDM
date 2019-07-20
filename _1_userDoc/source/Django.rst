@@ -872,6 +872,30 @@ of available backends see **Sending email** to use it in production.
 
 ####
 
+Django's View (views.py)
+========================
+
+    :Liens_Web:
+
+        * `Writing views`_ : Dango's documentation for the function-based views
+
+        * `Class-based views`_ : Dango's documentation for the Class-based views
+
+At the fundamental level, a view function is a Python function that take a Web request and returns
+a Web response. This response can be the HTML contents of a Web page, or a redirect, or a 404 error,
+or an XML document, or an image, or anything.
+
+####
+
+File Uploads
+============
+
+    :Liens_Web:
+
+        * `File Uploads`_ : Django's documentation
+
+####
+
 ----------
 Vocabulary
 ----------
@@ -903,6 +927,15 @@ Vocabulary
 
                 Apply to the Database, but is used in the "Views.py" and "forms.py" files
 
+    :Mixins:
+
+            Mixins are a form of multiple inheritance where behaviors and attributes of mulptiple
+            classes can be modified.
+
+            :Liens_Web:
+
+                * `Using mixins`_
+
 ####
 
 ----------
@@ -927,6 +960,10 @@ Webography
 .. _`Form fields`: https://docs.djangoproject.com/en/2.1/ref/forms/fields/
 .. _`Sending email`: https://docs.djangoproject.com/en/2.1/topics/email/
 .. _`settings.py : EMAIL`: https://docs.djangoproject.com/en/2.1/ref/settings/#email-backend
+.. _`Writing views`: https://docs.djangoproject.com/en/2.1/topics/http/views/
+.. _`Class-based views`: https://docs.djangoproject.com/en/2.1/topics/class-based-views/
+.. _`File Uploads`: https://docs.djangoproject.com/en/2.1/topics/http/file-uploads/
 
 .. _`QuerySet API ref`: https://docs.djangoproject.com/en/2.1/ref/models/querysets/
 .. _`Making queries`: https://docs.djangoproject.com/en/2.1/topics/db/queries/
+.. _`Using mixins`: https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#using-mixins

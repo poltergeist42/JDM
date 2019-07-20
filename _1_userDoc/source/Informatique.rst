@@ -109,7 +109,20 @@ Colorer une ligne sur deux dans un tableau Excel
     #. Pour les lignes impair : ::
         
         =NON(MOD(LIGNE() ;2))
-        
+
+Navigateur Web
+==============
+
+How to fix Cross Origin Request Security (CORS) error
+-----------------------------------------------------
+
+:Liens_Web:
+        * `fix Cross Origin Request Security (CORS)`_
+
+:Info:          Cette erreur peut enpêcher la lecture de certaine page en HTTP ou certain fichiers.
+                Ce problème est notament vrai en AJAX avec l'utilisation de **XMLHttpRequest**.
+                Cette erreur est signalée dans la console du navigateur.
+
 ####
         
 --------
@@ -270,6 +283,14 @@ Se connecter à Exchange
         Import-PSSession $ExSession
         # ...
         Remove-PSSession $ExSession
+
+Connaitre le niveau fonctionnel Active Directory
+------------------------------------------------
+
+    .. code:: powershell
+
+        (Get-ADDomain).DomainMode
+
             
 ####
             
@@ -304,6 +325,7 @@ Webography
 .. _`Ajouter des commandes au menu contextuel`: https://www.01net.com/astuces/ajouter-des-commandes-dos-au-menu-contextuel-de-lexplorateur-555224.html
 .. _`Aouter un script au menu contextuel`: http://www.pumbaa.ch/blog/tutoriaux/?d=2016/12/05/23/12/10-ajouter-un-script-home-made-au-menu-contextuel-de-windows
 .. _`Excel 1 ligne sur 2`: http://www.pcastuces.com/pratique/astuces/4180.htm
+.. _`fix Cross Origin Request Security (CORS)`: http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/
 .. _`Sysinternals pack`: https://docs.microsoft.com/en-us/sysinternals/
 .. _`Certificat Exchange`: https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/
 .. _`Nettoyage WSUS`:  https://www.supinfo.com/articles/single/1912-liberation-espace-disque-serveur-wsus
