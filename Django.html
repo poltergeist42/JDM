@@ -42,90 +42,92 @@
           <div class="body" role="main">
             
   <div class="section" id="django-2">
-<h1><a class="toc-backref" href="#id38">1&nbsp;&nbsp;&nbsp;Django 2</a><a class="headerlink" href="#django-2" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><a class="toc-backref" href="#id47">1&nbsp;&nbsp;&nbsp;Django 2</a><a class="headerlink" href="#django-2" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="contents topic" id="table-of-contents">
 <p class="topic-title first">Table of Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference internal" href="#django-2" id="id38">1&nbsp;&nbsp;&nbsp;Django 2</a><ul class="auto-toc">
-<li><a class="reference internal" href="#how-djano-is-structured" id="id39">1.1&nbsp;&nbsp;&nbsp;How Djano is structured</a><ul class="auto-toc">
-<li><a class="reference internal" href="#model-view-controller-mvc" id="id40">1.1.1&nbsp;&nbsp;&nbsp;Model, View, Controller (MVC)</a><ul class="auto-toc">
-<li><a class="reference internal" href="#model-template-view-mtv" id="id41">1.1.1.1&nbsp;&nbsp;&nbsp;Model, Template, View (MTV)</a></li>
+<li><a class="reference internal" href="#django-2" id="id47">1&nbsp;&nbsp;&nbsp;Django 2</a><ul class="auto-toc">
+<li><a class="reference internal" href="#how-djano-is-structured" id="id48">1.1&nbsp;&nbsp;&nbsp;How Djano is structured</a><ul class="auto-toc">
+<li><a class="reference internal" href="#model-view-controller-mvc" id="id49">1.1.1&nbsp;&nbsp;&nbsp;Model, View, Controller (MVC)</a><ul class="auto-toc">
+<li><a class="reference internal" href="#model-template-view-mtv" id="id50">1.1.1.1&nbsp;&nbsp;&nbsp;Model, Template, View (MTV)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#models" id="id42">1.1.2&nbsp;&nbsp;&nbsp;Models</a><ul class="auto-toc">
-<li><a class="reference internal" href="#supported-databases" id="id43">1.1.2.1&nbsp;&nbsp;&nbsp;Supported databases</a></li>
+<li><a class="reference internal" href="#models" id="id51">1.1.2&nbsp;&nbsp;&nbsp;Models</a><ul class="auto-toc">
+<li><a class="reference internal" href="#supported-databases" id="id52">1.1.2.1&nbsp;&nbsp;&nbsp;Supported databases</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#template" id="id44">1.1.3&nbsp;&nbsp;&nbsp;Template</a></li>
-<li><a class="reference internal" href="#view" id="id45">1.1.4&nbsp;&nbsp;&nbsp;View</a><ul class="auto-toc">
-<li><a class="reference internal" href="#displaying-error-pages" id="id46">1.1.4.1&nbsp;&nbsp;&nbsp;Displaying error pages</a></li>
-<li><a class="reference internal" href="#class-based-views-for-simplifying-common-display-tasks" id="id47">1.1.4.2&nbsp;&nbsp;&nbsp;class-based views for simplifying common display tasks</a></li>
+<li><a class="reference internal" href="#template" id="id53">1.1.3&nbsp;&nbsp;&nbsp;Template</a></li>
+<li><a class="reference internal" href="#view" id="id54">1.1.4&nbsp;&nbsp;&nbsp;View</a><ul class="auto-toc">
+<li><a class="reference internal" href="#displaying-error-pages" id="id55">1.1.4.1&nbsp;&nbsp;&nbsp;Displaying error pages</a></li>
+<li><a class="reference internal" href="#class-based-views-for-simplifying-common-display-tasks" id="id56">1.1.4.2&nbsp;&nbsp;&nbsp;class-based views for simplifying common display tasks</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#url-configuration-urlconf" id="id48">1.1.5&nbsp;&nbsp;&nbsp;URL Configuration (URLconf)</a></li>
-<li><a class="reference internal" href="#admin" id="id49">1.1.6&nbsp;&nbsp;&nbsp;Admin</a></li>
+<li><a class="reference internal" href="#url-configuration-urlconf" id="id57">1.1.5&nbsp;&nbsp;&nbsp;URL Configuration (URLconf)</a></li>
+<li><a class="reference internal" href="#admin" id="id58">1.1.6&nbsp;&nbsp;&nbsp;Admin</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#install-django" id="id50">1.2&nbsp;&nbsp;&nbsp;Install Django</a><ul class="auto-toc">
-<li><a class="reference internal" href="#creating-a-project-directory" id="id51">1.2.1&nbsp;&nbsp;&nbsp;Creating a project directory</a></li>
-<li><a class="reference internal" href="#installing-django-in-a-virtual-environement" id="id52">1.2.2&nbsp;&nbsp;&nbsp;Installing Django in a Virtual Environement</a></li>
+<li><a class="reference internal" href="#install-django" id="id59">1.2&nbsp;&nbsp;&nbsp;Install Django</a><ul class="auto-toc">
+<li><a class="reference internal" href="#creating-a-project-directory" id="id60">1.2.1&nbsp;&nbsp;&nbsp;Creating a project directory</a></li>
+<li><a class="reference internal" href="#installing-django-in-a-virtual-environement" id="id61">1.2.2&nbsp;&nbsp;&nbsp;Installing Django in a Virtual Environement</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#how-to-start-and-basic-s-usages" id="id53">1.3&nbsp;&nbsp;&nbsp;How to start and basic’s usages</a><ul class="auto-toc">
-<li><a class="reference internal" href="#starting-a-project" id="id54">1.3.1&nbsp;&nbsp;&nbsp;Starting a project</a></li>
-<li><a class="reference internal" href="#django-shell-and-developement-server" id="id55">1.3.2&nbsp;&nbsp;&nbsp;Django Shell and Developement Server</a><ul class="auto-toc">
-<li><a class="reference internal" href="#django-shell" id="id56">1.3.2.1&nbsp;&nbsp;&nbsp;Django Shell</a></li>
-<li><a class="reference internal" href="#the-developement-server" id="id57">1.3.2.2&nbsp;&nbsp;&nbsp;The developement Server</a></li>
+<li><a class="reference internal" href="#how-to-start-and-basic-s-usages" id="id62">1.3&nbsp;&nbsp;&nbsp;How to start and basic’s usages</a><ul class="auto-toc">
+<li><a class="reference internal" href="#starting-a-project" id="id63">1.3.1&nbsp;&nbsp;&nbsp;Starting a project</a></li>
+<li><a class="reference internal" href="#django-shell-and-developement-server" id="id64">1.3.2&nbsp;&nbsp;&nbsp;Django Shell and Developement Server</a><ul class="auto-toc">
+<li><a class="reference internal" href="#django-shell" id="id65">1.3.2.1&nbsp;&nbsp;&nbsp;Django Shell</a></li>
+<li><a class="reference internal" href="#the-developement-server" id="id66">1.3.2.2&nbsp;&nbsp;&nbsp;The developement Server</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#django-settings-settings-py" id="id58">1.3.3&nbsp;&nbsp;&nbsp;Django Settings (settings.py)</a></li>
-<li><a class="reference internal" href="#django-applications" id="id59">1.3.4&nbsp;&nbsp;&nbsp;Django Applications</a><ul class="auto-toc">
-<li><a class="reference internal" href="#creating-an-app" id="id60">1.3.4.1&nbsp;&nbsp;&nbsp;Creating an App</a></li>
+<li><a class="reference internal" href="#django-settings-settings-py" id="id67">1.3.3&nbsp;&nbsp;&nbsp;Django Settings (settings.py)</a></li>
+<li><a class="reference internal" href="#django-applications" id="id68">1.3.4&nbsp;&nbsp;&nbsp;Django Applications</a><ul class="auto-toc">
+<li><a class="reference internal" href="#creating-an-app" id="id69">1.3.4.1&nbsp;&nbsp;&nbsp;Creating an App</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configuring-the-urls-urls-py" id="id61">1.3.5&nbsp;&nbsp;&nbsp;Configuring the URLs (urls.py)</a><ul class="auto-toc">
-<li><a class="reference internal" href="#the-application-s-url" id="id62">1.3.5.1&nbsp;&nbsp;&nbsp;The application’s url</a></li>
-<li><a class="reference internal" href="#the-site-s-url-the-django-s-project" id="id63">1.3.5.2&nbsp;&nbsp;&nbsp;The site’s url (the Django’s project)</a></li>
+<li><a class="reference internal" href="#configuring-the-urls-urls-py" id="id70">1.3.5&nbsp;&nbsp;&nbsp;Configuring the URLs (urls.py)</a><ul class="auto-toc">
+<li><a class="reference internal" href="#the-application-s-url" id="id71">1.3.5.1&nbsp;&nbsp;&nbsp;The application’s url</a></li>
+<li><a class="reference internal" href="#the-site-s-url-the-django-s-project" id="id72">1.3.5.2&nbsp;&nbsp;&nbsp;The site’s url (the Django’s project)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#apps-model-models-py" id="id64">1.3.6&nbsp;&nbsp;&nbsp;apps” model (models.py)</a><ul class="auto-toc">
-<li><a class="reference internal" href="#create-the-app-class" id="id65">1.3.6.1&nbsp;&nbsp;&nbsp;Create the app class</a></li>
+<li><a class="reference internal" href="#apps-model-models-py" id="id73">1.3.6&nbsp;&nbsp;&nbsp;apps” model (models.py)</a><ul class="auto-toc">
+<li><a class="reference internal" href="#create-the-app-class" id="id74">1.3.6.1&nbsp;&nbsp;&nbsp;Create the app class</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#admin-site-and-admin-py" id="id66">1.3.7&nbsp;&nbsp;&nbsp;admin site (and admin.py)</a><ul class="auto-toc">
-<li><a class="reference internal" href="#create-a-admin-user-superuser" id="id67">1.3.7.1&nbsp;&nbsp;&nbsp;Create a admin user (superuser)</a></li>
-<li><a class="reference internal" href="#registering-model" id="id68">1.3.7.2&nbsp;&nbsp;&nbsp;Registering model</a></li>
-<li><a class="reference internal" href="#list-display-ordering-and-searh-fields" id="id69">1.3.7.3&nbsp;&nbsp;&nbsp;List_display, ordering and searh_fields</a></li>
-<li><a class="reference internal" href="#adding-content" id="id70">1.3.7.4&nbsp;&nbsp;&nbsp;Adding content</a></li>
+<li><a class="reference internal" href="#admin-site-and-admin-py" id="id75">1.3.7&nbsp;&nbsp;&nbsp;admin site (and admin.py)</a><ul class="auto-toc">
+<li><a class="reference internal" href="#create-a-admin-user-superuser" id="id76">1.3.7.1&nbsp;&nbsp;&nbsp;Create a admin user (superuser)</a></li>
+<li><a class="reference internal" href="#registering-model" id="id77">1.3.7.2&nbsp;&nbsp;&nbsp;Registering model</a></li>
+<li><a class="reference internal" href="#list-display-ordering-and-searh-fields" id="id78">1.3.7.3&nbsp;&nbsp;&nbsp;List_display, ordering and searh_fields</a></li>
+<li><a class="reference internal" href="#adding-content" id="id79">1.3.7.4&nbsp;&nbsp;&nbsp;Adding content</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#django-templates" id="id71">1.3.8&nbsp;&nbsp;&nbsp;Django Templates</a><ul class="auto-toc">
-<li><a class="reference internal" href="#template-settings" id="id72">1.3.8.1&nbsp;&nbsp;&nbsp;Template Settings</a></li>
-<li><a class="reference internal" href="#base-html-file" id="id73">1.3.8.2&nbsp;&nbsp;&nbsp;base.html file</a></li>
-<li><a class="reference internal" href="#the-app-s-html-template" id="id74">1.3.8.3&nbsp;&nbsp;&nbsp;The app’s html template</a></li>
+<li><a class="reference internal" href="#django-templates" id="id80">1.3.8&nbsp;&nbsp;&nbsp;Django Templates</a><ul class="auto-toc">
+<li><a class="reference internal" href="#template-settings" id="id81">1.3.8.1&nbsp;&nbsp;&nbsp;Template Settings</a></li>
+<li><a class="reference internal" href="#base-html-file" id="id82">1.3.8.2&nbsp;&nbsp;&nbsp;base.html file</a></li>
+<li><a class="reference internal" href="#the-app-s-html-template" id="id83">1.3.8.3&nbsp;&nbsp;&nbsp;The app’s html template</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#static-files" id="id75">1.3.9&nbsp;&nbsp;&nbsp;Static Files</a></li>
-<li><a class="reference internal" href="#django-s-error-page" id="id76">1.3.10&nbsp;&nbsp;&nbsp;Django’s Error Page</a><ul class="auto-toc">
-<li><a class="reference internal" href="#the-django-s-error-page-in-dev-mode" id="id77">1.3.10.1&nbsp;&nbsp;&nbsp;The Django’s Error page in Dev mode</a></li>
+<li><a class="reference internal" href="#static-files" id="id84">1.3.9&nbsp;&nbsp;&nbsp;Static Files</a></li>
+<li><a class="reference internal" href="#django-s-error-page" id="id85">1.3.10&nbsp;&nbsp;&nbsp;Django’s Error Page</a><ul class="auto-toc">
+<li><a class="reference internal" href="#the-django-s-error-page-in-dev-mode" id="id86">1.3.10.1&nbsp;&nbsp;&nbsp;The Django’s Error page in Dev mode</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#forms" id="id78">1.3.11&nbsp;&nbsp;&nbsp;Forms</a><ul class="auto-toc">
-<li><a class="reference internal" href="#email" id="id79">1.3.11.1&nbsp;&nbsp;&nbsp;Email</a></li>
+<li><a class="reference internal" href="#forms" id="id87">1.3.11&nbsp;&nbsp;&nbsp;Forms</a><ul class="auto-toc">
+<li><a class="reference internal" href="#email" id="id88">1.3.11.1&nbsp;&nbsp;&nbsp;Email</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#django-s-view-views-py" id="id89">1.3.12&nbsp;&nbsp;&nbsp;Django’s View (views.py)</a></li>
+<li><a class="reference internal" href="#file-uploads" id="id90">1.3.13&nbsp;&nbsp;&nbsp;File Uploads</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#vocabulary" id="id80">1.4&nbsp;&nbsp;&nbsp;Vocabulary</a></li>
-<li><a class="reference internal" href="#webography" id="id81">1.5&nbsp;&nbsp;&nbsp;Webography</a></li>
+<li><a class="reference internal" href="#vocabulary" id="id91">1.4&nbsp;&nbsp;&nbsp;Vocabulary</a></li>
+<li><a class="reference internal" href="#webography" id="id92">1.5&nbsp;&nbsp;&nbsp;Webography</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="how-djano-is-structured">
-<h2><a class="toc-backref" href="#id39">1.1&nbsp;&nbsp;&nbsp;How Djano is structured</a><a class="headerlink" href="#how-djano-is-structured" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#id48">1.1&nbsp;&nbsp;&nbsp;How Djano is structured</a><a class="headerlink" href="#how-djano-is-structured" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="model-view-controller-mvc">
-<h3><a class="toc-backref" href="#id40">1.1.1&nbsp;&nbsp;&nbsp;Model, View, Controller (MVC)</a><a class="headerlink" href="#model-view-controller-mvc" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id49">1.1.1&nbsp;&nbsp;&nbsp;Model, View, Controller (MVC)</a><a class="headerlink" href="#model-view-controller-mvc" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Django is a Model View Controller (MVC) framework.</p>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
@@ -147,7 +149,7 @@ information broker between the model and the view.</li>
 </table>
 </div></blockquote>
 <div class="section" id="model-template-view-mtv">
-<h4><a class="toc-backref" href="#id41">1.1.1.1&nbsp;&nbsp;&nbsp;Model, Template, View (MTV)</a><a class="headerlink" href="#model-template-view-mtv" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id50">1.1.1.1&nbsp;&nbsp;&nbsp;Model, Template, View (MTV)</a><a class="headerlink" href="#model-template-view-mtv" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Django’s terminology is slightly different than the MVC’s :</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -172,14 +174,14 @@ interracting with the two other.</td>
 </div>
 </div>
 <div class="section" id="models">
-<h3><a class="toc-backref" href="#id42">1.1.2&nbsp;&nbsp;&nbsp;Models</a><a class="headerlink" href="#models" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id51">1.1.2&nbsp;&nbsp;&nbsp;Models</a><a class="headerlink" href="#models" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">Django Project TOPICS Models</a> <a class="footnote-reference" href="#id1" id="id2">[1]</a> : The models” topics from the Django documentation</li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">Django Project TOPICS Models</a> <a class="footnote-reference" href="#id2" id="id3">[1]</a> : The models” topics from the Django documentation</li>
 </ul>
 </td>
 </tr>
@@ -203,14 +205,14 @@ corresponding table in database. Each of your app’s models are a class that yo
 <p>The <strong>models.py</strong> file is automaticaly created inside the app’s directory, when you are using the
 <em>startapp</em> wizard.</p>
 <div class="section" id="supported-databases">
-<h4><a class="toc-backref" href="#id43">1.1.2.1&nbsp;&nbsp;&nbsp;Supported databases</a><a class="headerlink" href="#supported-databases" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id52">1.1.2.1&nbsp;&nbsp;&nbsp;Supported databases</a><a class="headerlink" href="#supported-databases" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES">Django Project Settings Databases</a> <a class="footnote-reference" href="#id4" id="id5">[2]</a> : The databases” settings from the official
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES">Django Project Settings Databases</a> <a class="footnote-reference" href="#id5" id="id6">[2]</a> : The databases” settings from the official
 documentation.</li>
 </ul>
 </td>
@@ -233,7 +235,7 @@ application available.</p>
 </div>
 </div>
 <div class="section" id="template">
-<h3><a class="toc-backref" href="#id44">1.1.3&nbsp;&nbsp;&nbsp;Template</a><a class="headerlink" href="#template" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id53">1.1.3&nbsp;&nbsp;&nbsp;Template</a><a class="headerlink" href="#template" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -258,7 +260,7 @@ forbiden.</li>
 </div></blockquote>
 </div>
 <div class="section" id="view">
-<h3><a class="toc-backref" href="#id45">1.1.4&nbsp;&nbsp;&nbsp;View</a><a class="headerlink" href="#view" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id54">1.1.4&nbsp;&nbsp;&nbsp;View</a><a class="headerlink" href="#view" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Django’s views are the information brokers of a Django application. A view sources data from your
 database and delivers it to a template.</p>
 <p>Views are represented by either a function, or a classes methode’s. Each view has an associated
@@ -266,7 +268,7 @@ template.</p>
 <p>The <strong>views.py</strong> file is automaticaly created inside the app’s directory, when you are using the
 <em>startapp</em> wizard.</p>
 <div class="section" id="displaying-error-pages">
-<h4><a class="toc-backref" href="#id46">1.1.4.1&nbsp;&nbsp;&nbsp;Displaying error pages</a><a class="headerlink" href="#displaying-error-pages" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id55">1.1.4.1&nbsp;&nbsp;&nbsp;Displaying error pages</a><a class="headerlink" href="#displaying-error-pages" title="Lien permanent vers ce titre">¶</a></h4>
 <p>There are four built-in function-based views for displaying error pages :</p>
 <blockquote>
 <div><ul class="simple">
@@ -278,7 +280,7 @@ template.</p>
 </div></blockquote>
 </div>
 <div class="section" id="class-based-views-for-simplifying-common-display-tasks">
-<h4><a class="toc-backref" href="#id47">1.1.4.2&nbsp;&nbsp;&nbsp;class-based views for simplifying common display tasks</a><a class="headerlink" href="#class-based-views-for-simplifying-common-display-tasks" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id56">1.1.4.2&nbsp;&nbsp;&nbsp;class-based views for simplifying common display tasks</a><a class="headerlink" href="#class-based-views-for-simplifying-common-display-tasks" title="Lien permanent vers ce titre">¶</a></h4>
 <p>There are several class-based views for simplifying common display tasks. They include:</p>
 <blockquote>
 <div><ul class="simple">
@@ -291,7 +293,7 @@ template.</p>
 </div>
 </div>
 <div class="section" id="url-configuration-urlconf">
-<h3><a class="toc-backref" href="#id48">1.1.5&nbsp;&nbsp;&nbsp;URL Configuration (URLconf)</a><a class="headerlink" href="#url-configuration-urlconf" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id57">1.1.5&nbsp;&nbsp;&nbsp;URL Configuration (URLconf)</a><a class="headerlink" href="#url-configuration-urlconf" title="Lien permanent vers ce titre">¶</a></h3>
 <p>There are several URL Configuration’s file (<strong>urls.py</strong>) :</p>
 <blockquote>
 <div><ul class="simple">
@@ -304,14 +306,14 @@ request. When Django finds a URL in <em>urls.py</em> that matches the request UR
 associated with that URL. The selected view then renders the content to the template.</p>
 </div>
 <div class="section" id="admin">
-<h3><a class="toc-backref" href="#id49">1.1.6&nbsp;&nbsp;&nbsp;Admin</a><a class="headerlink" href="#admin" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id58">1.1.6&nbsp;&nbsp;&nbsp;Admin</a><a class="headerlink" href="#admin" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/contrib/admin/">Django Project admin site</a> <a class="footnote-reference" href="#id6" id="id7">[3]</a>: admin site’s page from the Djongo’s documentation.</li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/contrib/admin/">Django Project admin site</a> <a class="footnote-reference" href="#id7" id="id8">[3]</a>: admin site’s page from the Djongo’s documentation.</li>
 </ul>
 </td>
 </tr>
@@ -340,9 +342,9 @@ display your models in the Django admin’s pannel.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="install-django">
-<h2><a class="toc-backref" href="#id50">1.2&nbsp;&nbsp;&nbsp;Install Django</a><a class="headerlink" href="#install-django" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#id59">1.2&nbsp;&nbsp;&nbsp;Install Django</a><a class="headerlink" href="#install-django" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="creating-a-project-directory">
-<h3><a class="toc-backref" href="#id51">1.2.1&nbsp;&nbsp;&nbsp;Creating a project directory</a><a class="headerlink" href="#creating-a-project-directory" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id60">1.2.1&nbsp;&nbsp;&nbsp;Creating a project directory</a><a class="headerlink" href="#creating-a-project-directory" title="Lien permanent vers ce titre">¶</a></h3>
 <p>The first thing to do is to create a project directory. The directory’s name can be modified later,
 but it can be easyer if you tag it whith «&nbsp;ROOT_&nbsp;» followed by the name of the project :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">ROOT_MySuperProject</span>
@@ -350,14 +352,14 @@ but it can be easyer if you tag it whith «&nbsp;ROOT_&nbsp;» followed by the n
 </div>
 </div>
 <div class="section" id="installing-django-in-a-virtual-environement">
-<h3><a class="toc-backref" href="#id52">1.2.2&nbsp;&nbsp;&nbsp;Installing Django in a Virtual Environement</a><a class="headerlink" href="#installing-django-in-a-virtual-environement" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id61">1.2.2&nbsp;&nbsp;&nbsp;Installing Django in a Virtual Environement</a><a class="headerlink" href="#installing-django-in-a-virtual-environement" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/intro/install">Django Project Install</a> <a class="footnote-reference" href="#id8" id="id9">[4]</a> : Install from the official documentation.</li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/intro/install">Django Project Install</a> <a class="footnote-reference" href="#id9" id="id10">[4]</a> : Install from the official documentation.</li>
 </ul>
 </td>
 </tr>
@@ -390,9 +392,9 @@ environement into it.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="how-to-start-and-basic-s-usages">
-<h2><a class="toc-backref" href="#id53">1.3&nbsp;&nbsp;&nbsp;How to start and basic’s usages</a><a class="headerlink" href="#how-to-start-and-basic-s-usages" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#id62">1.3&nbsp;&nbsp;&nbsp;How to start and basic’s usages</a><a class="headerlink" href="#how-to-start-and-basic-s-usages" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="starting-a-project">
-<h3><a class="toc-backref" href="#id54">1.3.1&nbsp;&nbsp;&nbsp;Starting a project</a><a class="headerlink" href="#starting-a-project" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id63">1.3.1&nbsp;&nbsp;&nbsp;Starting a project</a><a class="headerlink" href="#starting-a-project" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">From root of project’s directory, run the «&nbsp;startproject&nbsp;» wizard :</p>
@@ -421,9 +423,9 @@ according to the setting file created by the «&nbsp;startporject&nbsp;» comman
 </div></blockquote>
 </div>
 <div class="section" id="django-shell-and-developement-server">
-<h3><a class="toc-backref" href="#id55">1.3.2&nbsp;&nbsp;&nbsp;Django Shell and Developement Server</a><a class="headerlink" href="#django-shell-and-developement-server" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id64">1.3.2&nbsp;&nbsp;&nbsp;Django Shell and Developement Server</a><a class="headerlink" href="#django-shell-and-developement-server" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="django-shell">
-<h4><a class="toc-backref" href="#id56">1.3.2.1&nbsp;&nbsp;&nbsp;Django Shell</a><a class="headerlink" href="#django-shell" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id65">1.3.2.1&nbsp;&nbsp;&nbsp;Django Shell</a><a class="headerlink" href="#django-shell" title="Lien permanent vers ce titre">¶</a></h4>
 <p>For testing some stuff, you can run a python shell that include the features of Django :</p>
 <blockquote>
 <div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">shell</span>
@@ -432,7 +434,7 @@ according to the setting file created by the «&nbsp;startporject&nbsp;» comman
 </div></blockquote>
 </div>
 <div class="section" id="the-developement-server">
-<h4><a class="toc-backref" href="#id57">1.3.2.2&nbsp;&nbsp;&nbsp;The developement Server</a><a class="headerlink" href="#the-developement-server" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id66">1.3.2.2&nbsp;&nbsp;&nbsp;The developement Server</a><a class="headerlink" href="#the-developement-server" title="Lien permanent vers ce titre">¶</a></h4>
 <p>The developement Server is a lightweight Web server. It is only for the developement environement
 and mustn’t be use in production environement.</p>
 <blockquote>
@@ -450,16 +452,16 @@ and mustn’t be use in production environement.</p>
 </div>
 </div>
 <div class="section" id="django-settings-settings-py">
-<h3><a class="toc-backref" href="#id58">1.3.3&nbsp;&nbsp;&nbsp;Django Settings (settings.py)</a><a class="headerlink" href="#django-settings-settings-py" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id67">1.3.3&nbsp;&nbsp;&nbsp;Django Settings (settings.py)</a><a class="headerlink" href="#django-settings-settings-py" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/">Django Project REF Settings</a> <a class="footnote-reference" href="#id10" id="id11">[5]</a> : The  settings” references from the official
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/">Django Project REF Settings</a> <a class="footnote-reference" href="#id11" id="id12">[5]</a> : The  settings” references from the official
 documentation</li>
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/settings/">Django Project TOPICS Settings</a> <a class="footnote-reference" href="#id12" id="id13">[6]</a> : The settings” topic from the official
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/settings/">Django Project TOPICS Settings</a> <a class="footnote-reference" href="#id13" id="id14">[6]</a> : The settings” topic from the official
 documentation</li>
 </ul>
 </td>
@@ -472,12 +474,12 @@ documentation</li>
 </div></blockquote>
 </div>
 <div class="section" id="django-applications">
-<h3><a class="toc-backref" href="#id59">1.3.4&nbsp;&nbsp;&nbsp;Django Applications</a><a class="headerlink" href="#django-applications" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id68">1.3.4&nbsp;&nbsp;&nbsp;Django Applications</a><a class="headerlink" href="#django-applications" title="Lien permanent vers ce titre">¶</a></h3>
 <p>A Django application (app) is where the work is done. Good design practice says that each Django app
 should do one thing (ex: a blog, an article directory, a music collection, etc …). A Django
 project is the collection of apps and configuration settings that make up a Django website.</p>
 <div class="section" id="creating-an-app">
-<h4><a class="toc-backref" href="#id60">1.3.4.1&nbsp;&nbsp;&nbsp;Creating an App</a><a class="headerlink" href="#creating-an-app" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id69">1.3.4.1&nbsp;&nbsp;&nbsp;Creating an App</a><a class="headerlink" href="#creating-an-app" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Create an app</p>
@@ -535,14 +537,14 @@ this class looks like this :</p>
 </div>
 </div>
 <div class="section" id="configuring-the-urls-urls-py">
-<h3><a class="toc-backref" href="#id61">1.3.5&nbsp;&nbsp;&nbsp;Configuring the URLs (urls.py)</a><a class="headerlink" href="#configuring-the-urls-urls-py" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id70">1.3.5&nbsp;&nbsp;&nbsp;Configuring the URLs (urls.py)</a><a class="headerlink" href="#configuring-the-urls-urls-py" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/urls/">Django Project TOPICS URLs</a> <a class="footnote-reference" href="#id14" id="id15">[7]</a> : The URLs settings” Topics from the official
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/urls/">Django Project TOPICS URLs</a> <a class="footnote-reference" href="#id15" id="id16">[7]</a> : The URLs settings” Topics from the official
 documentation.</li>
 </ul>
 </td>
@@ -563,7 +565,7 @@ simple syntax :</p>
 </table>
 </div></blockquote>
 <div class="section" id="the-application-s-url">
-<h4><a class="toc-backref" href="#id62">1.3.5.1&nbsp;&nbsp;&nbsp;The application’s url</a><a class="headerlink" href="#the-application-s-url" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id71">1.3.5.1&nbsp;&nbsp;&nbsp;The application’s url</a><a class="headerlink" href="#the-application-s-url" title="Lien permanent vers ce titre">¶</a></h4>
 <p>We need to create <strong>«&nbsp;urls.py&nbsp;»</strong> in every app’s directory and then we need to complete it with a few
 set of instruction.</p>
 <blockquote>
@@ -622,7 +624,7 @@ set of instruction.</p>
 </div></blockquote>
 </div>
 <div class="section" id="the-site-s-url-the-django-s-project">
-<h4><a class="toc-backref" href="#id63">1.3.5.2&nbsp;&nbsp;&nbsp;The site’s url (the Django’s project)</a><a class="headerlink" href="#the-site-s-url-the-django-s-project" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id72">1.3.5.2&nbsp;&nbsp;&nbsp;The site’s url (the Django’s project)</a><a class="headerlink" href="#the-site-s-url-the-django-s-project" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><ol class="arabic simple">
 <li>Import «&nbsp;include&nbsp;»</li>
@@ -672,15 +674,15 @@ set of instruction.</p>
 </div>
 </div>
 <div class="section" id="apps-model-models-py">
-<h3><a class="toc-backref" href="#id64">1.3.6&nbsp;&nbsp;&nbsp;apps” model (models.py)</a><a class="headerlink" href="#apps-model-models-py" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id73">1.3.6&nbsp;&nbsp;&nbsp;apps” model (models.py)</a><a class="headerlink" href="#apps-model-models-py" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">Django Project TOPICS Models</a> <a class="footnote-reference" href="#id1" id="id3">[1]</a></li>
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/fields/">Django Project Model field reference</a> <a class="footnote-reference" href="#id16" id="id17">[8]</a>: the Model field reference from the Djanog’s
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">Django Project TOPICS Models</a> <a class="footnote-reference" href="#id2" id="id4">[1]</a></li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/fields/">Django Project Model field reference</a> <a class="footnote-reference" href="#id17" id="id18">[8]</a>: the Model field reference from the Djanog’s
 documentation.</li>
 </ul>
 </td>
@@ -689,7 +691,7 @@ documentation.</li>
 </table>
 </div></blockquote>
 <div class="section" id="create-the-app-class">
-<h4><a class="toc-backref" href="#id65">1.3.6.1&nbsp;&nbsp;&nbsp;Create the app class</a><a class="headerlink" href="#create-the-app-class" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id74">1.3.6.1&nbsp;&nbsp;&nbsp;Create the app class</a><a class="headerlink" href="#create-the-app-class" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Create the app class</p>
@@ -749,9 +751,9 @@ methode that return a human-readable string instead of the default string «&nbs
 </div>
 </div>
 <div class="section" id="admin-site-and-admin-py">
-<h3><a class="toc-backref" href="#id66">1.3.7&nbsp;&nbsp;&nbsp;admin site (and admin.py)</a><a class="headerlink" href="#admin-site-and-admin-py" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id75">1.3.7&nbsp;&nbsp;&nbsp;admin site (and admin.py)</a><a class="headerlink" href="#admin-site-and-admin-py" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="create-a-admin-user-superuser">
-<h4><a class="toc-backref" href="#id67">1.3.7.1&nbsp;&nbsp;&nbsp;Create a admin user (superuser)</a><a class="headerlink" href="#create-a-admin-user-superuser" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id76">1.3.7.1&nbsp;&nbsp;&nbsp;Create a admin user (superuser)</a><a class="headerlink" href="#create-a-admin-user-superuser" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Before using the admin site, you need to create a super-User.</p>
 <blockquote>
 <div><div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">createsuperuser</span>
@@ -764,7 +766,7 @@ methode that return a human-readable string instead of the default string «&nbs
 </div></blockquote>
 </div>
 <div class="section" id="registering-model">
-<h4><a class="toc-backref" href="#id68">1.3.7.2&nbsp;&nbsp;&nbsp;Registering model</a><a class="headerlink" href="#registering-model" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id77">1.3.7.2&nbsp;&nbsp;&nbsp;Registering model</a><a class="headerlink" href="#registering-model" title="Lien permanent vers ce titre">¶</a></h4>
 <p>For a model to be accessible from the admin, it need to be registered into the <strong>admin.py</strong>.</p>
 <blockquote>
 <div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># admin.py</span>
@@ -777,7 +779,7 @@ methode that return a human-readable string instead of the default string «&nbs
 </div></blockquote>
 </div>
 <div class="section" id="list-display-ordering-and-searh-fields">
-<h4><a class="toc-backref" href="#id69">1.3.7.3&nbsp;&nbsp;&nbsp;List_display, ordering and searh_fields</a><a class="headerlink" href="#list-display-ordering-and-searh-fields" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id78">1.3.7.3&nbsp;&nbsp;&nbsp;List_display, ordering and searh_fields</a><a class="headerlink" href="#list-display-ordering-and-searh-fields" title="Lien permanent vers ce titre">¶</a></h4>
 <p>In the Admin site, we need to sort pages and keep track of changes. We also need to be able to
 search a specific page. To do this, create a class called after the class’s name of the <em>models.py</em>
 file in the <strong>admin.py</strong>.</p>
@@ -826,7 +828,7 @@ file in the <strong>admin.py</strong>.</p>
 </div></blockquote>
 </div>
 <div class="section" id="adding-content">
-<h4><a class="toc-backref" href="#id70">1.3.7.4&nbsp;&nbsp;&nbsp;Adding content</a><a class="headerlink" href="#adding-content" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id79">1.3.7.4&nbsp;&nbsp;&nbsp;Adding content</a><a class="headerlink" href="#adding-content" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -842,14 +844,14 @@ display well in your browser.</td>
 </div>
 </div>
 <div class="section" id="django-templates">
-<h3><a class="toc-backref" href="#id71">1.3.8&nbsp;&nbsp;&nbsp;Django Templates</a><a class="headerlink" href="#django-templates" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id80">1.3.8&nbsp;&nbsp;&nbsp;Django Templates</a><a class="headerlink" href="#django-templates" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/templates/">Django Project TEMPLATES</a> <a class="footnote-reference" href="#id18" id="id19">[9]</a>: the templates reference from the Djanog’s
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/templates/">Django Project TEMPLATES</a> <a class="footnote-reference" href="#id19" id="id20">[9]</a>: the templates reference from the Djanog’s
 documentation.</li>
 </ul>
 </td>
@@ -858,7 +860,7 @@ documentation.</li>
 </table>
 </div></blockquote>
 <div class="section" id="template-settings">
-<h4><a class="toc-backref" href="#id72">1.3.8.1&nbsp;&nbsp;&nbsp;Template Settings</a><a class="headerlink" href="#template-settings" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id81">1.3.8.1&nbsp;&nbsp;&nbsp;Template Settings</a><a class="headerlink" href="#template-settings" title="Lien permanent vers ce titre">¶</a></h4>
 <p>For Django to show your site template, it first must know where to look for template file(s). To
 bind a template to the project, you must complete the <strong>TEMPLATES[“DIR”]</strong> in the <strong>settings.py</strong> file.</p>
 <p>Not all template files will be tied to a particuliar app. The <strong>“DIRS”</strong> setting is usefull for
@@ -903,7 +905,7 @@ your apps. Default is True.</li>
 </div></blockquote>
 </div>
 <div class="section" id="base-html-file">
-<h4><a class="toc-backref" href="#id73">1.3.8.2&nbsp;&nbsp;&nbsp;base.html file</a><a class="headerlink" href="#base-html-file" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id82">1.3.8.2&nbsp;&nbsp;&nbsp;base.html file</a><a class="headerlink" href="#base-html-file" title="Lien permanent vers ce titre">¶</a></h4>
 <p>The <strong>base.html</strong> file is the “model” that the other web pages will inherit from, to avoid
 to rewrite the same code again and again (DRY). In the child page, only some specific blocks
 will be rewritten.</p>
@@ -952,7 +954,7 @@ will be rewritten.</p>
 </div></blockquote>
 </div>
 <div class="section" id="the-app-s-html-template">
-<h4><a class="toc-backref" href="#id74">1.3.8.3&nbsp;&nbsp;&nbsp;The app’s html template</a><a class="headerlink" href="#the-app-s-html-template" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id83">1.3.8.3&nbsp;&nbsp;&nbsp;The app’s html template</a><a class="headerlink" href="#the-app-s-html-template" title="Lien permanent vers ce titre">¶</a></h4>
 <p>If an app need a html template, we need to create a dir  “templates” in the app’s root dir. We also need
 to create a new dir nammed as the app inside the templates dir.</p>
 <blockquote>
@@ -971,16 +973,16 @@ to create a new dir nammed as the app inside the templates dir.</p>
 </div>
 </div>
 <div class="section" id="static-files">
-<h3><a class="toc-backref" href="#id75">1.3.9&nbsp;&nbsp;&nbsp;Static Files</a><a class="headerlink" href="#static-files" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id84">1.3.9&nbsp;&nbsp;&nbsp;Static Files</a><a class="headerlink" href="#static-files" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/">Django Project Static Files</a> <a class="footnote-reference" href="#id20" id="id21">[10]</a>: the Static Files” reference from the Djanog’s
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/">Django Project Static Files</a> <a class="footnote-reference" href="#id21" id="id22">[10]</a>: the Static Files” reference from the Djanog’s
 documentation.</li>
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/">Django Project Deploying static files</a> <a class="footnote-reference" href="#id22" id="id23">[11]</a>: How to deploying Static files in production
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/">Django Project Deploying static files</a> <a class="footnote-reference" href="#id23" id="id24">[11]</a>: How to deploying Static files in production
 environement</li>
 </ul>
 </td>
@@ -1056,14 +1058,14 @@ Template. After that, to call / load a specific file from the static’s dir, we
 </div></blockquote>
 </div>
 <div class="section" id="django-s-error-page">
-<h3><a class="toc-backref" href="#id76">1.3.10&nbsp;&nbsp;&nbsp;Django’s Error Page</a><a class="headerlink" href="#django-s-error-page" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id85">1.3.10&nbsp;&nbsp;&nbsp;Django’s Error Page</a><a class="headerlink" href="#django-s-error-page" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/error-reporting/">Howto : Error reporting</a> <a class="footnote-reference" href="#id24" id="id25">[12]</a> : The error reporting’s page form the Dango’s documentation</li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/error-reporting/">Howto : Error reporting</a> <a class="footnote-reference" href="#id25" id="id26">[12]</a> : The error reporting’s page form the Dango’s documentation</li>
 </ul>
 </td>
 </tr>
@@ -1092,7 +1094,7 @@ to appear, add «&nbsp;assert false&nbsp;» just before the return line in the v
 <p><strong>N.B:</strong> Don’t forget to comment the “assert” line for the standard behavior.</p>
 </div></blockquote>
 <div class="section" id="the-django-s-error-page-in-dev-mode">
-<h4><a class="toc-backref" href="#id77">1.3.10.1&nbsp;&nbsp;&nbsp;The Django’s Error page in Dev mode</a><a class="headerlink" href="#the-django-s-error-page-in-dev-mode" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id86">1.3.10.1&nbsp;&nbsp;&nbsp;The Django’s Error page in Dev mode</a><a class="headerlink" href="#the-django-s-error-page-in-dev-mode" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><strong>Exception Type</strong> : first two line of error’s page is the Exception Type. It help to
@@ -1103,15 +1105,15 @@ understand what went wrong.</li>
 </div>
 </div>
 <div class="section" id="forms">
-<h3><a class="toc-backref" href="#id78">1.3.11&nbsp;&nbsp;&nbsp;Forms</a><a class="headerlink" href="#forms" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#id87">1.3.11&nbsp;&nbsp;&nbsp;Forms</a><a class="headerlink" href="#forms" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/forms/">Working with forms</a> <a class="footnote-reference" href="#id26" id="id27">[13]</a></li>
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/">Form fields</a> <a class="footnote-reference" href="#id28" id="id29">[14]</a></li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/forms/">Working with forms</a> <a class="footnote-reference" href="#id27" id="id28">[13]</a></li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/">Form fields</a> <a class="footnote-reference" href="#id29" id="id30">[14]</a></li>
 </ul>
 </td>
 </tr>
@@ -1128,15 +1130,15 @@ understand what went wrong.</li>
 </ul>
 </div></blockquote>
 <div class="section" id="email">
-<h4><a class="toc-backref" href="#id79">1.3.11.1&nbsp;&nbsp;&nbsp;Email</a><a class="headerlink" href="#email" title="Lien permanent vers ce titre">¶</a></h4>
+<h4><a class="toc-backref" href="#id88">1.3.11.1&nbsp;&nbsp;&nbsp;Email</a><a class="headerlink" href="#email" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/email/">Sending email</a> <a class="footnote-reference" href="#id30" id="id31">[15]</a> : Django’s documentation</li>
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#email-backend">settings.py : EMAIL</a> <a class="footnote-reference" href="#id32" id="id33">[16]</a> : EMAIL’s instructions for the sttings.py’s file</li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/email/">Sending email</a> <a class="footnote-reference" href="#id31" id="id32">[15]</a> : Django’s documentation</li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#email-backend">settings.py : EMAIL</a> <a class="footnote-reference" href="#id33" id="id34">[16]</a> : EMAIL’s instructions for the sttings.py’s file</li>
 </ul>
 </td>
 </tr>
@@ -1148,10 +1150,48 @@ is set to use the <strong>Console backend</strong> witch is sending email from f
 of available backends see <strong>Sending email</strong> to use it in production.</p>
 </div>
 </div>
+<hr class="docutils" />
+<div class="section" id="django-s-view-views-py">
+<h3><a class="toc-backref" href="#id89">1.3.12&nbsp;&nbsp;&nbsp;Django’s View (views.py)</a><a class="headerlink" href="#django-s-view-views-py" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/views/">Writing views</a> <a class="footnote-reference" href="#id35" id="id36">[17]</a> : Dango’s documentation for the function-based views</li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/">Class-based views</a> <a class="footnote-reference" href="#id37" id="id38">[18]</a> : Dango’s documentation for the Class-based views</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>At the fundamental level, a view function is a Python function that take a Web request and returns
+a Web response. This response can be the HTML contents of a Web page, or a redirect, or a 404 error,
+or an XML document, or an image, or anything.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="file-uploads">
+<h3><a class="toc-backref" href="#id90">1.3.13&nbsp;&nbsp;&nbsp;File Uploads</a><a class="headerlink" href="#file-uploads" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/file-uploads/">File Uploads</a> <a class="footnote-reference" href="#id39" id="id40">[19]</a> : Django’s documentation</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="vocabulary">
-<h2><a class="toc-backref" href="#id80">1.4&nbsp;&nbsp;&nbsp;Vocabulary</a><a class="headerlink" href="#vocabulary" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#id91">1.4&nbsp;&nbsp;&nbsp;Vocabulary</a><a class="headerlink" href="#vocabulary" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1170,17 +1210,32 @@ limiting clause such as WHERE or LIMIT.</p>
                     <span class="c1"># the year 2006</span>
 </pre></div>
 </div>
-<table class="last docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/querysets/">QuerySet API ref</a> <a class="footnote-reference" href="#id34" id="id35">[17]</a></li>
-<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/queries/">Making queries</a> <a class="footnote-reference" href="#id36" id="id37">[18]</a></li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/querysets/">QuerySet API ref</a> <a class="footnote-reference" href="#id41" id="id42">[20]</a></li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/queries/">Making queries</a> <a class="footnote-reference" href="#id43" id="id44">[21]</a></li>
 </ul>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Scope:</th><td class="field-body"><p class="first last">Apply to the Database, but is used in the «&nbsp;Views.py&nbsp;» and «&nbsp;forms.py&nbsp;» files</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Mixins:</th><td class="field-body"><p class="first">Mixins are a form of multiple inheritance where behaviors and attributes of mulptiple
+classes can be modified.</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#using-mixins">Using mixins</a> <a class="footnote-reference" href="#id45" id="id46">[22]</a></li>
+</ul>
 </td>
 </tr>
 </tbody>
@@ -1193,113 +1248,137 @@ limiting clause such as WHERE or LIMIT.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="webography">
-<h2><a class="toc-backref" href="#id81">1.5&nbsp;&nbsp;&nbsp;Webography</a><a class="headerlink" href="#webography" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils footnote" frame="void" id="id1" rules="none">
+<h2><a class="toc-backref" href="#id92">1.5&nbsp;&nbsp;&nbsp;Webography</a><a class="headerlink" href="#webography" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id3">2</a>)</em> <a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">https://docs.djangoproject.com/en/2.1/topics/db/models/</a></td></tr>
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id3">1</a>, <a class="fn-backref" href="#id4">2</a>)</em> <a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">https://docs.djangoproject.com/en/2.1/topics/db/models/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
+<table class="docutils footnote" frame="void" id="id5" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id5">[2]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES">https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id6">[2]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES">https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id6" rules="none">
+<table class="docutils footnote" frame="void" id="id7" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id7">[3]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/contrib/admin/">https://docs.djangoproject.com/en/2.1/ref/contrib/admin/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id8">[3]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/contrib/admin/">https://docs.djangoproject.com/en/2.1/ref/contrib/admin/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id8" rules="none">
+<table class="docutils footnote" frame="void" id="id9" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id9">[4]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/intro/install">https://docs.djangoproject.com/en/2.1/intro/install</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id10">[4]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/intro/install">https://docs.djangoproject.com/en/2.1/intro/install</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id10" rules="none">
+<table class="docutils footnote" frame="void" id="id11" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id11">[5]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/">https://docs.djangoproject.com/en/2.1/ref/settings/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id12">[5]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/">https://docs.djangoproject.com/en/2.1/ref/settings/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id12" rules="none">
+<table class="docutils footnote" frame="void" id="id13" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id13">[6]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/settings/">https://docs.djangoproject.com/en/2.1/topics/settings/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id14">[6]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/settings/">https://docs.djangoproject.com/en/2.1/topics/settings/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id14" rules="none">
+<table class="docutils footnote" frame="void" id="id15" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id15">[7]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/urls/">https://docs.djangoproject.com/en/2.1/topics/http/urls/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id16">[7]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/urls/">https://docs.djangoproject.com/en/2.1/topics/http/urls/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id16" rules="none">
+<table class="docutils footnote" frame="void" id="id17" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id17">[8]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/fields/">https://docs.djangoproject.com/en/2.1/ref/models/fields/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id18">[8]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/fields/">https://docs.djangoproject.com/en/2.1/ref/models/fields/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id18" rules="none">
+<table class="docutils footnote" frame="void" id="id19" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id19">[9]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/templates/">https://docs.djangoproject.com/en/2.1/ref/templates/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id20">[9]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/templates/">https://docs.djangoproject.com/en/2.1/ref/templates/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id20" rules="none">
+<table class="docutils footnote" frame="void" id="id21" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id21">[10]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/">https://docs.djangoproject.com/en/2.1/howto/static-files/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id22">[10]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/">https://docs.djangoproject.com/en/2.1/howto/static-files/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id22" rules="none">
+<table class="docutils footnote" frame="void" id="id23" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id23">[11]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/">https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id24">[11]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/">https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id24" rules="none">
+<table class="docutils footnote" frame="void" id="id25" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id25">[12]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/error-reporting/">https://docs.djangoproject.com/en/2.1/howto/error-reporting/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id26">[12]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/error-reporting/">https://docs.djangoproject.com/en/2.1/howto/error-reporting/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id26" rules="none">
+<table class="docutils footnote" frame="void" id="id27" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id27">[13]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/forms/">https://docs.djangoproject.com/en/2.1/topics/forms/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id28">[13]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/forms/">https://docs.djangoproject.com/en/2.1/topics/forms/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id28" rules="none">
+<table class="docutils footnote" frame="void" id="id29" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id29">[14]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/">https://docs.djangoproject.com/en/2.1/ref/forms/fields/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id30">[14]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/">https://docs.djangoproject.com/en/2.1/ref/forms/fields/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id30" rules="none">
+<table class="docutils footnote" frame="void" id="id31" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id31">[15]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/email/">https://docs.djangoproject.com/en/2.1/topics/email/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id32">[15]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/email/">https://docs.djangoproject.com/en/2.1/topics/email/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id32" rules="none">
+<table class="docutils footnote" frame="void" id="id33" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id33">[16]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#email-backend">https://docs.djangoproject.com/en/2.1/ref/settings/#email-backend</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id34">[16]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#email-backend">https://docs.djangoproject.com/en/2.1/ref/settings/#email-backend</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id34" rules="none">
+<table class="docutils footnote" frame="void" id="id35" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id35">[17]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/querysets/">https://docs.djangoproject.com/en/2.1/ref/models/querysets/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id36">[17]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/views/">https://docs.djangoproject.com/en/2.1/topics/http/views/</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id36" rules="none">
+<table class="docutils footnote" frame="void" id="id37" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id37">[18]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/queries/">https://docs.djangoproject.com/en/2.1/topics/db/queries/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id38">[18]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/">https://docs.djangoproject.com/en/2.1/topics/class-based-views/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id39" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id40">[19]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/file-uploads/">https://docs.djangoproject.com/en/2.1/topics/http/file-uploads/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id41" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id42">[20]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/querysets/">https://docs.djangoproject.com/en/2.1/ref/models/querysets/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id43" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id44">[21]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/queries/">https://docs.djangoproject.com/en/2.1/topics/db/queries/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id45" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id46">[22]</a></td><td><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#using-mixins">https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#using-mixins</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -1381,6 +1460,8 @@ limiting clause such as WHERE or LIMIT.</p>
 <li><a class="reference internal" href="#email">1.3.11.1&nbsp;&nbsp;&nbsp;Email</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#django-s-view-views-py">1.3.12&nbsp;&nbsp;&nbsp;Django’s View (views.py)</a></li>
+<li><a class="reference internal" href="#file-uploads">1.3.13&nbsp;&nbsp;&nbsp;File Uploads</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#vocabulary">1.4&nbsp;&nbsp;&nbsp;Vocabulary</a></li>
