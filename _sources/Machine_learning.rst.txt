@@ -193,3 +193,16 @@ Artificial Neural Networks (ANN)
 
    * Faire le schéma d'un neurone (voir la vidéo à 14m23) en ajoutant les termes : Synapses, poid et
      fonction d'activation
+
+####
+
+------------
+scikit-learn
+------------
+
+Installer toute la suite scientifique (avec scikit-learn)
+=========================================================
+
+    .. code:: shell
+
+        pip install numpy scipy matplotlib ipython scikit-learn pandas pillow

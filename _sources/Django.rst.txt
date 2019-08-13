@@ -224,6 +224,14 @@ Assuming "virtualenv" is already installed.
 
             env_MySuperProject\Script\activate.bat
             pip install "django>=2.1, <2.2"
+            pip install "psycopg2>=2.7,<3.0"
+
+            ## autre solution avec un fichier 'requirements.txt
+
+            # requirements.txt
+            Django>=2.0,<3.0
+            psycopg2>=2.7,<3.0
+            pip install -r requirements.txt
 
 ####
 
@@ -337,7 +345,7 @@ Creating an App
 
                 # ex for an app called "pages"
 
-                pages.app.PagesConfig
+                pages.apps.PagesConfig
 
         The setting list "INSTALLED_APPS" should be : 
 
@@ -879,11 +887,28 @@ Django's View (views.py)
 
         * `Writing views`_ : Dango's documentation for the function-based views
 
-        * `Class-based views`_ : Dango's documentation for the Class-based views
-
 At the fundamental level, a view function is a Python function that take a Web request and returns
 a Web response. This response can be the HTML contents of a Web page, or a redirect, or a 404 error,
 or an XML document, or an image, or anything.
+
+class-based views
+-----------------
+
+    :Liens_Web:
+
+        * `Class-based views`_ : Dango's documentation for the Class-based views
+
+        * `Built-in class-based views API`_ : The list of the Dango's class-based view
+
+Django provide a lot of **class-based views** to simplifying developement.
+
+        .. code:: python
+
+            # exemple for "ListView"
+
+            ## quotes/views.py
+            from django.views.generic.list import ListView
+            from .models import Quote
 
 ####
 
@@ -892,7 +917,7 @@ File Uploads
 
     :Liens_Web:
 
-        * `File Uploads`_ : Django's documentation
+        * `Upload file in Django`_ : Django's documentation
 
 ####
 
@@ -900,6 +925,14 @@ File Uploads
 Vocabulary
 ----------
 
+    :Mixins:
+
+            Mixins are a form of multiple inheritance where behaviors and attributes of mulptiple
+            classes can be modified.
+
+            :Liens_Web:
+
+                * `Using mixins`_
 
     :QuerySet:
 
@@ -925,16 +958,27 @@ Vocabulary
 
             :Scope:
 
-                Apply to the Database, but is used in the "Views.py" and "forms.py" files
+                Apply to the DataBase, but is used in the "Views.py" and "forms.py" files
 
-    :Mixins:
+    :Slug:
 
-            Mixins are a form of multiple inheritance where behaviors and attributes of mulptiple
-            classes can be modified.
+            Slug is a newspaper term. A slug is a short label for something, containing only 
+            letters, numbers, underscores or hyphens. They’re generally used in URLs. For example,
+            in a typical blog entry URL: 
+
+                ::
+
+                    https://www.djangoproject.com/weblog/2008/apr/12/spring/
+
+            the last bit (spring) is the **slug**.
 
             :Liens_Web:
 
-                * `Using mixins`_
+                    * `SlugField`_ 
+
+            :Scope:
+
+                Apply to the DataBase (models.SlugField) 
 
 ####
 
@@ -962,8 +1006,10 @@ Webography
 .. _`settings.py : EMAIL`: https://docs.djangoproject.com/en/2.1/ref/settings/#email-backend
 .. _`Writing views`: https://docs.djangoproject.com/en/2.1/topics/http/views/
 .. _`Class-based views`: https://docs.djangoproject.com/en/2.1/topics/class-based-views/
-.. _`File Uploads`: https://docs.djangoproject.com/en/2.1/topics/http/file-uploads/
+.. _`Built-in class-based views API`: https://docs.djangoproject.com/en/2.1/ref/class-based-views/
+.. _`Upload file in Django`: https://docs.djangoproject.com/en/2.1/topics/http/file-uploads/
 
+.. _`Using mixins`: https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#using-mixins
 .. _`QuerySet API ref`: https://docs.djangoproject.com/en/2.1/ref/models/querysets/
 .. _`Making queries`: https://docs.djangoproject.com/en/2.1/topics/db/queries/
-.. _`Using mixins`: https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#using-mixins
+.. _`SlugField`: https://docs.djangoproject.com/en/2.2/ref/models/fields/#slugfield

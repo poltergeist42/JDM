@@ -301,6 +301,11 @@ Router, Firewall, Proxy
 Sophos
 ======
 
+    #. Basic settings
+
+        :Liens_Web:
+            * `Basic settings in 12 step`_
+
     #. Configurer le VPN en SSL
     
         :Liens_Web:
@@ -336,4 +341,5 @@ Webography
 .. _`Utilisation de points de contrôle`: https://docs.microsoft.com/fr-fr/virtualization/hyper-v-on-windows/user-guide/checkpoints
 .. _`HowTo install AD on w10`: https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/
 .. _`Script install AD on w10`: https://gallery.technet.microsoft.com/Install-the-Active-fd32e541
+.. _`Basic settings in 12 step`: https://techbast.com/2015/03/perform-a-basic-configuration-sophos-utm-in-12-simple-steps.html
 .. _`UTM90 Remote Access via SSL`: https://www.sophos.com/en-us/medialibrary/PDFs/documentation/utm90_Remote_Access_Via_SSL_geng.pdf
