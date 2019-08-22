@@ -42,6 +42,18 @@ Vérifier les garantie constructeur
     
     #. `Garantie HP`_
 
+Switch
+======
+
+VLAN
+----
+
+    :Liens_Web:
+            * `initiation au VLAN`_ : explication du VLAN (1ere partie) + configuration d'un switch
+              Cisco (CLI)
+
+            * `Configuration d'un switch HP avec l'interface WEB`_
+
 ####
         
 ----------------
@@ -325,6 +337,8 @@ Webography
 .. _`VIM / VI`: https://poltergeist42.github.io/JDM/VIM.html
 .. _`Garantie Dell`: http://www.dell.com/support/home/fr/fr/frdhs1/products/?app=warranty&c=fr&l=fr&s=dhs 
 .. _`Garantie HP`: http://h20565.www2.hpe.com/hpsc/wc/public/home?lang=fr-fr&cc=fr 
+.. _`initiation au VLAN`: https://networkcorp.fr/vlan-virtual-local-area-network/
+.. _`Configuration d'un switch HP avec l'interface WEB`: https://fucking-it.com/fr/tutoriel/switch-hp/422-switch-hp-configurez-vlan-interface-web
 .. _`Medicat`: https://www.tech2tech.fr/medicat-lutilitaire-utlime-pour-le-depannage-informatique/ 
 .. _`Utiliser diskpart`: http://www.aidewindows.net/win10/partition-recuperation.php
 .. _`Ajouter des commandes au menu contextuel`: https://www.01net.com/astuces/ajouter-des-commandes-dos-au-menu-contextuel-de-lexplorateur-555224.html
