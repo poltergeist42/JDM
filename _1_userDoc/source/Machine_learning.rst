@@ -206,3 +206,23 @@ Installer toute la suite scientifique (avec scikit-learn)
     .. code:: shell
 
         pip install numpy scipy matplotlib ipython scikit-learn pandas pillow
+
+        # pour pouvoir utiliser les codes du livre "Machine Learning avec scikit-learn"
+        pip install mglearn
+
+        # Pour pouvoir utiliser jupyter
+        pip install jupyter
+
+        ## Pour lancer jupyter
+        jupyter notebook
+
+Import systèmatique pour tout les code
+======================================
+
+  .. code:: python
+
+        import numpy as np
+        import matplotlib.pyplot as plt
+        import pandas as pd
+        import mglearn
+        from IPython.display import display
