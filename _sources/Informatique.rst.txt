@@ -231,6 +231,12 @@ Check point (anciennement nommés Snapshot)
         
         L'application d'un point de contrôle ne le supprime pas
 
+Réplication Hyper-V en workgroup
+--------------------------------
+
+:Liens_Web:
+        * `Hyper-V replication in a workgroup or across domains using a self signed certificate`_ 
+
 PowerShell
 ==========
 
@@ -303,6 +309,15 @@ Connaitre le niveau fonctionnel Active Directory
 
         (Get-ADDomain).DomainMode
 
+Service DHCP
+============
+
+Replication et bascullement DHCP entre deux serveurs
+----------------------------------------------------
+
+    :Liens_Web:
+        * `Réplication du service DHCP et basculement entre 2 serveurs`_
+
             
 ####
             
@@ -352,8 +367,10 @@ Webography
 .. _`Script VHD+Sysprep`: https://github.com/remylarrieu/PowerShell/tree/master/Virtualization
 .. _`UPD SysprepImg`: https://github.com/remylarrieu/PowerShell/tree/master/Virtualization
 .. _`ex UPD SysprepImg`: https://www.remylarrieu.com/fr/mettre-a-jour-une-image-vhd/
+.. _`Hyper-V replication in a workgroup or across domains using a self signed certificate`: https://nerddrivel.com/2016/03/07/hyper-v-replication-in-a-workgroup-or-across-domains-using-a-self-signed-certificate/
 .. _`Utilisation de points de contrôle`: https://docs.microsoft.com/fr-fr/virtualization/hyper-v-on-windows/user-guide/checkpoints
 .. _`HowTo install AD on w10`: https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/
 .. _`Script install AD on w10`: https://gallery.technet.microsoft.com/Install-the-Active-fd32e541
+.. _Réplication du service DHCP et basculement entre 2 serveurs: https://vadmintic.wordpress.com/systemes-windows/haute-disponibilite-continuite-des-services/replication-du-service-dhcp/
 .. _`Basic settings in 12 step`: https://techbast.com/2015/03/perform-a-basic-configuration-sophos-utm-in-12-simple-steps.html
 .. _`UTM90 Remote Access via SSL`: https://www.sophos.com/en-us/medialibrary/PDFs/documentation/utm90_Remote_Access_Via_SSL_geng.pdf

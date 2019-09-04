@@ -479,6 +479,8 @@ apps' model (models.py)
             * `Django Project Model field reference`_: the Model field reference from the Djanog's
               documentation.
 
+            * `Model Meta options`_: Options for the Meta class
+
 Create the app class
 --------------------
 
@@ -505,6 +507,24 @@ Create the app class
             permalink = models.CharField(max_length=12, unique=True)
             update_date = models.DateTimeField('Dernière MAJ')
             bodytext = models.TextField('Page Content', blank=True)
+            
+    #. Adding Metadata information for sorting, select the DB Table, and so on.
+
+        .. code:: python
+
+            # exemple of a Meta class
+            class Meta:
+                ordering = ['title']
+
+    #. returns a URL for displaying individual model records on the website
+
+        Assume that the "model-detail-view" view is defined in "views.py".
+
+        .. code:: python
+
+            def get_absolute_url(self):
+                """Returns the url to access a particular instance of the model."""
+                return reverse('model-detail-view', args=[str(self.id)])
 
     #. Return a human-readable version of the Pages class
 
@@ -552,6 +572,9 @@ Before using the admin site, you need to create a super-User.
 Registering model
 -----------------
 
+    :Liens_Web:
+            * `The Django admin site`_
+
 For a model to be accessible from the admin, it need to be registered into the **admin.py**.
 
     .. code:: python
@@ -559,15 +582,31 @@ For a model to be accessible from the admin, it need to be registered into the *
         # admin.py
         from django.contrib import admin
         from .models import Page    # Import the class from the "models.py" file of the app
+                                    #
+                                    # N.B: If "model.py" includes more than one class you 
+                                    # can / should import them all and save it in the same way so
+                                    # that it is available on the admin page.
 
         admin.site.register(Page)
 
 List_display, ordering and searh_fields
 ---------------------------------------
 
+To change how a model is displayed in the admin interface, we need to define a ModelAdmin class
+(which describe the layout) and register it with the model. This class is called after the class'
+name of the *"models.py"* file + "Admin in the **admin.py** file.
+
+    .. code:: Python
+
+        # Model's class name + "Admin"
+        # For a class called "Page" in models.py
+
+        class PageAdmin(admin.ModelAdmin):
+            # [...]
+
+
 In the Admin site, we need to sort pages and keep track of changes. We also need to be able to 
-search a specific page. To do this, create a class called after the class's name of the *models.py*
-file in the **admin.py**.
+search a specific page. 
 
         .. code:: python
 
@@ -601,7 +640,20 @@ file in the **admin.py**.
 
         .. code:: python
 
-            admin.site.register(Page, PageAdmin)
+            admin.site.register(Page, PageAdmin)    # this must no be include into the 
+                                                    # MadelAdmin class
+
+
+        An alternative syntax for registering the MadelAdmin class is to use the register decorator:
+
+        .. code:: python
+
+            @admin.register(Page)
+            class PageAdmin(admin.ModelAdmin):
+                # do some stuff like ...
+                # list_display = ('title', 'update_date')
+                # ordering = ('title',)
+                # search_fields = ('title',)
 
 
 Adding content
@@ -996,6 +1048,8 @@ Webography
 .. _`Django Project TOPICS Settings`: https://docs.djangoproject.com/en/2.1/topics/settings/
 .. _`Django Project TOPICS URLs`: https://docs.djangoproject.com/en/2.1/topics/http/urls/
 .. _`Django Project Model field reference`: https://docs.djangoproject.com/en/2.1/ref/models/fields/
+.. _`Model Meta options`: https://docs.djangoproject.com/en/2.1/ref/models/options/
+.. _`The Django admin site`: https://docs.djangoproject.com/en/2.1/ref/contrib/admin/
 .. _`Django Project TEMPLATES`: https://docs.djangoproject.com/en/2.1/ref/templates/
 .. _`Django Project static files`: https://docs.djangoproject.com/en/2.1/howto/static-files/
 .. _`Django Project Deploying Static Files`: https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/

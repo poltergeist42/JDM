@@ -28,3 +28,29 @@ Configurer Office365 sur le client MAIL
 
             * https://fr.godaddy.com/help/apple-mail-mac-configurer-la-messagerie-8903
                 # pas à pas textuel, mais avec des infos sur l'adresse du serveur
+
+------------------
+Command Line (CLI)
+------------------
+
+connaitre le FQDN et le ComputerName
+------------------------------------
+
+    .. code:: shell
+
+        ;; Attention à la cas
+        ;; FQDN
+        scutil --get HostName
+
+        ;; ComputerName
+        scutil --get ComputerName
+
+
+Connaitre la configuration DNS
+------------------------------
+
+    .. code:: shell
+
+        ;; Attention à la cas
+        ;; FQDN
+        scutil --DNS
