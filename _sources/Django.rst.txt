@@ -594,7 +594,7 @@ List_display, ordering and searh_fields
 
 To change how a model is displayed in the admin interface, we need to define a ModelAdmin class
 (which describe the layout) and register it with the model. This class is called after the class'
-name of the *"models.py"* file + "Admin in the **admin.py** file.
+name of the *"models.py"* file + "Admin" in the **admin.py** file.
 
     .. code:: Python
 
@@ -606,12 +606,7 @@ name of the *"models.py"* file + "Admin in the **admin.py** file.
 
 
 In the Admin site, we need to sort pages and keep track of changes. We also need to be able to 
-search a specific page. 
-
-        .. code:: python
-
-            class PageAdmin(admin.ModelAdmin):
-
+search a specific page. Add commands bellow to the admin's model class.
     #. See last update to keep track of change
 
         .. code:: python
@@ -635,6 +630,13 @@ search a specific page.
             # in the PageAdmin's class
             # 'title' is the field should be search
             search_fields = ('title',)
+
+    #. Add a filter in the admin page
+
+        .. code:: python
+
+            # Only elements matching to the filter will appear
+            list_filter('title',)
 
     #. Add the class to the 'admin.site.register
 

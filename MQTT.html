@@ -1,23 +1,24 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>MQTT &#8212; Documentation JDM 20170523</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="PowerShell" href="Powershell.html" />
+    <link rel="next" title="1 Optimisation du travail (et de l’apprentissage)" href="Optimisation_Travail.html" />
     <link rel="prev" title="Machine Learning" href="Machine_learning.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -27,7 +28,7 @@
           <a href="genindex.html" title="Index général"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="Powershell.html" title="PowerShell"
+          <a href="Optimisation_Travail.html" title="1 Optimisation du travail (et de l’apprentissage)"
              accesskey="N">suivant</a> |</li>
         <li class="right" >
           <a href="Machine_learning.html" title="Machine Learning"
@@ -48,31 +49,27 @@
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_WEB:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://www.youtube.com/watch?v=n0l5xNOH4Dk">https://www.youtube.com/watch?v=n0l5xNOH4Dk</a></li>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_WEB</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=n0l5xNOH4Dk">https://www.youtube.com/watch?v=n0l5xNOH4Dk</a></p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <ol class="arabic simple">
-<li>Download mosquitto <a class="reference external" href="https://mosquitto.org/download/">https://mosquitto.org/download/</a> prendre la version light 32 bits</li>
-<li>Download openssl <a class="reference external" href="http://slproweb.com/products/Win32Ope">http://slproweb.com/products/Win32Ope</a> prendre la version 32 bits</li>
-<li>Download de la DLL “ssleay32.dll” <a class="reference external" href="http://www.telecharger-dll.fr/dll-ssleay32.dll.html">http://www.telecharger-dll.fr/dll-ssleay32.dll.html</a></li>
-<li>Download de la DLL “libeay32.dll” <a class="reference external" href="http://www.telecharger-dll.fr/dll-libeay32.dll.html">http://www.telecharger-dll.fr/dll-libeay32.dll.html</a></li>
-<li>Copier les 2 DLL dans le dossier “bin” d’openssl</li>
-<li>Copy openssl32bin folder to mosquitto C:opensslbin — C:Program Files(x86)mosquitto</li>
-<li>Copy required dll files C:openssllibeay32.dll — C:Program Files(x86)mosquitto</li>
-<li>Copy required dll files C:opensslssleay32.dll — C:Program Files(x86)mosquitto</li>
-<li>Download pthreadVC2.dll <a class="reference external" href="ftp://sources.redhat.com/pub/pthreads-win32/dll-latest/dll/x86/">ftp://sources.redhat.com/pub/pthreads-win32/dll-latest/dll/x86/</a></li>
-<li>Copy pthreadVC2.dll file C:DownloadspthreadVC2.dll — C:Program Files(x86)mosquitto</li>
-<li>Test subscriber / server mosquitto_sub -v -t “home/light”</li>
-<li>Test publisher / client mosquitto_pub -t “home/light” -m “Turn ON”</li>
-<li>Test2 publisher / client mosquitto_pub -t “home/light” -m “Turn OFF”</li>
+<li><p>Download mosquitto <a class="reference external" href="https://mosquitto.org/download/">https://mosquitto.org/download/</a> prendre la version light 32 bits</p></li>
+<li><p>Download openssl <a class="reference external" href="http://slproweb.com/products/Win32Ope">http://slproweb.com/products/Win32Ope</a> prendre la version 32 bits</p></li>
+<li><p>Download de la DLL “ssleay32.dll” <a class="reference external" href="http://www.telecharger-dll.fr/dll-ssleay32.dll.html">http://www.telecharger-dll.fr/dll-ssleay32.dll.html</a></p></li>
+<li><p>Download de la DLL “libeay32.dll” <a class="reference external" href="http://www.telecharger-dll.fr/dll-libeay32.dll.html">http://www.telecharger-dll.fr/dll-libeay32.dll.html</a></p></li>
+<li><p>Copier les 2 DLL dans le dossier “bin” d’openssl</p></li>
+<li><p>Copy openssl32bin folder to mosquitto C:opensslbin — C:Program Files(x86)mosquitto</p></li>
+<li><p>Copy required dll files C:openssllibeay32.dll — C:Program Files(x86)mosquitto</p></li>
+<li><p>Copy required dll files C:opensslssleay32.dll — C:Program Files(x86)mosquitto</p></li>
+<li><p>Download pthreadVC2.dll <a class="reference external" href="ftp://sources.redhat.com/pub/pthreads-win32/dll-latest/dll/x86/">ftp://sources.redhat.com/pub/pthreads-win32/dll-latest/dll/x86/</a></p></li>
+<li><p>Copy pthreadVC2.dll file C:DownloadspthreadVC2.dll — C:Program Files(x86)mosquitto</p></li>
+<li><p>Test subscriber / server mosquitto_sub -v -t “home/light”</p></li>
+<li><p>Test publisher / client mosquitto_pub -t “home/light” -m “Turn ON”</p></li>
+<li><p>Test2 publisher / client mosquitto_pub -t “home/light” -m “Turn OFF”</p></li>
 </ol>
 </div></blockquote>
 </div>
@@ -81,14 +78,14 @@
 <h3>MQTT sous Python<a class="headerlink" href="#mqtt-sous-python" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Création de l’environnement virtuel</p>
+<li><p>Création de l’environnement virtuel</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">MQTT_env</span>
 <span class="n">cd</span> <span class="n">MQTT_env</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="o">.</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Installation des dépendances</p>
+<li><p>Installation des dépendances</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">script</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
 
 <span class="n">pip</span> <span class="n">install</span> <span class="n">paho</span><span class="o">-</span><span class="n">mqtt</span><span class="o">==</span><span class="mf">1.3</span><span class="o">.</span><span class="mi">1</span>
@@ -107,7 +104,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table des Matières</a></h3>
+  <h3><a href="index.html">Table des matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">MQTT</a><ul>
 <li><a class="reference internal" href="#installation">Installation</a><ul>
@@ -123,8 +120,8 @@
   <p class="topless"><a href="Machine_learning.html"
                         title="Chapitre précédent">Machine Learning</a></p>
   <h4>Sujet suivant</h4>
-  <p class="topless"><a href="Powershell.html"
-                        title="Chapitre suivant">PowerShell</a></p>
+  <p class="topless"><a href="Optimisation_Travail.html"
+                        title="Chapitre suivant"><span class="sectnum">1</span> Optimisation du travail (et de l’apprentissage)</a></p>
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
     <ul class="this-page-menu">
@@ -133,13 +130,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
+  <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -155,7 +150,7 @@
           <a href="genindex.html" title="Index général"
              >index</a></li>
         <li class="right" >
-          <a href="Powershell.html" title="PowerShell"
+          <a href="Optimisation_Travail.html" title="1 Optimisation du travail (et de l’apprentissage)"
              >suivant</a> |</li>
         <li class="right" >
           <a href="Machine_learning.html" title="Machine Learning"
@@ -165,7 +160,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.9.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
     </div>
   </body>
 </html>

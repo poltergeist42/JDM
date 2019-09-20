@@ -1,20 +1,21 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Site Web &#8212; Documentation JDM 20170523</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Soudure" href="Soudure.html" />
@@ -43,35 +44,31 @@
             
   <div class="section" id="site-web">
 <h1>Site Web<a class="headerlink" href="#site-web" title="Lien permanent vers ce titre">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first simple">
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://poltergeist42.github.io/JDM/Django.html">https://poltergeist42.github.io/JDM/Django.html</a></dt>
-<dd># URL traitant de Django dans mon journal de manip (JDM)</dd>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://poltergeist42.github.io/JDM/Django.html">https://poltergeist42.github.io/JDM/Django.html</a></dt><dd><p># URL traitant de Django dans mon journal de manip (JDM)</p>
+</dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://poltergeist42.github.io/JDM/HTML_CSS.html">https://poltergeist42.github.io/JDM/HTML_CSS.html</a></dt>
-<dd># URL traitant du html et du CSS dans mon journal de manip (JDM)</dd>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://poltergeist42.github.io/JDM/HTML_CSS.html">https://poltergeist42.github.io/JDM/HTML_CSS.html</a></dt><dd><p># URL traitant du html et du CSS dans mon journal de manip (JDM)</p>
+</dd>
 </dl>
 </li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Descriptif:</th><td class="field-body"><p class="first last">Ce document présente les grandes étapes pour la création, la mise en place
+</dd>
+<dt class="field-even">Descriptif</dt>
+<dd class="field-even"><p>Ce document présente les grandes étapes pour la création, la mise en place
 et la publication (en ligne et hors ligne) d’un site web</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="section" id="preparation">
 <h2>Préparation<a class="headerlink" href="#preparation" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Cas d’utilisations (Use cases)</p>
+<li><p>Cas d’utilisations (Use cases)</p>
 <blockquote>
 <div><p>Permet de définir / Identifier les acteurs (Utilisateurs, Techniciens, autres) du site,
 puis pour chacun de ces acteurs, de définir les actions qu’ils pourront ou devrons effectuer.</p>
@@ -79,7 +76,7 @@ puis pour chacun de ces acteurs, de définir les actions qu’ils pourront ou de
 dès le début. Ils peuvent être enrichie par la suite.</p>
 </div></blockquote>
 </li>
-<li><p class="first">Maquette du site (wireframes)</p>
+<li><p>Maquette du site (wireframes)</p>
 <blockquote>
 <div><p>Il s’agit de vignette représentant les différents écran du site ainsi liens direct
 permettant de passer d’un écran à l’autre</p>
@@ -98,7 +95,7 @@ atteindre un écran.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table des Matières</a></h3>
+  <h3><a href="index.html">Table des matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Site Web</a><ul>
 <li><a class="reference internal" href="#preparation">Préparation</a></li>
@@ -120,13 +117,11 @@ atteindre un écran.</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
+  <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -152,7 +147,7 @@ atteindre un écran.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.9.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
     </div>
   </body>
 </html>

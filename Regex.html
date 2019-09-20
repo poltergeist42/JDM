@@ -1,20 +1,21 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Regex &#8212; Documentation JDM 20170523</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Site Web" href="SiteWeb.html" />
@@ -43,36 +44,32 @@
             
   <div class="section" id="regex">
 <h1>Regex<a class="headerlink" href="#regex" title="Lien permanent vers ce titre">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Liens_Web:</th><td class="field-body"><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re">https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re</a></dt>
-<dd># la page Wikipedia</dd>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re">https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re</a></dt><dd><p># la page Wikipedia</p>
+</dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://msdn.microsoft.com/library/az24scfc.aspx">https://msdn.microsoft.com/library/az24scfc.aspx</a></dt>
-<dd># La page Microsoft. plus facile à lire que la page Wikipedia</dd>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://msdn.microsoft.com/library/az24scfc.aspx">https://msdn.microsoft.com/library/az24scfc.aspx</a></dt><dd><p># La page Microsoft. plus facile à lire que la page Wikipedia</p>
+</dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://regex101.com/">https://regex101.com/</a></dt>
-<dd># Pour tester les expressions régulières</dd>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://regex101.com/">https://regex101.com/</a></dt><dd><p># Pour tester les expressions régulières</p>
+</dd>
 </dl>
 </li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="section" id="powershell">
 <h2>PowerShell<a class="headerlink" href="#powershell" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">obtenir de l’aide sur les Regex</p>
+<li><p>obtenir de l’aide sur les Regex</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span> <span class="n">about_Regular_Expressions</span>
 </pre></div>
 </div>
@@ -84,7 +81,7 @@
 <h2>Python<a class="headerlink" href="#python" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
-<li><p class="first">Utiliser la bibliothèque Regex</p>
+<li><p>Utiliser la bibliothèque Regex</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 </pre></div>
 </div>
@@ -100,7 +97,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table des Matières</a></h3>
+  <h3><a href="index.html">Table des matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Regex</a><ul>
 <li><a class="reference internal" href="#powershell">PowerShell</a></li>
@@ -123,13 +120,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
+  <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -155,7 +150,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.9.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
     </div>
   </body>
 </html>
