@@ -200,6 +200,9 @@ Artificial Neural Networks (ANN)
 scikit-learn
 ------------
 
+  :Liens_Web:
+      * http://scikitlearn/stable/documentation
+
 Installer toute la suite scientifique (avec scikit-learn)
 =========================================================
 
@@ -226,3 +229,42 @@ Import systèmatique pour tout les code
         import pandas as pd
         import mglearn
         from IPython.display import display
+
+####
+
+Apprentissage supervisé
+=======================
+
+  :L'aprentissage supervisé:
+      Il est utiliser lorsque nous voulons prédire une certaine sortie à partir d'une entrée connue
+      et que nous connaissons des paires d'entrée/sortie. Ces paires d'entrée/sortie constitue le 
+      jeu d'apprentissage.
+
+      La classification et la régression sont les deux types majeurs de problèmes de 
+      l'apprentissage supperviser.
+
+  :Classification:
+      Dans le cas de la classification, le but est de prédire une étiquette de classe, qui est un
+      choixpossible parmi une liste de possibilités. ::
+
+        ex:
+        prédire la variété d'un iris en fonction de ces carractéristique (taille des pétals, forme,
+        etc...)
+
+      On distingue parfois de type de classification :
+        * La classification binaire, dans laquelle le problème comporte exactement deux classes.
+        * La classification multiclasse, dans laquelle il y a plus de deux classes.
+
+  :Régression:
+      Dans le cas de tâches dite de régression, le but est de prédire une valeur continue, c'est à
+      dire un nombre en virgule flottante en termes de programmation, ou un nombre réel en termes
+      de mathématiques. ::
+
+        ex:
+        Prédire un salaire annuel en fonction de l'éducation, de l'âge, du sexe et du lieu de vie.
+
+Algorithms
+==========
+
+Les k plus proches voisins
+--------------------------
