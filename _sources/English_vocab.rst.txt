@@ -3,6 +3,20 @@ English Vocabulary
 ==================
 
 -----
+- D -
+-----
+
+:despite:
+    * **préposition**
+        :malgré:            - despite, in spite of, after, in the face of, for
+
+        :en dépit de:       - despite, in spite of
+
+        :bien que:          - despite
+
+####
+
+-----
 - F -
 -----
 
@@ -16,6 +30,21 @@ English Vocabulary
         :le pronostic:      - prognosis, forecast, prognostication
 
         :le plan:           - blueprint, plan, map, plane, scheme, forecast
+
+####
+
+-----
+- L -
+-----
+
+:lack:
+    * **nom**
+        :le manque:         - lack, miss, shortage, want, absence, deficiency
+
+    * **verbe**
+        :manquer de:        - lack, be short of, go short of
+
+        :faire défaut:      - fail, default, lack
 
 ####
 
