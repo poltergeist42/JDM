@@ -19,6 +19,7 @@ Mon journal de manip
    Django
    Docker
    DocUtils_RST_Sphinx
+   English_vocab
    ESP8266
    GIT
    HTML_CSS
