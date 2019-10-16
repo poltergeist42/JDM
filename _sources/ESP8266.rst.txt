@@ -209,10 +209,13 @@ Ouvrir une session
 
 L'ouverture de session se fait avec la commande suivante : ::
 
+    # Linux
     rshell --port /dev/ttyUSB0 --baud 115200 --buffer-size 128 --editor nano
 
+    # Windows
     # sous Windows, il est inutle de préciser l'éditeur car il n'y en as pas d'utilisable en ligne
     # de commande.
+    rshell --port COM3 --baud 115200 --buffer-size 128
 
 Utilisation
 -----------
