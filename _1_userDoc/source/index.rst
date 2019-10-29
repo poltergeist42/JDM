@@ -20,7 +20,7 @@ Mon journal de manip
    Docker
    DocUtils_RST_Sphinx
    English_vocab
-   ESP8266
+   ESP
    GIT
    HTML_CSS
    Informatique
@@ -36,6 +36,7 @@ Mon journal de manip
    Python
    Raspberry
    Regex
+   Reseau
    SiteWeb
    Soudure
    URLtheque

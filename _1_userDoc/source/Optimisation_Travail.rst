@@ -98,7 +98,8 @@ La technique de lecture rapide améliore les performences de lecture mais nuis �
 
 Pour améliorer ses performence de lecture, on peut agmenter légerement son rythme de lecture. Il ne
 faut pas trop augmenter la vitesse de lecture de façon à ne pas nuir à la compréhension et à la
-mémorisation du texte.
+mémorisation du texte. Cette légère augmentation de la vitesse de lecture permet au cerveau de ne
+s'ennuyer et donc permet de rester concentrer sur le sujet.
 
 Il faut faire des pauses régulières pour améliorer sa concentration.
 
@@ -182,6 +183,78 @@ Dans le cardre d'une présentation orale, cela permet d'identifier les points qu
 approfondit, améliorer ou même supprimer car redondant ou n'apportant pas d'information nouvelle
 ou pertinante. Cela aide également a fluidifier le discourt tout en modérant le rythmes de la 
 présentation.
+
+####
+
+---------------------------------------
+Techniques d'amélioration de la mémoire
+---------------------------------------
+
+La technique de rappel
+======================
+
+Un moyen simple pour retenir une information de façon durable et de se forcer à se rappeler ce
+que l'on souhaite mémoriser à différents intervalles. Il faut essayer de se rappeler un maximum
+d'information à chaque fois. Ces rappel peuvent être accompagner d'une relecture ou d'une
+révision pour ajuster ces connaissances est la compréhension du sujet mémorisé. Ces révisions
+doivent être effectuée après l'effort de restitution.
+
+Un rappel est une tentative de restitution de l'information. Elle peut être faite à voix haute
+ou par écris. L'information restitué doit ensuite être confronter à la véritable information.
+Pour permettre d'ajuster (et de corriger) l'information mémorisée.
+
+exemples de période de rappel :
+
+   * **Rappel 1** : Quelques heures (de 2 à 4) après avoir tenter de mémoriser une information.
+
+   * **Rappel 2 (j+1)** : Le lendemain (idéallement le matin). On tente un rappel et on ajuste
+     notre mémorisation au cas où trop d'information aient disparu.
+
+   * **Rappel 3 (j+2)** : Le surlendemain de la mémorisation initiale. Si on ne parviens pas à
+     restituer l'information correctement à ce niveau, il faut reprendre au rappel 2.
+
+   * **Rappel 4 (j+4)** : On laisse un jour entier sans retoucher / reviser l'information.
+
+   * **Rappel 5 (j+7)** : 7 jours : Une semaine après la mémorisation initiale.
+
+   * **Rappel 6 (j+15)** : 15 jours après la mémorisation initiale. A ce niveau, l'information
+     devrait être suffisement solide.
+
+   * **Rappel 7 (J+30)** : 30 jours après la mémorisation initiale. On vérifie que l'information
+     est toujours présente et qu'elle n'a pas été tronquée ou déformée
+
+   * **Rappel régulier** : Après un mois il reste utile de tenter de restituer l'information de
+     temps en temps.
+
+La technique des associations mentales et des associations en chaîne
+====================================================================
+
+Les associations mentales (simples)
+-----------------------------------
+
+La technique d'association mentales conciste à associer un mot, une information, un concèpte avec
+avec une image mentale. Cette image mentale doit être mémorable. Pour cela il faut que l'image
+mentale soit exagérée, absurde ou même carricaturale. Plus cette image sera décalée, plus elle
+sera facile à mémoriser et donc plus facille à restituer.
+
+Il est préférable que l'image mentale soit animée car cela les rend plus facille à mémoriser. De
+plus les image animé seront plus simple à associer pour créer des histoire qui permettrons de
+mémoriser des information complexes.
+
+Les images mentales peuvent être accompagné d'un son ou d'une odeur (imaginaires évidement). De
+façon générales, il faut essayer de créer les image mentales avec les 5 sens. pour rendre ces
+images les plus concrètes et les plus significatives possible.
+
+Pour les association mentale complexe, il n'est pas forcément nécéssaire de trouver une "image"
+qui cole exactement à ce que l'on cherche à mémoriser. Des termes à consonance proche peuvent
+également convenir.
+
+   Exemple pour le mot "nonobstant" :
+   Il suffit d'imaginer Nono le petit robot dansant avec Télémac. La parti "bstant" du mot
+   nous viendra alors naturellement.
+
+Les associations en chaines
+---------------------------
 
 ####
 

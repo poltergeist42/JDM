@@ -35,24 +35,19 @@ Matériel
 
 Information pour la gestion et maintenance des matériel
 
+Trouver le numéro de série d'un poste / serveur en CLI
+======================================================
+
+    .. code::
+
+        wmic bios get serialnumber
+
 Vérifier les garantie constructeur
 ==================================
 
     #. `Garantie Dell`_
     
     #. `Garantie HP`_
-
-Switch
-======
-
-VLAN
-----
-
-    :Liens_Web:
-            * `initiation au VLAN`_ : explication du VLAN (1ere partie) + configuration d'un switch
-              Cisco (CLI)
-
-            * `Configuration d'un switch HP avec l'interface WEB`_
 
 ####
         
@@ -83,7 +78,7 @@ Forcer la suppression d'une partition
 
     #. dispart 
 
-        depuis une invite de command Administrateur
+        Depuis une invite de command Administrateur
 
         .. code:: powershell
 
@@ -237,8 +232,24 @@ Réplication Hyper-V en workgroup
 :Liens_Web:
         * `Hyper-V replication in a workgroup or across domains using a self signed certificate`_ 
 
-PowerShell
-==========
+CLI : CMD et Powershell
+=======================
+
+Lister les rôles FSMO
+---------------------
+
+    :Liens_Web:
+        * `Get FSMO in CLI`_
+
+    .. code:: shell
+    
+        # en CMD : Lister tous les rôles d'un coup
+        Netdom Query FSMO
+
+    .. code:: powershell
+
+        # En Powershell :
+        Get-ADDomainController -Filter * | Select-Object Name, Domain, Forest, OperationMasterRoles | Where-Object {$_.OperationMasterRoles} | Ft -AutoSize
 
 Installer le module PowerShell ActiveDirectory sous Windows 10
 --------------------------------------------------------------
@@ -319,24 +330,6 @@ Replication et bascullement DHCP entre deux serveurs
         * `Réplication du service DHCP et basculement entre 2 serveurs`_
 
             
-####
-            
------------------------
-Router, Firewall, Proxy
------------------------
-
-Sophos
-======
-
-    #. Basic settings
-
-        :Liens_Web:
-            * `Basic settings in 12 step`_
-
-    #. Configurer le VPN en SSL
-    
-        :Liens_Web:
-            * `UTM90 Remote Access via SSL`_ 
 
 ####
 
@@ -352,8 +345,12 @@ Webography
 .. _`VIM / VI`: https://poltergeist42.github.io/JDM/VIM.html
 .. _`Garantie Dell`: http://www.dell.com/support/home/fr/fr/frdhs1/products/?app=warranty&c=fr&l=fr&s=dhs 
 .. _`Garantie HP`: http://h20565.www2.hpe.com/hpsc/wc/public/home?lang=fr-fr&cc=fr 
+.. _`Mise en place de VLANs et de routage inter-VLANs`: https://www.it-connect.fr/mise-en-place-de-vlans-et-de-routage-inter-vlans/
 .. _`initiation au VLAN`: https://networkcorp.fr/vlan-virtual-local-area-network/
 .. _`Configuration d'un switch HP avec l'interface WEB`: https://fucking-it.com/fr/tutoriel/switch-hp/422-switch-hp-configurez-vlan-interface-web
+.. _`Configuration d'un switch Aruba (HP) en CLI`: https://www.clemanet.com/hp/configuration-vlan.php
+.. _`Guide switch HP type Procurve`: http://idum.fr/spip.php?article295
+.. _`Switch Aruba : configurer un Trunk LACP`: https://www.it-connect.fr/switch-aruba-configurer-un-trunk-lacp/
 .. _`Medicat`: https://www.tech2tech.fr/medicat-lutilitaire-utlime-pour-le-depannage-informatique/ 
 .. _`Utiliser diskpart`: http://www.aidewindows.net/win10/partition-recuperation.php
 .. _`Ajouter des commandes au menu contextuel`: https://www.01net.com/astuces/ajouter-des-commandes-dos-au-menu-contextuel-de-lexplorateur-555224.html
@@ -368,6 +365,7 @@ Webography
 .. _`UPD SysprepImg`: https://github.com/remylarrieu/PowerShell/tree/master/Virtualization
 .. _`ex UPD SysprepImg`: https://www.remylarrieu.com/fr/mettre-a-jour-une-image-vhd/
 .. _`Hyper-V replication in a workgroup or across domains using a self signed certificate`: https://nerddrivel.com/2016/03/07/hyper-v-replication-in-a-workgroup-or-across-domains-using-a-self-signed-certificate/
+.. _`Get FSMO in CLI`: https://blog.alphorm.com/howto-lister-les-dcs-qui-detiennent-les-roles-fsmo/
 .. _`Utilisation de points de contrôle`: https://docs.microsoft.com/fr-fr/virtualization/hyper-v-on-windows/user-guide/checkpoints
 .. _`HowTo install AD on w10`: https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/
 .. _`Script install AD on w10`: https://gallery.technet.microsoft.com/Install-the-Active-fd32e541
