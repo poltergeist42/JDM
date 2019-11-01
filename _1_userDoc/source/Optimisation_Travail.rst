@@ -20,12 +20,12 @@ Lecture rapide
 
             - `subvocalisation`_
 
-            - `Lecture rapide, les contres`_ : article traitant des impact négatif de la
+            - `Lecture rapide, les contres`_ : article traitant des impacts négatif de la
               lecture rapide.
 
             - `Champ visuel`_
 
-    :Definition:
+    :Définitions:
 
             - **La lecture rapide** est une technique permettant d'accélérer la vitesse de lecture.
               Elle consiste principalement à éduquer le regard et à limiter la subvocalisation.
@@ -53,7 +53,7 @@ Les différentes étapes de la lecture rapides
        "saccade" va prendre environ 0,1 seconde. Puis, inconsciemment, nous procédons à des petites
        relectures rapides pour comprendre l'ensemble.
 
-       Les retours arrière et les divagations des yeux sont du à deux causes principales :
+       Les retours arrière et les divagations des yeux sont dû à deux causes principales :
 
             #. Fatigue ou manque de concentration
 
@@ -83,7 +83,7 @@ Les différentes étapes de la lecture rapides
        La lecture "traditionnelle" utilise presque exclusivement la **vision fovéale**. Pour 
        améliorer la vitesse de lecture, il faut en plus utiliser la **vision périphérique**. Cela 
        permettra de lire des groupes de mots en une seule fois et non pas de lire tous les mots un
-       par un. Cela permet également de deviné les mots dès les premières lettre plutôt que de
+       par un. Cela permet également de deviner les mots dès les premières lettres plutôt que de
        devoir les lire entièrement.
 
        **/!\\ Attention /!\\** : La vision périphérique ne peut pas être utilisée pour lire des 
@@ -114,7 +114,7 @@ Technique du Pomodoro
             - La technique du `Pomodoro`_
             - `pomodoro-tracker`_ : un site Web permettant d'appliquer le pomodoro.
 
-    :Definition:
+    :Définitions:
 
             - **Pomodoro** signifie tomate en italien. Ce nom été donné par **Francesco Cirillo**
               qui utilisait un minuteur de cuisine en forme de tomatte quand il a développé cette
@@ -123,7 +123,7 @@ Technique du Pomodoro
 La technique utilise une minuterie pour diviser le travail en intervalles, traditionnellement de 
 25 minutes, séparés par de courtes pauses de 5 minutes. Un pomodoro ne doit pas être interrompu. 
 Si une idée ou une tache supplémentaire vient interrompre le pomodoro, il faut la noter pour 
-pouvoir la traiter plustard et reprendre le pomodoro en cours.
+pouvoir la traiter plus tard et reprendre le pomodoro en cours.
 
 Les objectifs de la méthode
 ===========================
@@ -141,8 +141,8 @@ Les objectifs de la méthode
 Utilisation de la méthode
 =========================
 
-    #. Définir les taches à accomplir
-    #. Regler la minuterie (traditionnellement à 25 min)
+    #. Définir les tâches à accomplir
+    #. Régler la minuterie (traditionnellement à 25 min)
     #. Travailler sur la tâche jusqu’à ce que la minuterie sonne. Si une distraction apparaît, 
        l’écrire, mais revenir immédiatement sur la tâche.
 
@@ -151,13 +151,13 @@ Utilisation de la méthode
 
     **N.B:** 
         - Une tache peut être constituée de plusieurs pomodori.
-        - Les pauses régulières favorisent l'assimilition.
+        - Les pauses régulières favorisent l'assimilation.
         - Lors des pauses, il est conseillé de faire un peu d'excercice physique.
 
 ####
 
 ---------------------------------
-La methode du canard en plastique
+La méthode du canard en plastique
 ---------------------------------
 
     :Liens_Web:
@@ -165,7 +165,7 @@ La methode du canard en plastique
             - `WIKI canard en plastique`_
             - `Dissonance cognitive`_
 
-Cette méthode est principalement utiliser en programmation pour faire du débuggage. Elle peut 
+Cette méthode est principalement utilisée en programmation pour faire du débuggage. Elle peut 
 également être utiliser dans la préparation d'une présentation orale.
 
 La méthode du canard en plastique consiste à expliquer méticuleusement le code source que l'on 
@@ -181,7 +181,7 @@ au fait que le code qu'il a écrit ne correspond pas au code qu'il avait l'inten
 
 Dans le cardre d'une présentation orale, cela permet d'identifier les points qui pourrait être 
 approfondit, améliorer ou même supprimer car redondant ou n'apportant pas d'information nouvelle
-ou pertinante. Cela aide également a fluidifier le discourt tout en modérant le rythmes de la 
+ou pertinante. Cela aide également à fluidifier le discourt tout en modérant le rythmes de la 
 présentation.
 
 ####
@@ -195,7 +195,7 @@ La technique de rappel
 
 Un moyen simple pour retenir une information de façon durable et de se forcer à se rappeler ce
 que l'on souhaite mémoriser à différents intervalles. Il faut essayer de se rappeler un maximum
-d'information à chaque fois. Ces rappel peuvent être accompagner d'une relecture ou d'une
+d'information à chaque fois. Ces rappels peuvent être accompagner d'une relecture ou d'une
 révision pour ajuster ces connaissances est la compréhension du sujet mémorisé. Ces révisions
 doivent être effectuée après l'effort de restitution.
 
@@ -210,7 +210,7 @@ exemples de période de rappel :
    * **Rappel 2 (j+1)** : Le lendemain (idéallement le matin). On tente un rappel et on ajuste
      notre mémorisation au cas où trop d'information aient disparu.
 
-   * **Rappel 3 (j+2)** : Le surlendemain de la mémorisation initiale. Si on ne parviens pas à
+   * **Rappel 3 (j+2)** : Le surlendemain de la mémorisation initiale. Si on ne parvient pas à
      restituer l'information correctement à ce niveau, il faut reprendre au rappel 2.
 
    * **Rappel 4 (j+4)** : On laisse un jour entier sans retoucher / reviser l'information.
@@ -218,7 +218,7 @@ exemples de période de rappel :
    * **Rappel 5 (j+7)** : 7 jours : Une semaine après la mémorisation initiale.
 
    * **Rappel 6 (j+15)** : 15 jours après la mémorisation initiale. A ce niveau, l'information
-     devrait être suffisement solide.
+     devrait être suffisamment solide.
 
    * **Rappel 7 (J+30)** : 30 jours après la mémorisation initiale. On vérifie que l'information
      est toujours présente et qu'elle n'a pas été tronquée ou déformée
@@ -235,26 +235,172 @@ Les associations mentales (simples)
 La technique d'association mentales conciste à associer un mot, une information, un concèpte avec
 avec une image mentale. Cette image mentale doit être mémorable. Pour cela il faut que l'image
 mentale soit exagérée, absurde ou même carricaturale. Plus cette image sera décalée, plus elle
-sera facile à mémoriser et donc plus facille à restituer.
+sera facile à mémoriser et donc plus facile à restituer.
 
 Il est préférable que l'image mentale soit animée car cela les rend plus facille à mémoriser. De
-plus les image animé seront plus simple à associer pour créer des histoire qui permettrons de
+plus les images animées seront plus simples à associer pour créer des histoires qui permettrons de
 mémoriser des information complexes.
 
 Les images mentales peuvent être accompagné d'un son ou d'une odeur (imaginaires évidement). De
-façon générales, il faut essayer de créer les image mentales avec les 5 sens. pour rendre ces
+façon générale, il faut essayer de créer les images mentales avec les 5 sens. pour rendre ces
 images les plus concrètes et les plus significatives possible.
 
-Pour les association mentale complexe, il n'est pas forcément nécéssaire de trouver une "image"
+Pour les associations mentals complexe, il n'est pas forcément nécéssaire de trouver une "image"
 qui cole exactement à ce que l'on cherche à mémoriser. Des termes à consonance proche peuvent
 également convenir.
 
    Exemple pour le mot "nonobstant" :
    Il suffit d'imaginer Nono le petit robot dansant avec Télémac. La parti "bstant" du mot
-   nous viendra alors naturellement.
+   nous viendrons alors naturellement.
 
 Les associations en chaines
 ---------------------------
+
+Les associations en chaines concistent à créer plusieurs image mentale (une par sujet ou mots
+clef à retenir) puis à les associer entre elles pour créer une ou plusieurs petites histoires.
+
+  Exemple si nous devions retenir la liste de 10 pays les plus riches du monde, nous pourrions
+  imaginé (et visualiser) l'histoire suivante :
+
+    *"La statue de la liberté chevauche un dragon pendant qu'un samouraï mange des saucisses*
+    *à la tour Eiffel. Poutine prend une tasse de thé. il a reçu un balon sur la tête en étant*
+    *assis sur une gondole en regardant tombé les feuilles d'érable."*
+
+    voici à quoi pourrait correspondre ces images mentales :
+      * La statue de la liberté : Etats Uni
+      * Dragon : chine
+      * Samouraï : Japon
+      * saucisses : Allemagne
+      * Tour Eiffel : France
+      * Poutine : Russie
+      * Tasse de Thé : Angleterre
+      * Ballon : Braisil
+      * Gondole : Italie
+      * Feuilles d'érables : Canada
+
+Le voyage mental
+=================
+
+La mémoire des lieux et parmi les plus fiables car elle est directement reliée à la mémoire à long
+terme.
+
+par exemple il n'est pas necessaire d'être chez soit pour savoir ou sont les différentes pièces et
+ce qu'il y a dans chacune d'elles. De même qu'il ne faut effectuer que quelque fois un trajet pour
+le mémoriser.
+
+La technique du voyage consiste à associer les informations que vous voulez retenir à des lieux ou
+à des "points de passages" que vous connaissez déjà.
+
+Ces lieux peuvent être réel ou imaginaire. Les joueurs de jeux vidéo peuvent dans se cas avoir plus
+de facilité à appliquer cette technique car elle fait déjà parti de leurs habitudes de jeux.
+
+L'enchainement (ou le voyage) des ces lieux doivent toujours avoir un sens logique pour nous. c'est
+pourquoi au début, il est plus facille de "voyager" dans des endroits qui nous sont famillier.
+
+  Exemple d’un voyage mental : mon habitation.
+    #. Le lit (sur la mezzanine)
+    #. Sous la mezzanine
+    #. Le salon
+    #. La cuisine
+    #. Le couloir
+    #. La salle de bain
+    #. Le palier
+    #. La cage d'escalier
+    #. Le hall de l'immeuble
+    #. La voiture
+
+Pour commencer, il est plus facil de concidérer chaque point de passages comme un éléments unique. Par
+la suite tous les éléments de ces pièces pourrons servir de support pour nos informations. par
+exemple : les murs, les placards, le sol, le plafond. 
+
+Associer une information avec un point de passage
+-------------------------------------------------
+
+Pour intégrer une information dans l'un des points de passage, il faut imaginer que l'image mentale
+que nous allons créer interagie avec l'endroit en question.
+
+Il est impératif de prendre le temps de bien visualiser ces images mentales dans leur nouvelle
+environement pour de façon à ce que l'image mentale "s'ancre" dans cette pièce.
+
+  Exemple pour mémoriser la liste suivante :
+    Girafe, bouteille, Statue, bol, cloche, calculatrice, livre, cornemuse, bus
+
+    * **Girafe** : Une mini girafe Rose est sur mon lit en train de manger ma couette.
+    * **Bouteille** : Un clochard façon tex Avery avec une bouteille à la main ronflan sur le
+      canapé de mon salon.
+    * **Statue** : La fontaine du manquenpisse sous la mezanine et mon chat jouant avec le jet
+      d'eau.
+    * **Bol** : Un bol sur le plan de travail de la cuisine avec des bras et une bouche entrain
+      de manger avec une cuillère la soupe qu'il contient.
+    * **Cloche** : La vache des tout premier Disney avec une cloche autour du coup, assis dans le couloir
+      et fait du tricot. Le tout accompagné de la musique des premiers disney.
+    * **Calculatrice** : Une adition "1+1 = ?" écris à la craie sur une ardoise accroché à un mur
+      du salon.
+    * **Livre** : Un tas de livre de dessin animée empilé façon Jenga dans le salon.
+    * **Cornemuse** : Une cuvette de toilette jouant de la cornemuse dans la sale de bain.
+    * **Bus** : un porte clef en forme de bus jaune de ramassage scolaire au états unis accroché
+      au rétroviseur de la voiture.
+      
+Les 3 elements imoprtant pour graver les informations dans un point de passage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  #. Il est important de créer des associations en mouvements dans les lieux choisi. Les images
+     statiques ont tendance à être moins mémorable.
+
+  #. Il est crutial que les images intéragissent avec l'environement. Cette interraction est comme
+     la glu qui fixe ce que vous avez à retenir avec la mémoire à long terme.
+
+  #. Prendre le temps de bien créer les associations en essayant pour cela d'utiliser les 5 sens.
+     Cette technique nécessite un peu de travail (et de temps) au début. Avec l'habitude, cette
+     gymnastique devient plus facile.
+
+Recommandations pour créer et/ou augmenter les voyages mentaux
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  * Les points de passages peuvent aissi être des parcs, un trajet dans la rue, un centre commercial.
+
+  * S'assurer que les points de passage soient suffisamment différents les uns des autres.
+
+  * Ne pas prendre des points de passages trop proche les uns des autres. Il est préférable de
+    prendre des points de passage espacer d'au moin 50cm dans la réalité. A l'inverse, il ne faut
+    pas que les points de passages soient trop éloignés car cela peut ammener un doute et
+    s'interroger sur l'éventuel oublie de l'un d'eux.
+
+  * Avant d'utiliser le voyage mental, il faut toujours vérifier que nous avons tous nos lieux.
+    Si certain manque, il faut peut-être passer plus de temps à créer sont voyage. En parcourant
+    mentalement chacun des lieu plusieurs fois.
+
+  * Préférer les points de passage lumineux. Les lieux ou les scènes sombre on tendance à être
+    moins mémorables.
+
+  * L'un des meilleurs moyens de mémoriser un voayage que l'on ne maitrise pas parfaitement
+    consiste à le dessiner ou à le lister directement.
+
+Le Palais de la mémoire
+=======================
+
+La technique du Palais de la mémoire est une extension du voyage mental. Il permet de mémoriser
+un grand nombre d'informations de façon durable.
+
+Il faut considérez qu'un palais de la mémoire est un ensemble de voyages qui se touches et
+communiquent entre eux. Il devient alors plus facille de passer de l'un à l'autre.
+
+Créer un palais de la mémoire
+-----------------------------
+
+La première étape d'un palais de la mémoire suffisement grand est d'avoir une collection de voyages
+déjà prête. il faut donc Céer / lister ces collections de voyage avec les différentes étapes qui les
+compose sur papier ou sur ordinateur.
+
+Il faut ensuite relier ces palais de façon à ce qu’ils forment une suite logique.
+
+  **N.B:** Sur ordinateur un logiciel de carte mentales type Xmind peut être util et aider à la
+    visualisation des différents voyages.
+
+On peut alors s'imaginer franchir chaque étape pour se rendre d'un point à un autre. 
+
+  **/!\\Attention/!\\** Il est important de bien prendre le temps de visualiser ce palais de la
+    mémoire et de s'y promener. Cela permettra d'y associer plus facillement les images mentales.
 
 ####
 
@@ -285,4 +431,5 @@ Webography
 .. _`Methode Agile`: https://agiliste.fr/introduction-methodes-agiles/
 
 .. target-notes::
+
 
