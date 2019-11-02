@@ -402,6 +402,60 @@ On peut alors s'imaginer franchir chaque étape pour se rendre d'un point à un 
   **/!\\Attention/!\\** Il est important de bien prendre le temps de visualiser ce palais de la
     mémoire et de s'y promener. Cela permettra d'y associer plus facillement les images mentales.
 
+Lorsqu'un palais est creé, on peut commencer à le remplir avec les images mental. Il est plus
+simple de le remplir selon les thématiques les plus logiques.
+
+  Exemple :
+    * Toutes les informations personnel peuvent être rattachées à la maison.
+    * Toutes les informations professionnel peuvent être rattachées au travail.
+    * Toutes les informations sportives peuvent être rattachés à une salle de sport.
+    * Toutes les information de loisirs peuvent être rattaché à un cinéma.
+    * etc ...
+
+Si les informations sont associé de façon logiques elle seront plus facillement restituables.
+On peut consigner ses catégories dans la liste qui a servie à la création du palais de la mémoire
+ou sur la carte mentale (Xmind) le cas échéant.
+
+Voici une liste des grandes catégories que nous pouvons placer dans notre palais de la mémoire :
+
+  * Vie quotidienne
+  * Travail
+  * Sciences
+  * Géographie
+  * Histoire
+  * Nourriture
+  * Sport et loisirs
+  * Famille et amis
+  * Musique et films
+  * Célébrités
+
+Même si il n'y a pas réélement de lieu pour l'une de ces catégories, il suffit de le placées arbitrairement.
+
+Si les images mentales que vous avez crée ne sont pas soliciter de temps à autres, elles finirons alors par
+disparaitre complétement du palais de la mémoire.
+
+Pour ancré profondément l'image mental dans le palais de la mémoire, il faut s'appuyer sur la
+**technique de rappel**. L'information déménagera alors du palais pour être stocké directement dans la partie
+dite "mémoire automatique" de la mémoire à long terme.
+
+Systèmes de mémorisation des chiffre
+====================================
+
+Le système de mémorisation des chiffres consiste à remplacer mentallement le chiffres par une image mentales.
+
+  #. Niveau débutant. Le système simple : Convertir chaque chiffre (0-9) en image.
+
+  #. Niveau Avancé. Le Dominic System : Convertir chaque chiffre (00-99) en image.
+
+  #. Niveau champion. Les systèmes des champions de mémoire : convertir chaque chiffre (000-999)
+     en image.
+
+
+
+
+
+
+
 ####
 
 ----------------
