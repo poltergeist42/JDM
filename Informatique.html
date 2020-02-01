@@ -319,7 +319,7 @@ informatique.</p></li>
 <blockquote>
 <div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># Dans la console exchange PS</span>
 
-<span class="nb">Get-MailboxStatistics</span> <span class="n">-server</span> <span class="no">[nom_du_serveur]</span> <span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">TotalItemSize</span> <span class="n">-Descending</span> <span class="p">|</span> <span class="n">select</span> <span class="n">DisplayName</span><span class="p">,</span> <span class="n">TotalItemSize</span><span class="p">,</span> <span class="n">ItemCount</span> <span class="p">|</span> <span class="nb">export-csv</span> <span class="n">-Path</span> <span class="s2">&quot;[chemin_et_nom_du_fichiers.csv]&quot;</span> <span class="n">-Delimiter</span> <span class="s2">&quot;;&quot;</span> <span class="n">-Encoding</span> <span class="s2">&quot;Default&quot;</span>
+<span class="nb">Get-MailboxStatistics</span> <span class="n">-server</span> <span class="no">[nom_du_serveur]</span> <span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">TotalItemSize</span> <span class="n">-Descending</span> <span class="p">|</span> <span class="nb">select </span><span class="n">DisplayName</span><span class="p">,</span> <span class="n">TotalItemSize</span><span class="p">,</span> <span class="n">ItemCount</span> <span class="p">|</span> <span class="nb">export-csv</span> <span class="n">-Path</span> <span class="s2">&quot;[chemin_et_nom_du_fichiers.csv]&quot;</span> <span class="n">-Delimiter</span> <span class="s2">&quot;;&quot;</span> <span class="n">-Encoding</span> <span class="s2">&quot;Default&quot;</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -428,7 +428,7 @@ Netdom Query FSMO
 </pre></div>
 </div>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># En Powershell :</span>
-<span class="nb">Get-ADDomainController</span> <span class="n">-Filter</span> <span class="p">*</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">Name</span><span class="p">,</span> <span class="n">Domain</span><span class="p">,</span> <span class="n">Forest</span><span class="p">,</span> <span class="n">OperationMasterRoles</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">OperationMasterRoles</span><span class="p">}</span> <span class="p">|</span> <span class="n">Ft</span> <span class="n">-AutoSize</span>
+<span class="nb">Get-ADDomainController</span> <span class="n">-Filter</span> <span class="p">*</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">Name</span><span class="p">,</span> <span class="n">Domain</span><span class="p">,</span> <span class="n">Forest</span><span class="p">,</span> <span class="n">OperationMasterRoles</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">OperationMasterRoles</span><span class="p">}</span> <span class="p">|</span> <span class="nb">Ft </span><span class="n">-AutoSize</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -451,7 +451,7 @@ Netdom Query FSMO
 <blockquote>
 <div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">import-module</span> <span class="n">ActiveDirectory</span>
 <span class="nv">$vdate</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Get-Date</span><span class="p">).</span><span class="n">adddays</span><span class="p">(-</span><span class="n">180</span><span class="p">)</span>
-<span class="nb">Get-ADComputer</span> <span class="n">-filter</span> <span class="p">{(</span><span class="n">Enabled</span> <span class="o">-eq</span> <span class="s2">&quot;True&quot;</span><span class="p">)</span> <span class="o">-and</span> <span class="p">(</span><span class="n">LastLogonDate</span> <span class="o">-le</span> <span class="nv">$vdate</span><span class="p">)}</span> <span class="n">-property</span> <span class="p">*</span> <span class="p">|</span> <span class="n">ft</span> <span class="n">LastLogonDate</span><span class="p">,</span> <span class="n">CN</span>
+<span class="nb">Get-ADComputer</span> <span class="n">-filter</span> <span class="p">{(</span><span class="n">Enabled</span> <span class="o">-eq</span> <span class="s2">&quot;True&quot;</span><span class="p">)</span> <span class="o">-and</span> <span class="p">(</span><span class="n">LastLogonDate</span> <span class="o">-le</span> <span class="nv">$vdate</span><span class="p">)}</span> <span class="n">-property</span> <span class="p">*</span> <span class="p">|</span> <span class="nb">ft </span><span class="n">LastLogonDate</span><span class="p">,</span> <span class="n">CN</span>
     <span class="c"># applique un filtre sur les élément qui ne sont pas désactivé et qui ne</span>
     <span class="c"># se sont pas connecter de puis au moins 180 Jours</span>
 </pre></div>
@@ -470,7 +470,7 @@ Netdom Query FSMO
 <blockquote>
 <div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">import-module</span> <span class="n">ActiveDirectory</span>
 <span class="nv">$vdate</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Get-Date</span><span class="p">).</span><span class="n">adddays</span><span class="p">(-</span><span class="n">180</span><span class="p">)</span>
-<span class="nb">Get-ADuser</span> <span class="n">-filter</span> <span class="p">{(</span><span class="n">Enabled</span> <span class="o">-eq</span> <span class="s2">&quot;True&quot;</span><span class="p">)</span> <span class="o">-and</span> <span class="p">(</span><span class="n">LastLogonDate</span> <span class="o">-le</span> <span class="nv">$vdate</span><span class="p">)}</span> <span class="n">-property</span> <span class="p">*</span> <span class="p">|</span> <span class="n">ft</span> <span class="n">LastLogonDate</span><span class="p">,</span> <span class="n">CanonicalName</span>
+<span class="nb">Get-ADuser</span> <span class="n">-filter</span> <span class="p">{(</span><span class="n">Enabled</span> <span class="o">-eq</span> <span class="s2">&quot;True&quot;</span><span class="p">)</span> <span class="o">-and</span> <span class="p">(</span><span class="n">LastLogonDate</span> <span class="o">-le</span> <span class="nv">$vdate</span><span class="p">)}</span> <span class="n">-property</span> <span class="p">*</span> <span class="p">|</span> <span class="nb">ft </span><span class="n">LastLogonDate</span><span class="p">,</span> <span class="n">CanonicalName</span>
     <span class="c"># applique un filtre sur les élément qui ne sont pas désactivé et qui ne</span>
     <span class="c"># se sont pas connécter de puis au moins 180 Jours</span>
 </pre></div>
@@ -480,7 +480,7 @@ Netdom Query FSMO
 <div class="section" id="connaitre-la-date-du-dernier-demarrage-d-un-serveur">
 <h4><a class="toc-backref" href="#id82"><span class="sectnum">1.4.5.5</span> Connaitre la date du dernier démarrage d’un serveur</a><a class="headerlink" href="#connaitre-la-date-du-dernier-demarrage-d-un-serveur" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
-<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Get-CimInstance</span> <span class="n">-ClassName</span> <span class="n">Win32_OperatingSystem</span> <span class="p">|</span> <span class="n">Select</span> <span class="n">CSName</span><span class="p">,</span> <span class="n">LastBootUpTime</span>
+<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Get-CimInstance</span> <span class="n">-ClassName</span> <span class="n">Win32_OperatingSystem</span> <span class="p">|</span> <span class="nb">Select </span><span class="n">CSName</span><span class="p">,</span> <span class="n">LastBootUpTime</span>
     <span class="c"># Windows2012 r2 et +</span>
 
 <span class="c"># ou :</span>
@@ -724,7 +724,7 @@ Remove-PSSession $ExSession
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
     </div>
   </body>
 </html>

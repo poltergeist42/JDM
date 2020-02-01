@@ -62,48 +62,52 @@
 <div class="section" id="commentaires">
 <h3>Commentaires<a class="headerlink" href="#commentaires" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Les commentaires sont les mêmes qu’en C :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Commentaire</span> <span class="n">simple</span>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Commentaire simple</span>
 
-<span class="o">/*</span>
-    <span class="n">Commentaires</span>
-    <span class="n">sur</span> <span class="n">plusieurs</span>
-    <span class="n">lignes</span>
-<span class="o">*/</span>
+<span class="cm">/*</span>
+<span class="cm">    Commentaires</span>
+<span class="cm">    sur plusieurs</span>
+<span class="cm">    lignes</span>
+<span class="cm">*/</span>
 </pre></div>
 </div>
+</div></blockquote>
 </div>
 <div class="section" id="interaction-avec-l-utilisateur">
 <h3>Intéraction avec l’utilisateur<a class="headerlink" href="#interaction-avec-l-utilisateur" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><ol class="arabic">
-<li><p>affichage d’un message à l’écran</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alert</span><span class="p">()</span>
-
-<span class="n">ex</span><span class="p">:</span>
-<span class="n">var</span> <span class="n">myVar</span> <span class="o">=</span> <span class="s2">&quot;un message super important&quot;</span><span class="p">;</span>
-<span class="n">alert</span><span class="p">(</span><span class="n">myVar</span><span class="p">);</span>
+<div><ol class="arabic simple">
+<li><p>affichage d’un message à l’écran</p></li>
+</ol>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">alert</span><span class="p">()</span>
+<span class="c1">//ex:</span>
+<span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="s2">&quot;un message super important&quot;</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">myVar</span><span class="p">);</span>
 </pre></div>
 </div>
-</li>
+<ol class="arabic">
 <li><p>Entrée utilisateur</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prompt</span><span class="p">()</span>
-
-<span class="n">ex</span><span class="p">:</span>
-<span class="n">var</span> <span class="n">entreeClavier</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;tapez du text ici : &quot;</span><span class="p">);</span>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">prompt</span><span class="p">()</span>
+<span class="c1">//ex:</span>
+<span class="kd">var</span> <span class="nx">entreeClavier</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;tapez du text ici : &quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div></blockquote>
 </li>
 <li><p>Confirmation conditionnel</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">confirm</span><span class="p">()</span>
-
-<span class="n">ex</span><span class="p">:</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">confirm</span><span class="p">(</span><span class="s1">&#39;Voulez-vous exécuter le code JavaScript de cette page ?&#39;</span><span class="p">))</span> <span class="p">{</span>
-    <span class="n">alert</span><span class="p">(</span><span class="s1">&#39;Le code a bien été exécuté !&#39;</span><span class="p">);</span>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">confirm</span><span class="p">()</span>
+<span class="c1">//ex:</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;Voulez-vous exécuter le code JavaScript de cette page ?&#39;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Le code a bien été exécuté !&#39;</span><span class="p">);</span>
     <span class="p">}</span>
-<span class="o">/*</span> <span class="n">un</span> <span class="n">Popup</span> <span class="n">doit</span> <span class="n">s</span><span class="s1">&#39;ouvrir et demander de confirmer ([OK]) ou pas ([Annuler])</span>
-   <span class="n">la</span> <span class="n">valeur</span> <span class="n">retournée</span> <span class="n">est</span> <span class="n">alors</span> <span class="n">un</span> <span class="n">booléin</span> <span class="p">(</span><span class="n">true</span> <span class="n">ou</span> <span class="n">false</span><span class="p">)</span> <span class="o">*/</span>
+<span class="cm">/* un Popup doit s&#39;ouvrir et demander de confirmer ([OK]) ou pas ([Annuler])</span>
+<span class="cm">la valeur retournée est alors un booléin (true ou false) */</span>
 </pre></div>
 </div>
+</div></blockquote>
 </li>
 </ol>
 </div></blockquote>
@@ -122,39 +126,43 @@
 </div></blockquote>
 </li>
 <li><p>Connaitre le type d’une variables</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span>
-
-<span class="n">ex</span><span class="p">:</span>
-<span class="n">var</span> <span class="n">myVar</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="n">alert</span><span class="p">(</span><span class="n">typeof</span> <span class="n">myVar</span><span class="p">);</span>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">typeof</span>
+<span class="c1">//ex:</span>
+<span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">myVar</span><span class="p">);</span>
 </pre></div>
 </div>
+</div></blockquote>
 </li>
 <li><p>Conversion de TYPE</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p>String –&gt; Number</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parseInt</span><span class="p">()</span>
-
-<span class="n">ex</span><span class="p">:</span>
-<span class="n">var</span> <span class="n">myStr</span><span class="p">,</span> <span class="n">myNumber</span><span class="p">;</span>
-<span class="n">myStr</span> <span class="o">=</span> <span class="s2">&quot;1234&quot;</span><span class="p">;</span>
-<span class="n">myNumber</span> <span class="o">=</span> <span class="n">parseInt</span><span class="p">(</span><span class="n">myStr</span><span class="p">);</span>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">parseInt</span><span class="p">()</span>
+<span class="c1">//ex:</span>
+<span class="kd">var</span> <span class="nx">myStr</span><span class="p">,</span> <span class="nx">myNumber</span><span class="p">;</span>
+<span class="nx">myStr</span> <span class="o">=</span> <span class="s2">&quot;1234&quot;</span><span class="p">;</span>
+<span class="nx">myNumber</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">myStr</span><span class="p">);</span>
 </pre></div>
 </div>
+</div></blockquote>
 </li>
 <li><p>Number –&gt; String</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span><span class="p">:</span>
-<span class="n">var</span> <span class="n">myNumber</span><span class="p">,</span> <span class="n">myStr</span><span class="p">;</span>
-<span class="n">myNumber</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">;</span>
-<span class="n">myStr</span> <span class="o">=</span> <span class="n">myNumber</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//ex:</span>
+<span class="kd">var</span> <span class="nx">myNumber</span><span class="p">,</span> <span class="nx">myStr</span><span class="p">;</span>
+<span class="nx">myNumber</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">;</span>
+<span class="nx">myStr</span> <span class="o">=</span> <span class="nx">myNumber</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 
-<span class="n">ex</span><span class="p">:</span> <span class="p">(</span><span class="n">version</span> <span class="n">simplifiee</span><span class="p">)</span>
-<span class="n">var</span> <span class="n">myVar</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
-<span class="n">myVar</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-<span class="n">alert</span><span class="p">(</span><span class="n">typeof</span> <span class="n">myVar</span><span class="p">);</span>
+<span class="c1">//ex: (version simplifiee)</span>
+<span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+<span class="nx">myVar</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">myVar</span><span class="p">);</span>
 </pre></div>
 </div>
+</div></blockquote>
 </li>
 </ol>
 </div></blockquote>
@@ -165,6 +173,60 @@
 </div>
 <div class="section" id="details-syntaxique">
 <h2>Détails syntaxique<a class="headerlink" href="#details-syntaxique" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="declaration-des-variables">
+<h3>Déclaration des variables<a class="headerlink" href="#declaration-des-variables" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl>
+<dt>Constantes</dt><dd><p>Les constantes sont définies avec le préfix « const ».</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">var_constante</span> <span class="o">=</span> <span class="s2">&quot;cc&quot;</span><span class="p">;</span>
+<span class="nx">var_constante</span> <span class="o">=</span> <span class="s2">&quot;nn&quot;</span>
+<span class="c1">//TypeError: invalid assignment to const `var_constante`</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>« var »</dt><dd><p>« var » permet de définir une variable locale. Si la valeur de cette variable est modifiée
+en dehors de la portée de sa déclaration, la valeur initale sera modifiée / écrasée.</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">nom</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Avant le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>      <span class="c1">//nom == &quot;aa&quot;</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">nom</span> <span class="o">=</span> <span class="s2">&quot;zz&quot;</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Dans le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>   <span class="c1">//nom == &quot;zz&quot;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Après le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>      <span class="c1">//nom == &quot;zz&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+<dl>
+<dt>​</dt><dd><ol class="arabic">
+<li><dl>
+<dt>« let »</dt><dd><p>« let » permet de définir une variable locale. Si la valeur de cette variable est modifiée
+en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modifiée.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">nom</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Avant le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>      <span class="c1">//nom == &quot;aa&quot;</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">){</span>
+    <span class="kd">let</span> <span class="nx">nom</span> <span class="o">=</span> <span class="s2">&quot;zz&quot;</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Dans le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>   <span class="c1">//nom == &quot;zz&quot;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Après le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>      <span class="c1">//nom == &quot;aa&quot;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</div>
 <div class="section" id="les-fonctions">
 <h3>Les fonctions<a class="headerlink" href="#les-fonctions" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
@@ -222,6 +284,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#details-syntaxique">Détails syntaxique</a><ul>
+<li><a class="reference internal" href="#declaration-des-variables">Déclaration des variables</a></li>
 <li><a class="reference internal" href="#les-fonctions">Les fonctions</a></li>
 </ul>
 </li>
@@ -273,7 +336,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
     </div>
   </body>
 </html>

@@ -1,0 +1,686 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>ESP8266 &amp; ESP32 &#8212; Documentation JDM 20170523</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="GIT (versioning)" href="GIT.html" />
+    <link rel="prev" title="English Vocabulary" href="English_vocab.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="GIT.html" title="GIT (versioning)"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="English_vocab.html" title="English Vocabulary"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="esp8266-esp32">
+<h1>ESP8266 &amp; ESP32<a class="headerlink" href="#esp8266-esp32" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://github.com/nodemcu">https://github.com/nodemcu</a></dt><dd><p># Github pour les NodeMCU</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="esp8266">
+<h2>ESP8266<a class="headerlink" href="#esp8266" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/">pinout and GPIO ref</a></p></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="pinout">
+<h3>PINOUT<a class="headerlink" href="#pinout" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="field-list">
+<dt class="field-odd">NodeMCU</dt>
+<dd class="field-odd"><a class="reference internal image-reference" href="_images/PINMAP.png"><img alt="_images/PINMAP.png" class="align-center" src="_images/PINMAP.png" style="width: 400px;" /></a>
+</dd>
+<dt class="field-even">Wemos_D1_mini</dt>
+<dd class="field-even"><a class="reference internal image-reference" href="_images/d1-mini.jpg"><img alt="_images/d1-mini.jpg" class="align-center" src="_images/d1-mini.jpg" style="width: 400px;" /></a>
+</dd>
+</dl>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="flasher-un-nouveau-firmware">
+<h2>Flasher un nouveau Firmware<a class="headerlink" href="#flasher-un-nouveau-firmware" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="la-facon-simple-quant-tous-vas-bien">
+<h3>La façon simple (quant tous vas bien)<a class="headerlink" href="#la-facon-simple-quant-tous-vas-bien" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p>Pour flasher un firmware sur le NodeMCU, il faut le mettre en mode « flashage » en reliant le
+GPIO 0 (D3) au GND. Il faut alors suivre les étape de « MAJ du firmware ».</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">/!\Attention/!\</dt>
+<dd class="field-odd"><p>cette broche ne peux / doit pas être utilisée dans un montage.</p>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="la-facon-complique-quant-ca-merde">
+<h3>La façon compliqué (quant ça merde)<a class="headerlink" href="#la-facon-complique-quant-ca-merde" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="field-list">
+<dt class="field-odd">FTDI_NodeMCU</dt>
+<dd class="field-odd"><a class="reference internal image-reference" href="_images/cablage_nodeMcu.png"><img alt="_images/cablage_nodeMcu.png" class="align-center" src="_images/cablage_nodeMcu.png" style="width: 400px;" /></a>
+</dd>
+</dl>
+<p>Ce schéma a été élaboré à partir de différent schéma trouvés sur internet. Cette configuration est
+la seul qui ai fonctionné. il permet de flasher un ESP8266 à l’aide d’un <a class="reference external" href="https://www.aliexpress.com/item/High-Quality-FT232RL-FT232-FTDI-USB-3-3V-5-5V-to-TTL-Serial-Adapter-Module-Mini/32826575637.html?spm=2114.search0104.3.8.d3fd548aEljx0p&amp;ws_ab_test=searchweb0_0,searchweb201602_1_10152_10151_10065_10344_10068_10342_10343_5722611_10340_10341_10696_5722911_5722811_5722711_10084_10083_10618_10305_10304_10307_10820_10306_10821_10302_10059_100031_10103_10624_10623_10622_10621_10620_5722511,searchweb201603_1,ppcSwitch_2&amp;algo_expid=4b6e329b-3497-4d7b-a2ca-ef8ab9eab26f-1&amp;algo_pvid=4b6e329b-3497-4d7b-a2ca-ef8ab9eab26f&amp;priceBeautifyAB=0/">FTDI232</a> sans passer par le CH340</p>
+<dl class="field-list">
+<dt class="field-odd">/!\_Attention_/!\</dt>
+<dd class="field-odd"><ol class="arabic">
+<li><p>L’ESP8266 fonctionnant uniquement en <strong>3.3v</strong>, il faut configurer le <strong>FTDI en 3.3v</strong></p>
+<br/></li>
+<li><p>Le Rx du FTDI doit être connecté au Tx0 de l’ESP et le Tx du FTDI doit être connecté sur le
+Rx0 de l’ESP</p>
+<br/></li>
+<li><p>Sur l’ESP, le Tx1 doit être relié à VCC pour qu’il soit neutralisé et qu’il ne perturbe pas
+l’ESP durant la communication entre le FTDI et l’ESP</p></li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section" id="maj-du-firmware">
+<h3>MAJ du Firmware<a class="headerlink" href="#maj-du-firmware" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://github.com/espressif/esptool">https://github.com/espressif/esptool</a></dt><dd><p># Toolbox permettant de falsher le Firmware</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic">
+<li><p>Téléchargement et installation d’ESPTool</p>
+<blockquote>
+<div><p>EspTool permet d’effacer l’ESP ou d’y téléverser un nouveau Fimware. Par défaut, la cible
+est l’ESP8266. Pour sélectionner un autre composant (comme l’ESP32), il faut consulter
+la <a class="reference external" href="https://github.com/espressif/esptool">documentation</a></p>
+<p>Il peut être installer directement avec pip :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">esptool</span>
+</pre></div>
+</div>
+<p>Ou peut être utiliser directement si on récupère de le dépôt et que l’on travail depuis le
+dossier extrait à partir de l’archive.</p>
+</div></blockquote>
+</li>
+<li><p>Récupérer le binaire à téléverser</p>
+<blockquote>
+<div><p>Par défaut le firmware installer dans le NodeMCU est en LUA. Il est possible de mettre
+un firmaware MicroPython.</p>
+<dl class="simple">
+<dt><strong>N.B:</strong> La programmation de l’ESP depuis l’IDE Arduino écrase le firmware présent dans</dt><dd><p>l’ESP pour mettre le siens à la place.</p>
+</dd>
+</dl>
+<ol class="arabic">
+<li><p>Firmware original (LUA)</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/nodemcu/nodemcu-firmware/releases/tag/0.9.6-dev_20150704">https://github.com/nodemcu/nodemcu-firmware/releases/tag/0.9.6-dev_20150704</a></p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p>Firmware MicroPython</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://micropython.org/download">http://micropython.org/download</a></p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p>Programmer l’ESP depuis l’IDE Arduino</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.fais-le-toi-meme.fr/fr/electronique/tutoriel/programmes-arduino-executes-sur-esp8266-arduino-ide">https://www.fais-le-toi-meme.fr/fr/electronique/tutoriel/programmes-arduino-executes-sur-esp8266-arduino-ide</a></dt><dd><p># Page (FR) expliquant comment configurer l’IDE Arduino pour pouvoir programmer l’ESP</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Déployer un nouveau Firmware</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html">http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html</a></dt><dd><p># Procédure complète pour déployer un nouveau Firmware depuis <strong>esptool</strong></p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic">
+<li><p>Rappel : Identifier les ports COM utilisés</p>
+<blockquote>
+<div><ul>
+<li><p>Sous Windows :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Gestion de l&#39;</span><span class="n">ordinateur</span>\<span class="n">Gestionnaire</span> <span class="n">de</span> <span class="n">péripérique</span>\<span class="n">Ports</span> <span class="p">(</span><span class="n">COM</span> <span class="n">et</span> <span class="n">LPT</span><span class="p">)</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Sous Linux :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB</span><span class="o">*</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Ecraser la flash</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">esptool</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">port</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB0</span> <span class="n">erase_flash</span>
+    <span class="c1"># example sous linux</span>
+</pre></div>
+</div>
+</li>
+<li><p>Déployer le nouveau Firmware</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">esptool</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">port</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB0</span> <span class="o">--</span><span class="n">baud</span> <span class="mi">460800</span> <span class="n">write_flash</span> <span class="o">--</span><span class="n">flash_size</span><span class="o">=</span><span class="n">detect</span> <span class="o">-</span><span class="n">fm</span> <span class="n">dio</span> <span class="mi">0</span> <span class="n">esp8266</span><span class="o">-</span><span class="mi">20170108</span><span class="o">-</span><span class="n">v1</span><span class="o">.</span><span class="mf">8.7</span><span class="o">.</span><span class="n">bin</span>
+    <span class="c1"># L&#39;ESP supporte bien un baurate de 460800 pour le déploement du Firmware</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<div class="section" id="oserror-errno-2-enoent-main-py">
+<h4>OSError: [Errno 2] ENOENT: main.py<a class="headerlink" href="#oserror-errno-2-enoent-main-py" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Après avoir flasher le firmware, on peut avoir le message d’erreur :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">OSError</span><span class="p">:</span> <span class="p">[</span><span class="n">Errno</span> <span class="mi">2</span><span class="p">]</span> <span class="n">ENOENT</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Se message apparait lors de la connexion au terminal série (en REPL). Il n’est alors plus possible
+d’interagir avec le micro-contrôler.</p>
+<p>Ce message vient du faite que lors du déploiement du firmware, le fichier “main.py” n’est pas créer.</p>
+<p>Pour corriger ce problème il faut soit le créer soit le copier à partir de
+<a class="reference external" href="RSHELL">l’utilitaire python “RSHELL”</a></p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="utilisation-avec-micropython">
+<h2>Utilisation avec MicroPython<a class="headerlink" href="#utilisation-avec-micropython" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/index.html">http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/index.html</a></dt><dd><p># Guide / Tutorial de prise en main de MicroPython sur ESP8266</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://docs.micropython.org/en/latest/pyboard/genrst/index.html">http://docs.micropython.org/en/latest/pyboard/genrst/index.html</a></dt><dd><p># Différence entre CPython et MicroPython</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt class="field-even">INFOS</dt>
+<dd class="field-even"><ul class="simple">
+<li><p>Micropython n’est pas très évolué. Il ne supporte pas les Class
+ou les scripts trop complexes</p></li>
+<li><p>L’ESP8266, n’a pas de coprocesseur Arithmétique. Les opération mathématiques
+complexe ou avancées ne sont pas possibles</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="wemos-d1-mini-avec-arduino">
+<h2>WEMOS D1 Mini avec Arduino<a class="headerlink" href="#wemos-d1-mini-avec-arduino" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="installation-de-la-carte-dans-l-ide-arduino">
+<h3>Installation de la carte dans l’IDE Arduino<a class="headerlink" href="#installation-de-la-carte-dans-l-ide-arduino" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://www.wikidebrouillard.org/index.php?title=Wemos_D1_mini">http://www.wikidebrouillard.org/index.php?title=Wemos_D1_mini</a></dt><dd><p># Un pas à pas en image et en fr</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs">
+<h3>Installer l’utilitaire de gestion de fichiers (zone SPIFFS)<a class="headerlink" href="#installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://github.com/esp8266/arduino-esp8266fs-plugin">https://github.com/esp8266/arduino-esp8266fs-plugin</a></dt><dd><p># Package + instructions d’installation</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.instructables.com/id/Using-ESP8266-SPIFFS/">https://www.instructables.com/id/Using-ESP8266-SPIFFS/</a></dt><dd><p># Pas à pas d’installation de esp8266fs</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="utilisation-du-systeme-de-fichiers-fs">
+<h3>Utilisation du système de fichiers (FS)<a class="headerlink" href="#utilisation-du-systeme-de-fichiers-fs" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Créer dans le dossier contenant le fichier “.ino” un sous dossier “data”</p></li>
+<li><p>Mettre les fichiers devant être téléverser dans le FS dans le dossier data :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">data</span>\<span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+</li>
+<li><p>Ouvrir le sketch devant être téléverser</p></li>
+<li><p>Depuis le menu “Outils”, sélectionner “ESP8266 Sketch Data Upload”. Attention, pas de
+confirmation, téléversement direct.</p>
+<p><strong>/!\ Attention /!\</strong> : Il faut fermer la console série pendant le téléversement des
+fichiers sinon l’opération échoue.</p>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="esp32">
+<h2>ESP32<a class="headerlink" href="#esp32" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.micropython.org/en/latest/esp32/general.html">https://docs.micropython.org/en/latest/esp32/general.html</a></p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<div class="section" id="id1">
+<h3>PINOUT<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="field-list">
+<dt class="field-odd">Wemos_mini_ESP32</dt>
+<dd class="field-odd"><a class="reference internal image-reference" href="./Images/ESP32/PINMAP.pngwemos_esp32t.jpg"><img alt="./Images/ESP32/PINMAP.pngwemos_esp32t.jpg" class="align-center" src="./Images/ESP32/PINMAP.pngwemos_esp32t.jpg" style="width: 400px;" /></a>
+</dd>
+</dl>
+</div>
+<div class="section" id="broches-specialles">
+<h3>Broches spécialles<a class="headerlink" href="#broches-specialles" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>GPIO2</strong> : Led interne</p></li>
+<li><p><strong>Pins 1 and 3</strong> are REPL UART TX and RX respectively</p></li>
+<li><p><strong>Pin 21</strong> : I2C SDA</p></li>
+<li><p><strong>Pin 22</strong> : I2C SCL</p></li>
+<li><p><strong>Pins 6, 7, 8, 11, 16, and 17</strong> are used for connecting the embedded flash, and are not recommended for other uses</p></li>
+<li><p><strong>Pins 34-39</strong> are input only, and also do not have internal pull-up resistors</p></li>
+</ul>
+<p>The pull value of some pins can be set to Pin.PULL_HOLD to reduce power consumption during deepsleep.</p>
+<ul class="simple">
+<li><p><strong>GPIO0</strong> : Ne pas utiliser car elle empêche le démarrage.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="rshell">
+<h2>RSHELL<a class="headerlink" href="#rshell" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><dl class="field-list">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://wiki.mchobby.be/index.php?title=MicroPython-Hack-RShell#RShell_sur_ESP8266">https://wiki.mchobby.be/index.php?title=MicroPython-Hack-RShell#RShell_sur_ESP8266</a></dt><dd><p># démonstration et explication</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://github.com/dhylands/rshell">https://github.com/dhylands/rshell</a></dt><dd><p># Dépôt officiel</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt class="field-even">Définissions</dt>
+<dd class="field-even"><p>RShell est un simple shell qui est exécuté sur un hôte et utilise le more
+raw-REPL de Micropython pour envoyer des commandes vers une carte micro python.</p>
+<p>Cela permet:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>d’obtenir des informations sur le système de fichier</p></li>
+<li><p>de transférer des fichiers vers ou depuis la carte</p></li>
+<li><p>d’établir une session REPL.</p></li>
+</ul>
+</div></blockquote>
+<p>Comme il est possible d’invoquer REPL, RShell peut également être utilisé comme
+un émulateur terminal.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>RSHELL est un programme python :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">rshell</span>
+</pre></div>
+</div>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">/!\Attention/!\</dt>
+<dd class="field-odd"><p>Sur un ESP8266, il est impératif de réduire la taille du buffer à 128 octets
+pour le pas écraser le système de fichier.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>L’ouverture de session se fait avec la commande suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Linux</span>
+<span class="n">rshell</span> <span class="o">--</span><span class="n">port</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB0</span> <span class="o">--</span><span class="n">baud</span> <span class="mi">115200</span> <span class="o">--</span><span class="n">buffer</span><span class="o">-</span><span class="n">size</span> <span class="mi">128</span> <span class="o">--</span><span class="n">editor</span> <span class="n">nano</span>
+
+<span class="c1"># Windows</span>
+<span class="c1"># sous Windows, il est inutle de préciser l&#39;éditeur car il n&#39;y en as pas d&#39;utilisable en ligne</span>
+<span class="c1"># de commande.</span>
+<span class="n">rshell</span> <span class="o">--</span><span class="n">port</span> <span class="n">COM3</span> <span class="o">--</span><span class="n">baud</span> <span class="mi">115200</span> <span class="o">--</span><span class="n">buffer</span><span class="o">-</span><span class="n">size</span> <span class="mi">128</span>
+</pre></div>
+</div>
+<blockquote>
+<div><ul>
+<li><p>help : pour obtenir la liste des commandes :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Documented</span> <span class="n">commands</span> <span class="p">(</span><span class="nb">type</span> <span class="n">help</span> <span class="o">&lt;</span><span class="n">topic</span><span class="o">&gt;</span><span class="p">):</span>
+<span class="o">========================================</span>
+
+<span class="n">args</span>    <span class="n">cat</span>  <span class="n">connect</span>  <span class="n">echo</span>  <span class="n">exit</span>      <span class="n">filetype</span>  <span class="n">ls</span>     <span class="n">repl</span>  <span class="n">rsync</span>
+<span class="n">boards</span>  <span class="n">cd</span>   <span class="n">cp</span>       <span class="n">edit</span>  <span class="n">filesize</span>  <span class="n">help</span>      <span class="n">mkdir</span>  <span class="n">rm</span>    <span class="n">shell</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul>
+<li><p>Pour accéder au système de fichier :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">pyboard</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">pyboard</span>
+</pre></div>
+</div>
+</li>
+<li><p>Pour accéder à la flash :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># (Non testé)</span>
+<span class="o">/</span><span class="n">flash</span>
+</pre></div>
+</div>
+</li>
+<li><p>Pour accéder à la carte sd :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># (Non testé)</span>
+<span class="o">/</span><span class="n">sdcard</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Se connecter au REPL :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">repl</span>
+
+<span class="n">Entering</span> <span class="n">REPL</span><span class="o">.</span> <span class="n">Use</span> <span class="n">Control</span><span class="o">-</span><span class="n">X</span> <span class="n">to</span> <span class="n">exit</span><span class="o">.</span>
+<span class="o">&gt;</span>
+<span class="n">MicroPython</span> <span class="n">v1</span><span class="o">.</span><span class="mi">10</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="n">g8b7039d7d</span> <span class="n">on</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">26</span><span class="p">;</span> <span class="n">ESP</span> <span class="n">module</span> <span class="k">with</span> <span class="n">ESP8266</span>
+<span class="n">Type</span> <span class="s2">&quot;help()&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Créer simplement le fichier en python :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fileName</span> <span class="o">=</span> <span class="s2">&quot;main.py&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span> <span class="s2">&quot;w+&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# main.py&quot;</span><span class="p">)</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>Vérifier que le fichier à bien été créer :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">pyboard</span>
+
+    <span class="mi">230</span> <span class="n">Dec</span> <span class="mi">31</span> <span class="mi">1999</span>  <span class="n">boot</span><span class="o">.</span><span class="n">py</span>
+     <span class="mi">9</span> <span class="n">Apr</span>  <span class="mi">6</span> <span class="mi">19</span><span class="p">:</span><span class="mi">23</span>  <span class="n">main</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
+<li><p>Consulter le contenu d’un fichier :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">/</span><span class="n">pyboard</span><span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">py</span>
+
+<span class="c1"># main.py</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="o">/</span><span class="n">pyboard</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="section" id="repl-webrepl-et-file-system">
+<h3>REPL, WebREPL et File System<a class="headerlink" href="#repl-webrepl-et-file-system" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il est possible d’interagir directement avec l’ESP. Soit depuis le port série, c’est le REPL. Soit
+au travers d’un WebSocket, c’est le WebREPL. Le deux modes renvoie <strong>la même</strong> console
+d’interprétation Python.</p>
+<p><strong>N.B:</strong> Une fois dans la console Python, il faut tapez <strong>“help()”</strong> pour connaitre les opérations
+spécifiques applicable à MicroPython et à LESP8266.</p>
+<blockquote>
+<div><dl class="field-list">
+<dt class="field-odd">REPL</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Accessible depuis un terminal sur le port COM de l’ESP avec un <strong>Baudrate de 115200</strong></p></li>
+</ul>
+</dd>
+<dt class="field-even">WebREPL</dt>
+<dd class="field-even"><ul>
+<li><p>Activer le WebREPL au démarrage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Depuis le REPL (terminal serie)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="kn">import</span> <span class="nn">webrepl_setup</span>
+
+<span class="o">--&gt;</span> <span class="s1">&#39;E&#39;</span> <span class="n">pour</span> <span class="n">activer</span> <span class="n">le</span> <span class="n">WebREPL</span> <span class="n">au</span> <span class="n">démarrage</span>
+<span class="o">--&gt;</span> <span class="n">saisir</span> <span class="n">et</span> <span class="n">confirmer</span> <span class="n">un</span> <span class="n">mot</span> <span class="n">de</span> <span class="n">passe</span>
+</pre></div>
+</div>
+</li>
+<li><p>Accessible depuis un navigateur Web. Le Wifi doit au préalable avoir été configuré
+depuis le REPL. Il est accessible depuis l’url : <a class="reference external" href="http://micropython.org/webrepl/">http://micropython.org/webrepl/</a>.
+Le WebSocket associé se présente sous la forme suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ws</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">Adresse_ip</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">8266</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">ws</span><span class="p">:</span><span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">1.26</span><span class="p">:</span><span class="mi">8266</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+<dt class="field-odd">File_System_(FS)</dt>
+<dd class="field-odd"><p>Un système de fichier est présent dans MicroPython. Il permet de déposer des fichiers
+(en “.py” par exemple) qui seront Exécutés / consultés après la fin de la séquence de
+démarrage.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>boot.py: C’est un fichier obligatoire qui est créer automatiquement.
+Il est possible de le modifier, mais ce n’est pas conseiller. Ce fichier est le
+premier qui sera exécuté au démarrage de l’ESP.</p></li>
+<li><p>main.py: Ce fichier sera appeler automatiquement par “boot.py” si il existe.
+Il n’est pas obligatoire si on utilise l’ESP manuellement (seulement depuis la
+console python).</p></li>
+</ul>
+</div></blockquote>
+<p>Adafruit a créer un CLI permettant de déposer et récupérer des fichiers dans le FS
+au travers de la liaison série : <a class="reference external" href="https://github.com/adafruit/ampy">https://github.com/adafruit/ampy</a></p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="micropython">
+<h2>Micropython<a class="headerlink" href="#micropython" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">upip</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.micropython.org/en/latest/reference/packages.html">https://docs.micropython.org/en/latest/reference/packages.html</a></p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ESP8266 &amp; ESP32</a><ul>
+<li><a class="reference internal" href="#esp8266">ESP8266</a><ul>
+<li><a class="reference internal" href="#pinout">PINOUT</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#flasher-un-nouveau-firmware">Flasher un nouveau Firmware</a><ul>
+<li><a class="reference internal" href="#la-facon-simple-quant-tous-vas-bien">La façon simple (quant tous vas bien)</a></li>
+<li><a class="reference internal" href="#la-facon-complique-quant-ca-merde">La façon compliqué (quant ça merde)</a></li>
+<li><a class="reference internal" href="#maj-du-firmware">MAJ du Firmware</a><ul>
+<li><a class="reference internal" href="#oserror-errno-2-enoent-main-py">OSError: [Errno 2] ENOENT: main.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#utilisation-avec-micropython">Utilisation avec MicroPython</a></li>
+<li><a class="reference internal" href="#wemos-d1-mini-avec-arduino">WEMOS D1 Mini avec Arduino</a><ul>
+<li><a class="reference internal" href="#installation-de-la-carte-dans-l-ide-arduino">Installation de la carte dans l’IDE Arduino</a></li>
+<li><a class="reference internal" href="#installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs">Installer l’utilitaire de gestion de fichiers (zone SPIFFS)</a></li>
+<li><a class="reference internal" href="#utilisation-du-systeme-de-fichiers-fs">Utilisation du système de fichiers (FS)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#esp32">ESP32</a><ul>
+<li><a class="reference internal" href="#id1">PINOUT</a></li>
+<li><a class="reference internal" href="#broches-specialles">Broches spécialles</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rshell">RSHELL</a><ul>
+<li><a class="reference internal" href="#repl-webrepl-et-file-system">REPL, WebREPL et File System</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#micropython">Micropython</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="English_vocab.html"
+                        title="Chapitre précédent">English Vocabulary</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="GIT.html"
+                        title="Chapitre suivant">GIT (versioning)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ESP.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="GIT.html" title="GIT (versioning)"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="English_vocab.html" title="English Vocabulary"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Poltergeist42.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+    </div>
+  </body>
+</html>

@@ -20,7 +20,7 @@ Mon journal de manip
    Docker
    DocUtils_RST_Sphinx
    English_vocab
-   ESP8266
+   ESP
    GIT
    HTML_CSS
    Informatique
@@ -41,6 +41,7 @@ Mon journal de manip
    Soudure
    URLtheque
    VIM
+   visualStudioCode
    XML_JSON
 
 Indices and tables
