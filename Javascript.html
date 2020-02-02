@@ -173,22 +173,49 @@
 </div>
 <div class="section" id="details-syntaxique">
 <h2>Détails syntaxique<a class="headerlink" href="#details-syntaxique" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="concatener-les-strings">
+<h3>Concatener les strings<a class="headerlink" href="#concatener-les-strings" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il y a 2 méthodes permettant de concaténer les chaines de caractères :</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Additionner les string</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str1</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span>
+<span class="kd">var</span> <span class="nx">str2</span> <span class="o">=</span> <span class="s2">&quot;zz&quot;</span>
+<span class="kd">var</span> <span class="nx">str12</span> <span class="o">=</span> <span class="s2">&quot;STR1 : &quot;</span> <span class="o">+</span> <span class="nx">str1</span> <span class="o">+</span> <span class="s2">&quot; STR2 : &quot;</span> <span class="o">+</span> <span class="nx">str2</span>
+<span class="c1">//&quot;STR1 : aa STR2 : zz&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Modifier les chaines directement</p>
+<p>Pour pouvoir modifier les chaines directement, il remplacer les simples cotes &lt; “ … “ &gt;
+ou les doubles cotes &lt; » … « &gt; par des accent graves (altGR + 7) &lt; ` … ` &gt;</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str1</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span>
+<span class="kd">var</span> <span class="nx">str_GR7</span> <span class="o">=</span> <span class="sb">`str1 : </span><span class="si">${</span><span class="nx">str1</span><span class="si">}</span><span class="sb">`</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
 <div class="section" id="declaration-des-variables">
 <h3>Déclaration des variables<a class="headerlink" href="#declaration-des-variables" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><ol class="arabic">
-<li><dl>
-<dt>Constantes</dt><dd><p>Les constantes sont définies avec le préfix « const ».</p>
+<div><ul>
+<li><p>Constantes</p>
+<blockquote>
+<div><p>Les constantes sont définies avec le préfix « const ».</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">var_constante</span> <span class="o">=</span> <span class="s2">&quot;cc&quot;</span><span class="p">;</span>
 <span class="nx">var_constante</span> <span class="o">=</span> <span class="s2">&quot;nn&quot;</span>
 <span class="c1">//TypeError: invalid assignment to const `var_constante`</span>
 </pre></div>
 </div>
-</dd>
-</dl>
+</div></blockquote>
 </li>
-<li><dl>
-<dt>« var »</dt><dd><p>« var » permet de définir une variable locale. Si la valeur de cette variable est modifiée
+<li><p>var</p>
+<blockquote>
+<div><p>« var » permet de définir une variable locale. Si la valeur de cette variable est modifiée
 en dehors de la portée de sa déclaration, la valeur initale sera modifiée / écrasée.</p>
 <blockquote>
 <div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">nom</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span><span class="p">;</span>
@@ -201,17 +228,18 @@ en dehors de la portée de sa déclaration, la valeur initale sera modifiée / �
 </pre></div>
 </div>
 </div></blockquote>
-</dd>
-</dl>
+</div></blockquote>
 </li>
-</ol>
+</ul>
 </div></blockquote>
 <dl>
-<dt>​</dt><dd><ol class="arabic">
-<li><dl>
-<dt>« let »</dt><dd><p>« let » permet de définir une variable locale. Si la valeur de cette variable est modifiée
+<dt>​</dt><dd><ul>
+<li><p>let</p>
+<blockquote>
+<div><p>« let » permet de définir une variable locale. Si la valeur de cette variable est modifiée
 en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modifiée.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">nom</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span><span class="p">;</span>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">nom</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Avant le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>      <span class="c1">//nom == &quot;aa&quot;</span>
 <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">){</span>
     <span class="kd">let</span> <span class="nx">nom</span> <span class="o">=</span> <span class="s2">&quot;zz&quot;</span><span class="p">;</span>
@@ -220,10 +248,10 @@ en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modif
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Après le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>      <span class="c1">//nom == &quot;aa&quot;</span>
 </pre></div>
 </div>
-</dd>
-</dl>
+</div></blockquote>
+</div></blockquote>
 </li>
-</ol>
+</ul>
 </dd>
 </dl>
 </div>
@@ -232,38 +260,106 @@ en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modif
 <blockquote>
 <div><ol class="arabic">
 <li><p>Fonctions simples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Déclaration</span>
-<span class="n">function</span> <span class="n">myFunct</span><span class="p">(</span><span class="n">myArg1</span><span class="p">,</span> <span class="n">myArg2</span><span class="p">){</span>
-            <span class="o">//</span> <span class="n">un</span> <span class="nb">super</span> <span class="n">code</span>
-            <span class="p">}</span>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Déclaration</span>
+<span class="kd">function</span> <span class="nx">myFunct</span><span class="p">(</span><span class="nx">myArg1</span><span class="p">,</span> <span class="nx">myArg2</span><span class="p">){</span>
+    <span class="c1">// un super code ...</span>
+    <span class="p">}</span>
 
-<span class="o">//</span> <span class="n">appel</span>
-<span class="n">myFunct</span><span class="p">()</span>
+<span class="c1">// appel</span>
+<span class="nx">myFunct</span><span class="p">()</span>
+
+<span class="cm">/* Variante */</span>
+<span class="kd">var</span> <span class="nx">myFunct</span><span class="p">(</span><span class="nx">myArg1</span><span class="p">,</span> <span class="nx">myArg2</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">//un super code ...</span>
+    <span class="p">}</span>
+<span class="c1">// Le mot clef &quot;function&quot; est suprimé, alors que la flèche &quot; =&gt; &quot; est insérée entre</span>
+<span class="c1">// les parenthèses et les accolades</span>
+
+<span class="c1">//si la finction n&#39;a pas d&#39;argument</span>
+<span class="kd">var</span> <span class="nx">myFunct</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">//un super code ...</span>
+    <span class="p">}</span>
 </pre></div>
 </div>
+</div></blockquote>
 </li>
 <li><p>Fonctions anonymes</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">déclaration</span>
-<span class="n">function</span> <span class="p">(</span><span class="n">myArg</span><span class="p">){</span>
-            <span class="o">//</span> <span class="n">un</span> <span class="nb">super</span> <span class="n">code</span>
-            <span class="p">}</span>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// déclaration</span>
+<span class="kd">function</span> <span class="p">(</span><span class="nx">myArg</span><span class="p">){</span>
+    <span class="c1">// un super code ...</span>
+    <span class="p">}</span>
 </pre></div>
 </div>
+</div></blockquote>
 </li>
 <li><p>Exécution immédiate d’une fonction, sans appel préalable</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">function</span> <span class="p">(</span><span class="n">myArg</span><span class="p">){</span>
-            <span class="o">//</span> <span class="nb">super</span> <span class="n">code</span> <span class="o">...</span>
-            <span class="p">})();</span>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">myArg</span><span class="p">){</span>
+    <span class="c1">// super code ...</span>
+    <span class="p">})();</span>
 
-<span class="o">/*</span> <span class="n">Cette</span> <span class="n">syntaxe</span> <span class="n">permet</span> <span class="n">d</span><span class="s1">&#39;executer du code isolé</span>
-   <span class="n">sans</span> <span class="n">appel</span> <span class="n">préallable</span> <span class="n">d</span><span class="s1">&#39;une</span>
-   <span class="n">fonction</span><span class="o">.</span> <span class="n">La</span> <span class="n">fonction</span> <span class="n">anonyme</span> <span class="n">est</span> <span class="n">exécutée</span> <span class="n">automatiquement</span> <span class="p">(</span><span class="n">et</span> <span class="n">immédiatement</span><span class="p">)</span>
-<span class="o">*/</span>
+<span class="cm">/* Cette syntaxe permet d&#39;executer du code isolé</span>
+<span class="cm">sans appel préallable d&#39;une</span>
+<span class="cm">fonction. La fonction anonyme est exécutée automatiquement (et immédiatement)</span>
+<span class="cm">*/</span>
 </pre></div>
 </div>
+</div></blockquote>
 </li>
 </ol>
 </div></blockquote>
+</div>
+<div class="section" id="operateur-spread">
+<h3>Opérateur &lt; … &gt; (spread)<a class="headerlink" href="#operateur-spread" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L’opérateur spread ( … ) permet d’éclater les propriété d’un objet. Ces propriété sont alors
+intégrable par d’autres objet.</p>
+<p>exemple : Création dans « personne2 », d’une copie de « personne »</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">personne</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">nom</span> <span class="o">:</span> <span class="s2">&quot;aa&quot;</span><span class="p">,</span>
+    <span class="nx">prenom</span> <span class="o">:</span> <span class="s2">&quot;zz&quot;</span><span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">ville</span> <span class="o">=</span> <span class="s2">&quot;ee&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p>Sans l’opérateur spread</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">personne2</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">personne</span><span class="p">,</span>
+    <span class="nx">ville</span><span class="p">};</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>personne2;
+{…}
+    personne: Object { nom: &quot;aa&quot;, prenom: &quot;zz&quot;}
+    ville: &quot;ee&quot;
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Avec l’opérateur spread</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">personne2</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">personne</span><span class="p">,</span>
+    <span class="nx">ville</span><span class="p">};</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>personne2;
+{…}
+    nom: &quot;aa&quot;
+    prenom: &quot;zz&quot;
+    ville: &quot;ee&quot;
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<p>Dans le premier cas, on constate que l’objet « personne » est maintenant une propriété de « personne2 ».
+Dans le second cas, seules les propriété de « personne » ont été ajoutée à « personne2 ».</p>
 </div>
 </div>
 </div>
@@ -284,8 +380,10 @@ en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modif
 </ul>
 </li>
 <li><a class="reference internal" href="#details-syntaxique">Détails syntaxique</a><ul>
+<li><a class="reference internal" href="#concatener-les-strings">Concatener les strings</a></li>
 <li><a class="reference internal" href="#declaration-des-variables">Déclaration des variables</a></li>
 <li><a class="reference internal" href="#les-fonctions">Les fonctions</a></li>
+<li><a class="reference internal" href="#operateur-spread">Opérateur &lt; … &gt; (spread)</a></li>
 </ul>
 </li>
 </ul>
