@@ -10,6 +10,8 @@ ESP8266 & ESP32
 ESP8266
 -------
 
+:Liens_Web:     * `pinout and GPIO ref <https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/>`_
+
 PINOUT
 ======
 

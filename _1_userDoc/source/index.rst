@@ -41,6 +41,7 @@ Mon journal de manip
    Soudure
    URLtheque
    VIM
+   visualStudioCode
    XML_JSON
 
 Indices and tables
