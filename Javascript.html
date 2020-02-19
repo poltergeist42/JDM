@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -257,7 +257,7 @@ en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modif
 <p>Les objets JSON sont l’équivalent des dictionnaire en python. On peux utiliser toute la syntaxe
 JSON.</p>
 <blockquote>
-<div><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span>{ id : &quot;id1&quot; }
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="nx">id</span> <span class="o">:</span> <span class="s2">&quot;id1&quot;</span> <span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -548,20 +548,19 @@ seront ensuite assemblé pour former l’application finale.</p>
 <p>React affiche sont propre html au travers du <strong>JSX</strong>. Le JSX est l’encapsulation d’un pseudo HTML
 dans du Javascript. cela permet donc de simplifier l’écriture.</p>
 <blockquote>
-<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>//Expression en JSX
-const element = (
-    &lt;h1 className=&quot;greeting&quot;&gt;
-        Je s&#39;appelle Groot !
-    &lt;/h1&gt;
-);
-</pre></div>
-</div>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>//Expression en REACT
-const element = React.createlement(
-    &#39;h1&#39;,
-    {className: &#39;greeting&#39;},
-    &#39;Je s&#39;appelle Groot !&#39;
-);
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//Expression en JSX</span>
+<span class="kr">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;greeting&quot;</span><span class="o">&gt;</span>
+        <span class="nx">Je</span> <span class="nx">s</span><span class="s1">&#39;appelle Groot !</span>
+<span class="s1">    &lt;/h1&gt;</span>
+<span class="s1">);</span>
+
+<span class="s1">//Expression en REACT</span>
+<span class="s1">const element = React.createlement(</span>
+<span class="s1">    &#39;</span><span class="nx">h1</span><span class="s1">&#39;,</span>
+<span class="s1">    {className: &#39;</span><span class="nx">greeting</span><span class="s1">&#39;},</span>
+<span class="s1">    &#39;</span><span class="nx">Je</span> <span class="nx">s</span><span class="s1">&#39;appelle Groot !&#39;</span>
+<span class="p">);</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -627,8 +626,9 @@ composant, et exige que l’identifiant Welcome existe dans la portée courante.
 <p>Une <strong>fonction composant</strong> est une fonction Javascript qui n’accepte qu’un seul argument appellé
 <strong>props</strong> qui signifie « propriétés ».</p>
 <blockquote>
-<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>function Welcome(props){
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span>function Welcome(props){
     return &lt;h1&gt;Bonjour, {props.name}&lt;/h1&gt;;
+    }
 }
 </pre></div>
 </div>
@@ -652,7 +652,7 @@ composant, et exige que l’identifiant Welcome existe dans la portée courante.
 </div></blockquote>
 <p>soit représenter un élément définis par l’utilisateur :</p>
 <blockquote>
-<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>const element = &lt;Welcome name=&quot;Sara /&gt;;
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">Welcome</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;Sara&quot;</span><span class="o">/&gt;</span><span class="p">;</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -664,7 +664,7 @@ les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelo
     return &lt;h1&gt;Bonjour, {props.name}&lt;/h1&gt;;
 }
 
-const element = &lt;Welcome name=&quot;Sara&quot; /&gt;;
+const element = &lt;Welcome name=&quot;Sara&quot;/&gt;;
 ReactDOM.render(
     element,
     document.getElementById(&#39;root&#39;)
@@ -672,10 +672,10 @@ ReactDOM.render(
 </pre></div>
 </div>
 </div></blockquote>
-<p>Détail du déroulement de l’exple précedent :</p>
+<p>Détail du déroulement de l’exemple précedent :</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>On appelle ReactDOM.render() avec l’élément &lt;Welcome name= »Sara » /&gt;.</p></li>
+<li><p>On appelle <strong>ReactDOM.render()</strong> avec l’élément créer par &lt;Welcome name= »Sara »/&gt;.</p></li>
 <li><p>React appelle le composant Welcome avec comme props {name: “Sara”}.</p></li>
 <li><p>Notre composant Welcome retourne un élément &lt;h1&gt;Bonjour, Sara&lt;/h1&gt; pour résultat.</p></li>
 <li><p>React DOM met à jour efficacement le DOM pour correspondre à &lt;h1&gt;Bonjour, Sara&lt;/h1&gt;.</p></li>
@@ -686,24 +686,24 @@ C’est l’équivalent d’une fonction <em>main()</em>. Pour faciliter la main
 éléments, il est conseiller d’avoir un composant <strong>App</strong> le plus simple possible. Pour cela, on
 doit isoler, chaque fois que c’est possible, les éléments en composants plus petits (et monotache).</p>
 <blockquote>
-<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>function Comment(props) {
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span>function Comment(props) {
     return (
         &lt;div className=&quot;Comment&quot;&gt;
-        &lt;div className=&quot;UserInfo&quot;&gt;
-            &lt;img className=&quot;Avatar&quot;
-            src={props.author.avatarUrl}
-            alt={props.author.name}
-            /&gt;
-            &lt;div className=&quot;UserInfo-name&quot;&gt;
-            {props.author.name}
+            &lt;div className=&quot;UserInfo&quot;&gt;
+                &lt;img className=&quot;Avatar&quot;
+                    src={props.author.avatarUrl}
+                    alt={props.author.name}
+                /&gt;
+                &lt;div className=&quot;UserInfo-name&quot;&gt;
+                    {props.author.name}
+                &lt;/div&gt;
             &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div className=&quot;Comment-text&quot;&gt;
-            {props.text}
-        &lt;/div&gt;
-        &lt;div className=&quot;Comment-date&quot;&gt;
-            {formatDate(props.date)}
-        &lt;/div&gt;
+            &lt;div className=&quot;Comment-text&quot;&gt;
+                {props.name}
+            &lt;/div&gt;
+            &lt;div className=&quot;Comment-date&quot;&gt;
+                {formatDate(props.date)}
+            &lt;/div&gt;
         &lt;/div&gt;
     );
 }
@@ -713,7 +713,7 @@ doit isoler, chaque fois que c’est possible, les éléments en composants plus
 <p>Si on définit séparément les composant <strong>Avatar</strong> et <strong>UserInfo</strong>, on pourra alors simplifier le
 composant <strong>Comment</strong> :</p>
 <blockquote>
-<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>// Composant &quot;Avatar&quot;
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span>// Composant &quot;Avatar&quot;
 function Avatar(props) {
     return (
         &lt;img className=&quot;Avatar&quot;
@@ -751,6 +751,25 @@ function Comment(props) {
 }
 </pre></div>
 </div>
+</div></blockquote>
+<p>Une fonction est dite « pure » si elle ne tente pas de modifier ses entrées et retourne toujours le
+même résultat avec les même entrées.</p>
+<blockquote>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Une fonction pure (qui ne modifie pas ces propres entrées)</span>
+<span class="kd">function</span> <span class="nx">sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Une fonction impure (qui modifie ces propres entrées)</span>
+<span class="kd">function</span> <span class="nx">withdraw</span><span class="p">(</span><span class="nx">account</span><span class="p">,</span> <span class="nx">amout</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">account</span><span class="p">.</span><span class="nx">total</span> <span class="o">-=</span> <span class="nx">amount</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>React applique une règle stricte :</p>
+<blockquote>
+<div><p><strong>« Tout composant React doit agir comme une fonction pure vis-a-vis de ses props »</strong></p>
 </div></blockquote>
 </div>
 </div>
@@ -818,7 +837,7 @@ function Comment(props) {
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -840,7 +859,7 @@ function Comment(props) {
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.2.
     </div>
   </body>
 </html>
