@@ -1,18 +1,22 @@
-==========
-JavaScript
-==========
+===============================
+JavaScript / REACT.js / node.js
+===============================
 
 :Liens_Web:
             * https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript
-              # Cours (fr) pour l'apprentissage du langage
+              # Cours (FR) pour l'apprentissage du langage
 
             * https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference
-              # Doc + tuto (fr)
+              # Doc + tuto (FR)
 
             * https://jsfiddle.net/
               #pour tester du code JS
               
 ####
+
+----------
+JavaScript
+----------
 
 Liste des commandes de bases
 ============================
@@ -32,7 +36,7 @@ Les commentaires sont les mêmes qu'en C :
             lignes
         */
 
-Intéraction avec l'utilisateur
+Interaction avec l'utilisateur
 ------------------------------
 
     #. affichage d'un message à l'écran
@@ -50,9 +54,9 @@ Intéraction avec l'utilisateur
 
             prompt()
             //ex:
-            var entreeClavier = prompt("tapez du text ici : ");
+            var entreeClavier = prompt("tapez du texte ici : ");
 
-    #. Confirmation conditionnel
+    #. Confirmation conditionnelle
 
         .. code:: javascript
 
@@ -73,9 +77,9 @@ Type
 
            * string
 
-           * boolean
+           * Boolean
 
-    #. Connaitre le type d'une variables
+    #. Connaitre le type d’une variable
     
         .. code:: javascript
 
@@ -105,20 +109,20 @@ Type
                 myNumber = 1234;
                 myStr = myNumber + '';
 
-                //ex: (version simplifiee)
+                //ex: (version simplifiée)
                 var myVar = 12;
                 myVar += '';
                 alert(typeof myVar);
 
-Détails syntaxique
-==================
+Détails syntaxiques
+===================
 
-Concatener les strings
+Concaténer les strings
 ----------------------
 
 Il y a 2 méthodes permettant de concaténer les chaines de caractères :
 
-    #. Additionner les string
+    #. Additionner les strings
 
         .. code:: javascript
 
@@ -150,7 +154,6 @@ Déclaration des variables
             var_constante = "nn"
             //TypeError: invalid assignment to const `var_constante`
 
-
     * var
 
         "var" permet de définir une variable locale. Si la valeur de cette variable est modifiée
@@ -166,7 +169,7 @@ Déclaration des variables
                 }
                 console.log("Après le bloc : " + nom);      //nom == "zz"
 
-​
+
     * let
 
         "let" permet de définir une variable locale. Si la valeur de cette variable est modifiée
@@ -182,6 +185,15 @@ Déclaration des variables
                 }
                 console.log("Après le bloc : " + nom);      //nom == "aa"
 
+Les objets JSON
+---------------
+
+Les objets JSON sont l'équivalent des dictionnaire en python. On peux utiliser toute la syntaxe
+JSON.
+
+    .. code:: JSON
+
+        { id : "id1" }
 
 Les fonctions
 -------------
@@ -205,7 +217,7 @@ Les fonctions
             // Le mot clef "function" est suprimé, alors que la flèche " => " est insérée entre
             // les parenthèses et les accolades
 
-            //si la finction n'a pas d'argument
+            //si la fonction n'a pas d'argument
             var myFunct = () => {
                 //un super code ...
                 }
@@ -227,16 +239,15 @@ Les fonctions
                 // super code ...
                 })();
 
-            /* Cette syntaxe permet d'executer du code isolé
-            sans appel préallable d'une 
+            /* Cette syntaxe permet d'exécuter du code isolé
+            sans appel préalable d'une 
             fonction. La fonction anonyme est exécutée automatiquement (et immédiatement)
             */
-
 
 Opérateur < ... > (spread)
 --------------------------
 
-L'opérateur spread ( ... ) permet d'éclater les propriété d'un objet. Ces propriété sont alors
+L'opérateur spread ( ... ) permet d'éclater les propriétés d'un objet. Ces propriétés sont alors
 intégrable par d'autres objet.
 
 exemple : Création dans "personne2", d'une copie de "personne"
@@ -281,4 +292,388 @@ exemple : Création dans "personne2", d'une copie de "personne"
                 ville: "ee"
 
 Dans le premier cas, on constate que l'objet "personne" est maintenant une propriété de "personne2".
-Dans le second cas, seules les propriété de "personne" ont été ajoutée à "personne2".
+Dans le second cas, seules les propriétés de "personne" ont été ajoutée à "personne2".
+
+Les classes
+-----------
+
+La Création d'une classe se fait avec le mot clef : **class**. La création d'une instance se fait
+avec le mot clef : **new**.
+
+    .. code:: javascript
+
+        class Personne{
+            //...
+            }
+
+        personne = new Personne();
+
+La définission d'attribut de classe se fait dans une méthode **"construtor()"**. Cette méthode est
+appellée automatiquement à la création d'une instance de la classe. C'est l'équivalent de la
+méthode **"__init__()"** en Python. La définition d'attribut ou l'appel d'une méthode depuis une autre
+méthode de la classe doit être précéder de **"this"**. c'est l'équivalent de **"self"** en Python.
+
+    .. code:: javascript
+
+        class Personne{
+            constructor(nom, prenom){
+                this.nom = nom;
+                this.prenom = prenom;
+            }
+        }
+
+Héritage de classe
+^^^^^^^^^^^^^^^^^^
+
+L'héritage d'une classe se fait par lajout du terme **"extends" suivie du nom de la calsse mère**
+dans la déclaration de classe. Il faut égallement appeller la méthode **"super()"** dans la méthode
+**"constructor()"** de la classe fille.
+
+    .. code:: javascript
+
+        class Homme extends Personne{
+            constructor(nom, prenom){
+                super(nom, prenom);     //Equivalent de Personne.constructor(nom, prenom)
+                this.sexe = "H";
+            }
+
+            log(){
+                console.log(`nom : ${this.nom}, prenom : ${this.prenom}`);
+            }
+        }
+
+        var personne = new Homme("Bond", "James");
+        personne.log();
+
+Import / Inclusion de module
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Un module représente un fichier qui doit être importer dans un autre fichier. Il est possible, mais
+déconseiller, de faire import de ces modules directement dans le fichier HTML. Cette approche
+impose de connaitre à l'avance toutes les dépendances et donc nous oblige à inserer tous les
+fichiers dans l'ordre. De plus le fichier HTML est alors surchargé ce qui peux le rendre difficile
+à maintenir.
+
+    .. code:: HTML
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8">
+            </head>
+
+            <body>
+            </body>
+
+            <!-- Inclusion des modules externes -->
+            <script src="./personne.js"></script>
+            <script src="./homme.js"></script>
+            <script>
+                var personne = new Homme("Bond", "James");
+                personne.log();
+            </script></script>>
+        </html>
+
+Pour éviter ces problèmes, il faut créer des modules en choisissant les éléments à exposer à l'Aide
+du termes **"export"**. Le ficher deveint un module à ce moment là. Il est possible d'exporter
+plusieurs éléments en les séparant par des virgules.
+
+    .. code:: javascript
+
+        //module "personne.js"
+        class Personne{
+            constructor(nom, prenom){
+                this.nom = nom;
+                this.prenom = prenom;
+            }
+            log(){
+                console.log(`nom : ${this.nom}, prenom : ${this.prenom}`);
+            }
+        }
+
+        export {Personne};
+
+L'utilisation de ces modules se fait à l'aide de la commande **"import [...] from [...]"**.
+
+    .. code:: javascript
+
+        // Module "Homme"
+        import {Personne} from "./personne.js";
+
+        class Homme extends Personne{
+            constructor(nom, prenom){
+                super(nom, prenom);     //Equivalent de Personne.constructor(nom, prenom)
+                this.sexe = "H";
+            }
+
+            log(){
+                super.log();
+                console.log("C'est un homme !");
+            }
+        }
+
+        export {Homme};
+
+IL est conseiller d'importer tous les modules dans un seul fichier.
+
+    .. code:: javascript
+
+        import {Personne} from "./personne.js";
+        import {Homme} from "./homme.js";
+
+        var personne = new Personne("Gabin", "Jean");
+        personne.log();
+
+        var personne2 = new Homme("Bond", "James");
+        personne2.log();
+
+On peux ensuite importer Ce fichier dans une balise **"script"** de type **"module"** dans le
+fichier html.
+
+    .. code:: html
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8">
+            </head>
+
+            <body>
+            </body>
+
+            <!-- Inclusion des modules externes -->
+            <script type="module" src="./index.js"></Script>
+        </html>
+
+####
+
+--------
+React.js
+--------
+
+    :Liens_Web:
+            * https://reactjs.org/docs/cdn-links.html
+                # Doc officiel permettant le téléchargement des liens CDN à inserer dans
+                  la page HTML
+
+React est une bibliothèque Javascript, utilisée pour créer des composants d'affiche. Dans le modèle
+MVC, React correspond à la **Vue**.
+
+Pour créer une application avec React, on va créer des composant (des classes ou des fonctions) qui
+seront ensuite assemblé pour former l'application finale.
+
+**React Native** (une variante de React) permet de créer des application IPhone ou Android.
+
+React affiche sont propre html au travers du **JSX**. Le JSX est l'encapsulation d'un pseudo HTML
+dans du Javascript. cela permet donc de simplifier l'écriture.
+
+    .. code:: javascript
+
+        //Expression en JSX
+        const element = (
+            <h1 className="greeting">
+                Je s'appelle Groot !
+            </h1>
+        );
+
+    .. code:: javascript
+
+        //Expression en REACT
+        const element = React.createlement(
+            'h1',
+            {className: 'greeting'},
+            'Je s'appelle Groot !'
+        );
+
+Ces deux expressions sont équivlente.
+
+On s'interdit donc d'écrire du html dans le ficher ".html" à
+l'éxecption du code minimum et des balises <div> qui accueilleront le html de React.
+
+React est composé de 2 bibliothèques JavaScript à inserer dans la page HTML :
+
+    * React : Correspond à React lui même qui permet de créer des composant d'affichage réutilisable.
+
+    * ReactDOM : Extention permettant de visualiser, dans une page HTML, les composant créer
+      avec React.
+
+Attention, les deux bibliothèques sont fournie en version **"development"** et en version
+**"production"**.
+
+Le code minimale d'une page est donc :
+
+    .. code:: html
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8">
+
+                <!-- CDN React - Development -->
+                <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+                <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+                <!-- CDN React - Production -->
+                <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script> -->
+                <!-- <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
+
+            </head>
+
+            <body>
+                <div id="app"></div>
+            </body>
+
+            <script>
+                // code React ICI.
+                // ou inclusion d'un module (Ne pas oublier type="module" dans la balise <script>)
+            </script>
+        </html>
+
+Spécificité syntaxique
+======================
+
+    * Le mot clef **'class'** habituellement utilisé dans le html ne peut pas être utilisé en JSX
+      car c'est égallement un mot clef utilisé en Javascript. Dans les expressions JSX, ce mot clef
+      est remplacé par **"className"**.
+
+    * Les mots clefs composés (séparé par "_") utilisés en CSS sont systématiquement remplacé par
+      le formatage en **lowerCamelCase**
+
+    * React considère les composants commençant par des lettres minuscules comme des balises DOM. 
+      Par exemple, <div /> représente une balise HTML div, mais <Welcome /> représente un
+      composant, et exige que l’identifiant Welcome existe dans la portée courante.
+
+Composants
+==========
+
+Une **fonction composant** est une fonction Javascript qui n'accepte qu'un seul argument appellé
+**props** qui signifie "propriétés".
+
+    .. code:: javascript
+
+        function Welcome(props){
+            return <h1>Bonjour, {props.name}</h1>;
+        }
+
+On peut également utiliser une classe ES6 pour définir un composant.
+
+    .. code:: javascript
+
+        class Welcome extends React.Component{
+            render() {
+                return <h1>Bonjour, {this.props.name}</h1>;
+            }
+        }
+
+Ces 2 composants sont équivalents.
+
+Les éléments peuvent soit représenter un éléments du DOM :
+
+    .. code:: javascript
+
+        const element = <div />;
+
+soit représenter un élément définis par l'utilisateur :
+
+    .. code:: javascript
+
+        const element = <Welcome name="Sara />;
+
+Lorsque React rencontre un élément représentant un composant défini par l’utilisateur, il transmet
+les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelons cet objet **"props"**.
+
+**Le rendu** se fait en appellant **ReactDOM.render()**.
+
+    .. code:: javascript
+
+        function Welcome(props){
+            return <h1>Bonjour, {props.name}</h1>;
+        }
+
+        const element = <Welcome name="Sara" />;
+        ReactDOM.render(
+            element,
+            document.getElementById('root')
+        );
+
+Détail du déroulement de l'exple précedent :
+
+
+    #. On appelle ReactDOM.render() avec l’élément <Welcome name="Sara" />.
+
+    #. React appelle le composant Welcome avec comme props {name: 'Sara'}.
+
+    #. Notre composant Welcome retourne un élément <h1>Bonjour, Sara</h1> pour résultat.
+
+    #. React DOM met à jour efficacement le DOM pour correspondre à <h1>Bonjour, Sara</h1>.
+
+En règle générale, les nouvelles applications React ont un seul composant **App** à la racine.
+C'est l'équivalent d'une fonction *main()*. Pour faciliter la maintenance et la portabilité des
+éléments, il est conseiller d'avoir un composant **App** le plus simple possible. Pour cela, on
+doit isoler, chaque fois que c'est possible, les éléments en composants plus petits (et monotache).
+
+    .. code:: javascript
+
+        function Comment(props) {
+            return (
+                <div className="Comment">
+                <div className="UserInfo">
+                    <img className="Avatar"
+                    src={props.author.avatarUrl}
+                    alt={props.author.name}
+                    />
+                    <div className="UserInfo-name">
+                    {props.author.name}
+                    </div>
+                </div>
+                <div className="Comment-text">
+                    {props.text}
+                </div>
+                <div className="Comment-date">
+                    {formatDate(props.date)}
+                </div>
+                </div>
+            );
+        }
+
+Si on définit séparément les composant **Avatar** et **UserInfo**, on pourra alors simplifier le
+composant **Comment** :
+
+    .. code:: javascript
+
+        // Composant "Avatar"
+        function Avatar(props) {
+            return (
+                <img className="Avatar"
+                src={props.user.avatarUrl}
+                alt={props.user.name}
+                />
+            );
+        }
+
+        // Composant "UserInfo"
+        function UserInfo(props) {
+            return (
+                <div className="UserInfo">
+                <Avatar user={props.user} />
+                <div className="UserInfo-name">
+                    {props.user.name}
+                </div>
+                </div>
+            );
+        }
+
+        // composant "Comment"
+        function Comment(props) {
+            return (
+                <div className="Comment">
+                <UserInfo user={props.author} />
+                <div className="Comment-text">
+                    {props.text}
+                </div>
+                <div className="Comment-date">
+                    {formatDate(props.date)}
+                </div>
+                </div>
+            );
+        }

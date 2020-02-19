@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
     <meta charset="utf-8" />
-    <title>JavaScript &#8212; Documentation JDM 20170523</title>
+    <title>JavaScript / REACT.js / node.js &#8212; Documentation JDM 20170523</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -42,25 +42,27 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="javascript">
-<h1>JavaScript<a class="headerlink" href="#javascript" title="Lien permanent vers ce titre">¶</a></h1>
+  <div class="section" id="javascript-react-js-node-js">
+<h1>JavaScript / REACT.js / node.js<a class="headerlink" href="#javascript-react-js-node-js" title="Lien permanent vers ce titre">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript">https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript</a>
-# Cours (fr) pour l’apprentissage du langage</p></li>
+# Cours (FR) pour l’apprentissage du langage</p></li>
 <li><p><a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference">https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference</a>
-# Doc + tuto (fr)</p></li>
+# Doc + tuto (FR)</p></li>
 <li><p><a class="reference external" href="https://jsfiddle.net/">https://jsfiddle.net/</a>
 #pour tester du code JS</p></li>
 </ul>
 </dd>
 </dl>
 <hr class="docutils" />
+<div class="section" id="javascript">
+<h2>JavaScript<a class="headerlink" href="#javascript" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="liste-des-commandes-de-bases">
-<h2>Liste des commandes de bases<a class="headerlink" href="#liste-des-commandes-de-bases" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Liste des commandes de bases<a class="headerlink" href="#liste-des-commandes-de-bases" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="commentaires">
-<h3>Commentaires<a class="headerlink" href="#commentaires" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Commentaires<a class="headerlink" href="#commentaires" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Les commentaires sont les mêmes qu’en C :</p>
 <blockquote>
 <div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Commentaire simple</span>
@@ -75,7 +77,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="interaction-avec-l-utilisateur">
-<h3>Intéraction avec l’utilisateur<a class="headerlink" href="#interaction-avec-l-utilisateur" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Interaction avec l’utilisateur<a class="headerlink" href="#interaction-avec-l-utilisateur" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>affichage d’un message à l’écran</p></li>
@@ -91,12 +93,12 @@
 <blockquote>
 <div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">prompt</span><span class="p">()</span>
 <span class="c1">//ex:</span>
-<span class="kd">var</span> <span class="nx">entreeClavier</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;tapez du text ici : &quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">entreeClavier</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;tapez du texte ici : &quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
-<li><p>Confirmation conditionnel</p>
+<li><p>Confirmation conditionnelle</p>
 <blockquote>
 <div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">confirm</span><span class="p">()</span>
 <span class="c1">//ex:</span>
@@ -113,7 +115,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="type">
-<h3>Type<a class="headerlink" href="#type" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Type<a class="headerlink" href="#type" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><ol class="arabic">
 <li><p>Les 3 types de bases</p>
@@ -121,11 +123,11 @@
 <div><ul class="simple">
 <li><p><strong>number</strong> : Ce type contient tous les types numériques ( entier et décimaux)</p></li>
 <li><p>string</p></li>
-<li><p>boolean</p></li>
+<li><p>Boolean</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p>Connaitre le type d’une variables</p>
+<li><p>Connaitre le type d’une variable</p>
 <blockquote>
 <div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">typeof</span>
 <span class="c1">//ex:</span>
@@ -156,7 +158,7 @@
 <span class="nx">myNumber</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">;</span>
 <span class="nx">myStr</span> <span class="o">=</span> <span class="nx">myNumber</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 
-<span class="c1">//ex: (version simplifiee)</span>
+<span class="c1">//ex: (version simplifiée)</span>
 <span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
 <span class="nx">myVar</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 <span class="nx">alert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">myVar</span><span class="p">);</span>
@@ -171,14 +173,14 @@
 </div></blockquote>
 </div>
 </div>
-<div class="section" id="details-syntaxique">
-<h2>Détails syntaxique<a class="headerlink" href="#details-syntaxique" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="details-syntaxiques">
+<h3>Détails syntaxiques<a class="headerlink" href="#details-syntaxiques" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="concatener-les-strings">
-<h3>Concatener les strings<a class="headerlink" href="#concatener-les-strings" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Concaténer les strings<a class="headerlink" href="#concatener-les-strings" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Il y a 2 méthodes permettant de concaténer les chaines de caractères :</p>
 <blockquote>
 <div><ol class="arabic">
-<li><p>Additionner les string</p>
+<li><p>Additionner les strings</p>
 <blockquote>
 <div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str1</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span>
 <span class="kd">var</span> <span class="nx">str2</span> <span class="o">=</span> <span class="s2">&quot;zz&quot;</span>
@@ -200,7 +202,7 @@ ou les doubles cotes &lt; » … « &gt; par des accent graves (altGR + 7) &lt
 </div></blockquote>
 </div>
 <div class="section" id="declaration-des-variables">
-<h3>Déclaration des variables<a class="headerlink" href="#declaration-des-variables" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Déclaration des variables<a class="headerlink" href="#declaration-des-variables" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><ul>
 <li><p>Constantes</p>
@@ -230,10 +232,6 @@ en dehors de la portée de sa déclaration, la valeur initale sera modifiée / �
 </div></blockquote>
 </div></blockquote>
 </li>
-</ul>
-</div></blockquote>
-<dl>
-<dt>​</dt><dd><ul>
 <li><p>let</p>
 <blockquote>
 <div><p>« let » permet de définir une variable locale. Si la valeur de cette variable est modifiée
@@ -252,11 +250,20 @@ en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modif
 </div></blockquote>
 </li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
+</div>
+<div class="section" id="les-objets-json">
+<h4>Les objets JSON<a class="headerlink" href="#les-objets-json" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Les objets JSON sont l’équivalent des dictionnaire en python. On peux utiliser toute la syntaxe
+JSON.</p>
+<blockquote>
+<div><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span>{ id : &quot;id1&quot; }
+</pre></div>
+</div>
+</div></blockquote>
 </div>
 <div class="section" id="les-fonctions">
-<h3>Les fonctions<a class="headerlink" href="#les-fonctions" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Les fonctions<a class="headerlink" href="#les-fonctions" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><ol class="arabic">
 <li><p>Fonctions simples</p>
@@ -276,7 +283,7 @@ en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modif
 <span class="c1">// Le mot clef &quot;function&quot; est suprimé, alors que la flèche &quot; =&gt; &quot; est insérée entre</span>
 <span class="c1">// les parenthèses et les accolades</span>
 
-<span class="c1">//si la finction n&#39;a pas d&#39;argument</span>
+<span class="c1">//si la fonction n&#39;a pas d&#39;argument</span>
 <span class="kd">var</span> <span class="nx">myFunct</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="c1">//un super code ...</span>
     <span class="p">}</span>
@@ -300,8 +307,8 @@ en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modif
     <span class="c1">// super code ...</span>
     <span class="p">})();</span>
 
-<span class="cm">/* Cette syntaxe permet d&#39;executer du code isolé</span>
-<span class="cm">sans appel préallable d&#39;une</span>
+<span class="cm">/* Cette syntaxe permet d&#39;exécuter du code isolé</span>
+<span class="cm">sans appel préalable d&#39;une</span>
 <span class="cm">fonction. La fonction anonyme est exécutée automatiquement (et immédiatement)</span>
 <span class="cm">*/</span>
 </pre></div>
@@ -312,8 +319,8 @@ en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modif
 </div></blockquote>
 </div>
 <div class="section" id="operateur-spread">
-<h3>Opérateur &lt; … &gt; (spread)<a class="headerlink" href="#operateur-spread" title="Lien permanent vers ce titre">¶</a></h3>
-<p>L’opérateur spread ( … ) permet d’éclater les propriété d’un objet. Ces propriété sont alors
+<h4>Opérateur &lt; … &gt; (spread)<a class="headerlink" href="#operateur-spread" title="Lien permanent vers ce titre">¶</a></h4>
+<p>L’opérateur spread ( … ) permet d’éclater les propriétés d’un objet. Ces propriétés sont alors
 intégrable par d’autres objet.</p>
 <p>exemple : Création dans « personne2 », d’une copie de « personne »</p>
 <blockquote>
@@ -359,7 +366,392 @@ intégrable par d’autres objet.</p>
 </ol>
 </div></blockquote>
 <p>Dans le premier cas, on constate que l’objet « personne » est maintenant une propriété de « personne2 ».
-Dans le second cas, seules les propriété de « personne » ont été ajoutée à « personne2 ».</p>
+Dans le second cas, seules les propriétés de « personne » ont été ajoutée à « personne2 ».</p>
+</div>
+<div class="section" id="les-classes">
+<h4>Les classes<a class="headerlink" href="#les-classes" title="Lien permanent vers ce titre">¶</a></h4>
+<p>La Création d’une classe se fait avec le mot clef : <strong>class</strong>. La création d’une instance se fait
+avec le mot clef : <strong>new</strong>.</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">Personne</span><span class="p">{</span>
+    <span class="c1">//...</span>
+    <span class="p">}</span>
+
+<span class="nx">personne</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Personne</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>La définission d’attribut de classe se fait dans une méthode <strong>« construtor() »</strong>. Cette méthode est
+appellée automatiquement à la création d’une instance de la classe. C’est l’équivalent de la
+méthode <strong>« __init__() »</strong> en Python. La définition d’attribut ou l’appel d’une méthode depuis une autre
+méthode de la classe doit être précéder de <strong>« this »</strong>. c’est l’équivalent de <strong>« self »</strong> en Python.</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">Personne</span><span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span> <span class="nx">prenom</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">nom</span> <span class="o">=</span> <span class="nx">nom</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">prenom</span> <span class="o">=</span> <span class="nx">prenom</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="section" id="heritage-de-classe">
+<h5>Héritage de classe<a class="headerlink" href="#heritage-de-classe" title="Lien permanent vers ce titre">¶</a></h5>
+<p>L’héritage d’une classe se fait par lajout du terme <strong>« extends » suivie du nom de la calsse mère</strong>
+dans la déclaration de classe. Il faut égallement appeller la méthode <strong>« super() »</strong> dans la méthode
+<strong>« constructor() »</strong> de la classe fille.</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">Homme</span> <span class="kr">extends</span> <span class="nx">Personne</span><span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span> <span class="nx">prenom</span><span class="p">){</span>
+        <span class="kr">super</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span> <span class="nx">prenom</span><span class="p">);</span>     <span class="c1">//Equivalent de Personne.constructor(nom, prenom)</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">sexe</span> <span class="o">=</span> <span class="s2">&quot;H&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">log</span><span class="p">(){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`nom : </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="si">}</span><span class="sb">, prenom : </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">prenom</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">personne</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Homme</span><span class="p">(</span><span class="s2">&quot;Bond&quot;</span><span class="p">,</span> <span class="s2">&quot;James&quot;</span><span class="p">);</span>
+<span class="nx">personne</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="import-inclusion-de-module">
+<h5>Import / Inclusion de module<a class="headerlink" href="#import-inclusion-de-module" title="Lien permanent vers ce titre">¶</a></h5>
+<p>Un module représente un fichier qui doit être importer dans un autre fichier. Il est possible, mais
+déconseiller, de faire import de ces modules directement dans le fichier HTML. Cette approche
+impose de connaitre à l’avance toutes les dépendances et donc nous oblige à inserer tous les
+fichiers dans l’ordre. De plus le fichier HTML est alors surchargé ce qui peux le rendre difficile
+à maintenir.</p>
+<blockquote>
+<div><div class="highlight-HTML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+    <span class="c">&lt;!-- Inclusion des modules externes --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./personne.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./homme.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="kd">var</span> <span class="nx">personne</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Homme</span><span class="p">(</span><span class="s2">&quot;Bond&quot;</span><span class="p">,</span> <span class="s2">&quot;James&quot;</span><span class="p">);</span>
+        <span class="nx">personne</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>&gt;
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Pour éviter ces problèmes, il faut créer des modules en choisissant les éléments à exposer à l’Aide
+du termes <strong>« export »</strong>. Le ficher deveint un module à ce moment là. Il est possible d’exporter
+plusieurs éléments en les séparant par des virgules.</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//module &quot;personne.js&quot;</span>
+<span class="kr">class</span> <span class="nx">Personne</span><span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span> <span class="nx">prenom</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">nom</span> <span class="o">=</span> <span class="nx">nom</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">prenom</span> <span class="o">=</span> <span class="nx">prenom</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">log</span><span class="p">(){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`nom : </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="si">}</span><span class="sb">, prenom : </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">prenom</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="p">{</span><span class="nx">Personne</span><span class="p">};</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>L’utilisation de ces modules se fait à l’aide de la commande <strong>« import […] from […] »</strong>.</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Module &quot;Homme&quot;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">Personne</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;./personne.js&quot;</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">Homme</span> <span class="kr">extends</span> <span class="nx">Personne</span><span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span> <span class="nx">prenom</span><span class="p">){</span>
+        <span class="kr">super</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span> <span class="nx">prenom</span><span class="p">);</span>     <span class="c1">//Equivalent de Personne.constructor(nom, prenom)</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">sexe</span> <span class="o">=</span> <span class="s2">&quot;H&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">log</span><span class="p">(){</span>
+        <span class="kr">super</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;C&#39;est un homme !&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="p">{</span><span class="nx">Homme</span><span class="p">};</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>IL est conseiller d’importer tous les modules dans un seul fichier.</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span><span class="nx">Personne</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;./personne.js&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">Homme</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;./homme.js&quot;</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">personne</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Personne</span><span class="p">(</span><span class="s2">&quot;Gabin&quot;</span><span class="p">,</span> <span class="s2">&quot;Jean&quot;</span><span class="p">);</span>
+<span class="nx">personne</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span>
+
+<span class="kd">var</span> <span class="nx">personne2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Homme</span><span class="p">(</span><span class="s2">&quot;Bond&quot;</span><span class="p">,</span> <span class="s2">&quot;James&quot;</span><span class="p">);</span>
+<span class="nx">personne2</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>On peux ensuite importer Ce fichier dans une balise <strong>« script »</strong> de type <strong>« module »</strong> dans le
+fichier html.</p>
+<blockquote>
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+    <span class="c">&lt;!-- Inclusion des modules externes --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;module&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./index.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">Script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="react-js">
+<h2>React.js<a class="headerlink" href="#react-js" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://reactjs.org/docs/cdn-links.html">https://reactjs.org/docs/cdn-links.html</a></dt><dd><dl class="simple">
+<dt># Doc officiel permettant le téléchargement des liens CDN à inserer dans</dt><dd><p>la page HTML</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p>React est une bibliothèque Javascript, utilisée pour créer des composants d’affiche. Dans le modèle
+MVC, React correspond à la <strong>Vue</strong>.</p>
+<p>Pour créer une application avec React, on va créer des composant (des classes ou des fonctions) qui
+seront ensuite assemblé pour former l’application finale.</p>
+<p><strong>React Native</strong> (une variante de React) permet de créer des application IPhone ou Android.</p>
+<p>React affiche sont propre html au travers du <strong>JSX</strong>. Le JSX est l’encapsulation d’un pseudo HTML
+dans du Javascript. cela permet donc de simplifier l’écriture.</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>//Expression en JSX
+const element = (
+    &lt;h1 className=&quot;greeting&quot;&gt;
+        Je s&#39;appelle Groot !
+    &lt;/h1&gt;
+);
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>//Expression en REACT
+const element = React.createlement(
+    &#39;h1&#39;,
+    {className: &#39;greeting&#39;},
+    &#39;Je s&#39;appelle Groot !&#39;
+);
+</pre></div>
+</div>
+</div></blockquote>
+<p>Ces deux expressions sont équivlente.</p>
+<p>On s’interdit donc d’écrire du html dans le ficher « .html » à
+l’éxecption du code minimum et des balises &lt;div&gt; qui accueilleront le html de React.</p>
+<p>React est composé de 2 bibliothèques JavaScript à inserer dans la page HTML :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>React : Correspond à React lui même qui permet de créer des composant d’affichage réutilisable.</p></li>
+<li><p>ReactDOM : Extention permettant de visualiser, dans une page HTML, les composant créer
+avec React.</p></li>
+</ul>
+</div></blockquote>
+<p>Attention, les deux bibliothèques sont fournie en version <strong>« development »</strong> et en version
+<strong>« production »</strong>.</p>
+<p>Le code minimale d’une page est donc :</p>
+<blockquote>
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+
+        <span class="c">&lt;!-- CDN React - Development --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">crossorigin</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/react@16/umd/react.development.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">crossorigin</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+        <span class="c">&lt;!-- CDN React - Production --&gt;</span>
+        <span class="c">&lt;!-- &lt;script crossorigin src=&quot;https://unpkg.com/react@16/umd/react.production.min.js&quot;&gt;&lt;/script&gt; --&gt;</span>
+        <span class="c">&lt;!-- &lt;script crossorigin src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt; --&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="c1">// code React ICI.</span>
+        <span class="c1">// ou inclusion d&#39;un module (Ne pas oublier type=&quot;module&quot; dans la balise &lt;script&gt;)</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="section" id="specificite-syntaxique">
+<h3>Spécificité syntaxique<a class="headerlink" href="#specificite-syntaxique" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Le mot clef <strong>“class”</strong> habituellement utilisé dans le html ne peut pas être utilisé en JSX
+car c’est égallement un mot clef utilisé en Javascript. Dans les expressions JSX, ce mot clef
+est remplacé par <strong>« className »</strong>.</p></li>
+<li><p>Les mots clefs composés (séparé par « _ ») utilisés en CSS sont systématiquement remplacé par
+le formatage en <strong>lowerCamelCase</strong></p></li>
+<li><p>React considère les composants commençant par des lettres minuscules comme des balises DOM.
+Par exemple, &lt;div /&gt; représente une balise HTML div, mais &lt;Welcome /&gt; représente un
+composant, et exige que l’identifiant Welcome existe dans la portée courante.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="composants">
+<h3>Composants<a class="headerlink" href="#composants" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une <strong>fonction composant</strong> est une fonction Javascript qui n’accepte qu’un seul argument appellé
+<strong>props</strong> qui signifie « propriétés ».</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>function Welcome(props){
+    return &lt;h1&gt;Bonjour, {props.name}&lt;/h1&gt;;
+}
+</pre></div>
+</div>
+</div></blockquote>
+<p>On peut également utiliser une classe ES6 pour définir un composant.</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>class Welcome extends React.Component{
+    render() {
+        return &lt;h1&gt;Bonjour, {this.props.name}&lt;/h1&gt;;
+    }
+}
+</pre></div>
+</div>
+</div></blockquote>
+<p>Ces 2 composants sont équivalents.</p>
+<p>Les éléments peuvent soit représenter un éléments du DOM :</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">div</span> <span class="o">/&gt;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>soit représenter un élément définis par l’utilisateur :</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>const element = &lt;Welcome name=&quot;Sara /&gt;;
+</pre></div>
+</div>
+</div></blockquote>
+<p>Lorsque React rencontre un élément représentant un composant défini par l’utilisateur, il transmet
+les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelons cet objet <strong>« props »</strong>.</p>
+<p><strong>Le rendu</strong> se fait en appellant <strong>ReactDOM.render()</strong>.</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>function Welcome(props){
+    return &lt;h1&gt;Bonjour, {props.name}&lt;/h1&gt;;
+}
+
+const element = &lt;Welcome name=&quot;Sara&quot; /&gt;;
+ReactDOM.render(
+    element,
+    document.getElementById(&#39;root&#39;)
+);
+</pre></div>
+</div>
+</div></blockquote>
+<p>Détail du déroulement de l’exple précedent :</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>On appelle ReactDOM.render() avec l’élément &lt;Welcome name= »Sara » /&gt;.</p></li>
+<li><p>React appelle le composant Welcome avec comme props {name: “Sara”}.</p></li>
+<li><p>Notre composant Welcome retourne un élément &lt;h1&gt;Bonjour, Sara&lt;/h1&gt; pour résultat.</p></li>
+<li><p>React DOM met à jour efficacement le DOM pour correspondre à &lt;h1&gt;Bonjour, Sara&lt;/h1&gt;.</p></li>
+</ol>
+</div></blockquote>
+<p>En règle générale, les nouvelles applications React ont un seul composant <strong>App</strong> à la racine.
+C’est l’équivalent d’une fonction <em>main()</em>. Pour faciliter la maintenance et la portabilité des
+éléments, il est conseiller d’avoir un composant <strong>App</strong> le plus simple possible. Pour cela, on
+doit isoler, chaque fois que c’est possible, les éléments en composants plus petits (et monotache).</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>function Comment(props) {
+    return (
+        &lt;div className=&quot;Comment&quot;&gt;
+        &lt;div className=&quot;UserInfo&quot;&gt;
+            &lt;img className=&quot;Avatar&quot;
+            src={props.author.avatarUrl}
+            alt={props.author.name}
+            /&gt;
+            &lt;div className=&quot;UserInfo-name&quot;&gt;
+            {props.author.name}
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;Comment-text&quot;&gt;
+            {props.text}
+        &lt;/div&gt;
+        &lt;div className=&quot;Comment-date&quot;&gt;
+            {formatDate(props.date)}
+        &lt;/div&gt;
+        &lt;/div&gt;
+    );
+}
+</pre></div>
+</div>
+</div></blockquote>
+<p>Si on définit séparément les composant <strong>Avatar</strong> et <strong>UserInfo</strong>, on pourra alors simplifier le
+composant <strong>Comment</strong> :</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>// Composant &quot;Avatar&quot;
+function Avatar(props) {
+    return (
+        &lt;img className=&quot;Avatar&quot;
+        src={props.user.avatarUrl}
+        alt={props.user.name}
+        /&gt;
+    );
+}
+
+// Composant &quot;UserInfo&quot;
+function UserInfo(props) {
+    return (
+        &lt;div className=&quot;UserInfo&quot;&gt;
+        &lt;Avatar user={props.user} /&gt;
+        &lt;div className=&quot;UserInfo-name&quot;&gt;
+            {props.user.name}
+        &lt;/div&gt;
+        &lt;/div&gt;
+    );
+}
+
+// composant &quot;Comment&quot;
+function Comment(props) {
+    return (
+        &lt;div className=&quot;Comment&quot;&gt;
+        &lt;UserInfo user={props.author} /&gt;
+        &lt;div className=&quot;Comment-text&quot;&gt;
+            {props.text}
+        &lt;/div&gt;
+        &lt;div className=&quot;Comment-date&quot;&gt;
+            {formatDate(props.date)}
+        &lt;/div&gt;
+        &lt;/div&gt;
+    );
+}
+</pre></div>
+</div>
+</div></blockquote>
 </div>
 </div>
 </div>
@@ -372,18 +764,32 @@ Dans le second cas, seules les propriété de « personne » ont été ajouté
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table des matières</a></h3>
   <ul>
-<li><a class="reference internal" href="#">JavaScript</a><ul>
+<li><a class="reference internal" href="#">JavaScript / REACT.js / node.js</a><ul>
+<li><a class="reference internal" href="#javascript">JavaScript</a><ul>
 <li><a class="reference internal" href="#liste-des-commandes-de-bases">Liste des commandes de bases</a><ul>
 <li><a class="reference internal" href="#commentaires">Commentaires</a></li>
-<li><a class="reference internal" href="#interaction-avec-l-utilisateur">Intéraction avec l’utilisateur</a></li>
+<li><a class="reference internal" href="#interaction-avec-l-utilisateur">Interaction avec l’utilisateur</a></li>
 <li><a class="reference internal" href="#type">Type</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#details-syntaxique">Détails syntaxique</a><ul>
-<li><a class="reference internal" href="#concatener-les-strings">Concatener les strings</a></li>
+<li><a class="reference internal" href="#details-syntaxiques">Détails syntaxiques</a><ul>
+<li><a class="reference internal" href="#concatener-les-strings">Concaténer les strings</a></li>
 <li><a class="reference internal" href="#declaration-des-variables">Déclaration des variables</a></li>
+<li><a class="reference internal" href="#les-objets-json">Les objets JSON</a></li>
 <li><a class="reference internal" href="#les-fonctions">Les fonctions</a></li>
 <li><a class="reference internal" href="#operateur-spread">Opérateur &lt; … &gt; (spread)</a></li>
+<li><a class="reference internal" href="#les-classes">Les classes</a><ul>
+<li><a class="reference internal" href="#heritage-de-classe">Héritage de classe</a></li>
+<li><a class="reference internal" href="#import-inclusion-de-module">Import / Inclusion de module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#react-js">React.js</a><ul>
+<li><a class="reference internal" href="#specificite-syntaxique">Spécificité syntaxique</a></li>
+<li><a class="reference internal" href="#composants">Composants</a></li>
 </ul>
 </li>
 </ul>
