@@ -2,6 +2,10 @@
 JavaScript / REACT.js / node.js
 ===============================
 
+.. contents::
+   :backlinks: top
+   :depth: 3
+
 :Liens_Web:
             * https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript
               # Cours (FR) pour l'apprentissage du langage
@@ -13,6 +17,10 @@ JavaScript / REACT.js / node.js
               #pour tester du code JS
               
 ####
+
+.. index::
+   single: JavaScript; JavaScript
+   single: WEB; JavaScript
 
 ----------
 JavaScript
@@ -26,22 +34,26 @@ Commentaires
 
 Les commentaires sont les mêmes qu'en C : 
 
-    .. code:: javascript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        // Commentaire simple
+    // Commentaire simple
 
-        /*
-            Commentaires
-            sur plusieurs
-            lignes
-        */
+    /*
+        Commentaires
+        sur plusieurs
+        lignes
+    */
 
 Interaction avec l'utilisateur
 ------------------------------
 
     #. affichage d'un message à l'écran
 
-    .. code:: javascript
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
 
         alert()
         //ex:
@@ -50,23 +62,27 @@ Interaction avec l'utilisateur
 
     #. Entrée utilisateur
 
-        .. code:: javascript
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
 
-            prompt()
-            //ex:
-            var entreeClavier = prompt("tapez du texte ici : ");
+        prompt()
+        //ex:
+        var entreeClavier = prompt("tapez du texte ici : ");
 
     #. Confirmation conditionnelle
 
-        .. code:: javascript
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
 
-            confirm()
-            //ex:
-            if (confirm('Voulez-vous exécuter le code JavaScript de cette page ?')) {
-                alert('Le code a bien été exécuté !');
-                }
-            /* un Popup doit s'ouvrir et demander de confirmer ([OK]) ou pas ([Annuler])
-            la valeur retournée est alors un booléin (true ou false) */
+        confirm()
+        //ex:
+        if (confirm('Voulez-vous exécuter le code JavaScript de cette page ?')) {
+            alert('Le code a bien été exécuté !');
+            }
+        /* un Popup doit s'ouvrir et demander de confirmer ([OK]) ou pas ([Annuler])
+        la valeur retournée est alors un booléin (true ou false) */
 
 Type
 ----
@@ -81,38 +97,44 @@ Type
 
     #. Connaitre le type d’une variable
     
-        .. code:: javascript
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
 
-            typeof
-            //ex:
-            var myVar = 2;
-            alert(typeof myVar);
+        typeof
+        //ex:
+        var myVar = 2;
+        alert(typeof myVar);
 
     #. Conversion de TYPE
 
         #. String --> Number
 
-            .. code:: javascript
+        .. code-block:: JavaScript
+           :linenos:
+           :force:
 
-                parseInt()
-                //ex:
-                var myStr, myNumber;
-                myStr = "1234";
-                myNumber = parseInt(myStr);
+            parseInt()
+            //ex:
+            var myStr, myNumber;
+            myStr = "1234";
+            myNumber = parseInt(myStr);
 
         #. Number --> String
 
-            .. code:: javascript
+        .. code-block:: JavaScript
+           :linenos:
+           :force:
 
-                //ex:
-                var myNumber, myStr;
-                myNumber = 1234;
-                myStr = myNumber + '';
+            //ex:
+            var myNumber, myStr;
+            myNumber = 1234;
+            myStr = myNumber + '';
 
-                //ex: (version simplifiée)
-                var myVar = 12;
-                myVar += '';
-                alert(typeof myVar);
+            //ex: (version simplifiée)
+            var myVar = 12;
+            myVar += '';
+            alert(typeof myVar);
 
 Détails syntaxiques
 ===================
@@ -124,19 +146,23 @@ Il y a 2 méthodes permettant de concaténer les chaines de caractères :
 
     #. Additionner les strings
 
-        .. code:: javascript
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
 
-            var str1 = "aa"
-            var str2 = "zz"
-            var str12 = "STR1 : " + str1 + " STR2 : " + str2
-            //"STR1 : aa STR2 : zz"
+        var str1 = "aa"
+        var str2 = "zz"
+        var str12 = "STR1 : " + str1 + " STR2 : " + str2
+        //"STR1 : aa STR2 : zz"
 
     #.  Modifier les chaines directement
 
         Pour pouvoir modifier les chaines directement, il remplacer les simples cotes < ' ... ' >
         ou les doubles cotes <" ... "> par des accent graves (altGR + 7) < \` ... \` >
 
-        .. code:: javascript
+        .. code-block:: JavaScript
+           :linenos:
+           :force:
 
             var str1 = "aa"
             var str_GR7 = `str1 : ${str1}`
@@ -148,7 +174,9 @@ Déclaration des variables
 
         Les constantes sont définies avec le préfix "const".
 
-        .. code:: javascript
+        .. code-block:: JavaScript
+           :linenos:
+           :force:
 
             const var_constante = "cc";
             var_constante = "nn"
@@ -159,31 +187,34 @@ Déclaration des variables
         "var" permet de définir une variable locale. Si la valeur de cette variable est modifiée
         en dehors de la portée de sa déclaration, la valeur initale sera modifiée / écrasée. 
 
-            .. code:: javascript
+        .. code-block:: JavaScript
+           :linenos:
+           :force:
 
-                var nom = "aa";
-                console.log("Avant le bloc : " + nom);      //nom == "aa"
-                if (true){
-                    var nom = "zz";
-                    console.log("Dans le bloc : " + nom);   //nom == "zz"
-                }
-                console.log("Après le bloc : " + nom);      //nom == "zz"
-
+            var nom = "aa";
+            console.log("Avant le bloc : " + nom);      //nom == "aa"
+            if (true){
+                var nom = "zz";
+                console.log("Dans le bloc : " + nom);   //nom == "zz"
+            }
+            console.log("Après le bloc : " + nom);      //nom == "zz"
 
     * let
 
         "let" permet de définir une variable locale. Si la valeur de cette variable est modifiée
         en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modifiée.
 
-            .. code:: javascript
+        .. code-block:: JavaScript
+           :linenos:
+           :force:
 
-                let nom = "aa";
-                console.log("Avant le bloc : " + nom);      //nom == "aa"
-                if (true){
-                    let nom = "zz";
-                    console.log("Dans le bloc : " + nom);   //nom == "zz"
-                }
-                console.log("Après le bloc : " + nom);      //nom == "aa"
+            let nom = "aa";
+            console.log("Avant le bloc : " + nom);      //nom == "aa"
+            if (true){
+                let nom = "zz";
+                console.log("Dans le bloc : " + nom);   //nom == "zz"
+            }
+            console.log("Après le bloc : " + nom);      //nom == "aa"
 
 Les objets JSON
 ---------------
@@ -191,9 +222,11 @@ Les objets JSON
 Les objets JSON sont l'équivalent des dictionnaire en python. On peux utiliser toute la syntaxe
 JSON.
 
-    .. code:: javascript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        { id : "id1" }
+    { id : "id1" }
 
 
 Les fonctions
@@ -201,49 +234,55 @@ Les fonctions
 
     #. Fonctions simples
 
-        .. code:: javascript
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
 
-            // Déclaration
-            function myFunct(myArg1, myArg2){
-                // un super code ...
-                }
+        // Déclaration
+        function myFunct(myArg1, myArg2){
+            // un super code ...
+        }
 
-            // appel
-            myFunct()
+        // appel
+        myFunct()
 
-            /* Variante */
-            var myFunct(myArg1, myArg2) => {
-                //un super code ...
-                }
-            // Le mot clef "function" est suprimé, alors que la flèche " => " est insérée entre
-            // les parenthèses et les accolades
+        /* Variante */
+        var myFunct(myArg1, myArg2) => {
+            //un super code ...
+            }
+        // Le mot clef "function" est suprimé, alors que la flèche " => " est insérée entre
+        // les parenthèses et les accolades
 
-            //si la fonction n'a pas d'argument
-            var myFunct = () => {
-                //un super code ...
-                }
+        //si la fonction n'a pas d'argument
+        var myFunct = () => {
+            //un super code ...
+            }
 
     #. Fonctions anonymes
 
-        .. code:: javascript
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
 
-            // déclaration
-            function (myArg){
-                // un super code ...
-                }
+        // déclaration
+        function (myArg){
+            // un super code ...
+        }
 
     #. Exécution immédiate d'une fonction, sans appel préalable
 
-        .. code:: javascript
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
 
-            (function (myArg){
-                // super code ...
-                })();
+        (function (myArg){
+            // super code ...
+        })();
 
-            /* Cette syntaxe permet d'exécuter du code isolé
-            sans appel préalable d'une 
-            fonction. La fonction anonyme est exécutée automatiquement (et immédiatement)
-            */
+        /* Cette syntaxe permet d'exécuter du code isolé
+        sans appel préalable d'une 
+        fonction. La fonction anonyme est exécutée automatiquement (et immédiatement)
+        */
 
 Opérateur < ... > (spread)
 --------------------------
@@ -253,44 +292,47 @@ intégrable par d'autres objet.
 
 exemple : Création dans "personne2", d'une copie de "personne"
 
-    .. code:: javascript
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
 
         var personne = {
             nom : "aa",
             prenom : "zz"};
 
-        var ville = "ee";
+            var ville = "ee";
 
     #. Sans l'opérateur spread
 
-        .. code:: javascript
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
 
-            var personne2 = {
-                personne,
-                ville};
+        var personne2 = {
+            personne,
+            ville};
 
-        ::
 
-            personne2;
-            {…}
-                personne: Object { nom: "aa", prenom: "zz"}
-                ville: "ee"
+        personne2;
+        {…}
+            personne: Object { nom: "aa", prenom: "zz"}
+            ville: "ee"
 
     #. Avec l'opérateur spread
 
-        .. code:: javascript
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
 
-            var personne2 = {
-                ...personne,
-                ville};
+        var personne2 = {
+            ...personne,
+            ville};
 
-        ::
-
-            personne2;
-            {…}
-                nom: "aa"
-                prenom: "zz"
-                ville: "ee"
+        personne2;
+        {…}
+            nom: "aa"
+            prenom: "zz"
+            ville: "ee"
 
 Dans le premier cas, on constate que l'objet "personne" est maintenant une propriété de "personne2".
 Dans le second cas, seules les propriétés de "personne" ont été ajoutée à "personne2".
@@ -301,27 +343,31 @@ Les classes
 La Création d'une classe se fait avec le mot clef : **class**. La création d'une instance se fait
 avec le mot clef : **new**.
 
-    .. code:: javascript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        class Personne{
-            //...
-            }
+    class Personne{
+        //...
+    }
 
-        personne = new Personne();
+    personne = new Personne();
 
 La définission d'attribut de classe se fait dans une méthode **"construtor()"**. Cette méthode est
 appellée automatiquement à la création d'une instance de la classe. C'est l'équivalent de la
 méthode **"__init__()"** en Python. La définition d'attribut ou l'appel d'une méthode depuis une autre
 méthode de la classe doit être précéder de **"this"**. c'est l'équivalent de **"self"** en Python.
 
-    .. code:: javascript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        class Personne{
-            constructor(nom, prenom){
-                this.nom = nom;
-                this.prenom = prenom;
-            }
+    class Personne{
+        constructor(nom, prenom){
+            this.nom = nom;
+            this.prenom = prenom;
         }
+    }
 
 Héritage de classe
 ^^^^^^^^^^^^^^^^^^
@@ -330,21 +376,23 @@ L'héritage d'une classe se fait par lajout du terme **"extends" suivie du nom d
 dans la déclaration de classe. Il faut égallement appeller la méthode **"super()"** dans la méthode
 **"constructor()"** de la classe fille.
 
-    .. code:: javascript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        class Homme extends Personne{
-            constructor(nom, prenom){
-                super(nom, prenom);     //Equivalent de Personne.constructor(nom, prenom)
-                this.sexe = "H";
-            }
-
-            log(){
-                console.log(`nom : ${this.nom}, prenom : ${this.prenom}`);
-            }
+    class Homme extends Personne{
+        constructor(nom, prenom){
+            super(nom, prenom);     //Equivalent de Personne.constructor(nom, prenom)
+            this.sexe = "H";
         }
 
-        var personne = new Homme("Bond", "James");
-        personne.log();
+        log(){
+            console.log(`nom : ${this.nom}, prenom : ${this.prenom}`);
+        }
+    }
+
+    var personne = new Homme("Bond", "James");
+    personne.log();
 
 Import / Inclusion de module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -355,98 +403,170 @@ impose de connaitre à l'avance toutes les dépendances et donc nous oblige à i
 fichiers dans l'ordre. De plus le fichier HTML est alors surchargé ce qui peux le rendre difficile
 à maintenir.
 
-    .. code:: HTML
+.. code-block:: html
+   :linenos:
+   :force:
 
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="utf-8">
-            </head>
 
-            <body>
-            </body>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+        </head>
 
-            <!-- Inclusion des modules externes -->
-            <script src="./personne.js"></script>
-            <script src="./homme.js"></script>
-            <script>
-                var personne = new Homme("Bond", "James");
-                personne.log();
-            </script></script>>
-        </html>
+        <body>
+        </body>
+
+        <!-- Inclusion des modules externes -->
+        <script src="./personne.js"></script>
+        <script src="./homme.js"></script>
+        <script>
+            var personne = new Homme("Bond", "James");
+            personne.log();
+        </script></script>>
+    </html>
 
 Pour éviter ces problèmes, il faut créer des modules en choisissant les éléments à exposer à l'Aide
 du termes **"export"**. Le ficher deveint un module à ce moment là. Il est possible d'exporter
 plusieurs éléments en les séparant par des virgules.
 
-    .. code:: javascript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        //module "personne.js"
-        class Personne{
-            constructor(nom, prenom){
-                this.nom = nom;
-                this.prenom = prenom;
-            }
-            log(){
-                console.log(`nom : ${this.nom}, prenom : ${this.prenom}`);
-            }
+    //module "personne.js"
+    class Personne{
+        constructor(nom, prenom){
+            this.nom = nom;
+            this.prenom = prenom;
         }
+        log(){
+            console.log(`nom : ${this.nom}, prenom : ${this.prenom}`);
+        }
+    }
 
-        export {Personne};
+    export {Personne};
 
 L'utilisation de ces modules se fait à l'aide de la commande **"import [...] from [...]"**.
 
-    .. code:: javascript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        // Module "Homme"
-        import {Personne} from "./personne.js";
+    // Module "Homme"
+    import {Personne} from "./personne.js";
 
-        class Homme extends Personne{
-            constructor(nom, prenom){
-                super(nom, prenom);     //Equivalent de Personne.constructor(nom, prenom)
-                this.sexe = "H";
-            }
-
-            log(){
-                super.log();
-                console.log("C'est un homme !");
-            }
+    class Homme extends Personne{
+        constructor(nom, prenom){
+            super(nom, prenom);     //Equivalent de Personne.constructor(nom, prenom)
+            this.sexe = "H";
         }
 
-        export {Homme};
+        log(){
+            super.log();
+            console.log("C'est un homme !");
+        }
+    }
+
+    export {Homme};
 
 IL est conseiller d'importer tous les modules dans un seul fichier.
 
-    .. code:: javascript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        import {Personne} from "./personne.js";
-        import {Homme} from "./homme.js";
+    import {Personne} from "./personne.js";
+    import {Homme} from "./homme.js";
 
-        var personne = new Personne("Gabin", "Jean");
-        personne.log();
+    var personne = new Personne("Gabin", "Jean");
+    personne.log();
 
-        var personne2 = new Homme("Bond", "James");
-        personne2.log();
+    var personne2 = new Homme("Bond", "James");
+    personne2.log();
 
 On peux ensuite importer Ce fichier dans une balise **"script"** de type **"module"** dans le
 fichier html.
 
-    .. code:: html
+.. code-block:: html
+   :linenos:
+   :force:
 
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="utf-8">
-            </head>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+        </head>
 
-            <body>
-            </body>
+        <body>
+        </body>
 
-            <!-- Inclusion des modules externes -->
-            <script type="module" src="./index.js"></Script>
-        </html>
+        <!-- Inclusion des modules externes -->
+        <script type="module" src="./index.js"></Script>
+    </html>
 
 ####
+
+.. index::
+   single: JavaScript; JSX
+   single: React; JSX
+   single: WEB; JSX
+
+---
+JSX
+---
+
+    :Liens_Web:
+        * `Introduction à JSX`_
+        .. _`Introduction à JSX`: https://fr.reactjs.org/docs/introducing-jsx.html
+
+        * `JSX dans le détail`_
+        .. _`JSX dans le détail`: https://fr.reactjs.org/docs/jsx-in-depth.html
+
+Le JSX est l'encapsulation d'un pseudo HTML dans du Javascript. cela permet donc de simplifier
+l'écriture.
+
+.. code-block:: JavaScript
+   :linenos:
+   :force:
+
+    //Expression en JSX
+    const element = (
+        <h1 className="greeting">
+            Je s'appelle Groot !
+        </h1>
+    );
+
+    //Expression en REACT
+    const element = React.createlement(
+        'h1',
+        {className: 'greeting'},
+        'Je s'appelle Groot !'
+    );
+
+
+Ces deux expressions sont équivlente.
+
+Spécificité syntaxique
+======================
+
+    * Le mot clef **'class'** habituellement utilisé dans le html ne peut pas être utilisé en JSX
+      car c'est égallement un mot clef utilisé en Javascript. Dans les expressions JSX, ce mot clef
+      est remplacé par **"className"**.
+
+    * Les mots clefs composés (séparé par "_") utilisés en CSS sont systématiquement remplacé par
+      le formatage en **lowerCamelCase**
+
+    * React considère les composants commençant par des lettres minuscules comme des balises DOM. 
+      Par exemple, <div /> représente une balise HTML div, mais <Welcome /> représente un
+      composant, et exige que l’identifiant Welcome existe dans la portée courante.
+
+####
+
+.. index::
+   single: React; React
+   single: JavaScript; React
+   single: WEB; React
 
 --------
 React.js
@@ -465,26 +585,7 @@ seront ensuite assemblé pour former l'application finale.
 
 **React Native** (une variante de React) permet de créer des application IPhone ou Android.
 
-React affiche sont propre html au travers du **JSX**. Le JSX est l'encapsulation d'un pseudo HTML
-dans du Javascript. cela permet donc de simplifier l'écriture.
-
-    .. code:: javascript 
-
-        //Expression en JSX
-        const element = (
-            <h1 className="greeting">
-                Je s'appelle Groot !
-            </h1>
-        );
-
-        //Expression en REACT
-        const element = React.createlement(
-            'h1',
-            {className: 'greeting'},
-            'Je s'appelle Groot !'
-        );
-
-Ces deux expressions sont équivlente.
+React affiche sont propre html au travers du **JSX**. 
 
 On s'interdit donc d'écrire du html dans le ficher ".html" à
 l'éxecption du code minimum et des balises <div> qui accueilleront le html de React.
@@ -501,101 +602,101 @@ Attention, les deux bibliothèques sont fournie en version **"development"** et 
 
 Le code minimale d'une page est donc :
 
-    .. code:: html
+.. code-block:: html
+   :linenos:
+   :force:
 
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="utf-8">
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
 
-                <!-- CDN React - Development -->
-                <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-                <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+            <!-- CDN React - Development -->
+            <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
-                <!-- CDN React - Production -->
-                <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script> -->
-                <!-- <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
+            <!-- CDN React - Production -->
+            <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script> -->
+            <!-- <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
+        </head>
 
-            </head>
+        <body>
+            <div id="app"></div>
+        </body>
 
-            <body>
-                <div id="app"></div>
-            </body>
-
-            <script>
-                // code React ICI.
-                // ou inclusion d'un module (Ne pas oublier type="module" dans la balise <script>)
-            </script>
-        </html>
-
-Spécificité syntaxique
-======================
-
-    * Le mot clef **'class'** habituellement utilisé dans le html ne peut pas être utilisé en JSX
-      car c'est égallement un mot clef utilisé en Javascript. Dans les expressions JSX, ce mot clef
-      est remplacé par **"className"**.
-
-    * Les mots clefs composés (séparé par "_") utilisés en CSS sont systématiquement remplacé par
-      le formatage en **lowerCamelCase**
-
-    * React considère les composants commençant par des lettres minuscules comme des balises DOM. 
-      Par exemple, <div /> représente une balise HTML div, mais <Welcome /> représente un
-      composant, et exige que l’identifiant Welcome existe dans la portée courante.
+        <script>
+            // code React ICI.
+            // ou inclusion d'un module (Ne pas oublier type="module" dans la balise <script>)
+        </script>
+    </html>
 
 Composants
 ==========
 
+.. rubric:: Fonction composant
+
 Une **fonction composant** est une fonction Javascript qui n'accepte qu'un seul argument appellé
 **props** qui signifie "propriétés".
 
-    .. code:: JavaScript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-            function Welcome(props){
-                return <h1>Bonjour, {props.name}</h1>;
-                }
-            }
-
+    function Welcome(props){
+        return <h1>Bonjour, {props.name} </h1>;
+        }
+    }
 
 On peut également utiliser une classe ES6 pour définir un composant.
 
-    .. code:: javascript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        class Welcome extends React.Component{
-            render() {
-                return <h1>Bonjour, {this.props.name}</h1>;
-            }
+    class Welcome extends React.Component{
+        render() {
+            return <h1>Bonjour, {this.props.name}</h1>;
         }
+    }
 
 Ces 2 composants sont équivalents.
 
+.. rubric:: Rendu d’un composant
+
 Les éléments peuvent soit représenter un éléments du DOM :
 
-    .. code:: javascript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        const element = <div />;
+    const element = <div />;
 
 soit représenter un élément définis par l'utilisateur :
 
-    .. code:: javascript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        const element = <Welcome name="Sara"/>;
+    const element = <Welcome name="Sara"/>;
 
 Lorsque React rencontre un élément représentant un composant défini par l’utilisateur, il transmet
 les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelons cet objet **"props"**.
 
 **Le rendu** se fait en appellant **ReactDOM.render()**.
 
-    .. code:: javascript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        function Welcome(props){
-            return <h1>Bonjour, {props.name}</h1>;
-        }
+    function Welcome(props){
+        return <h1>Bonjour, {props.name}</h1>;
+    }
 
-        const element = <Welcome name="Sara"/>;
-        ReactDOM.render(
-            element,
-            document.getElementById('root')
-        );
+    const element = <Welcome name="Sara"/>;
+    ReactDOM.render(
+        element,
+        document.getElementById('root')
+    );
 
 Détail du déroulement de l'exemple précedent :
 
@@ -608,92 +709,108 @@ Détail du déroulement de l'exemple précedent :
 
     #. React DOM met à jour efficacement le DOM pour correspondre à <h1>Bonjour, Sara</h1>.
 
+.. rubric:: Extraire des composants
+
 En règle générale, les nouvelles applications React ont un seul composant **App** à la racine.
 C'est l'équivalent d'une fonction *main()*. Pour faciliter la maintenance et la portabilité des
 éléments, il est conseiller d'avoir un composant **App** le plus simple possible. Pour cela, on
 doit isoler, chaque fois que c'est possible, les éléments en composants plus petits (et monotache).
 
-    .. code:: JavaScript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        function Comment(props) {
-            return (
-                <div className="Comment">
-                    <div className="UserInfo">
-                        <img className="Avatar"
-                            src={props.author.avatarUrl}
-                            alt={props.author.name}
-                        />
-                        <div className="UserInfo-name">
-                            {props.author.name}
-                        </div>
-                    </div>
-                    <div className="Comment-text">
-                        {props.name}
-                    </div>
-                    <div className="Comment-date">
-                        {formatDate(props.date)}
-                    </div>
-                </div>
-            );
-        }
-
-Si on définit séparément les composant **Avatar** et **UserInfo**, on pourra alors simplifier le
-composant **Comment** :
-
-    .. code:: JavaScript
-
-        // Composant "Avatar"
-        function Avatar(props) {
-            return (
-                <img className="Avatar"
-                src={props.user.avatarUrl}
-                alt={props.user.name}
-                />
-            );
-        }
-
-        // Composant "UserInfo"
-        function UserInfo(props) {
-            return (
+    function Comment(props) {
+        return (
+            <div className="Comment">
                 <div className="UserInfo">
-                <Avatar user={props.user} />
-                <div className="UserInfo-name">
-                    {props.user.name}
+                    <img className="Avatar"
+                        src={props.author.avatarUrl}
+                        alt={props.author.name}
+                    />
+                    <div className="UserInfo-name">
+                        {props.author.name}
+                    </div>
                 </div>
-                </div>
-            );
-        }
-
-        // composant "Comment"
-        function Comment(props) {
-            return (
-                <div className="Comment">
-                <UserInfo user={props.author} />
                 <div className="Comment-text">
-                    {props.text}
+                    {props.name}
                 </div>
                 <div className="Comment-date">
                     {formatDate(props.date)}
                 </div>
-                </div>
-            );
-        }
+            </div>
+        );
+    }
+
+Si on définit séparément les composant **Avatar** et **UserInfo**, on pourra alors simplifier le
+composant **Comment** :
+
+.. code-block:: JavaScript
+   :linenos:
+   :force:
+
+    // Composant "Avatar"
+    function Avatar(props) {
+        return (
+            <img className="Avatar"
+            src={props.user.avatarUrl}
+            alt={props.user.name}
+            />
+        );
+    }
+
+    // Composant "UserInfo"
+    function UserInfo(props) {
+        return (
+            <div className="UserInfo">
+            <Avatar user={props.user} />
+            <div className="UserInfo-name">
+                {props.user.name}
+            </div>
+            </div>
+        );
+    }
+
+    // composant "Comment"
+    function Comment(props) {
+        return (
+            <div className="Comment">
+            <UserInfo user={props.author} />
+            <div className="Comment-text">
+                {props.text}
+            </div>
+            <div className="Comment-date">
+                {formatDate(props.date)}
+            </div>
+            </div>
+        );
+    }
+
+.. rubric:: Les props sont en lecture seule 
 
 Une fonction est dite "pure" si elle ne tente pas de modifier ses entrées et retourne toujours le
 même résultat avec les même entrées.
 
-    .. code:: JavaScript
+.. code-block:: JavaScript
+   :linenos:
+   :force:
 
-        // Une fonction pure (qui ne modifie pas ces propres entrées)
-        function sum(a, b) {
-            return a + b;
-        }
+    // Une fonction pure (qui ne modifie pas ces propres entrées)
+    function sum(a, b) {
+        return a + b;
+    }
 
-        // Une fonction impure (qui modifie ces propres entrées)
-        function withdraw(account, amout) {
-            account.total -= amount;
-        }
+    // Une fonction impure (qui modifie ces propres entrées)
+    function withdraw(account, amout) {
+        account.total -= amount;
+    }
 
 React applique une règle stricte :
 
     **"Tout composant React doit agir comme une fonction pure vis-a-vis de ses props"**
+
+--------
+Weblinks
+--------
+
+.. target-notes::
