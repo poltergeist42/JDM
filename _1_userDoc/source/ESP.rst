@@ -231,7 +231,7 @@ PINOUT
 ======
 
 :Wemos_mini_ESP32:
- .. image:: ./Images/ESP32/PINMAP.pngwemos_esp32t.jpg
+ .. image:: ./Images/ESP32/wemos_esp32t.jpg
      :width: 400 px
      :align: center
 
@@ -246,9 +246,10 @@ Broches spécialles
 
     * **Pin 22** : I2C SCL
 
-    * **Pins 6, 7, 8, 11, 16, and 17** are used for connecting the embedded flash, and are not recommended for other uses
-    * **Pins 34-39** are input only, and also do not have internal pull-up resistors
-    The pull value of some pins can be set to Pin.PULL_HOLD to reduce power consumption during deepsleep.
+    * **Pins 6, 7, 8, 11, 16, and 17** are used for connecting the embedded flash, and are not
+      recommended for other uses
+    * **Pins 34-39** are input only, and also do not have internal pull-up resistors. The pull
+      value of some pins can be set to Pin.PULL_HOLD to reduce power consumption during deepsleep.
 
     * **GPIO0** : Ne pas utiliser car elle empêche le démarrage.
 
@@ -278,14 +279,14 @@ RSHELL
                     un émulateur terminal. 
 
 Installation et démarrage
--------------------------
+=========================
 
 RSHELL est un programme python : ::
 
     pip install rshell
 
 Ouvrir une session
-++++++++++++++++++
+------------------
 
     :/!\\Attention/!\\: Sur un ESP8266, il est impératif de réduire la taille du buffer à 128 octets
                         pour le pas écraser le système de fichier.
@@ -301,7 +302,7 @@ L'ouverture de session se fait avec la commande suivante : ::
     rshell --port COM3 --baud 115200 --buffer-size 128
 
 Utilisation
------------
+===========
 
     * help : pour obtenir la liste des commandes : ::
 
@@ -312,7 +313,7 @@ Utilisation
         boards  cd   cp       edit  filesize  help      mkdir  rm    shell
 
 Accéder au système de fichier de la carte
-+++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------
 
     * Pour accéder au système de fichier : ::
 
@@ -332,7 +333,7 @@ Accéder au système de fichier de la carte
         /sdcard
 
 Créer un fichier
-++++++++++++++++
+----------------
 
     #. Se connecter au REPL : ::
 
@@ -367,7 +368,7 @@ Créer un fichier
         # main.py
 
 Copier un fichier local sur la carte
-++++++++++++++++++++++++++++++++++++
+------------------------------------
 
     ::
 
