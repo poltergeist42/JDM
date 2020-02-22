@@ -7,14 +7,15 @@ JavaScript / REACT.js / node.js
    :depth: 3
 
 :Liens_Web:
-            * https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript
-              # Cours (FR) pour l'apprentissage du langage
+            * `Cours (FR) pour l'apprentissage du langage`_
 
-            * https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference
-              # Doc + tuto (FR)
+            * `Doc + tuto (FR)`_
 
-            * https://jsfiddle.net/
-              #pour tester du code JS
+            * `pour tester du code JS`_
+
+.. _`Cours (FR) pour l'apprentissage du langage`: https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript
+.. _`Doc + tuto (FR)`: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference
+.. _`pour tester du code JS`: https://jsfiddle.net/
               
 ####
 
@@ -517,14 +518,22 @@ JSX
 ---
 
     :Liens_Web:
+        * `Les bases du JSX`_
         * `Introduction à JSX`_
-        .. _`Introduction à JSX`: https://fr.reactjs.org/docs/introducing-jsx.html
-
         * `JSX dans le détail`_
-        .. _`JSX dans le détail`: https://fr.reactjs.org/docs/jsx-in-depth.html
+
+.. _`Les bases du JSX`: https://www.apprendre-react.fr/tutorial/debutant/jsx/
+.. _`Introduction à JSX`: https://fr.reactjs.org/docs/introducing-jsx.html
+.. _`JSX dans le détail`: https://fr.reactjs.org/docs/jsx-in-depth.html
+
+Definission de JSX
+==================
 
 Le JSX est l'encapsulation d'un pseudo HTML dans du Javascript. cela permet donc de simplifier
-l'écriture.
+l'écriture. C'est ce que l'on appel du *"sucre syntaxique"*.
+
+On écris le html directement dans le code JavaScript, ce qui nous permet d'y inclure directement
+des composants React.
 
 .. code-block:: JavaScript
    :linenos:
@@ -533,7 +542,7 @@ l'écriture.
     //Expression en JSX
     const element = (
         <h1 className="greeting">
-            Je s'appelle Groot !
+            Je s'appel Groot !
         </h1>
     );
 
@@ -544,11 +553,71 @@ l'écriture.
         'Je s'appelle Groot !'
     );
 
-
 Ces deux expressions sont équivlente.
 
-Spécificité syntaxique
-======================
+Il est possible d'ajouter des commentaire dans une expression JSX. Les commentaire s'écrivent
+comme pour le JavaScript mais entourés d'accolades.
+
+.. code-block:: JavaScript
+   :linenos:
+   :force:
+
+    const element = (
+        <h1>
+            {/* un super commentaire bien pertinent */}
+            Je s'appelle Groot !
+        </h1>
+    );
+
+Interpréter le JSX dans un navigateur
+=====================================
+
+Le JSX n'est pas nativement interpréter par les navigateurs. Pour interpréter le JSX dans le
+navigateur, il faut le prévoir dans le HTML en ajoutant une la bibliothèque **"Babel"** au moyen de la
+balise *<src="...">*. Il faut également inclure l'attribut *type="text/babel"* dans la balise
+script contenant le JSX.
+
+.. code-block:: html
+   :linenos:
+   :emphasize-lines: 10, 17
+   :force:
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <!-- CDN React - Development -->
+            <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+            <!-- imort de Babel (Dev uniquement) -->
+            <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        </head>
+        <body>
+            <div id="app"></div>
+        </body>
+
+        <!-- Balise 'script' avec l'option 'text/babel -->
+        <script type="text/babel">
+            const element = (
+                <h1>
+                    Je s'appel Groot !
+                </h1>
+            );
+            ReactDOM.render(element, document.getElementById("app"));
+        </script>
+    </html>
+
+.. warning::
+
+    L'inclusion de Babel pour interpréter le JSX ralentie le programme. En effet, cela ajoute une
+    étape de traduction supplémentaire au processus. 
+    
+    L'inclusion de Babel est donc a reserver à la phase de **Developpement**. En phase de
+    **production** on utilisera d'autres outils tel que **Webpack** pour créer un package.
+
+Details syntaxique
+==================
 
     * Le mot clef **'class'** habituellement utilisé dans le html ne peut pas être utilisé en JSX
       car c'est égallement un mot clef utilisé en Javascript. Dans les expressions JSX, ce mot clef
@@ -557,9 +626,9 @@ Spécificité syntaxique
     * Les mots clefs composés (séparé par "_") utilisés en CSS sont systématiquement remplacé par
       le formatage en **lowerCamelCase**
 
-    * React considère les composants commençant par des lettres minuscules comme des balises DOM. 
-      Par exemple, <div /> représente une balise HTML div, mais <Welcome /> représente un
-      composant, et exige que l’identifiant Welcome existe dans la portée courante.
+    * JSX (et donc React) considère les composants commençant par des lettres minuscules comme des
+      balises DOM. Par exemple, <div /> représente une balise HTML div, mais <Welcome /> représente
+      un composant, et exige que l’identifiant Welcome existe dans la portée courante.
 
 ####
 
@@ -573,9 +642,15 @@ React.js
 --------
 
     :Liens_Web:
+            * `Site officiel React`_
+
+
+
             * https://reactjs.org/docs/cdn-links.html
                 # Doc officiel permettant le téléchargement des liens CDN à inserer dans
                   la page HTML
+
+.. _`Site officiel React`: https://fr.reactjs.org/docs/getting-started.html
 
 React est une bibliothèque Javascript, utilisée pour créer des composants d'affiche. Dans le modèle
 MVC, React correspond à la **Vue**.
@@ -661,7 +736,19 @@ On peut également utiliser une classe ES6 pour définir un composant.
 
 Ces 2 composants sont équivalents.
 
-.. rubric:: Rendu d’un composant
+.. rubric:: Rendu d’un composant : Comment lier React au DOM ?
+
+Pour lier une application au DOM, il faut utiliser le package ReactDOM et la fonction render avec
+en paramètres, le somposant racine de l'application et le noeud du DOM auquel il sera attaché.
+
+.. code-block:: JavaScript
+   :linenos:
+   :force:
+
+    ReactDOM.render(
+        <MonApplication />,
+        docment.getElementById('root')
+    );
 
 Les éléments peuvent soit représenter un éléments du DOM :
 
