@@ -2,6 +2,10 @@
 HTML_CSS
 ========
 
+.. contents::
+   :backlinks: top
+   :depth: 3
+
 :Liens_Web:
             * https://html.com/attributes/img-src/
                 # Index et syntaxe du html
@@ -25,6 +29,10 @@ HTML_CSS
                 # Index des commandes CSS
 
 ####
+
+.. index::
+   single: HTML; HTML
+   single: WEB; HTML
 
 ----
 HTML
