@@ -20,7 +20,7 @@ JavaScript / REACT.js / node.js
 ####
 
 .. index::
-   single: JavaScript; JavaScript
+   single: JavaScript
    single: WEB; JavaScript
 
 ----------
@@ -509,6 +509,7 @@ fichier html.
 ####
 
 .. index::
+   single: JSX
    single: JavaScript; JSX
    single: React; JSX
    single: WEB; JSX
@@ -633,7 +634,7 @@ Details syntaxique
 ####
 
 .. index::
-   single: React; React
+   single: React
    single: JavaScript; React
    single: WEB; React
 

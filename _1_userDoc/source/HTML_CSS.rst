@@ -7,31 +7,28 @@ HTML_CSS
    :depth: 3
 
 :Liens_Web:
-            * https://html.com/attributes/img-src/
-                # Index et syntaxe du html
+            * `Index et syntaxe du html`_
 
-            * http://www.html5-css3-pense-bete.fr/
-                # pense bête html5 et CSS3
+            * `pense bête html5 et CSS3`_
 
-            * http://slideplayer.fr/slide/1694038/
-                # petit slide (68 pages) de présentation du CSS
               
-            * http://41mag.fr/liste-des-balises-html5/balise-br-html5
-                # Glossaire de toutes les balises html5
+            * `Glossaire de toutes les balises html5`_
                 
-            * http://www.phpoc.com/forum/viewforum.php?f=51
-                # De nombreux examples d'utilisation du **CANVAS** et HTML5
+            * `De nombreux examples d'utilisation du **CANVAS** et HTML5`_
                 
-            * http://putaindecode.io/fr/articles/github/pages/site-web-gratuit/
-                # Site traitant de la programmation des site WEB
+            * `Site traitant de la programmation des site WEB`_
 
-            * http://www.css-faciles.com/proprietes-css-liste-alphabetique.php
-                # Index des commandes CSS
+
+.. _`Index et syntaxe du html`: https://html.com/attributes/img-src/
+.. _`petit slide (68 pages) de présentation du CSS`: http://slideplayer.fr/slide/1694038/
+.. _`Glossaire de toutes les balises html5`: http://41mag.fr/liste-des-balises-html5/balise-br-html5
+.. _`De nombreux examples d'utilisation du **CANVAS** et HTML5`: http://www.phpoc.com/forum/viewforum.php?f=51
+.. _`Site traitant de la programmation des site WEB`: http://putaindecode.io/fr/articles/github/pages/site-web-gratuit/
 
 ####
 
 .. index::
-   single: HTML; HTML
+   single: HTML
    single: WEB; HTML
 
 ----
@@ -61,19 +58,32 @@ Rappel des balises courantes en HTML
 
 ####
 
+.. index::
+   single: CSS
+   single: WEB; CSS
+
 ---
 CSS
 ---
 
+:Liens_Web:
+
+            * `petit slide (68 pages) de présentation du CSS`_
+            * `Index des commandes CSS`_
+            
+.. _`pense bête html5 et CSS3`: http://www.html5-css3-pense-bete.fr/
+.. _`Index des commandes CSS`: http://www.css-faciles.com/proprietes-css-liste-alphabetique.php
+
 Sélecteur, pseudo-class et pseudo-elements
 ==========================================
 
-    :Liens_Web:
-            * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
-                # Description de l'ensemble des sélecteur (et combinaison)
+:Liens_Web:
+        * `Description de l'ensemble des sélecteur (et combinaison)`_
 
-            * https://emw3.com/css/
-                # Ensemble des sélecteurs CSS
+        * `Ensemble des sélecteurs CSS`_
+
+.. _`Description de l'ensemble des sélecteur (et combinaison)`: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
+.. _`Ensemble des sélecteurs CSS`: https://emw3.com/css/
 
 Positionnement et dimensionnement dans la fenêtre (ou dans la boite)
 ====================================================================
@@ -131,6 +141,13 @@ Le terme à recherche pour trouver les codes hexa des couleurs est : ::
 
     flat color
 
+####
+
+.. index::
+    single: Bootstrap
+   single: CSS; Bootstrap
+   single: WEB; Bootstrap
+
 ---------
 Bootstrap
 ---------
@@ -162,4 +179,10 @@ Utiliser Bootstrap Offline
         # Javascript
         <script src="js/bootstrap.min.js"></script>
 
+####
 
+--------
+Weblinks
+--------
+
+.. target-notes::
