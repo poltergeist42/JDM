@@ -47,27 +47,27 @@
 <div class="contents topic" id="sommaire">
 <p class="topic-title first">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#javascript-react-js-node-js" id="id15">JavaScript / REACT.js / node.js</a></p>
+<li><p><a class="reference internal" href="#javascript-react-js-node-js" id="id28">JavaScript / REACT.js / node.js</a></p>
 <ul>
-<li><p><a class="reference internal" href="#javascript" id="id16">JavaScript</a></p>
+<li><p><a class="reference internal" href="#javascript" id="id29">JavaScript</a></p>
 <ul>
-<li><p><a class="reference internal" href="#liste-des-commandes-de-bases" id="id17">Liste des commandes de bases</a></p></li>
-<li><p><a class="reference internal" href="#details-syntaxiques" id="id18">Détails syntaxiques</a></p></li>
+<li><p><a class="reference internal" href="#liste-des-commandes-de-bases" id="id30">Liste des commandes de bases</a></p></li>
+<li><p><a class="reference internal" href="#details-syntaxiques" id="id31">Détails syntaxiques</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#jsx" id="id19">JSX</a></p>
+<li><p><a class="reference internal" href="#jsx" id="id32">JSX</a></p>
 <ul>
-<li><p><a class="reference internal" href="#definission-de-jsx" id="id20">Definission de JSX</a></p></li>
-<li><p><a class="reference internal" href="#interpreter-le-jsx-dans-un-navigateur" id="id21">Interpréter le JSX dans un navigateur</a></p></li>
-<li><p><a class="reference internal" href="#details-syntaxique" id="id22">Details syntaxique</a></p></li>
+<li><p><a class="reference internal" href="#definission-de-jsx" id="id33">Definission de JSX</a></p></li>
+<li><p><a class="reference internal" href="#interpreter-le-jsx-dans-un-navigateur" id="id34">Interpréter le JSX dans un navigateur</a></p></li>
+<li><p><a class="reference internal" href="#details-syntaxique" id="id35">Details syntaxique</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#react-js" id="id23">React.js</a></p>
+<li><p><a class="reference internal" href="#react-js" id="id36">React.js</a></p>
 <ul>
-<li><p><a class="reference internal" href="#composants" id="id24">Composants</a></p></li>
+<li><p><a class="reference internal" href="#composants-component" id="id37">Composants (component)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#weblinks" id="id25">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id38">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -75,15 +75,72 @@
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript">Cours (FR) pour l’apprentissage du langage</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p></li>
-<li><p><a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference">Doc + tuto (FR)</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p></li>
-<li><p><a class="reference external" href="https://jsfiddle.net/">pour tester du code JS</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p></li>
+<li><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript">Cours (FR) pour l’apprentissage du langage</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a> : Le cours d’openclassrooms</p></li>
+<li><p><a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference">Doc + tuto (FR)</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a> : Info sur le MDN de Mozzilla</p></li>
+<li><p>Pour tester du code HTML, CSS et JS : <a class="reference external" href="https://jsfiddle.net/">JSFiddle</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a> ou <a class="reference external" href="https://codepen.io/">codepen.io</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p></li>
+<li><p><a class="reference external" href="https://standarjs.com">JavaScript Standard Style</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a> : une convention de syntaxe à utiliser pour écrire du
+JavaScript</p></li>
 </ul>
 </dd>
 </dl>
 <hr class="docutils" />
 <div class="section" id="javascript">
 <span id="index-0"></span><h2><a class="toc-backref" href="#sommaire">JavaScript</a><a class="headerlink" href="#javascript" title="Lien permanent vers ce titre">¶</a></h2>
+<p>JavaScript est un language interpréter conçu pour s’éxecuter coté client, c’est à dire directement
+coté navigateur.</p>
+<p>Tout comme avec le CSS, il est possible de placer le code JavaScript directement dans la page HTML
+ou dans un fichier séparé qui sera ensuite appeller depuis le HTML.</p>
+<p>Il était anciennement conseiller de faire l’appelle au fichier JS dans le « head » du fichier puisque
+c’est dans cette section que son regrouper toutes les meta-données de la page WEB. Cependant le
+chargement d’un fichier HTML étant séquentiel, il est conseiller de placer les scripts JS en bas de
+page (juste avant « &lt;/html&gt; ») pour ne pas ralentir le chargement des autres éléments.</p>
+<div class="highlight-html notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c">&lt;!-- JS directely loadded in the HTML page --&gt;</span>
+ <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+         <span class="c">&lt;!-- MetaDATA --&gt;</span>
+     <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+         <span class="c">&lt;!-- some cool stuff --&gt;</span>
+     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Je s&#39;appelle Groot !&quot;</span><span class="p">);</span>
+     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+
+ <span class="c">&lt;!-- JS loadded from a seprated file --&gt;</span>
+ <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+         <span class="c">&lt;!-- MetaDATA --&gt;</span>
+     <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+         <span class="c">&lt;!-- some cool stuff --&gt;</span>
+     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;myScript.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table></div>
 <div class="section" id="liste-des-commandes-de-bases">
 <h3><a class="toc-backref" href="#sommaire">Liste des commandes de bases</a><a class="headerlink" href="#liste-des-commandes-de-bases" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="commentaires">
@@ -114,7 +171,7 @@
 <div class="highlight-JavaScript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nx">alert</span><span class="p">()</span>
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nx">alert</span><span class="p">();</span>
  <span class="c1">//ex:</span>
  <span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="s2">&quot;un message super important&quot;</span><span class="p">;</span>
  <span class="nx">alert</span><span class="p">(</span><span class="nx">myVar</span><span class="p">);</span>
@@ -125,7 +182,7 @@
 </ol>
 <div class="highlight-JavaScript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nx">prompt</span><span class="p">()</span>
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nx">prompt</span><span class="p">();</span>
  <span class="c1">//ex:</span>
  <span class="kd">var</span> <span class="nx">entreeClavier</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;tapez du texte ici : &quot;</span><span class="p">);</span>
 </pre></div>
@@ -139,13 +196,19 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nx">confirm</span><span class="p">()</span>
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nx">confirm</span><span class="p">();</span>
  <span class="c1">//ex:</span>
  <span class="k">if</span> <span class="p">(</span><span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;Voulez-vous exécuter le code JavaScript de cette page ?&#39;</span><span class="p">))</span> <span class="p">{</span>
      <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Le code a bien été exécuté !&#39;</span><span class="p">);</span>
      <span class="p">}</span>
  <span class="cm">/* un Popup doit s&#39;ouvrir et demander de confirmer ([OK]) ou pas ([Annuler])</span>
 <span class="cm"> la valeur retournée est alors un booléin (true ou false) */</span>
+</pre></div>
+</td></tr></table></div>
+<ol class="arabic simple">
+<li><p>Affichage dans la console</p></li>
+</ol>
+<div class="highlight-JavaScript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Je s&#39;appelle Groot !&quot;</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></div>
 </div></blockquote>
@@ -216,6 +279,67 @@
 </div></blockquote>
 </li>
 </ol>
+</div></blockquote>
+</div>
+<div class="section" id="operateur">
+<h4>Opérateur<a class="headerlink" href="#operateur" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Opérateur d’égalité : « == » et « === »</p></li>
+</ol>
+<div class="highlight-JavaScript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+ <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+ <span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span><span class="p">;</span>
+
+ <span class="c1">//&quot;==&quot;  --&gt; contenu égale à</span>
+ <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">==</span> <span class="nx">b</span><span class="p">);</span>    <span class="c1">// true</span>
+ <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="o">==</span><span class="nx">c</span><span class="p">);</span>      <span class="c1">// true</span>
+
+ <span class="c1">//&quot;===&quot; --&gt; contenu et type égale à</span>
+ <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">===</span> <span class="nx">b</span><span class="p">);</span>   <span class="c1">// true</span>
+ <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="o">===</span><span class="nx">c</span><span class="p">);</span>     <span class="c1">// false</span>
+</pre></div>
+</td></tr></table></div>
+<ol class="arabic simple">
+<li><p>Opérateur ternaire</p></li>
+</ol>
+<div class="highlight-JavaScript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="cm">/* a ? [instruction 1] : [instruction 2]</span>
+
+<span class="cm">     si a est vrai</span>
+<span class="cm">         [instruction 1]</span>
+<span class="cm">     sinon</span>
+<span class="cm">         [instruction 2]</span>
+<span class="cm"> */</span>
+ <span class="c1">// ex :</span>
+ <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+ <span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">?</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&#39;a&#39; est vrai&quot;</span><span class="p">)</span> <span class="o">:</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&#39;a&#39; est faux&quot;</span><span class="p">);</span>     <span class="c1">// &quot;&#39;a&#39; est vrai&quot;</span>
+
+ <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+ <span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">?</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&#39;a&#39; est vrai&quot;</span><span class="p">)</span> <span class="o">:</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&#39;a&#39; est faux&quot;</span><span class="p">);</span>     <span class="c1">// &quot;&#39;a&#39; est faux&quot;</span>
+</pre></div>
+</td></tr></table></div>
 </div></blockquote>
 </div>
 </div>
@@ -677,6 +801,43 @@ fichier html.</p>
  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </td></tr></table></div>
+<dl class="glossary">
+<dt id="term-dom">DOM</dt><dd><p>Le DOM (Document Object Model) est une API qui réprésente et interagit avec tous types de
+documents HTML ou XML. Le DOM est un modèle de document chargé dans le navigateur. La
+représentation du document est un arbre nodal. Chaque nœud représente une partie du document
+(par exemple, un élément, une chaîne de caractères ou un commentaire).</p>
+<p>Le DOM est l’une des API les plus utilisées sur le Web parce-qu’il autorise du code exécuté
+dans un navigateur à accéder et interagir avec chaque nœud dans le document. Les nœuds peuvent
+être créés, déplacés et modifiés. Des auditeurs d’évènements (event listeners) peuvent être
+ajoutés à des nœuds et déclenchés par un évènement donné.</p>
+<p>À l’origine, DOM n’était pas standardisé. Il ne l’a été que lorsque les navigateurs ont
+commencé à implémenter JavaScript. Le DOM qui découle de cette période initiale est parfois
+appelé DOM 0. À l’heure actuelle, le W3C édicte les spécifications de la norme DOM.</p>
+<p>Source : <a class="reference external" href="https://developer.mozilla.org/fr/docs/Glossaire/DOM">DOM sur MDN web docs</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a>
+Voir aussi : <a class="reference external" href="https://fr.wikipedia.org/wiki/Document_Object_Model">DOM sur Wikipedia</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a></p>
+</dd>
+</dl>
+<dl class="glossary">
+<dt id="term-ajax">AJAX</dt><dd><p>Le JavaScript et XML asynchrone (AJAX) est une pratique de programmation qui consiste à
+construire des pages web plus complexes et plus dynamiques en utilisant une technologie connue
+sous le nom de XMLHttpRequest.</p>
+<p>AJAX vous permet de mettre à jour simplement des parties du DOM d’une page web HTML au lieu de
+devoir recharger la page entière. AJAX vous permet également de travailler de manière
+asynchrone, c’est-à-dire que votre code continue à s’exécuter pendant que la partie de votre
+page web essaie de se recharger (par opposition à la méthode synchrone qui bloque l’exécution
+de votre code jusqu’à ce que la partie de votre page web ait fini de se recharger).</p>
+<p>Avec les sites web interactifs et les standards modernes du web, AJAX est progressivement
+remplacé par des fonctions dans les cadres JavaScript et l’API standard officielle Fetch API.</p>
+<p>Source : <a class="reference external" href="https://fr.wikipedia.org/wiki/Ajax_(informatique)">AJAX sur MDN web docs</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a></p>
+<p>Voir aussi :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://fr.wikipedia.org/wiki/Ajax_(informatique)">AJAX sur WIKIPEDIA</a> <a class="footnote-reference brackets" href="#id15" id="id17">8</a></p></li>
+<li><p><a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/Guide/AJAX">AJAX, guide pour les développeurs du WEB</a> <a class="footnote-reference brackets" href="#id18" id="id19">9</a></p></li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
 <hr class="docutils" />
 </div>
 </div>
@@ -688,9 +849,9 @@ fichier html.</p>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://www.apprendre-react.fr/tutorial/debutant/jsx/">Les bases du JSX</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p></li>
-<li><p><a class="reference external" href="https://fr.reactjs.org/docs/introducing-jsx.html">Introduction à JSX</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p></li>
-<li><p><a class="reference external" href="https://fr.reactjs.org/docs/jsx-in-depth.html">JSX dans le détail</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a></p></li>
+<li><p><a class="reference external" href="https://www.apprendre-react.fr/tutorial/debutant/jsx/">Les bases du JSX</a> <a class="footnote-reference brackets" href="#id20" id="id21">10</a></p></li>
+<li><p><a class="reference external" href="https://fr.reactjs.org/docs/introducing-jsx.html">Introduction à JSX</a> <a class="footnote-reference brackets" href="#id22" id="id23">11</a></p></li>
+<li><p><a class="reference external" href="https://fr.reactjs.org/docs/jsx-in-depth.html">JSX dans le détail</a> <a class="footnote-reference brackets" href="#id24" id="id25">12</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -813,7 +974,7 @@ script contenant le JSX.</p>
 <div class="section" id="details-syntaxique">
 <h3><a class="toc-backref" href="#sommaire">Details syntaxique</a><a class="headerlink" href="#details-syntaxique" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><ul class="simple">
+<div><ul>
 <li><p>Le mot clef <strong>“class”</strong> habituellement utilisé dans le html ne peut pas être utilisé en JSX
 car c’est égallement un mot clef utilisé en Javascript. Dans les expressions JSX, ce mot clef
 est remplacé par <strong>« className »</strong>.</p></li>
@@ -822,6 +983,56 @@ le formatage en <strong>lowerCamelCase</strong></p></li>
 <li><p>JSX (et donc React) considère les composants commençant par des lettres minuscules comme des
 balises DOM. Par exemple, &lt;div /&gt; représente une balise HTML div, mais &lt;Welcome /&gt; représente
 un composant, et exige que l’identifiant Welcome existe dans la portée courante.</p></li>
+<li><p>Toutes les balises auto-fermantes doivent être fermées avec « / » avant le « &gt; »</p>
+<blockquote>
+<div><div class="highlight-html notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll"> <span class="c">&lt;!-- Balise auto-fermantes en HTML --&gt;</span>
+</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+
+<span class="hll"> <span class="c">&lt;!-- Balise auto-fermantes en JSX --&gt;</span>
+</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+</li>
+<li><p>Le JSX n’accepte de retourner qu’un seule élément parent à la fois</p>
+<blockquote>
+<div><div class="highlight-html notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span> // Code en erreur
+ import React { Component } from &#39;react&#39;
+
+ class App extends Component {
+     render() {
+         return (
+             {/* Premier composant parent */}
+             <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Je s&#39;appelle Groot !<span class="p">&lt;</span><span class="nt">h1</span><span class="p">/&gt;</span>
+             <span class="p">&lt;</span><span class="nt">div</span><span class="p">/&gt;</span>
+
+             {/* Second composant parent (Interdit !) */}
+             <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Je s&#39;appelle Pierre<span class="p">&lt;</span><span class="nt">h2</span><span class="p">/&gt;</span>
+         )
+     }
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+</li>
 </ul>
 </div></blockquote>
 <hr class="docutils" />
@@ -833,7 +1044,7 @@ un composant, et exige que l’identifiant Welcome existe dans la portée couran
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://fr.reactjs.org/docs/getting-started.html">Site officiel React</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a></p></li>
+<li><p><a class="reference external" href="https://fr.reactjs.org/docs/getting-started.html">Site officiel React</a> <a class="footnote-reference brackets" href="#id26" id="id27">13</a></p></li>
 <li><dl class="simple">
 <dt><a class="reference external" href="https://reactjs.org/docs/cdn-links.html">https://reactjs.org/docs/cdn-links.html</a></dt><dd><dl class="simple">
 <dt># Doc officiel permettant le téléchargement des liens CDN à inserer dans</dt><dd><p>la page HTML</p>
@@ -857,8 +1068,8 @@ l’éxecption du code minimum et des balises &lt;div&gt; qui accueilleront le h
 <p>React est composé de 2 bibliothèques JavaScript à inserer dans la page HTML :</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>React : Correspond à React lui même qui permet de créer des composant d’affichage réutilisable.</p></li>
-<li><p>ReactDOM : Extention permettant de visualiser, dans une page HTML, les composant créer
+<li><p><strong>React</strong> : Correspond à React lui même qui permet de créer des composant d’affichage réutilisable.</p></li>
+<li><p><strong>ReactDOM</strong> : Extention permettant de visualiser, dans une page HTML, les composant créer
 avec React.</p></li>
 </ul>
 </div></blockquote>
@@ -912,34 +1123,70 @@ avec React.</p></li>
  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </td></tr></table></div>
-<div class="section" id="composants">
-<h3><a class="toc-backref" href="#sommaire">Composants</a><a class="headerlink" href="#composants" title="Lien permanent vers ce titre">¶</a></h3>
-<p class="rubric">Fonction composant</p>
+<div class="section" id="composants-component">
+<h3><a class="toc-backref" href="#sommaire">Composants (component)</a><a class="headerlink" href="#composants-component" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="component">
+<h4>component<a class="headerlink" href="#component" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Il existe 2 types de composants. Les fonctions (appellées <strong>fonctions composants</strong>) et les classes.</p>
 <p>Une <strong>fonction composant</strong> est une fonction Javascript qui n’accepte qu’un seul argument appellé
 <strong>props</strong> qui signifie « propriétés ».</p>
 <div class="highlight-JavaScript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="kd">function</span> <span class="nx">Welcome</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">// fonction composant</span>
+ <span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span>
+
+ <span class="kd">function</span> <span class="nx">Welcome</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
      <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Bonjour</span><span class="p">,</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span> <span class="o">&lt;</span><span class="err">/h1&gt;;</span>
      <span class="p">}</span>
  <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p>On peut également utiliser une classe ES6 pour définir un composant.</p>
-<div class="highlight-JavaScript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="kr">class</span> <span class="nx">Welcome</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+<div class="highlight-JavaScript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">// class</span>
+ <span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span>
+
+ <span class="kr">class</span> <span class="nx">Welcome</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+     <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Bonjour</span><span class="p">,</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+
+ <span class="c1">// Alternative : import de React.Component à l&#39;aide du destructuring</span>
+ <span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span>
+
+ <span class="kr">class</span> <span class="nx">Welcome</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
      <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
          <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Bonjour</span><span class="p">,</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;;</span>
      <span class="p">}</span>
  <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p>Ces 2 composants sont équivalents.</p>
-<p class="rubric">Rendu d’un composant : Comment lier React au DOM ?</p>
+<p>Ces 2 composants (la fonction et la classe) sont équivalents.</p>
+<p>Une classe doit systématiquement avor une méthode <strong>« render(){return(&lt;code JSX/&gt;)} »</strong> c’est cette méthode qui modifie
+le DOM virtuel.</p>
+</div>
+<div class="section" id="rendu-dun-composant-comment-lier-react-au-dom">
+<h4>Rendu d’un composant : Comment lier React au DOM ?<a class="headerlink" href="#rendu-dun-composant-comment-lier-react-au-dom" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Pour lier une application au DOM, il faut utiliser le package ReactDOM et la fonction render avec
 en paramètres, le somposant racine de l’application et le noeud du DOM auquel il sera attaché.</p>
 <div class="highlight-JavaScript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -1141,6 +1388,7 @@ même résultat avec les même entrées.</p>
 </div></blockquote>
 </div>
 </div>
+</div>
 <div class="section" id="weblinks">
 <h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
@@ -1154,15 +1402,33 @@ même résultat avec les même entrées.</p>
 <dd><p><a class="reference external" href="https://jsfiddle.net/">https://jsfiddle.net/</a></p>
 </dd>
 <dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
-<dd><p><a class="reference external" href="https://www.apprendre-react.fr/tutorial/debutant/jsx/">https://www.apprendre-react.fr/tutorial/debutant/jsx/</a></p>
+<dd><p><a class="reference external" href="https://codepen.io/">https://codepen.io/</a></p>
 </dd>
 <dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
-<dd><p><a class="reference external" href="https://fr.reactjs.org/docs/introducing-jsx.html">https://fr.reactjs.org/docs/introducing-jsx.html</a></p>
+<dd><p><a class="reference external" href="https://standarjs.com">https://standarjs.com</a></p>
 </dd>
 <dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
-<dd><p><a class="reference external" href="https://fr.reactjs.org/docs/jsx-in-depth.html">https://fr.reactjs.org/docs/jsx-in-depth.html</a></p>
+<dd><p><a class="reference external" href="https://developer.mozilla.org/fr/docs/Glossaire/DOM">https://developer.mozilla.org/fr/docs/Glossaire/DOM</a></p>
 </dd>
 <dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id14">7</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.wikipedia.org/wiki/Document_Object_Model">https://fr.wikipedia.org/wiki/Document_Object_Model</a></p>
+</dd>
+<dt class="label" id="id15"><span class="brackets">8</span><span class="fn-backref">(<a href="#id16">1</a>,<a href="#id17">2</a>)</span></dt>
+<dd><p><a class="reference external" href="https://fr.wikipedia.org/wiki/Ajax_(informatique)">https://fr.wikipedia.org/wiki/Ajax_(informatique)</a></p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id19">9</a></span></dt>
+<dd><p><a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/Guide/AJAX">https://developer.mozilla.org/fr/docs/Web/Guide/AJAX</a></p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id21">10</a></span></dt>
+<dd><p><a class="reference external" href="https://www.apprendre-react.fr/tutorial/debutant/jsx/">https://www.apprendre-react.fr/tutorial/debutant/jsx/</a></p>
+</dd>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id23">11</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.reactjs.org/docs/introducing-jsx.html">https://fr.reactjs.org/docs/introducing-jsx.html</a></p>
+</dd>
+<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id25">12</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.reactjs.org/docs/jsx-in-depth.html">https://fr.reactjs.org/docs/jsx-in-depth.html</a></p>
+</dd>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id27">13</a></span></dt>
 <dd><p><a class="reference external" href="https://fr.reactjs.org/docs/getting-started.html">https://fr.reactjs.org/docs/getting-started.html</a></p>
 </dd>
 </dl>
@@ -1183,6 +1449,7 @@ même résultat avec les même entrées.</p>
 <li><a class="reference internal" href="#commentaires">Commentaires</a></li>
 <li><a class="reference internal" href="#interaction-avec-l-utilisateur">Interaction avec l’utilisateur</a></li>
 <li><a class="reference internal" href="#type">Type</a></li>
+<li><a class="reference internal" href="#operateur">Opérateur</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#details-syntaxiques">Détails syntaxiques</a><ul>
@@ -1207,7 +1474,11 @@ même résultat avec les même entrées.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#react-js">React.js</a><ul>
-<li><a class="reference internal" href="#composants">Composants</a></li>
+<li><a class="reference internal" href="#composants-component">Composants (component)</a><ul>
+<li><a class="reference internal" href="#component">component</a></li>
+<li><a class="reference internal" href="#rendu-dun-composant-comment-lier-react-au-dom">Rendu d’un composant : Comment lier React au DOM ?</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#weblinks">Weblinks</a></li>
