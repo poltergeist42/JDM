@@ -7,15 +7,20 @@ JavaScript / REACT.js / node.js
    :depth: 3
 
 :Liens_Web:
-            * `Cours (FR) pour l'apprentissage du langage`_
+            * `Cours (FR) pour l'apprentissage du langage`_ : Le cours d'openclassrooms
 
-            * `Doc + tuto (FR)`_
+            * `Doc + tuto (FR)`_ : Info sur le MDN de Mozzilla
 
-            * `pour tester du code JS`_
+            * Pour tester du code HTML, CSS et JS : `JSFiddle`_ ou `codepen.io`_
+
+            * `JavaScript Standard Style`_ : une convention de syntaxe à utiliser pour écrire du
+              JavaScript
 
 .. _`Cours (FR) pour l'apprentissage du langage`: https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript
 .. _`Doc + tuto (FR)`: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference
-.. _`pour tester du code JS`: https://jsfiddle.net/
+.. _`JSFiddle`: https://jsfiddle.net/
+.. _`codepen.io`: https://codepen.io/
+.. _`JavaScript Standard Style`: https://standarjs.com
               
 ####
 
@@ -26,6 +31,46 @@ JavaScript / REACT.js / node.js
 ----------
 JavaScript
 ----------
+
+JavaScript est un language interpréter conçu pour s'éxecuter coté client, c'est à dire directement
+coté navigateur.
+
+Tout comme avec le CSS, il est possible de placer le code JavaScript directement dans la page HTML
+ou dans un fichier séparé qui sera ensuite appeller depuis le HTML.
+
+Il était anciennement conseiller de faire l'appelle au fichier JS dans le "head" du fichier puisque
+c'est dans cette section que son regrouper toutes les meta-données de la page WEB. Cependant le 
+chargement d'un fichier HTML étant séquentiel, il est conseiller de placer les scripts JS en bas de
+page (juste avant "</html>") pour ne pas ralentir le chargement des autres éléments.
+
+.. code-block:: html
+   :linenos:
+   :force:
+
+    <!-- JS directely loadded in the HTML page -->
+    <html>
+        <head>
+            <!-- MetaDATA -->
+        </head>
+        <body>
+            <!-- some cool stuff -->
+        </body>
+        <script>
+            console.log("Je s'appelle Groot !");
+        </script>
+    </html>
+
+    <!-- JS loadded from a seprated file -->
+    <html>
+        <head>
+            <!-- MetaDATA -->
+        </head>
+        <body>
+            <!-- some cool stuff -->
+        </body>
+        <script type="text/javascript" src="myScript.js"></script>
+    </html>
+
 
 Liste des commandes de bases
 ============================
@@ -56,7 +101,7 @@ Interaction avec l'utilisateur
        :linenos:
        :force:
 
-        alert()
+        alert();
         //ex:
         var myVar = "un message super important";
         alert(myVar);
@@ -67,7 +112,7 @@ Interaction avec l'utilisateur
        :linenos:
        :force:
 
-        prompt()
+        prompt();
         //ex:
         var entreeClavier = prompt("tapez du texte ici : ");
 
@@ -77,13 +122,21 @@ Interaction avec l'utilisateur
        :linenos:
        :force:
 
-        confirm()
+        confirm();
         //ex:
         if (confirm('Voulez-vous exécuter le code JavaScript de cette page ?')) {
             alert('Le code a bien été exécuté !');
             }
         /* un Popup doit s'ouvrir et demander de confirmer ([OK]) ou pas ([Annuler])
         la valeur retournée est alors un booléin (true ou false) */
+
+    #. Affichage dans la console
+
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
+
+       console.log("Je s'appelle Groot !");
 
 Type
 ----
@@ -136,6 +189,48 @@ Type
             var myVar = 12;
             myVar += '';
             alert(typeof myVar);
+
+Opérateur
+---------
+
+    #. Opérateur d'égalité : "==" et "==="
+
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
+
+        var a = 1;
+        var b = 1;
+        var c = "1";
+
+        //"=="  --> contenu égale à
+        console.log(a == b);    // true
+        console.log(a==c);      // true
+
+        //"===" --> contenu et type égale à
+        console.log(a === b);   // true
+        console.log(a===c);     // false
+
+    #. Opérateur ternaire
+
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
+
+        /* a ? [instruction 1] : [instruction 2]
+
+            si a est vrai 
+                [instruction 1]
+            sinon
+                [instruction 2]
+        */
+        // ex :
+        var a = 1;
+        var myVar = a ? console.log("'a' est vrai") : console.log("'a' est faux");     // "'a' est vrai"
+
+        var a = 0;
+        var myVar = a ? console.log("'a' est vrai") : console.log("'a' est faux");     // "'a' est faux"
+
 
 Détails syntaxiques
 ===================
@@ -506,6 +601,56 @@ fichier html.
         <script type="module" src="./index.js"></Script>
     </html>
 
+.. glossary::
+
+   DOM
+    Le DOM (Document Object Model) est une API qui réprésente et interagit avec tous types de
+    documents HTML ou XML. Le DOM est un modèle de document chargé dans le navigateur. La
+    représentation du document est un arbre nodal. Chaque nœud représente une partie du document
+    (par exemple, un élément, une chaîne de caractères ou un commentaire).
+
+    Le DOM est l'une des API les plus utilisées sur le Web parce-qu'il autorise du code exécuté
+    dans un navigateur à accéder et interagir avec chaque nœud dans le document. Les nœuds peuvent
+    être créés, déplacés et modifiés. Des auditeurs d'évènements (event listeners) peuvent être
+    ajoutés à des nœuds et déclenchés par un évènement donné.
+
+    À l'origine, DOM n'était pas standardisé. Il ne l'a été que lorsque les navigateurs ont
+    commencé à implémenter JavaScript. Le DOM qui découle de cette période initiale est parfois
+    appelé DOM 0. À l'heure actuelle, le W3C édicte les spécifications de la norme DOM.
+
+    Source : `DOM sur MDN web docs`_
+    Voir aussi : `DOM sur Wikipedia`_
+
+.. _`DOM sur MDN web docs`: https://developer.mozilla.org/fr/docs/Glossaire/DOM
+.. _`DOM sur Wikipedia`: https://fr.wikipedia.org/wiki/Document_Object_Model
+
+.. glossary::
+
+   AJAX
+    Le JavaScript et XML asynchrone (AJAX) est une pratique de programmation qui consiste à
+    construire des pages web plus complexes et plus dynamiques en utilisant une technologie connue
+    sous le nom de XMLHttpRequest.
+
+    AJAX vous permet de mettre à jour simplement des parties du DOM d'une page web HTML au lieu de
+    devoir recharger la page entière. AJAX vous permet également de travailler de manière
+    asynchrone, c'est-à-dire que votre code continue à s'exécuter pendant que la partie de votre
+    page web essaie de se recharger (par opposition à la méthode synchrone qui bloque l'exécution
+    de votre code jusqu'à ce que la partie de votre page web ait fini de se recharger).
+
+    Avec les sites web interactifs et les standards modernes du web, AJAX est progressivement
+    remplacé par des fonctions dans les cadres JavaScript et l'API standard officielle Fetch API.
+
+    Source : `AJAX sur MDN web docs`_
+
+    Voir aussi : 
+
+        * `AJAX sur WIKIPEDIA`_
+        * `AJAX, guide pour les développeurs du WEB`_
+
+.. _`AJAX sur MDN web docs`: https://fr.wikipedia.org/wiki/Ajax_(informatique)
+.. _`AJAX sur WIKIPEDIA`: https://fr.wikipedia.org/wiki/Ajax_(informatique)
+.. _`AJAX, guide pour les développeurs du WEB`: https://developer.mozilla.org/fr/docs/Web/Guide/AJAX
+
 ####
 
 .. index::
@@ -631,6 +776,42 @@ Details syntaxique
       balises DOM. Par exemple, <div /> représente une balise HTML div, mais <Welcome /> représente
       un composant, et exige que l’identifiant Welcome existe dans la portée courante.
 
+    * Toutes les balises auto-fermantes doivent être fermées avec "/" avant le ">"
+
+        .. code-block:: html
+           :linenos:
+           :emphasize-lines: 1, 4
+           :force:
+
+            <!-- Balise auto-fermantes en HTML -->
+            <input type="text">
+
+            <!-- Balise auto-fermantes en JSX -->
+            <input type="text" />
+
+    * Le JSX n'accepte de retourner qu'un seule élément parent à la fois
+
+        .. code-block:: html
+           :linenos:
+           :force:
+
+            // Code en erreur
+            import React { Component } from 'react'
+
+            class App extends Component {
+                render() {
+                    return (
+                        {/* Premier composant parent */}
+                        <div>
+                            <h1>Je s'appelle Groot !<h1/>
+                        <div/>
+
+                        {/* Second composant parent (Interdit !) */}
+                        <h2>Je s'appelle Pierre<h2/>
+                    )
+                }
+
+
 ####
 
 .. index::
@@ -668,9 +849,9 @@ l'éxecption du code minimum et des balises <div> qui accueilleront le html de R
 
 React est composé de 2 bibliothèques JavaScript à inserer dans la page HTML :
 
-    * React : Correspond à React lui même qui permet de créer des composant d'affichage réutilisable.
+    * **React** : Correspond à React lui même qui permet de créer des composant d'affichage réutilisable.
 
-    * ReactDOM : Extention permettant de visualiser, dans une page HTML, les composant créer
+    * **ReactDOM** : Extention permettant de visualiser, dans une page HTML, les composant créer
       avec React.
 
 Attention, les deux bibliothèques sont fournie en version **"development"** et en version
@@ -706,10 +887,13 @@ Le code minimale d'une page est donc :
         </script>
     </html>
 
-Composants
-==========
+Composants (component)
+======================
 
-.. rubric:: Fonction composant
+component
+---------
+
+Il existe 2 types de composants. Les fonctions (appellées **fonctions composants**) et les classes.
 
 Une **fonction composant** est une fonction Javascript qui n'accepte qu'un seul argument appellé
 **props** qui signifie "propriétés".
@@ -717,6 +901,9 @@ Une **fonction composant** est une fonction Javascript qui n'accepte qu'un seul 
 .. code-block:: JavaScript
    :linenos:
    :force:
+
+    // fonction composant
+    import React from 'react'
 
     function Welcome(props){
         return <h1>Bonjour, {props.name} </h1>;
@@ -729,15 +916,32 @@ On peut également utiliser une classe ES6 pour définir un composant.
    :linenos:
    :force:
 
+    // class
+    import React from 'react'
+
     class Welcome extends React.Component{
         render() {
             return <h1>Bonjour, {this.props.name}</h1>;
         }
     }
 
-Ces 2 composants sont équivalents.
+    // Alternative : import de React.Component à l'aide du destructuring
+    import React, { Component } from 'react'
 
-.. rubric:: Rendu d’un composant : Comment lier React au DOM ?
+    class Welcome extends Component {
+        render() {
+            return <h1>Bonjour, {this.props.name}</h1>;
+        }
+    }
+
+
+Ces 2 composants (la fonction et la classe) sont équivalents.
+
+Une classe doit systématiquement avor une méthode **"render(){return(<code JSX/>)}"** c'est cette méthode qui modifie
+le DOM virtuel.
+
+Rendu d’un composant : Comment lier React au DOM ?
+--------------------------------------------------
 
 Pour lier une application au DOM, il faut utiliser le package ReactDOM et la fonction render avec
 en paramètres, le somposant racine de l'application et le noeud du DOM auquel il sera attaché.

@@ -607,6 +607,7 @@ name of the *"models.py"* file + "Admin" in the **admin.py** file.
 
 In the Admin site, we need to sort pages and keep track of changes. We also need to be able to 
 search a specific page. Add commands bellow to the admin's model class.
+
     #. See last update to keep track of change
 
         .. code:: python
