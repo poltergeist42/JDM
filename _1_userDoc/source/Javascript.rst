@@ -312,10 +312,10 @@ Déclaration des variables
             }
             console.log("Après le bloc : " + nom);      //nom == "aa"
 
-Les objets JSON
+Les objets JSON (Object)
 ---------------
 
-Les objets JSON sont l'équivalent des dictionnaire en python. On peux utiliser toute la syntaxe
+Les objets JSON sont l'équivalent des dictionnaires en python. On peux utiliser toute la syntaxe
 JSON.
 
 .. code-block:: JavaScript
@@ -323,6 +323,21 @@ JSON.
    :force:
 
     { id : "id1" }
+
+Extraire les clés (keys) pour les classé dans un tableau
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. code-block:: JavaScript
+   :linenos:
+   :force:
+
+    var myObject = { 
+        id1 : "id1",
+        id2: "id2" 
+        }
+
+    var keyFromObject = Object.keys( myObject )     //keyFromObject === ["id1", "id2"]
 
 
 Les fonctions
@@ -432,6 +447,78 @@ exemple : Création dans "personne2", d'une copie de "personne"
 
 Dans le premier cas, on constate que l'objet "personne" est maintenant une propriété de "personne2".
 Dans le second cas, seules les propriétés de "personne" ont été ajoutée à "personne2".
+
+La décomposition (detructuring)
+-------------------------------
+
+:Liens_Web:
+
+    * `Affecter par décomposistion (MDN)`_
+
+.. _`Affecter par décomposistion (MDN)`: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Affecter_par_d%C3%A9composition
+
+**L'affectation par décomposition (destructuring en anglais)** est une expression JavaScript qui permet
+d'extraire (unpack en anglais) des données d'un tableau ou d'un objet grâce à une syntaxe dont la
+forme ressemble à la structure du tableau ou de l'objet.
+
+Ces expression peuvent être utilisée pour l'affectation de valeur à une varriable, décomposer un
+objet JavaScript (un Dictionnaire) ou de décomposer les propriétés d'un objet. C'est égelement la
+forme utilisée pour n'importer que certaines classes d'une librairie et ainsi éviter de la chargé
+complétement.
+
+.. code-block:: JavaScript
+   :linenos:
+   :force:
+
+    /* Affectation */
+    var a, b, rest
+    //Affectation simple
+    [a, b] = [1, 2]                     //a===1, b===2
+
+    //Afectation avec un 'reste' grace à l'opérateur 'spread'
+    [a, b, ...rest] = [1, 2, 3, 4, 5]   //a===1, b===2, rest = [3, 4, 5]
+
+    /* Décomposer un objet */
+    //Décomposition simple
+    var o = {p: 42, q: true};
+    var {p, q} = o;                     //p===42, q===true
+
+    //Décomposition sans affectation
+    var a, b;
+    ({a, b} = {a:1, b:2});              //Les parenthèses ( ... ) utilisées autour de l'instruction
+                                        //sont nécessaires pour que la partie gauche soit bien
+                                        //interprétée comme un objet littéral et non comme un bloc.
+                                        //Il est également nécessaire d'avoir un point-virgule 
+                                        //avant les parenthèses de l'instruction car sinon, ces
+                                        //parenthèses peuvent être interprétées comme un appel de fonction.
+
+    //affectation avec un nom différent
+    var o = {p: 42, q: true};
+    var {p: toto, q: truc} = o;         //toto===42, truc===true
+
+    //Décomposer les propriétés d'objets passés en arguments
+    var user = {
+        id: 42,
+        displayName: "jbiche",
+        fullName: {
+            firstName: "Jean",
+            lastName: "Biche"
+        } 
+    };
+
+    function userId({id}) {
+        return id;
+    }
+
+    function whois({displayName: displayName, fullName: {firstName: name}}){
+        console.log(displayName + " est " + name);
+    }
+
+    console.log("userId: " + userId(user)); w// "userId: 42"
+        whois(user); // "jbiche est Jean"
+
+                                        //Cela permet d'accéder directement à id, displayName et
+                                        //firstName depuis l'objet user
 
 Les classes
 -----------
@@ -796,7 +883,7 @@ Details syntaxique
            :force:
 
             // Code en erreur
-            import React { Component } from 'react'
+            import React, { Component } from 'react'
 
             class App extends Component {
                 render() {
@@ -811,6 +898,34 @@ Details syntaxique
                     )
                 }
 
+            export default App
+
+     Pour eviter ce problème, on import "Fragment" depuis React et on entoure le JSX d'une balise
+     "<Fragment></Fragment>"
+
+        .. code-block:: html
+           :linenos:
+           :force:
+
+            // Code valide
+            import React, { Component, Fragment } from 'react'
+
+            class App extends Component {
+                render() {
+                    return (
+                        <Fragment>
+                            {/* Premier composant parent */}
+                            <div>
+                                <h1>Je s'appelle Groot !<h1/>
+                            <div/>
+
+                            {/* Second composant parent (Interdit !) */}
+                            <h2>Je s'appelle Pierre<h2/>
+                        </Fragment>
+                    )
+                }
+
+            export default App
 
 ####
 
@@ -838,7 +953,16 @@ React est une bibliothèque Javascript, utilisée pour créer des composants d'a
 MVC, React correspond à la **Vue**.
 
 Pour créer une application avec React, on va créer des composant (des classes ou des fonctions) qui
-seront ensuite assemblé pour former l'application finale.
+seront ensuite assemblé pour former l'application finale. Les composant React sont réutilisable.
+
+**React utilise un DOM virtuel**
+
+Lors de l'utilisation de bibliothèques telles que JQuery nous manipulons directement les éléments
+HTML de la page, c'est à dire le DOM. React ne manipule pas le DOM directement, mais une copie
+interne de celui-ci (appellé DOM Virtuel), et produit les modifications d'affichage uniquement
+lorsque cela s'avère nécessaire.
+
+
 
 **React Native** (une variante de React) permet de créer des application IPhone ou Android.
 
@@ -944,7 +1068,7 @@ Rendu d’un composant : Comment lier React au DOM ?
 --------------------------------------------------
 
 Pour lier une application au DOM, il faut utiliser le package ReactDOM et la fonction render avec
-en paramètres, le somposant racine de l'application et le noeud du DOM auquel il sera attaché.
+en paramètres, le composant racine de l'application et le noeud du DOM auquel il sera attaché.
 
 .. code-block:: JavaScript
    :linenos:
@@ -993,7 +1117,7 @@ les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelo
 Détail du déroulement de l'exemple précedent :
 
 
-    #. On appelle **ReactDOM.render()** avec l’élément créer par <Welcome name="Sara"/>.
+    #. On appelle **ReactDOM.render()** avec l’élément créer par <Welcome name='Sara'/>.
 
     #. React appelle le composant Welcome avec comme props {name: 'Sara'}.
 
@@ -1055,10 +1179,10 @@ composant **Comment** :
     function UserInfo(props) {
         return (
             <div className="UserInfo">
-            <Avatar user={props.user} />
-            <div className="UserInfo-name">
-                {props.user.name}
-            </div>
+                <Avatar user={props.user} />
+                <div className="UserInfo-name">
+                    {props.user.name}
+                </div>
             </div>
         );
     }
@@ -1067,15 +1191,57 @@ composant **Comment** :
     function Comment(props) {
         return (
             <div className="Comment">
-            <UserInfo user={props.author} />
-            <div className="Comment-text">
-                {props.text}
-            </div>
-            <div className="Comment-date">
-                {formatDate(props.date)}
-            </div>
+                <UserInfo user={props.author} />
+                <div className="Comment-text">
+                    {props.text}
+                </div>
+                <div className="Comment-date">
+                    {formatDate(props.date)}
+                </div>
             </div>
         );
+    }
+
+.. rubric:: Convertir une fonction en classe
+
+Il est possible de convertir une fonction en classe en quelques étapes:
+
+    #. Créez une classe, avec le même nom, qui étend React.Component (ou simplement Component si on
+       l'a importer en destructuring {component}).
+
+    #. Ajoutez-y une méthode vide appelée render().
+
+    #. Déplacez le corps de la fonction dans la méthode render().
+
+    #. Remplacez props par this.props dans le corps de la méthode render(). la méthode render n'a
+       q'un seul élément : 'return' suivie d'un bloc JSX entouré de parenthèses.
+
+    #. Supprimez la déclaration désormais vide de la fonction.
+
+.. code-block:: JavaScript
+   :linenos:
+   :force:
+
+    //Fonction Clock
+    function Clock(props) {
+        return (
+            <div>
+            <h1>Bonjour, monde !</h1>
+            <h2>Il est {props.date.toLocaleTimeString()}.</h2>
+            </div>
+        );
+    }
+
+    //Classe Clock après transformation
+    class Clock extends React.Component {
+        render() {
+            return (
+            <div>
+                <h1>Bonjour, monde !</h1>
+                <h2>Il est {this.props.date.toLocaleTimeString()}.</h2>
+            </div>
+            );
+        }
     }
 
 .. rubric:: Les props sont en lecture seule 
@@ -1099,7 +1265,47 @@ même résultat avec les même entrées.
 
 React applique une règle stricte :
 
-    **"Tout composant React doit agir comme une fonction pure vis-a-vis de ses props"**
+    **"Tout composant React doit agir comme une fonction pure vis-a-vis de ses props"**.
+
+Les fonctions composants ne pouvant manipuler que des props, on les utilisent lorsque notre
+composant ne modifie pas sont état. On parle de **Composant Stateless**.
+
+Lorsqu'un composant doit modifier son état, on utilise une classe.
+
+.. code-block:: JavaScript
+   :linenos:
+   :force:
+
+    const famille = {
+        membre1: {
+            nom: 'Pierre,
+            age: 42,
+            type: 'humain'
+        },
+        membre2: {
+            nom: 'Tartine'
+            age: 8,
+            type: 'chat'
+        }
+    }
+
+    class App extends Component {
+        // 'state = { famille }' en version destructuration
+        // 'state = { famille : famille }' en version normal
+        state = { famille }
+        render() {
+            const {titre} = this.props
+            const { famille } = this.state
+            return(
+                <div>
+                    <h1>{titre}</h1>
+                    <Membre nom={famille.membre1.nom} />
+                    <Membre nom={famille.membre2.nom} />
+                </div>
+            )
+        }
+    }
+
 
 --------
 Weblinks
