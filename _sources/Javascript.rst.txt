@@ -313,7 +313,7 @@ Déclaration des variables
             console.log("Après le bloc : " + nom);      //nom == "aa"
 
 Les objets JSON (Object)
----------------
+------------------------
 
 Les objets JSON sont l'équivalent des dictionnaires en python. On peux utiliser toute la syntaxe
 JSON.
