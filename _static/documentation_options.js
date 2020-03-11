@@ -3,7 +3,6 @@ var DOCUMENTATION_OPTIONS = {
     VERSION: '20170523',
     LANGUAGE: 'fr',
     COLLAPSE_INDEX: false,
-    BUILDER: 'html',
     FILE_SUFFIX: '.html',
     HAS_SOURCE: true,
     SOURCELINK_SUFFIX: '.txt',

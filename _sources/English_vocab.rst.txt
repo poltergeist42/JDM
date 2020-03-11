@@ -136,6 +136,9 @@ English Vocabulary
     * **verbe**
         :revendiquer qch:   - stake a claim
 
+:stand for:
+    : Signifie / représente:
+
 :surprisingly:
     * **adverbe**
         :avec surprise:

@@ -4,7 +4,6 @@ JavaScript / REACT.js / node.js
 
 .. contents::
    :backlinks: top
-   :depth: 3
 
 :Liens_Web:
             * `Cours (FR) pour l'apprentissage du langage`_ : Le cours d'openclassrooms
@@ -448,8 +447,8 @@ exemple : Création dans "personne2", d'une copie de "personne"
 Dans le premier cas, on constate que l'objet "personne" est maintenant une propriété de "personne2".
 Dans le second cas, seules les propriétés de "personne" ont été ajoutée à "personne2".
 
-La décomposition (detructuring)
--------------------------------
+La décomposition (destructuring)
+--------------------------------
 
 :Liens_Web:
 
@@ -576,6 +575,19 @@ dans la déclaration de classe. Il faut égallement appeller la méthode **"supe
 
     var personne = new Homme("Bond", "James");
     personne.log();
+
+super()
++++++++
+
+:Liens_Web:
+    * `super() : MDN web docs`_
+
+.. _`super() : MDN web docs`: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/super
+
+Le mot-clé super est utilisé afin d'appeler ou d'accéder à des fonctions définies sur l'objet
+parent.
+
+Lorsqu'il est utilisé dans un constructeur, le mot-clé super est utilisé seul et doit apparaître avant le mot-clé this. Ce mot-clé peut également être utilisé afin d'appeler des fonctions sur un objet parent.
 
 Import / Inclusion de module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -860,7 +872,7 @@ Details syntaxique
       le formatage en **lowerCamelCase**
 
     * JSX (et donc React) considère les composants commençant par des lettres minuscules comme des
-      balises DOM. Par exemple, <div /> représente une balise HTML div, mais <Welcome /> représente
+      balises :term:`DOM`. Par exemple, <div /> représente une balise HTML div, mais <Welcome /> représente
       un composant, et exige que l’identifiant Welcome existe dans la portée courante.
 
     * Toutes les balises auto-fermantes doivent être fermées avec "/" avant le ">"
@@ -1014,13 +1026,14 @@ Le code minimale d'une page est donc :
 Composants (component)
 ======================
 
-component
----------
+Les types de component
+----------------------
 
 Il existe 2 types de composants. Les fonctions (appellées **fonctions composants**) et les classes.
 
 Une **fonction composant** est une fonction Javascript qui n'accepte qu'un seul argument appellé
-**props** qui signifie "propriétés".
+**props** qui signifie "propriétés". Il peut ne pas y avoir de props. Ce composant doit
+obligatoirement retourner quelque chose 
 
 .. code-block:: JavaScript
    :linenos:
@@ -1063,6 +1076,24 @@ Ces 2 composants (la fonction et la classe) sont équivalents.
 
 Une classe doit systématiquement avor une méthode **"render(){return(<code JSX/>)}"** c'est cette méthode qui modifie
 le DOM virtuel.
+
+Choix d'un composant ? Fonction : Classe
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Le choix du type de composant doit se faire en se posant la question :
+
+    *Est ce a un état (à conserver ou à modifier) ?* On parle de **Stateful** si la réponse
+    est : NON, on parle de **Stateless**
+
+    * Une classe est (ou peut l'être) Stateful.
+
+    * Une fonction est toujours Stateless.
+
+La philisophie de React est d'avoir des composants le plus simples possible pour pouvoir les
+réutiliser plus facillement. Les fonctions sont donc à privilégier le plus souvent possible
+si le composant est Stateless.
+
+Si le composant est Stateful, il n'y à pas le choix, seule une classe répond à ce critère.
 
 Rendu d’un composant : Comment lier React au DOM ?
 --------------------------------------------------
@@ -1116,7 +1147,6 @@ les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelo
 
 Détail du déroulement de l'exemple précedent :
 
-
     #. On appelle **ReactDOM.render()** avec l’élément créer par <Welcome name='Sara'/>.
 
     #. React appelle le composant Welcome avec comme props {name: 'Sara'}.
@@ -1125,7 +1155,38 @@ Détail du déroulement de l'exemple précedent :
 
     #. React DOM met à jour efficacement le DOM pour correspondre à <h1>Bonjour, Sara</h1>.
 
-.. rubric:: Extraire des composants
+Parcourrir un tableau et l'afficher sous forme de liste
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: JavaScript
+   :linenos:
+   :force:
+
+    {/* JavaScript Object */}
+    var d= {elm1: "Je s'appelle Groot !",
+            elm2: "Je s'appelle Pierre !",
+            eml3: "Je s'appelle atarte"}
+
+    {/* Creation of an array from keys of the "d" object */}
+    var dKeys = Object.keys(d)
+    console.log("dKey : ", dKeys)
+
+    {/* Browsing the "dkeys" array with the map function. The map function use a callback function. 
+    Each item (dkey) is given as the unique key ID : ("item", "unique key")=>{...} */}
+    var ul = React.createElement("ul", null, dKeys.map(
+                                (dKey, dkey)=>{
+                                    return (
+                                        React.createElement("li", null, d[dKey])
+                                        )
+                                    }
+                                )
+                            )
+    console.log(ul)
+    {/* the "ul"  function is given to the render */}
+    ReactDOM.render(ul, document.getElementById("app"))
+
+Extraire des composants
+-----------------------
 
 En règle générale, les nouvelles applications React ont un seul composant **App** à la racine.
 C'est l'équivalent d'une fonction *main()*. Pour faciliter la maintenance et la portabilité des
@@ -1306,6 +1367,45 @@ Lorsqu'un composant doit modifier son état, on utilise une classe.
         }
     }
 
+props
+-----
+
+:Liens_Web:
+    * `What is 'props' and how to use it in React ?`_
+
+.. _`What is 'props' and how to use it in React ?`: https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0
+
+.. glossary::
+
+    Props
+        'Props' est un mot clef spécial en React qui représente les **propriétées**. Il est **utilisé pour**
+        **transmettre des données (propriétés) d'un composant à un autre.**
+
+        Les propriétés ne sont transmisent que dans un sens : du composant parent vers le composant
+        enfant. On parle de **'uni-directionnal flow'**. Les data transmisent par les props sont en
+        lectures seules. Cela signifie que **les data ne doivent pas être changées par le composant**
+        **enfant**. Si une données doit changer d'état ou de valeur, il faut utiliser les **states**.
+
+Utilisation des Props
+^^^^^^^^^^^^^^^^^^^^^
+
+Il faut se rappeler que les props sont des arguments passés aux composants.
+On peut résumer l'utilisation des props en 3 étapes:
+
+    #. On définie un attribut et sa valeur (Data) sous la forme d'un Objet 
+       JavaScript (Dictionnaire) : {Attribut: Value}.
+
+    #. On passe cet attribue à un composant enfant en utilisant 'props'.
+
+    #. On effectue le rendu de la data du props.
+
+States
+------
+
+:Liens_Web:
+    * `React JS — Understanding State`_
+
+.. _`React JS — Understanding State`: https://codeburst.io/react-js-understanding-state-e875911e921c
 
 --------
 Weblinks

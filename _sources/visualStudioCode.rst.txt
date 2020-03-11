@@ -2,9 +2,21 @@
 Visual Studio Code
 ==================
 
+.. contents::
+   :backlinks: top
+
 Snippets
 ========
 
     :Liens_Web:
-        * https://code.visualstudio.com/docs/editor/userdefinedsnippets
-            # information sur la création et l'utilisation des snippets
+        * `Création de snippets personnalisés`_ : # information sur la création et l'utilisation des snippets
+        
+.. _`Création de snippets personnalisés`: https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
+Multi-Line and multi-Cursor Editing
+===================================
+
+    :Liens_Web:
+        * `Multi-Line Editing`_
+
+.. _`Multi-Line Editing`: https://kencenerelli.wordpress.com/2018/03/25/visual-studio-code-multi-line-and-multi-cursor-editing/
