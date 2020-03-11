@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>XML_JSON &#8212; Documentation JDM 20170523</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="prev" title="Visual Studio Code" href="visualStudioCode.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="visualStudioCode.html" title="Visual Studio Code"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="xml-json">
+<h1>XML_JSON<a class="headerlink" href="#xml-json" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="format-json">
+<h2>Format JSON<a class="headerlink" href="#format-json" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ensemble des informations sur la création et l’utilisation des fichiers JSON</p>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://www.tutorialspoint.com/online_json_editor.htm">http://www.tutorialspoint.com/online_json_editor.htm</a></dt><dd><p># Générateur online de JSON</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://www.objgen.com/json?demo=true">http://www.objgen.com/json?demo=true</a></dt><dd><p># Un autre générateur de JSON</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="generalites">
+<h3>Généralités<a class="headerlink" href="#generalites" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p>TODO: ne pas laisser vide</p>
+</div></blockquote>
+</div>
+<div class="section" id="powershell">
+<h3>Powershell<a class="headerlink" href="#powershell" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p>TODO: ne pas laisser vide</p>
+</div></blockquote>
+</div>
+<div class="section" id="python">
+<h3>Python<a class="headerlink" href="#python" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="field-list">
+<dt class="field-odd">Liens WEB</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://sdz.tdct.org/sdz/serialisez-vos-objets-au-format-json.html">http://sdz.tdct.org/sdz/serialisez-vos-objets-au-format-json.html</a></dt><dd><p># utiliser json avec python, les bases et en français</p>
+</dd>
+</dl>
+</li>
+<li><p><a class="reference external" href="http://deusyss.developpez.com/tutoriels/Python/les-modules-de-configuration/">http://deusyss.developpez.com/tutoriels/Python/les-modules-de-configuration/</a></p></li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3.4/library/json.html">https://docs.python.org/3.4/library/json.html</a></dt><dd><p># la doc Python 3.4 (en)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://stackoverflow.com/questions/12309269/how-do-i-write-json-data-to-a-file-in-python">https://stackoverflow.com/questions/12309269/how-do-i-write-json-data-to-a-file-in-python</a></dt><dd><p># La fonction postée par JRCS le 24/01/2017 est intéressante</p>
+</dd>
+</dl>
+</li>
+</ul>
+<ol class="arabic">
+<li><p>Exemple d’utilisation intéressant :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">json</span> <span class="k">import</span> <span class="n">dump</span><span class="p">,</span> <span class="n">load</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">random</span>
+
+<span class="k">def</span> <span class="nf">json_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">delay</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">):</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">data</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="n">delay</span><span class="p">)</span> <span class="c1"># concurrency</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</dd>
+</dl>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="format-xml">
+<h2>Format XML<a class="headerlink" href="#format-xml" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ensemble des informations sur la création et l’utilisation des fichiers XML</p>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://fr.wikipedia.org/wiki/Extensible_Markup_Language">https://fr.wikipedia.org/wiki/Extensible_Markup_Language</a></dt><dd><p># Présentation du XML</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.tutorialspoint.com/online_xml_editor.htm">https://www.tutorialspoint.com/online_xml_editor.htm</a></dt><dd><p># Générateur online de XML</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="id1">
+<h3>Généralités<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p>TODO: ne pas laisser vide</p>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h3>Powershell<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://blog.aidalinfo.fr/?p=75">http://blog.aidalinfo.fr/?p=75</a></dt><dd><p># Exemple d’utilisation d’un fichiers XML</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id3">
+<h3>Python<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p>TODO: ne pas laisser vide</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">XML_JSON</a><ul>
+<li><a class="reference internal" href="#format-json">Format JSON</a><ul>
+<li><a class="reference internal" href="#generalites">Généralités</a></li>
+<li><a class="reference internal" href="#powershell">Powershell</a></li>
+<li><a class="reference internal" href="#python">Python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#format-xml">Format XML</a><ul>
+<li><a class="reference internal" href="#id1">Généralités</a></li>
+<li><a class="reference internal" href="#id2">Powershell</a></li>
+<li><a class="reference internal" href="#id3">Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="visualStudioCode.html"
+                        title="Chapitre précédent">Visual Studio Code</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/XML_JSON.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="visualStudioCode.html" title="Visual Studio Code"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Poltergeist42.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+    </div>
+  </body>
+</html>

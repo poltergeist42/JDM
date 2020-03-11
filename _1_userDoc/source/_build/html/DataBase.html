@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>DataBase &#8212; Documentation JDM 20170523</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="1 Django 2" href="Django.html" />
+    <link rel="prev" title="Cookbook" href="Cookbook.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Django.html" title="1 Django 2"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="Cookbook.html" title="Cookbook"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="database">
+<h1>DataBase<a class="headerlink" href="#database" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="postgresql">
+<h2>PostGreSQL<a class="headerlink" href="#postgresql" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_WEB</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.postgresql.org/docs/">https://www.postgresql.org/docs/</a></dt><dd><p># Page de documentation officiel</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.postgresql.fr/">https://www.postgresql.fr/</a></dt><dd><p># site de la communauté francophone</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://docs.postgresql.fr/10/">https://docs.postgresql.fr/10/</a></dt><dd><p># Doc (FR)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="sous-windows">
+<h4>Sous Windows<a class="headerlink" href="#sous-windows" title="Lien permanent vers ce titre">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_WEB</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.postgresql.org/download/">https://www.postgresql.org/download/</a></dt><dd><p># Page de téléchargement (toutes les versions et tous les environnements)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p>Télécharger l’install automatique et ce laisser guider. Lorsque l’installation est terminée, il faut
+ajouter les 2 chemins suivants au “PATH” dans les Variables d’environnement.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;C:\Program Files\PostgreSQL</span><span class="se">\10\b</span><span class="s2">in&quot;</span>
+<span class="s2">&quot;C:\Program Files\PostgreSQL</span><span class="se">\10</span><span class="s2">\lib&quot;</span>
+    <span class="c1"># &#39;C:\Program Files\&#39; est à adapté en fonction de m&#39;emplacement de &#39;PostgreSQL&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="redis">
+<h2>Redis<a class="headerlink" href="#redis" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_WEB</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://fr.wikipedia.org/wiki/Redis">https://fr.wikipedia.org/wiki/Redis</a>
+# Une définition de Redis</p></li>
+<li><p><a class="reference external" href="https://redis.io/">https://redis.io/</a>
+# site officiel</p></li>
+<li><p><a class="reference external" href="https://medium.com/&#64;furkanpur/installation-redis-on-windows-10-13fbb055be7c">https://medium.com/&#64;furkanpur/installation-redis-on-windows-10-13fbb055be7c</a>
+# Un guide pour l’installation de Redis sous Windows10 (avec le Bash Ubuntu)</p></li>
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Mozilla/Redis_Tips">https://developer.mozilla.org/en-US/docs/Mozilla/Redis_Tips</a>
+# Un résumé des commandes Redis</p></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="id1">
+<h3>Installation<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Redis n’est officiellement pas supporter par Windows. L’installation se fait donc uniquement en
+version Linux.</p>
+<p>L’installation sous Windows10 est tout de même possible depuis le Bash Ubuntu intégrer (activer
+le mode développeur). Lu’tilisation d’un container (docker) est également possible.</p>
+<div class="section" id="install-linux">
+<h4>Install Linux<a class="headerlink" href="#install-linux" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## Téléchargement des dépendances
+sudo apt-get install build-essential
+sudo apt-get install tcl8.5
+
+## Télchargement et décompression du paquet
+wget http://download.redis.io/releases/redis-4.0.2.tar.gz
+# --&gt; verifier si une version plus récente n&#39;existe pas
+
+tar xzf redis-4.0.2.tar.gz
+cd redis-4.0.2
+
+## Compilation des sources
+sudo make distclean
+sudo make –j
+
+## Test des éléments compilés avant l&#39;installation
+sudo make test -j
+
+## Installation du serveur
+sudo make install -j
+cd utils
+sudo ./install_server.sh
+# --&gt; Accepter tous les choix par défaut
+</pre></div>
+</div>
+</div>
+<div class="section" id="demarrer-le-serveur">
+<h4>Démarrer le serveur<a class="headerlink" href="#demarrer-le-serveur" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><ol class="arabic">
+<li><p>En mode manuelle</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Démarrer le service</span>
+<span class="n">sudo</span> <span class="n">service</span> <span class="n">redis_6379</span> <span class="n">start</span>
+
+<span class="c1"># Rédémarrer le service</span>
+<span class="n">sudo</span> <span class="n">service</span> <span class="n">redis_6379</span> <span class="n">restart</span>
+
+<span class="c1"># Arréter le service</span>
+<span class="n">sudo</span> <span class="n">service</span> <span class="n">redis_6379</span> <span class="n">stop</span>
+</pre></div>
+</div>
+</li>
+<li><p>Démarrer le service automatiquement</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">rc</span><span class="o">.</span><span class="n">d</span> <span class="n">redis_6379</span> <span class="n">defaults</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="lancer-le-cli">
+<h4>Lancer le CLI<a class="headerlink" href="#lancer-le-cli" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">redis</span><span class="o">-</span><span class="n">cli</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="utilisation-avec-python">
+<h4>Utilisation avec Python<a class="headerlink" href="#utilisation-avec-python" title="Lien permanent vers ce titre">¶</a></h4>
+<dl class="field-list">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/andymccurdy/redis-py">https://github.com/andymccurdy/redis-py</a>
+# Doc de la lib</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic">
+<li><p>Installation</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">redis</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p># Exemple d’utilisation</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">redis</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">StrictRedis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="go">&#39;bar&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">DataBase</a><ul>
+<li><a class="reference internal" href="#postgresql">PostGreSQL</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#sous-windows">Sous Windows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#redis">Redis</a><ul>
+<li><a class="reference internal" href="#id1">Installation</a><ul>
+<li><a class="reference internal" href="#install-linux">Install Linux</a></li>
+<li><a class="reference internal" href="#demarrer-le-serveur">Démarrer le serveur</a></li>
+<li><a class="reference internal" href="#lancer-le-cli">Lancer le CLI</a></li>
+<li><a class="reference internal" href="#utilisation-avec-python">Utilisation avec Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="Cookbook.html"
+                        title="Chapitre précédent">Cookbook</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="Django.html"
+                        title="Chapitre suivant"><span class="sectnum">1</span> Django 2</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/DataBase.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="Django.html" title="1 Django 2"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="Cookbook.html" title="Cookbook"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Poltergeist42.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Machine Learning &#8212; Documentation JDM 20170523</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="MQTT" href="MQTT.html" />
+    <link rel="prev" title="MAC OS" href="MAC_OS.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="MQTT.html" title="MQTT"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="MAC_OS.html" title="MAC OS"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="machine-learning">
+<h1>Machine Learning<a class="headerlink" href="#machine-learning" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="l-equation-de-bellman">
+<h2>L’équation de Bellman<a class="headerlink" href="#l-equation-de-bellman" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.rand.org/content/dam/rand/pubs/papers/2008/P550.pdf">https://www.rand.org/content/dam/rand/pubs/papers/2008/P550.pdf</a></dt><dd><p># Richard Bellman, 1954, The Theory of Dynamic Programming</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p>L’équation de Bellman est à la base de l’apprentissage par renforcement.</p>
+<div class="section" id="concept-definission">
+<h3>Concept / définission<a class="headerlink" href="#concept-definission" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(s\)</span> - State (l’état) : Il s’agit de l’état dans lequel l’environnement est.</p></li>
+<li><p><span class="math notranslate nohighlight">\(s'\)</span> : l’état dans le quel on va arriver</p></li>
+<li><p><span class="math notranslate nohighlight">\(a\)</span> - Action : Les actions que peut prendre l’agent</p></li>
+<li><p><span class="math notranslate nohighlight">\(R\)</span> - Reward (Récompense) : Récompense obtenu par l’agent pour rentrez dans un certain état
+(+1, 0 ou -1)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma\)</span> (Gamma) - Discount (Réduction): il s’agit du facteur de réduction
+(compris entre 0 et 1). Plus cette valeur est proche de 0, plus ont s’éloigne du résultat
+et / ou de la solution.</p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span> : La valeur d’un certain état</p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="equation-simplifiee">
+<h4>Equation simplifiée<a class="headerlink" href="#equation-simplifiee" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Sous cette forme simplifié, l’équation est déterministe. Elle ne tien pas compte des éléments
+aléatoires (<a class="reference external" href="https://fr.wikipedia.org/wiki/Stochastique">Stochastique</a>).</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[V(s) = \underset {a} {max} \left (R(s, a) + \gamma V(s') \right)\]</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="penalite-de-vie">
+<h3>Pénalité de vie<a class="headerlink" href="#penalite-de-vie" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La pénalité est une valeur négative (à définir soit même) affectée à chaque action. Cela permet de
+forcer l’IA à trouver une solution le plus vite possible.</p>
+<p>Plus la récompense <span class="math notranslate nohighlight">\(R\)</span> est proche de 0, moins le risque pris par l’IA sont important. Plus la
+récompense <span class="math notranslate nohighlight">\(R\)</span> est éloigné, plus les risques pris part l’IA seront important.</p>
+<p>Il faut trouver une valeur qui pousse l’IA à trouver une solution tout en ne prenant que des risques
+modérés.</p>
+<blockquote>
+<div><dl class="field-list">
+<dt class="field-odd">Exemples</dt>
+<dd class="field-odd"><p>Pour une Récompense Final de 1 si nous affectons une Récompense d’Action de 0, -0.3, -0.5
+ou -2</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Si RA= <span class="math notranslate nohighlight">\(0\)</span> : L’IA n’optimisera pas la recherche de solution.</p></li>
+<li><p>Si RA= <span class="math notranslate nohighlight">\(-0.3\)</span> : L’IA optimisera légèrement sa recherche de solution mais aucuns risque
+ne sera pris dans le choix de l’action.</p></li>
+<li><p>Si RA= <span class="math notranslate nohighlight">\(-0.5\)</span> : l’IA optimisera beaucoup sa recherche de solution, mais ne prendra que
+des risques modérés.</p></li>
+<li><p>Si RA= <span class="math notranslate nohighlight">\(-2\)</span> : l’IA prendra tous les risques possibles pour parvenir à une solution le
+plus vite possible.</p></li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="chaine-de-markov-et-processus-de-decision-markovien-mdp">
+<h3>Chaine de Markov et Processus de Décision Markovien (MDP)<a class="headerlink" href="#chaine-de-markov-et-processus-de-decision-markovien-mdp" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://pdfs.semanticscholar.org/968b/ab782e52faf0f7957ca0f38b9e9078454afe.pdf">https://pdfs.semanticscholar.org/968b/ab782e52faf0f7957ca0f38b9e9078454afe.pdf</a></dt><dd><p># Martijn van Otterlo, 2009, Markov Decision Processes: Concepts and Algorithms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://fr.wikipedia.org/wiki/Processus_stochastique">https://fr.wikipedia.org/wiki/Processus_stochastique</a></dt><dd><p># Définition Wikipédia</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://fr.wikipedia.org/wiki/Processus_de_Markov">https://fr.wikipedia.org/wiki/Processus_de_Markov</a></dt><dd><p># Définition Wikipédia</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt class="field-even">Définissions</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span> - Processus de Décision Markovien (MDP) : Moyenne de la somme des états
+possibles (<span class="math notranslate nohighlight">\(s'\)</span>). Il s’agit de l’introduction d’un facteur aléatoire dans un
+environnement déterministe.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<div class="section" id="equation-de-belman-augmentee-du-mdp">
+<h4>Equation de Belman augmentée du MDP<a class="headerlink" href="#equation-de-belman-augmentee-du-mdp" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Le processus de Markov</strong> : Il va définir la façon dont l’environnement est construit.</p></li>
+<li><p><strong>Le MDP</strong> : Il va décrire la façon dont l’agent prend une décision.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[V(s) = \underset {a} {max} \left (R(s, a) + \gamma \underset {s'} {\sum} P(s, a, s')V(s') \right)\]</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="q-learning-intuittion">
+<h3>Q-Learning : Intuittion<a class="headerlink" href="#q-learning-intuittion" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Définissions</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(Q\)</span> - Qualité : définit la qualité de l’action à venir <span class="math notranslate nohighlight">\(Q(s, a)\)</span> par
+opposition à <span class="math notranslate nohighlight">\(V\)</span> qui définit la valeur de l’état <span class="math notranslate nohighlight">\(V(s)\)</span>.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<div class="section" id="definission-de-l-equation-de-bellman-en-q-learning">
+<h4>Définission de l’équation de Bellman en Q-Learning<a class="headerlink" href="#definission-de-l-equation-de-bellman-en-q-learning" title="Lien permanent vers ce titre">¶</a></h4>
+<p>On peut définir que <span class="math notranslate nohighlight">\(V(s)\)</span> considère la meilleure action possible. Par opposition, avec
+<span class="math notranslate nohighlight">\(Q(s, a)\)</span> on calcule une valeur pour chaque action, qu’elle soit la meilleure ou non.</p>
+<ol class="arabic">
+<li><p>Définition de base</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[Q(s, a) = R(s, a) + \gamma \underset {s'} {\sum} P(s, a, s')V(s')\]</div>
+</div></blockquote>
+</li>
+</ol>
+<p>On constate que l’équation correspond à ce qui est contenu entre les parenthèses dans l’équation
+de Bellman.</p>
+<ol class="arabic" start="2">
+<li><p>Définition de l’équation en mode récursif (avec <span class="math notranslate nohighlight">\(V(s')\)</span> remplacer par <span class="math notranslate nohighlight">\(Q(s', a')\)</span>)</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[Q(s, a) = R(s, a) + \gamma \underset {s'} {\sum} \left (P(s, a, s') \underset {a'} {max} Q(s', a') \right)\]</div>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="difference-temporelle">
+<h3>Différence temporelle<a class="headerlink" href="#difference-temporelle" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><dl class="field-list">
+<dt class="field-odd">Définissions</dt>
+<dd class="field-odd"><ul>
+<li><p><span class="math notranslate nohighlight">\(Q_{t-1} (s, a)\)</span> - Avant : C’est l’état précédent de l’action</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q_t (s, a)\)</span> - Après : C’est le nouvel état de l’action</p></li>
+<li><p><span class="math notranslate nohighlight">\(TD_t (a, s)\)</span> - Différence temporelle : C’est l’apport d’information pour
+une action entre Après et Avant.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> - Alpha : c’est un coefficient multiplicateur pour <span class="math notranslate nohighlight">\(TD_t (a, s)\)</span>
+ce coefficient est compris entre O et 1. La nouvelle valeur obtenue, sera ajouté à
+<span class="math notranslate nohighlight">\(Q_{t-1} (s, a)\)</span> pour devenir le nouveau <span class="math notranslate nohighlight">\(Q_t (s, a)\)</span>.</p>
+<p><strong>Attention</strong> :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Pour <span class="math notranslate nohighlight">\(\alpha = 0\)</span>, on aura <span class="math notranslate nohighlight">\(Q_t (s, a) = Q_{t-1} (s, a)\)</span>. L’IA
+n’apprendra donc rien.</p></li>
+<li><p>Pour <span class="math notranslate nohighlight">\(\alpha = 1\)</span>, on aura <span class="math notranslate nohighlight">\(Q_t (s, a) = R(s,a) + \gamma \underset {a'} {max} Q(s', a')\)</span>.
+L’IA prendra donc toujours la valeur de la nouvelle action, y compris si
+cette action est erronée (comportement aléatoire).</p></li>
+</ul>
+</div></blockquote>
+<p>La valeur de <span class="math notranslate nohighlight">\(\alpha\)</span> doit donc être réajuster pour que la
+différence temporelle soit égale à <span class="math notranslate nohighlight">\(0\)</span>.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<div class="section" id="calcul-de-la-difference-temporelle">
+<h4>Calcul de la Différence temporelle<a class="headerlink" href="#calcul-de-la-difference-temporelle" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[TD_t (a, s) = \underset {après} {R(s,a) + \gamma \underset {a'} {max} Q(s', a')} - \underset {avant} {Q_{t-1} (s, a)}\]</div>
+</div></blockquote>
+</div>
+<div class="section" id="calcul-de-la-qualite-d-une-action-avec-la-correction-de-la-difference-temporelle">
+<h4>Calcul de la Qualité d’une action avec la correction de la différence temporelle<a class="headerlink" href="#calcul-de-la-qualite-d-une-action-avec-la-correction-de-la-difference-temporelle" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Version condensée :</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[Q_t (s, a) = Q_{t-1}(s, a) + \alpha TD_t (a, s)\]</div>
+</div></blockquote>
+<p>Version étendue, avec <span class="math notranslate nohighlight">\(TD_t (a, s)\)</span> remplacée par son expression :</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[Q_t (s, a) = Q_{t-1}(s, a) + \alpha \left (R(s,a) + \gamma \underset {a'} {max} Q(s', a') - Q_{t-1} (s, a) \right)\]</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="artificial-neural-networks-ann">
+<h2>Artificial Neural Networks (ANN)<a class="headerlink" href="#artificial-neural-networks-ann" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://yann.lecun.com/exdb/publis/pdf/lecun-98d.pdf">http://yann.lecun.com/exdb/publis/pdf/lecun-98d.pdf</a></dt><dd><p>Document traitant de l’importance de normaliser l’échelle des données d’entrée des neurones</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">À faire</p>
+<ul class="simple">
+<li><p>dans l’annexe, revoir la vidéo « Le Neurone »</p></li>
+<li><p>Faire le schéma d’un neurone (voir la vidéo à 14m23) en ajoutant les termes : Synapses, poid et
+fonction d’activation</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="scikit-learn">
+<h2>scikit-learn<a class="headerlink" href="#scikit-learn" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://scikitlearn/stable/documentation">http://scikitlearn/stable/documentation</a></p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<div class="section" id="installer-toute-la-suite-scientifique-avec-scikit-learn">
+<h3>Installer toute la suite scientifique (avec scikit-learn)<a class="headerlink" href="#installer-toute-la-suite-scientifique-avec-scikit-learn" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install numpy scipy matplotlib ipython scikit-learn pandas pillow
+
+<span class="c1"># pour pouvoir utiliser les codes du livre &quot;Machine Learning avec scikit-learn&quot;</span>
+pip install mglearn
+
+<span class="c1"># Pour pouvoir utiliser jupyter</span>
+pip install jupyter
+
+<span class="c1">## Pour lancer jupyter</span>
+jupyter notebook
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="import-systematique-pour-tout-les-code">
+<h3>Import systèmatique pour tout les code<a class="headerlink" href="#import-systematique-pour-tout-les-code" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">mglearn</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="apprentissage-supervise">
+<h3>Apprentissage supervisé<a class="headerlink" href="#apprentissage-supervise" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><dl class="field-list">
+<dt class="field-odd">L’aprentissage supervisé</dt>
+<dd class="field-odd"><p>Il est utiliser lorsque nous voulons prédire une certaine sortie à partir d’une entrée connue
+et que nous connaissons des paires d’entrée/sortie. Ces paires d’entrée/sortie constitue le
+jeu d’apprentissage.</p>
+<p>La classification et la régression sont les deux types majeurs de problèmes de
+l’apprentissage supperviser.</p>
+</dd>
+<dt class="field-even">Classification</dt>
+<dd class="field-even"><p>Dans le cas de la classification, le but est de prédire une étiquette de classe, qui est un
+choixpossible parmi une liste de possibilités.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span><span class="p">:</span>
+<span class="n">prédire</span> <span class="n">la</span> <span class="n">variété</span> <span class="n">d</span><span class="s1">&#39;un iris en fonction de ces carractéristique (taille des pétals, forme,</span>
+<span class="n">etc</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>On distingue parfois de type de classification :</dt><dd><ul class="simple">
+<li><p>La classification binaire, dans laquelle le problème comporte exactement deux classes.</p></li>
+<li><p>La classification multiclasse, dans laquelle il y a plus de deux classes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Régression</dt>
+<dd class="field-odd"><p>Dans le cas de tâches dite de régression, le but est de prédire une valeur continue, c’est à
+dire un nombre en virgule flottante en termes de programmation, ou un nombre réel en termes
+de mathématiques.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span><span class="p">:</span>
+<span class="n">Prédire</span> <span class="n">un</span> <span class="n">salaire</span> <span class="n">annuel</span> <span class="n">en</span> <span class="n">fonction</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;éducation, de l&#39;</span><span class="n">âge</span><span class="p">,</span> <span class="n">du</span> <span class="n">sexe</span> <span class="n">et</span> <span class="n">du</span> <span class="n">lieu</span> <span class="n">de</span> <span class="n">vie</span><span class="o">.</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="algorithms">
+<h3>Algorithms<a class="headerlink" href="#algorithms" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="les-k-plus-proches-voisins">
+<h4>Les k plus proches voisins<a class="headerlink" href="#les-k-plus-proches-voisins" title="Lien permanent vers ce titre">¶</a></h4>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Machine Learning</a><ul>
+<li><a class="reference internal" href="#l-equation-de-bellman">L’équation de Bellman</a><ul>
+<li><a class="reference internal" href="#concept-definission">Concept / définission</a><ul>
+<li><a class="reference internal" href="#equation-simplifiee">Equation simplifiée</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#penalite-de-vie">Pénalité de vie</a></li>
+<li><a class="reference internal" href="#chaine-de-markov-et-processus-de-decision-markovien-mdp">Chaine de Markov et Processus de Décision Markovien (MDP)</a><ul>
+<li><a class="reference internal" href="#equation-de-belman-augmentee-du-mdp">Equation de Belman augmentée du MDP</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#q-learning-intuittion">Q-Learning : Intuittion</a><ul>
+<li><a class="reference internal" href="#definission-de-l-equation-de-bellman-en-q-learning">Définission de l’équation de Bellman en Q-Learning</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#difference-temporelle">Différence temporelle</a><ul>
+<li><a class="reference internal" href="#calcul-de-la-difference-temporelle">Calcul de la Différence temporelle</a></li>
+<li><a class="reference internal" href="#calcul-de-la-qualite-d-une-action-avec-la-correction-de-la-difference-temporelle">Calcul de la Qualité d’une action avec la correction de la différence temporelle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#artificial-neural-networks-ann">Artificial Neural Networks (ANN)</a></li>
+<li><a class="reference internal" href="#scikit-learn">scikit-learn</a><ul>
+<li><a class="reference internal" href="#installer-toute-la-suite-scientifique-avec-scikit-learn">Installer toute la suite scientifique (avec scikit-learn)</a></li>
+<li><a class="reference internal" href="#import-systematique-pour-tout-les-code">Import systèmatique pour tout les code</a></li>
+<li><a class="reference internal" href="#apprentissage-supervise">Apprentissage supervisé</a></li>
+<li><a class="reference internal" href="#algorithms">Algorithms</a><ul>
+<li><a class="reference internal" href="#les-k-plus-proches-voisins">Les k plus proches voisins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="MAC_OS.html"
+                        title="Chapitre précédent">MAC OS</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="MQTT.html"
+                        title="Chapitre suivant">MQTT</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Machine_learning.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="MQTT.html" title="MQTT"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="MAC_OS.html" title="MAC OS"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Poltergeist42.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+    </div>
+  </body>
+</html>

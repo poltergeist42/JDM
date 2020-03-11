@@ -1,0 +1,607 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>VIM (VI) &#8212; Documentation JDM 20170523</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Visual Studio Code" href="visualStudioCode.html" />
+    <link rel="prev" title="URLtheque" href="URLtheque.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="visualStudioCode.html" title="Visual Studio Code"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="URLtheque.html" title="URLtheque"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="vim-vi">
+<h1>VIM (VI)<a class="headerlink" href="#vim-vi" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">liens Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.vim.org/download.php">http://www.vim.org/download.php</a></p></li>
+<li><p><a class="reference external" href="https://vimebook.com/fr/download/d54e189e-3a6b-4705-86b0-270cec5d5003/vim-pour-les-humains.pdf">https://vimebook.com/fr/download/d54e189e-3a6b-4705-86b0-270cec5d5003/vim-pour-les-humains.pdf</a></p></li>
+<li><p><a class="reference external" href="https://vim-adventures.com/">https://vim-adventures.com/</a></p></li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://www.dansmongrenier.com/informatique_memento_vi.html">http://www.dansmongrenier.com/informatique_memento_vi.html</a></dt><dd><p># Mémento des commandes et actions VI</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://urfist.unistra.fr/uploads/media/command_memento_fr.pdf">https://urfist.unistra.fr/uploads/media/command_memento_fr.pdf</a></dt><dd><p># Autres memento (plus denses)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://www.formation-lpi.com/IMG/pdf/103.8-vi.pdf">http://www.formation-lpi.com/IMG/pdf/103.8-vi.pdf</a></dt><dd><p># MindMap : Memento des principales commandes ou actions</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<hr class="docutils" />
+<div class="section" id="presentation">
+<h2>Présentation<a class="headerlink" href="#presentation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vim a 4 modes principaux :</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 22%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Modes</p></th>
+<th class="head"><p>Touche(s) d’accès</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Normales</p></td>
+<td><ul class="simple">
+<li><p>[esc]</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>C’est le mode de base. il permet :</p>
+<ul>
+<li><p>D’accéder aux autres modes</p></li>
+<li><p>De naviguer dans le fichier</p></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Commandes</p></td>
+<td><ul class="simple">
+<li><p>[esc] –&gt; [:]</p></li>
+</ul>
+</td>
+<td><p>Permet de lancer les commandes</p></td>
+</tr>
+<tr class="row-even"><td><p>Visuel</p></td>
+<td><ul class="simple">
+<li><p>[esc] –&gt; [v]</p></li>
+</ul>
+</td>
+<td><p>Permet d’effectuer des sélections</p></td>
+</tr>
+<tr class="row-odd"><td><p>Insertion</p></td>
+<td><ul class="simple">
+<li><p>[esc] –&gt; [i]</p></li>
+<li><p>[esc] –&gt; [a]</p></li>
+<li><p>[esc] –&gt; [o]</p></li>
+<li><p>[esc] –&gt; [I]</p></li>
+<li><p>[esc] –&gt; [A]</p></li>
+<li><p>[esc] –&gt; [O]</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>[i] insérer du texte a l’emplacement du curseur</p></li>
+<li><p>[a] insérer du texte après le curseur</p></li>
+<li><p>[o] insérer du texte sur la ligne du dessous</p></li>
+<li><p>[I] insérer du texte en début de ligne</p></li>
+<li><p>[A] insérer du texte en fin de ligne</p></li>
+<li><p>[O] Insérer du texte sur la ligne du dessus</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="configuration-et-extension">
+<h2>Configuration et extension<a class="headerlink" href="#configuration-et-extension" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il y a 2 type de configuration :</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Configuration permanente</dt>
+<dd class="field-odd"><p>En renseignant le fichier <strong>“.vimrc”</strong>. Les options
+seront appliquée sur tous les documents</p>
+</dd>
+<dt class="field-even">Configuration isolée</dt>
+<dd class="field-even"><p>En saisissant les options de configuration en mode
+commande. Les options ne seront appliquées que sur le
+document actif pendant toute la durée d’utilisation du fichier</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="section" id="emplacement-ou-creer-le-fichiers-vimrc-en-fonction-de-l-environement">
+<h3>Emplacement ou créer le fichiers “.vimrc” en fonction de l’environement<a class="headerlink" href="#emplacement-ou-creer-le-fichiers-vimrc-en-fonction-de-l-environement" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Sous Windows</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>%userprofile%.vimrc</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Sous Linux</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>/home/[nom_d’utilisateur]/.vimrc</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Sous Mac</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>/Users/[nom_d’utilisateur]/.vimrc</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="liste-des-commandes-et-fonctions-utiles">
+<h2>Liste des commandes et fonctions utiles<a class="headerlink" href="#liste-des-commandes-et-fonctions-utiles" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Caractères cachés</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Afficher masquer les caractères cachés</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#'list">http://vimdoc.sourceforge.net/htmldoc/options.html#”list</a>”</dt><dd><p># /!\ : #”list” fait parti de l’url</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>##Afficher les carctères cachés
+set list
+
+## Masquer les carctères cachés
+set list!
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Configurer les caractères cachés</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#'listchars">http://vimdoc.sourceforge.net/htmldoc/options.html#”listchars</a>”</dt><dd><p># /!\ : #”listchars” fait parti de l’url</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ex:
+set listchars=space:·,tab:&gt;-
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Correcteur orthographique</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://vim-fr.org/index.php/Correction_orthographique">https://vim-fr.org/index.php/Correction_orthographique</a></p></li>
+</ul>
+</dd>
+</dl>
+<p>Le correcteur orthographique nécessite que les langues désirées soit présentes dans
+le dossier « %programFiles(x86)%\Vim\vim80\spell&quot;</p>
+<blockquote>
+<div><ul>
+<li><p>Activer la correction orthographique</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">setlocal</span> <span class="n">spell</span> <span class="n">spelllang</span><span class="o">=</span><span class="n">fr</span>
+</pre></div>
+</div>
+</li>
+<li><p>Désactiver la correction orthographique</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:setlocal spell!
+</pre></div>
+</div>
+</li>
+<li><p>Activer automatiquement la correction automatique pour un certain type de documenet</p>
+<blockquote>
+<div><p>Dans “.vimrc” :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">au</span> <span class="n">BufRead</span> <span class="o">*.</span><span class="n">txt</span> <span class="n">setlocal</span> <span class="n">spell</span> <span class="n">spelllang</span><span class="o">=</span><span class="n">fr</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>liste des commandes / actions disponibles pour le correcteur</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 91%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>z=</p></td>
+<td><p>sur un mot souligné affiche une liste de corrections possibles</p></td>
+</tr>
+<tr class="row-even"><td><p>zg</p></td>
+<td><p>rajoute un mot dans le dictionnaire</p></td>
+</tr>
+<tr class="row-odd"><td><p>zug</p></td>
+<td><p>pour annuler l’ajout au dictionnaire</p></td>
+</tr>
+<tr class="row-even"><td><p>]s</p></td>
+<td><p>pour aller au prochain mot mal orthographié</p></td>
+</tr>
+<tr class="row-odd"><td><p>[s</p></td>
+<td><p>pour le précédent</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p>Rechercher, mettre en évidence un mot ou un ensemble de mot</p>
+<blockquote>
+<div><p>#.Rechercher un mot ou une phrase</p>
+<blockquote>
+<div><ul>
+<li><p>Se placer en mode normal</p></li>
+<li><p>Saisir le caractère slash (“/”) suivie du terme à rechercher</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Mode_Normal</span><span class="p">]</span>
+<span class="o">/</span><span class="p">[</span><span class="n">Recherche</span><span class="p">]</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="p">[</span><span class="n">Mode_Normal</span><span class="p">]</span>
+<span class="o">/</span><span class="bp">self</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic">
+<li><p>Mettre en surbrillance le terme recherché</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="nb">set</span> <span class="n">hlsearch</span>
+
+<span class="c1"># pour l&#39;arréter</span>
+<span class="p">:</span><span class="nb">set</span> <span class="n">nohlsearch</span>
+</pre></div>
+</div>
+</li>
+<li><p>supprimer la subrillance précédente</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">nohlsearch</span>
+</pre></div>
+</div>
+</li>
+<li><p>faire une recherche incremental (au fur et à mesure de la frappe)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># la recherche incrémental vas séléctioner la première chaine de charactère correspondante</span>
+<span class="p">:</span><span class="nb">set</span> <span class="n">incsearch</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Définir le système (dos, unix ou mac) pour l’enregistrement d’un fichier</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.finiderire.com/?post/2008/10/18/Conversion-rituelle-d-un-fichier-egare">http://www.finiderire.com/?post/2008/10/18/Conversion-rituelle-d-un-fichier-egare</a></p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">ff</span><span class="o">=</span><span class="n">x</span> <span class="p">(</span><span class="n">avec</span> <span class="n">x</span> <span class="o">=</span> <span class="n">dos</span><span class="p">,</span> <span class="n">unix</span> <span class="n">ou</span> <span class="n">mac</span> <span class="p">)</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="nb">set</span> <span class="n">ff</span><span class="o">=</span><span class="n">unix</span>
+    <span class="c1"># conversion au format unix / Linux</span>
+
+<span class="nb">set</span> <span class="n">ff</span><span class="o">=</span><span class="n">dos</span>
+    <span class="c1"># conversion au format dos / windows</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Activer la souris</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">mouse</span><span class="o">=</span><span class="n">a</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Ouvrir fermer des bloc de text (folding / unfolding)</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://unix.stackexchange.com/questions/141097/how-to-enable-and-use-code-folding-in-vim">https://unix.stackexchange.com/questions/141097/how-to-enable-and-use-code-folding-in-vim</a></p></li>
+<li><p><a class="reference external" href="http://vimcasts.org/episodes/how-to-fold/">http://vimcasts.org/episodes/how-to-fold/</a></p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic">
+<li><p>instruction à ajourter dans “.vimrc”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">foldmethod</span><span class="o">=</span><span class="n">indent</span>
+<span class="nb">set</span> <span class="n">foldnestmax</span><span class="o">=</span><span class="mi">10</span>
+<span class="nb">set</span> <span class="n">nofoldenable</span>
+<span class="nb">set</span> <span class="n">foldlevel</span><span class="o">=</span><span class="mi">2</span>
+</pre></div>
+</div>
+</li>
+<li><p>Liste des raccourcis en mode normal</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>command</p></th>
+<th class="head"><p>effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>zi</p></td>
+<td><p>switch folding on or off</p></td>
+</tr>
+<tr class="row-odd"><td><p>za</p></td>
+<td><p>toggle current fold open/closed</p></td>
+</tr>
+<tr class="row-even"><td><p>zc</p></td>
+<td><p>close current fold</p></td>
+</tr>
+<tr class="row-odd"><td><p>zR</p></td>
+<td><p>open all folds</p></td>
+</tr>
+<tr class="row-even"><td><p>zM</p></td>
+<td><p>close all folds</p></td>
+</tr>
+<tr class="row-odd"><td><p>zv</p></td>
+<td><p>expand folds to reveal cursor</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Gestion des balises (mark) dans le texte</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Placer une balise</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mode normal</span>
+<span class="n">m</span><span class="o">&lt;</span><span class="n">a</span><span class="o">-</span><span class="n">z</span><span class="o">&gt;</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">mb</span>
+</pre></div>
+</div>
+</li>
+<li><p>accéder à une balise</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mode normal</span>
+<span class="s1">&#39;(apostrophe)&lt;lettre_de_la_balise&gt;</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="s1">&#39;b</span>
+</pre></div>
+</div>
+</li>
+<li><p>Lister toutes les balises</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mode normal</span>
+<span class="p">:</span><span class="n">marks</span>
+</pre></div>
+</div>
+</li>
+<li><p>Repérer une balise spécifique</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mode normal</span>
+<span class="p">:</span><span class="n">marks</span> <span class="o">&lt;</span><span class="n">lettre_de_la_balise</span><span class="o">&gt;</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="n">marks</span> <span class="n">b</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Faire de l’auto-complétion</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://linuxfr.org/forums/astucesdivers/posts/%C3%A9diteurvim-lautocompl%C3%A9tion-sous-vim">https://linuxfr.org/forums/astucesdivers/posts/%C3%A9diteurvim-lautocompl%C3%A9tion-sous-vim</a></p></li>
+</ul>
+</dd>
+</dl>
+<p>L’auto complétion se fait en cumulant tous les buffers ouvert (1 fichier ouvert = 1 buffer)</p>
+<ol class="arabic">
+<li><p>Pour descendre le cycle des propositions</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">+</span><span class="n">n</span>
+</pre></div>
+</div>
+</li>
+<li><p>Pour remonter le cycle des propositions</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">+</span><span class="n">p</span>
+</pre></div>
+</div>
+</li>
+<li><p>Auto complétion sur un PATH</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">+</span><span class="n">X</span><span class="o">+</span><span class="n">F</span>
+</pre></div>
+</div>
+</li>
+<li><p>Ajouter des listes de mots</p>
+<blockquote>
+<div><p>Il est possible d’utiliser la commande <strong>ctags</strong> pour générer des fichiers contenant
+des listes de tag. Il faut ensuite les intégrer / activer dans “.virmrc”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">tag</span><span class="o">=&lt;</span><span class="n">liste_de_fichiers_tag</span><span class="o">&gt;</span>
+
+<span class="c1"># Plus d&#39;informations dans l&#39;aide de vim :</span>
+<span class="p">:</span><span class="n">help</span> <span class="n">ctag</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Activer l’auto-complétion pour presque tous les langages</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://medium.com/vim-drops/css-autocompletion-on-vim-no-plugins-needed-e8df9ce079c7">https://medium.com/vim-drops/css-autocompletion-on-vim-no-plugins-needed-e8df9ce079c7</a></dt><dd><p># démonstration simple et efficace</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic">
+<li><p>Activation dans “.vimrc”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filetype</span> <span class="n">plugin</span> <span class="n">on</span>
+<span class="nb">set</span> <span class="n">omnifunc</span><span class="o">=</span><span class="n">syntaxcomplete</span><span class="c1">#Complete</span>
+</pre></div>
+</div>
+</li>
+<li><p>Utilisation</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CTRL</span><span class="o">+</span><span class="n">x</span> <span class="n">puis</span> <span class="n">CTRL</span><span class="o">+</span><span class="n">o</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">VIM (VI)</a><ul>
+<li><a class="reference internal" href="#presentation">Présentation</a></li>
+<li><a class="reference internal" href="#configuration-et-extension">Configuration et extension</a><ul>
+<li><a class="reference internal" href="#emplacement-ou-creer-le-fichiers-vimrc-en-fonction-de-l-environement">Emplacement ou créer le fichiers “.vimrc” en fonction de l’environement</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#liste-des-commandes-et-fonctions-utiles">Liste des commandes et fonctions utiles</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="URLtheque.html"
+                        title="Chapitre précédent">URLtheque</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="visualStudioCode.html"
+                        title="Chapitre suivant">Visual Studio Code</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/VIM.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="visualStudioCode.html" title="Visual Studio Code"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="URLtheque.html" title="URLtheque"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Poltergeist42.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+    </div>
+  </body>
+</html>

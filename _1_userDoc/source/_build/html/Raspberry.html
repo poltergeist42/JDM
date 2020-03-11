@@ -1,0 +1,836 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Raspberry &#8212; Documentation JDM 20170523</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Regex" href="Regex.html" />
+    <link rel="prev" title="PYTHON" href="Python.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Regex.html" title="Regex"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="Python.html" title="PYTHON"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="raspberry">
+<h1>Raspberry<a class="headerlink" href="#raspberry" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="rpi-utilises">
+<h2>RPi utilisés<a class="headerlink" href="#rpi-utilises" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="model-2-id-fix">
+<h3>Model 2 (ID-FIX)<a class="headerlink" href="#model-2-id-fix" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span>                  <span class="p">:</span> <span class="n">RPi2pierre</span>
+<span class="n">MAC</span> <span class="n">address</span> <span class="n">ETH</span>       <span class="p">:</span> <span class="n">b8</span><span class="p">:</span><span class="mi">27</span><span class="p">:</span><span class="n">eb</span><span class="p">:</span><span class="mi">65</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">5</span><span class="n">a</span>
+<span class="n">IP</span>                    <span class="p">:</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">32.253</span>
+<span class="n">netmask</span>               <span class="p">:</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+
+<span class="n">MAC</span> <span class="n">Address</span> <span class="n">WLAN</span>      <span class="p">:</span> <span class="mi">08</span><span class="p">:</span><span class="mi">86</span><span class="p">:</span><span class="mi">3</span><span class="n">b</span><span class="p">:</span><span class="mi">6</span><span class="n">b</span><span class="p">:</span><span class="mi">4</span><span class="n">d</span><span class="p">:</span><span class="mi">58</span>
+                      <span class="p">:</span> <span class="n">eth</span><span class="o">.</span><span class="n">addr</span> <span class="o">==</span> <span class="mi">08</span><span class="p">:</span><span class="mi">86</span><span class="p">:</span><span class="mi">3</span><span class="n">b</span><span class="p">:</span><span class="mi">6</span><span class="n">b</span><span class="p">:</span><span class="mi">4</span><span class="n">d</span><span class="p">:</span><span class="mi">58</span>
+                                   <span class="c1"># filtre a appliquer dans Wireshark</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="rpi-rov">
+<h3>RPI ROV<a class="headerlink" href="#rpi-rov" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span>                  <span class="p">:</span> <span class="n">rpiRov</span>
+<span class="n">MAC</span> <span class="n">address</span> <span class="n">ETH</span>       <span class="p">:</span> <span class="n">b8</span><span class="p">:</span><span class="mi">27</span><span class="p">:</span><span class="n">eb</span><span class="p">:</span><span class="n">e0</span><span class="p">:</span><span class="mi">4</span><span class="n">b</span><span class="p">:</span><span class="mi">93</span>
+<span class="n">IP</span>                    <span class="p">:</span>
+<span class="n">netmask</span>               <span class="p">:</span>
+
+<span class="n">MAC</span> <span class="n">Address</span> <span class="n">WLAN</span>      <span class="p">:</span>
+                      <span class="p">:</span> <span class="n">eth</span><span class="o">.</span><span class="n">addr</span> <span class="o">==</span> <span class="n">d8</span><span class="p">:</span><span class="n">eb</span><span class="p">:</span><span class="mi">97</span><span class="p">:</span><span class="mi">1</span><span class="n">c</span><span class="p">:</span><span class="mi">3</span><span class="n">e</span><span class="p">:</span><span class="n">b4</span>
+                                  <span class="c1"># filtre a appliquer dans Wireshark</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="acceder-au-fichier-de-configuration-du-rpi">
+<h2>Accéder au fichier de configuration du RPI<a class="headerlink" href="#acceder-au-fichier-de-configuration-du-rpi" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="connaitre-la-configuration-materiel-du-rpi">
+<h2>Connaître la configuration matériel du RPI<a class="headerlink" href="#connaitre-la-configuration-materiel-du-rpi" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">CPU</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>cat /proc/cpuinfo</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="pour-passer-la-langue-et-le-clavier-en-francais">
+<h2>pour passer la langue et le clavier en français<a class="headerlink" href="#pour-passer-la-langue-et-le-clavier-en-francais" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list">
+<dt class="field-odd">liens WEB</dt>
+<dd class="field-odd"><blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://the-raspberry.com/changer-langue-raspberry-pi">http://the-raspberry.com/changer-langue-raspberry-pi</a></p></li>
+<li><p><a class="reference external" href="https://www.raspberrypi.org/forums/viewtopic.php?f=65&amp;t=21700">https://www.raspberrypi.org/forums/viewtopic.php?f=65&amp;t=21700</a></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic">
+<li><p>Changer la langue depuis l’interface de configuration du Pi</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>se connecter a l’interface de configuration</dt><dd><ul>
+<li><p>sudo raspi-config</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Ouvrir le menu « 5 Internalisation Options »</p></li>
+<li><p>Ouvrir « I1 Change Locale »</p></li>
+<li><p>Si une langue comme <strong>« en_GB.UTF-8 UTF-8 »</strong> est cochée, décochez-la
+en appuyant sur <strong>« Espace »</strong></p></li>
+<li><p>Cochez la langue <strong>« fr_FR.UTF-8 UTF-8</strong> »</p></li>
+<li><p>Sélectionner <strong>« OK »</strong> puis valider</p></li>
+<li><p>Vérifier le jeu de paramétres régionaux puis valider sur <strong>« OK »</strong></p></li>
+<li><p>Valider sur « Finish » puis redemarrer</p></li>
+</ul>
+</li>
+<li><p>Modifier manuellement le fichier keyboard</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>Editer le fichier keyboard</dt><dd><ul>
+<li><p>sudo nano /etc/default/keyboard</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>remplacer « gb » par « fr »</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="vocabulaire">
+<h2>Vocabulaire<a class="headerlink" href="#vocabulaire" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="simple">
+<dt>HAT (Chapeau)</dt><dd><p>C’est le nom que porte les cartes filles sur Raspberry Pi.
+Sur Arduino, cela s’appel un Shield (Bouclier)</p>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="la-bibliotheque-rpi-gpio">
+<h2>La bibliotheque RPi.GPIO<a class="headerlink" href="#la-bibliotheque-rpi-gpio" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">liens Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://pypi.python.org/pypi/RPi.GPIO">https://pypi.python.org/pypi/RPi.GPIO</a></p></li>
+<li><p><a class="reference external" href="http://sourceforge.net/projects/raspberry-gpio-python/">http://sourceforge.net/projects/raspberry-gpio-python/</a></p></li>
+<li><p><a class="reference external" href="http://sourceforge.net/p/raspberry-gpio-python/wiki/Home/">http://sourceforge.net/p/raspberry-gpio-python/wiki/Home/</a></p></li>
+<li><p><a class="reference external" href="http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/">http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/</a></p></li>
+<li><p><a class="reference external" href="http://raspberrypi-aa.github.io/session2/input.html">http://raspberrypi-aa.github.io/session2/input.html</a></p></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="implantation-rpi2">
+<h3>Implantation RPi2<a class="headerlink" href="#implantation-rpi2" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/GPIO.png"><img alt="_images/GPIO.png" class="align-center" src="_images/GPIO.png" style="width: 400px;" /></a>
+</div></blockquote>
+</div>
+<div class="section" id="installation-de-rpi-gpio">
+<h3>Installation de RPi.GPIO<a class="headerlink" href="#installation-de-rpi-gpio" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Si RPi.GPIO n’est pas installer, saisir :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">RPi</span><span class="o">.</span><span class="n">GPIO</span>
+</pre></div>
+</div>
+<p>Pour mettre à jour la bibliothèque :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">RPi</span><span class="o">.</span><span class="n">GPIO</span> <span class="o">--</span> <span class="n">upgrade</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="utilisation-de-rpi-gpio-avec-python">
+<h3>Utilisation de RPi.GPIO avec Python<a class="headerlink" href="#utilisation-de-rpi-gpio-avec-python" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Importer la bibliothèque :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="k">as</span> <span class="nn">GPIO</span>
+    <span class="c1"># Attention, c&#39;est bien RPi avec un i minuscule</span>
+</pre></div>
+</div>
+</li>
+<li><p>Choisir la notation pour accèder au broche du GPIO.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Il y a 2 façon d’adresser les broches du GPIO, soit par sont numéro
+de broche (GPIO.BOARD) soit par son nom dans le registre (GPIO.BCM).
+C’est la methode « .setmode() » qui permet de configurer le mode de
+fonctionnement des GPIO.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="quick-ref-les-fonctions-associer-aux-gpio-en-python">
+<h3>Quick ref, les fonctions associer aux GPIO en python<a class="headerlink" href="#quick-ref-les-fonctions-associer-aux-gpio-en-python" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Liens Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://raspi.tv/download/RPi.GPIO-Cheat-Sheet.pdf">http://raspi.tv/download/RPi.GPIO-Cheat-Sheet.pdf</a></p></li>
+<li><p><a class="reference external" href="http://raspi.tv/2014/rpi-gpio-port-function-checker">http://raspi.tv/2014/rpi-gpio-port-function-checker</a></p></li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://sourceforge.net/p/raspberry-gpio-python/wiki/browse_pages/">https://sourceforge.net/p/raspberry-gpio-python/wiki/browse_pages/</a></dt><dd><p># doc officielle</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p>liste des différentes commandes :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># RPi.GPIO Basics cheat sheet - Don&#39;t try to run this. It&#39;ll fail!</span>
+<span class="c1"># Alex Eames http://RasPi.TV</span>
+<span class="c1"># http://RasPi.TV/?p=4320</span>
+
+<span class="c1"># RPi.GPIO Official Documentation http://sourceforge.net/p/raspberry-gpio-python/wiki/Home/</span>
+
+<span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="k">as</span> <span class="nn">GPIO</span>              <span class="c1"># import RPi.GPIO module</span>
+
+<span class="c1"># choose BOARD or BCM</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="o">.</span><span class="n">BCM</span><span class="p">)</span>               <span class="c1"># BCM for GPIO numbering</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="o">.</span><span class="n">BOARD</span><span class="p">)</span>             <span class="c1"># BOARD for P1 pin numbering</span>
+
+<span class="c1"># Set up Inputs</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">port_or_pin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">IN</span><span class="p">)</span>     <span class="c1"># set port/pin as an input</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">port_or_pin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span>  <span class="n">pull_up_down</span><span class="o">=</span><span class="n">GPIO</span><span class="o">.</span><span class="n">PUD_DOWN</span><span class="p">)</span> <span class="c1"># input with pull-down</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">port_or_pin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span>  <span class="n">pull_up_down</span><span class="o">=</span><span class="n">GPIO</span><span class="o">.</span><span class="n">PUD_UP</span><span class="p">)</span>   <span class="c1"># input with pull-up</span>
+
+<span class="c1"># Set up Outputs</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">port_or_pin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>               <span class="c1"># set port/pin as an output</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">port_or_pin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">,</span> <span class="n">initial</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># set initial value option (1 or 0)</span>
+
+<span class="c1"># Switch Outputs</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">port_or_pin</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>     <span class="c1"># set an output port/pin value to 1/GPIO.HIGH/True</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">port_or_pin</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     <span class="c1"># set an output port/pin value to 0/GPIO.LOW/False</span>
+
+<span class="c1"># Read status of inputs OR outputs</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="n">port_or_pin</span><span class="p">)</span>     <span class="c1"># read status of pin/port and assign to variable i</span>
+<span class="k">if</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="n">port_or_pin</span><span class="p">):</span>     <span class="c1"># use input status directly in program logic</span>
+
+<span class="c1"># Clean up on exit</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span>
+
+<span class="c1"># What Raspberry Pi revision are we running?</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">RPI_REVISION</span> <span class="c1">#  0 = Compute Module, 1 = Rev 1, 2 = Rev 2, 3 = Model B+</span>
+
+<span class="c1"># What version of RPi.GPIO are we running?</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">VERSION</span>
+
+<span class="c1"># What Python version are we running?</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span>
+
+<span class="c1"># Query the setup status of a port</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">gpio_function</span><span class="p">(</span><span class="n">port</span><span class="p">)</span>        <span class="c1"># The result will be a numerical return code, which</span>
+                                <span class="c1"># will have one of the following values…</span>
+                                <span class="c1"># 0 = GPIO.OUT</span>
+                                <span class="c1"># 1 = GPIO.IN</span>
+                                <span class="c1"># 40 = GPIO.SERIAL</span>
+                                <span class="c1"># 41 = GPIO.SPI</span>
+                                <span class="c1"># 42 = GPIO.I2C</span>
+                                <span class="c1"># 43 = GPIO.HARD_PWM</span>
+                                <span class="c1"># -1 = GPIO.UNKNOWN</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="protocole-i2c">
+<h2>Protocole I2C<a class="headerlink" href="#protocole-i2c" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">liens Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/">http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/</a></p></li>
+<li><p><a class="reference external" href="http://elinux.org/RPi_ADC_I2C_Python">http://elinux.org/RPi_ADC_I2C_Python</a></p></li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://www.bitflippersanonymous.com/raspberry-pi-projects/i2c-temperature">http://www.bitflippersanonymous.com/raspberry-pi-projects/i2c-temperature</a></dt><dd><p># exemple pour un capteur de température i2c</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://mchobby.be/wiki/index.php?title=ArduPi-I2C-Support">http://mchobby.be/wiki/index.php?title=ArduPi-I2C-Support</a></dt><dd><p># Exemple de comunication en i2c entre un RPi et un arduino
+en utilisant quick2wire.i2c</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><ul class="simple">
+<li><p>Livre (papier) Raspberry Pi2, page 558.</p></li>
+<li><p>Chapitre 14, Section 2.3, paragraphe 2.3.3 : installation de la carte</p></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="installation-activation-de-l-i2c">
+<h3>Installation / Activation de l’I2C<a class="headerlink" href="#installation-activation-de-l-i2c" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl>
+<dt>Entrée dans le fichier de config du rpi</dt><dd><ul>
+<li><dl>
+<dt>sudo raspi-config</dt><dd><ul>
+<li><dl>
+<dt>9 Advanced Options</dt><dd><ul class="simple">
+<li><p>A7 I2C</p></li>
+</ul>
+<p>[YES], [YES], [Finish]</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Ajouter une entrée dans le fichier « modules »</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>sudo nano /etc/modules</dt><dd><ul>
+<li><p>ajouter : i2c-dev</p></li>
+<li><p>Sauvegarder et quitter</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><dl class="simple">
+<dt>Ajouter les paquets nécessaires</dt><dd><ul class="simple">
+<li><p>sudo apt-get install i2c-tools</p></li>
+<li><p>sudo apt-get install python-smbus</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Redémarer le rpi</dt><dd><ul class="simple">
+<li><p>sudo reboot</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Ajouter l’utilisateur courant au groupe i2c</dt><dd><ul class="simple">
+<li><p>sudo adduser $USER i2c</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="connaitre-l-adresse-des-materiels-branches">
+<h3>Connaître l’adresse des matériels branchés<a class="headerlink" href="#connaitre-l-adresse-des-materiels-branches" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><dl class="simple">
+<dt>se placer dans le dossier modprob.d</dt><dd><ul class="simple">
+<li><p>cd /etc/modprobe.d/</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>exécuter la commande i2cdetect avec des droits élever</dt><dd><ul class="simple">
+<li><p>sudo i2cdetect -y 1</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<p>Exemple avec un magnétomètre HMC5883L :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>pi@raspiBlanc ~ $ cd /etc/modprobe.d/
+pi@raspiBlanc /etc/modprobe.d $ sudo i2cdetect -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- 1e --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="uart">
+<h2>UART<a class="headerlink" href="#uart" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="liberer-l-uart">
+<h3>Libérer l’UART<a class="headerlink" href="#liberer-l-uart" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p><strong>N.B :</strong> par défaut l’uart est configuré en mode console pour le débug. pour l’utiliser,
+il faut d’abord le libérer.</p>
+<blockquote>
+<div><p>#.  Interroger le journal sur les dernier événement de la liaison série pour vérifier
+que l’opération n’a pas déjà été effectuer</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dmesg</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">tty</span>
+</pre></div>
+</div>
+<p>si l’opération n’a pas encore été effectuer, le résultat obtenu doit être :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>    <span class="mf">0.002072</span><span class="p">]</span> <span class="n">console</span> <span class="p">[</span><span class="n">tty1</span><span class="p">]</span> <span class="n">enabled</span>
+<span class="p">[</span>    <span class="mf">0.195363</span><span class="p">]</span> <span class="mi">3</span><span class="n">f201000</span><span class="o">.</span><span class="n">uart</span><span class="p">:</span> <span class="n">ttyAMA0</span> <span class="n">at</span> <span class="n">MMIO</span> <span class="mh">0x3f201000</span> <span class="p">(</span><span class="n">irq</span> <span class="o">=</span> <span class="mi">83</span><span class="p">,</span> <span class="n">base_baud</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">PL011</span> <span class="n">rev2</span>
+<span class="p">[</span>    <span class="mf">0.695429</span><span class="p">]</span> <span class="n">console</span> <span class="p">[</span><span class="n">ttyAMA0</span><span class="p">]</span> <span class="n">enabled</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic">
+<li><p>configurer l’UART avec l’outil de configuration du Rpi :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
+</pre></div>
+</div>
+</li>
+<li><p>se déplacer dans les menu selon la séquence suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">[</span> <span class="mi">8</span> <span class="p">]</span> <span class="o">--&gt;</span> <span class="p">[</span> <span class="n">A8</span><span class="p">]</span> <span class="o">--&gt;</span> <span class="p">[</span> <span class="n">Non</span> <span class="p">]</span>
+
+<span class="n">Le</span> <span class="n">quatrième</span> <span class="n">écran</span> <span class="n">vous</span> <span class="n">informe</span> <span class="n">que</span> <span class="n">Serial</span> <span class="n">est</span> <span class="n">maintenant</span> <span class="n">désactivé</span> <span class="p">:</span> <span class="p">::</span>
+
+    <span class="p">[</span> <span class="n">Ok</span> <span class="p">]</span> <span class="o">--&gt;</span> <span class="p">[</span> <span class="n">Finish</span> <span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Redémarrer :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">reboot</span>
+</pre></div>
+</div>
+</li>
+<li><p>Vérifier dans le journal que l’opération a bien été prise en compte :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">demsg</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">tty</span>
+</pre></div>
+</div>
+<p>ce qui doit vous donner le résultat suivant :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>    <span class="mf">0.002051</span><span class="p">]</span> <span class="n">console</span> <span class="p">[</span><span class="n">tty1</span><span class="p">]</span> <span class="n">enabled</span>
+<span class="p">[</span>    <span class="mf">0.195175</span><span class="p">]</span> <span class="mi">3</span><span class="n">f201000</span><span class="o">.</span><span class="n">uart</span><span class="p">:</span> <span class="n">ttyAMA0</span> <span class="n">at</span> <span class="n">MMIO</span> <span class="mh">0x3f201000</span> <span class="p">(</span><span class="n">irq</span> <span class="o">=</span> <span class="mi">83</span><span class="p">,</span> <span class="n">base_baud</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">PL011</span> <span class="n">rev2</span>
+</pre></div>
+</div>
+<p>On constate que la dernière ligne à disparue, le mode débug sur la sortie UART
+est donc bien désactivée.</p>
+</li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="pwm-servo-moteur-et-dc-motor">
+<h2>PWM, Servo moteur et DC Motor<a class="headerlink" href="#pwm-servo-moteur-et-dc-motor" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list">
+<dt class="field-odd">liens Web</dt>
+<dd class="field-odd"><blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://fr.wikipedia.org/wiki/Modulation_de_largeur_d'impulsion">https://fr.wikipedia.org/wiki/Modulation_de_largeur_d’impulsion</a></dt><dd><p># La page wikipedia sur la Modulation de Largeur d’Impulsion
+(Pulse Width Modulation – PWM)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-7">http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-7</a></dt><dd><p># utilisation du PWM sur raspberry (en français)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.youtube.com/watch?v=BLtV0Z38S94">https://www.youtube.com/watch?v=BLtV0Z38S94</a></dt><dd><p># utilisation du PWM sur raspberry (vidéo)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.youtube.com/watch?v=ddlDgUymbxc">https://www.youtube.com/watch?v=ddlDgUymbxc</a></dt><dd><p># utilisation du servo moteur avec le RPi (video)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.youtube.com/watch?v=v2jpnyKPH64">https://www.youtube.com/watch?v=v2jpnyKPH64</a></dt><dd><p># principe de fonctionnement d’un servo moteur (video)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.youtube.com/watch?v=W7cV9_W12sM">https://www.youtube.com/watch?v=W7cV9_W12sM</a></dt><dd><p># utilisation d’un DC Motor avec le Pi (vidéo)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://sourceforge.net/p/raspberry-gpio-python/wiki/PWM/">https://sourceforge.net/p/raspberry-gpio-python/wiki/PWM/</a></dt><dd><p># doc officiel GPIO.PWM (y’a pas grand chose)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic">
+<li><dl>
+<dt>utilisation general du PWM / PFM</dt><dd><p>Exemple d” utilisation (en python 3) :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">debut</span> <span class="n">de</span> <span class="n">script</span> <span class="p">]</span>
+    <span class="kn">import</span> <span class="nn">RPI.GPIO</span> <span class="k">as</span> <span class="nn">GPIO</span>
+        <span class="c1"># importation de la bibliothèque RPI</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="o">.</span><span class="n">BCM</span><span class="p">)</span>
+        <span class="c1"># Utilisation des GPIO en mode &quot;BCM&quot;</span>
+
+    <span class="n">une_broche_du_pi</span> <span class="o">=</span> <span class="mi">25</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">une_broche_du_pi</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+        <span class="c1"># On choisi la sur la quelle on veut faire du PWM</span>
+        <span class="c1"># Il vaut mieux éviter de choisir une broche qui est aussi utilisée</span>
+        <span class="c1"># pour autre chose comme de l&#39;I2C, du SPI ou du Serial</span>
+
+    <span class="n">frequence</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">rapportCyclique</span> <span class="o">=</span> <span class="mi">50</span>
+
+    <span class="n">p</span> <span class="o">=</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">PWM</span><span class="p">(</span><span class="n">une_broche_du_pi</span><span class="p">,</span> <span class="n">frequence</span><span class="p">)</span>
+        <span class="c1"># on initialise le PWM sur la broche choisie et on indique la fréquence</span>
+
+    <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">rapportCyclique</span><span class="p">)</span>
+        <span class="c1"># On l&#39;impulsion en indiquant le rapport cyclique (Duty Cycle)</span>
+        <span class="c1">#</span>
+        <span class="c1"># Le rapport cyclique correspond au rapport de la durée de l’impulsion</span>
+        <span class="c1"># sur la periode. Cette valeur est exprimée en pourcentage</span>
+        <span class="c1"># voir https://fr.wikipedia.org/wiki/Rapport_cyclique_d&#39;ouverture</span>
+
+    <span class="n">rapportCyclique</span> <span class="o">=</span> <span class="mi">80</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">ChangeDutyCycle</span><span class="p">(</span><span class="n">rapportCyclique</span><span class="p">)</span>
+        <span class="c1"># pour changer le rapport cyclique &quot;a la volée&quot;, on utilise</span>
+        <span class="c1"># la methode RPI.GPIO.PWM.ChangeDutyCycle()</span>
+
+    <span class="n">frequence</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">ChangeFrequency</span><span class="p">(</span><span class="n">frequence</span><span class="p">)</span>
+        <span class="c1"># On peut changer la frequence &quot;a la volee&quot;. On parle alors de PFM</span>
+        <span class="c1"># on utilise la méthode RPI.GPIO.PWM.ChangeFrequency()</span>
+
+    <span class="n">p</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="c1"># on arrête l&#39;impulsion</span>
+
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span>
+        <span class="c1"># on libère toutes les GPIO</span>
+<span class="p">[</span><span class="n">fin</span> <span class="n">de</span> <span class="n">script</span> <span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>servo moteur :</dt><dd><p>La période pour un servo moteur est généralement de 20ms
+(a controler avec la documentation). les angles : 0 ; 90 ; 180 son généralement
+associes a des durée d’impulsion de 0.5 ; 1.5 ; 2.5 ms ce qui donne les rapports cycliques
+(duty cycle) suivants :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.5</span><span class="o">/</span><span class="mi">20</span> <span class="o">=</span> <span class="mf">2.5</span><span class="o">%</span>
+<span class="mf">1.5</span><span class="o">/</span><span class="mi">20</span> <span class="o">=</span> <span class="mf">7.5</span><span class="o">%</span>
+<span class="mf">2.5</span><span class="o">/</span><span class="mi">20</span> <span class="o">=</span> <span class="mf">12.5</span> <span class="o">%</span>
+</pre></div>
+</div>
+<p>L’ensemble des valeurs de 0 a 180° son donc comprises entre 0.5 et 2.5 ms soit
+entre 2.5% et 12.5%.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>DC motor :</dt><dd><p>Le rapport cyclique permet de gérer la vitesse du moteur(valeur de 0 à 100).
+Il est préférable d’utiliser 2 broches PWM pour gérer le sens de rotation.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 7%" />
+<col style="width: 81%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>Actions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>rotation off</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>rotation on (sens 1)</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>rotation on (sens 2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>rotation off</p></td>
+</tr>
+</tbody>
+</table>
+<p>La fréquence est a adapter en fonction du bruit du moteur
+(quant il « chante », c’est pas bon)</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="input-pull-up-pull-down">
+<h2>Input pull-up / pull-down<a class="headerlink" href="#input-pull-up-pull-down" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list">
+<dt class="field-odd">liens Web</dt>
+<dd class="field-odd"><blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-8">http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-8</a></dt><dd><p># un petit exemple en fr et en python</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://raspberrypi-aa.github.io/session2/input.html">http://raspberrypi-aa.github.io/session2/input.html</a></dt><dd><p># petit panorama sur les entrées (interruption et pull-up-down)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic">
+<li><dl>
+<dt>Pull-Up et Pull-Down sur le RPi</dt><dd><p>Le RPi possède en interne une résistance de tirrage qui peut être activée
+de 2 façons différentes :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Pull-Up ([résistance entre le +3.3v et la broche] + gnd)</p></li>
+<li><p>Pull-Down (+3.3v + [résistance entre la broche et le gnd])</p></li>
+</ul>
+</div></blockquote>
+<p>Activation de la Pull-Up :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">pull_up_down</span><span class="o">=</span><span class="n">GPIO</span><span class="o">.</span><span class="n">PUD_UP</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Activation de la Pull-Down :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">pull_up_down</span><span class="o">=</span><span class="n">GPIO</span><span class="o">.</span><span class="n">PUD_DOWN</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="les-interruptions-python-gpio">
+<h2>Les interruptions (python + GPIO)<a class="headerlink" href="#les-interruptions-python-gpio" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">liens Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://raspi.tv/2013/how-to-use-interrupts-with-python-on-the-raspberry-pi-and-rpi-gpio">http://raspi.tv/2013/how-to-use-interrupts-with-python-on-the-raspberry-pi-and-rpi-gpio</a></dt><dd><p># introductions aux interruptions (part 1)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://raspi.tv/2013/how-to-use-interrupts-with-python-on-the-raspberry-pi-and-rpi-gpio-part-2">http://raspi.tv/2013/how-to-use-interrupts-with-python-on-the-raspberry-pi-and-rpi-gpio-part-2</a></dt><dd><p># part2 - Threaded callback</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://raspi.tv/2013/how-to-use-interrupts-with-python-on-the-raspberry-pi-and-rpi-gpio-part-3">http://raspi.tv/2013/how-to-use-interrupts-with-python-on-the-raspberry-pi-and-rpi-gpio-part-3</a></dt><dd><p># part 3 - Multiple threaded callback interrupts in Python</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/ressources/pedagogiques/4346/4346-4-rpi-gpio.pdf">http://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/ressources/pedagogiques/4346/4346-4-rpi-gpio.pdf</a></dt><dd><p># petite présentation en fr (avec exemple en python)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://raspberrypi-aa.github.io/session2/input.html">http://raspberrypi-aa.github.io/session2/input.html</a></dt><dd><p># petit panorama sur les entrées (interuption et pull-up-down)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-9">http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-9</a></dt><dd><p># Les 3 types d’interruptions expliquées en Français</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="plein-d-astuce-pour-la-gestion-au-quotidien">
+<h2>Plein d’astuce pour la gestion au quotidien<a class="headerlink" href="#plein-d-astuce-pour-la-gestion-au-quotidien" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">liens Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://www.framboise314.fr/raspbian-tout-un-tas-de-trucs/#Effacement_de_lrsquocran">http://www.framboise314.fr/raspbian-tout-un-tas-de-trucs/#Effacement_de_lrsquocran</a></dt><dd><p># Exemple complet d’utilisation d’un Raspberry Pi et des GPIO dans docker</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="utiliser-les-gpio-dans-un-container-docker">
+<h2>Utiliser les GPIO dans un container (Docker)<a class="headerlink" href="#utiliser-les-gpio-dans-un-container-docker" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://iotbytes.wordpress.com/create-your-first-docker-container-for-raspberry-pi-to-blink-an-led/">https://iotbytes.wordpress.com/create-your-first-docker-container-for-raspberry-pi-to-blink-an-led/</a></p></li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://stackoverflow.com/questions/30059784/docker-access-to-raspberry-pi-gpio-pins">https://stackoverflow.com/questions/30059784/docker-access-to-raspberry-pi-gpio-pins</a></dt><dd><p># La réponse de Tobias du 12/01/2018 présentes les 3 moyen d’accéder aux GPIO</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Raspberry</a><ul>
+<li><a class="reference internal" href="#rpi-utilises">RPi utilisés</a><ul>
+<li><a class="reference internal" href="#model-2-id-fix">Model 2 (ID-FIX)</a></li>
+<li><a class="reference internal" href="#rpi-rov">RPI ROV</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#acceder-au-fichier-de-configuration-du-rpi">Accéder au fichier de configuration du RPI</a></li>
+<li><a class="reference internal" href="#connaitre-la-configuration-materiel-du-rpi">Connaître la configuration matériel du RPI</a></li>
+<li><a class="reference internal" href="#pour-passer-la-langue-et-le-clavier-en-francais">pour passer la langue et le clavier en français</a></li>
+<li><a class="reference internal" href="#vocabulaire">Vocabulaire</a></li>
+<li><a class="reference internal" href="#la-bibliotheque-rpi-gpio">La bibliotheque RPi.GPIO</a><ul>
+<li><a class="reference internal" href="#implantation-rpi2">Implantation RPi2</a></li>
+<li><a class="reference internal" href="#installation-de-rpi-gpio">Installation de RPi.GPIO</a></li>
+<li><a class="reference internal" href="#utilisation-de-rpi-gpio-avec-python">Utilisation de RPi.GPIO avec Python</a></li>
+<li><a class="reference internal" href="#quick-ref-les-fonctions-associer-aux-gpio-en-python">Quick ref, les fonctions associer aux GPIO en python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#protocole-i2c">Protocole I2C</a><ul>
+<li><a class="reference internal" href="#installation-activation-de-l-i2c">Installation / Activation de l’I2C</a></li>
+<li><a class="reference internal" href="#connaitre-l-adresse-des-materiels-branches">Connaître l’adresse des matériels branchés</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#uart">UART</a><ul>
+<li><a class="reference internal" href="#liberer-l-uart">Libérer l’UART</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pwm-servo-moteur-et-dc-motor">PWM, Servo moteur et DC Motor</a></li>
+<li><a class="reference internal" href="#input-pull-up-pull-down">Input pull-up / pull-down</a></li>
+<li><a class="reference internal" href="#les-interruptions-python-gpio">Les interruptions (python + GPIO)</a></li>
+<li><a class="reference internal" href="#plein-d-astuce-pour-la-gestion-au-quotidien">Plein d’astuce pour la gestion au quotidien</a></li>
+<li><a class="reference internal" href="#utiliser-les-gpio-dans-un-container-docker">Utiliser les GPIO dans un container (Docker)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="Python.html"
+                        title="Chapitre précédent">PYTHON</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="Regex.html"
+                        title="Chapitre suivant">Regex</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Raspberry.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="Regex.html" title="Regex"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="Python.html" title="PYTHON"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Poltergeist42.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+    </div>
+  </body>
+</html>

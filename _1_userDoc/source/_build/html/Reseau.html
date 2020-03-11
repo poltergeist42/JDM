@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reseau &#8212; Documentation JDM 20170523</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Site Web" href="SiteWeb.html" />
+    <link rel="prev" title="Regex" href="Regex.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="SiteWeb.html" title="Site Web"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="Regex.html" title="Regex"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="reseau">
+<h1><a class="toc-backref" href="#id17">Reseau</a><a class="headerlink" href="#reseau" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#reseau" id="id17">Reseau</a></p>
+<ul>
+<li><p><a class="reference internal" href="#materiel" id="id18">Matériel</a></p>
+<ul>
+<li><p><a class="reference internal" href="#switch" id="id19">Switch</a></p>
+<ul>
+<li><p><a class="reference internal" href="#vlan" id="id20">VLAN</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#router-firewall-proxy" id="id21">Router, Firewall, Proxy</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sophos" id="id22">Sophos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#webography" id="id23">Webography</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="materiel">
+<h2><a class="toc-backref" href="#id18">Matériel</a><a class="headerlink" href="#materiel" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="switch">
+<h3><a class="toc-backref" href="#id19">Switch</a><a class="headerlink" href="#switch" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="vlan">
+<h4><a class="toc-backref" href="#id20">VLAN</a><a class="headerlink" href="#vlan" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://www.it-connect.fr/mise-en-place-de-vlans-et-de-routage-inter-vlans/">Mise en place de VLANs et de routage inter-VLANs</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a> : Exemple de VLAN (IT-Connect)</p></li>
+<li><p><a class="reference external" href="https://networkcorp.fr/vlan-virtual-local-area-network/">initiation au VLAN</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a> : explication du VLAN (1ere partie) + configuration d’un switch
+Cisco (CLI)</p></li>
+<li><p><a class="reference external" href="https://fucking-it.com/fr/tutoriel/switch-hp/422-switch-hp-configurez-vlan-interface-web">Configuration d’un switch HP avec l’interface WEB</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p></li>
+<li><p><a class="reference external" href="https://www.clemanet.com/hp/configuration-vlan.php">Configuration d’un switch Aruba (HP) en CLI</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a> : Explications plus clairs sur le mode
+de configuration des ports</p></li>
+<li><p><a class="reference external" href="http://idum.fr/spip.php?article295">Guide switch HP type Procurve</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a> : Config CLI et WEB du Procurve 2530</p></li>
+<li><p><a class="reference external" href="https://www.it-connect.fr/switch-aruba-configurer-un-trunk-lacp/">Switch Aruba : configurer un Trunk LACP</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a> : Agrégat de lien (IT-connect)</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="router-firewall-proxy">
+<h2><a class="toc-backref" href="#id21">Router, Firewall, Proxy</a><a class="headerlink" href="#router-firewall-proxy" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="sophos">
+<h3><a class="toc-backref" href="#id22">Sophos</a><a class="headerlink" href="#sophos" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Basic settings</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://techbast.com/2015/03/perform-a-basic-configuration-sophos-utm-in-12-simple-steps.html">Basic settings in 12 step</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a></p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p>Configurer le VPN en SSL</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://www.sophos.com/en-us/medialibrary/PDFs/documentation/utm90_Remote_Access_Via_SSL_geng.pdf">UTM90 Remote Access via SSL</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a></p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="webography">
+<h2><a class="toc-backref" href="#id23">Webography</a><a class="headerlink" href="#webography" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="https://www.it-connect.fr/mise-en-place-de-vlans-et-de-routage-inter-vlans/">https://www.it-connect.fr/mise-en-place-de-vlans-et-de-routage-inter-vlans/</a></p>
+</dd>
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p><a class="reference external" href="https://networkcorp.fr/vlan-virtual-local-area-network/">https://networkcorp.fr/vlan-virtual-local-area-network/</a></p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p><a class="reference external" href="https://fucking-it.com/fr/tutoriel/switch-hp/422-switch-hp-configurez-vlan-interface-web">https://fucking-it.com/fr/tutoriel/switch-hp/422-switch-hp-configurez-vlan-interface-web</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
+<dd><p><a class="reference external" href="https://www.clemanet.com/hp/configuration-vlan.php">https://www.clemanet.com/hp/configuration-vlan.php</a></p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
+<dd><p><a class="reference external" href="http://idum.fr/spip.php?article295">http://idum.fr/spip.php?article295</a></p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
+<dd><p><a class="reference external" href="https://www.it-connect.fr/switch-aruba-configurer-un-trunk-lacp/">https://www.it-connect.fr/switch-aruba-configurer-un-trunk-lacp/</a></p>
+</dd>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id14">7</a></span></dt>
+<dd><p><a class="reference external" href="https://techbast.com/2015/03/perform-a-basic-configuration-sophos-utm-in-12-simple-steps.html">https://techbast.com/2015/03/perform-a-basic-configuration-sophos-utm-in-12-simple-steps.html</a></p>
+</dd>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id16">8</a></span></dt>
+<dd><p><a class="reference external" href="https://www.sophos.com/en-us/medialibrary/PDFs/documentation/utm90_Remote_Access_Via_SSL_geng.pdf">https://www.sophos.com/en-us/medialibrary/PDFs/documentation/utm90_Remote_Access_Via_SSL_geng.pdf</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Reseau</a><ul>
+<li><a class="reference internal" href="#materiel">Matériel</a><ul>
+<li><a class="reference internal" href="#switch">Switch</a><ul>
+<li><a class="reference internal" href="#vlan">VLAN</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#router-firewall-proxy">Router, Firewall, Proxy</a><ul>
+<li><a class="reference internal" href="#sophos">Sophos</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#webography">Webography</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="Regex.html"
+                        title="Chapitre précédent">Regex</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="SiteWeb.html"
+                        title="Chapitre suivant">Site Web</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Reseau.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="SiteWeb.html" title="Site Web"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="Regex.html" title="Regex"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Poltergeist42.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+    </div>
+  </body>
+</html>
