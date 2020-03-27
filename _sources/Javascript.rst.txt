@@ -70,7 +70,6 @@ page (juste avant "</html>") pour ne pas ralentir le chargement des autres élé
         <script type="text/javascript" src="myScript.js"></script>
     </html>
 
-
 Liste des commandes de bases
 ============================
 
@@ -338,6 +337,30 @@ Extraire les clés (keys) pour les classé dans un tableau
 
     var keyFromObject = Object.keys( myObject )     //keyFromObject === ["id1", "id2"]
 
+Quand utiliser '[]' ou '.' pour accéder à une clef
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On utilise '[]' dans le cas d'une itération lorsque le nom du membre n'est pas connue. A l'inverse,
+on utilise '.' pour un appel direct, lorsque le nom du membre est connu
+
+.. code-block:: JavaScript
+   :linenos:
+   :force:
+
+    d={'a':1, 'b':2, 'c':3}             //d     --> Object { a: 1, b: 2, c: 3 }
+    const d_str = Object.keys(d)        //d_str --> Array(3) [ "a", "b", "c" ]
+
+    d_str.forEach(
+        item =>{
+            console.log(d[item])
+        }
+    )                                   //1
+                                        //2
+                                        //3
+
+    d.a                                 //1
+    d.b                                 //2
+    d.c                                 //3
 
 Les fonctions
 -------------
@@ -587,7 +610,9 @@ super()
 Le mot-clé super est utilisé afin d'appeler ou d'accéder à des fonctions définies sur l'objet
 parent.
 
-Lorsqu'il est utilisé dans un constructeur, le mot-clé super est utilisé seul et doit apparaître avant le mot-clé this. Ce mot-clé peut également être utilisé afin d'appeler des fonctions sur un objet parent.
+Lorsqu'il est utilisé dans un constructeur, le mot-clé super est utilisé seul et doit apparaître
+avant le mot-clé this. Ce mot-clé peut également être utilisé afin d'appeler des fonctions sur un
+objet parent.
 
 Import / Inclusion de module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -671,8 +696,8 @@ IL est conseiller d'importer tous les modules dans un seul fichier.
    :linenos:
    :force:
 
-    import {Personne} from "./personne.js";
-    import {Homme} from "./homme.js";
+    import {Personne} from "./personne";
+    import {Homme} from "./homme";
 
     var personne = new Personne("Gabin", "Jean");
     personne.log();
@@ -699,6 +724,19 @@ fichier html.
         <!-- Inclusion des modules externes -->
         <script type="module" src="./index.js"></Script>
     </html>
+
+Importer du CSS
+---------------
+
+Si on importe les fichier JavaScript sans préciser l'extention, c'est l'inverse lorsque l'on doit
+inserer du CSS.
+
+.. code-block:: JavaScript
+   :linenos:
+   :force:
+
+    import {Personne} from "./personne"
+    import styles from "./css/monSuperCSS.css"
 
 .. glossary::
 
@@ -818,8 +856,8 @@ Interpréter le JSX dans un navigateur
 =====================================
 
 Le JSX n'est pas nativement interpréter par les navigateurs. Pour interpréter le JSX dans le
-navigateur, il faut le prévoir dans le HTML en ajoutant une la bibliothèque **"Babel"** au moyen de la
-balise *<src="...">*. Il faut également inclure l'attribut *type="text/babel"* dans la balise
+navigateur, il faut le prévoir dans le HTML en ajoutant une la bibliothèque **"Babel"** au moyen de
+la balise *<src="...">*. Il faut également inclure l'attribut *type="text/babel"* dans la balise
 script contenant le JSX.
 
 .. code-block:: html
@@ -872,8 +910,8 @@ Details syntaxique
       le formatage en **lowerCamelCase**
 
     * JSX (et donc React) considère les composants commençant par des lettres minuscules comme des
-      balises :term:`DOM`. Par exemple, <div /> représente une balise HTML div, mais <Welcome /> représente
-      un composant, et exige que l’identifiant Welcome existe dans la portée courante.
+      balises :term:`DOM`. Par exemple, <div /> représente une balise HTML div, mais <Welcome />
+      représente un composant, et exige que l’identifiant Welcome existe dans la portée courante.
 
     * Toutes les balises auto-fermantes doivent être fermées avec "/" avant le ">"
 
@@ -944,6 +982,7 @@ Details syntaxique
 .. index::
    single: React
    single: JavaScript; React
+   single: MERN; React
    single: WEB; React
 
 --------
@@ -964,8 +1003,9 @@ React.js
 React est une bibliothèque Javascript, utilisée pour créer des composants d'affiche. Dans le modèle
 MVC, React correspond à la **Vue**.
 
-Pour créer une application avec React, on va créer des composant (des classes ou des fonctions) qui
-seront ensuite assemblé pour former l'application finale. Les composant React sont réutilisable.
+Pour créer une application avec React, on va créer des composants (des classes ou des fonctions)
+qui seront ensuite assemblé pour former l'application finale. Les composant React sont
+réutilisable.
 
 **React utilise un DOM virtuel**
 
@@ -973,8 +1013,6 @@ Lors de l'utilisation de bibliothèques telles que JQuery nous manipulons direct
 HTML de la page, c'est à dire le DOM. React ne manipule pas le DOM directement, mais une copie
 interne de celui-ci (appellé DOM Virtuel), et produit les modifications d'affichage uniquement
 lorsque cela s'avère nécessaire.
-
-
 
 **React Native** (une variante de React) permet de créer des application IPhone ou Android.
 
@@ -985,9 +1023,10 @@ l'éxecption du code minimum et des balises <div> qui accueilleront le html de R
 
 React est composé de 2 bibliothèques JavaScript à inserer dans la page HTML :
 
-    * **React** : Correspond à React lui même qui permet de créer des composant d'affichage réutilisable.
+    * **React** : Correspond à React lui même qui permet de créer des composant d'affichage
+      réutilisable.
 
-    * **ReactDOM** : Extention permettant de visualiser, dans une page HTML, les composant créer
+    * **ReactDOM** : Extention permettant d'effectuer le rendu, dans une page HTML, les composants créer
       avec React.
 
 Attention, les deux bibliothèques sont fournie en version **"development"** et en version
@@ -1022,6 +1061,49 @@ Le code minimale d'une page est donc :
             // ou inclusion d'un module (Ne pas oublier type="module" dans la balise <script>)
         </script>
     </html>
+
+Getting started
+===============
+
+:Liens_Web:
+    * `Package create-react-app`_
+
+.. _`Package create-react-app`: https://github.com/facebook/create-react-app
+
+**Create React App** est un paquet qui permet de créer l'arborescence et d'installer toutes les
+dépendances nécéssaires. 
+e paquet doit être installer globallement.
+
+.. code-block:: shell
+   :linenos:
+   :force:
+
+    npm install -g create-react-app
+
+    # Créer ensuite un nouveau projet
+    npx create-react-app [my-app]       # Attention, les noms des projets doivent être écris en
+                                        # minuscule uniquement.
+    cd [my-app]
+    npm start
+
+Versionning et récupération de projet
+-------------------------------------
+
+Lorsqu'un projet react est créer, il est contient un fichier '.gitignore' qui exclue le dossier
+"node_modules".
+
+Le dossiers "node_modules" contient toutes les dépendances de React. Ces dépendances sont listées
+dans le fichiers "package.json".
+
+Si le projet est récupérer d'un dépot distant comme Github par exemple il faut alors installer les
+dépendances du projet.
+
+.. code-block:: shell
+   :linenos:
+   :force:
+
+    cd [my-app]
+    npm install     #lecture du fichier "package.json" pour identifier les dépendances à installer
 
 Composants (component)
 ======================
@@ -1406,6 +1488,55 @@ States
     * `React JS — Understanding State`_
 
 .. _`React JS — Understanding State`: https://codeburst.io/react-js-understanding-state-e875911e921c
+
+hooks
+^^^^^
+
+**WIP**
+    Une alternative a setState()
+
+####
+
+.. index::
+   single: Node
+   single: JavaScript; Node
+   single: MERN; Node
+   single: WEB; Node
+
+-------
+Node.js
+-------
+
+:Liens_Web:
+    * `Nodejs dowload`_
+
+.. _`Nodejs dowload`: https://nodejs.org/en/download/ 
+
+Démarrer un projet
+
+####
+
+.. index::
+   single: NPM
+   single: Node; NPM
+
+
+--------------------
+NPM - Packet manager
+--------------------
+
+:Liens_Web:
+    * `Installation et découverte de npm`_
+
+.. _`Installation et découverte de npm`: https://www.pierre-giraud.com/npm-installation-decouverte/
+
+
+.. glossary::
+
+    NPN
+        npm (Node Package Manager) est le gestionnaire de paquets officiel de Node.js. Il permet de
+        télécharger et d’installer des paquets (encore appelés modules) pour pouvoir les utiliser
+        pour un projet ou au contraire de partager des paquets pour que d’autres utilisateurs puissent les utiliser.
 
 --------
 Weblinks

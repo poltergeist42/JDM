@@ -5,6 +5,22 @@ Visual Studio Code
 .. contents::
    :backlinks: top
 
+Obtenir de l'aide sur les diférentes commandes et fonctionnalitées
+==================================================================
+
+    Menu Help --> Interactive Playground
+
+**NDLR**: ça c'est la vie !
+
+
+Documentation Officielle
+========================
+
+    :Liens_Web:
+        * `Doc officiel de Microsoft`_ : cette doc est accessible depuis le menu Help --> Documentation
+
+.. _`Doc officiel de Microsoft`: https://code.visualstudio.com/docs#vscode
+
 Snippets
 ========
 

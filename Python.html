@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -707,7 +707,7 @@ complète y compris le contenu des données itérables</p>
 <span class="gp">... </span>    <span class="k">def</span> <span class="nf">appelFonc</span><span class="p">(</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span> <span class="p">)</span> <span class="p">:</span>
 <span class="gp">... </span>            <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="gp">... </span>            <span class="n">tache</span> <span class="o">=</span> <span class="n">fonct</span><span class="p">(</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span> <span class="p">)</span>
-<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;temps d’exécution : {time.time()-t}&quot;</span><span class="p">)</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;temps d’exécution : </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="gp">... </span>            <span class="k">return</span> <span class="n">tache</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">appelFonc</span>
 <span class="gp">...</span>
@@ -715,9 +715,9 @@ complète y compris le contenu des données itérables</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="nd">@decorateur</span>
 <span class="gp">... </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="p">:</span>
 <span class="gp">... </span>    <span class="sd">&quot;&quot;&quot; affiche le contenue et le type des variables passées en argument &quot;&quot;&quot;</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{a}</span><span class="s2"> - {type(a)}&quot;</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{b}</span><span class="s2"> - {type(b)}&quot;</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{c}</span><span class="s2"> - {type(c)}&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
 <span class="go">a - &lt;class &#39;str&#39;&gt;</span>
@@ -760,12 +760,12 @@ compris des arguments ayant une valeur par défaut.</p>
 <span class="n">Je</span> <span class="n">suis</span> <span class="n">une</span> <span class="k">lambda</span> <span class="n">sans</span> <span class="n">argument</span>
 
 <span class="c1"># lambda avec 1 argument</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">var1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;voici l&#39;argument &#39;var1&#39; : </span><span class="si">{var1}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">var1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;voici l&#39;argument &#39;var1&#39; : </span><span class="si">{</span><span class="n">var1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="s2">&quot;arg1&quot;</span><span class="p">)</span>
 <span class="n">voici</span> <span class="n">l</span><span class="s1">&#39;argument &#39;</span><span class="n">var1</span><span class="s1">&#39; : arg1</span>
 
 <span class="c1"># lambda avec un argument par défaut:</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">var1</span><span class="o">=</span><span class="s2">&quot;valeur par défaut&quot;</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;voici l&#39;argument &#39;var1&#39; : </span><span class="si">{var1}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">var1</span><span class="o">=</span><span class="s2">&quot;valeur par défaut&quot;</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;voici l&#39;argument &#39;var1&#39; : </span><span class="si">{</span><span class="n">var1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">()</span>
 <span class="n">voici</span> <span class="n">l</span><span class="s1">&#39;argument &#39;</span><span class="n">var1</span><span class="s1">&#39; : valeur par défaut</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="s2">&quot;arg personalisé&quot;</span><span class="p">)</span>
@@ -1055,7 +1055,7 @@ show detailed information</p></td>
 
 <span class="kn">import</span> <span class="nn">logging</span>
 
-<span class="kn">from</span> <span class="nn">logging.handlers</span> <span class="k">import</span> <span class="n">RotatingFileHandler</span>
+<span class="kn">from</span> <span class="nn">logging.handlers</span> <span class="kn">import</span> <span class="n">RotatingFileHandler</span>
 
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
     <span class="c1"># création de l&#39;objet logger qui va nous servir à écrire dans les logs</span>
@@ -1387,7 +1387,7 @@ d’explications supplémentaires.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1409,7 +1409,7 @@ d’explications supplémentaires.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
     </div>
   </body>
 </html>
