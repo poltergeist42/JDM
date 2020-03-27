@@ -982,6 +982,7 @@ Details syntaxique
 .. index::
    single: React
    single: JavaScript; React
+   single: MERN; React
    single: WEB; React
 
 --------
@@ -1496,6 +1497,12 @@ hooks
 
 ####
 
+.. index::
+   single: Node
+   single: JavaScript; Node
+   single: MERN; Node
+   single: WEB; Node
+
 -------
 Node.js
 -------
@@ -1505,7 +1512,14 @@ Node.js
 
 .. _`Nodejs dowload`: https://nodejs.org/en/download/ 
 
+Démarrer un projet
+
 ####
+
+.. index::
+   single: NPM
+   single: Node; NPM
+
 
 --------------------
 NPM - Packet manager
