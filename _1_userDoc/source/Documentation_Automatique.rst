@@ -1,14 +1,23 @@
-===========================================
-DocUtils ; reStructuredText (.rst) ; Sphinx
-===========================================
+=========================
+Documentation_Automatique
+=========================
+
+.. contents::
+   :backlinks: top
 
 --------
 DocUtils
 --------
 
 :Liens WEB:
-            * http://docutils.sourceforge.net/
-            
+    * `Page d'accueil du projet`_ 
+
+.. _`Page d'accueil du projet`: http://docutils.sourceforge.net/
+
+Docutils is an open-source text processing system for processing plaintext documentation into
+useful formats, such as HTML, LaTeX, man-pages, open-document or XML. It includes reStructuredText,
+the easy to read, easy to use, what-you-see-is-what-you-get plaintext markup language.
+
 ####
 
 -----------------------
@@ -16,33 +25,43 @@ reStructuredText (.rst)
 -----------------------
 
 :Liens WEB:
-        * http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
-            # Références  officielles
+    * `Références officielles`_ 
 
-        * https://fr.wikipedia.org/wiki/ReStructuredText
-            # (Définition Wikipedia)
+    * `Définition Wikipedia`_
 
-        * https://aful.org/wikis/interop/ReStructuredText
-            # Exemple et définition en français
+    * `Exemple et définition en français`_
 
-        * https://mg.pov.lt/restview/
-            # api en python permettant de convertir dynamiquement
-            les fichiers ".rst" en page Web
-            
-        * https://github.com/steenhulthin/reStructuredText_NPP            
-            # Pour ajouter la syntaxe "reStructuredText" à notePad++
-            
-        * http://docutils.sourceforge.net/docs/user/rst/quickref.html
-            # Un petit guide de référence
-            
-        * http://python.physique.free.fr/aide/Partie1.html
-            # détail de syntaxe avancé
+    * `convertir dynamiquement les fichiers ".rst" en page Web`_
+        
+    * `Pour ajouter la syntaxe "reStructuredText" à notePad++`_
+        
+    * `Un petit guide de référence`_
+        
+    * `détail de syntaxe avancé`_
 
-        * http://docutils.sourceforge.net/docs/ref/rst/directives.html
-            # Explication détailler des directives (ex : images, include, etc ...)
+    * `Explication détailler des directives (ex : images, include, etc ...)`_
 
-        * http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
-            # Syntaxe avancée
+    * `Syntaxe avancée`_
+
+.. _`Références officielles`: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+.. _`Définition Wikipedia`: https://fr.wikipedia.org/wiki/ReStructuredText
+.. _`Exemple et définition en français`: https://aful.org/wikis/interop/ReStructuredText
+.. _`convertir dynamiquement les fichiers ".rst" en page Web`: https://mg.pov.lt/restview/
+.. _`Pour ajouter la syntaxe "reStructuredText" à notePad++`: https://github.com/steenhulthin/reStructuredText_NPP
+.. _`Un petit guide de référence`: http://docutils.sourceforge.net/docs/user/rst/quickref.html
+.. _`détail de syntaxe avancé`: http://python.physique.free.fr/aide/Partie1.html
+.. _`Explication détailler des directives (ex : images, include, etc ...)`: http://docutils.sourceforge.net/docs/ref/rst/directives.html
+.. _`Syntaxe avancée`: http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
+
+reStructuredText est un langage de balisage léger utilisé notamment dans la documentation du
+langage Python.
+
+Bien que sauvegardé sous un format textuel, l'extension associée est parfois indiquée comme étant
+RST. L'analyseur syntaxique de référence est implémenté comme élément Docutils du cadre
+d'application du langage de programmation Python, mais d'autres implémentations existent par
+ailleurs (par exemple Pandoc en Haskell ou JRst en Java).
+
+reStructuredText permet d'exporter dans notamment les formats HTML, XML, LaTeX, ODF. 
 
 Directives
 ==========
@@ -72,9 +91,10 @@ Insérer une image
 Directive TODO
 --------------
 
-    :Liens_Web:
-                * http://www.sphinx-doc.org/en/master/usage/extensions/todo.html
-                    # Doc Sphinx
+:Liens_Web:
+    * `Doc Sphinx`_
+
+.. _`Doc Sphinx`: http://www.sphinx-doc.org/en/master/usage/extensions/todo.html
 
     ::
 
@@ -112,15 +132,16 @@ Dans 'conf.py' : ::
 Insérer des formules mathématiques
 ----------------------------------
 
-    :Liens_Web:
-                * https://fr.wikibooks.org/wiki/LaTeX/%C3%89crire_des_math%C3%A9matiques
-                    # Convention mathématiques utilisées en LaTeX
-                    
-                * https://fr.wikipedia.org/wiki/Table_de_symboles_math%C3%A9matiques
-                    # Ensemble des symboles mathématiques, le code unicode et la syntaxe LaTeX
+:Liens_Web:
+    * `Convention mathématiques utilisées en LaTeX`_
+        
+    * `Ensemble des symboles mathématiques, le code unicode et la syntaxe LaTeX`_
 
-                * https://fr.wikibooks.org/wiki/LaTeX/Math%C3%A9matiques
-                    # Explication simple et complète de l'utilisation des instructions mathématiques en LaTeX
+    * `Explication simple et complète de l'utilisation des instructions mathématiques en LaTeX`_
+
+.. _`Convention mathématiques utilisées en LaTeX`: https://fr.wikibooks.org/wiki/LaTeX/%C3%89crire_des_math%C3%A9matiques
+.. _`Ensemble des symboles mathématiques, le code unicode et la syntaxe LaTeX`: https://fr.wikipedia.org/wiki/Table_de_symboles_math%C3%A9matiques
+.. _`Explication simple et complète de l'utilisation des instructions mathématiques en LaTeX`: https://fr.wikibooks.org/wiki/LaTeX/Math%C3%A9matiques
 
 Les formules mathématiques doivent respecter la syntax **LaTeX**. Il y a 2 types d'insertion 
 des formules :
@@ -169,11 +190,13 @@ Sphinx
 ------
 
 :Liens WEB:
-        * http://www.sphinx-doc.org/en/stable/tutorial.html
-        
-        * https://developer.ridgerun.com/wiki/index.php/How_to_generate_sphinx_documentation_for_python_code_running_in_an_embedded_system
-            # un petit cookbook sur la configuration
+    * `Tutorial`_ 
     
+    * `un petit cookbook sur la configuration`_
+
+.. _`Tutorial`: http://www.sphinx-doc.org/en/stable/tutorial.html
+.. _`un petit cookbook sur la configuration`: https://developer.ridgerun.com/wiki/index.php/How_to_generate_sphinx_documentation_for_python_code_running_in_an_embedded_system
+
 Installer Sphinx
 ================
     ::
@@ -190,9 +213,6 @@ Démarrage et initialisation rapide
 Rédiger et publier de la doc avec Sphinx sur GitHub-pages
 =========================================================
 
-:Liens WEB :
-        * https://daler.github.io/sphinxdoc-test/includeme.html
-        
 Préparation de l'arborescence
 -----------------------------
 
@@ -425,20 +445,13 @@ Préparation de l'arborescence
             - Une nouvelle vérification des branch locale devrait nous indiquer qu'il y a
               2 branch et que nous sommes sur la branch **'gh-pages'**
 
-Utiliser Sphinx pour traité les donnes de Doxygen
-=================================================
-
-:Liens_Web:
-        * http://breathe.readthedocs.io/en/latest/
-            # Breathe permet de transformer le XML générer par Doxygen en un contenu exploitable par Sphinx
-
 Modification de thèmes dans Sphinx
 ==================================
 
 :Liens_Web:
-            * http://www.sphinx-doc.org/en/master/theming.html
-                # Doc officiel de Sphinx concernant le changement de thèmes
+    * `Doc officiel de Sphinx concernant le changement de thèmes`_
 
+.. _`Doc officiel de Sphinx concernant le changement de thèmes`: http://www.sphinx-doc.org/en/master/theming.html
 
 Installer le pack de thèmes pour Sphinx
 ---------------------------------------
@@ -446,3 +459,57 @@ Installer le pack de thèmes pour Sphinx
     ::
 
         pip install sphinxjp.themes.dotted
+
+Utiliser Sphinx pour traité les données d'autre Générateur de doc
+=================================================================
+
+Utiliser Sphinx pour traité les données de Doxygen
+--------------------------------------------------
+
+:Liens_Web:
+    * `Breathe`_ : permet de transformer le XML générer par Doxygen en un contenu exploitable par Sphinx
+
+.. _`Breathe`: http://breathe.readthedocs.io/en/latest/
+
+
+Utiliser Sphinx pour traité les données de JSDOC (Javascript)
+-------------------------------------------------------------
+
+:Liens_Web:
+    * `Sphinx-js`_ : Dépôt pipy
+
+    * `Introducing sphinx-js`_
+
+.. _`Sphinx-js`: https://pypi.org/project/sphinx-js/
+.. _`Introducing sphinx-js`: https://hacks.mozilla.org/2017/07/introducing-sphinx-js-a-better-way-to-document-large-javascript-projects/
+
+####
+
+-----
+JSDOC
+-----
+
+:Liens_Web:
+    * `JDSOC Wikipedia`_
+
+    * `JSDoc : Génération de documentation en Javascript`_
+
+    * `JSDOC Github`_
+
+    * `Doc apparament officiel`_ (pas sexy du tout)
+
+    * `Créer des commentaires JSDoc pour IntelliSense JavaScript`_ (Visual Studio)
+
+.. _`JDSOC Wikipedia`: https://fr.wikipedia.org/wiki/JSDoc
+.. _`JSDoc : Génération de documentation en Javascript`: https://www.supinfo.com/articles/single/2818-jsdoc-generation-documentation-javascript
+.. _`JSDOC Github`: https://github.com/jsdoc/jsdoc
+.. _`Doc apparament officiel`: https://jsdoc.app/
+.. _`Créer des commentaires JSDoc pour IntelliSense JavaScript`: https://docs.microsoft.com/fr-fr/visualstudio/ide/create-jsdoc-comments-for-javascript-intellisense?view=vs-2015
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::
