@@ -45,7 +45,7 @@
   <div class="section" id="django-2">
 <h1><a class="toc-backref" href="#id54"><span class="sectnum">1</span> Django 2</a><a class="headerlink" href="#django-2" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="contents topic" id="table-of-contents">
-<p class="topic-title">Table of Contents</p>
+<p class="topic-title first">Table of Contents</p>
 <ul class="auto-toc simple">
 <li><p><a class="reference internal" href="#django-2" id="id54"><span class="sectnum">1</span> Django 2</a></p>
 <ul class="auto-toc">
@@ -691,9 +691,9 @@ Django’s Model Class.</p>
 in the databases.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># exemple of some field you can create</span>
 <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
-<span class="n">permalink</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">permalink</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">update_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="s1">&#39;Dernière MAJ&#39;</span><span class="p">)</span>
-<span class="n">bodytext</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="s1">&#39;Page Content&#39;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">bodytext</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="s1">&#39;Page Content&#39;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -850,7 +850,7 @@ search a specific page. Add commands bellow to the admin’s model class.</p>
 </pre></div>
 </div>
 <p>An alternative syntax for registering the MadelAdmin class is to use the register decorator:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@admin</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Page</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@admin.register</span><span class="p">(</span><span class="n">Page</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">PageAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
     <span class="c1"># do some stuff like ...</span>
     <span class="c1"># list_display = (&#39;title&#39;, &#39;update_date&#39;)</span>
@@ -902,7 +902,7 @@ linking to templates that exit elsewere in your project structure.</p>
 <span class="n">TEMPLATES</span> <span class="o">=</span> <span class="p">[</span>
         <span class="c1"># ...</span>
         <span class="s1">&#39;DIRS&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;fdw/templates&#39;</span><span class="p">)],</span>
-        <span class="s1">&#39;APP_DIRS&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;APP_DIRS&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
         <span class="c1"># ...</span>
         <span class="p">]</span>
 </pre></div>
@@ -1495,7 +1495,7 @@ in a typical blog entry URL:</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.2.
     </div>
   </body>
 </html>

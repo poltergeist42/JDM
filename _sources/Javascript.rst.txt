@@ -470,6 +470,33 @@ exemple : Création dans "personne2", d'une copie de "personne"
 Dans le premier cas, on constate que l'objet "personne" est maintenant une propriété de "personne2".
 Dans le second cas, seules les propriétés de "personne" ont été ajoutée à "personne2".
 
+Opérateur de comparaison "short-circuit"
+----------------------------------------
+
+Il existe un opérateur de comparaison qui retourne une expression seulement si la condition est
+vraie, contrairement à l'opérateur ternaire qui retourne une expression dans tous les cas.
+
+Cet opérateur est sous utilise le "ET" logique : &&
+
+    .. code-block:: JavaScript
+       :linenos:
+       :force:
+
+        let isTrue = true
+        let someExpression = "isTrue est vrai"
+
+        isTrue && someExpression        // --> "isTrue est vrai"
+
+        isTrue = false
+        isTrue && someExpression        // --> flase
+
+        //cette syntaxe est équivalente à :
+        if (isTrue){
+            someExpression
+            }
+
+Ça fonctionne parce qu’en JavaScript, true && expression est toujours évalué à expression, et false && expression est toujours évalué à false.
+
 La décomposition (destructuring)
 --------------------------------
 
@@ -1495,6 +1522,28 @@ hooks
 **WIP**
     Une alternative a setState()
 
+React-Router-DOM
+================
+
+:Liens_Web:
+    * `gérer la navigation programmatique`_
+
+    * `faire un redirect avec le composant react-router-dom après une requête POST`_
+
+    * `Quick Start`_ : semble être la doc officiel
+
+.. _`gérer la navigation programmatique`: https://www.journaldunet.fr/web-tech/developpement/1441259-comment-gerer-la-navigation-programmatique-avec-react-router/
+.. _`faire un redirect avec le composant react-router-dom après une requête POST`: https://www.journaldunet.fr/web-tech/developpement/1441289-comment-faire-un-redirect-avec-le-composant-react-router-dom-apres-une-requete-post/
+.. _`Quick Start`: https://reacttraining.com/react-router/web/guides/quick-start
+
+React-routeur-dom est un paquet qui permet de rediriger vers une nouvelle url et donc d'afficher un
+nouveau composant en giraant l'esrpie "monopage" de React.
+
+.. warning::
+    A chaque changement de composant ce dernier est recharger dans le DOM. Il est donc important de
+    **percisté les données** avec le localstorage ou une base de donnés. Dans le cas contraite
+    toutes les données seront perdu puisque le composant sera chargé à son état initial.
+
 ####
 
 .. index::
@@ -1512,14 +1561,13 @@ Node.js
 
 .. _`Nodejs dowload`: https://nodejs.org/en/download/ 
 
-Démarrer un projet
-
-####
+Démarrer un projet :
 
 .. index::
    single: NPM
    single: Node; NPM
 
+####
 
 --------------------
 NPM - Packet manager

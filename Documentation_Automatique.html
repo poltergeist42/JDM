@@ -1,0 +1,856 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Documentation_Automatique &#8212; Documentation JDM 20170523</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="English Vocabulary" href="English_vocab.html" />
+    <link rel="prev" title="Docker" href="Docker.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="English_vocab.html" title="English Vocabulary"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="Docker.html" title="Docker"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="documentation-automatique">
+<h1><a class="toc-backref" href="#sommaire">Documentation_Automatique</a><a class="headerlink" href="#documentation-automatique" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="contents topic" id="sommaire">
+<p class="topic-title first">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#documentation-automatique" id="id51">Documentation_Automatique</a></p>
+<ul>
+<li><p><a class="reference internal" href="#docutils" id="id52">DocUtils</a></p></li>
+<li><p><a class="reference internal" href="#restructuredtext-rst" id="id53">reStructuredText (.rst)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#directives" id="id54">Directives</a></p>
+<ul>
+<li><p><a class="reference internal" href="#inserez-du-code-html" id="id55">Insérez du code html</a></p></li>
+<li><p><a class="reference internal" href="#inserer-une-image" id="id56">Insérer une image</a></p></li>
+<li><p><a class="reference internal" href="#directive-todo" id="id57">Directive TODO</a></p>
+<ul>
+<li><p><a class="reference internal" href="#utiliser-la-directive-todo-avec-sphinx" id="id58">Utiliser la directive TODO avec Sphinx</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#inserer-des-formules-mathematiques" id="id59">Insérer des formules mathématiques</a></p>
+<ul>
+<li><p><a class="reference internal" href="#utilisation-de-la-directive-math-dans-sphinx" id="id60">Utilisation de la directive “math” dans Sphinx</a></p></li>
+<li><p><a class="reference internal" href="#equation-sur-une-seule-ligne" id="id61">Équation sur une seule ligne</a></p></li>
+<li><p><a class="reference internal" href="#equation-integree-dans-la-ligne" id="id62">Équation intégrée dans la ligne</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sphinx" id="id63">Sphinx</a></p>
+<ul>
+<li><p><a class="reference internal" href="#installer-sphinx" id="id64">Installer Sphinx</a></p>
+<ul>
+<li><p><a class="reference internal" href="#demarrage-et-initialisation-rapide" id="id65">Démarrage et initialisation rapide</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#rediger-et-publier-de-la-doc-avec-sphinx-sur-github-pages" id="id66">Rédiger et publier de la doc avec Sphinx sur GitHub-pages</a></p>
+<ul>
+<li><p><a class="reference internal" href="#preparation-de-l-arborescence" id="id67">Préparation de l’arborescence</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#modification-de-themes-dans-sphinx" id="id68">Modification de thèmes dans Sphinx</a></p>
+<ul>
+<li><p><a class="reference internal" href="#installer-le-pack-de-themes-pour-sphinx" id="id69">Installer le pack de thèmes pour Sphinx</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#utiliser-sphinx-pour-traite-les-donnees-d-autre-generateur-de-doc" id="id70">Utiliser Sphinx pour traité les données d’autre Générateur de doc</a></p>
+<ul>
+<li><p><a class="reference internal" href="#utiliser-sphinx-pour-traite-les-donnees-de-doxygen" id="id71">Utiliser Sphinx pour traité les données de Doxygen</a></p></li>
+<li><p><a class="reference internal" href="#utiliser-sphinx-pour-traite-les-donnees-de-jsdoc-javascript" id="id72">Utiliser Sphinx pour traité les données de JSDOC (Javascript)</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#jsdoc" id="id73">JSDOC</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id74">Weblinks</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="docutils">
+<h2><a class="toc-backref" href="#sommaire">DocUtils</a><a class="headerlink" href="#docutils" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens WEB</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/">Page d’accueil du projet</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p></li>
+</ul>
+</dd>
+</dl>
+<p>Docutils is an open-source text processing system for processing plaintext documentation into
+useful formats, such as HTML, LaTeX, man-pages, open-document or XML. It includes reStructuredText,
+the easy to read, easy to use, what-you-see-is-what-you-get plaintext markup language.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="restructuredtext-rst">
+<h2><a class="toc-backref" href="#sommaire">reStructuredText (.rst)</a><a class="headerlink" href="#restructuredtext-rst" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens WEB</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html">Références officielles</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p></li>
+<li><p><a class="reference external" href="https://fr.wikipedia.org/wiki/ReStructuredText">Définition Wikipedia</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p></li>
+<li><p><a class="reference external" href="https://aful.org/wikis/interop/ReStructuredText">Exemple et définition en français</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p></li>
+<li><p><a class="reference external" href="https://mg.pov.lt/restview/">convertir dynamiquement les fichiers « .rst » en page Web</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p></li>
+<li><p><a class="reference external" href="https://github.com/steenhulthin/reStructuredText_NPP">Pour ajouter la syntaxe « reStructuredText » à notePad++</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a></p></li>
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">Un petit guide de référence</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a></p></li>
+<li><p><a class="reference external" href="http://python.physique.free.fr/aide/Partie1.html">détail de syntaxe avancé</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a></p></li>
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">Explication détailler des directives (ex : images, include, etc …)</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a></p></li>
+<li><p><a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html">Syntaxe avancée</a> <a class="footnote-reference brackets" href="#id19" id="id20">10</a></p></li>
+</ul>
+</dd>
+</dl>
+<p>reStructuredText est un langage de balisage léger utilisé notamment dans la documentation du
+langage Python.</p>
+<p>Bien que sauvegardé sous un format textuel, l’extension associée est parfois indiquée comme étant
+RST. L’analyseur syntaxique de référence est implémenté comme élément Docutils du cadre
+d’application du langage de programmation Python, mais d’autres implémentations existent par
+ailleurs (par exemple Pandoc en Haskell ou JRst en Java).</p>
+<p>reStructuredText permet d’exporter dans notamment les formats HTML, XML, LaTeX, ODF.</p>
+<div class="section" id="directives">
+<h3><a class="toc-backref" href="#sommaire">Directives</a><a class="headerlink" href="#directives" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="inserez-du-code-html">
+<h4><a class="toc-backref" href="#sommaire">Insérez du code html</a><a class="headerlink" href="#inserez-du-code-html" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
+
+   <span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+   <span class="c1"># Attention, il faut sauter une ligne entre &#39;raw&#39; et le code html</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="inserer-une-image">
+<h4><a class="toc-backref" href="#sommaire">Insérer une image</a><a class="headerlink" href="#inserer-une-image" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="p">[</span><span class="n">chemin</span><span class="o">/</span><span class="n">vers</span><span class="o">/</span><span class="n">une</span><span class="o">/</span><span class="n">image</span><span class="p">]</span>
+   <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+
+<span class="n">ex</span><span class="p">:</span>
+<span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">./</span><span class="n">Images</span><span class="o">/</span><span class="n">monImage</span><span class="o">.</span><span class="n">jpg</span>
+   <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+
+<span class="c1"># Important : les chemins doivent être renseigné avec des &#39;/&#39; même sous windows</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="directive-todo">
+<h4><a class="toc-backref" href="#sommaire">Directive TODO</a><a class="headerlink" href="#directive-todo" title="Lien permanent vers ce titre">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/extensions/todo.html">Doc Sphinx</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a></p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">todo</span><span class="p">::</span>
+
+   <span class="n">blablabla</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>N.B</strong> : il existe la directive « .. todolist:: », mais elle ne semble pas / plus fonctionner.
+Préférez la directive « .. todo:: » sous forme de liste commençant avec des puces.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">todo</span><span class="p">::</span>
+
+   <span class="o">*</span> <span class="n">bla</span>
+
+   <span class="o">*</span> <span class="n">ble</span>
+
+   <span class="o">*</span> <span class="n">bli</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="section" id="utiliser-la-directive-todo-avec-sphinx">
+<h5><a class="toc-backref" href="#sommaire">Utiliser la directive TODO avec Sphinx</a><a class="headerlink" href="#utiliser-la-directive-todo-avec-sphinx" title="Lien permanent vers ce titre">¶</a></h5>
+<p>Dans “conf.py” :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinx.ext.todo&#39;</span><span class="p">]</span>
+
+<span class="o">...</span>
+
+<span class="n">todo_include_todos</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="inserer-des-formules-mathematiques">
+<h4><a class="toc-backref" href="#sommaire">Insérer des formules mathématiques</a><a class="headerlink" href="#inserer-des-formules-mathematiques" title="Lien permanent vers ce titre">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://fr.wikibooks.org/wiki/LaTeX/%C3%89crire_des_math%C3%A9matiques">Convention mathématiques utilisées en LaTeX</a> <a class="footnote-reference brackets" href="#id23" id="id24">12</a></p></li>
+<li><p><a class="reference external" href="https://fr.wikipedia.org/wiki/Table_de_symboles_math%C3%A9matiques">Ensemble des symboles mathématiques, le code unicode et la syntaxe LaTeX</a> <a class="footnote-reference brackets" href="#id25" id="id26">13</a></p></li>
+<li><p><a class="reference external" href="https://fr.wikibooks.org/wiki/LaTeX/Math%C3%A9matiques">Explication simple et complète de l’utilisation des instructions mathématiques en LaTeX</a> <a class="footnote-reference brackets" href="#id27" id="id28">14</a></p></li>
+</ul>
+</dd>
+</dl>
+<p>Les formules mathématiques doivent respecter la syntax <strong>LaTeX</strong>. Il y a 2 types d’insertion
+des formules :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>La formule occupe une ligne pour elle toute seule</p></li>
+<li><p>La formule est intégrée dans une ligne (inline)</p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="utilisation-de-la-directive-math-dans-sphinx">
+<h5><a class="toc-backref" href="#sommaire">Utilisation de la directive “math” dans Sphinx</a><a class="headerlink" href="#utilisation-de-la-directive-math-dans-sphinx" title="Lien permanent vers ce titre">¶</a></h5>
+<p>Dans “<strong>conf.py</strong>”, il faut ajouter un éléments dans “<strong>extensions</strong>” :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinx.ext.mathjax&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="equation-sur-une-seule-ligne">
+<h5><a class="toc-backref" href="#sommaire">Équation sur une seule ligne</a><a class="headerlink" href="#equation-sur-une-seule-ligne" title="Lien permanent vers ce titre">¶</a></h5>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">math</span><span class="p">::</span>
+
+  \<span class="n">frac</span><span class="p">{</span> \<span class="n">sum_</span><span class="p">{</span><span class="n">t</span><span class="o">=</span><span class="mi">0</span><span class="p">}</span><span class="o">^</span><span class="p">{</span><span class="n">N</span><span class="p">}</span><span class="n">f</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">k</span><span class="p">)</span> <span class="p">}{</span><span class="n">N</span><span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Aperçu</dt>
+<dd class="field-odd"><p>Penser à sauter une ligne vide avant la directive et après la formule</p>
+<div class="math notranslate nohighlight">
+\[\frac{ \sum_{t=0}^{N}f(t,k) }{N}\]</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="equation-integree-dans-la-ligne">
+<h5><a class="toc-backref" href="#sommaire">Équation intégrée dans la ligne</a><a class="headerlink" href="#equation-integree-dans-la-ligne" title="Lien permanent vers ce titre">¶</a></h5>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>blablabla :math:`\frac{ \sum_{t=0}^{N}f(t,k) }{N}` encore du blablabla
+</pre></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Aperçu</dt>
+<dd class="field-odd"><p>La formule doit être entourée par « ` » (ALTgr-7)</p>
+<p>Voici une super équation : <span class="math notranslate nohighlight">\(\frac{ \sum_{t=0}^{N}f(t,k) }{N}\)</span></p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="sphinx">
+<h2><a class="toc-backref" href="#sommaire">Sphinx</a><a class="headerlink" href="#sphinx" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens WEB</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.sphinx-doc.org/en/stable/tutorial.html">Tutorial</a> <a class="footnote-reference brackets" href="#id29" id="id30">15</a></p></li>
+<li><p><a class="reference external" href="https://developer.ridgerun.com/wiki/index.php/How_to_generate_sphinx_documentation_for_python_code_running_in_an_embedded_system">un petit cookbook sur la configuration</a> <a class="footnote-reference brackets" href="#id31" id="id32">16</a></p></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="installer-sphinx">
+<h3><a class="toc-backref" href="#sommaire">Installer Sphinx</a><a class="headerlink" href="#installer-sphinx" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="section" id="demarrage-et-initialisation-rapide">
+<h4><a class="toc-backref" href="#sommaire">Démarrage et initialisation rapide</a><a class="headerlink" href="#demarrage-et-initialisation-rapide" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="rediger-et-publier-de-la-doc-avec-sphinx-sur-github-pages">
+<h3><a class="toc-backref" href="#sommaire">Rédiger et publier de la doc avec Sphinx sur GitHub-pages</a><a class="headerlink" href="#rediger-et-publier-de-la-doc-avec-sphinx-sur-github-pages" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="preparation-de-l-arborescence">
+<h4><a class="toc-backref" href="#sommaire">Préparation de l’arborescence</a><a class="headerlink" href="#preparation-de-l-arborescence" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Création de 2 sous dossier à la racine du projet</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">fakeLib</span>
+        <span class="n">project</span>
+        <span class="n">webDoc</span>
+
+<span class="o">**</span><span class="n">N</span><span class="o">.</span><span class="n">B</span><span class="o">**</span> <span class="p">:</span> <span class="s1">&#39;arboProject&#39;</span> <span class="n">inclue</span> <span class="n">la</span> <span class="n">création</span> <span class="n">de</span> <span class="n">ses</span> <span class="mi">2</span> <span class="n">dossiers</span>
+</pre></div>
+</div>
+</li>
+<li><p>Lier le dépôt local (Git) au dépôt distant (GitHub)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="p">[</span><span class="n">votre_nom_sous_github</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">votre_depot_github</span><span class="p">]</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+</div>
+</li>
+<li><dl>
+<dt>Initialiser Sphinx</dt><dd><ul>
+<li><p>Ce placer dans le dossier <strong>_1_userDoc</strong> (pensez à supprimer le suffixe « _v »
+et ouvrir une invite de commande.</p></li>
+<li><p>Exécuter la commande :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
+</pre></div>
+</div>
+</li>
+<li><p>Il faut accepter la plupart des choix par défaut sauf pour 4 d’entre eux :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Separate</span> <span class="n">source</span> <span class="ow">and</span> <span class="n">build</span> <span class="n">directories</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span><span class="n">y</span>
+<span class="n">Project</span> <span class="n">language</span> <span class="p">[</span><span class="n">en</span><span class="p">]:</span> <span class="n">fr</span>
+<span class="n">autodoc</span><span class="p">:</span> <span class="n">automatically</span> <span class="n">insert</span> <span class="n">docstrings</span> <span class="kn">from</span> <span class="nn">modules</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+<span class="n">githubpages</span><span class="p">:</span> <span class="n">create</span> <span class="o">.</span><span class="n">nojekyll</span> <span class="n">file</span> <span class="n">to</span> <span class="n">publish</span> <span class="n">the</span> <span class="n">document</span> <span class="n">on</span> <span class="n">GitHub</span> <span class="n">pages</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Configurer <strong>“conf.py”</strong></p>
+<blockquote>
+<div><ul>
+<li><p>Repérez les 3 lignes :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># import os</span>
+<span class="c1"># import sys</span>
+<span class="c1"># sys.path.insert(0, os.path.abspath(&#39;.&#39;))</span>
+</pre></div>
+</div>
+</li>
+<li><p>Remplacez les par :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../../&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+<li><p>Puis la ligne :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</li>
+<li><p>A remplacer par :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_build&#39;</span><span class="p">,</span> <span class="s1">&#39;Thumbs.db&#39;</span><span class="p">,</span> <span class="s1">&#39;.DS_Store&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Configurer <strong>“Makefile”</strong></p>
+<blockquote>
+<div><ul>
+<li><p>Repérez les 2 lignes :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SOURCEDIR</span> <span class="o">=</span> <span class="n">source</span>
+<span class="n">BUILDDIR</span> <span class="o">=</span> <span class="n">build</span>
+</pre></div>
+</div>
+</li>
+<li><p>Remplacez les par :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SOURCEDIR</span> <span class="o">=</span> <span class="o">.</span>
+<span class="c1"># Attention, il y a un point après le égal.</span>
+<span class="c1"># Cela signifie : &quot;répertoire courant&quot;</span>
+
+<span class="n">BUILDDIR</span> <span class="o">=</span> <span class="o">../../</span><span class="n">webDoc</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Configurer <strong>“Make.bat”</strong></p>
+<blockquote>
+<div><ul>
+<li><p>Rechercher la ligne :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">BUILDDIR</span><span class="o">=</span><span class="n">build</span>
+</pre></div>
+</div>
+</li>
+<li><p>A remplacer par :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">BUILDDIR</span><span class="o">=</span> <span class="o">..</span>\<span class="o">..</span>\<span class="n">webDoc</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Faire un commit et le pousser dans le dépôt distant</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git add .
+git commit -m &quot;install et conf de Sphinx&quot;
+git push -–all
+</pre></div>
+</div>
+</li>
+<li><p>Création de la <strong>branch “gh-pages”</strong></p>
+<blockquote>
+<div><ul>
+<li><p>Copier l’url du dépôt distant</p></li>
+<li><p>Se placer dans le dossier “webDoc”</p></li>
+<li><p>Cloner le dépôt distant dans “html” et se déplacer dans se dossier</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="p">[</span><span class="n">url_copiée_depuis_GitHub</span><span class="p">]</span> <span class="n">html</span>
+<span class="c1"># Attention, html est en minuscule.</span>
+
+<span class="n">cd</span> <span class="n">html</span>
+</pre></div>
+</div>
+</li>
+<li><p>Création de la branch local “gh-pages”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+</pre></div>
+</div>
+</li>
+<li><p>Création d’un lien symbolique entre notre nouvelle branch et une branch homonymes
+dans notre dépôt distant puis on bascule automatiquement sur cette nouvelle branch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">symbolic</span><span class="o">-</span><span class="n">ref</span> <span class="n">HEAD</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+</pre></div>
+</div>
+</li>
+<li><p>Suppression de l’indexation existante de notre nouvelle branch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="o">.</span><span class="n">git</span>\<span class="n">index</span>
+</pre></div>
+</div>
+</li>
+<li><p>on nettoie le contenue de notre nouvelle branch pour ne pas refaire un commit
+sur les éléments de la branch principale</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clean</span> <span class="o">-</span><span class="n">fdx</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Préparation des éléments à intégrer dans notre documentation</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Rappel</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>L’ordre dans lequel nous renseignons les fichiers, correspond à
+l’ordre dans lequel ils seront afficher sous GitHub.</p></li>
+<li><p>le fichier « index.rst » ne prend pas en charge les chemin relatif</p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic">
+<li><dl>
+<dt>Création du fichier <strong>“includeMe.rst”</strong></dt><dd><p>Créer, dans le même dossier que le fichier “index.rst”, le fichier
+“includeMe.rst”.</p>
+<ul>
+<li><p>Renseigner le fichier de la façon suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">======================</span>
+<span class="n">README_</span><span class="p">[</span><span class="n">nom_du_projet</span><span class="p">]</span>
+<span class="o">======================</span>
+
+<span class="o">..</span> <span class="n">include</span><span class="p">::</span> <span class="o">../../</span><span class="n">README</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+</li>
+<li><p>Ajouter l’entrée <strong>“includeMe”</strong> dans <strong>“index.rst”</strong></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Extraction de la documentation depuis les docString du code</dt><dd><p>Créer, dans le même dossier que le fichier “index.rst”, un fichier ayant un
+nom significatif qui permette de se référer au code :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span>
+<span class="n">fakeLib</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Renseigner se nouveau fichier sous la forme :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">fakeLib</span>
+ <span class="o">=======</span>
+
+ <span class="o">..</span> <span class="n">automodule</span><span class="p">::</span> <span class="n">_3_software</span><span class="o">.</span><span class="n">fakeLib</span>
+    <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+
+<span class="c1"># Ne pas oublier les 3 espaces devant &#39;:members:&#39;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Ajouter l’entrée <strong>“fakeLib”</strong> dans <strong>“index.rst”</strong></p></li>
+</ul>
+</li>
+<li><p>Génération de la doc et MAJ de la branch <strong>master</strong> en local et distant :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
+<span class="c1"># si tous se passe bien, on obtien le message suivant :</span>
+<span class="c1"># &quot;Build finished. The HTML pages are in ..\..\webDoc\html.&quot;</span>
+<span class="n">cd</span> <span class="o">..</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;blabla&quot;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">orgin</span> <span class="n">master</span>
+<span class="c1"># on pousse la branch &#39;master&#39; sur le dépôt distant</span>
+</pre></div>
+</div>
+</li>
+<li><p>MAJ de la branch <strong>gh-pages</strong> en local et en distant :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>\<span class="o">..</span>
+<span class="n">cd</span> <span class="n">webDoc</span>\<span class="n">html</span>
+<span class="n">git</span> <span class="n">branch</span>
+<span class="c1"># on vérifie que l&#39;on est bien sur la branch &#39;gh-pages&#39;</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;MAJ de la doc&quot;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+<span class="c1"># on pousse la branch &#39;gh-pages&#39; sur le dépôt distant</span>
+</pre></div>
+</div>
+</li>
+<li><dl>
+<dt>Accéder à la documentation publiée sur GitHub :</dt><dd><p>Nous pouvons à présent consulter notre jolie documentation en ligne à
+l’adresse : <a class="reference external" href="https:/">https:/</a>/&lt;utilisateur_Gihub&gt;.github.io/[nom_du_dépot]/</p>
+<p>Exemple :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">poltergeist42</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">fakeLib</span><span class="o">/</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Mettre à jour automatiquement la branch <strong>“gh-pages”</strong> et le dépôt distant</dt><dd><p>Pour automatiser la MAJ de “gh-pages” il faut modifier le fichier <strong>“Makefile”</strong>
+et <strong>“make.bat”</strong>.</p>
+<ul>
+<li><p>Dans <strong>“Makefile”</strong>, se placer à la fin du document et ajouter les lignes
+suivantes à la fin du document :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># reconstruction de la branch &quot;gh-pages&quot; et mise a jour du depot distant
+buildandcommithtml: html
+
+    cd $(BUILDDIR)/html; git add . ; git commit -m &quot;rebuilt docs&quot;; git push origin gh-pages
+</pre></div>
+</div>
+</li>
+<li><p>Dans <strong>“make.bat”</strong> repérer les 2 lignes :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">SPHINXBUILD</span><span class="o">%</span> <span class="o">-</span><span class="n">M</span> <span class="o">%</span><span class="mi">1</span> <span class="o">%</span><span class="n">SOURCEDIR</span><span class="o">%</span> <span class="o">%</span><span class="n">BUILDDIR</span><span class="o">%</span> <span class="o">%</span><span class="n">SPHINXOPTS</span><span class="o">%</span>
+<span class="n">goto</span> <span class="n">end</span>
+</pre></div>
+</div>
+</li>
+<li><p>Intercaler les lignes suivantes entre les 2 :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rem</span> <span class="n">reconstruction</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branch</span> <span class="s2">&quot;gh-pages&quot;</span> <span class="n">et</span> <span class="n">mise</span> <span class="n">a</span> <span class="n">jour</span> <span class="n">du</span> <span class="n">dépôt</span> <span class="n">distant</span>
+<span class="n">cd</span> <span class="o">%</span><span class="n">BUILDDIR</span><span class="o">%</span>\<span class="n">html</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;rebuilt docs&quot;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Cloner un dépôt distant utilisant <strong>“gh-pages”</strong></p>
+<blockquote>
+<div><ul>
+<li><p>Depuis la racine du projet cloner le dépôt distant dans 2 dossiers ayant la
+même arborescence que le projet initial :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span> <span class="p">:</span>
+<span class="n">D</span><span class="p">:</span>\<span class="n">fakeLib</span><span class="o">&gt;</span>
+<span class="o">&gt;</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">poltergeist42</span><span class="o">/</span><span class="n">fakeLib</span><span class="o">.</span><span class="n">git</span> <span class="o">.</span>\<span class="n">project</span>
+<span class="o">&gt;</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">poltergeist42</span><span class="o">/</span><span class="n">fakeLib</span><span class="o">.</span><span class="n">git</span> <span class="o">.</span>\<span class="n">webDoc</span>\<span class="n">html</span>
+</pre></div>
+</div>
+</li>
+<li><p>Ce déplacer dans le dossier <strong>“html”</strong> et vérifier la branch courante. Il
+ne devrait y avoir que la branch <strong>“master”</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">.</span>\<span class="n">webDoc</span>\<span class="n">html</span>
+<span class="n">git</span> <span class="n">branch</span>
+</pre></div>
+</div>
+</li>
+<li><p>Recréer la branch locale <strong>“gh-pages”</strong> et l’associer avec le dépôt distant</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span> <span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+</pre></div>
+</div>
+</li>
+<li><p>Une nouvelle vérification des branch locale devrait nous indiquer qu’il y a
+2 branch et que nous sommes sur la branch <strong>“gh-pages”</strong></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="modification-de-themes-dans-sphinx">
+<h3><a class="toc-backref" href="#sommaire">Modification de thèmes dans Sphinx</a><a class="headerlink" href="#modification-de-themes-dans-sphinx" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.sphinx-doc.org/en/master/theming.html">Doc officiel de Sphinx concernant le changement de thèmes</a> <a class="footnote-reference brackets" href="#id33" id="id34">17</a></p></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="installer-le-pack-de-themes-pour-sphinx">
+<h4><a class="toc-backref" href="#sommaire">Installer le pack de thèmes pour Sphinx</a><a class="headerlink" href="#installer-le-pack-de-themes-pour-sphinx" title="Lien permanent vers ce titre">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxjp</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">dotted</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="utiliser-sphinx-pour-traite-les-donnees-d-autre-generateur-de-doc">
+<h3><a class="toc-backref" href="#sommaire">Utiliser Sphinx pour traité les données d’autre Générateur de doc</a><a class="headerlink" href="#utiliser-sphinx-pour-traite-les-donnees-d-autre-generateur-de-doc" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="utiliser-sphinx-pour-traite-les-donnees-de-doxygen">
+<h4><a class="toc-backref" href="#sommaire">Utiliser Sphinx pour traité les données de Doxygen</a><a class="headerlink" href="#utiliser-sphinx-pour-traite-les-donnees-de-doxygen" title="Lien permanent vers ce titre">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://breathe.readthedocs.io/en/latest/">Breathe</a> <a class="footnote-reference brackets" href="#id35" id="id36">18</a> : permet de transformer le XML générer par Doxygen en un contenu exploitable par Sphinx</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="utiliser-sphinx-pour-traite-les-donnees-de-jsdoc-javascript">
+<h4><a class="toc-backref" href="#sommaire">Utiliser Sphinx pour traité les données de JSDOC (Javascript)</a><a class="headerlink" href="#utiliser-sphinx-pour-traite-les-donnees-de-jsdoc-javascript" title="Lien permanent vers ce titre">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://pypi.org/project/sphinx-js/">Sphinx-js</a> <a class="footnote-reference brackets" href="#id37" id="id38">19</a> : Dépôt pipy</p></li>
+<li><p><a class="reference external" href="https://hacks.mozilla.org/2017/07/introducing-sphinx-js-a-better-way-to-document-large-javascript-projects/">Introducing sphinx-js</a> <a class="footnote-reference brackets" href="#id39" id="id40">20</a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="jsdoc">
+<h2><a class="toc-backref" href="#sommaire">JSDOC</a><a class="headerlink" href="#jsdoc" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://fr.wikipedia.org/wiki/JSDoc">JDSOC Wikipedia</a> <a class="footnote-reference brackets" href="#id41" id="id42">21</a></p></li>
+<li><p><a class="reference external" href="https://www.supinfo.com/articles/single/2818-jsdoc-generation-documentation-javascript">JSDoc : Génération de documentation en Javascript</a> <a class="footnote-reference brackets" href="#id43" id="id44">22</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jsdoc/jsdoc">JSDOC Github</a> <a class="footnote-reference brackets" href="#id45" id="id46">23</a></p></li>
+<li><p><a class="reference external" href="https://jsdoc.app/">Doc apparament officiel</a> <a class="footnote-reference brackets" href="#id47" id="id48">24</a> (pas sexy du tout)</p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/fr-fr/visualstudio/ide/create-jsdoc-comments-for-javascript-intellisense?view=vs-2015">Créer des commentaires JSDoc pour IntelliSense JavaScript</a> <a class="footnote-reference brackets" href="#id49" id="id50">25</a> (Visual Studio)</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="weblinks">
+<h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="http://docutils.sourceforge.net/">http://docutils.sourceforge.net/</a></p>
+</dd>
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html">http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html</a></p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.wikipedia.org/wiki/ReStructuredText">https://fr.wikipedia.org/wiki/ReStructuredText</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
+<dd><p><a class="reference external" href="https://aful.org/wikis/interop/ReStructuredText">https://aful.org/wikis/interop/ReStructuredText</a></p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
+<dd><p><a class="reference external" href="https://mg.pov.lt/restview/">https://mg.pov.lt/restview/</a></p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/steenhulthin/reStructuredText_NPP">https://github.com/steenhulthin/reStructuredText_NPP</a></p>
+</dd>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id14">7</a></span></dt>
+<dd><p><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">http://docutils.sourceforge.net/docs/user/rst/quickref.html</a></p>
+</dd>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id16">8</a></span></dt>
+<dd><p><a class="reference external" href="http://python.physique.free.fr/aide/Partie1.html">http://python.physique.free.fr/aide/Partie1.html</a></p>
+</dd>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id18">9</a></span></dt>
+<dd><p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">http://docutils.sourceforge.net/docs/ref/rst/directives.html</a></p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id20">10</a></span></dt>
+<dd><p><a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html">http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html</a></p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id22">11</a></span></dt>
+<dd><p><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/extensions/todo.html">http://www.sphinx-doc.org/en/master/usage/extensions/todo.html</a></p>
+</dd>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id24">12</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.wikibooks.org/wiki/LaTeX/%C3%89crire_des_math%C3%A9matiques">https://fr.wikibooks.org/wiki/LaTeX/%C3%89crire_des_math%C3%A9matiques</a></p>
+</dd>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id26">13</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.wikipedia.org/wiki/Table_de_symboles_math%C3%A9matiques">https://fr.wikipedia.org/wiki/Table_de_symboles_math%C3%A9matiques</a></p>
+</dd>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id28">14</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.wikibooks.org/wiki/LaTeX/Math%C3%A9matiques">https://fr.wikibooks.org/wiki/LaTeX/Math%C3%A9matiques</a></p>
+</dd>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id30">15</a></span></dt>
+<dd><p><a class="reference external" href="http://www.sphinx-doc.org/en/stable/tutorial.html">http://www.sphinx-doc.org/en/stable/tutorial.html</a></p>
+</dd>
+<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id32">16</a></span></dt>
+<dd><p><a class="reference external" href="https://developer.ridgerun.com/wiki/index.php/How_to_generate_sphinx_documentation_for_python_code_running_in_an_embedded_system">https://developer.ridgerun.com/wiki/index.php/How_to_generate_sphinx_documentation_for_python_code_running_in_an_embedded_system</a></p>
+</dd>
+<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id34">17</a></span></dt>
+<dd><p><a class="reference external" href="http://www.sphinx-doc.org/en/master/theming.html">http://www.sphinx-doc.org/en/master/theming.html</a></p>
+</dd>
+<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id36">18</a></span></dt>
+<dd><p><a class="reference external" href="http://breathe.readthedocs.io/en/latest/">http://breathe.readthedocs.io/en/latest/</a></p>
+</dd>
+<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id38">19</a></span></dt>
+<dd><p><a class="reference external" href="https://pypi.org/project/sphinx-js/">https://pypi.org/project/sphinx-js/</a></p>
+</dd>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id40">20</a></span></dt>
+<dd><p><a class="reference external" href="https://hacks.mozilla.org/2017/07/introducing-sphinx-js-a-better-way-to-document-large-javascript-projects/">https://hacks.mozilla.org/2017/07/introducing-sphinx-js-a-better-way-to-document-large-javascript-projects/</a></p>
+</dd>
+<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id42">21</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.wikipedia.org/wiki/JSDoc">https://fr.wikipedia.org/wiki/JSDoc</a></p>
+</dd>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id44">22</a></span></dt>
+<dd><p><a class="reference external" href="https://www.supinfo.com/articles/single/2818-jsdoc-generation-documentation-javascript">https://www.supinfo.com/articles/single/2818-jsdoc-generation-documentation-javascript</a></p>
+</dd>
+<dt class="label" id="id45"><span class="brackets"><a class="fn-backref" href="#id46">23</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/jsdoc/jsdoc">https://github.com/jsdoc/jsdoc</a></p>
+</dd>
+<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id48">24</a></span></dt>
+<dd><p><a class="reference external" href="https://jsdoc.app/">https://jsdoc.app/</a></p>
+</dd>
+<dt class="label" id="id49"><span class="brackets"><a class="fn-backref" href="#id50">25</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.microsoft.com/fr-fr/visualstudio/ide/create-jsdoc-comments-for-javascript-intellisense?view=vs-2015">https://docs.microsoft.com/fr-fr/visualstudio/ide/create-jsdoc-comments-for-javascript-intellisense?view=vs-2015</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Documentation_Automatique</a><ul>
+<li><a class="reference internal" href="#docutils">DocUtils</a></li>
+<li><a class="reference internal" href="#restructuredtext-rst">reStructuredText (.rst)</a><ul>
+<li><a class="reference internal" href="#directives">Directives</a><ul>
+<li><a class="reference internal" href="#inserez-du-code-html">Insérez du code html</a></li>
+<li><a class="reference internal" href="#inserer-une-image">Insérer une image</a></li>
+<li><a class="reference internal" href="#directive-todo">Directive TODO</a><ul>
+<li><a class="reference internal" href="#utiliser-la-directive-todo-avec-sphinx">Utiliser la directive TODO avec Sphinx</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#inserer-des-formules-mathematiques">Insérer des formules mathématiques</a><ul>
+<li><a class="reference internal" href="#utilisation-de-la-directive-math-dans-sphinx">Utilisation de la directive “math” dans Sphinx</a></li>
+<li><a class="reference internal" href="#equation-sur-une-seule-ligne">Équation sur une seule ligne</a></li>
+<li><a class="reference internal" href="#equation-integree-dans-la-ligne">Équation intégrée dans la ligne</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sphinx">Sphinx</a><ul>
+<li><a class="reference internal" href="#installer-sphinx">Installer Sphinx</a><ul>
+<li><a class="reference internal" href="#demarrage-et-initialisation-rapide">Démarrage et initialisation rapide</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rediger-et-publier-de-la-doc-avec-sphinx-sur-github-pages">Rédiger et publier de la doc avec Sphinx sur GitHub-pages</a><ul>
+<li><a class="reference internal" href="#preparation-de-l-arborescence">Préparation de l’arborescence</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#modification-de-themes-dans-sphinx">Modification de thèmes dans Sphinx</a><ul>
+<li><a class="reference internal" href="#installer-le-pack-de-themes-pour-sphinx">Installer le pack de thèmes pour Sphinx</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#utiliser-sphinx-pour-traite-les-donnees-d-autre-generateur-de-doc">Utiliser Sphinx pour traité les données d’autre Générateur de doc</a><ul>
+<li><a class="reference internal" href="#utiliser-sphinx-pour-traite-les-donnees-de-doxygen">Utiliser Sphinx pour traité les données de Doxygen</a></li>
+<li><a class="reference internal" href="#utiliser-sphinx-pour-traite-les-donnees-de-jsdoc-javascript">Utiliser Sphinx pour traité les données de JSDOC (Javascript)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#jsdoc">JSDOC</a></li>
+<li><a class="reference internal" href="#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="Docker.html"
+                        title="Chapitre précédent">Docker</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="English_vocab.html"
+                        title="Chapitre suivant">English Vocabulary</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Documentation_Automatique.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="English_vocab.html" title="English Vocabulary"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="Docker.html" title="Docker"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation JDM 20170523</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Poltergeist42.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.2.
+    </div>
+  </body>
+</html>

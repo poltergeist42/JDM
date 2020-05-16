@@ -18,7 +18,7 @@ Mon journal de manip
    DataBase
    Django
    Docker
-   DocUtils_RST_Sphinx
+   Documentation_Automatique
    English_vocab
    ESP
    GIT

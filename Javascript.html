@@ -45,92 +45,94 @@
   <div class="section" id="javascript-react-js-node-js">
 <h1><a class="toc-backref" href="#sommaire">JavaScript / REACT.js / node.js</a><a class="headerlink" href="#javascript-react-js-node-js" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="contents topic" id="sommaire">
-<p class="topic-title">Sommaire</p>
+<p class="topic-title first">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#javascript-react-js-node-js" id="id42">JavaScript / REACT.js / node.js</a></p>
+<li><p><a class="reference internal" href="#javascript-react-js-node-js" id="id48">JavaScript / REACT.js / node.js</a></p>
 <ul>
-<li><p><a class="reference internal" href="#javascript" id="id43">JavaScript</a></p>
+<li><p><a class="reference internal" href="#javascript" id="id49">JavaScript</a></p>
 <ul>
-<li><p><a class="reference internal" href="#liste-des-commandes-de-bases" id="id44">Liste des commandes de bases</a></p>
+<li><p><a class="reference internal" href="#liste-des-commandes-de-bases" id="id50">Liste des commandes de bases</a></p>
 <ul>
-<li><p><a class="reference internal" href="#commentaires" id="id45">Commentaires</a></p></li>
-<li><p><a class="reference internal" href="#interaction-avec-l-utilisateur" id="id46">Interaction avec l’utilisateur</a></p></li>
-<li><p><a class="reference internal" href="#type" id="id47">Type</a></p></li>
-<li><p><a class="reference internal" href="#operateur" id="id48">Opérateur</a></p></li>
+<li><p><a class="reference internal" href="#commentaires" id="id51">Commentaires</a></p></li>
+<li><p><a class="reference internal" href="#interaction-avec-l-utilisateur" id="id52">Interaction avec l’utilisateur</a></p></li>
+<li><p><a class="reference internal" href="#type" id="id53">Type</a></p></li>
+<li><p><a class="reference internal" href="#operateur" id="id54">Opérateur</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#details-syntaxiques" id="id49">Détails syntaxiques</a></p>
+<li><p><a class="reference internal" href="#details-syntaxiques" id="id55">Détails syntaxiques</a></p>
 <ul>
-<li><p><a class="reference internal" href="#concatener-les-strings" id="id50">Concaténer les strings</a></p></li>
-<li><p><a class="reference internal" href="#declaration-des-variables" id="id51">Déclaration des variables</a></p></li>
-<li><p><a class="reference internal" href="#les-objets-json-object" id="id52">Les objets JSON (Object)</a></p>
+<li><p><a class="reference internal" href="#concatener-les-strings" id="id56">Concaténer les strings</a></p></li>
+<li><p><a class="reference internal" href="#declaration-des-variables" id="id57">Déclaration des variables</a></p></li>
+<li><p><a class="reference internal" href="#les-objets-json-object" id="id58">Les objets JSON (Object)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#extraire-les-cles-keys-pour-les-classe-dans-un-tableau" id="id53">Extraire les clés (keys) pour les classé dans un tableau</a></p></li>
-<li><p><a class="reference internal" href="#quand-utiliser-ou-pour-acceder-a-une-clef" id="id54">Quand utiliser “[]” ou “.” pour accéder à une clef</a></p></li>
+<li><p><a class="reference internal" href="#extraire-les-cles-keys-pour-les-classe-dans-un-tableau" id="id59">Extraire les clés (keys) pour les classé dans un tableau</a></p></li>
+<li><p><a class="reference internal" href="#quand-utiliser-ou-pour-acceder-a-une-clef" id="id60">Quand utiliser “[]” ou “.” pour accéder à une clef</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#les-fonctions" id="id55">Les fonctions</a></p></li>
-<li><p><a class="reference internal" href="#operateur-spread" id="id56">Opérateur &lt; … &gt; (spread)</a></p></li>
-<li><p><a class="reference internal" href="#la-decomposition-destructuring" id="id57">La décomposition (destructuring)</a></p></li>
-<li><p><a class="reference internal" href="#les-classes" id="id58">Les classes</a></p>
+<li><p><a class="reference internal" href="#les-fonctions" id="id61">Les fonctions</a></p></li>
+<li><p><a class="reference internal" href="#operateur-spread" id="id62">Opérateur &lt; … &gt; (spread)</a></p></li>
+<li><p><a class="reference internal" href="#operateur-de-comparaison-short-circuit" id="id63">Opérateur de comparaison « short-circuit »</a></p></li>
+<li><p><a class="reference internal" href="#la-decomposition-destructuring" id="id64">La décomposition (destructuring)</a></p></li>
+<li><p><a class="reference internal" href="#les-classes" id="id65">Les classes</a></p>
 <ul>
-<li><p><a class="reference internal" href="#heritage-de-classe" id="id59">Héritage de classe</a></p>
+<li><p><a class="reference internal" href="#heritage-de-classe" id="id66">Héritage de classe</a></p>
 <ul>
-<li><p><a class="reference internal" href="#super" id="id60">super()</a></p></li>
+<li><p><a class="reference internal" href="#super" id="id67">super()</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#import-inclusion-de-module" id="id61">Import / Inclusion de module</a></p></li>
+<li><p><a class="reference internal" href="#import-inclusion-de-module" id="id68">Import / Inclusion de module</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#importer-du-css" id="id62">Importer du CSS</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#jsx" id="id63">JSX</a></p>
-<ul>
-<li><p><a class="reference internal" href="#definission-de-jsx" id="id64">Definission de JSX</a></p></li>
-<li><p><a class="reference internal" href="#interpreter-le-jsx-dans-un-navigateur" id="id65">Interpréter le JSX dans un navigateur</a></p></li>
-<li><p><a class="reference internal" href="#details-syntaxique" id="id66">Details syntaxique</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#react-js" id="id67">React.js</a></p>
-<ul>
-<li><p><a class="reference internal" href="#getting-started" id="id68">Getting started</a></p>
-<ul>
-<li><p><a class="reference internal" href="#versionning-et-recuperation-de-projet" id="id69">Versionning et récupération de projet</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#composants-component" id="id70">Composants (component)</a></p>
-<ul>
-<li><p><a class="reference internal" href="#les-types-de-component" id="id71">Les types de component</a></p>
-<ul>
-<li><p><a class="reference internal" href="#choix-d-un-composant-fonction-classe" id="id72">Choix d’un composant ? Fonction : Classe</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#rendu-dun-composant-comment-lier-react-au-dom" id="id73">Rendu d’un composant : Comment lier React au DOM ?</a></p>
-<ul>
-<li><p><a class="reference internal" href="#parcourrir-un-tableau-et-l-afficher-sous-forme-de-liste" id="id74">Parcourrir un tableau et l’afficher sous forme de liste</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#extraire-des-composants" id="id75">Extraire des composants</a></p></li>
-<li><p><a class="reference internal" href="#props" id="id76">props</a></p>
-<ul>
-<li><p><a class="reference internal" href="#utilisation-des-props" id="id77">Utilisation des Props</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#states" id="id78">States</a></p>
-<ul>
-<li><p><a class="reference internal" href="#hooks" id="id79">hooks</a></p></li>
+<li><p><a class="reference internal" href="#importer-du-css" id="id69">Importer du CSS</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><p><a class="reference internal" href="#jsx" id="id70">JSX</a></p>
+<ul>
+<li><p><a class="reference internal" href="#definission-de-jsx" id="id71">Definission de JSX</a></p></li>
+<li><p><a class="reference internal" href="#interpreter-le-jsx-dans-un-navigateur" id="id72">Interpréter le JSX dans un navigateur</a></p></li>
+<li><p><a class="reference internal" href="#details-syntaxique" id="id73">Details syntaxique</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#node-js" id="id80">Node.js</a></p></li>
-<li><p><a class="reference internal" href="#npm-packet-manager" id="id81">NPM - Packet manager</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id82">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#react-js" id="id74">React.js</a></p>
+<ul>
+<li><p><a class="reference internal" href="#getting-started" id="id75">Getting started</a></p>
+<ul>
+<li><p><a class="reference internal" href="#versionning-et-recuperation-de-projet" id="id76">Versionning et récupération de projet</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#composants-component" id="id77">Composants (component)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#les-types-de-component" id="id78">Les types de component</a></p>
+<ul>
+<li><p><a class="reference internal" href="#choix-d-un-composant-fonction-classe" id="id79">Choix d’un composant ? Fonction : Classe</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#rendu-dun-composant-comment-lier-react-au-dom" id="id80">Rendu d’un composant : Comment lier React au DOM ?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#parcourrir-un-tableau-et-l-afficher-sous-forme-de-liste" id="id81">Parcourrir un tableau et l’afficher sous forme de liste</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#extraire-des-composants" id="id82">Extraire des composants</a></p></li>
+<li><p><a class="reference internal" href="#props" id="id83">props</a></p>
+<ul>
+<li><p><a class="reference internal" href="#utilisation-des-props" id="id84">Utilisation des Props</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#states" id="id85">States</a></p>
+<ul>
+<li><p><a class="reference internal" href="#hooks" id="id86">hooks</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#react-router-dom" id="id87">React-Router-DOM</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#node-js" id="id88">Node.js</a></p></li>
+<li><p><a class="reference internal" href="#npm-packet-manager" id="id89">NPM - Packet manager</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id90">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -699,6 +701,40 @@ intégrable par d’autres objet.</p>
 </div></blockquote>
 <p>Dans le premier cas, on constate que l’objet « personne » est maintenant une propriété de « personne2 ».
 Dans le second cas, seules les propriétés de « personne » ont été ajoutée à « personne2 ».</p>
+</div>
+<div class="section" id="operateur-de-comparaison-short-circuit">
+<h4><a class="toc-backref" href="#sommaire">Opérateur de comparaison « short-circuit »</a><a class="headerlink" href="#operateur-de-comparaison-short-circuit" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Il existe un opérateur de comparaison qui retourne une expression seulement si la condition est
+vraie, contrairement à l’opérateur ternaire qui retourne une expression dans tous les cas.</p>
+<p>Cet opérateur est sous utilise le « ET » logique : &amp;&amp;</p>
+<blockquote>
+<div><div class="highlight-JavaScript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="kd">let</span> <span class="nx">isTrue</span> <span class="o">=</span> <span class="kc">true</span>
+ <span class="kd">let</span> <span class="nx">someExpression</span> <span class="o">=</span> <span class="s2">&quot;isTrue est vrai&quot;</span>
+
+ <span class="nx">isTrue</span> <span class="o">&amp;&amp;</span> <span class="nx">someExpression</span>        <span class="c1">// --&gt; &quot;isTrue est vrai&quot;</span>
+
+ <span class="nx">isTrue</span> <span class="o">=</span> <span class="kc">false</span>
+ <span class="nx">isTrue</span> <span class="o">&amp;&amp;</span> <span class="nx">someExpression</span>        <span class="c1">// --&gt; flase</span>
+
+ <span class="c1">//cette syntaxe est équivalente à :</span>
+ <span class="k">if</span> <span class="p">(</span><span class="nx">isTrue</span><span class="p">){</span>
+     <span class="nx">someExpression</span>
+     <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+<p>Ça fonctionne parce qu’en JavaScript, true &amp;&amp; expression est toujours évalué à expression, et false &amp;&amp; expression est toujours évalué à false.</p>
 </div>
 <div class="section" id="la-decomposition-destructuring">
 <h4><a class="toc-backref" href="#sommaire">La décomposition (destructuring)</a><a class="headerlink" href="#la-decomposition-destructuring" title="Lien permanent vers ce titre">¶</a></h4>
@@ -1971,9 +2007,29 @@ JavaScript (Dictionnaire) : {Attribut: Value}.</p></li>
 <dt><strong>WIP</strong></dt><dd><p>Une alternative a setState()</p>
 </dd>
 </dl>
+</div>
+</div>
+</div>
+<div class="section" id="react-router-dom">
+<h3><a class="toc-backref" href="#sommaire">React-Router-DOM</a><a class="headerlink" href="#react-router-dom" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://www.journaldunet.fr/web-tech/developpement/1441259-comment-gerer-la-navigation-programmatique-avec-react-router/">gérer la navigation programmatique</a> <a class="footnote-reference brackets" href="#id38" id="id39">19</a></p></li>
+<li><p><a class="reference external" href="https://www.journaldunet.fr/web-tech/developpement/1441289-comment-faire-un-redirect-avec-le-composant-react-router-dom-apres-une-requete-post/">faire un redirect avec le composant react-router-dom après une requête POST</a> <a class="footnote-reference brackets" href="#id40" id="id41">20</a></p></li>
+<li><p><a class="reference external" href="https://reacttraining.com/react-router/web/guides/quick-start">Quick Start</a> <a class="footnote-reference brackets" href="#id42" id="id43">21</a> : semble être la doc officiel</p></li>
+</ul>
+</dd>
+</dl>
+<p>React-routeur-dom est un paquet qui permet de rediriger vers une nouvelle url et donc d’afficher un
+nouveau composant en giraant l’esrpie « monopage » de React.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>A chaque changement de composant ce dernier est recharger dans le DOM. Il est donc important de
+<strong>percisté les données</strong> avec le localstorage ou une base de donnés. Dans le cas contraite
+toutes les données seront perdu puisque le composant sera chargé à son état initial.</p>
+</div>
 <hr class="docutils" />
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="node-js">
@@ -1981,19 +2037,19 @@ JavaScript (Dictionnaire) : {Attribut: Value}.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://nodejs.org/en/download/">Nodejs dowload</a> <a class="footnote-reference brackets" href="#id38" id="id39">19</a></p></li>
+<li><p><a class="reference external" href="https://nodejs.org/en/download/">Nodejs dowload</a> <a class="footnote-reference brackets" href="#id44" id="id45">22</a></p></li>
 </ul>
 </dd>
 </dl>
-<p>Démarrer un projet</p>
-<hr class="docutils" />
+<p>Démarrer un projet :</p>
 </div>
+<hr class="docutils" id="index-4" />
 <div class="section" id="npm-packet-manager">
-<span id="index-4"></span><h2><a class="toc-backref" href="#sommaire">NPM - Packet manager</a><a class="headerlink" href="#npm-packet-manager" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">NPM - Packet manager</a><a class="headerlink" href="#npm-packet-manager" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://www.pierre-giraud.com/npm-installation-decouverte/">Installation et découverte de npm</a> <a class="footnote-reference brackets" href="#id40" id="id41">20</a></p></li>
+<li><p><a class="reference external" href="https://www.pierre-giraud.com/npm-installation-decouverte/">Installation et découverte de npm</a> <a class="footnote-reference brackets" href="#id46" id="id47">23</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -2062,9 +2118,18 @@ pour un projet ou au contraire de partager des paquets pour que d’autres utili
 <dd><p><a class="reference external" href="https://codeburst.io/react-js-understanding-state-e875911e921c">https://codeburst.io/react-js-understanding-state-e875911e921c</a></p>
 </dd>
 <dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id39">19</a></span></dt>
-<dd><p><a class="reference external" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+<dd><p><a class="reference external" href="https://www.journaldunet.fr/web-tech/developpement/1441259-comment-gerer-la-navigation-programmatique-avec-react-router/">https://www.journaldunet.fr/web-tech/developpement/1441259-comment-gerer-la-navigation-programmatique-avec-react-router/</a></p>
 </dd>
 <dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id41">20</a></span></dt>
+<dd><p><a class="reference external" href="https://www.journaldunet.fr/web-tech/developpement/1441289-comment-faire-un-redirect-avec-le-composant-react-router-dom-apres-une-requete-post/">https://www.journaldunet.fr/web-tech/developpement/1441289-comment-faire-un-redirect-avec-le-composant-react-router-dom-apres-une-requete-post/</a></p>
+</dd>
+<dt class="label" id="id42"><span class="brackets"><a class="fn-backref" href="#id43">21</a></span></dt>
+<dd><p><a class="reference external" href="https://reacttraining.com/react-router/web/guides/quick-start">https://reacttraining.com/react-router/web/guides/quick-start</a></p>
+</dd>
+<dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id45">22</a></span></dt>
+<dd><p><a class="reference external" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+</dd>
+<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id47">23</a></span></dt>
 <dd><p><a class="reference external" href="https://www.pierre-giraud.com/npm-installation-decouverte/">https://www.pierre-giraud.com/npm-installation-decouverte/</a></p>
 </dd>
 </dl>
@@ -2098,6 +2163,7 @@ pour un projet ou au contraire de partager des paquets pour que d’autres utili
 </li>
 <li><a class="reference internal" href="#les-fonctions">Les fonctions</a></li>
 <li><a class="reference internal" href="#operateur-spread">Opérateur &lt; … &gt; (spread)</a></li>
+<li><a class="reference internal" href="#operateur-de-comparaison-short-circuit">Opérateur de comparaison « short-circuit »</a></li>
 <li><a class="reference internal" href="#la-decomposition-destructuring">La décomposition (destructuring)</a></li>
 <li><a class="reference internal" href="#les-classes">Les classes</a><ul>
 <li><a class="reference internal" href="#heritage-de-classe">Héritage de classe</a><ul>
@@ -2143,6 +2209,7 @@ pour un projet ou au contraire de partager des paquets pour que d’autres utili
 </li>
 </ul>
 </li>
+<li><a class="reference internal" href="#react-router-dom">React-Router-DOM</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#node-js">Node.js</a></li>
@@ -2196,7 +2263,7 @@ pour un projet ou au contraire de partager des paquets pour que d’autres utili
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Poltergeist42.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.2.
     </div>
   </body>
 </html>
