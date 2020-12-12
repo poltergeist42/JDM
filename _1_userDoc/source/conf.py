@@ -90,12 +90,21 @@ html_title = project
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+## Theme : alabaster
 #html_theme = 'alabaster'
+
+## Theme : classic
 # html_theme = 'classic'
-import jupyter_sphinx_theme
-html_theme = "jupyter"
-html_sidebars = {'**': ['sidebartoc.html']}
-html_theme_path = jupyter_sphinx_theme.get_html_theme_path()
+
+## Theme Jypyter
+# import jupyter_sphinx_theme
+# html_theme = "jupyter"
+# html_sidebars = {'**': ['sidebartoc.html']}
+# html_theme_path = jupyter_sphinx_theme.get_html_theme_path()
+
+## Theme : Karma
+html_theme = "karma_sphinx_theme"
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
