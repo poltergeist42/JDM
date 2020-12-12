@@ -3,8 +3,11 @@ ESP8266 & ESP32
 ===============
 
 :Liens_Web:
-            * https://github.com/nodemcu
-                # Github pour les NodeMCU
+            * `Github pour les NodeMCU`_
+            * `brochage et spec NodeMCU`_
+
+.. _`Github pour les NodeMCU`: https://github.com/nodemcu
+.. _`brochage et spec NodeMCU`: https://components101.com/development-boards/nodemcu-esp8266-pinout-features-and-datasheet
 
 -------
 ESP8266
@@ -334,6 +337,26 @@ Accéder au système de fichier de la carte
 
 Créer un fichier
 ----------------
+
+    :Liens_Web:
+            * `SPIFFS Filesystem`_
+
+.. _`SPIFFS Filesystem`: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/spiffs.html
+
+    .. warning::
+
+        Il ne s'agit pas d'un vrai système de fichier. Il n'est donc pas possible de naviger dans un
+        dossier depuis un programme. Il s'agit en réalité d'un renommage du fichier :
+
+            .. codeblock:: shell
+               :lineos:
+               :emphasize-lines: 1, 4
+               :force:
+
+                # pour le fichier 'truc.txt' dans le dossier 'machin' le fichier sera renommer en :
+
+                '/machin/truc.txt'
+
 
     #. Se connecter au REPL : ::
 
