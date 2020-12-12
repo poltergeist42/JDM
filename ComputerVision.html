@@ -1,131 +1,402 @@
-<!DOCTYPE html>
 
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computer Vision &#8212; JDM</title>
-    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootswatch-3.3.4/yeti/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/translations.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script src="_static/js/jquery-1.11.0.min.js"></script>
-    <script src="_static/js/jquery-fix.js"></script>
-    <script src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script src="_static/bootstrap-sphinx.js"></script>
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Computer Vision &mdash; JDM</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Cookbook" href="Cookbook.html" />
-    <link rel="prev" title="Composants Spécifiques" href="Composants.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="prev" title="Composants Spécifiques" href="Composants.html" /> 
 
-  </head><body>
+</head>
 
-<div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">
-        JDM</a>
-      <span class="navbar-text navbar-version pull-left"><b>20170523</b></span>
-    </div>
+<body>
+    <header>
+        <div class="container">
+            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
+            <a class="site-title" href="index.html">
+                JDM
+            </a>
+        </div>
+    </header>
 
-      <div class="collapse navbar-collapse nav-collapse">
-        <ul class="nav navbar-nav">
-          
-          
-          
-          
-        </ul>
 
+<div class="breadcrumbs-outer hidden-xs-down">
+    <div class="container">
         
-          
-<form class="navbar-form navbar-right" action="search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="breadcrumbs">
+    
+      <li><a href="index.html">Docs</a></li>
         
+      <li>Computer Vision</li>
+    
+    
+      <li class="breadcrumbs-aside">
         
-          
-            <ul class='nav navbar-nav navbar-right'>
-                
-  <li>
-    <a href="Composants.html" title="Previous Chapter: Composants Spécifiques"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Composants Spécifiques</span>
-    </a>
-  </li>
-  <li>
-    <a href="Cookbook.html" title="Next Chapter: Cookbook"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Cookbook &raquo;</span>
-    </a>
-  </li>
-            </ul>
+            
+            <a href="_sources/ComputerVision.rst.txt" rel="nofollow"> View page source</a>
           
         
-      </div>
-  </div>
+      </li>
+    
+  </ul>
 </div>
-
-<div class="container">
-  <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><p class="caption"><span class="caption-text">Contents:</span></p>
+    </div>
+</div>
+    <div class="main-outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 site-nav">
+                    
+<div role="search">
+    <form class="search" action="search.html" method="get">
+        <div class="icon-input">
+            <input type="text" name="q" placeholder="Search" />
+            <span class="icon-search"></span>
+        </div>
+        <input type="submit" value="Go" class="d-hidden" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                    <div class="site-nav-tree">
+                        
+                            
+                            
+                                <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Aquariophilie.html">Aquariophilie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Composants.html">Composants Spécifiques</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Computer Vision</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cookbook.html">Cookbook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DataBase.html">DataBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Django.html"><span class="sectnum">1</span> Django 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Docker.html">Docker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Documentation_Automatique.html">Documentation_Automatique</a></li>
-<li class="toctree-l1"><a class="reference internal" href="English_vocab.html">English Vocabulary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ESP.html">ESP8266 &amp; ESP32</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GIT.html">GIT (versioning)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Informatique.html"><span class="sectnum">1</span> Informatique</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Javascript.html">JavaScript / REACT.js / node.js</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kicad.html">Kicad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Latex.html">LaTex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Linux.html">LINUX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MAC_OS.html">MAC OS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Machine_learning.html">Machine Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MQTT.html">MQTT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Optimisation_Travail.html"><span class="sectnum">1</span> Optimisation du travail (et de l’apprentissage)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">PYTHON</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Raspberry.html">Raspberry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Regex.html">Regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Reseau.html">Reseau</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SiteWeb.html">Site Web</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Soudure.html">Soudure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="URLtheque.html">URLtheque</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VIM.html">VIM (VI)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="visualStudioCode.html">Visual Studio Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="XML_JSON.html">XML_JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="includeMe.html#infos-generales-journal-de-manip">infos générales Journal de manip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="includeMe.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="includeMe.html#arborescence-du-projet">Arborescence du projet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Aquariophilie.html">Aquariophilie</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Aquariophilie.html#debuter-en-aquarium-d-eau-douce">Débuter en aquarium d’eau douce</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Composants.html">Composants Spécifiques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Composants.html#programmation-des-atmega">Programmation des ATMega</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Composants.html#magnetomettre-hmc5883l">Magnetomettre : HMC5883L</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Composants.html#motteur-pas-a-pas-28byj-48">Motteur Pas à Pas : 28BYJ-48</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Composants.html#picamera">Picamera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Composants.html#capteur-ultrason-hc-sr04">Capteur ultrason : HC-SR04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Composants.html#captheur-de-methane-mq4">Captheur de Méthane : MQ4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Composants.html#liste-des-gazes-pouvant-etre-detecter-par-le-mq4">Liste des gazes pouvant être détecter par le MQ4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Composants.html#definition-des-constantes-et-valeurs-de-references">Définition des constantes et valeurs de références</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Computer Vision</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mesh">Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Cookbook.html">Cookbook</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Cookbook.html#demarrage-configuration-d-un-nouveau-poste-linux">Démarrage / configuration d’un nouveau poste Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DataBase.html">DataBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DataBase.html#postgresql">PostGreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DataBase.html#redis">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DataBase.html#weblinks">Weblinks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Django.html"><span class="sectnum">1</span> Django 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Django.html#how-djano-is-structured"><span class="sectnum">1.1</span> How Djano is structured</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Django.html#install-django"><span class="sectnum">1.2</span> Install Django</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Django.html#how-to-start-and-basic-s-usages"><span class="sectnum">1.3</span> How to start and basic’s usages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Django.html#vocabulary"><span class="sectnum">1.4</span> Vocabulary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Django.html#webography"><span class="sectnum">1.5</span> Webography</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Docker.html">Docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Docker.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Docker.html#obtenir-de-l-aide-sur-une-commande">Obtenir de l’aide sur une commande</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Docker.html#diference-entre-une-image-et-un-container">Diférence entre une <strong>Image</strong> et un <strong>Container</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Docker.html#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Docker.html#containers">Containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Docker.html#lancer-initialiser-un-container">Lancer/initialiser un Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Docker.html#sortir-d-un-container-mode-iterractif">Sortir d’un container (mode iterractif)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Docker.html#recuperer-le-focus-sur-un-container-qui-tourne-en-tache-de-fond-en-mode-detache">Récupérer le focus sur un container qui tourne en tache de fond (en mode détaché)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Docker.html#inspecter-un-objet-docker">Inspecter un objet docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Docker.html#gestion-redirection-des-ports">Gestion / redirection des ports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Docker.html#docker-compose">Docker-Compose</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation_Automatique.html">Documentation_Automatique</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Documentation_Automatique.html#docutils">DocUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Documentation_Automatique.html#restructuredtext-rst">reStructuredText (.rst)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Documentation_Automatique.html#sphinx">Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Documentation_Automatique.html#jsdoc">JSDOC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Documentation_Automatique.html#weblinks">Weblinks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="English_vocab.html">English Vocabulary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="English_vocab.html#d">- D -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="English_vocab.html#f">- F -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="English_vocab.html#l">- L -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="English_vocab.html#m">- M -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="English_vocab.html#r">- R -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="English_vocab.html#s">- S -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="English_vocab.html#t">- T -</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ESP.html">ESP8266 &amp; ESP32</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ESP.html#esp8266">ESP8266</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ESP.html#flasher-un-nouveau-firmware">Flasher un nouveau Firmware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ESP.html#utilisation-avec-micropython">Utilisation avec MicroPython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ESP.html#wemos-d1-mini-avec-arduino">WEMOS D1 Mini avec Arduino</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ESP.html#esp32">ESP32</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ESP.html#rshell">RSHELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ESP.html#micropython">Micropython</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GIT.html">GIT (versioning)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#les-liens-utiles">Les liens utiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#configurer-git">Configurer GIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#obtenir-de-l-aide">Obtenir de l’aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#demarrer-un-depot-git">Démarrer un dépôt Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#gitignore">gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#enregistrer-des-modifications-dans-le-depot">Enregistrer des modifications dans le dépôt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#creer-lister-et-selectionner-une-branche">Créer, lister et sélectionner une branche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#appliquer-le-contenu-d-une-branch-dans-la-branch-courante-faire-un-merge">appliquer le contenu d’une branch dans la branch courante (faire un merge)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#supprimer-des-elements">supprimer des éléments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#faire-un-instantane-puis-le-liberer">faire un « instantané » puis le libérer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#reparer-annuler-remplacer">Réparer / annuler / remplacer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#gestion-depot-distant">Gestion dépôt distant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#github">github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#importer-une-branch-distante-dans-le-depot-local">Importer une branch distante dans le dépôt local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GIT.html#reparer-un-liens-vers-une-branche-distante">Réparer un liens vers une branche distante</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HTML_CSS.html#html">HTML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HTML_CSS.html#css">CSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HTML_CSS.html#bootstrap">Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HTML_CSS.html#weblinks">Weblinks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Informatique.html"><span class="sectnum">1</span> Informatique</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Informatique.html#cours-et-connaissances-generiques"><span class="sectnum">1.1</span> Cours et connaissances génériques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Informatique.html#materiel"><span class="sectnum">1.2</span> Matériel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Informatique.html#poste-de-travail"><span class="sectnum">1.3</span> Poste de travail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Informatique.html#sysadmin"><span class="sectnum">1.4</span> SysAdmin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Informatique.html#webography"><span class="sectnum">1.5</span> Webography</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Javascript.html">JavaScript / REACT.js / node.js</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Javascript.html#javascript">JavaScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Javascript.html#jsx">JSX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Javascript.html#react-js">React.js</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Javascript.html#node-js">Node.js</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Javascript.html#npm-packet-manager">NPM - Packet manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Javascript.html#weblinks">Weblinks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kicad.html">Kicad</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kicad.html#commandes-et-raccourcis-de-base">commandes et raccourcis de base</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Latex.html">LaTex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Latex.html#formules-mathematiques">Formules mathématiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Latex.html#commandes-utiles">Commandes utiles</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linux.html">LINUX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linux.html#shell">Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Linux.html#utilisateurs-groupes-et-permissions">Utilisateurs, Groupes et Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Linux.html#configuration-systeme">Configuration Système</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Linux.html#administration-systeme">Administration système</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Linux.html#reseau">Réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Linux.html#gestion-materiel">Gestion Matériel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="MAC_OS.html">MAC OS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MAC_OS.html#effacer-le-cache-dns">Effacer le cache DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MAC_OS.html#installer-macos-sur-pc-avec-vmware">Installer MacOS sur PC avec VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MAC_OS.html#configurer-office365-sur-le-client-mail">Configurer Office365 sur le client MAIL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MAC_OS.html#command-line-cli">Command Line (CLI)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Machine_learning.html">Machine Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Machine_learning.html#l-equation-de-bellman">L’équation de Bellman</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Machine_learning.html#artificial-neural-networks-ann">Artificial Neural Networks (ANN)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Machine_learning.html#scikit-learn">scikit-learn</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="MQTT.html">MQTT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MQTT.html#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Optimisation_Travail.html"><span class="sectnum">1</span> Optimisation du travail (et de l’apprentissage)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#lecture-rapide"><span class="sectnum">1.1</span> Lecture rapide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#technique-du-pomodoro"><span class="sectnum">1.2</span> Technique du Pomodoro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#la-methode-du-canard-en-plastique"><span class="sectnum">1.3</span> La méthode du canard en plastique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#techniques-d-amelioration-de-la-memoire"><span class="sectnum">1.4</span> Techniques d’amélioration de la mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#la-methode-agile"><span class="sectnum">1.5</span> La méthode Agile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#webography"><span class="sectnum">1.6</span> Webography</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#commandes-utiles">Commandes utiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#slicing">Slicing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#creer-des-variables-en-powershell-sous-forme-de-tableau">Créer des variables en PowerShell sous forme de tableau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#les-tableau">Les Tableau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#caractere-specifiques">Caractère spécifiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#declarer-une-variable">Déclarer une variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#equivalent-du-print-ou-du-echo">Equivalent du print (ou du echo)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique">Renvoyer la sortie d’une commande vers une fenêtre graphique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#declarer-une-fonction">Déclarer une fonction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#admisitration-exchange">Admisitration Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#automatisation-de-windows-et-de-windows-server-avec-windows-powershell">Automatisation de Windows et de Windows Server avec Windows PowerShell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#stocker-un-chemin-puis-y-retourne">stocker un chemin puis y retourné</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#tester-si-un-chemin-exist">Tester si un chemin exist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#creer-des-interfaces-graphiques">Créer des interfaces graphiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#wmiobject">WmiObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#activer-psremote-depuis-un-poste">Activer PSRemote depuis un poste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#supprimer-un-dossier-et-son-contenu">Supprimer un dossier et son contenu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#manipuler-les-variables-d-environement">Manipuler les variables d’environement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#ouvrir-un-document-avec-vim-depuis-powershell">Ouvrir un document avec VIM depuis PowerShell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#hyperv">HyperV</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">PYTHON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#ensemble-de-commande-utiles">Ensemble de commande utiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#obtenir-de-l-aide-sur-une-class-ou-une-methode-python">Obtenir de l’aide sur une class ou une méthode  (python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#lignes-de-code-a-inserer-au-debut-de-chaque-script-sous-linux">Lignes de code à insérer au debut de chaque script sous Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#os-library">os library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#shutil-library">shutil library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#psutil-process-and-system-utilities">psutil (process and system utilities)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#pip-python-installing-packages">pip (Python installing packages)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#les-environnements-virtuels-python-virtualenv-et-virtualenvwrapper-version-linux">Les environnements virtuels Python : virtualenv et virtualenvwrapper (version Linux)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#un-shell-python-qui-fait-de-l-auto-completion">Un shell Python qui fait de l’auto complétion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#convertir-un-string-en-bytes">convertir un string en bytes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#connaitre-l-adresse-memoire-d-un-objet">Connaître l’adresse mémoire d’un objet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#affectation-copy-et-deepcopy">Affectation, copy et deepcopy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#faire-un-executable-a-partir-d-un-script">faire un exécutable à partir d’un script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#web-framework">web framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#les-decorateurs">Les décorateurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#les-fonction-lambda">Les fonction lambda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#tester-un-type-attendu">Tester un type attendu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#packing-et-unpacking-utilisation-de-args-et-kwargs">Packing et UnPacking (utilisation de : “*args” et “**kwargs”)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#passer-des-parametres-a-un-programme-avec-argparse">Passer des paramètres à un programme avec argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#connaitre-le-nombre-de-cpu-d-un-systeme">Connaître le nombre de CPU d’un système</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#logging-library">logging Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#utilisation-de-l-underscore">Utilisation de l’underscore (_)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#connaitre-l-os-de-travail">Connaître l’os de travail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#uuid">UUID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html#urltheque">URLtheque</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Raspberry.html">Raspberry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#rpi-utilises">RPi utilisés</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#acceder-au-fichier-de-configuration-du-rpi">Accéder au fichier de configuration du RPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#connaitre-la-configuration-materiel-du-rpi">Connaître la configuration matériel du RPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#pour-passer-la-langue-et-le-clavier-en-francais">pour passer la langue et le clavier en français</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#vocabulaire">Vocabulaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#la-bibliotheque-rpi-gpio">La bibliotheque RPi.GPIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#protocole-i2c">Protocole I2C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#uart">UART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#pwm-servo-moteur-et-dc-motor">PWM, Servo moteur et DC Motor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#input-pull-up-pull-down">Input pull-up / pull-down</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#les-interruptions-python-gpio">Les interruptions (python + GPIO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#plein-d-astuce-pour-la-gestion-au-quotidien">Plein d’astuce pour la gestion au quotidien</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Raspberry.html#utiliser-les-gpio-dans-un-container-docker">Utiliser les GPIO dans un container (Docker)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Regex.html">Regex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Regex.html#powershell">PowerShell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Regex.html#python">Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Reseau.html">Reseau</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Reseau.html#materiel">Matériel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reseau.html#router-firewall-proxy">Router, Firewall, Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reseau.html#webography">Webography</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SiteWeb.html">Site Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SiteWeb.html#preparation">Préparation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Soudure.html">Soudure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Soudure.html#apprentissage">apprentissage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Soudure.html#experimentation">Expérimentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="URLtheque.html">URLtheque</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="URLtheque.html#informatique">Informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="URLtheque.html#materiel">Matériel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="URLtheque.html#mecanique">Mécanique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="URLtheque.html#soudure-plasma">Soudure / Plasma</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VIM.html">VIM (VI)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VIM.html#presentation">Présentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VIM.html#configuration-et-extension">Configuration et extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VIM.html#liste-des-commandes-et-fonctions-utiles">Liste des commandes et fonctions utiles</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="visualStudioCode.html">Visual Studio Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="visualStudioCode.html#obtenir-de-l-aide-sur-les-diferentes-commandes-et-fonctionnalitees">Obtenir de l’aide sur les diférentes commandes et fonctionnalitées</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualStudioCode.html#documentation-officielle">Documentation Officielle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualStudioCode.html#snippets">Snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualStudioCode.html#multi-line-and-multi-cursor-editing">Multi-Line and multi-Cursor Editing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="XML_JSON.html">XML_JSON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="XML_JSON.html#format-json">Format JSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XML_JSON.html#format-xml">Format XML</a></li>
+</ul>
+</li>
 </ul>
 
-        </div>
-      </div>
-    <div class="col-md-9 content">
-      
+                            
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="document">
+                        
+                            
   <div class="section" id="computer-vision">
 <h1>Computer Vision<a class="headerlink" href="#computer-vision" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="mesh">
@@ -145,21 +416,41 @@
 </div>
 
 
-    </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2017, Poltergeist42.<br/>
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.0.<br/>
-    </p>
-  </div>
-</footer>
-  </body>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'20170523',
+            LANGUAGE:'fr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+    <div class="footer" role="contentinfo">
+        <div class="container">
+            &#169; Copyright 2017, Poltergeist42.
+        Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.0.
+        </div>
+    </div>  
+
+</body>
 </html>
