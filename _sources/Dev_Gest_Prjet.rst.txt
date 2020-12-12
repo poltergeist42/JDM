@@ -35,12 +35,12 @@ que la question originelle.
 Ex : Conception d’un piège à souris
 
     Question initiale :
-        -Comment piéger une souris ?
+        - Comment piéger une souris ?
 
     Questions redéfinies :
-        -Qu’est ce qui attire les souris ?
+        - Qu’est ce qui attire les souris ?
         - Qu’est ce qui fait fuir les souris ?
-        -Comment faire préférer aux souris d’être à l’extérieur plutôt qu’à l’intérieur ?
+        - Comment faire préférer aux souris d’être à l’extérieur plutôt qu’à l’intérieur ?
 
 En reformulant la question posée par l’objectif initial, on s’aperçoit que le véritable objectif
 n’est pas d’attraper les mes souris mais au contraire de s’en débarrasser !
