@@ -19,7 +19,7 @@ Redéfinir l’objectif d’un projet
 ================================
 
 Redéfinir l’objectif d’un projet peut être utile pour changer de point de vue et envisager le
-problème sous un nouvelle angle.
+problème sous un nouvel angle.
 
 Cette démarche peut être effectuée :
     * Dès la conceptualisation du projet : Cela permet de démarrer le projet en partant dans la
@@ -50,9 +50,9 @@ Le nouvel objectif est donc : « Comment se débarrasser des souris ? »
 Grace aux différentes questions qui nous ont amenées à reformuler notre objectif, nous savons que
 pour se débarrasser des souris, il faut :
 
-1.Identifier et éliminer tous ce qui pourrait attirer les souris.
-2.Mettre en place de répulsifs.
-3.Forcer les souris à aller ailleurs que chez vous.
+  #. Identifier et éliminer tous ce qui pourrait attirer les souris.
+  #. Mettre en place de répulsifs.
+  #. Forcer les souris à aller ailleurs que chez vous.
 
 ####
 
