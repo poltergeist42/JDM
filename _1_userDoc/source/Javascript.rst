@@ -4,6 +4,7 @@ JavaScript / REACT.js / node.js
 
 .. contents::
    :backlinks: top
+   :depth: 3
 
 :Liens_Web:
             * `Cours (FR) pour l'apprentissage du langage`_ : Le cours d'openclassrooms
@@ -25,7 +26,7 @@ JavaScript / REACT.js / node.js
 
 .. index::
    single: JavaScript
-   single: WEB; JavaScript
+   pair: WEB; JavaScript
 
 ----------
 JavaScript

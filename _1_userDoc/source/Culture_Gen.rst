@@ -11,7 +11,7 @@ Culture Générale / Connaissances insolites
 .. index::
    single: ASTRONOMIE
 
-Ce document regroupe un ensemble de connaissances insolite dans le domaine de la culture générale.
+Ce document regroupe un ensemble de connaissances insolites dans le domaine de la culture générale.
 
 ----------
 Astronomie
@@ -22,6 +22,9 @@ Astronomie
 
 La Terre
 ========
+
+.. index::
+   pair: La Terre;Plan de l'elliptique
 
 :Liens_Web:
     * `Périhélié`_
@@ -34,10 +37,10 @@ Suivant la période de l'année, la Terre est plus ou moins proche du Soleil. Le
 sont le plus proche ou le plus éloigné du Soleil s’appelle Périhélie et Aphélie.
 
     :Périhélie:
-        c’est le moment ou la Terre passe au plus proche du Soleil sur le plan de l’elliptique
+        c’est le moment où la Terre passe au plus proche du Soleil sur le plan de l’elliptique
 
     :Aphélie:
-        C’est le moment la Terre passe au plus loin du Soleil sur le plan de l’elliptique.
+        C’est le moment où la Terre passe au plus loin du Soleil sur le plan de l’elliptique.
 
 La Lune
 =======

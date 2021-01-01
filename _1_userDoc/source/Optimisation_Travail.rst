@@ -6,7 +6,6 @@ Cette rubrique présente différente méthode permettant d'optimiser les process
 de gestion / développement de projet.
 
 .. contents:: Table of Contents
-.. section-numbering::
 
 ####
 
@@ -450,11 +449,88 @@ Le système de mémorisation des chiffres consiste à remplacer mentallement le 
   #. Niveau champion. Les systèmes des champions de mémoire : convertir chaque chiffre (000-999)
      en image.
 
+####
+
+------------------------------
+Relaxation et de concentration
+------------------------------
+
+Pour pouvoir rester concentrer il est important de pouvoir à la fois controler son environement mais
+également de savoir rester détendu. C’est pourquoi il est intéressant de connaître des techniques de
+Relaxation pouvant être exercée à tout moment et si possible restant discrète dans leur application.
+Il ne s'agit pas de passé pour un allumer du bocal auprès des collègues.
+
+La Méthode VITTOZ
+=================
+
+:Liens_WEB:
+    * `Passeport Santé`_
+    * `La méthode Vittoz 1`_
+    * `La méthode Vittoz 2`_
+    * `Ecrecices Vittoz`_
+
+.. _`Passeport Santé`: https://www.passeportsante.net/fr/Therapies/Guide/Fiche.aspx?doc=methode-vittoz_th
+.. _`La méthode Vittoz 1`: https://les-defis-des-filles-zen.com/methode-vittoz-3-exercices-vie-sereine?cn-reloaded=1
+.. _`La méthode Vittoz 2`: https://www.virtuose2lavie.com/la-methode-vittoz-3-exercices-de-10-secondes-pour-retrouver-votre-concentration
+.. _`Ecrecices Vittoz`: https://www.bertrandcanavy.com/votre-sante/les-exercices-du-dr-vittoz/
+
+La méthode VITTOZ est une thérapie psychosensorielle qui s’appuie sur la théorie du control
+cérébral. Elle permet de rééquilibrer le corp et l’esprit lorsqu’elle est pratiqué dans sa forme la
+plus complète. Cette méthode est peut-être efficace si on croie à ces conneries.
+
+Dans sa forme la plus simple, cette méthode propose des exercices permettant la visualisation
+créative. Ces exercices permettent d’améliorer la concentration en forçant notre cerveau à manipuler
+des objets uniquement dans l’imaginaire. Cette manipulation imaginaire est également l’un des
+principaux mécanismes de la mémoire. C’est ce mécanisme qui nous permet de construire des cartes
+mentales (dites heuristiques).
+
+Le principe des exercices est assez simple : imaginer un objet et le déplacer mentalement en le
+faisant tourner, s’éloigner, se rapprocher, disparaitre, réapparaitre, etc. L’exercice doit être
+effectuer plusieurs fois en réduisant la vitesse de déplacement à chaque fois.
+
+La difficulté peut être augmentée en manipulant mentalement plusieurs objets en même temps. Une
+partie d’échec mentale, représente par exemple une forme extrême de l’exercice.
+
+Exercice simple avec un seul objet :
+
+  #. Imaginer une pomme
+  #. Faire tourner la pomme sur elle-même
+  #. Faire s’éloigner la pomme
+  #. Recommencer en essayant de diminuer la vitesse progressivement entre chaque exercice
+
+N.B : Le principe est le même avec plusieurs objets. Il faut cependant imaginer les objets se
+      déplaçant de façon indépendante puis en interactions les uns avec les autres.
+
+Exercice d’une seine animée :
+
+  #. Imaginer un Hamster qui court à toute vitesse dans sa roue
+  #. Faire attention aux détails de la seine : Le bruit de la roue, les couinements du hamster, ses yeux, ses moustaches, sa fourrure, etc.
+  #. Recommencer en ralentissant la seine tout en restant concentré sur les détails
+
+N.B : Cet exercice peut être effectué sur toutes les seines de la vie quotidienne : Les feuilles des
+      arbres, un chat faisant sa toilette, un stylo tombant d’une table, etc.
 
 
+Technique de respiration en 3 phases
+====================================
 
+L’ensemble des 3 phases doivent être effectuées la bouche fermée. Les bras et les jambes ne doivent
+pas être croisées. L’idéale étant d’être en position assise.
 
+  :Phase 1: Prendre une grande respiration pendant environ 4 secondes. Cette inspiration doit être
+            prise sans forcer et sans à-coup. Si l’exercice et répéter plusieurs fois, la volume
+            d’air inspirer sera alors naturellement plus import à chaque respiration.
 
+  :Phase 2: Bloquer sa respiration pendant environ 3 secondes.
+
+  :Phase 3: Relâcher lentement sa respiration, sans forcer et sans à-coup pendant environ 6 secondes.
+            Cette technique de respiration doit être répétée au moins 3 fois. Pour optimiser les
+            effets à long termes, il faut pratiquer cette technique 5 minutes le matin en se levant
+            et 5 minutes le soir en se couchant. Cette technique simple doit également être
+            appliquée chaque fois qu’on a besoin de se clamer et de se reconcentrer.
+
+N.B : Il est également possible de fermer les yeux pendant l’exercice pour mieux se concentrer sur
+sa respiration.
 
 ####
 
