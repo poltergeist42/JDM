@@ -16,6 +16,7 @@ Mon journal de manip
    ComputerVision
    Cookbook
    DataBase
+   Dev_Gest_Prjet
    Django
    Docker
    Documentation_Automatique
@@ -47,4 +48,5 @@ Mon journal de manip
 Indices and tables
 ==================
 
+* :ref:`genindex`
 * :ref:`search`
