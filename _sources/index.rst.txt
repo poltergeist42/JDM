@@ -15,6 +15,7 @@ Mon journal de manip
    Composants
    ComputerVision
    Cookbook
+   Culture_Gen
    DataBase
    Dev_Gest_Prjet
    Django
