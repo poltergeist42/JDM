@@ -352,7 +352,7 @@ environnement pour de façon à ce que l'image mentale "s'ancre" dans cette piè
       au rétroviseur de la voiture.
       
 Les 3 éléments importants pour graver les informations dans un point de passage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   #. Il est important de créer des associations en mouvements dans les lieux choisi. Les images
      statiques ont tendance à être moins mémorable.
@@ -449,7 +449,7 @@ Pour ancrer profondément l'image mental dans le palais de la mémoire, il faut 
 dite "mémoire automatique" de la mémoire à long terme.
 
 Systèmes de mémorisation des chiffres
-====================================
+=====================================
 
 Le système de mémorisation des chiffres consiste à remplacer mentalement le chiffres par une image mentales.
 
