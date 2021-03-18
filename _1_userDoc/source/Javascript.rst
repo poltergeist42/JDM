@@ -496,7 +496,8 @@ Cet opérateur est sous utilise le "ET" logique : &&
             someExpression
             }
 
-Ça fonctionne parce qu’en JavaScript, true && expression est toujours évalué à expression, et false && expression est toujours évalué à false.
+Ça fonctionne parce qu’en JavaScript, true && expression est toujours évalué à expression,
+et false && expression est toujours évalué à false.
 
 La décomposition (destructuring)
 --------------------------------
@@ -507,9 +508,9 @@ La décomposition (destructuring)
 
 .. _`Affecter par décomposistion (MDN)`: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Affecter_par_d%C3%A9composition
 
-**L'affectation par décomposition (destructuring en anglais)** est une expression JavaScript qui permet
-d'extraire (unpack en anglais) des données d'un tableau ou d'un objet grâce à une syntaxe dont la
-forme ressemble à la structure du tableau ou de l'objet.
+**L'affectation par décomposition (destructuring en anglais)** est une expression JavaScript qui
+permet d'extraire (unpack en anglais) des données d'un tableau ou d'un objet grâce à une syntaxe
+dont la forme ressemble à la structure du tableau ou de l'objet.
 
 Ces expression peuvent être utilisée pour l'affectation de valeur à une varriable, décomposer un
 objet JavaScript (un Dictionnaire) ou de décomposer les propriétés d'un objet. C'est égelement la
@@ -540,7 +541,8 @@ complétement.
                                         //interprétée comme un objet littéral et non comme un bloc.
                                         //Il est également nécessaire d'avoir un point-virgule 
                                         //avant les parenthèses de l'instruction car sinon, ces
-                                        //parenthèses peuvent être interprétées comme un appel de fonction.
+                                        //parenthèses peuvent être interprétées comme un appel
+                                        //de fonction.
 
     //affectation avec un nom différent
     var o = {p: 42, q: true};
@@ -588,8 +590,9 @@ avec le mot clef : **new**.
 
 La définission d'attribut de classe se fait dans une méthode **"construtor()"**. Cette méthode est
 appellée automatiquement à la création d'une instance de la classe. C'est l'équivalent de la
-méthode **"__init__()"** en Python. La définition d'attribut ou l'appel d'une méthode depuis une autre
-méthode de la classe doit être précéder de **"this"**. c'est l'équivalent de **"self"** en Python.
+méthode **"__init__()"** en Python. La définition d'attribut ou l'appel d'une méthode depuis une
+autre méthode de la classe doit être précéder de **"this"**. c'est l'équivalent de **"self"**
+en Python.
 
 .. code-block:: JavaScript
    :linenos:
@@ -1184,8 +1187,8 @@ On peut également utiliser une classe ES6 pour définir un composant.
 
 Ces 2 composants (la fonction et la classe) sont équivalents.
 
-Une classe doit systématiquement avor une méthode **"render(){return(<code JSX/>)}"** c'est cette méthode qui modifie
-le DOM virtuel.
+Une classe doit systématiquement avor une méthode **"render(){return(<code JSX/>)}"** c'est cette
+méthode qui modifie le DOM virtuel.
 
 Choix d'un composant ? Fonction : Classe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1562,13 +1565,14 @@ Node.js
 
 .. _`Nodejs dowload`: https://nodejs.org/en/download/ 
 
-Démarrer un projet :
+Node.js (ou Node) est un runtime pour Javascript. Tout comme JRE est le runtime de JAVA. Il permet à
+Javascript de s'executer en dehors d'un navigateur par exemple coté serveur.
+
+####
 
 .. index::
    single: NPM
    single: Node; NPM
-
-####
 
 --------------------
 NPM - Packet manager
@@ -1582,10 +1586,43 @@ NPM - Packet manager
 
 .. glossary::
 
-    NPN
+    NPM
         npm (Node Package Manager) est le gestionnaire de paquets officiel de Node.js. Il permet de
-        télécharger et d’installer des paquets (encore appelés modules) pour pouvoir les utiliser
-        pour un projet ou au contraire de partager des paquets pour que d’autres utilisateurs puissent les utiliser.
+        télécharger et d’installer des paquets (encore appelés modules ou librairies) pour pouvoir
+        les utiliser pour un projet ou au contraire de partager des paquets pour que d’autres 
+        utilisateurs puissent les utiliser.
+
+--------------------
+Package et framework
+--------------------
+
+Express.JS
+==========
+
+Epress est un framework qui permet de simplifier la tache d'écriture du code d'un serveur WEB
+(Backside). Il nous laisse définir les routes et les actions à effectuer lorsqu'une requette HTTP
+arrive est qu'elle correspond à l'un des patterns que nous avons défini. les patterns utilisé dans
+la comparaison avec les requèttes HTTP correspondent à une expression regulière.
+
+Il est également possible de créer des middleware qui pourron être inserer dans le traitement entre
+la requètes HTTP (en entrée) et la réponse (en sortie). Les opérations de logging et
+d'authentification sont, par exemple traitées à l'aide de middleware.
+
+Babel
+=====
+
+Installer babel en mode dévellopeur :
+
+.. code-block:: shell
+   :linenos:
+   :force:
+
+    npm install --save-dev @babel/core@7 @babel/cli@7
+    # le "@7" signifie que l'on force l'installation de la version 7 du package.
+
+Babel est capable de plusieurs nombreuse convertion / transformation. Il y a cependant un package
+différent pour chacunes des taches. Le package permettant de convertir le JSX en en Javascript 
+est : PRESET-REACT.
 
 --------
 Weblinks

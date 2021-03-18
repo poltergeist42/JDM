@@ -76,8 +76,8 @@ Les différentes étapes de la lecture rapides
                éviter se problème il se forcer à lire plus vite. La technique du pointeur évoqué 
                dans l'étape "Supprimer la subvocalisation" peut alors à nouveau être utile.
 
-       **/!\\ Attention /!\\** : même si on ne trouve aucune nouvelle information visuelle pendant ces
-       saccades, la recherche a montré que le traitement cognitif se poursuit pendant ce temps. 
+       **/!\\ Attention /!\\** : même si on ne trouve aucune nouvelle information visuelle pendant
+       ces saccades, la recherche a montré que le traitement cognitif se poursuit pendant ce temps. 
        Notre cerveau profite de ces 0,1 secondes de pause pour continuer à travailler et à 
        comprendre.
 
@@ -100,8 +100,8 @@ Conclusion sur la lecture rapide
 La technique de lecture rapide améliore les performances de lecture mais nuis à la compréhension et
 à la mémorisation générale du texte.
 
-Pour améliorer ses performances de lecture, on peut augmenter légèrement son rythme de lecture. Il ne
-faut pas trop augmenter la vitesse de lecture de façon à ne pas nuire à la compréhension et à la
+Pour améliorer ses performances de lecture, on peut augmenter légèrement son rythme de lecture. Il
+ne faut pas trop augmenter la vitesse de lecture de façon à ne pas nuire à la compréhension et à la
 mémorisation du texte. Cette légère augmentation de la vitesse de lecture permet au cerveau de ne
 s'ennuyer et donc permet de rester concentrer sur le sujet.
 
@@ -154,7 +154,8 @@ Utilisation de la méthode
        l’écrire, mais revenir immédiatement sur la tâche.
 
     #. A la fin du timer, mettre une croix ou autre sur un morceau de papier.
-    #. Faire une pause de 5 min. Lorsque 4 cycles auront été effectués, faire une pause de 15 à 30 min.
+    #. Faire une pause de 5 min. Lorsque 4 cycles auront été effectués, faire une pause
+       de 15 à 30 min.
 
     **N.B:** 
         - Une tache peut être constituée de plusieurs pomodori.
@@ -319,8 +320,8 @@ pourquoi au début, il est plus facile de "voyager" dans des endroits qui nous s
     #. Le hall de l'immeuble
     #. La voiture
 
-Pour commencer, il est plus facile de considérer chaque point de passages comme un éléments unique. Par
-la suite tous les éléments de ces pièces pourrons servir de support pour nos informations. Par
+Pour commencer, il est plus facile de considérer chaque point de passages comme un éléments unique.
+Par la suite tous les éléments de ces pièces pourrons servir de support pour nos informations. Par
 exemple : les murs, les placards, le sol, le plafond. 
 
 Associer une information avec un point de passage
@@ -342,8 +343,8 @@ environnement pour de façon à ce que l'image mentale "s'ancre" dans cette piè
       d'eau.
     * **Bol** : Un bol sur le plan de travail de la cuisine avec des bras et une bouche entrain
       de manger avec une cuillère la soupe qu'il contient.
-    * **Cloche** : La vache des tout premier Disney avec une cloche autour du coup, assis dans le couloir
-      et fait du tricot. Le tout accompagné de la musique des premiers Disney.
+    * **Cloche** : La vache des tout premier Disney avec une cloche autour du coup, assis dans
+      le couloir et fait du tricot. Le tout accompagné de la musique des premiers Disney.
     * **Calculatrice** : Une addition "1+1 = ?" écris à la craie sur une ardoise accroché à un mur
       du salon.
     * **Livre** : Un tas de livre de dessin animée empilé façon Jenga dans le salon.
@@ -399,8 +400,8 @@ Créer un palais de la mémoire
 -----------------------------
 
 La première étape d'un palais de la mémoire suffisamment grand est d'avoir une collection de voyages
-déjà prête. Il faut donc Créer / lister ces collections de voyage avec les différentes étapes qui les
-compose sur papier ou sur ordinateur.
+déjà prête. Il faut donc Créer / lister ces collections de voyage avec les différentes étapes qui
+les composent sur papier ou sur ordinateur.
 
 Il faut ensuite relier ces palais de façon à ce qu’ils forment une suite logique.
 
@@ -439,19 +440,21 @@ Voici une liste des grandes catégories que nous pouvons placer dans notre palai
   * Musique et films
   * Célébrités
 
-Même si il n'y a pas réellement de lieu pour l'une de ces catégories, il suffit de le placées arbitrairement.
+Même si il n'y a pas réellement de lieu pour l'une de ces catégories, il suffit de le placées
+arbitrairement.
 
-Si les images mentales que vous avez créées ne sont pas solliciter de temps à autres, elles finiront alors par
-disparaitre complétement du palais de la mémoire.
+Si les images mentales que vous avez créées ne sont pas solliciter de temps à autres, elles finiront
+alors par disparaitre complétement du palais de la mémoire.
 
 Pour ancrer profondément l'image mental dans le palais de la mémoire, il faut s'appuyer sur la
-**technique de rappel**. L'information déménagera alors du palais pour être stocké directement dans la partie
-dite "mémoire automatique" de la mémoire à long terme.
+**technique de rappel**. L'information déménagera alors du palais pour être stocké directement dans
+la partie dite "mémoire automatique" de la mémoire à long terme.
 
 Systèmes de mémorisation des chiffres
 =====================================
 
-Le système de mémorisation des chiffres consiste à remplacer mentalement le chiffres par une image mentales.
+Le système de mémorisation des chiffres consiste à remplacer mentalement le chiffres par une image
+mentales.
 
   #. Niveau débutant. Le système simple : Convertir chaque chiffre (0-9) en image.
 
@@ -466,10 +469,10 @@ Le système de mémorisation des chiffres consiste à remplacer mentalement le c
 Relaxation et de concentration
 ------------------------------
 
-Pour pouvoir rester concentrer il est important de pouvoir à la fois contrôler son environnement mais
-également de savoir rester détendu. C’est pourquoi il est intéressant de connaître des techniques de
-Relaxation pouvant être exercée à tout moment et si possible restant discrète dans leur application.
-Il ne s'agit pas de passé pour un allumer du bocal auprès des collègues.
+Pour pouvoir rester concentrer il est important de pouvoir à la fois contrôler son environnement
+mais également de savoir rester détendu. C’est pourquoi il est intéressant de connaître
+des techniques de relaxation pouvant être exercée à tout moment et si possible restant discrète dans
+leur application. Il ne s'agit pas de passé pour un allumer du bocal auprès des collègues.
 
 La Méthode VITTOZ
 =================
@@ -517,7 +520,8 @@ N.B : Le principe est le même avec plusieurs objets. Il faut cependant imaginer
 Exercice d’une seine animée :
 
   #. Imaginer un Hamster qui court à toute vitesse dans sa roue
-  #. Faire attention aux détails de la seine : Le bruit de la roue, les couinements du hamster, ses yeux, ses moustaches, sa fourrure, etc.
+  #. Faire attention aux détails de la seine : Le bruit de la roue, les couinements du hamster,
+     ses yeux, ses moustaches, sa fourrure, etc.
   #. Recommencer en ralentissant la seine tout en restant concentré sur les détails
 
 N.B : Cet exercice peut être effectué sur toutes les scènes de la vie quotidienne : Les feuilles des
@@ -548,8 +552,8 @@ sa respiration.
 Huiles essentiels pour améliorer la mémoire et la concentration
 ===============================================================
 
-Certaines huiles essentiels aide à stimuler les neurones en permettant une meilleure concentration et
-une meilleure organisation des informations dans la mémoire.
+Certaines huiles essentiels aide à stimuler les neurones en permettant une meilleure concentration
+et une meilleure organisation des informations dans la mémoire.
 
 C'est notamment le cas pour :
 
@@ -557,8 +561,8 @@ C'est notamment le cas pour :
   * la menthe
   * le romarin
 
-Certaines autres huiles essentielles dynamisent les neurones en renforçant les capacités cognitives et
-l'attention des individus.
+Certaines autres huiles essentielles dynamisent les neurones en renforçant les capacités cognitives
+et l'attention des individus.
 
   * Le citron
   * le pin
