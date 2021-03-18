@@ -2,8 +2,9 @@
 Informatique
 ============
 
-.. contents:: Table of Contents
-.. section-numbering::
+.. contents::
+   :backlinks: top
+   :depth: 3:
 
 ####
 
