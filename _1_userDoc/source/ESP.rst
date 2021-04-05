@@ -2,6 +2,10 @@
 ESP8266 & ESP32
 ===============
 
+.. contents::
+    :backlinks: top
+    :depth: 3
+
 :Liens_Web:
             * `Github pour les NodeMCU`_
             * `brochage et spec NodeMCU`_
@@ -368,6 +372,29 @@ Créer un fichier
         Type "help()" for more information.
         >>>
         >>>
+
+    #. Connaitre la liste des modules natifs : ::
+
+        >>> help('modules')
+        __main__          machine           ubinascii         ure
+        _boot             math              ucollections      urequests
+        _onewire          micropython       ucryptolib        urllib/urequest
+        _uasyncio         neopixel          uctypes           uselect
+        _webrepl          network           uerrno            usocket
+        apa102            ntptime           uhashlib          ussl
+        btree             onewire           uheapq            ustruct
+        builtins          port_diag         uio               usys
+        dht               ssd1306           ujson             utime
+        ds18x20           uarray            umqtt/robust      utimeq
+        esp               uasyncio/__init__ umqtt/simple      uwebsocket
+        flashbdev         uasyncio/core     uos               uzlib
+        framebuf          uasyncio/event    upip              webrepl
+        gc                uasyncio/funcs    upip_utarfile     webrepl_setup
+        inisetup          uasyncio/lock     upysh             websocket_helper
+        lwip              uasyncio/stream   urandom
+        Plus any modules on the filesystem
+        >>> 
+    
 
     #. Créer simplement le fichier en python : ::
 

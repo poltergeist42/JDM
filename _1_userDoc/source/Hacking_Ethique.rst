@@ -9,7 +9,7 @@ Hacking Ethique
 Scan de port avec nmap
 ======================
 
-        .. code-block:: JavaScript
+        .. code-block:: shell
            :linenos:
            :force:
 
