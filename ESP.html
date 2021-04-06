@@ -198,6 +198,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#esp32">ESP32</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rshell">RSHELL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#micropython">Micropython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#library">Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#weblinks">Weblinks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="GIT.html">GIT (versioning)</a><ul>
@@ -415,17 +417,63 @@
                         
                             
   <div class="section" id="esp8266-esp32">
-<h1>ESP8266 &amp; ESP32<a class="headerlink" href="#esp8266-esp32" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><a class="toc-backref" href="#sommaire">ESP8266 &amp; ESP32</a><a class="headerlink" href="#esp8266-esp32" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="contents topic" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#esp8266-esp32" id="id24">ESP8266 &amp; ESP32</a></p>
+<ul>
+<li><p><a class="reference internal" href="#esp8266" id="id25">ESP8266</a></p>
+<ul>
+<li><p><a class="reference internal" href="#pinout" id="id26">PINOUT</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#flasher-un-nouveau-firmware" id="id27">Flasher un nouveau Firmware</a></p>
+<ul>
+<li><p><a class="reference internal" href="#la-facon-simple-quant-tous-vas-bien" id="id28">La façon simple (quant tous vas bien)</a></p></li>
+<li><p><a class="reference internal" href="#la-facon-complique-quant-ca-merde" id="id29">La façon compliqué (quant ça merde)</a></p></li>
+<li><p><a class="reference internal" href="#compilier-un-firmware-personalise" id="id30">Compilier un firmware personalisé</a></p></li>
+<li><p><a class="reference internal" href="#maj-du-firmware" id="id31">MAJ du Firmware</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#utilisation-avec-micropython" id="id32">Utilisation avec MicroPython</a></p></li>
+<li><p><a class="reference internal" href="#wemos-d1-mini-avec-arduino" id="id33">WEMOS D1 Mini avec Arduino</a></p>
+<ul>
+<li><p><a class="reference internal" href="#installation-de-la-carte-dans-l-ide-arduino" id="id34">Installation de la carte dans l’IDE Arduino</a></p></li>
+<li><p><a class="reference internal" href="#installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs" id="id35">Installer l’utilitaire de gestion de fichiers (zone SPIFFS)</a></p></li>
+<li><p><a class="reference internal" href="#utilisation-du-systeme-de-fichiers-fs" id="id36">Utilisation du système de fichiers (FS)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#esp32" id="id37">ESP32</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id38">PINOUT</a></p></li>
+<li><p><a class="reference internal" href="#broches-specialles" id="id39">Broches spécialles</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#rshell" id="id40">RSHELL</a></p>
+<ul>
+<li><p><a class="reference internal" href="#installation-et-demarrage" id="id41">Installation et démarrage</a></p></li>
+<li><p><a class="reference internal" href="#utilisation" id="id42">Utilisation</a></p></li>
+<li><p><a class="reference internal" href="#repl-webrepl-et-file-system" id="id43">REPL, WebREPL et File System</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#micropython" id="id44">Micropython</a></p></li>
+<li><p><a class="reference internal" href="#library" id="id45">Library</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id46">Weblinks</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://github.com/nodemcu">Github pour les NodeMCU</a></p></li>
-<li><p><a class="reference external" href="https://components101.com/development-boards/nodemcu-esp8266-pinout-features-and-datasheet">brochage et spec NodeMCU</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nodemcu">Github pour les NodeMCU</a> <a class="footnote-reference brackets" href="#id2" id="id3">1</a></p></li>
+<li><p><a class="reference external" href="https://components101.com/development-boards/nodemcu-esp8266-pinout-features-and-datasheet">brochage et spec NodeMCU</a> <a class="footnote-reference brackets" href="#id4" id="id5">2</a></p></li>
 </ul>
 </dd>
 </dl>
 <div class="section" id="esp8266">
-<h2>ESP8266<a class="headerlink" href="#esp8266" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">ESP8266</a><a class="headerlink" href="#esp8266" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
@@ -434,7 +482,7 @@
 </dd>
 </dl>
 <div class="section" id="pinout">
-<h3>PINOUT<a class="headerlink" href="#pinout" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">PINOUT</a><a class="headerlink" href="#pinout" title="Lien permanent vers ce titre">¶</a></h3>
 <dl class="field-list">
 <dt class="field-odd">NodeMCU</dt>
 <dd class="field-odd"><a class="reference internal image-reference" href="_images/PINMAP.png"><img alt="_images/PINMAP.png" class="align-center" src="_images/PINMAP.png" style="width: 400px;" /></a>
@@ -447,9 +495,9 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="flasher-un-nouveau-firmware">
-<h2>Flasher un nouveau Firmware<a class="headerlink" href="#flasher-un-nouveau-firmware" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">Flasher un nouveau Firmware</a><a class="headerlink" href="#flasher-un-nouveau-firmware" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="la-facon-simple-quant-tous-vas-bien">
-<h3>La façon simple (quant tous vas bien)<a class="headerlink" href="#la-facon-simple-quant-tous-vas-bien" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">La façon simple (quant tous vas bien)</a><a class="headerlink" href="#la-facon-simple-quant-tous-vas-bien" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><p>Pour flasher un firmware sur le NodeMCU, il faut le mettre en mode « flashage » en reliant le
 GPIO 0 (D3) au GND. Il faut alors suivre les étape de « MAJ du firmware ».</p>
@@ -463,7 +511,7 @@ GPIO 0 (D3) au GND. Il faut alors suivre les étape de « MAJ du firmware ».<
 </div></blockquote>
 </div>
 <div class="section" id="la-facon-complique-quant-ca-merde">
-<h3>La façon compliqué (quant ça merde)<a class="headerlink" href="#la-facon-complique-quant-ca-merde" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">La façon compliqué (quant ça merde)</a><a class="headerlink" href="#la-facon-complique-quant-ca-merde" title="Lien permanent vers ce titre">¶</a></h3>
 <dl class="field-list">
 <dt class="field-odd">FTDI_NodeMCU</dt>
 <dd class="field-odd"><a class="reference internal image-reference" href="_images/cablage_nodeMcu.png"><img alt="_images/cablage_nodeMcu.png" class="align-center" src="_images/cablage_nodeMcu.png" style="width: 400px;" /></a>
@@ -485,21 +533,35 @@ l’ESP durant la communication entre le FTDI et l’ESP</p></li>
 </dd>
 </dl>
 </div>
-<div class="section" id="maj-du-firmware">
-<h3>MAJ du Firmware<a class="headerlink" href="#maj-du-firmware" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="compilier-un-firmware-personalise">
+<h3><a class="toc-backref" href="#sommaire">Compilier un firmware personalisé</a><a class="headerlink" href="#compilier-un-firmware-personalise" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><dl class="simple">
-<dt><a class="reference external" href="https://github.com/espressif/esptool">https://github.com/espressif/esptool</a></dt><dd><p># Toolbox permettant de falsher le Firmware</p>
-</dd>
-</dl>
-</li>
+<li><p><a class="reference external" href="https://learn.adafruit.com/building-and-running-micropython-on-the-esp8266/build-firmware">Build Firmware</a> <a class="footnote-reference brackets" href="#id6" id="id7">3</a></p></li>
+<li><p><a class="reference external" href="https://learn.adafruit.com/micropython-basics-loading-modules/frozen-modules?view=all">Frozen Modules</a> <a class="footnote-reference brackets" href="#id8" id="id9">4</a></p></li>
 </ul>
 </dd>
 </dl>
-<ol class="arabic">
+</div></blockquote>
+<p>Dans certain cas les modules importés occupes trop de place (ex: le module mqtt_as qui permet
+d’utiliser mqtt avec asyncio). Il est alors nécessaire de compiler le module dans un firmware
+personalisé. C’est particulièrement vrai avec l’ESP8266 qui dispose de moin d’espace que l’ESP32.</p>
+</div>
+<div class="section" id="maj-du-firmware">
+<h3><a class="toc-backref" href="#sommaire">MAJ du Firmware</a><a class="headerlink" href="#maj-du-firmware" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/espressif/esptool">Toolbox permettant de falsher le Firmware</a> <a class="footnote-reference brackets" href="#id10" id="id11">5</a></p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><ol class="arabic">
 <li><p>Téléchargement et installation d’ESPTool</p>
 <blockquote>
 <div><p>EspTool permet d’effacer l’ESP ou d’y téléverser un nouveau Fimware. Par défaut, la cible
@@ -625,7 +687,7 @@ d’interagir avec le micro-contrôler.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="utilisation-avec-micropython">
-<h2>Utilisation avec MicroPython<a class="headerlink" href="#utilisation-avec-micropython" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">Utilisation avec MicroPython</a><a class="headerlink" href="#utilisation-avec-micropython" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
@@ -655,9 +717,9 @@ complexe ou avancées ne sont pas possibles</p></li>
 </div>
 <hr class="docutils" />
 <div class="section" id="wemos-d1-mini-avec-arduino">
-<h2>WEMOS D1 Mini avec Arduino<a class="headerlink" href="#wemos-d1-mini-avec-arduino" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">WEMOS D1 Mini avec Arduino</a><a class="headerlink" href="#wemos-d1-mini-avec-arduino" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="installation-de-la-carte-dans-l-ide-arduino">
-<h3>Installation de la carte dans l’IDE Arduino<a class="headerlink" href="#installation-de-la-carte-dans-l-ide-arduino" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Installation de la carte dans l’IDE Arduino</a><a class="headerlink" href="#installation-de-la-carte-dans-l-ide-arduino" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
@@ -673,7 +735,7 @@ complexe ou avancées ne sont pas possibles</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs">
-<h3>Installer l’utilitaire de gestion de fichiers (zone SPIFFS)<a class="headerlink" href="#installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Installer l’utilitaire de gestion de fichiers (zone SPIFFS)</a><a class="headerlink" href="#installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
@@ -694,7 +756,7 @@ complexe ou avancées ne sont pas possibles</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="utilisation-du-systeme-de-fichiers-fs">
-<h3>Utilisation du système de fichiers (FS)<a class="headerlink" href="#utilisation-du-systeme-de-fichiers-fs" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Utilisation du système de fichiers (FS)</a><a class="headerlink" href="#utilisation-du-systeme-de-fichiers-fs" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
 <li><p>Créer dans le dossier contenant le fichier “.ino” un sous dossier “data”</p></li>
@@ -715,7 +777,7 @@ fichiers sinon l’opération échoue.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="esp32">
-<h2>ESP32<a class="headerlink" href="#esp32" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">ESP32</a><a class="headerlink" href="#esp32" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
@@ -726,7 +788,7 @@ fichiers sinon l’opération échoue.</p>
 </dl>
 </div></blockquote>
 <div class="section" id="id1">
-<h3>PINOUT<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">PINOUT</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
 <dl class="field-list">
 <dt class="field-odd">Wemos_mini_ESP32</dt>
 <dd class="field-odd"><a class="reference internal image-reference" href="_images/wemos_esp32t.jpg"><img alt="_images/wemos_esp32t.jpg" class="align-center" src="_images/wemos_esp32t.jpg" style="width: 400px;" /></a>
@@ -734,7 +796,7 @@ fichiers sinon l’opération échoue.</p>
 </dl>
 </div>
 <div class="section" id="broches-specialles">
-<h3>Broches spécialles<a class="headerlink" href="#broches-specialles" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Broches spécialles</a><a class="headerlink" href="#broches-specialles" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>GPIO2</strong> : Led interne</p></li>
@@ -752,7 +814,7 @@ value of some pins can be set to Pin.PULL_HOLD to reduce power consumption durin
 </div>
 <hr class="docutils" />
 <div class="section" id="rshell">
-<h2>RSHELL<a class="headerlink" href="#rshell" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">RSHELL</a><a class="headerlink" href="#rshell" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><dl class="field-list">
 <dt class="field-odd">Liens_Web</dt>
@@ -786,7 +848,7 @@ un émulateur terminal.</p>
 </dl>
 </div></blockquote>
 <div class="section" id="installation-et-demarrage">
-<h3>Installation et démarrage<a class="headerlink" href="#installation-et-demarrage" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Installation et démarrage</a><a class="headerlink" href="#installation-et-demarrage" title="Lien permanent vers ce titre">¶</a></h3>
 <p>RSHELL est un programme python :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">rshell</span>
 </pre></div>
@@ -814,7 +876,7 @@ pour le pas écraser le système de fichier.</p>
 </div>
 </div>
 <div class="section" id="utilisation">
-<h3>Utilisation<a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Utilisation</a><a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>help : pour obtenir la liste des commandes :</p>
@@ -861,7 +923,7 @@ pour le pas écraser le système de fichier.</p>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/spiffs.html">SPIFFS Filesystem</a></p></li>
+<li><p><a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/spiffs.html">SPIFFS Filesystem</a> <a class="footnote-reference brackets" href="#id12" id="id13">6</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -884,6 +946,29 @@ dossier depuis un programme. Il s’agit en réalité d’un renommage du fichie
 <span class="n">Type</span> <span class="s2">&quot;help()&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
 <span class="o">&gt;&gt;&gt;</span>
 <span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Connaitre la liste des modules natifs :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;modules&#39;</span><span class="p">)</span>
+<span class="go">__main__          machine           ubinascii         ure</span>
+<span class="go">_boot             math              ucollections      urequests</span>
+<span class="go">_onewire          micropython       ucryptolib        urllib/urequest</span>
+<span class="go">_uasyncio         neopixel          uctypes           uselect</span>
+<span class="go">_webrepl          network           uerrno            usocket</span>
+<span class="go">apa102            ntptime           uhashlib          ussl</span>
+<span class="go">btree             onewire           uheapq            ustruct</span>
+<span class="go">builtins          port_diag         uio               usys</span>
+<span class="go">dht               ssd1306           ujson             utime</span>
+<span class="go">ds18x20           uarray            umqtt/robust      utimeq</span>
+<span class="go">esp               uasyncio/__init__ umqtt/simple      uwebsocket</span>
+<span class="go">flashbdev         uasyncio/core     uos               uzlib</span>
+<span class="go">framebuf          uasyncio/event    upip              webrepl</span>
+<span class="go">gc                uasyncio/funcs    upip_utarfile     webrepl_setup</span>
+<span class="go">inisetup          uasyncio/lock     upysh             websocket_helper</span>
+<span class="go">lwip              uasyncio/stream   urandom</span>
+<span class="go">Plus any modules on the filesystem</span>
+<span class="go">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
 </li>
@@ -924,7 +1009,7 @@ dossier depuis un programme. Il s’agit en réalité d’un renommage du fichie
 </div>
 </div>
 <div class="section" id="repl-webrepl-et-file-system">
-<h3>REPL, WebREPL et File System<a class="headerlink" href="#repl-webrepl-et-file-system" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">REPL, WebREPL et File System</a><a class="headerlink" href="#repl-webrepl-et-file-system" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Il est possible d’interagir directement avec l’ESP. Soit depuis le port série, c’est le REPL. Soit
 au travers d’un WebSocket, c’est le WebREPL. Le deux modes renvoie <strong>la même</strong> console
 d’interprétation Python.</p>
@@ -982,7 +1067,7 @@ au travers de la liaison série : <a class="reference external" href="https://gi
 </div>
 </div>
 <div class="section" id="micropython">
-<h2>Micropython<a class="headerlink" href="#micropython" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">Micropython</a><a class="headerlink" href="#micropython" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">upip</dt>
@@ -992,6 +1077,101 @@ au travers de la liaison série : <a class="reference external" href="https://gi
 </dd>
 </dl>
 </div></blockquote>
+</div>
+<div class="section" id="library">
+<h2><a class="toc-backref" href="#sommaire">Library</a><a class="headerlink" href="#library" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">micropython-lib</dt>
+<dd class="field-odd"><p>micropython-lib is a project to develop a non-monolothic standard library for
+« advanced » MicroPython fork (<a class="reference external" href="https://github.com/pfalcon/micropython">https://github.com/pfalcon/micropython</a>). Each
+module or package is available as a separate distribution package from PyPI.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/micropython/micropython-lib">micropython-lib</a> <a class="footnote-reference brackets" href="#id14" id="id15">7</a></p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">umqtt.simple</dt>
+<dd class="field-even"><p>umqtt is a simple MQTT client for MicroPython. (Note that it uses some
+MicroPython shortcuts and doesn’t work with CPython).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/micropython/micropython-lib/tree/master/umqtt.simple">umqtt.simple</a> <a class="footnote-reference brackets" href="#id16" id="id17">8</a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Documentation</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://mpython.readthedocs.io/en/master/library/mPython/umqtt.simple.html">MQTT client function</a> <a class="footnote-reference brackets" href="#id18" id="id19">9</a></p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">uasyncio</dt>
+<dd class="field-odd"><p>uasyncio is MicroPython’s asynchronous sheduling library, roughly modeled after
+CPython’s asyncio.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/micropython/micropython-lib/tree/master/uasyncio">uasyncio</a> <a class="footnote-reference brackets" href="#id20" id="id21">10</a></p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">mqtt_as</dt>
+<dd class="field-even"><p>MicroPython Asynchronous MQTT (umqtt + uasyncio en un seul module)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/peterhinch/micropython-mqtt/tree/master/mqtt_as">mqtt_as</a> <a class="footnote-reference brackets" href="#id22" id="id23">11</a></p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="weblinks">
+<h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/nodemcu">https://github.com/nodemcu</a></p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
+<dd><p><a class="reference external" href="https://components101.com/development-boards/nodemcu-esp8266-pinout-features-and-datasheet">https://components101.com/development-boards/nodemcu-esp8266-pinout-features-and-datasheet</a></p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
+<dd><p><a class="reference external" href="https://learn.adafruit.com/building-and-running-micropython-on-the-esp8266/build-firmware">https://learn.adafruit.com/building-and-running-micropython-on-the-esp8266/build-firmware</a></p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id9">4</a></span></dt>
+<dd><p><a class="reference external" href="https://learn.adafruit.com/micropython-basics-loading-modules/frozen-modules?view=all">https://learn.adafruit.com/micropython-basics-loading-modules/frozen-modules?view=all</a></p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id11">5</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/espressif/esptool">https://github.com/espressif/esptool</a></p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id13">6</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/spiffs.html">https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/spiffs.html</a></p>
+</dd>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id15">7</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/micropython/micropython-lib">https://github.com/micropython/micropython-lib</a></p>
+</dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id17">8</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/micropython/micropython-lib/tree/master/umqtt.simple">https://github.com/micropython/micropython-lib/tree/master/umqtt.simple</a></p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id19">9</a></span></dt>
+<dd><p><a class="reference external" href="https://mpython.readthedocs.io/en/master/library/mPython/umqtt.simple.html">https://mpython.readthedocs.io/en/master/library/mPython/umqtt.simple.html</a></p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id21">10</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/micropython/micropython-lib/tree/master/uasyncio">https://github.com/micropython/micropython-lib/tree/master/uasyncio</a></p>
+</dd>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id23">11</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/peterhinch/micropython-mqtt/tree/master/mqtt_as">https://github.com/peterhinch/micropython-mqtt/tree/master/mqtt_as</a></p>
+</dd>
+</dl>
 </div>
 </div>
 

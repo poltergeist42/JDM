@@ -2,6 +2,10 @@
 ESP8266 & ESP32
 ===============
 
+.. contents::
+    :backlinks: top
+    :depth: 3
+
 :Liens_Web:
             * `Github pour les NodeMCU`_
             * `brochage et spec NodeMCU`_
@@ -73,12 +77,29 @@ la seul qui ai fonctionné. il permet de flasher un ESP8266 à l'aide d'un `FTDI
     #. Sur l'ESP, le Tx1 doit être relié à VCC pour qu'il soit neutralisé et qu'il ne perturbe pas
        l'ESP durant la communication entre le FTDI et l'ESP
 
+
+Compilier un firmware personalisé
+=================================
+
+    :Liens_Web:
+        * `Build Firmware`_
+        * `Frozen Modules`_
+
+.. _`Build Firmware`: https://learn.adafruit.com/building-and-running-micropython-on-the-esp8266/build-firmware
+.. _`Frozen Modules`: https://learn.adafruit.com/micropython-basics-loading-modules/frozen-modules?view=all
+
+Dans certain cas les modules importés occupes trop de place (ex: le module mqtt_as qui permet
+d'utiliser mqtt avec asyncio). Il est alors nécessaire de compiler le module dans un firmware
+personalisé. C'est particulièrement vrai avec l'ESP8266 qui dispose de moin d'espace que l'ESP32.
+
+
 MAJ du Firmware
 ===============
 
     :Liens_Web:
-            * https://github.com/espressif/esptool
-                # Toolbox permettant de falsher le Firmware
+            * `Toolbox permettant de falsher le Firmware`_
+  
+.. _`Toolbox permettant de falsher le Firmware`: https://github.com/espressif/esptool
 
     #. Téléchargement et installation d'ESPTool
 
@@ -369,6 +390,29 @@ Créer un fichier
         >>>
         >>>
 
+    #. Connaitre la liste des modules natifs : ::
+
+        >>> help('modules')
+        __main__          machine           ubinascii         ure
+        _boot             math              ucollections      urequests
+        _onewire          micropython       ucryptolib        urllib/urequest
+        _uasyncio         neopixel          uctypes           uselect
+        _webrepl          network           uerrno            usocket
+        apa102            ntptime           uhashlib          ussl
+        btree             onewire           uheapq            ustruct
+        builtins          port_diag         uio               usys
+        dht               ssd1306           ujson             utime
+        ds18x20           uarray            umqtt/robust      utimeq
+        esp               uasyncio/__init__ umqtt/simple      uwebsocket
+        flashbdev         uasyncio/core     uos               uzlib
+        framebuf          uasyncio/event    upip              webrepl
+        gc                uasyncio/funcs    upip_utarfile     webrepl_setup
+        inisetup          uasyncio/lock     upysh             websocket_helper
+        lwip              uasyncio/stream   urandom
+        Plus any modules on the filesystem
+        >>> 
+    
+
     #. Créer simplement le fichier en python : ::
 
         >>> fileName = "main.py"
@@ -451,3 +495,51 @@ Micropython
 
     :upip:
         * https://docs.micropython.org/en/latest/reference/packages.html
+
+
+-------
+Library
+-------
+
+    :micropython-lib:
+                    micropython-lib is a project to develop a non-monolothic standard library for
+                    "advanced" MicroPython fork (https://github.com/pfalcon/micropython). Each
+                    module or package is available as a separate distribution package from PyPI.
+                    
+                    :Liens_Web:
+                        * `micropython-lib`_
+
+    :umqtt.simple:  umqtt is a simple MQTT client for MicroPython. (Note that it uses some
+                    MicroPython shortcuts and doesn't work with CPython).
+
+                    :Liens_Web:
+                        * `umqtt.simple`_
+
+                    :Documentation:
+                        * `MQTT client function`_
+
+    :uasyncio:      uasyncio is MicroPython's asynchronous sheduling library, roughly modeled after
+                    CPython's asyncio.
+
+                    :Liens_Web:
+                        * `uasyncio`_
+
+
+    :mqtt_as:       MicroPython Asynchronous MQTT (umqtt + uasyncio en un seul module)
+
+                    :Liens_Web:
+                        * `mqtt_as`_
+
+.. _`micropython-lib`: https://github.com/micropython/micropython-lib
+.. _`umqtt.simple`: https://github.com/micropython/micropython-lib/tree/master/umqtt.simple
+.. _`MQTT client function`: https://mpython.readthedocs.io/en/master/library/mPython/umqtt.simple.html
+.. _`uasyncio`: https://github.com/micropython/micropython-lib/tree/master/uasyncio
+.. _`mqtt_as`: https://github.com/peterhinch/micropython-mqtt/tree/master/mqtt_as
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::
