@@ -82,10 +82,12 @@ Compilier un firmware personalisé
 =================================
 
     :Liens_Web:
-        * `Build Firmware`_
-        * `Frozen Modules`_
+        * `Build Firmware`_ : l'ESP SDK au travers d'une VM VirtualBox ou Vagrant
+        * `esp-open-sdk`_ : Installer et compiler le SDK sans VM
+        * `Frozen Modules`_ : Pour compiler des modules directement dans le firmware
 
 .. _`Build Firmware`: https://learn.adafruit.com/building-and-running-micropython-on-the-esp8266/build-firmware
+.. _`esp-open-sdk`: https://github.com/pfalcon/esp-open-sdk
 .. _`Frozen Modules`: https://learn.adafruit.com/micropython-basics-loading-modules/frozen-modules?view=all
 
 Dans certain cas les modules importés occupes trop de place (ex: le module mqtt_as qui permet
