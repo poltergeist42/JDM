@@ -1592,6 +1592,8 @@ NPM - Packet manager
         les utiliser pour un projet ou au contraire de partager des paquets pour que d’autres 
         utilisateurs puissent les utiliser.
 
+####
+
 --------------------
 Package et framework
 --------------------
@@ -1623,6 +1625,8 @@ Installer babel en mode dévellopeur :
 Babel est capable de plusieurs nombreuse convertion / transformation. Il y a cependant un package
 différent pour chacunes des taches. Le package permettant de convertir le JSX en en Javascript 
 est : PRESET-REACT.
+
+####
 
 --------
 Weblinks

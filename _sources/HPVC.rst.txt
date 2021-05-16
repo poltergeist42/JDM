@@ -12,10 +12,20 @@ Glossary
 
 :Liens_Web:
       * `What is OSINT? (And How Is It Used?)`_
+      * `Vulnerability, Exploit and payload (answer of MechMK1)`_
 
 .. _`What is OSINT? (And How Is It Used?)`: https://www.sentinelone.com/blog/what-is-osint-how-is-it-used/
+.. _`Vulnerability, Exploit and payload (answer of MechMK1)`: https://security.stackexchange.com/questions/230680/need-help-on-clarifying-some-pentesting-concepts
 
 .. glossary::
+
+   EXPLOIT
+
+      An exploit is a way to abuse a vulnerability. It can be code that sends data to your server,
+      or it can be a specially crafted HTTP request, or a maliciously crafted e-Mail.
+
+      The term "exploit" generally refers to "the thing that abuses a vulnerability".
+
 
    OSINT
 
@@ -40,6 +50,28 @@ Glossary
          security team develop better defensive strategies. What vulnerabilities does your public
          information expose ? What can an attacker learn that they might leverage in a social
          engineering or phishing attack ?
+
+
+   PAYLOAD
+
+         A payload something that can be executed when using an exploit. For example, a
+         vulnerability allows to execute any code when an e-Mail attachment is open. That piece of
+         code that I execute then is the payload.
+
+         For demonstration purposes, some payloads just start calc.exe on Windows. This demonstrates
+         that "any" code can be run. Of course, malicious payloads do much worse, such as adding
+         backdoors, stealing or encrypting data, etc...
+
+         Simply put, the payload is "the thing you want to get from A to B".
+
+
+   VULNERABILITY
+
+         A vulnerability is any state of the software that allows an attacker to do or know
+         something they are not supposed to be able to do or know.
+
+         For example, if a website only uses HTTP, that is a vulnerability, because anyone with
+         Man-in-the-Middle capabilities can read and modify the data on the site.
 
 ####
 
@@ -103,7 +135,8 @@ develop your own software or keep your data secure.
 Ennumeration tool
 -----------------
 
-Ennumeration tool can provide quickly all elements relative to a specific domain (or a web site).
+Ennumeration tools can provide quickly all elements relative to a specific domain (or a web site).
+They are generaly use the OSINT search methodes.
 
 Exemple of data type :
    * subdomain
@@ -111,6 +144,59 @@ Exemple of data type :
    * directory and subdirectory
    * file list
    * and so on
+
+Google dork
+===========
+
+:Liens_Web:
+      * `Google reference`_
+      * `Google advanced search operator`_
+      * `DDG syntax`_ 
+      * `DDG ultimate guide`_ 
+
+.. _`DDG ultimate guide`: https://brettterpstra.com/2019/03/07/the-ultimate-guide-to-duckduckgo/
+.. _`DDG syntax`: https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/
+.. _`Google reference`: https://developers.google.com/code-search/reference
+.. _`Google advanced search operator`: https://ahrefs.com/blog/google-advanced-search-operators/
+
+Search Engines can be the best "hacker's" friend to enumerate, performe an OSINT or doing social
+engenering. Search engine provide a lot of "hiden" helpfull functionnality to do some specific
+search.
+
+sublist3r
+=========
+
+:Liens_Web:
+      * `github Sublist3r`_ 
+
+.. _`github Sublist3r`: https://github.com/aboul3la/Sublist3r
+
+Sublist3r is a python tool designed to enumerate subdomains of websites using OSINT. It helps 
+penetration testers and bug hunters collect and gather subdomains for the domain they are targeting.
+Sublist3r enumerates subdomains using many search engines such as Google, Yahoo, Bing, Baidu and
+Ask. Sublist3r also enumerates subdomains using Netcraft, Virustotal, ThreatCrowd, DNSdumpster and
+ReverseDNS.
+
+crt.sh (website)
+================
+
+:Liens_Web:
+      * `website cert.sh`_
+
+.. _`website cert.sh`: https://crt.sh
+
+permform a analyse on a domain name to list the sub-domain based on the certificat.
+
+OWASP Amass
+===========
+
+:Liens_Web:
+      * `github OWASP Amass`_
+
+.. _`github OWASP Amass`: https://github.com/OWASP/Amass
+
+The OWASP Amass Project performs network mapping of attack surfaces and external asset discovery
+using open source information gathering and active reconnaissance techniques.
 
 theHarvester
 ============
@@ -133,6 +219,7 @@ internet. The tool gathers emails, names, subdomains, IPs and URLs using
 
       # theHaverester manual
       python3 theHarvester.py -h
+
 
 ###
 
@@ -178,3 +265,88 @@ and a packet generation and response analysis tool (Nping).
 
 :.. warning:: Attention il n'y a pas de time out en UDP. Le scan peux donc durer indéfiniment. Il
               est donc conseiller de ne scanner que les 1000 premiers ports.
+
+####
+
+-----------------------
+Vulnerability Searching
+-----------------------
+
+ExploitDB
+=========
+
+:Liens_Web:
+      * `ExploitDB (website)`_
+      * `ExplotDB (CLI engine)`_
+
+.. _`ExploitDB (website)`: https://www.exploit-db.com/
+.. _`ExplotDB (CLI engine)`: https://www.exploit-db.com/searchsploit
+
+ExploitDB tends to be very useful for hackers, as it often actually contains exploits that can be
+downloaded and used straight out of the box. It tends to be one of the first stops when you
+encounter software in a CTF or pentest.
+
+If you're inclined towards the CLI on Linux, Kali comes pre-installed with a tool called
+"searchsploit" which allows you to search ExploitDB from your own machine. This is offline, and
+works using a downloaded version of the database, meaning that you already have all of the exploits
+already on your Kali Linux!
+
+   .. code-block:: shell
+      :linenos:
+      :force:
+
+      # Update database
+      searchsploit -u
+
+      # perform search
+      # searchsploit [App_name]
+      searchsploit wordpress 5
+
+
+NATIONAL VULNERABILITY DATABASE (NVD)
+=====================================
+
+:Liens_Web:
+      * `NVD (website)`_
+
+.. _`NVD (website)`: https://nvd.nist.gov/vuln/search
+
+NVD keeps track of CVEs (Common Vulnerabilities and Exposures) -- whether or not there is an exploit
+publicly available -- so it's a really good place to look if you're researching vulnerabilities in a
+specific piece of software. CVEs take the form: CVE-YEAR-IDNUMBER
+
+CVE Mitre
+=========
+
+:Liens_Web:
+      * `CVE Mitre (website)`_
+
+.. _`CVE Mitre (website)`: https://cve.mitre.org/
+
+The mission of the CVE® Program is to identify, define, and catalog publicly disclosed cybersecurity
+vulnerabilities.
+
+####
+
+----------
+BUG BOUNTY
+----------
+
+Yes We hack
+===========
+
+:Liens_Web:
+      * `yesWeHack (website)`_
+      * `yesWeHack (blog)`_
+
+.. _`yesWeHack (website)`:https://www.yeswehack.com/
+.. _`yesWeHack (blog)`: https://blog.yeswehack.com/
+
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::
