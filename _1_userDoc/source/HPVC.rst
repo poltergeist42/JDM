@@ -1,6 +1,6 @@
-===============
-Hacking Ethique
-===============
+====
+HPVC
+====
 
 .. contents::
    :backlinks: top
