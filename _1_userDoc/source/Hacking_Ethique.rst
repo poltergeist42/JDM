@@ -6,25 +6,169 @@ Hacking Ethique
    :backlinks: top
    :depth: 3
 
-Scan de port avec nmap
-======================
+.. glossary::
 
-        .. code-block:: shell
-           :linenos:
-           :force:
+   OSINT
+         :Liens_Web:
+            * `What is OSINT? (And How Is It Used?)`_
 
-            # nmap
-            nmap -A -p- -T4 <ip ou plage ip>
+         .. _`What is OSINT? (And How Is It Used?)`: https://www.sentinelone.com/blog/what-is-osint-how-is-it-used/
 
-            # Par défaut, le scan s'effectue sur le TCP (-sS). Pour forcer le scan en UCP il faut
-            # utiliser l'option -sU.
-            #
-            # -A: Enable OS detection, version detection, script scanning, and traceroute
-            #
-            # -p-: permet de scanner tous les ports si le deuxième "-" est absent, seuls les 1000
-            #      Premiers ports seront scanner
-            #
-            # -T4: permet de déterminer la vitesse du scan 0-lent --> 5-rapide
+         OSINT stands for **O**pen **S**ource **INT**elligence, which refers to any information that
+         can legally be gathered from free, public sources about an individual or organization. In
+         practice, that tends to mean information found on the internet, but technically any public
+         information falls into the category of OSINT whether it’s books or reports in a public
+         library, articles in a newspaper or statements in a press release.
+
+         **What is OSINT Used For?**
+         By gathering publicly available sources of information about a particular target an
+         attacker – or friendly penetration tester – can profile a potential victim to better
+         understand its characteristics and to narrow down the search area for possible
+         vulnerabilities. Without actively engaging the target, the attacker can use the
+         intelligence produced to build a threat model and develop a plan of attack. Targeted cyber
+         attacks, like military attacks, begin with reconnaissance, and the first stage of digital
+         reconnaissance is passively acquiring intelligence without alerting the target.
+
+         Gathering OSINT on yourself or your business is also a great way to understand what
+         information you are gifting potential attackers. Once you are aware of what kind of intel
+         can be gathered about you from public sources, you can use this to help you or your
+         security team develop better defensive strategies. What vulnerabilities does your public
+         information expose ? What can an attacker learn that they might leverage in a social
+         engineering or phishing attack ?
+
+
+--------------------
+Pentest Distribution
+--------------------
+
+the distributions below have allmost all tools needed for a pentester. However it is possible to 
+install individualy every tool in a non-dedicated os like Ubuntu, Debian and so on.
+
+KALI Linux
+==========
+
+:Liens_Web:
+      * `Kali Linux`__
+
+.. _`Kali Linux`: https://www.kali.org/
+
+
+Kali Linux is an open-source, Debian-based Linux distribution geared towards various information
+security tasks, such as Penetration Testing, Security Research, Computer Forensics and Reverse
+Engineering.
+
+Install and upgrade tools
+-------------------------
+
+On a new install of Kali, we need to update, upgrade and fix tools
+
+:Liens_Web:
+      * `git repository called “pimpmykali”`_
+      
+.. _`git repository called “pimpmykali”`: https://github.com/Dewalt-arch/pimpmykali
+
+.. code-block:: shell
+   :linenos:
+   :force:
+
+      sudo apt update && apt install git
+      cd /opt
+      git clone https://github.com/Dewalt-arch/pimpmykali
+      cd pimpmykali
+      sudo ./pimpmykali.sh
+
+
+Parrot Security OS
+==================
+
+:Liens_Web:
+      * `Parrot os`_
+
+.. _`Parrot Os`: https://www.parrotsec.org/
+
+Parrot OS, is a GNU/Linux distribution based on Debian and designed with Security and Privacy in
+mind. It includes a full portable laboratory for all kinds of cyber security operations, from
+pentesting to digital forensics and reverse engineering, but it also includes everything needed to
+develop your own software or keep your data secure.
+
+####
+
+-----------------
+Ennumeration tool
+-----------------
+
+Ennumeration tool can provide quickly all elements relative to a specific domain (or a web site).
+
+Exemple of data type :
+   * subdomain
+   * email adress
+   * directory and subdirectory
+   * file list
+   * and so on
+
+theHarvester
+============
+
+:Liens_Web:
+      * `github theHaverester`_
+      * `theHaverester installation`_
+
+.. _`github theHaverester` : https://github.com/laramies/theHarvester
+.. _`theHaverester installation`: https://github.com/laramies/theHarvester/wiki/Installation
+
+theHarvester is a very simple to use, yet powerful and effective tool designed to be used in the
+early stages of a penetration test or red team engagement. Use it for open source
+intelligence (OSINT) gathering to help determine a company's external threat landscape on the
+internet. The tool gathers emails, names, subdomains, IPs and URLs using
+
+   .. code-block:: shell
+      :linenos:
+      :force:
+
+      # theHaverester manual
+      python3 theHarvester.py -h
+
+###
+
+-------------
+Ports scanner
+-------------
+
+nmap
+====
+
+:Liens_Web:
+      * `nmap.org`_
+
+.. _`nmap.org`: https://nmap.org/
+
+Nmap ("Network Mapper") is a free and open source utility for network discovery and security
+auditing. Nmap uses raw IP packets in novel ways to determine what hosts are available on the
+network, what services (application name and version) those hosts are offering, what operating
+systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and
+dozens of other characteristics. It was designed to rapidly scan large networks, but works fine
+against single hosts. Nmap runs on all major computer operating systems, and official binary
+packages are available for Linux, Windows, and Mac OS X. In addition to the classic command-line
+Nmap executable, the Nmap suite includes an advanced GUI and results viewer (Zenmap), a flexible
+data transfer, redirection, and debugging tool (Ncat), a utility for comparing scan results (Ndiff),
+and a packet generation and response analysis tool (Nping).
+
+   .. code-block:: shell
+      :linenos:
+      :force:
+
+      # nmap
+      nmap -A -p- -T4 <ip ou plage ip>
+
+      # Par défaut, le scan s'effectue sur le TCP (-sS). Pour forcer le scan en UCP il faut
+      # utiliser l'option -sU.
+      #
+      # -A: Enable OS detection, version detection, script scanning, and traceroute
+      #
+      # -p-: permet de scanner tous les ports si le deuxième "-" est absent, seuls les 1000
+      #      Premiers ports seront scanner
+      #
+      # -T4: permet de déterminer la vitesse du scan 0-lent --> 5-rapide
 
 :.. warning:: Attention il n'y a pas de time out en UDP. Le scan peux donc durer indéfiniment. Il
               est donc conseiller de ne scanner que les 1000 premiers ports.
