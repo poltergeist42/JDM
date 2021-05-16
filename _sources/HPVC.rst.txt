@@ -6,13 +6,18 @@ HPVC
    :backlinks: top
    :depth: 3
 
+--------
+Glossary
+--------
+
+:Liens_Web:
+      * `What is OSINT? (And How Is It Used?)`_
+
+.. _`What is OSINT? (And How Is It Used?)`: https://www.sentinelone.com/blog/what-is-osint-how-is-it-used/
+
 .. glossary::
 
    OSINT
-         :Liens_Web:
-            * `What is OSINT? (And How Is It Used?)`_
-
-.. _`What is OSINT? (And How Is It Used?)`: https://www.sentinelone.com/blog/what-is-osint-how-is-it-used/
 
          OSINT stands for **Open Source INTelligence**, which refers to any information that
          can legally be gathered from free, public sources about an individual or organization. In
@@ -36,6 +41,7 @@ HPVC
          information expose ? What can an attacker learn that they might leverage in a social
          engineering or phishing attack ?
 
+####
 
 --------------------
 Pentest Distribution
@@ -48,7 +54,7 @@ KALI Linux
 ==========
 
 :Liens_Web:
-      * `Kali Linux`__
+      * `Kali Linux`_
 
 .. _`Kali Linux`: https://www.kali.org/
 
