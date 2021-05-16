@@ -14,7 +14,7 @@ HPVC
 
          .. _`What is OSINT? (And How Is It Used?)`: https://www.sentinelone.com/blog/what-is-osint-how-is-it-used/
 
-         OSINT stands for **O**pen **S**ource **INT**elligence, which refers to any information that
+         OSINT stands for **Open Source INTelligence**, which refers to any information that
          can legally be gathered from free, public sources about an individual or organization. In
          practice, that tends to mean information found on the internet, but technically any public
          information falls into the category of OSINT whether it’s books or reports in a public
