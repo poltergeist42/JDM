@@ -24,7 +24,7 @@ Mon journal de manip
    English_vocab
    ESP
    GIT
-   Hacking_Ethique
+   HPVC
    HTML_CSS
    Informatique
    Javascript
