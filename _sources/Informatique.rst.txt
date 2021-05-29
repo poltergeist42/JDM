@@ -55,6 +55,8 @@ Cours et connaissances génériques
 Protocoles
 ----------
 
+.. glossary::
+
 iSCSI
 =====
 
@@ -69,13 +71,10 @@ iSCSI
 .. _`iSCSI en pratique`: https://silverhive.com/informatique/41-reseau/51-iscsi-en-pratique
 .. _`ESXi 6.7 - Création d’un datastore en iSCSI`: http://www.oameri.com/esxi-67-creation-dun-datastore-en-iscsi/
 
-.. glossary::
 
-    iSCSI
-
-        iSCSI is an acronym that stands for Internet Small Computer System Interface. It is a
-        storage area networking (SAN) protocol used to send block storage from storage arrays or
-        devices to client computers that aren’t directly connected to those devices.
+iSCSI is an acronym that stands for Internet Small Computer System Interface. It is a
+storage area networking (SAN) protocol used to send block storage from storage arrays or
+devices to client computers that aren’t directly connected to those devices.
 
 iSCSI Targets and iSCSI Initiators
 ----------------------------------
@@ -98,6 +97,8 @@ is available for use.
 
 iSCSI LUNs are configured and used the same as any other block storage by the client operating system.
 
+.. glossary::
+
 SMB
 ===
         
@@ -116,6 +117,8 @@ Once they have established a connection, clients can then send commands (SMBs) t
 allow them to access shares, open files, read and write files, and generally do all the sort of
 things that you want to do with a file system. However, in the case of SMB, these things are done 
 over the network.
+
+.. glossary::
 
 TELNET
 ======
@@ -188,7 +191,7 @@ Forcer la suppression d'une partition
 
         Depuis une invite de command Administrateur
 
-        .. code:: powershell
+        .. code-block:: powershell
 
             c:\>diskpart
             DISKPART>rescan
@@ -307,7 +310,7 @@ Configurer un VHD Sysprep
 
     #. Executer la commande Syprep 
 
-        .. code:: powershell
+        .. codeblock:: powershell
 
             C:\Windows\System32\Sysprep.exe /Generalize /OOBE /Shutdown
 
@@ -413,7 +416,7 @@ Connaitre la date du dernier démarrage d'un serveur
 Se connecter à Exchange
 -----------------------
 
-    .. code:: powershell
+    .. code-block:: powershell
     
         $Credentials = Get-Credential
         $ExSession = New-PSSession –ConfigurationName Microsoft.Exchange –ConnectionUri ‘http://SRV-MAIL.poree.local/PowerShell/?SerializationLevel=Full’ -Credential $Credentials –Authentication Kerberos
