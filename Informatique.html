@@ -629,7 +629,7 @@ applications and services, Telnet has been replaced by SSH in most implementatio
 <li><p>dispart</p>
 <blockquote>
 <div><p>Depuis une invite de command Administrateur</p>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>c:\&gt;diskpart
+<div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span>c:\&gt;diskpart
 DISKPART&gt;rescan
 DISKPART&gt;list disk
 DISKPART&gt;slelect disk x
@@ -748,7 +748,7 @@ informatique.</p></li>
 <div class="section" id="exporter-en-csv-la-taille-et-le-nombre-d-item-des-bal">
 <h4>Exporter en CSV la taille et le nombre d’item des BAL<a class="headerlink" href="#exporter-en-csv-la-taille-et-le-nombre-d-item-des-bal" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
-<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># Dans la console exchange PS</span>
+<div><div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="c"># Dans la console exchange PS</span>
 
 <span class="nb">Get-MailboxStatistics</span> <span class="n">-server</span> <span class="no">[nom_du_serveur]</span> <span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">TotalItemSize</span> <span class="n">-Descending</span> <span class="p">|</span> <span class="nb">select </span><span class="n">DisplayName</span><span class="p">,</span> <span class="n">TotalItemSize</span><span class="p">,</span> <span class="n">ItemCount</span> <span class="p">|</span> <span class="nb">export-csv</span> <span class="n">-Path</span> <span class="s2">&quot;[chemin_et_nom_du_fichiers.csv]&quot;</span> <span class="n">-Delimiter</span> <span class="s2">&quot;;&quot;</span> <span class="n">-Encoding</span> <span class="s2">&quot;Default&quot;</span>
 </pre></div>
@@ -791,7 +791,7 @@ de nettoyage WSUS.</p></li>
 fonctionnalité)</p></li>
 <li><p>Executer la commande Syprep</p>
 <blockquote>
-<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>C:\Windows\System32\Sysprep.exe /Generalize /OOBE /Shutdown
+<div><div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span>C:\Windows\System32\Sysprep.exe /Generalize /OOBE /Shutdown
 </pre></div>
 </div>
 </div></blockquote>
@@ -858,7 +858,7 @@ fonctionnalité)</p></li>
 Netdom Query FSMO
 </pre></div>
 </div>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># En Powershell :</span>
+<div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="c"># En Powershell :</span>
 <span class="nb">Get-ADDomainController</span> <span class="n">-Filter</span> <span class="p">*</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">Name</span><span class="p">,</span> <span class="n">Domain</span><span class="p">,</span> <span class="n">Forest</span><span class="p">,</span> <span class="n">OperationMasterRoles</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">OperationMasterRoles</span><span class="p">}</span> <span class="p">|</span> <span class="nb">Ft </span><span class="n">-AutoSize</span>
 </pre></div>
 </div>
@@ -880,7 +880,7 @@ Netdom Query FSMO
 <div class="section" id="identifier-les-pc-qui-ne-se-sont-pas-connecter-au-domaine-depuis-au-moins-180-jours">
 <h4>Identifier les PC qui ne se sont pas connecter au domaine depuis au moins 180 Jours<a class="headerlink" href="#identifier-les-pc-qui-ne-se-sont-pas-connecter-au-domaine-depuis-au-moins-180-jours" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
-<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">import-module</span> <span class="n">ActiveDirectory</span>
+<div><div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="nb">import-module</span> <span class="n">ActiveDirectory</span>
 <span class="nv">$vdate</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Get-Date</span><span class="p">).</span><span class="n">adddays</span><span class="p">(-</span><span class="n">180</span><span class="p">)</span>
 <span class="nb">Get-ADComputer</span> <span class="n">-filter</span> <span class="p">{(</span><span class="n">Enabled</span> <span class="o">-eq</span> <span class="s2">&quot;True&quot;</span><span class="p">)</span> <span class="o">-and</span> <span class="p">(</span><span class="n">LastLogonDate</span> <span class="o">-le</span> <span class="nv">$vdate</span><span class="p">)}</span> <span class="n">-property</span> <span class="p">*</span> <span class="p">|</span> <span class="nb">ft </span><span class="n">LastLogonDate</span><span class="p">,</span> <span class="n">CN</span>
     <span class="c"># applique un filtre sur les élément qui ne sont pas désactivé et qui ne</span>
@@ -892,14 +892,14 @@ Netdom Query FSMO
 <div class="section" id="pour-ne-pas-filtrer-le-resultat-et-voir-toutes-les-propriete">
 <h4>Pour ne pas filtrer le résultat et voir toutes les propriété<a class="headerlink" href="#pour-ne-pas-filtrer-le-resultat-et-voir-toutes-les-propriete" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
-<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Get-ADComputer</span> <span class="n">-filter</span> <span class="p">*</span> <span class="n">-property</span> <span class="p">*</span>
+<div><div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="nb">Get-ADComputer</span> <span class="n">-filter</span> <span class="p">*</span> <span class="n">-property</span> <span class="p">*</span>
     <span class="c"># N.B : Fonctionne aussi avec get-ADUser</span>
 </pre></div>
 </div>
 </div></blockquote>
 <p>Identifier les comptes utilisateurs qui ne se sont pas connecter au domaine depuis au moins 180 Jours</p>
 <blockquote>
-<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">import-module</span> <span class="n">ActiveDirectory</span>
+<div><div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="nb">import-module</span> <span class="n">ActiveDirectory</span>
 <span class="nv">$vdate</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Get-Date</span><span class="p">).</span><span class="n">adddays</span><span class="p">(-</span><span class="n">180</span><span class="p">)</span>
 <span class="nb">Get-ADuser</span> <span class="n">-filter</span> <span class="p">{(</span><span class="n">Enabled</span> <span class="o">-eq</span> <span class="s2">&quot;True&quot;</span><span class="p">)</span> <span class="o">-and</span> <span class="p">(</span><span class="n">LastLogonDate</span> <span class="o">-le</span> <span class="nv">$vdate</span><span class="p">)}</span> <span class="n">-property</span> <span class="p">*</span> <span class="p">|</span> <span class="nb">ft </span><span class="n">LastLogonDate</span><span class="p">,</span> <span class="n">CanonicalName</span>
     <span class="c"># applique un filtre sur les élément qui ne sont pas désactivé et qui ne</span>
@@ -911,7 +911,7 @@ Netdom Query FSMO
 <div class="section" id="connaitre-la-date-du-dernier-demarrage-d-un-serveur">
 <h4>Connaitre la date du dernier démarrage d’un serveur<a class="headerlink" href="#connaitre-la-date-du-dernier-demarrage-d-un-serveur" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
-<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Get-CimInstance</span> <span class="n">-ClassName</span> <span class="n">Win32_OperatingSystem</span> <span class="p">|</span> <span class="nb">Select </span><span class="n">CSName</span><span class="p">,</span> <span class="n">LastBootUpTime</span>
+<div><div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="nb">Get-CimInstance</span> <span class="n">-ClassName</span> <span class="n">Win32_OperatingSystem</span> <span class="p">|</span> <span class="nb">Select </span><span class="n">CSName</span><span class="p">,</span> <span class="n">LastBootUpTime</span>
     <span class="c"># Windows2012 r2 et +</span>
 
 <span class="c"># ou :</span>
@@ -925,7 +925,7 @@ Netdom Query FSMO
 <div class="section" id="se-connecter-a-exchange">
 <h4>Se connecter à Exchange<a class="headerlink" href="#se-connecter-a-exchange" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
-<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>$Credentials = Get-Credential
+<div><div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span>$Credentials = Get-Credential
 $ExSession = New-PSSession –ConfigurationName Microsoft.Exchange –ConnectionUri ‘http://SRV-MAIL.poree.local/PowerShell/?SerializationLevel=Full’ -Credential $Credentials –Authentication Kerberos
 Import-PSSession $ExSession
 # ...
@@ -937,7 +937,7 @@ Remove-PSSession $ExSession
 <div class="section" id="connaitre-le-niveau-fonctionnel-active-directory">
 <h4>Connaitre le niveau fonctionnel Active Directory<a class="headerlink" href="#connaitre-le-niveau-fonctionnel-active-directory" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
-<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">Get-ADDomain</span><span class="p">).</span><span class="n">DomainMode</span>
+<div><div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">Get-ADDomain</span><span class="p">).</span><span class="n">DomainMode</span>
 </pre></div>
 </div>
 </div></blockquote>
