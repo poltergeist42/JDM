@@ -149,7 +149,7 @@ Information pour la gestion et maintenance des matériel
 Trouver le numéro de série d'un poste / serveur en CLI
 ======================================================
 
-    .. code::
+    .. code-block::
 
         wmic bios get serialnumber
 
@@ -275,7 +275,7 @@ Renouveler un certificats sur Exchange 2010
 Exporter en CSV la taille et le nombre d'item des BAL
 -----------------------------------------------------
 
-    .. code:: powershell
+    .. code-block:: powershell
 
         # Dans la console exchange PS
 
@@ -310,7 +310,7 @@ Configurer un VHD Sysprep
 
     #. Executer la commande Syprep 
 
-        .. codeblock:: powershell
+        .. code-block:: powershell
 
             C:\Windows\System32\Sysprep.exe /Generalize /OOBE /Shutdown
 
@@ -352,12 +352,12 @@ Lister les rôles FSMO
     :Liens_Web:
         * `Get FSMO in CLI`_
 
-    .. code:: shell
+    .. code-block:: shell
     
         # en CMD : Lister tous les rôles d'un coup
         Netdom Query FSMO
 
-    .. code:: powershell
+    .. code-block:: powershell
 
         # En Powershell :
         Get-ADDomainController -Filter * | Select-Object Name, Domain, Forest, OperationMasterRoles | Where-Object {$_.OperationMasterRoles} | Ft -AutoSize
@@ -374,7 +374,7 @@ Installer le module PowerShell ActiveDirectory sous Windows 10
 Identifier les PC qui ne se sont pas connecter au domaine depuis au moins 180 Jours
 -----------------------------------------------------------------------------------
        
-    .. code:: powershell
+    .. code-block:: powershell
        
         import-module ActiveDirectory
         $vdate = (Get-Date).adddays(-180)
@@ -385,14 +385,14 @@ Identifier les PC qui ne se sont pas connecter au domaine depuis au moins 180 Jo
 Pour ne pas filtrer le résultat et voir toutes les propriété
 ------------------------------------------------------------
 
-    .. code:: powershell
+    .. code-block:: powershell
         
         Get-ADComputer -filter * -property *
             # N.B : Fonctionne aussi avec get-ADUser
             
 Identifier les comptes utilisateurs qui ne se sont pas connecter au domaine depuis au moins 180 Jours
 
-    .. code:: powershell
+    .. code-block:: powershell
 
         import-module ActiveDirectory
         $vdate = (Get-Date).adddays(-180)
@@ -403,7 +403,7 @@ Identifier les comptes utilisateurs qui ne se sont pas connecter au domaine depu
 Connaitre la date du dernier démarrage d'un serveur
 ---------------------------------------------------
 
-    .. code:: powershell
+    .. code-block:: powershell
     
         Get-CimInstance -ClassName Win32_OperatingSystem | Select CSName, LastBootUpTime
             # Windows2012 r2 et +
@@ -427,7 +427,7 @@ Se connecter à Exchange
 Connaitre le niveau fonctionnel Active Directory
 ------------------------------------------------
 
-    .. code:: powershell
+    .. code-block:: powershell
 
         (Get-ADDomain).DomainMode
 
