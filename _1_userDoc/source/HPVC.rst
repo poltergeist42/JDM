@@ -19,6 +19,17 @@ Glossary
 
 .. glossary::
 
+   Enumeration
+
+      Enumeration is the process of gathering information on a target in order to find potential
+      attack vectors and aid in exploitation.
+
+      This process is essential for an attack to be successful, as wasting time with exploits that
+      either don't work or can crash the system can be a waste of energy. Enumeration can be used to
+      gather usernames, passwords, network information, hostnames, application data, services, or
+      any other information that may be valuable to an attacker.
+
+
    EXPLOIT
 
       An exploit is a way to abuse a vulnerability. It can be code that sends data to your server,
@@ -163,6 +174,17 @@ Search Engines can be the best "hacker's" friend to enumerate, performe an OSINT
 engenering. Search engine provide a lot of "hiden" helpfull functionnality to do some specific
 search.
 
+GoBuster
+========
+
+:Liens_Web:
+      * `GitHub GoBuster`_
+
+.. _`GitHub GoBuster`: https://github.com/OJ/gobuster
+
+GoBuster is a tool used to brute-force URIs (directories and files), DNS subdomains and virtual host
+names.
+
 sublist3r
 =========
 
@@ -221,6 +243,16 @@ internet. The tool gathers emails, names, subdomains, IPs and URLs using
       python3 theHarvester.py -h
 
 
+enum4Linux
+==========
+
+:Liens_Web:
+      * `GitHub enum4linux`_
+      * `enum4linux Documentation`_
+
+.. _`GitHub enum4linux`: https://github.com/CiscoCXSecurity/enum4linux
+.. _`enum4linux Documentation`: https://labs.portcullis.co.uk/tools/enum4linux/
+
 ###
 
 -------------
@@ -265,6 +297,32 @@ and a packet generation and response analysis tool (Nping).
 
 :.. warning:: Attention il n'y a pas de time out en UDP. Le scan peux donc durer indéfiniment. Il
               est donc conseiller de ne scanner que les 1000 premiers ports.
+
+####
+
+
+--------------------
+WEB Security Testing
+--------------------
+
+BURPSuite
+=========
+
+:Liens_Web:
+      * `Burp Suite website`_
+      * `Burp Suite Get Started`_
+
+.. _`Burp Suite website`: https://portswigger.net/burp/releases/professional-community-2021-5-1?requestededition=community
+.. _`Burp Suite Get Started`: https://portswigger.net/burp/documentation/desktop/getting-started
+
+Burp Suite is an integrated platform for performing security testing of web applications. Its
+various tools work seamlessly together to support the entire testing process, from initial mapping
+and analysis of an application’s attack surface, through to finding and exploiting security
+vulnerabilities.
+
+Burp gives you full control, letting you combine advanced manual techniques with state-of-the-art
+automation, to make your work faster, more effective, and more fun.
+
 
 ####
 
@@ -315,6 +373,7 @@ NVD keeps track of CVEs (Common Vulnerabilities and Exposures) -- whether or not
 publicly available -- so it's a really good place to look if you're researching vulnerabilities in a
 specific piece of software. CVEs take the form: CVE-YEAR-IDNUMBER
 
+
 CVE Mitre
 =========
 
@@ -325,6 +384,17 @@ CVE Mitre
 
 The mission of the CVE® Program is to identify, define, and catalog publicly disclosed cybersecurity
 vulnerabilities.
+
+
+CERT-FR
+=======
+
+:Liens_Web:
+      * `CERT-FR (Website)`_
+
+.. _`CERT-FR (Website)`: https://www.cert.ssi.gouv.fr/
+
+Centre gouvernemental de la veille, d'alerte et de réponse aux attaques informatiques
 
 ####
 
@@ -339,11 +409,30 @@ Yes We hack
       * `yesWeHack (website)`_
       * `yesWeHack (blog)`_
 
-.. _`yesWeHack (website)`:https://www.yeswehack.com/
+.. _`yesWeHack (website)`: https://www.yeswehack.com/
 .. _`yesWeHack (blog)`: https://blog.yeswehack.com/
 
 
 ####
+
+-------------
+Linux command
+-------------
+
+SSH
+===
+
+:Liens_Web:
+      * `StackOverflow Can I test authentication with an RSA key locally?`_
+
+.. _`StackOverflow Can I test authentication with an RSA key locally?`: https://stackoverflow.com/questions/3891616/can-i-test-authentication-with-an-rsa-key-locally
+
+ssh-add to add your key to your current ssh-agent
+ssh-add -d to remove it off your ssh-agent
+
+N.B : Lorsqu'une clef RSA est récupérée depuis un partage SMB saisir la command :
+
+chmod 600 [Fichier_RSA]
 
 --------
 Weblinks

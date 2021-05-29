@@ -27,7 +27,72 @@ Cours et connaissances génériques
     #. `Microsoft Virtual Academy`_ : Cours en ligne gratuis dispenser par microsoft
         
     #. `VIM / VI`_ : une rubrique spéciale VIM a été créer dans le journal de manip
+
+    #. `Logical Unit Number (LUN)`_
+
+.. _`Logical Unit Number (LUN)`: https://en.wikipedia.org/wiki/Logical_unit_number
+
+.. glossary::
+
+    LUN
+
+        In computer storage, a logical unit number, or LUN, is a number used to identify a logical
+        unit, which is a device addressed by the SCSI protocol or by Storage Area Network protocols
+        that encapsulate SCSI, such as Fibre Channel or iSCSI.
+
+        A LUN may be used with any device which supports read/write operations, such as a tape
+        drive, but is most often used to refer to a logical disk as created on a SAN. Though not
+        technically correct, the term "LUN" is often also used to refer to the logical disk itself.
         
+####
+
+----------
+Protocoles
+----------
+
+iSCSI
+=====
+
+:Liens_WEB:
+    * `How iSCSI works?`_
+    * `iSCSI (page wiki - fr)`_
+    * `iSCSI en pratique`_
+    * `ESXi 6.7 - Création d’un datastore en iSCSI`_
+
+.. _`How iSCSI works?`: https://stonefly.com/blog/what-is-internet-small-computer-system-interface-iscsi
+.. _`iSCSI (page wiki - fr)`: https://fr.wikipedia.org/wiki/ISCSI
+.. _`iSCSI en pratique`: https://silverhive.com/informatique/41-reseau/51-iscsi-en-pratique
+.. _`ESXi 6.7 - Création d’un datastore en iSCSI`: http://www.oameri.com/esxi-67-creation-dun-datastore-en-iscsi/
+
+.. glossary::
+
+    iSCSI
+
+        iSCSI is an acronym that stands for Internet Small Computer System Interface. It is a
+        storage area networking (SAN) protocol used to send block storage from storage arrays or
+        devices to client computers that aren’t directly connected to those devices.
+
+iSCSI Targets and iSCSI Initiators
+----------------------------------
+
+Storage = Taget
+client = Initiator
+
+An iSCSI storage area network consists of iSCSI targets on storage array controllers and iSCSI
+initiators on storage clients. These targets and initiators are used by the iSCSI protocol to
+connect storage to clients and are represented by a unique name called the iSCSI Qualified Name or
+IQN.
+
+On the client side, the initiator is linked to the target. 
+
+Once the client initiators are configured, an iSCSI LUN (Logical Unit Number) is created on the
+storage device and is assigned to an initiator group or client definition. At this point, assuming
+the target and initiator are on the same IP network, the client may be able to automatically
+discover the target. Once the initiator is connected to the target, the iSCSI LUN at that target IQN
+is available for use.
+
+iSCSI LUNs are configured and used the same as any other block storage by the client operating system.
+
 ####
         
 --------
