@@ -4,7 +4,7 @@ Informatique
 
 .. contents::
    :backlinks: top
-   :depth: 3:
+   :depth: 3
 
 ####
 
@@ -30,7 +30,10 @@ Cours et connaissances génériques
 
     #. `Logical Unit Number (LUN)`_
 
+    #. `Server Message Block Protocol (SMB protocol)`_
+
 .. _`Logical Unit Number (LUN)`: https://en.wikipedia.org/wiki/Logical_unit_number
+.. _`Server Message Block Protocol (SMB protocol)`: https://searchnetworking.techtarget.com/definition/Server-Message-Block-Protocol
 
 .. glossary::
 
@@ -44,6 +47,8 @@ Cours et connaissances génériques
         drive, but is most often used to refer to a logical disk as created on a SAN. Though not
         technically correct, the term "LUN" is often also used to refer to the logical disk itself.
         
+
+
 ####
 
 ----------
@@ -92,6 +97,43 @@ discover the target. Once the initiator is connected to the target, the iSCSI LU
 is available for use.
 
 iSCSI LUNs are configured and used the same as any other block storage by the client operating system.
+
+SMB
+===
+        
+SMB - Server Message Bloc protocol is a client server communication used for sharing acces to files,
+printers, serial ports and other resources on a network.
+
+Servers make file systems and other resources (printers, named pipes, APIs) available to clients on
+the network. Client computers may have their own hard disks, but they also want access to the shared
+file systems and printers on the servers.
+
+The SMB protocol is known as a response-request protocol, meaning that it transmits multiple
+messages between the client and server to establish a connection. Clients connect to servers using
+TCP/IP (actually NetBIOS over TCP/IP as specified in RFC1001 and RFC1002), NetBEUI or IPX/SPX.
+
+Once they have established a connection, clients can then send commands (SMBs) to the server that
+allow them to access shares, open files, read and write files, and generally do all the sort of
+things that you want to do with a file system. However, in the case of SMB, these things are done 
+over the network.
+
+TELNET
+======
+
+Telnet is an application protocol which allows you, with the use of a telnet client, to connect to
+and execute commands on a remote machine that's hosting a telnet server.
+
+The telnet client will establish a connection with the server. The client will then become a virtual
+terminal- allowing you to interact with the remote host.
+
+**How does Telnet work?**
+The user connects to the server by using the Telnet protocol, which means entering "telnet" into a
+command prompt. The user then executes commands on the server by using specific Telnet commands in
+the Telnet prompt. You can connect to a telnet server with the following syntax: "telnet [ip] [port]"
+
+**Replacement**
+Telnet sends all messages in clear text and has no specific security mechanisms. Thus, in many
+applications and services, Telnet has been replaced by SSH in most implementations.
 
 ####
         

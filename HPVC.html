@@ -766,6 +766,16 @@ nmap -A -p- -T4 &lt;ip ou plage ip&gt;
 est donc conseiller de ne scanner que les 1000 premiers ports.</p>
 </dd>
 </dl>
+<div class="section" id="performe-a-ping-sweep-with-nmap">
+<h4>Performe a ping sweep with nmap<a class="headerlink" href="#performe-a-ping-sweep-with-nmap" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="highlight-shell notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>sudo nmap -sn <span class="m">192</span>.168.1.0/24
+</pre></div>
+</td></tr></table></div>
+<p>This option tells Nmap not to do a port scan after host discovery and only print the available hosts
+that respond to the probe. The default host discovery done with -sn consists of an ICMP echo
+request, TCP SYN to port 443, TCP ACK to port 80, and an ICMP timestamp request by default.</p>
+<p>N.B : In previous releases of Nmap, -sn was known as -sP.</p>
+</div>
 </div>
 </div>
 <hr class="docutils" />

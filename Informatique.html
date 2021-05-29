@@ -427,23 +427,68 @@
                         
                             
   <div class="section" id="informatique">
-<h1>Informatique<a class="headerlink" href="#informatique" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><a class="toc-backref" href="#sommaire">Informatique</a><a class="headerlink" href="#informatique" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="contents topic" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#informatique" id="id62">Informatique</a></p>
+<ul>
+<li><p><a class="reference internal" href="#cours-et-connaissances-generiques" id="id63">Cours et connaissances génériques</a></p></li>
+<li><p><a class="reference internal" href="#protocoles" id="id64">Protocoles</a></p>
+<ul>
+<li><p><a class="reference internal" href="#iscsi" id="id65">iSCSI</a></p></li>
+<li><p><a class="reference internal" href="#smb" id="id66">SMB</a></p></li>
+<li><p><a class="reference internal" href="#telnet" id="id67">TELNET</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#materiel" id="id68">Matériel</a></p>
+<ul>
+<li><p><a class="reference internal" href="#trouver-le-numero-de-serie-d-un-poste-serveur-en-cli" id="id69">Trouver le numéro de série d’un poste / serveur en CLI</a></p></li>
+<li><p><a class="reference internal" href="#verifier-les-garantie-constructeur" id="id70">Vérifier les garantie constructeur</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#poste-de-travail" id="id71">Poste de travail</a></p>
+<ul>
+<li><p><a class="reference internal" href="#lancer-la-restauration-systeme-depuis-windows" id="id72">Lancer la restauration système depuis windows</a></p></li>
+<li><p><a class="reference internal" href="#nettoyer-reparer" id="id73">Nettoyer / Réparer</a></p></li>
+<li><p><a class="reference internal" href="#forcer-la-suppression-d-une-partition" id="id74">Forcer la suppression d’une partition</a></p></li>
+<li><p><a class="reference internal" href="#ajouter-un-element-dans-le-menu-contextuel" id="id75">Ajouter un élément dans le menu contextuel</a></p></li>
+<li><p><a class="reference internal" href="#excel" id="id76">Excel</a></p></li>
+<li><p><a class="reference internal" href="#navigateur-web" id="id77">Navigateur Web</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sysadmin" id="id78">SysAdmin</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sysinternals" id="id79">Sysinternals</a></p></li>
+<li><p><a class="reference internal" href="#exchange" id="id80">Exchange</a></p></li>
+<li><p><a class="reference internal" href="#wsus" id="id81">WSUS</a></p></li>
+<li><p><a class="reference internal" href="#hyper-v" id="id82">Hyper-V</a></p></li>
+<li><p><a class="reference internal" href="#cli-cmd-et-powershell" id="id83">CLI : CMD et Powershell</a></p></li>
+<li><p><a class="reference internal" href="#service-dhcp" id="id84">Service DHCP</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#webography" id="id85">Webography</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
 <hr class="docutils" />
 <p>Ce document réuni un ensemble d’informations, Manip et autre tips concernant
 la gestion / Maintenance des postes utilisateur et la gestion maintenance des parcs
 informatiques.</p>
 <hr class="docutils" />
 <div class="section" id="cours-et-connaissances-generiques">
-<h2>Cours et connaissances génériques<a class="headerlink" href="#cours-et-connaissances-generiques" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">Cours et connaissances génériques</a><a class="headerlink" href="#cours-et-connaissances-generiques" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">Microsoft Azure</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a> : Liste de Webinar en français sur l’utilisation et l’administration
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">Microsoft Azure</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a> : Liste de Webinar en français sur l’utilisation et l’administration
 d’Azure</p></li>
-<li><p>Les Expressions Régulières (<a class="reference external" href="https://poltergeist42.github.io/JDM/Regex.html">RegEx</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a>) : Une rubrique spéciale RegEx a été créer dans le
+<li><p>Les Expressions Régulières (<a class="reference external" href="https://poltergeist42.github.io/JDM/Regex.html">RegEx</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a>) : Une rubrique spéciale RegEx a été créer dans le
 journal de manip</p></li>
-<li><p><a class="reference external" href="https://mva.microsoft.com/">Microsoft Virtual Academy</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a> : Cours en ligne gratuis dispenser par microsoft</p></li>
-<li><p><a class="reference external" href="https://poltergeist42.github.io/JDM/VIM.html">VIM / VI</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a> : une rubrique spéciale VIM a été créer dans le journal de manip</p></li>
+<li><p><a class="reference external" href="https://mva.microsoft.com/">Microsoft Virtual Academy</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a> : Cours en ligne gratuis dispenser par microsoft</p></li>
+<li><p><a class="reference external" href="https://poltergeist42.github.io/JDM/VIM.html">VIM / VI</a> <a class="footnote-reference brackets" href="#id19" id="id20">10</a> : une rubrique spéciale VIM a été créer dans le journal de manip</p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Logical_unit_number">Logical Unit Number (LUN)</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p></li>
+<li><p><a class="reference external" href="https://searchnetworking.techtarget.com/definition/Server-Message-Block-Protocol">Server Message Block Protocol (SMB protocol)</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p></li>
 </ol>
 </div></blockquote>
 <dl class="glossary">
@@ -458,16 +503,16 @@ technically correct, the term « LUN » is often also used to refer to the log
 </div>
 <hr class="docutils" />
 <div class="section" id="protocoles">
-<h2>Protocoles<a class="headerlink" href="#protocoles" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">Protocoles</a><a class="headerlink" href="#protocoles" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="iscsi">
-<h3>iSCSI<a class="headerlink" href="#iscsi" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">iSCSI</a><a class="headerlink" href="#iscsi" title="Lien permanent vers ce titre">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_WEB</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://stonefly.com/blog/what-is-internet-small-computer-system-interface-iscsi">How iSCSI works?</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p></li>
-<li><p><a class="reference external" href="https://fr.wikipedia.org/wiki/ISCSI">iSCSI (page wiki - fr)</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p></li>
-<li><p><a class="reference external" href="https://silverhive.com/informatique/41-reseau/51-iscsi-en-pratique">iSCSI en pratique</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p></li>
-<li><p><a class="reference external" href="http://www.oameri.com/esxi-67-creation-dun-datastore-en-iscsi/">ESXi 6.7 - Création d’un datastore en iSCSI</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p></li>
+<li><p><a class="reference external" href="https://stonefly.com/blog/what-is-internet-small-computer-system-interface-iscsi">How iSCSI works?</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p></li>
+<li><p><a class="reference external" href="https://fr.wikipedia.org/wiki/ISCSI">iSCSI (page wiki - fr)</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p></li>
+<li><p><a class="reference external" href="https://silverhive.com/informatique/41-reseau/51-iscsi-en-pratique">iSCSI en pratique</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p></li>
+<li><p><a class="reference external" href="http://www.oameri.com/esxi-67-creation-dun-datastore-en-iscsi/">ESXi 6.7 - Création d’un datastore en iSCSI</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -494,13 +539,42 @@ is available for use.</p>
 <p>iSCSI LUNs are configured and used the same as any other block storage by the client operating system.</p>
 </div>
 </div>
+<div class="section" id="smb">
+<h3><a class="toc-backref" href="#sommaire">SMB</a><a class="headerlink" href="#smb" title="Lien permanent vers ce titre">¶</a></h3>
+<p>SMB - Server Message Bloc protocol is a client server communication used for sharing acces to files,
+printers, serial ports and other resources on a network.</p>
+<p>Servers make file systems and other resources (printers, named pipes, APIs) available to clients on
+the network. Client computers may have their own hard disks, but they also want access to the shared
+file systems and printers on the servers.</p>
+<p>The SMB protocol is known as a response-request protocol, meaning that it transmits multiple
+messages between the client and server to establish a connection. Clients connect to servers using
+TCP/IP (actually NetBIOS over TCP/IP as specified in RFC1001 and RFC1002), NetBEUI or IPX/SPX.</p>
+<p>Once they have established a connection, clients can then send commands (SMBs) to the server that
+allow them to access shares, open files, read and write files, and generally do all the sort of
+things that you want to do with a file system. However, in the case of SMB, these things are done
+over the network.</p>
+</div>
+<div class="section" id="telnet">
+<h3><a class="toc-backref" href="#sommaire">TELNET</a><a class="headerlink" href="#telnet" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Telnet is an application protocol which allows you, with the use of a telnet client, to connect to
+and execute commands on a remote machine that’s hosting a telnet server.</p>
+<p>The telnet client will establish a connection with the server. The client will then become a virtual
+terminal- allowing you to interact with the remote host.</p>
+<p><strong>How does Telnet work?</strong>
+The user connects to the server by using the Telnet protocol, which means entering « telnet » into a
+command prompt. The user then executes commands on the server by using specific Telnet commands in
+the Telnet prompt. You can connect to a telnet server with the following syntax: « telnet [ip] [port] »</p>
+<p><strong>Replacement</strong>
+Telnet sends all messages in clear text and has no specific security mechanisms. Thus, in many
+applications and services, Telnet has been replaced by SSH in most implementations.</p>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="materiel">
-<h2>Matériel<a class="headerlink" href="#materiel" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">Matériel</a><a class="headerlink" href="#materiel" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Information pour la gestion et maintenance des matériel</p>
 <div class="section" id="trouver-le-numero-de-serie-d-un-poste-serveur-en-cli">
-<h3>Trouver le numéro de série d’un poste / serveur en CLI<a class="headerlink" href="#trouver-le-numero-de-serie-d-un-poste-serveur-en-cli" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Trouver le numéro de série d’un poste / serveur en CLI</a><a class="headerlink" href="#trouver-le-numero-de-serie-d-un-poste-serveur-en-cli" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wmic</span> <span class="n">bios</span> <span class="n">get</span> <span class="n">serialnumber</span>
 </pre></div>
@@ -508,43 +582,43 @@ is available for use.</p>
 </div></blockquote>
 </div>
 <div class="section" id="verifier-les-garantie-constructeur">
-<h3>Vérifier les garantie constructeur<a class="headerlink" href="#verifier-les-garantie-constructeur" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Vérifier les garantie constructeur</a><a class="headerlink" href="#verifier-les-garantie-constructeur" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p><a class="reference external" href="http://www.dell.com/support/home/fr/fr/frdhs1/products/?app=warranty&amp;c=fr&amp;l=fr&amp;s=dhs">Garantie Dell</a> <a class="footnote-reference brackets" href="#id19" id="id20">10</a></p></li>
-<li><p><a class="reference external" href="http://h20565.www2.hpe.com/hpsc/wc/public/home?lang=fr-fr&amp;cc=fr">Garantie HP</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a></p></li>
+<li><p><a class="reference external" href="http://www.dell.com/support/home/fr/fr/frdhs1/products/?app=warranty&amp;c=fr&amp;l=fr&amp;s=dhs">Garantie Dell</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a></p></li>
+<li><p><a class="reference external" href="http://h20565.www2.hpe.com/hpsc/wc/public/home?lang=fr-fr&amp;cc=fr">Garantie HP</a> <a class="footnote-reference brackets" href="#id23" id="id24">12</a></p></li>
 </ol>
 </div></blockquote>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="poste-de-travail">
-<h2>Poste de travail<a class="headerlink" href="#poste-de-travail" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">Poste de travail</a><a class="headerlink" href="#poste-de-travail" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Toutes les informations concernant l’utilisation et la maintenance des postes utilisateurs.</p>
 <div class="section" id="lancer-la-restauration-systeme-depuis-windows">
-<h3>Lancer la restauration système depuis windows<a class="headerlink" href="#lancer-la-restauration-systeme-depuis-windows" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Lancer la restauration système depuis windows</a><a class="headerlink" href="#lancer-la-restauration-systeme-depuis-windows" title="Lien permanent vers ce titre">¶</a></h3>
 <p>L’utilitaire de restauration système se nomme :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rstrui</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="nettoyer-reparer">
-<h3>Nettoyer / Réparer<a class="headerlink" href="#nettoyer-reparer" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Nettoyer / Réparer</a><a class="headerlink" href="#nettoyer-reparer" title="Lien permanent vers ce titre">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://www.tech2tech.fr/medicat-lutilitaire-utlime-pour-le-depannage-informatique/">Medicat</a> <a class="footnote-reference brackets" href="#id23" id="id24">12</a> : Un bon remplaçant de Hiren” Boot CD</p></li>
+<li><p><a class="reference external" href="https://www.tech2tech.fr/medicat-lutilitaire-utlime-pour-le-depannage-informatique/">Medicat</a> <a class="footnote-reference brackets" href="#id25" id="id26">13</a> : Un bon remplaçant de Hiren” Boot CD</p></li>
 </ul>
 </dd>
 </dl>
 </div>
 <div class="section" id="forcer-la-suppression-d-une-partition">
-<h3>Forcer la suppression d’une partition<a class="headerlink" href="#forcer-la-suppression-d-une-partition" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Forcer la suppression d’une partition</a><a class="headerlink" href="#forcer-la-suppression-d-une-partition" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.aidewindows.net/win10/partition-recuperation.php">Utiliser diskpart</a> <a class="footnote-reference brackets" href="#id25" id="id26">13</a> :  voir le #2</p></li>
+<li><p><a class="reference external" href="http://www.aidewindows.net/win10/partition-recuperation.php">Utiliser diskpart</a> <a class="footnote-reference brackets" href="#id27" id="id28">14</a> :  voir le #2</p></li>
 </ul>
 </dd>
 </dl>
@@ -569,27 +643,27 @@ DISKPART&gt;delete partition override
 </div></blockquote>
 </div>
 <div class="section" id="ajouter-un-element-dans-le-menu-contextuel">
-<h3>Ajouter un élément dans le menu contextuel<a class="headerlink" href="#ajouter-un-element-dans-le-menu-contextuel" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Ajouter un élément dans le menu contextuel</a><a class="headerlink" href="#ajouter-un-element-dans-le-menu-contextuel" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://www.01net.com/astuces/ajouter-des-commandes-dos-au-menu-contextuel-de-lexplorateur-555224.html">Ajouter des commandes au menu contextuel</a> <a class="footnote-reference brackets" href="#id27" id="id28">14</a></p></li>
-<li><p><a class="reference external" href="http://www.pumbaa.ch/blog/tutoriaux/?d=2016/12/05/23/12/10-ajouter-un-script-home-made-au-menu-contextuel-de-windows">Aouter un script au menu contextuel</a> <a class="footnote-reference brackets" href="#id29" id="id30">15</a></p></li>
+<li><p><a class="reference external" href="https://www.01net.com/astuces/ajouter-des-commandes-dos-au-menu-contextuel-de-lexplorateur-555224.html">Ajouter des commandes au menu contextuel</a> <a class="footnote-reference brackets" href="#id29" id="id30">15</a></p></li>
+<li><p><a class="reference external" href="http://www.pumbaa.ch/blog/tutoriaux/?d=2016/12/05/23/12/10-ajouter-un-script-home-made-au-menu-contextuel-de-windows">Aouter un script au menu contextuel</a> <a class="footnote-reference brackets" href="#id31" id="id32">16</a></p></li>
 </ul>
 </dd>
 </dl>
 </div></blockquote>
 </div>
 <div class="section" id="excel">
-<h3>Excel<a class="headerlink" href="#excel" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Excel</a><a class="headerlink" href="#excel" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="colorer-une-ligne-sur-deux-dans-un-tableau-excel">
 <h4>Colorer une ligne sur deux dans un tableau Excel<a class="headerlink" href="#colorer-une-ligne-sur-deux-dans-un-tableau-excel" title="Lien permanent vers ce titre">¶</a></h4>
 <dl class="field-list">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><blockquote>
 <div><ul class="simple">
-<li><p><a class="reference external" href="http://www.pcastuces.com/pratique/astuces/4180.htm">Excel 1 ligne sur 2</a> <a class="footnote-reference brackets" href="#id31" id="id32">16</a></p></li>
+<li><p><a class="reference external" href="http://www.pcastuces.com/pratique/astuces/4180.htm">Excel 1 ligne sur 2</a> <a class="footnote-reference brackets" href="#id33" id="id34">17</a></p></li>
 </ul>
 </div></blockquote>
 <ol class="arabic">
@@ -609,13 +683,13 @@ DISKPART&gt;delete partition override
 </div>
 </div>
 <div class="section" id="navigateur-web">
-<h3>Navigateur Web<a class="headerlink" href="#navigateur-web" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Navigateur Web</a><a class="headerlink" href="#navigateur-web" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="how-to-fix-cross-origin-request-security-cors-error">
 <h4>How to fix Cross Origin Request Security (CORS) error<a class="headerlink" href="#how-to-fix-cross-origin-request-security-cors-error" title="Lien permanent vers ce titre">¶</a></h4>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/">fix Cross Origin Request Security (CORS)</a> <a class="footnote-reference brackets" href="#id33" id="id34">17</a></p></li>
+<li><p><a class="reference external" href="http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/">fix Cross Origin Request Security (CORS)</a> <a class="footnote-reference brackets" href="#id35" id="id36">18</a></p></li>
 </ul>
 </dd>
 <dt class="field-even">Info</dt>
@@ -629,15 +703,15 @@ Cette erreur est signalée dans la console du navigateur.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="sysadmin">
-<h2>SysAdmin<a class="headerlink" href="#sysadmin" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">SysAdmin</a><a class="headerlink" href="#sysadmin" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ensemble d’informations relative à l’administration Système</p>
 <div class="section" id="sysinternals">
-<h3>Sysinternals<a class="headerlink" href="#sysinternals" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Sysinternals</a><a class="headerlink" href="#sysinternals" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/sysinternals/">Sysinternals pack</a> <a class="footnote-reference brackets" href="#id35" id="id36">18</a>: Ensemble d’utilitaire pour l’administration et la gestion de parc
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/sysinternals/">Sysinternals pack</a> <a class="footnote-reference brackets" href="#id37" id="id38">19</a>: Ensemble d’utilitaire pour l’administration et la gestion de parc
 informatique.</p></li>
 </ul>
 <dl class="simple">
@@ -655,14 +729,14 @@ informatique.</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="exchange">
-<h3>Exchange<a class="headerlink" href="#exchange" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Exchange</a><a class="headerlink" href="#exchange" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="renouveler-un-certificats-sur-exchange-2010">
 <h4>Renouveler un certificats sur Exchange 2010<a class="headerlink" href="#renouveler-un-certificats-sur-exchange-2010" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/">Certificat Exchange</a> <a class="footnote-reference brackets" href="#id37" id="id38">19</a></p></li>
+<li><p><a class="reference external" href="https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/">Certificat Exchange</a> <a class="footnote-reference brackets" href="#id39" id="id40">20</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -680,14 +754,14 @@ informatique.</p></li>
 </div>
 </div>
 <div class="section" id="wsus">
-<h3>WSUS<a class="headerlink" href="#wsus" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">WSUS</a><a class="headerlink" href="#wsus" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="liberation-de-lespace-disque-sur-le-serveur-wsus">
 <h4>Libération de l’espace disque sur le serveur WSUS<a class="headerlink" href="#liberation-de-lespace-disque-sur-le-serveur-wsus" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://www.supinfo.com/articles/single/1912-liberation-espace-disque-serveur-wsus">Nettoyage WSUS</a> <a class="footnote-reference brackets" href="#id39" id="id40">20</a> : description simple (et en Français) pour l’utilisation de l’assistant
+<li><p><a class="reference external" href="https://www.supinfo.com/articles/single/1912-liberation-espace-disque-serveur-wsus">Nettoyage WSUS</a> <a class="footnote-reference brackets" href="#id41" id="id42">21</a> : description simple (et en Français) pour l’utilisation de l’assistant
 de nettoyage WSUS.</p></li>
 </ul>
 </dd>
@@ -696,7 +770,7 @@ de nettoyage WSUS.</p></li>
 </div>
 </div>
 <div class="section" id="hyper-v">
-<h3>Hyper-V<a class="headerlink" href="#hyper-v" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Hyper-V</a><a class="headerlink" href="#hyper-v" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="sysprep">
 <h4>Sysprep<a class="headerlink" href="#sysprep" title="Lien permanent vers ce titre">¶</a></h4>
 <div class="section" id="configurer-un-vhd-sysprep">
@@ -705,8 +779,8 @@ de nettoyage WSUS.</p></li>
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><blockquote>
 <div><ul class="simple">
-<li><p><a class="reference external" href="https://www.remylarrieu.com/fr/configurer-un-vhd-sysprep/">CFG Sysprer sur VHD</a> <a class="footnote-reference brackets" href="#id41" id="id42">21</a> : Une explication simple et en français</p></li>
-<li><p><a class="reference external" href="https://github.com/remylarrieu/PowerShell/tree/master/Virtualization">Script VHD+Sysprep</a> <a class="footnote-reference brackets" href="#id43" id="id44">22</a> : Un script permettant de créer automatiquement un VHD “Sysprepé”</p></li>
+<li><p><a class="reference external" href="https://www.remylarrieu.com/fr/configurer-un-vhd-sysprep/">CFG Sysprer sur VHD</a> <a class="footnote-reference brackets" href="#id43" id="id44">22</a> : Une explication simple et en français</p></li>
+<li><p><a class="reference external" href="https://github.com/remylarrieu/PowerShell/tree/master/Virtualization">Script VHD+Sysprep</a> <a class="footnote-reference brackets" href="#id45" id="id46">23</a> : Un script permettant de créer automatiquement un VHD “Sysprepé”</p></li>
 </ul>
 </div></blockquote>
 <ol class="arabic">
@@ -734,8 +808,8 @@ fonctionnalité)</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://github.com/remylarrieu/PowerShell/tree/master/Virtualization">UPD SysprepImg</a> <a class="footnote-reference brackets" href="#id43" id="id45">22</a> : Script permettant de mettre à jour une image VHD sans devoir l’associer à une VM</p></li>
-<li><p><a class="reference external" href="https://www.remylarrieu.com/fr/mettre-a-jour-une-image-vhd/">ex UPD SysprepImg</a> <a class="footnote-reference brackets" href="#id46" id="id47">23</a> : Exemple d’utilisation du script “Update-SysprepImage.ps1”</p></li>
+<li><p><a class="reference external" href="https://github.com/remylarrieu/PowerShell/tree/master/Virtualization">UPD SysprepImg</a> <a class="footnote-reference brackets" href="#id45" id="id47">23</a> : Script permettant de mettre à jour une image VHD sans devoir l’associer à une VM</p></li>
+<li><p><a class="reference external" href="https://www.remylarrieu.com/fr/mettre-a-jour-une-image-vhd/">ex UPD SysprepImg</a> <a class="footnote-reference brackets" href="#id48" id="id49">24</a> : Exemple d’utilisation du script “Update-SysprepImage.ps1”</p></li>
 </ul>
 </dd>
 </dl>
@@ -746,7 +820,7 @@ fonctionnalité)</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://docs.microsoft.com/fr-fr/virtualization/hyper-v-on-windows/user-guide/checkpoints">Utilisation de points de contrôle</a> <a class="footnote-reference brackets" href="#id52" id="id53">26</a> : technet Microsoft</p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/fr-fr/virtualization/hyper-v-on-windows/user-guide/checkpoints">Utilisation de points de contrôle</a> <a class="footnote-reference brackets" href="#id54" id="id55">27</a> : technet Microsoft</p></li>
 </ul>
 </dd>
 <dt class="field-even">/!\Attention/!\</dt>
@@ -759,21 +833,21 @@ fonctionnalité)</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://nerddrivel.com/2016/03/07/hyper-v-replication-in-a-workgroup-or-across-domains-using-a-self-signed-certificate/">Hyper-V replication in a workgroup or across domains using a self signed certificate</a> <a class="footnote-reference brackets" href="#id48" id="id49">24</a></p></li>
+<li><p><a class="reference external" href="https://nerddrivel.com/2016/03/07/hyper-v-replication-in-a-workgroup-or-across-domains-using-a-self-signed-certificate/">Hyper-V replication in a workgroup or across domains using a self signed certificate</a> <a class="footnote-reference brackets" href="#id50" id="id51">25</a></p></li>
 </ul>
 </dd>
 </dl>
 </div>
 </div>
 <div class="section" id="cli-cmd-et-powershell">
-<h3>CLI : CMD et Powershell<a class="headerlink" href="#cli-cmd-et-powershell" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">CLI : CMD et Powershell</a><a class="headerlink" href="#cli-cmd-et-powershell" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="lister-les-roles-fsmo">
 <h4>Lister les rôles FSMO<a class="headerlink" href="#lister-les-roles-fsmo" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://blog.alphorm.com/howto-lister-les-dcs-qui-detiennent-les-roles-fsmo/">Get FSMO in CLI</a> <a class="footnote-reference brackets" href="#id50" id="id51">25</a></p></li>
+<li><p><a class="reference external" href="https://blog.alphorm.com/howto-lister-les-dcs-qui-detiennent-les-roles-fsmo/">Get FSMO in CLI</a> <a class="footnote-reference brackets" href="#id52" id="id53">26</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -793,8 +867,8 @@ Netdom Query FSMO
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/">HowTo install AD on w10</a> <a class="footnote-reference brackets" href="#id54" id="id55">27</a> : Explication par l’auteur du script</p></li>
-<li><p><a class="reference external" href="https://gallery.technet.microsoft.com/Install-the-Active-fd32e541">Script install AD on w10</a> <a class="footnote-reference brackets" href="#id56" id="id57">28</a> : Le script lui même</p></li>
+<li><p><a class="reference external" href="https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/">HowTo install AD on w10</a> <a class="footnote-reference brackets" href="#id56" id="id57">28</a> : Explication par l’auteur du script</p></li>
+<li><p><a class="reference external" href="https://gallery.technet.microsoft.com/Install-the-Active-fd32e541">Script install AD on w10</a> <a class="footnote-reference brackets" href="#id58" id="id59">29</a> : Le script lui même</p></li>
 </ul>
 </dd>
 </dl>
@@ -867,14 +941,14 @@ Remove-PSSession $ExSession
 </div>
 </div>
 <div class="section" id="service-dhcp">
-<h3>Service DHCP<a class="headerlink" href="#service-dhcp" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><a class="toc-backref" href="#sommaire">Service DHCP</a><a class="headerlink" href="#service-dhcp" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="replication-et-bascullement-dhcp-entre-deux-serveurs">
 <h4>Replication et bascullement DHCP entre deux serveurs<a class="headerlink" href="#replication-et-bascullement-dhcp-entre-deux-serveurs" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://vadmintic.wordpress.com/systemes-windows/haute-disponibilite-continuite-des-services/replication-du-service-dhcp/">Réplication du service DHCP et basculement entre 2 serveurs</a> <a class="footnote-reference brackets" href="#id58" id="id59">29</a></p></li>
+<li><p><a class="reference external" href="https://vadmintic.wordpress.com/systemes-windows/haute-disponibilite-continuite-des-services/replication-du-service-dhcp/">Réplication du service DHCP et basculement entre 2 serveurs</a> <a class="footnote-reference brackets" href="#id60" id="id61">30</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -884,93 +958,96 @@ Remove-PSSession $ExSession
 </div>
 <hr class="docutils" />
 <div class="section" id="webography">
-<h2>Webography<a class="headerlink" href="#webography" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#sommaire">Webography</a><a class="headerlink" href="#webography" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Logical_unit_number">https://en.wikipedia.org/wiki/Logical_unit_number</a></p>
 </dd>
 <dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
-<dd><p><a class="reference external" href="https://stonefly.com/blog/what-is-internet-small-computer-system-interface-iscsi">https://stonefly.com/blog/what-is-internet-small-computer-system-interface-iscsi</a></p>
+<dd><p><a class="reference external" href="https://searchnetworking.techtarget.com/definition/Server-Message-Block-Protocol">https://searchnetworking.techtarget.com/definition/Server-Message-Block-Protocol</a></p>
 </dd>
 <dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
-<dd><p><a class="reference external" href="https://fr.wikipedia.org/wiki/ISCSI">https://fr.wikipedia.org/wiki/ISCSI</a></p>
+<dd><p><a class="reference external" href="https://stonefly.com/blog/what-is-internet-small-computer-system-interface-iscsi">https://stonefly.com/blog/what-is-internet-small-computer-system-interface-iscsi</a></p>
 </dd>
 <dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
-<dd><p><a class="reference external" href="https://silverhive.com/informatique/41-reseau/51-iscsi-en-pratique">https://silverhive.com/informatique/41-reseau/51-iscsi-en-pratique</a></p>
+<dd><p><a class="reference external" href="https://fr.wikipedia.org/wiki/ISCSI">https://fr.wikipedia.org/wiki/ISCSI</a></p>
 </dd>
 <dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
-<dd><p><a class="reference external" href="http://www.oameri.com/esxi-67-creation-dun-datastore-en-iscsi/">http://www.oameri.com/esxi-67-creation-dun-datastore-en-iscsi/</a></p>
+<dd><p><a class="reference external" href="https://silverhive.com/informatique/41-reseau/51-iscsi-en-pratique">https://silverhive.com/informatique/41-reseau/51-iscsi-en-pratique</a></p>
 </dd>
 <dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">https://docs.djangoproject.com/en/2.1/topics/db/models/</a></p>
+<dd><p><a class="reference external" href="http://www.oameri.com/esxi-67-creation-dun-datastore-en-iscsi/">http://www.oameri.com/esxi-67-creation-dun-datastore-en-iscsi/</a></p>
 </dd>
 <dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id14">7</a></span></dt>
-<dd><p><a class="reference external" href="https://poltergeist42.github.io/JDM/Regex.html">https://poltergeist42.github.io/JDM/Regex.html</a></p>
+<dd><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">https://docs.djangoproject.com/en/2.1/topics/db/models/</a></p>
 </dd>
 <dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id16">8</a></span></dt>
-<dd><p><a class="reference external" href="https://mva.microsoft.com/">https://mva.microsoft.com/</a></p>
+<dd><p><a class="reference external" href="https://poltergeist42.github.io/JDM/Regex.html">https://poltergeist42.github.io/JDM/Regex.html</a></p>
 </dd>
 <dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id18">9</a></span></dt>
-<dd><p><a class="reference external" href="https://poltergeist42.github.io/JDM/VIM.html">https://poltergeist42.github.io/JDM/VIM.html</a></p>
+<dd><p><a class="reference external" href="https://mva.microsoft.com/">https://mva.microsoft.com/</a></p>
 </dd>
 <dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id20">10</a></span></dt>
-<dd><p><a class="reference external" href="http://www.dell.com/support/home/fr/fr/frdhs1/products/?app=warranty&amp;c=fr&amp;l=fr&amp;s=dhs">http://www.dell.com/support/home/fr/fr/frdhs1/products/?app=warranty&amp;c=fr&amp;l=fr&amp;s=dhs</a></p>
+<dd><p><a class="reference external" href="https://poltergeist42.github.io/JDM/VIM.html">https://poltergeist42.github.io/JDM/VIM.html</a></p>
 </dd>
 <dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id22">11</a></span></dt>
-<dd><p><a class="reference external" href="http://h20565.www2.hpe.com/hpsc/wc/public/home?lang=fr-fr&amp;cc=fr">http://h20565.www2.hpe.com/hpsc/wc/public/home?lang=fr-fr&amp;cc=fr</a></p>
+<dd><p><a class="reference external" href="http://www.dell.com/support/home/fr/fr/frdhs1/products/?app=warranty&amp;c=fr&amp;l=fr&amp;s=dhs">http://www.dell.com/support/home/fr/fr/frdhs1/products/?app=warranty&amp;c=fr&amp;l=fr&amp;s=dhs</a></p>
 </dd>
 <dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id24">12</a></span></dt>
-<dd><p><a class="reference external" href="https://www.tech2tech.fr/medicat-lutilitaire-utlime-pour-le-depannage-informatique/">https://www.tech2tech.fr/medicat-lutilitaire-utlime-pour-le-depannage-informatique/</a></p>
+<dd><p><a class="reference external" href="http://h20565.www2.hpe.com/hpsc/wc/public/home?lang=fr-fr&amp;cc=fr">http://h20565.www2.hpe.com/hpsc/wc/public/home?lang=fr-fr&amp;cc=fr</a></p>
 </dd>
 <dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id26">13</a></span></dt>
-<dd><p><a class="reference external" href="http://www.aidewindows.net/win10/partition-recuperation.php">http://www.aidewindows.net/win10/partition-recuperation.php</a></p>
+<dd><p><a class="reference external" href="https://www.tech2tech.fr/medicat-lutilitaire-utlime-pour-le-depannage-informatique/">https://www.tech2tech.fr/medicat-lutilitaire-utlime-pour-le-depannage-informatique/</a></p>
 </dd>
 <dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id28">14</a></span></dt>
-<dd><p><a class="reference external" href="https://www.01net.com/astuces/ajouter-des-commandes-dos-au-menu-contextuel-de-lexplorateur-555224.html">https://www.01net.com/astuces/ajouter-des-commandes-dos-au-menu-contextuel-de-lexplorateur-555224.html</a></p>
+<dd><p><a class="reference external" href="http://www.aidewindows.net/win10/partition-recuperation.php">http://www.aidewindows.net/win10/partition-recuperation.php</a></p>
 </dd>
 <dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id30">15</a></span></dt>
-<dd><p><a class="reference external" href="http://www.pumbaa.ch/blog/tutoriaux/?d=2016/12/05/23/12/10-ajouter-un-script-home-made-au-menu-contextuel-de-windows">http://www.pumbaa.ch/blog/tutoriaux/?d=2016/12/05/23/12/10-ajouter-un-script-home-made-au-menu-contextuel-de-windows</a></p>
+<dd><p><a class="reference external" href="https://www.01net.com/astuces/ajouter-des-commandes-dos-au-menu-contextuel-de-lexplorateur-555224.html">https://www.01net.com/astuces/ajouter-des-commandes-dos-au-menu-contextuel-de-lexplorateur-555224.html</a></p>
 </dd>
 <dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id32">16</a></span></dt>
-<dd><p><a class="reference external" href="http://www.pcastuces.com/pratique/astuces/4180.htm">http://www.pcastuces.com/pratique/astuces/4180.htm</a></p>
+<dd><p><a class="reference external" href="http://www.pumbaa.ch/blog/tutoriaux/?d=2016/12/05/23/12/10-ajouter-un-script-home-made-au-menu-contextuel-de-windows">http://www.pumbaa.ch/blog/tutoriaux/?d=2016/12/05/23/12/10-ajouter-un-script-home-made-au-menu-contextuel-de-windows</a></p>
 </dd>
 <dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id34">17</a></span></dt>
-<dd><p><a class="reference external" href="http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/">http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/</a></p>
+<dd><p><a class="reference external" href="http://www.pcastuces.com/pratique/astuces/4180.htm">http://www.pcastuces.com/pratique/astuces/4180.htm</a></p>
 </dd>
 <dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id36">18</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.microsoft.com/en-us/sysinternals/">https://docs.microsoft.com/en-us/sysinternals/</a></p>
+<dd><p><a class="reference external" href="http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/">http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/</a></p>
 </dd>
 <dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id38">19</a></span></dt>
-<dd><p><a class="reference external" href="https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/">https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/</a></p>
+<dd><p><a class="reference external" href="https://docs.microsoft.com/en-us/sysinternals/">https://docs.microsoft.com/en-us/sysinternals/</a></p>
 </dd>
 <dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id40">20</a></span></dt>
-<dd><p><a class="reference external" href="https://www.supinfo.com/articles/single/1912-liberation-espace-disque-serveur-wsus">https://www.supinfo.com/articles/single/1912-liberation-espace-disque-serveur-wsus</a></p>
+<dd><p><a class="reference external" href="https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/">https://www.adminpasbete.fr/renouveler-certificat-exchange-2010-facilement/</a></p>
 </dd>
 <dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id42">21</a></span></dt>
+<dd><p><a class="reference external" href="https://www.supinfo.com/articles/single/1912-liberation-espace-disque-serveur-wsus">https://www.supinfo.com/articles/single/1912-liberation-espace-disque-serveur-wsus</a></p>
+</dd>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id44">22</a></span></dt>
 <dd><p><a class="reference external" href="https://www.remylarrieu.com/fr/configurer-un-vhd-sysprep/">https://www.remylarrieu.com/fr/configurer-un-vhd-sysprep/</a></p>
 </dd>
-<dt class="label" id="id43"><span class="brackets">22</span><span class="fn-backref">(<a href="#id44">1</a>,<a href="#id45">2</a>)</span></dt>
+<dt class="label" id="id45"><span class="brackets">23</span><span class="fn-backref">(<a href="#id46">1</a>,<a href="#id47">2</a>)</span></dt>
 <dd><p><a class="reference external" href="https://github.com/remylarrieu/PowerShell/tree/master/Virtualization">https://github.com/remylarrieu/PowerShell/tree/master/Virtualization</a></p>
 </dd>
-<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id47">23</a></span></dt>
+<dt class="label" id="id48"><span class="brackets"><a class="fn-backref" href="#id49">24</a></span></dt>
 <dd><p><a class="reference external" href="https://www.remylarrieu.com/fr/mettre-a-jour-une-image-vhd/">https://www.remylarrieu.com/fr/mettre-a-jour-une-image-vhd/</a></p>
 </dd>
-<dt class="label" id="id48"><span class="brackets"><a class="fn-backref" href="#id49">24</a></span></dt>
+<dt class="label" id="id50"><span class="brackets"><a class="fn-backref" href="#id51">25</a></span></dt>
 <dd><p><a class="reference external" href="https://nerddrivel.com/2016/03/07/hyper-v-replication-in-a-workgroup-or-across-domains-using-a-self-signed-certificate/">https://nerddrivel.com/2016/03/07/hyper-v-replication-in-a-workgroup-or-across-domains-using-a-self-signed-certificate/</a></p>
 </dd>
-<dt class="label" id="id50"><span class="brackets"><a class="fn-backref" href="#id51">25</a></span></dt>
+<dt class="label" id="id52"><span class="brackets"><a class="fn-backref" href="#id53">26</a></span></dt>
 <dd><p><a class="reference external" href="https://blog.alphorm.com/howto-lister-les-dcs-qui-detiennent-les-roles-fsmo/">https://blog.alphorm.com/howto-lister-les-dcs-qui-detiennent-les-roles-fsmo/</a></p>
 </dd>
-<dt class="label" id="id52"><span class="brackets"><a class="fn-backref" href="#id53">26</a></span></dt>
+<dt class="label" id="id54"><span class="brackets"><a class="fn-backref" href="#id55">27</a></span></dt>
 <dd><p><a class="reference external" href="https://docs.microsoft.com/fr-fr/virtualization/hyper-v-on-windows/user-guide/checkpoints">https://docs.microsoft.com/fr-fr/virtualization/hyper-v-on-windows/user-guide/checkpoints</a></p>
 </dd>
-<dt class="label" id="id54"><span class="brackets"><a class="fn-backref" href="#id55">27</a></span></dt>
+<dt class="label" id="id56"><span class="brackets"><a class="fn-backref" href="#id57">28</a></span></dt>
 <dd><p><a class="reference external" href="https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/">https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/</a></p>
 </dd>
-<dt class="label" id="id56"><span class="brackets"><a class="fn-backref" href="#id57">28</a></span></dt>
+<dt class="label" id="id58"><span class="brackets"><a class="fn-backref" href="#id59">29</a></span></dt>
 <dd><p><a class="reference external" href="https://gallery.technet.microsoft.com/Install-the-Active-fd32e541">https://gallery.technet.microsoft.com/Install-the-Active-fd32e541</a></p>
 </dd>
-<dt class="label" id="id58"><span class="brackets"><a class="fn-backref" href="#id59">29</a></span></dt>
+<dt class="label" id="id60"><span class="brackets"><a class="fn-backref" href="#id61">30</a></span></dt>
 <dd><p><a class="reference external" href="https://vadmintic.wordpress.com/systemes-windows/haute-disponibilite-continuite-des-services/replication-du-service-dhcp/">https://vadmintic.wordpress.com/systemes-windows/haute-disponibilite-continuite-des-services/replication-du-service-dhcp/</a></p>
 </dd>
 </dl>
