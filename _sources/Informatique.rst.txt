@@ -30,9 +30,12 @@ Cours et connaissances génériques
 
     #. `Logical Unit Number (LUN)`_
 
+    #. `Maximum Transmission Unit (MTU)`_
+
     #. `Server Message Block Protocol (SMB protocol)`_
 
 .. _`Logical Unit Number (LUN)`: https://en.wikipedia.org/wiki/Logical_unit_number
+.. _`Maximum Transmission Unit (MTU)`: https://www.cloudflare.com/fr-fr/learning/network-layer/what-is-mtu/
 .. _`Server Message Block Protocol (SMB protocol)`: https://searchnetworking.techtarget.com/definition/Server-Message-Block-Protocol
 
 .. glossary::
@@ -48,6 +51,24 @@ Cours et connaissances génériques
         technically correct, the term "LUN" is often also used to refer to the logical disk itself.
         
 
+    MTU
+
+        Dans les réseaux, `Maximum Transmission Unit (MTU)`_ est une mesure représentant le plus
+        grand paquet de données qu'un appareil connecté au réseau acceptera. Imaginez cette mesure
+        comme une hauteur limitée dans les voies souterraines ou les tunnels : les voitures et les
+        camions qui dépassent la hauteur limitée ne peuvent pas passer, tout comme les paquets qui
+        dépassent le MTU d'un réseau ne peuvent pas passer par ce réseau.
+
+        Cependant, contrairement aux voitures et aux camions, les paquets de données qui dépassent
+        le MTU sont fragmentés en plus petites parties pour pouvoir passer. Ce processus est appelé
+        fragmentation. Les paquets fragmentés sont réassemblés une fois arrivés à destination.
+
+        Le MTU est mesurée en octets - un « octet » est égal à 8 bits d'information, c'est-à-dire 8
+        uns et zéros. 1 500 octets est la taille maximale du MTU.
+
+        N.B : Il est possible d'autoriser l'utilisation de paquet de 9000 octets en activant le
+        Jumbo Frame. Le jumbo devra alors être autorisé / Activé sur tous les equipements devant
+        recevoir les paquets envoyés.
 
 ####
 
