@@ -298,6 +298,21 @@ and a packet generation and response analysis tool (Nping).
 :.. warning:: Attention il n'y a pas de time out en UDP. Le scan peux donc durer indéfiniment. Il
               est donc conseiller de ne scanner que les 1000 premiers ports.
 
+Performe a ping sweep with nmap
+-------------------------------
+
+.. code-block:: shell
+   :linenos:
+   :force:
+
+   sudo nmap -sn 192.168.1.0/24
+
+This option tells Nmap not to do a port scan after host discovery and only print the available hosts
+that respond to the probe. The default host discovery done with -sn consists of an ICMP echo
+request, TCP SYN to port 443, TCP ACK to port 80, and an ICMP timestamp request by default.
+
+N.B : In previous releases of Nmap, -sn was known as -sP.
+
 ####
 
 

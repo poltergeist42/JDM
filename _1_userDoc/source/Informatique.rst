@@ -4,7 +4,7 @@ Informatique
 
 .. contents::
    :backlinks: top
-   :depth: 3:
+   :depth: 3
 
 ####
 
@@ -30,7 +30,13 @@ Cours et connaissances génériques
 
     #. `Logical Unit Number (LUN)`_
 
+    #. `Maximum Transmission Unit (MTU)`_
+
+    #. `Server Message Block Protocol (SMB protocol)`_
+
 .. _`Logical Unit Number (LUN)`: https://en.wikipedia.org/wiki/Logical_unit_number
+.. _`Maximum Transmission Unit (MTU)`: https://www.cloudflare.com/fr-fr/learning/network-layer/what-is-mtu/
+.. _`Server Message Block Protocol (SMB protocol)`: https://searchnetworking.techtarget.com/definition/Server-Message-Block-Protocol
 
 .. glossary::
 
@@ -44,11 +50,33 @@ Cours et connaissances génériques
         drive, but is most often used to refer to a logical disk as created on a SAN. Though not
         technically correct, the term "LUN" is often also used to refer to the logical disk itself.
         
+
+    MTU
+
+        Dans les réseaux, `Maximum Transmission Unit (MTU)`_ est une mesure représentant le plus
+        grand paquet de données qu'un appareil connecté au réseau acceptera. Imaginez cette mesure
+        comme une hauteur limitée dans les voies souterraines ou les tunnels : les voitures et les
+        camions qui dépassent la hauteur limitée ne peuvent pas passer, tout comme les paquets qui
+        dépassent le MTU d'un réseau ne peuvent pas passer par ce réseau.
+
+        Cependant, contrairement aux voitures et aux camions, les paquets de données qui dépassent
+        le MTU sont fragmentés en plus petites parties pour pouvoir passer. Ce processus est appelé
+        fragmentation. Les paquets fragmentés sont réassemblés une fois arrivés à destination.
+
+        Le MTU est mesurée en octets - un « octet » est égal à 8 bits d'information, c'est-à-dire 8
+        uns et zéros. 1 500 octets est la taille maximale du MTU.
+
+        N.B : Il est possible d'autoriser l'utilisation de paquet de 9000 octets en activant le
+        Jumbo Frame. Le jumbo devra alors être autorisé / Activé sur tous les equipements devant
+        recevoir les paquets envoyés.
+
 ####
 
 ----------
 Protocoles
 ----------
+
+.. glossary::
 
 iSCSI
 =====
@@ -64,13 +92,10 @@ iSCSI
 .. _`iSCSI en pratique`: https://silverhive.com/informatique/41-reseau/51-iscsi-en-pratique
 .. _`ESXi 6.7 - Création d’un datastore en iSCSI`: http://www.oameri.com/esxi-67-creation-dun-datastore-en-iscsi/
 
-.. glossary::
 
-    iSCSI
-
-        iSCSI is an acronym that stands for Internet Small Computer System Interface. It is a
-        storage area networking (SAN) protocol used to send block storage from storage arrays or
-        devices to client computers that aren’t directly connected to those devices.
+iSCSI is an acronym that stands for Internet Small Computer System Interface. It is a
+storage area networking (SAN) protocol used to send block storage from storage arrays or
+devices to client computers that aren’t directly connected to those devices.
 
 iSCSI Targets and iSCSI Initiators
 ----------------------------------
@@ -93,6 +118,47 @@ is available for use.
 
 iSCSI LUNs are configured and used the same as any other block storage by the client operating system.
 
+.. glossary::
+
+SMB
+===
+        
+SMB - Server Message Bloc protocol is a client server communication used for sharing acces to files,
+printers, serial ports and other resources on a network.
+
+Servers make file systems and other resources (printers, named pipes, APIs) available to clients on
+the network. Client computers may have their own hard disks, but they also want access to the shared
+file systems and printers on the servers.
+
+The SMB protocol is known as a response-request protocol, meaning that it transmits multiple
+messages between the client and server to establish a connection. Clients connect to servers using
+TCP/IP (actually NetBIOS over TCP/IP as specified in RFC1001 and RFC1002), NetBEUI or IPX/SPX.
+
+Once they have established a connection, clients can then send commands (SMBs) to the server that
+allow them to access shares, open files, read and write files, and generally do all the sort of
+things that you want to do with a file system. However, in the case of SMB, these things are done 
+over the network.
+
+.. glossary::
+
+TELNET
+======
+
+Telnet is an application protocol which allows you, with the use of a telnet client, to connect to
+and execute commands on a remote machine that's hosting a telnet server.
+
+The telnet client will establish a connection with the server. The client will then become a virtual
+terminal- allowing you to interact with the remote host.
+
+**How does Telnet work?**
+The user connects to the server by using the Telnet protocol, which means entering "telnet" into a
+command prompt. The user then executes commands on the server by using specific Telnet commands in
+the Telnet prompt. You can connect to a telnet server with the following syntax: "telnet [ip] [port]"
+
+**Replacement**
+Telnet sends all messages in clear text and has no specific security mechanisms. Thus, in many
+applications and services, Telnet has been replaced by SSH in most implementations.
+
 ####
         
 --------
@@ -104,7 +170,7 @@ Information pour la gestion et maintenance des matériel
 Trouver le numéro de série d'un poste / serveur en CLI
 ======================================================
 
-    .. code::
+    .. code-block::
 
         wmic bios get serialnumber
 
@@ -146,7 +212,7 @@ Forcer la suppression d'une partition
 
         Depuis une invite de command Administrateur
 
-        .. code:: powershell
+        .. code-block:: PowerShell
 
             c:\>diskpart
             DISKPART>rescan
@@ -230,7 +296,7 @@ Renouveler un certificats sur Exchange 2010
 Exporter en CSV la taille et le nombre d'item des BAL
 -----------------------------------------------------
 
-    .. code:: powershell
+    .. code-block:: PowerShell
 
         # Dans la console exchange PS
 
@@ -265,7 +331,7 @@ Configurer un VHD Sysprep
 
     #. Executer la commande Syprep 
 
-        .. code:: powershell
+        .. code-block:: PowerShell
 
             C:\Windows\System32\Sysprep.exe /Generalize /OOBE /Shutdown
 
@@ -307,12 +373,12 @@ Lister les rôles FSMO
     :Liens_Web:
         * `Get FSMO in CLI`_
 
-    .. code:: shell
+    .. code-block:: shell
     
         # en CMD : Lister tous les rôles d'un coup
         Netdom Query FSMO
 
-    .. code:: powershell
+    .. code-block:: PowerShell
 
         # En Powershell :
         Get-ADDomainController -Filter * | Select-Object Name, Domain, Forest, OperationMasterRoles | Where-Object {$_.OperationMasterRoles} | Ft -AutoSize
@@ -329,7 +395,7 @@ Installer le module PowerShell ActiveDirectory sous Windows 10
 Identifier les PC qui ne se sont pas connecter au domaine depuis au moins 180 Jours
 -----------------------------------------------------------------------------------
        
-    .. code:: powershell
+    .. code-block:: PowerShell
        
         import-module ActiveDirectory
         $vdate = (Get-Date).adddays(-180)
@@ -340,14 +406,14 @@ Identifier les PC qui ne se sont pas connecter au domaine depuis au moins 180 Jo
 Pour ne pas filtrer le résultat et voir toutes les propriété
 ------------------------------------------------------------
 
-    .. code:: powershell
+    .. code-block:: PowerShell
         
         Get-ADComputer -filter * -property *
             # N.B : Fonctionne aussi avec get-ADUser
             
 Identifier les comptes utilisateurs qui ne se sont pas connecter au domaine depuis au moins 180 Jours
 
-    .. code:: powershell
+    .. code-block:: PowerShell
 
         import-module ActiveDirectory
         $vdate = (Get-Date).adddays(-180)
@@ -358,7 +424,7 @@ Identifier les comptes utilisateurs qui ne se sont pas connecter au domaine depu
 Connaitre la date du dernier démarrage d'un serveur
 ---------------------------------------------------
 
-    .. code:: powershell
+    .. code-block:: PowerShell
     
         Get-CimInstance -ClassName Win32_OperatingSystem | Select CSName, LastBootUpTime
             # Windows2012 r2 et +
@@ -371,7 +437,7 @@ Connaitre la date du dernier démarrage d'un serveur
 Se connecter à Exchange
 -----------------------
 
-    .. code:: powershell
+    .. code-block:: PowerShell
     
         $Credentials = Get-Credential
         $ExSession = New-PSSession –ConfigurationName Microsoft.Exchange –ConnectionUri ‘http://SRV-MAIL.poree.local/PowerShell/?SerializationLevel=Full’ -Credential $Credentials –Authentication Kerberos
@@ -382,7 +448,7 @@ Se connecter à Exchange
 Connaitre le niveau fonctionnel Active Directory
 ------------------------------------------------
 
-    .. code:: powershell
+    .. code-block:: PowerShell
 
         (Get-ADDomain).DomainMode
 
