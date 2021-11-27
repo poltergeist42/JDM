@@ -56,6 +56,22 @@ pour se débarrasser des souris, il faut :
 
 ####
 
+----------------
+La méthode Agile
+----------------
+
+    :Liens_Web:
+
+         - `WIKI Méthode Agile`_
+         - `Méthode Agile`_
+         - `Pourquoi Agile et Scrum sont catastrophiques`_
+
+.. _`WIKI Méthode Agile`: https://fr.wikipedia.org/wiki/M%C3%A9thode_agile
+.. _`Méthode Agile`: https://agiliste.fr/introduction-methodes-agiles/
+.. _`Pourquoi Agile et Scrum sont catastrophiques`: https://binnie.medium.com/pourquoi-agile-et-scrum-sont-catastrophiques-3d699aa67a33
+
+####
+
 -----------------
 Commercialisation
 -----------------
