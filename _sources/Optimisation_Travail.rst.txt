@@ -187,11 +187,11 @@ n'ont aucune importance dans ce processus, on peut le remplacer par un canard en
 
 **N.B:** Lors d'une revue de code, **il faut dire ce que fait le code et non pas ce qu'il devrait faire**.
 
-La méthode du canard en caoutchouc exploite la **dissonance cognitive** en confrontant le concepteur
+La méthode du canard en plastique exploite la **dissonance cognitive** en confrontant le concepteur
 au fait que le code qu'il a écrit ne correspond pas au code qu'il avait l'intention d'écrire.
 
-Dans le cadre d'une présentation orale, cela permet d'identifier les points qui pourrait être 
-approfondit, améliorer ou même supprimer car redondant ou n'apportant pas d'information nouvelle
+Dans le cadre d'une présentation orale, cela permet d'identifier les points qui pourraient être 
+approfondis, améliorés ou même supprimés car redondant ou n'apportant pas d'information nouvelle
 ou pertinente. Cela aide également à fluidifier le discourt tout en modérant le rythmes de la 
 présentation.
 
@@ -576,22 +576,6 @@ huiles essentielles permettent de diminuer le stress.
   * le vétiver
 
 Le vétiver permet également de clarifier les informations et aide à ce souvenir plus facilement.
-
-####
-
-----------------
-La méthode Agile
-----------------
-
-    :Liens_Web:
-
-         - `WIKI Méthode Agile`_
-         - `Méthode Agile`_
-         - `Pourquoi Agile et Scrum sont catastrophiques`_
-
-.. _`WIKI Méthode Agile`: https://fr.wikipedia.org/wiki/M%C3%A9thode_agile
-.. _`Méthode Agile`: https://agiliste.fr/introduction-methodes-agiles/
-.. _`Pourquoi Agile et Scrum sont catastrophiques`: https://binnie.medium.com/pourquoi-agile-et-scrum-sont-catastrophiques-3d699aa67a33
 
 ####
 

@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Composants Spécifiques &mdash; JDM</title>
@@ -25,6 +26,8 @@
   <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Computer Vision" href="ComputerVision.html" />
@@ -102,7 +105,7 @@
                         
                             
                             
-                                <p class="caption"><span class="caption-text">Contents:</span></p>
+                                <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="includeMe.html#infos-generales-journal-de-manip">infos générales Journal de manip</a></li>
@@ -146,6 +149,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Dev_Gest_Prjet.html">Développement, Gestion  et commercialisation de projet</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#devellopement-de-projet">Dévellopement de projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#la-methode-agile">La méthode Agile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#commercialisation">Commercialisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#weblinks">Weblinks</a></li>
 </ul>
@@ -220,8 +224,16 @@
 <li class="toctree-l2"><a class="reference internal" href="GIT.html#reparer-un-liens-vers-une-branche-distante">Réparer un liens vers une branche distante</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Hacking_Ethique.html">Hacking Ethique</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Hacking_Ethique.html#scan-de-port-avec-nmap">Scan de port avec nmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPVC.html">HPVC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#pentest-distribution">Pentest Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#ennumeration-tool">Ennumeration tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#ports-scanner">Ports scanner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#web-security-testing">WEB Security Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#vulnerability-searching">Vulnerability Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#bug-bounty">BUG BOUNTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#linux-command">Linux command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#weblinks">Weblinks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a><ul>
@@ -233,6 +245,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Informatique.html">Informatique</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Informatique.html#cours-et-connaissances-generiques">Cours et connaissances génériques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Informatique.html#protocoles">Protocoles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Informatique.html#materiel">Matériel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Informatique.html#poste-de-travail">Poste de travail</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Informatique.html#sysadmin">SysAdmin</a></li>
@@ -291,31 +304,21 @@
 <li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#la-methode-du-canard-en-plastique">La méthode du canard en plastique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#techniques-d-amelioration-de-la-memoire">Techniques d’amélioration de la mémoire</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#relaxation-et-de-concentration">Relaxation et de concentration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#la-methode-agile">La méthode Agile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#webography">Webography</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#commandes-utiles">Commandes utiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#slicing">Slicing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#creer-des-variables-en-powershell-sous-forme-de-tableau">Créer des variables en PowerShell sous forme de tableau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#les-tableau">Les Tableau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#caractere-specifiques">Caractère spécifiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#declarer-une-variable">Déclarer une variable</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#equivalent-du-print-ou-du-echo">Equivalent du print (ou du echo)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique">Renvoyer la sortie d’une commande vers une fenêtre graphique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#declarer-une-fonction">Déclarer une fonction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#windows-powershell-integrated-scripting-environment-ise">Windows PowerShell Integrated Scripting Environment (ISE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#syntaxe-et-utilisation">Syntaxe et utilisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#navigation-et-gestion-de-fichiers-gestion-de-dossiers">Navigation et gestion de Fichiers / gestion de dossiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#scripting">SCRIPTING</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#admisitration-exchange">Admisitration Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#automatisation-de-windows-et-de-windows-server-avec-windows-powershell">Automatisation de Windows et de Windows Server avec Windows PowerShell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#stocker-un-chemin-puis-y-retourne">stocker un chemin puis y retourné</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#tester-si-un-chemin-exist">Tester si un chemin exist</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#creer-des-interfaces-graphiques">Créer des interfaces graphiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#wmiobject">WmiObject</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#activer-psremote-depuis-un-poste">Activer PSRemote depuis un poste</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#supprimer-un-dossier-et-son-contenu">Supprimer un dossier et son contenu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#manipuler-les-variables-d-environement">Manipuler les variables d’environement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#ouvrir-un-document-avec-vim-depuis-powershell">Ouvrir un document avec VIM depuis PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#hyperv">HyperV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#commandes-en-vrac">Commandes en vrac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#weblinks">Weblinks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Python.html">PYTHON</a><ul>
@@ -417,9 +420,9 @@
                     <div class="document">
                         
                             
-  <div class="section" id="composants-specifiques">
+  <section id="composants-specifiques">
 <h1>Composants Spécifiques<a class="headerlink" href="#composants-specifiques" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="section" id="programmation-des-atmega">
+<section id="programmation-des-atmega">
 <h2>Programmation des ATMega<a class="headerlink" href="#programmation-des-atmega" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour programmer un ATmega (328P ; 2560 etc) on peut utiliser Trois environnement différent :</p>
 <blockquote>
@@ -439,13 +442,13 @@ autre chose que du “.ino”</p>
 </dd>
 </dl>
 </div></blockquote>
-<div class="section" id="atmega-328p-pu-pinout">
+<section id="atmega-328p-pu-pinout">
 <h3>ATMega 328p-PU Pinout<a class="headerlink" href="#atmega-328p-pu-pinout" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><a class="reference internal image-reference" href="_images/ATMEGA328-PU-PINOUT.jpg"><img alt="_images/ATMEGA328-PU-PINOUT.jpg" class="align-center" src="_images/ATMEGA328-PU-PINOUT.jpg" style="width: 400px;" /></a>
 </div></blockquote>
-</div>
-<div class="section" id="installation-du-programmateur-usbasp-sous-windows-10">
+</section>
+<section id="installation-du-programmateur-usbasp-sous-windows-10">
 <h3>Installation du programmateur USBASP sous windows 10<a class="headerlink" href="#installation-du-programmateur-usbasp-sous-windows-10" title="Lien permanent vers ce titre">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
@@ -459,8 +462,8 @@ autre chose que du “.ino”</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="avrdude">
+</section>
+<section id="avrdude">
 <h3>AVRDUDE<a class="headerlink" href="#avrdude" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
@@ -519,9 +522,9 @@ autre chose que du “.ino”</p>
 </li>
 </ol>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="magnetomettre-hmc5883l">
+</section>
+</section>
+<section id="magnetomettre-hmc5883l">
 <h2>Magnetomettre : HMC5883L<a class="headerlink" href="#magnetomettre-hmc5883l" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">liens WEB</dt>
@@ -549,7 +552,7 @@ autre chose que du “.ino”</p>
 </ul>
 </dd>
 </dl>
-<div class="section" id="implantation-hmc5883l">
+<section id="implantation-hmc5883l">
 <h3>Implantation HMC5883L<a class="headerlink" href="#implantation-hmc5883l" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><p>La sérigraphie est masqué lorsque le magnétomètre est enfiché dans une breadbord.
@@ -567,8 +570,8 @@ L’implantation si dessous est donc présenter en <strong>vue de dessus (donc s
 </div>
 </div></blockquote>
 </div></blockquote>
-</div>
-<div class="section" id="installation-des-librairies-quick2wire-et-i2clibraries">
+</section>
+<section id="installation-des-librairies-quick2wire-et-i2clibraries">
 <h3>Installation des librairies quick2wire et i2clibraries<a class="headerlink" href="#installation-des-librairies-quick2wire-et-i2clibraries" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
@@ -636,8 +639,8 @@ L’implantation si dessous est donc présenter en <strong>vue de dessus (donc s
 </li>
 </ol>
 </div></blockquote>
-</div>
-<div class="section" id="configuration-du-hmc5883l">
+</section>
+<section id="configuration-du-hmc5883l">
 <h3>Configuration du HMC5883L<a class="headerlink" href="#configuration-du-hmc5883l" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
@@ -657,13 +660,13 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </li>
 </ol>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="motteur-pas-a-pas-28byj-48">
+<section id="motteur-pas-a-pas-28byj-48">
 <h2>Motteur Pas à Pas : 28BYJ-48<a class="headerlink" href="#motteur-pas-a-pas-28byj-48" title="Lien permanent vers ce titre">¶</a></h2>
 <p><strong>N.B :</strong> se PAP doit être piloté par un driver comme le UNL2003</p>
-<div class="section" id="specification-du-pap">
+<section id="specification-du-pap">
 <h3>Spécification du PAP<a class="headerlink" href="#specification-du-pap" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
@@ -690,8 +693,8 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </tbody>
 </table>
 </div></blockquote>
-</div>
-<div class="section" id="correspondance-entre-le-driver-et-les-gpio">
+</section>
+<section id="correspondance-entre-le-driver-et-les-gpio">
 <h3>Correspondance entre le driver et les GPIO<a class="headerlink" href="#correspondance-entre-le-driver-et-les-gpio" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
@@ -720,8 +723,8 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </tbody>
 </table>
 </div></blockquote>
-</div>
-<div class="section" id="phases">
+</section>
+<section id="phases">
 <h3>Phases<a class="headerlink" href="#phases" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
@@ -797,8 +800,8 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </dd>
 </dl>
 </div></blockquote>
-</div>
-<div class="section" id="organisation-des-phases-en-python3">
+</section>
+<section id="organisation-des-phases-en-python3">
 <h3>Organisation des phases en python3<a class="headerlink" href="#organisation-des-phases-en-python3" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Séquence de sortie</span>
@@ -826,10 +829,10 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </dd>
 </dl>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="picamera">
+<section id="picamera">
 <h2>Picamera<a class="headerlink" href="#picamera" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">liens WEB</dt>
@@ -848,7 +851,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </ul>
 </dd>
 </dl>
-<div class="section" id="activation-du-module-camera-sur-le-rpi">
+<section id="activation-du-module-camera-sur-le-rpi">
 <h3>Activation du module caméra sur le RPi<a class="headerlink" href="#activation-du-module-camera-sur-le-rpi" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
@@ -870,8 +873,8 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </dd>
 </dl>
 </div></blockquote>
-</div>
-<div class="section" id="installation-de-la-camera">
+</section>
+<section id="installation-de-la-camera">
 <h3>installation de la camera<a class="headerlink" href="#installation-de-la-camera" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic simple">
@@ -881,8 +884,8 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 <div><p><strong>N.B :</strong> la partie métallique doit être en direction du port HDMI</p>
 </div></blockquote>
 </div></blockquote>
-</div>
-<div class="section" id="instalation-de-la-librairie-picamera">
+</section>
+<section id="instalation-de-la-librairie-picamera">
 <h3>Instalation de la librairie PiCamera<a class="headerlink" href="#instalation-de-la-librairie-picamera" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
@@ -895,18 +898,18 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </li>
 </ol>
 </div></blockquote>
-</div>
-<div class="section" id="utilisation-avec-python">
+</section>
+<section id="utilisation-avec-python">
 <h3>utilisation avec python<a class="headerlink" href="#utilisation-avec-python" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">picamera</span>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="capteur-ultrason-hc-sr04">
+<section id="capteur-ultrason-hc-sr04">
 <h2>Capteur ultrason : HC-SR04<a class="headerlink" href="#capteur-ultrason-hc-sr04" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Liens Web</dt>
@@ -916,7 +919,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </ul>
 </dd>
 </dl>
-<div class="section" id="vocabulaire-et-definissions-pour-le-hc-sr04">
+<section id="vocabulaire-et-definissions-pour-le-hc-sr04">
 <h3>Vocabulaire et définissions pour le HC-SR04<a class="headerlink" href="#vocabulaire-et-definissions-pour-le-hc-sr04" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list">
@@ -949,8 +952,8 @@ et non la distance total parcourue par l’onde radio.</p>
 </dd>
 </dl>
 </div></blockquote>
-</div>
-<div class="section" id="specification-du-hc-sr04">
+</section>
+<section id="specification-du-hc-sr04">
 <h3>Spécification du HC-SR04<a class="headerlink" href="#specification-du-hc-sr04" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list simple">
@@ -968,10 +971,10 @@ et non la distance total parcourue par l’onde radio.</p>
 </dd>
 </dl>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="captheur-de-methane-mq4">
+<section id="captheur-de-methane-mq4">
 <h2>Captheur de Méthane : MQ4<a class="headerlink" href="#captheur-de-methane-mq4" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
@@ -1010,9 +1013,9 @@ est une résistance fixe de 1K. D’après la documentation, cette résistance d
 </ul>
 </dd>
 </dl>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="liste-des-gazes-pouvant-etre-detecter-par-le-mq4">
+<section id="liste-des-gazes-pouvant-etre-detecter-par-le-mq4">
 <h2>Liste des gazes pouvant être détecter par le MQ4<a class="headerlink" href="#liste-des-gazes-pouvant-etre-detecter-par-le-mq4" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
@@ -1024,9 +1027,9 @@ est une résistance fixe de 1K. D’après la documentation, cette résistance d
 <li><p>Fumé de cigarette</p></li>
 </ul>
 </div></blockquote>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="definition-des-constantes-et-valeurs-de-references">
+<section id="definition-des-constantes-et-valeurs-de-references">
 <h2>Définition des constantes et valeurs de références<a class="headerlink" href="#definition-des-constantes-et-valeurs-de-references" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
@@ -1046,8 +1049,8 @@ est une résistance fixe de 1K. D’après la documentation, cette résistance d
 Elle doit être calculer.</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
                         
@@ -1071,6 +1074,7 @@ Elle doit être calculer.</p>
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -1080,7 +1084,7 @@ Elle doit être calculer.</p>
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.
         </div>
     </div>  
 

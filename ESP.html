@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>ESP8266 &amp; ESP32 &mdash; JDM</title>
@@ -25,6 +26,8 @@
   <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="GIT (versioning)" href="GIT.html" />
@@ -102,7 +105,7 @@
                         
                             
                             
-                                <p class="caption"><span class="caption-text">Contents:</span></p>
+                                <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="includeMe.html#infos-generales-journal-de-manip">infos générales Journal de manip</a></li>
@@ -146,6 +149,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Dev_Gest_Prjet.html">Développement, Gestion  et commercialisation de projet</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#devellopement-de-projet">Dévellopement de projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#la-methode-agile">La méthode Agile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#commercialisation">Commercialisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#weblinks">Weblinks</a></li>
 </ul>
@@ -220,8 +224,16 @@
 <li class="toctree-l2"><a class="reference internal" href="GIT.html#reparer-un-liens-vers-une-branche-distante">Réparer un liens vers une branche distante</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Hacking_Ethique.html">Hacking Ethique</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Hacking_Ethique.html#scan-de-port-avec-nmap">Scan de port avec nmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPVC.html">HPVC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#pentest-distribution">Pentest Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#ennumeration-tool">Ennumeration tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#ports-scanner">Ports scanner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#web-security-testing">WEB Security Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#vulnerability-searching">Vulnerability Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#bug-bounty">BUG BOUNTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#linux-command">Linux command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#weblinks">Weblinks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a><ul>
@@ -233,6 +245,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Informatique.html">Informatique</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Informatique.html#cours-et-connaissances-generiques">Cours et connaissances génériques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Informatique.html#protocoles">Protocoles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Informatique.html#materiel">Matériel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Informatique.html#poste-de-travail">Poste de travail</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Informatique.html#sysadmin">SysAdmin</a></li>
@@ -291,31 +304,21 @@
 <li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#la-methode-du-canard-en-plastique">La méthode du canard en plastique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#techniques-d-amelioration-de-la-memoire">Techniques d’amélioration de la mémoire</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#relaxation-et-de-concentration">Relaxation et de concentration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#la-methode-agile">La méthode Agile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#webography">Webography</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#commandes-utiles">Commandes utiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#slicing">Slicing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#creer-des-variables-en-powershell-sous-forme-de-tableau">Créer des variables en PowerShell sous forme de tableau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#les-tableau">Les Tableau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#caractere-specifiques">Caractère spécifiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#declarer-une-variable">Déclarer une variable</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#equivalent-du-print-ou-du-echo">Equivalent du print (ou du echo)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique">Renvoyer la sortie d’une commande vers une fenêtre graphique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#declarer-une-fonction">Déclarer une fonction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#windows-powershell-integrated-scripting-environment-ise">Windows PowerShell Integrated Scripting Environment (ISE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#syntaxe-et-utilisation">Syntaxe et utilisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#navigation-et-gestion-de-fichiers-gestion-de-dossiers">Navigation et gestion de Fichiers / gestion de dossiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#scripting">SCRIPTING</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#admisitration-exchange">Admisitration Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#automatisation-de-windows-et-de-windows-server-avec-windows-powershell">Automatisation de Windows et de Windows Server avec Windows PowerShell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#stocker-un-chemin-puis-y-retourne">stocker un chemin puis y retourné</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#tester-si-un-chemin-exist">Tester si un chemin exist</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#creer-des-interfaces-graphiques">Créer des interfaces graphiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#wmiobject">WmiObject</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#activer-psremote-depuis-un-poste">Activer PSRemote depuis un poste</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#supprimer-un-dossier-et-son-contenu">Supprimer un dossier et son contenu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#manipuler-les-variables-d-environement">Manipuler les variables d’environement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#ouvrir-un-document-avec-vim-depuis-powershell">Ouvrir un document avec VIM depuis PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#hyperv">HyperV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#commandes-en-vrac">Commandes en vrac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#weblinks">Weblinks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Python.html">PYTHON</a><ul>
@@ -417,7 +420,7 @@
                     <div class="document">
                         
                             
-  <div class="section" id="esp8266-esp32">
+  <section id="esp8266-esp32">
 <h1><a class="toc-backref" href="#sommaire">ESP8266 &amp; ESP32</a><a class="headerlink" href="#esp8266-esp32" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
@@ -473,7 +476,7 @@
 </ul>
 </dd>
 </dl>
-<div class="section" id="esp8266">
+<section id="esp8266">
 <h2><a class="toc-backref" href="#sommaire">ESP8266</a><a class="headerlink" href="#esp8266" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web</dt>
@@ -482,7 +485,7 @@
 </ul>
 </dd>
 </dl>
-<div class="section" id="pinout">
+<section id="pinout">
 <h3><a class="toc-backref" href="#sommaire">PINOUT</a><a class="headerlink" href="#pinout" title="Lien permanent vers ce titre">¶</a></h3>
 <dl class="field-list">
 <dt class="field-odd">NodeMCU</dt>
@@ -492,12 +495,12 @@
 <dd class="field-even"><a class="reference internal image-reference" href="_images/d1-mini.jpg"><img alt="_images/d1-mini.jpg" class="align-center" src="_images/d1-mini.jpg" style="width: 400px;" /></a>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="flasher-un-nouveau-firmware">
+<section id="flasher-un-nouveau-firmware">
 <h2><a class="toc-backref" href="#sommaire">Flasher un nouveau Firmware</a><a class="headerlink" href="#flasher-un-nouveau-firmware" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="la-facon-simple-quant-tous-vas-bien">
+<section id="la-facon-simple-quant-tous-vas-bien">
 <h3><a class="toc-backref" href="#sommaire">La façon simple (quant tous vas bien)</a><a class="headerlink" href="#la-facon-simple-quant-tous-vas-bien" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><p>Pour flasher un firmware sur le NodeMCU, il faut le mettre en mode « flashage » en reliant le
@@ -510,8 +513,8 @@ GPIO 0 (D3) au GND. Il faut alors suivre les étape de « MAJ du firmware ».<
 </dl>
 </div></blockquote>
 </div></blockquote>
-</div>
-<div class="section" id="la-facon-complique-quant-ca-merde">
+</section>
+<section id="la-facon-complique-quant-ca-merde">
 <h3><a class="toc-backref" href="#sommaire">La façon compliqué (quant ça merde)</a><a class="headerlink" href="#la-facon-complique-quant-ca-merde" title="Lien permanent vers ce titre">¶</a></h3>
 <dl class="field-list">
 <dt class="field-odd">FTDI_NodeMCU</dt>
@@ -533,8 +536,8 @@ l’ESP durant la communication entre le FTDI et l’ESP</p></li>
 </ol>
 </dd>
 </dl>
-</div>
-<div class="section" id="compilier-un-firmware-personalise">
+</section>
+<section id="compilier-un-firmware-personalise">
 <h3><a class="toc-backref" href="#sommaire">Compilier un firmware personalisé</a><a class="headerlink" href="#compilier-un-firmware-personalise" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list simple">
@@ -550,8 +553,8 @@ l’ESP durant la communication entre le FTDI et l’ESP</p></li>
 <p>Dans certain cas les modules importés occupes trop de place (ex: le module mqtt_as qui permet
 d’utiliser mqtt avec asyncio). Il est alors nécessaire de compiler le module dans un firmware
 personalisé. C’est particulièrement vrai avec l’ESP8266 qui dispose de moin d’espace que l’ESP32.</p>
-</div>
-<div class="section" id="maj-du-firmware">
+</section>
+<section id="maj-du-firmware">
 <h3><a class="toc-backref" href="#sommaire">MAJ du Firmware</a><a class="headerlink" href="#maj-du-firmware" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list simple">
@@ -673,7 +676,7 @@ un firmaware MicroPython.</p>
 </li>
 </ol>
 </div></blockquote>
-<div class="section" id="oserror-errno-2-enoent-main-py">
+<section id="oserror-errno-2-enoent-main-py">
 <h4>OSError: [Errno 2] ENOENT: main.py<a class="headerlink" href="#oserror-errno-2-enoent-main-py" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Après avoir flasher le firmware, on peut avoir le message d’erreur :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">OSError</span><span class="p">:</span> <span class="p">[</span><span class="n">Errno</span> <span class="mi">2</span><span class="p">]</span> <span class="n">ENOENT</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>
@@ -684,11 +687,11 @@ d’interagir avec le micro-contrôler.</p>
 <p>Ce message vient du faite que lors du déploiement du firmware, le fichier “main.py” n’est pas créer.</p>
 <p>Pour corriger ce problème il faut soit le créer soit le copier à partir de
 <a class="reference external" href="RSHELL">l’utilitaire python “RSHELL”</a></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="utilisation-avec-micropython">
+<section id="utilisation-avec-micropython">
 <h2><a class="toc-backref" href="#sommaire">Utilisation avec MicroPython</a><a class="headerlink" href="#utilisation-avec-micropython" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
@@ -716,11 +719,11 @@ complexe ou avancées ne sont pas possibles</p></li>
 </dd>
 </dl>
 </div></blockquote>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="wemos-d1-mini-avec-arduino">
+<section id="wemos-d1-mini-avec-arduino">
 <h2><a class="toc-backref" href="#sommaire">WEMOS D1 Mini avec Arduino</a><a class="headerlink" href="#wemos-d1-mini-avec-arduino" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="installation-de-la-carte-dans-l-ide-arduino">
+<section id="installation-de-la-carte-dans-l-ide-arduino">
 <h3><a class="toc-backref" href="#sommaire">Installation de la carte dans l’IDE Arduino</a><a class="headerlink" href="#installation-de-la-carte-dans-l-ide-arduino" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list simple">
@@ -735,8 +738,8 @@ complexe ou avancées ne sont pas possibles</p></li>
 </dd>
 </dl>
 </div></blockquote>
-</div>
-<div class="section" id="installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs">
+</section>
+<section id="installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs">
 <h3><a class="toc-backref" href="#sommaire">Installer l’utilitaire de gestion de fichiers (zone SPIFFS)</a><a class="headerlink" href="#installer-l-utilitaire-de-gestion-de-fichiers-zone-spiffs" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list simple">
@@ -756,8 +759,8 @@ complexe ou avancées ne sont pas possibles</p></li>
 </dd>
 </dl>
 </div></blockquote>
-</div>
-<div class="section" id="utilisation-du-systeme-de-fichiers-fs">
+</section>
+<section id="utilisation-du-systeme-de-fichiers-fs">
 <h3><a class="toc-backref" href="#sommaire">Utilisation du système de fichiers (FS)</a><a class="headerlink" href="#utilisation-du-systeme-de-fichiers-fs" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
@@ -775,10 +778,10 @@ fichiers sinon l’opération échoue.</p>
 </li>
 </ol>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="esp32">
+<section id="esp32">
 <h2><a class="toc-backref" href="#sommaire">ESP32</a><a class="headerlink" href="#esp32" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
@@ -789,15 +792,15 @@ fichiers sinon l’opération échoue.</p>
 </dd>
 </dl>
 </div></blockquote>
-<div class="section" id="id1">
+<section id="id1">
 <h3><a class="toc-backref" href="#sommaire">PINOUT</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
 <dl class="field-list">
 <dt class="field-odd">Wemos_mini_ESP32</dt>
 <dd class="field-odd"><a class="reference internal image-reference" href="_images/wemos_esp32t.jpg"><img alt="_images/wemos_esp32t.jpg" class="align-center" src="_images/wemos_esp32t.jpg" style="width: 400px;" /></a>
 </dd>
 </dl>
-</div>
-<div class="section" id="broches-specialles">
+</section>
+<section id="broches-specialles">
 <h3><a class="toc-backref" href="#sommaire">Broches spécialles</a><a class="headerlink" href="#broches-specialles" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
@@ -812,10 +815,10 @@ value of some pins can be set to Pin.PULL_HOLD to reduce power consumption durin
 <li><p><strong>GPIO0</strong> : Ne pas utiliser car elle empêche le démarrage.</p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="rshell">
+<section id="rshell">
 <h2><a class="toc-backref" href="#sommaire">RSHELL</a><a class="headerlink" href="#rshell" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><dl class="field-list">
@@ -849,13 +852,13 @@ un émulateur terminal.</p>
 </dd>
 </dl>
 </div></blockquote>
-<div class="section" id="installation-et-demarrage">
+<section id="installation-et-demarrage">
 <h3><a class="toc-backref" href="#sommaire">Installation et démarrage</a><a class="headerlink" href="#installation-et-demarrage" title="Lien permanent vers ce titre">¶</a></h3>
 <p>RSHELL est un programme python :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">rshell</span>
 </pre></div>
 </div>
-<div class="section" id="ouvrir-une-session">
+<section id="ouvrir-une-session">
 <h4>Ouvrir une session<a class="headerlink" href="#ouvrir-une-session" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><dl class="field-list simple">
@@ -875,9 +878,9 @@ pour le pas écraser le système de fichier.</p>
 <span class="n">rshell</span> <span class="o">--</span><span class="n">port</span> <span class="n">COM3</span> <span class="o">--</span><span class="n">baud</span> <span class="mi">115200</span> <span class="o">--</span><span class="n">buffer</span><span class="o">-</span><span class="n">size</span> <span class="mi">128</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="utilisation">
+</section>
+</section>
+<section id="utilisation">
 <h3><a class="toc-backref" href="#sommaire">Utilisation</a><a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ul>
@@ -892,7 +895,7 @@ pour le pas écraser le système de fichier.</p>
 </li>
 </ul>
 </div></blockquote>
-<div class="section" id="acceder-au-systeme-de-fichier-de-la-carte">
+<section id="acceder-au-systeme-de-fichier-de-la-carte">
 <h4>Accéder au système de fichier de la carte<a class="headerlink" href="#acceder-au-systeme-de-fichier-de-la-carte" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><ul>
@@ -918,8 +921,8 @@ pour le pas écraser le système de fichier.</p>
 </li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="creer-un-fichier">
+</section>
+<section id="creer-un-fichier">
 <h4>Créer un fichier<a class="headerlink" href="#creer-un-fichier" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><dl class="field-list simple">
@@ -1000,17 +1003,17 @@ dossier depuis un programme. Il s’agit en réalité d’un renommage du fichie
 </li>
 </ol>
 </div></blockquote>
-</div>
-<div class="section" id="copier-un-fichier-local-sur-la-carte">
+</section>
+<section id="copier-un-fichier-local-sur-la-carte">
 <h4>Copier un fichier local sur la carte<a class="headerlink" href="#copier-un-fichier-local-sur-la-carte" title="Lien permanent vers ce titre">¶</a></h4>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="o">/</span><span class="n">pyboard</span>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="repl-webrepl-et-file-system">
+</section>
+</section>
+<section id="repl-webrepl-et-file-system">
 <h3><a class="toc-backref" href="#sommaire">REPL, WebREPL et File System</a><a class="headerlink" href="#repl-webrepl-et-file-system" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Il est possible d’interagir directement avec l’ESP. Soit depuis le port série, c’est le REPL. Soit
 au travers d’un WebSocket, c’est le WebREPL. Le deux modes renvoie <strong>la même</strong> console
@@ -1066,9 +1069,9 @@ au travers de la liaison série : <a class="reference external" href="https://gi
 </dd>
 </dl>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="micropython">
+</section>
+</section>
+<section id="micropython">
 <h2><a class="toc-backref" href="#sommaire">Micropython</a><a class="headerlink" href="#micropython" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
@@ -1079,8 +1082,8 @@ au travers de la liaison série : <a class="reference external" href="https://gi
 </dd>
 </dl>
 </div></blockquote>
-</div>
-<div class="section" id="library">
+</section>
+<section id="library">
 <h2><a class="toc-backref" href="#sommaire">Library</a><a class="headerlink" href="#library" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
@@ -1135,9 +1138,9 @@ CPython’s asyncio.</p>
 </dd>
 </dl>
 </div></blockquote>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="weblinks">
+<section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
@@ -1177,8 +1180,8 @@ CPython’s asyncio.</p>
 <dd><p><a class="reference external" href="https://github.com/peterhinch/micropython-mqtt/tree/master/mqtt_as">https://github.com/peterhinch/micropython-mqtt/tree/master/mqtt_as</a></p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
                         
@@ -1202,6 +1205,7 @@ CPython’s asyncio.</p>
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -1211,7 +1215,7 @@ CPython’s asyncio.</p>
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.
         </div>
     </div>  
 

@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>MQTT &mdash; JDM</title>
@@ -25,6 +26,8 @@
   <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Optimisation du travail (et de l’apprentissage)" href="Optimisation_Travail.html" />
@@ -102,7 +105,7 @@
                         
                             
                             
-                                <p class="caption"><span class="caption-text">Contents:</span></p>
+                                <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="includeMe.html">README_JDM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="includeMe.html#infos-generales-journal-de-manip">infos générales Journal de manip</a></li>
@@ -146,6 +149,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Dev_Gest_Prjet.html">Développement, Gestion  et commercialisation de projet</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#devellopement-de-projet">Dévellopement de projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#la-methode-agile">La méthode Agile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#commercialisation">Commercialisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#weblinks">Weblinks</a></li>
 </ul>
@@ -220,8 +224,16 @@
 <li class="toctree-l2"><a class="reference internal" href="GIT.html#reparer-un-liens-vers-une-branche-distante">Réparer un liens vers une branche distante</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Hacking_Ethique.html">Hacking Ethique</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Hacking_Ethique.html#scan-de-port-avec-nmap">Scan de port avec nmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPVC.html">HPVC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#pentest-distribution">Pentest Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#ennumeration-tool">Ennumeration tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#ports-scanner">Ports scanner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#web-security-testing">WEB Security Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#vulnerability-searching">Vulnerability Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#bug-bounty">BUG BOUNTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#linux-command">Linux command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HPVC.html#weblinks">Weblinks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="HTML_CSS.html">HTML_CSS</a><ul>
@@ -233,6 +245,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Informatique.html">Informatique</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Informatique.html#cours-et-connaissances-generiques">Cours et connaissances génériques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Informatique.html#protocoles">Protocoles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Informatique.html#materiel">Matériel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Informatique.html#poste-de-travail">Poste de travail</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Informatique.html#sysadmin">SysAdmin</a></li>
@@ -291,31 +304,21 @@
 <li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#la-methode-du-canard-en-plastique">La méthode du canard en plastique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#techniques-d-amelioration-de-la-memoire">Techniques d’amélioration de la mémoire</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#relaxation-et-de-concentration">Relaxation et de concentration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#la-methode-agile">La méthode Agile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Optimisation_Travail.html#webography">Webography</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Powershell.html">PowerShell</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#commandes-utiles">Commandes utiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#slicing">Slicing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#creer-des-variables-en-powershell-sous-forme-de-tableau">Créer des variables en PowerShell sous forme de tableau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#les-tableau">Les Tableau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#caractere-specifiques">Caractère spécifiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#declarer-une-variable">Déclarer une variable</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#equivalent-du-print-ou-du-echo">Equivalent du print (ou du echo)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique">Renvoyer la sortie d’une commande vers une fenêtre graphique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#declarer-une-fonction">Déclarer une fonction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#windows-powershell-integrated-scripting-environment-ise">Windows PowerShell Integrated Scripting Environment (ISE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#syntaxe-et-utilisation">Syntaxe et utilisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#navigation-et-gestion-de-fichiers-gestion-de-dossiers">Navigation et gestion de Fichiers / gestion de dossiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#scripting">SCRIPTING</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#admisitration-exchange">Admisitration Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#automatisation-de-windows-et-de-windows-server-avec-windows-powershell">Automatisation de Windows et de Windows Server avec Windows PowerShell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#stocker-un-chemin-puis-y-retourne">stocker un chemin puis y retourné</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#tester-si-un-chemin-exist">Tester si un chemin exist</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#creer-des-interfaces-graphiques">Créer des interfaces graphiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#wmiobject">WmiObject</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#activer-psremote-depuis-un-poste">Activer PSRemote depuis un poste</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#supprimer-un-dossier-et-son-contenu">Supprimer un dossier et son contenu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#manipuler-les-variables-d-environement">Manipuler les variables d’environement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Powershell.html#ouvrir-un-document-avec-vim-depuis-powershell">Ouvrir un document avec VIM depuis PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Powershell.html#hyperv">HyperV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#commandes-en-vrac">Commandes en vrac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Powershell.html#weblinks">Weblinks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Python.html">PYTHON</a><ul>
@@ -417,11 +420,11 @@
                     <div class="document">
                         
                             
-  <div class="section" id="mqtt">
+  <section id="mqtt">
 <h1>MQTT<a class="headerlink" href="#mqtt" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="section" id="installation">
+<section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="windows">
+<section id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><dl class="field-list simple">
@@ -447,9 +450,9 @@
 <li><p>Test2 publisher / client mosquitto_pub -t “home/light” -m “Turn OFF”</p></li>
 </ol>
 </div></blockquote>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="mqtt-sous-python">
+<section id="mqtt-sous-python">
 <h3>MQTT sous Python<a class="headerlink" href="#mqtt-sous-python" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
@@ -469,9 +472,9 @@
 </li>
 </ol>
 </div></blockquote>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
                         
@@ -495,6 +498,7 @@
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -504,7 +508,7 @@
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.
         </div>
     </div>  
 
