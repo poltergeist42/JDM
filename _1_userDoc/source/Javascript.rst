@@ -1598,6 +1598,12 @@ NPM - Packet manager
 Package et framework
 --------------------
 
+.. glossary::
+
+    middleware
+        Un middleware et une fonction qui s'éxécute au milleu d'une requette, après la requette
+        d'entrée et avant que la requette renvoi une sortie.
+
 Express.JS
 ==========
 
