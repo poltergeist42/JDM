@@ -1817,6 +1817,14 @@ utilisateurs puissent les utiliser.</p>
 <hr class="docutils" />
 <section id="package-et-framework">
 <h2><a class="toc-backref" href="#sommaire">Package et framework</a><a class="headerlink" href="#package-et-framework" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="glossary">
+<dt id="term-middleware">middleware<a class="headerlink" href="#term-middleware" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Middleware are function that Express executes in the middle after incomming request and
+before the output. Middlewares might make changes to the request and response objet.</p>
+<p>The “use” function registers a middleware with our Express app.
+With “app.use(express.json())”, the express.json() let’s us retrieve data from a request via
+the “body” attribute. Without this middleware, data retrieval would be much more difficult.</p>
+</dd>
+</dl>
 <section id="express-js">
 <h3><a class="toc-backref" href="#sommaire">Express.JS</a><a class="headerlink" href="#express-js" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Epress est un framework qui permet de simplifier la tache d’écriture du code d’un serveur WEB
