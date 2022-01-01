@@ -1601,8 +1601,12 @@ Package et framework
 .. glossary::
 
     middleware
-        Un middleware et une fonction qui s'éxécute au milleu d'une requette, après la requette
-        d'entrée et avant que la requette renvoi une sortie.
+        Middleware are function that Express executes in the middle after incomming request and
+        before the output. Middlewares might make changes to the request and response objet.
+
+        The 'use' function registers a middleware with our Express app.
+        With 'app.use(express.json())', the express.json() let's us retrieve data from a request via
+        the 'body' attribute. Without this middleware, data retrieval would be much more difficult.
 
 Express.JS
 ==========

@@ -18,11 +18,13 @@ Mon journal de manip
    Culture_Gen
    DataBase
    Dev_Gest_Prjet
+   Diagrams
    Django
    Docker
    Documentation_Automatique
    English_vocab
    ESP
+   Freecad
    GIT
    HPVC
    HTML_CSS
