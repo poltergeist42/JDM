@@ -3,7 +3,6 @@ Trading
 =======
 
 .. contents::
-   :backlinks: top
    :depth: 3
 
 :Liens_Web:
@@ -36,13 +35,23 @@ Les différents type de produits
 Take-Profit et Stop-Loss
 ------------------------
 
-    :Take-Profit:   Il s'agit est une limite qui permet de fermer automatiquement sa position si la
+    :Take-Profit:   Il s'agit d'une limite qui permet de fermer automatiquement sa position si la
                     valeur du produit trader atteind une certaine position. Cette limite doit être
                     placée  valeur suppérieur à la valeur actuel. Elle permet alors d'empocher les
                     gains automatiquement.
 
                     **N.B** : La bonne attitude en trading consistant à "laisser courrir sa position",
                               le Take-profit n'est donc normalement pas utilisé.
+
+
+    :Stop-Loss:     IIl s'agit d'une limite qui permet de fermer automatiquement sa position si la
+                    valeur du produit trader atteind une certaine position. Cette limite doit être
+                    placée à une valeur inférieur à la valeur actuelle. Elle permet d'arréter les
+                    pertes. Cette limite est généralement placée comme éléments de sécurité. On
+                    parle de "suivre la position".
+
+
+Pour être efficace, le Take-Profit et le Stop-Loss doivent être placé en fonction de la **volativité**.
 
 ####
 

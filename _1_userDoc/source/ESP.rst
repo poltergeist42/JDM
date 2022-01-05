@@ -371,10 +371,7 @@ Créer un fichier
         Il ne s'agit pas d'un vrai système de fichier. Il n'est donc pas possible de naviger dans un
         dossier depuis un programme. Il s'agit en réalité d'un renommage du fichier :
 
-            .. codeblock:: shell
-               :lineos:
-               :emphasize-lines: 1, 4
-               :force:
+            .. code:: shell
 
                 # pour le fichier 'truc.txt' dans le dossier 'machin' le fichier sera renommer en :
 

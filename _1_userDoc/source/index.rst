@@ -19,10 +19,8 @@ Mon journal de manip
    DataBase
    Dev_Gest_Prjet
    Diagrams
-   Django
    Docker
    Documentation_Automatique
-   English_vocab
    ESP
    Freecad
    GIT
