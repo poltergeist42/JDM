@@ -21,7 +21,6 @@ Mon journal de manip
    Diagrams
    Docker
    Documentation_Automatique
-   English_vocab
    ESP
    Freecad
    GIT
