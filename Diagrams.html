@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Kicad &mdash; JDM</title>
+  <title>Diagrams &mdash; JDM</title>
   
 
   
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="LaTex" href="Latex.html" />
-    <link rel="prev" title="JavaScript / REACT.js / node.js" href="Javascript.html" /> 
+    <link rel="next" title="Docker" href="Docker.html" />
+    <link rel="prev" title="Développement, Gestion et commercialisation de projet" href="Dev_Gest_Prjet.html" /> 
 
 </head>
 
@@ -70,13 +70,13 @@
     
       <li><a href="index.html">Docs</a></li>
         
-      <li>Kicad</li>
+      <li>Diagrams</li>
     
     
       <li class="breadcrumbs-aside">
         
             
-            <a href="_sources/kicad.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Diagrams.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -154,9 +154,9 @@
 <li class="toctree-l2"><a class="reference internal" href="Dev_Gest_Prjet.html#weblinks">Weblinks</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Diagrams.html">Diagrams</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Diagrams.html#plantuml">PlantUML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Diagrams.html#weblinks">Weblinks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Diagrams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#plantuml">PlantUML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#weblinks">Weblinks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Docker.html">Docker</a><ul>
@@ -264,8 +264,8 @@
 <li class="toctree-l2"><a class="reference internal" href="Javascript.html#weblinks">Weblinks</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Kicad</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#commandes-et-raccourcis-de-base">commandes et raccourcis de base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kicad.html">Kicad</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kicad.html#commandes-et-raccourcis-de-base">commandes et raccourcis de base</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Latex.html">LaTex</a><ul>
@@ -428,52 +428,71 @@
                     <div class="document">
                         
                             
-  <section id="kicad">
-<h1>Kicad<a class="headerlink" href="#kicad" title="Lien permanent vers ce titre">¶</a></h1>
+  <section id="diagrams">
+<h1><a class="toc-backref" href="#sommaire">Diagrams</a><a class="headerlink" href="#diagrams" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="contents topic" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#diagrams" id="id13">Diagrams</a></p>
+<ul>
+<li><p><a class="reference internal" href="#plantuml" id="id14">PlantUML</a></p>
+<ul>
+<li><p><a class="reference internal" href="#syntax-and-quick-start" id="id15">Syntax and quick start</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#weblinks" id="id16">Weblinks</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="plantuml">
+<h2><a class="toc-backref" href="#sommaire">PlantUML</a><a class="headerlink" href="#plantuml" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="field-list simple">
-<dt class="field-odd">Liens Web</dt>
+<dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><dl class="simple">
-<dt><a class="reference external" href="http://docs.kicad-pcb.org/fr/getting_started_in_kicad.html">http://docs.kicad-pcb.org/fr/getting_started_in_kicad.html</a></dt><dd><ul>
-<li><p>Doc Officielle</p></li>
+<li><p><a class="reference external" href="https://plantuml.com/">PlantUML - le site</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p></li>
+<li><p><a class="reference external" href="https://plantuml.com/class-diagram#e5cec68ef9127fc4">PlantUML - Class Diagram</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p></li>
+<li><p><a class="reference external" href="https://plantuml.com/sitemap-language-specification">PlantUML - Language specification</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p></li>
+<li><p><a class="reference external" href="http://plantuml.com/guide">PlantUML - la bible (PDF)</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p></li>
+<li><p><a class="reference external" href="http://plantuml.com/fr/guide">PlantUML - la bible (PDF - FR)</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p></li>
+<li><p><a class="reference external" href="https://crashedmind.github.io/PlantUMLHitchhikersGuide/">The Hitchhiker’s Guide to PlantUML!</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a></p></li>
 </ul>
 </dd>
 </dl>
-</li>
-<li><dl class="simple">
-<dt><a class="reference external" href="http://www.ferdinandpiette.com/blog/2012/04/kicad-dessiner-le-schema-electronique-du-montage/">http://www.ferdinandpiette.com/blog/2012/04/kicad-dessiner-le-schema-electronique-du-montage/</a></dt><dd><p># tuto FR (ne correspond pas a la dernière version mais on s’en sort)</p>
+<p>PlantUML is a component that allows to quickly <strong>write</strong> (not draw) a large panel of diagrams.</p>
+<section id="syntax-and-quick-start">
+<h3><a class="toc-backref" href="#sommaire">Syntax and quick start</a><a class="headerlink" href="#syntax-and-quick-start" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Diagrams must be surrounded by 2 tags:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="nd">@startuml</span>
+<span class="linenos">2</span> <span class="o">...</span>
+<span class="linenos">3</span> <span class="nd">@enduml</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="weblinks">
+<h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="https://plantuml.com/">https://plantuml.com/</a></p>
+</dd>
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p><a class="reference external" href="https://plantuml.com/class-diagram#e5cec68ef9127fc4">https://plantuml.com/class-diagram#e5cec68ef9127fc4</a></p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p><a class="reference external" href="https://plantuml.com/sitemap-language-specification">https://plantuml.com/sitemap-language-specification</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
+<dd><p><a class="reference external" href="http://plantuml.com/guide">http://plantuml.com/guide</a></p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
+<dd><p><a class="reference external" href="http://plantuml.com/fr/guide">http://plantuml.com/fr/guide</a></p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
+<dd><p><a class="reference external" href="https://crashedmind.github.io/PlantUMLHitchhikersGuide/">https://crashedmind.github.io/PlantUMLHitchhikersGuide/</a></p>
 </dd>
 </dl>
-</li>
-</ul>
-</dd>
-</dl>
-<section id="commandes-et-raccourcis-de-base">
-<h2>commandes et raccourcis de base<a class="headerlink" href="#commandes-et-raccourcis-de-base" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour exécuter les raccourcis, il suffit de placer la souris au dessus du composant.
-Il n’est pas nécessaire de cliquer ou de sélectionnez.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 64%" />
-<col style="width: 36%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Commandes</p></th>
-<th class="head"><p>Raccourcis</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Deplcacer</p></td>
-<td><p>m</p></td>
-</tr>
-<tr class="row-odd"><td><p>rotation</p></td>
-<td><p>r</p></td>
-</tr>
-<tr class="row-even"><td><p>affecter une valeur</p></td>
-<td><p>v</p></td>
-</tr>
-</tbody>
-</table>
 </section>
 </section>
 

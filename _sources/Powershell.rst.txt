@@ -129,6 +129,7 @@ Windows PowerShell Integrated Scripting Environment (ISE)
     #. Pour lancer PowerShell ISE depuis la console ::
     
         PS c:\ISE
+
 ####
 
 ----------------------
@@ -353,7 +354,7 @@ SCRIPTING
 :Liens_Web:
     * `Introduction to scripting in PowerShell`_
 
-.. _`Introduction to scripting in PowerShell`:https://docs.microsoft.com/en-us/learn/modules/script-with-powershell/
+.. _`Introduction to scripting in PowerShell`: https://docs.microsoft.com/en-us/learn/modules/script-with-powershell/
             
 Autoriser l’exécution des script
 ================================

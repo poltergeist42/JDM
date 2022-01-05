@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Kicad &mdash; JDM</title>
+  <title>Freecad &mdash; JDM</title>
   
 
   
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="LaTex" href="Latex.html" />
-    <link rel="prev" title="JavaScript / REACT.js / node.js" href="Javascript.html" /> 
+    <link rel="next" title="GIT (versioning)" href="GIT.html" />
+    <link rel="prev" title="ESP8266 &amp; ESP32" href="ESP.html" /> 
 
 </head>
 
@@ -70,13 +70,13 @@
     
       <li><a href="index.html">Docs</a></li>
         
-      <li>Kicad</li>
+      <li>Freecad</li>
     
     
       <li class="breadcrumbs-aside">
         
             
-            <a href="_sources/kicad.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Freecad.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -203,9 +203,9 @@
 <li class="toctree-l2"><a class="reference internal" href="ESP.html#weblinks">Weblinks</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Freecad.html">Freecad</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Freecad.html#technique-de-filetage">Technique de filetage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Freecad.html#weblinks">Weblinks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Freecad</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#technique-de-filetage">Technique de filetage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#weblinks">Weblinks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="GIT.html">GIT (versioning)</a><ul>
@@ -264,8 +264,8 @@
 <li class="toctree-l2"><a class="reference internal" href="Javascript.html#weblinks">Weblinks</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Kicad</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#commandes-et-raccourcis-de-base">commandes et raccourcis de base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kicad.html">Kicad</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kicad.html#commandes-et-raccourcis-de-base">commandes et raccourcis de base</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Latex.html">LaTex</a><ul>
@@ -428,52 +428,56 @@
                     <div class="document">
                         
                             
-  <section id="kicad">
-<h1>Kicad<a class="headerlink" href="#kicad" title="Lien permanent vers ce titre">¶</a></h1>
+  <section id="freecad">
+<h1><a class="toc-backref" href="#sommaire">Freecad</a><a class="headerlink" href="#freecad" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="contents topic" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#freecad" id="id3">Freecad</a></p>
+<ul>
+<li><p><a class="reference internal" href="#technique-de-filetage" id="id4">Technique de filetage</a></p>
+<ul>
+<li><p><a class="reference internal" href="#filetage-manuel" id="id5">Filetage manuel</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#weblinks" id="id6">Weblinks</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="technique-de-filetage">
+<h2><a class="toc-backref" href="#sommaire">Technique de filetage</a><a class="headerlink" href="#technique-de-filetage" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="field-list simple">
-<dt class="field-odd">Liens Web</dt>
+<dt class="field-odd">Liens_Web</dt>
 <dd class="field-odd"><ul class="simple">
-<li><dl class="simple">
-<dt><a class="reference external" href="http://docs.kicad-pcb.org/fr/getting_started_in_kicad.html">http://docs.kicad-pcb.org/fr/getting_started_in_kicad.html</a></dt><dd><ul>
-<li><p>Doc Officielle</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=3qSbB_99h7s">La grotte du geek</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p></li>
 </ul>
 </dd>
 </dl>
-</li>
-<li><dl class="simple">
-<dt><a class="reference external" href="http://www.ferdinandpiette.com/blog/2012/04/kicad-dessiner-le-schema-electronique-du-montage/">http://www.ferdinandpiette.com/blog/2012/04/kicad-dessiner-le-schema-electronique-du-montage/</a></dt><dd><p># tuto FR (ne correspond pas a la dernière version mais on s’en sort)</p>
-</dd>
-</dl>
-</li>
+<dl class="field-list simple">
+<dt class="field-odd">Info</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Pour un filetage en impression FDM, il est préférable de générer le filetage et le taraudage
+manuellement (la version longue et compliqué)</p></li>
+<li><p>Pour un filetage par impression résine, le plus simple est d’utiliser l’Addon <strong>“Fasteners”</strong></p></li>
+<li><p>Pour le filetage le creusage s’effectue vers l’intérieur</p></li>
+<li><p>Pour le taraudage, le creusage s’effectue vers l’extérieur</p></li>
 </ul>
 </dd>
 </dl>
-<section id="commandes-et-raccourcis-de-base">
-<h2>commandes et raccourcis de base<a class="headerlink" href="#commandes-et-raccourcis-de-base" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour exécuter les raccourcis, il suffit de placer la souris au dessus du composant.
-Il n’est pas nécessaire de cliquer ou de sélectionnez.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 64%" />
-<col style="width: 36%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Commandes</p></th>
-<th class="head"><p>Raccourcis</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Deplcacer</p></td>
-<td><p>m</p></td>
-</tr>
-<tr class="row-odd"><td><p>rotation</p></td>
-<td><p>r</p></td>
-</tr>
-<tr class="row-even"><td><p>affecter une valeur</p></td>
-<td><p>v</p></td>
-</tr>
-</tbody>
-</table>
+<section id="filetage-manuel">
+<h3><a class="toc-backref" href="#sommaire">Filetage manuel</a><a class="headerlink" href="#filetage-manuel" title="Lien permanent vers ce titre">¶</a></h3>
+<p>[WIP]</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="weblinks">
+<h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=3qSbB_99h7s">https://www.youtube.com/watch?v=3qSbB_99h7s</a></p>
+</dd>
+</dl>
 </section>
 </section>
 

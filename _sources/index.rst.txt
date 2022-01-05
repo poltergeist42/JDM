@@ -18,13 +18,12 @@ Mon journal de manip
    Culture_Gen
    DataBase
    Dev_Gest_Prjet
-   Diagramme
-   Django
+   Diagrams
    Docker
    Documentation_Automatique
    English_vocab
    ESP
-   freecad
+   Freecad
    GIT
    HPVC
    HTML_CSS
@@ -44,6 +43,7 @@ Mon journal de manip
    Reseau
    SiteWeb
    Soudure
+   Trading
    URLtheque
    VIM
    visualStudioCode
