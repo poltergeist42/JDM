@@ -44,6 +44,7 @@ Mon journal de manip
    Reseau
    SiteWeb
    Soudure
+   Trading
    URLtheque
    VIM
    visualStudioCode
