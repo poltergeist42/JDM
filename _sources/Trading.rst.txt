@@ -177,7 +177,7 @@ Définission
                     entraine des frais boursiers, c'est pour cette raison que le scalping n'est pas
                     une bonne solution.
 
-    :Effet de levier:        [TODO]: renseigner la définission de l'effet de levier
+    :Effet de levier:        TODO: renseigner la définission de l'effet de levier
 
     :spred:         c'est la différence entre le prix d'achat et le prix de vente. Le prix d'un
                     produit est composé de 2 valeurs : la valeur basse et la valeur haute. Le spred
