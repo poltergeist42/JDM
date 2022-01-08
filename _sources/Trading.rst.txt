@@ -60,7 +60,7 @@ Les différents type de Trading
                     à dire entre l'ouverture et la fermeture quotidienne des marché. L'unité de
                     temps vat d'une à qutre heure. Contrairement au scalping, il faut laisser le
                     temp au marché de bouger.
-                    
+
 
     :Le Swing Traiding:
                     Le Swing trading consiste à essayer de trouver des mouvement sur les marchés
@@ -78,7 +78,6 @@ Les différents type de Trading
 
                     ex: Tendence haussière --> on ouvre la position à l'achat
                         La tendence devien baissière --> on ferme la position.
-
 
     :Le trading long terme:
                     C'est une autre forme de Swing Trading. Dans type de trading, les positions sont
