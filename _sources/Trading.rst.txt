@@ -16,7 +16,6 @@ Trading
 Les Styles de trading
 ---------------------
 
-
     :L'Analyse fondamentale:
                     L'Analyse fondamentale consiste à étudier les différents marché, la santé des
                     entreprises,  le niveau d'offre et de la demande des matières premières, la
@@ -30,7 +29,7 @@ Les Styles de trading
                     pouvoir prendre des positions.
 
 
-    :L'analyse au sentiments :
+    :L'Analyse au sentiments:
                     L'analyse au sentiments est le résultat d'une "intuission" basée sur un mélange
                     des deux premiers type d'analyse.
 
@@ -56,15 +55,14 @@ Les différents type de Trading
                     Cette pratique est à éviter absoluement !
 
 
-
     :Le day Traiding:
                     Le day trading consite à ouvrir et à fermer ces position dans la journée, c'est
                     à dire entre l'ouverture et la fermeture quotidienne des marché. L'unité de
                     temps vat d'une à qutre heure. Contrairement au scalping, il faut laisser le
                     temp au marché de bouger.
+                    
 
-
-    :Le swing Traiding:
+    :Le Swing Traiding:
                     Le Swing trading consiste à essayer de trouver des mouvement sur les marchés
                     pour trouvé la tendance et la suivre. Ce type de trading ce fait sur plusieurs
                     jours. L'unité de temps est de quatre heures minimum. Il est fréquent de devoir
@@ -81,7 +79,10 @@ Les différents type de Trading
                     ex: Tendence haussière --> on ouvre la position à l'achat
                         La tendence devien baissière --> on ferme la position.
 
-Le trading long terme
+
+    :Le trading long terme:
+                    C'est une autre forme de Swing Trading. Dans type de trading, les positions sont
+                    ouvertes sur plusieurs mois.
 
 
 ####
@@ -166,10 +167,8 @@ Définission
     :ASK (BID/ASK): ASK correspond au prix au quel le courtier vous vend ce que voulez acheter (Voir
                     spre).
 
-
     :BID (BID/ASK): BID correspond au prix au quel le courtier vous achète ce que vous voulez vendre
                     (voir spred).
-
 
     :Broker:        Un Borker est un courtier. C'est lui qui vas vous permetre de prendre des
                     position sur le marché.
@@ -179,9 +178,7 @@ Définission
                     entraine des frais boursiers, c'est pour cette raison que le scalping n'est pas
                     une bonne solution.
 
-
     :Effet de levier:        [TODO]: renseigner la définission de l'effet de levier
-
 
     :spred:         c'est la différence entre le prix d'achat et le prix de vente. Le prix d'un
                     produit est composé de 2 valeurs : la valeur basse et la valeur haute. Le spred
@@ -195,11 +192,9 @@ Définission
 
                     On parles bid/ask.
 
-
     :Volativitée:   La volativitée correspond à l'amplitude entre la hausse et la baisse des prix.
                     Si il y a une grande amplitude, on dit qu'il y a une forte volativitée. Si il y
                     a une petite amplitude, on dit qu'il y a une faible volativitée.
-
 
 
 ####
