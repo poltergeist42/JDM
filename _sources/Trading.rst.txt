@@ -11,9 +11,84 @@ Trading
 .. _`Stoic Trader (Marc Munier)`: https://www.udemy.com/course/bases-du-trading/learn/lecture/25669074#overview
 
 
--------------------------------
-Les différents type de produits
--------------------------------
+
+---------------------
+Les Styles de trading
+---------------------
+
+
+    :L'Analyse fondamentale:
+                    L'Analyse fondamentale consiste à étudier les différents marché, la santé des
+                    entreprises,  le niveau d'offre et de la demande des matières premières, la
+                    situation géopolitique, etc...
+
+
+    :L'Analyse technique:
+                    L'analyse technique consite à analyser les graphiques à l'aide d'outils, appelés
+                    indicateurs techniques, pour essayer de déterminer si la tendence est haussière
+                    ou baissière sur l'intervale de temps définit par le type de trading et ainsi
+                    pouvoir prendre des positions.
+
+
+    :L'analyse au sentiments :
+                    L'analyse au sentiments est le résultat d'une "intuission" basée sur un mélange
+                    des deux premiers type d'analyse.
+
+
+####
+
+------------------------------
+Les différents type de Trading
+------------------------------
+
+    :Le Scalping:   Le scalping consiste à acheter ou à vendre très rapidement. L'unité de temps vat
+                    d'une minute à une heure.
+                    
+                    Le scalping est générallement utilisé par les tradeurs débutants car la très
+                    courte durée entre l'entré en position et la sortie donne l'illusion de pouvoir
+                    gérer les risque plus facillement.
+
+                    Ce type de trading de trading n'est en réalité bénéfique qu'aux brokers (Les
+                    plateforme de trading) car une commission doit être versée par le tradeur au
+                    broker (les frais de courtages) pour chaque prise de position, même si la
+                    position est perdantes.
+
+                    Cette pratique est à éviter absoluement !
+
+
+
+    :Le day Traiding:
+                    Le day trading consite à ouvrir et à fermer ces position dans la journée, c'est
+                    à dire entre l'ouverture et la fermeture quotidienne des marché. L'unité de
+                    temps vat d'une à qutre heure. Contrairement au scalping, il faut laisser le
+                    temp au marché de bouger.
+
+
+    :Le swing Traiding:
+                    Le Swing trading consiste à essayer de trouver des mouvement sur les marchés
+                    pour trouvé la tendance et la suivre. Ce type de trading ce fait sur plusieurs
+                    jours. L'unité de temps est de quatre heures minimum. Il est fréquent de devoir
+                    mettre des unité de temp plus grandes comme : la journée, la semaine ou le mois.
+
+                    Ce type de trading est plus facile à analyser si on ne fait que de l'analyse
+                    technique.
+
+                    N.B : il est rare qu'une position soit ouverte plus de 3 mois.
+
+                    On ouvre une position en suivant la tendance et on la ferme quant la tendence
+                    s'inverse.
+
+                    ex: Tendence haussière --> on ouvre la position à l'achat
+                        La tendence devien baissière --> on ferme la position.
+
+Le trading long terme
+
+
+####
+
+-----------------------------
+Les différents type de marché
+-----------------------------
 
 :Liens_Web:
     * `Le FOREX (Wikipedia)`_
@@ -21,7 +96,7 @@ Les différents type de produits
 .. _`Le FOREX (Wikipedia)`:  https://fr.wikipedia.org/wiki/Forex
 
 
-    :FOREX: Le Forex (en anglais Foreign exchange market ou FX), ou marché des changes, est le 
+    :FOREX (FX): Le Forex (en anglais Foreign exchange market ou FX), ou marché des changes, est le 
             marché sur lequel les devises dites convertibles (paire de devises) sont échangées l’une
             contre l’autre à des taux de change qui varient en permanence.
 
@@ -29,11 +104,38 @@ Les différents type de produits
             ensuite revendre en euro. Il n'y a pas de conversion possible de l'euro en dollar. Le
             Forex est fait pour parier à la hausse ou à la baisse d'une devise face à une autre.
 
+            N.B : Le marché du FOREX est ouvert 24h / 24h.
+
+
+    :Cryptocurerencies:
+            Représentes le marches des cryptomonnaies.
+
+
+    :COMMODITY:
+            Commodity représente le marché des matières premières. Ce marché et subdiviser en
+            sous-catégorie comme :
+
+                * L'énergie (ex: le pétrole et le gaz)
+                * Les matières premières agricoles (ex: le blé et le maïs)
+                * etc ...
+
+
+    :Les indices (ou ETF):
+            IL s'agit d'une agrégation d'action. C'est notement sur ce marché que l'on trouve
+            le CAC40, le DawJones ou le NASDAQ.
+
+
+    :Les obligations (bonds):
+            [todo] touver la définission.
+
+
 ####
 
 ------------------------
 Take-Profit et Stop-Loss
 ------------------------
+
+.. glossary::
 
     :Take-Profit:   Il s'agit d'une limite qui permet de fermer automatiquement sa position si la
                     valeur du produit trader atteind une certaine position. Cette limite doit être
@@ -51,7 +153,88 @@ Take-Profit et Stop-Loss
                     parle de "suivre la position".
 
 
-Pour être efficace, le Take-Profit et le Stop-Loss doivent être placé en fonction de la **volativité**.
+Pour être efficace, le Take-Profit et le Stop-Loss doivent être placé en fonction de la **volativitée**.
+
+####
+
+-----------
+Définission
+-----------
+
+.. glossary::
+
+    :ASK (BID/ASK): ASK correspond au prix au quel le courtier vous vend ce que voulez acheter (Voir
+                    spre).
+
+
+    :BID (BID/ASK): BID correspond au prix au quel le courtier vous achète ce que vous voulez vendre
+                    (voir spred).
+
+
+    :Broker:        Un Borker est un courtier. C'est lui qui vas vous permetre de prendre des
+                    position sur le marché.
+
+                    Un particulier est obligé de passer par un broker pour effectuer des opérations
+                    boursières comme le courtage (l'achat d'action) ou le trading. Chaque opérations
+                    entraine des frais boursiers, c'est pour cette raison que le scalping n'est pas
+                    une bonne solution.
+
+
+    :Effet de levier:        [TODO]: renseigner la définission de l'effet de levier
+
+
+    :spred:         c'est la différence entre le prix d'achat et le prix de vente. Le prix d'un
+                    produit est composé de 2 valeurs : la valeur basse et la valeur haute. Le spred
+                    est donc la différence entre ces deux prix. ce spred représente la marge
+                    appliqué par le courtier (le broker).
+
+                    les opérations d'achats vente se fond en tenant compte de ce spred. Il en
+                    résulte que les opérations d'achats se fond sur la valeur la plus haute
+                    (valeur basse + spred) et les opération de ventes se fond sur la valeur la plus
+                    basse (valeur haute - spred).
+
+                    On parles bid/ask.
+
+
+    :Volativitée:   La volativitée correspond à l'amplitude entre la hausse et la baisse des prix.
+                    Si il y a une grande amplitude, on dit qu'il y a une forte volativitée. Si il y
+                    a une petite amplitude, on dit qu'il y a une faible volativitée.
+
+
+
+####
+
+---------------------------------------------------
+Les différentes plateforme de trading (Les borkers)
+---------------------------------------------------
+
+:Liens_Web:
+    * `markets.fxpro.com`_
+    * `www.avatrade.fr`_
+
+.. _`markets.fxpro.com`: https://markets.fxpro.com
+.. _`www.avatrade.fr`: https://www.avatrade.fr
+
+Les brokers permettent d'effectuer des opérations boursière comme ouvrir et fermer des positions.
+Les brokers ne gagne pas d'argent en faisant du trading, mais à chaque opérations qu'il leur est
+demandée. Sur chaque opérations le tradeur doit payé le spred et les frais de courtage. Par
+conséquent, lorsqu'un broker prpose des formations, ces formations seronts orientées de la façon la
+plus avantageuse pour le broker et pas forcément pour pour le tradeur.
+
+.. warning::
+    Attention ! Tous les brokers ne sont pas légaux ou n'on pas des pratiques commercials
+    acceptablent.
+
+    Pour savoir si un broker est légitime, il faire faire une recherche : "Liste noir de l'AMF"
+
+
+
+
+Les éléments à controller chez un courtier
+==========================================
+
+    #. La régulation : c'est les organismes auprès desquel le broker est enregistré.
+
 
 ####
 
