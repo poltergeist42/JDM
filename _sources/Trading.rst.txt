@@ -138,19 +138,23 @@ Take-Profit et Stop-Loss
 
 .. glossary::
 
-    :Stop-Loss:     IIl s'agit d'une limite qui permet de fermer automatiquement sa position si la
+    **Stop-Loss**     
+                    Il s'agit d'une limite qui permet de fermer automatiquement sa position si la
                     valeur du produit trader atteind une certaine position. Cette limite doit être
                     placée à une valeur inférieur à la valeur actuelle. Elle permet d'arréter les
                     pertes. Cette limite est généralement placée comme éléments de sécurité. On
                     parle de "suivre la position".
 
-    :Take-Profit:   Il s'agit d'une limite qui permet de fermer automatiquement sa position si la
+
+    **Take-Profit**  
+                    Il s'agit d'une limite qui permet de fermer automatiquement sa position si la
                     valeur du produit trader atteind une certaine position. Cette limite doit être
                     placée  valeur suppérieur à la valeur actuel. Elle permet alors d'empocher les
                     gains automatiquement.
 
                     **N.B** : La bonne attitude en trading consistant à "laisser courrir sa position",
                               le Take-profit n'est donc normalement pas utilisé.
+
 
 Pour être efficace, le Take-Profit et le Stop-Loss doivent être placé en fonction de la **volativitée**.
 
@@ -162,11 +166,13 @@ Définission
 
 .. glossary::
 
-    :ASK (BID/ASK): ASK correspond au prix au quel le courtier vous vend ce que voulez acheter (Voir
+    **ASK (BID/ASK)**
+                    ASK correspond au prix au quel le courtier vous vend ce que voulez acheter (Voir
                     spre).
 
-    :BID (BID/ASK): BID correspond au prix au quel le courtier vous achète ce que vous voulez vendre
-                    (voir spred).
+    **BID (BID/ASK)**
+                     BID correspond au prix au quel le courtier vous achète ce que vous voulez
+                     vendre (voir spred).
 
     :Broker:        Un Borker est un courtier. C'est lui qui vas vous permetre de prendre des
                     position sur le marché.
