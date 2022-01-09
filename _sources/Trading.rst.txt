@@ -17,7 +17,7 @@ Les Styles de trading
 ---------------------
 
     :L'Analyse fondamentale:
-                    L'Analyse fondamentale consiste à étudier les différents marché, la santé des
+                    L'Analyse fondamentale consiste à étudier les différents marchés, la santé des
                     entreprises,  le niveau d'offre et de la demande des matières premières, la
                     situation géopolitique, etc...
 
@@ -36,9 +36,9 @@ Les Styles de trading
 
 ####
 
-------------------------------
-Les différents type de Trading
-------------------------------
+-------------------------------
+Les différents types de Trading
+-------------------------------
 
     :Le Scalping:   Le scalping consiste à acheter ou à vendre très rapidement. L'unité de temps vat
                     d'une minute à une heure.
@@ -57,8 +57,8 @@ Les différents type de Trading
 
     :Le day Traiding:
                     Le day trading consite à ouvrir et à fermer ces position dans la journée, c'est
-                    à dire entre l'ouverture et la fermeture quotidienne des marché. L'unité de
-                    temps vat d'une à qutre heure. Contrairement au scalping, il faut laisser le
+                    à dire entre l'ouverture et la fermeture quotidienne des marchés. L'unité de
+                    temps vat de une à quatre heure. Contrairement au scalping, il faut laisser le
                     temp au marché de bouger.
 
 
@@ -76,19 +76,20 @@ Les différents type de Trading
                     On ouvre une position en suivant la tendance et on la ferme quant la tendence
                     s'inverse.
 
-                    ex: Tendence haussière --> on ouvre la position à l'achat
-                        La tendence devien baissière --> on ferme la position.
+                    ex: 
+                        Tendence haussière --> on ouvre la position à l'achat
+                        La tendence devient baissière --> on ferme la position.
 
     :Le trading long terme:
-                    C'est une autre forme de Swing Trading. Dans type de trading, les positions sont
-                    ouvertes sur plusieurs mois.
+                    C'est une autre forme de Swing Trading. Dans ce type de trading, les positions
+                    sont ouvertes sur plusieurs mois.
 
 
 ####
 
------------------------------
-Les différents type de marché
------------------------------
+------------------------------
+Les différents types de marché
+------------------------------
 
 :Liens_Web:
     * `Le FOREX (Wikipedia)`_
@@ -112,8 +113,8 @@ Les différents type de marché
 
 
     :COMMODITY:
-            Commodity représente le marché des matières premières. Ce marché et subdiviser en
-            sous-catégorie comme :
+            Commodity représente le marché des matières premières.
+            Ce marché et subdivisé en sous-catégorie comme :
 
                 * L'énergie (ex: le pétrole et le gaz)
                 * Les matières premières agricoles (ex: le blé et le maïs)
@@ -137,6 +138,12 @@ Take-Profit et Stop-Loss
 
 .. glossary::
 
+    :Stop-Loss:     IIl s'agit d'une limite qui permet de fermer automatiquement sa position si la
+                    valeur du produit trader atteind une certaine position. Cette limite doit être
+                    placée à une valeur inférieur à la valeur actuelle. Elle permet d'arréter les
+                    pertes. Cette limite est généralement placée comme éléments de sécurité. On
+                    parle de "suivre la position".
+
     :Take-Profit:   Il s'agit d'une limite qui permet de fermer automatiquement sa position si la
                     valeur du produit trader atteind une certaine position. Cette limite doit être
                     placée  valeur suppérieur à la valeur actuel. Elle permet alors d'empocher les
@@ -144,14 +151,6 @@ Take-Profit et Stop-Loss
 
                     **N.B** : La bonne attitude en trading consistant à "laisser courrir sa position",
                               le Take-profit n'est donc normalement pas utilisé.
-
-
-    :Stop-Loss:     IIl s'agit d'une limite qui permet de fermer automatiquement sa position si la
-                    valeur du produit trader atteind une certaine position. Cette limite doit être
-                    placée à une valeur inférieur à la valeur actuelle. Elle permet d'arréter les
-                    pertes. Cette limite est généralement placée comme éléments de sécurité. On
-                    parle de "suivre la position".
-
 
 Pour être efficace, le Take-Profit et le Stop-Loss doivent être placé en fonction de la **volativitée**.
 
