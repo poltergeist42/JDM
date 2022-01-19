@@ -231,8 +231,9 @@ définition
 
                         ex: pour un compte de 1000€
 
-                            * Si on ouvre des positions pour 100€, la marge sera de 900€ donc 100€ de
-                            positions ouvertes. Il sera alors possible d'ouvrir de nouvelles positions
+                            * Si on ouvre des positions pour 100€, la marge sera de 900€ donc 100€
+                              de positions ouvertes. Il sera alors possible d'ouvrir de nouvelles
+                              positions.
 
                             * Si on ouvre pour 1000€ de positions, la marge sera de 0. Il ne sera
                               donc plus possible d'ouvrir d'autre position
@@ -362,7 +363,7 @@ Les différentes plate-forme de trading (Les bordiers)
     * `markets.fxpro.com`_
     * `www.avatrade.fr`_
     * `www.gkfx.fr`_
-    * `fr.tradingview.com`
+    * `fr.tradingview.com`_
 
 .. _`markets.fxpro.com`: https://markets.fxpro.com
 .. _`www.avatrade.fr`: https://www.avatrade.fr
