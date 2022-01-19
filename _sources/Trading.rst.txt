@@ -93,8 +93,10 @@ Les différents types de marché
 
 :Liens_Web:
     * `Le FOREX (Wikipedia)`_
+    * `Les principaux indices boursiers`_
 
 .. _`Le FOREX (Wikipedia)`:  https://fr.wikipedia.org/wiki/Forex
+.. _`Les principaux indices boursiers`: https://www.boursier.com/guide/debuter-en-bourse/les-principaux-indices-boursiers
 
 
     :FOREX (FX): Le Forex (en anglais Foreign exchange market ou FX), ou marché des changes, est le 
@@ -104,6 +106,19 @@ Les différents types de marché
             On ne peut pas échanger de devises mais on achète une monnaie numérique €-$ qu'il faut
             ensuite revendre en euro. Il n'y a pas de conversion possible de l'euro en dollar. Le
             Forex est fait pour parier à la hausse ou à la baisse d'une devise face à une autre.
+
+                ex:
+                    La pair Euro/Dollard est représentée : EURUSD
+
+            Bien quétant des matières premières, les métaux comme l'or et l'argent peuvent être
+            définis comme une pair de devise. La valeur sera alors la valeur du métal dans une
+            devise particulière :
+
+                ex:
+                    l'or en Dolard US sera représenter par la pair : XAUUSD
+                    l'or en Euro sera représenter par la pair : XAUEUR
+                    l'argent en Dolard US sera représenter par la pair : XAGUSD
+                    l'argent en Euro sera représenter par la pair : XAGEUR
 
             N.B : Le marché du FOREX est ouvert 24h / 24h.
 
@@ -117,19 +132,41 @@ Les différents types de marché
 
             Ce marché et subdivisé en sous-catégorie comme :
 
-                * L'énergie (ex: le pétrole et le gaz)
-                * Les matières premières agricoles (ex: le blé et le maïs)
+                * L'énergie (ex: le pétrole, le gaz, etc ...)
+                * Les matières premières agricoles (ex: le blé, le maïs, etc ...)
+                * Les métaux (ex: l'or, l'argent, l'aluminium, etc ...)
                 * etc ...
 
 
     :Les indices (ou ETF):
             IL s'agit d'une agrégation d'action. C'est notamment sur ce marché que l'on trouve
-            le CAC40, le DawJones ou le NASDAQ.
+            le CAC40, le Daw Jones ou le NASDAQ.
 
 
     :Les obligations (bonds):
             [todo] trouver la définition.
 
+####
+
+----------------------
+Lecture des graphiques
+----------------------
+
+En trading, les graphiques sont principalement consultés sous la forme de chandeliers japonais.
+Chaque bougie représente une unité de temps. Si l'unité de temps en heure, alors chaque bougie
+représentera une heure. Si l'unité de temps est en jour ou en semaine alors chaque bougie
+représentera un jour ou une semaine.
+
+Il y a 3 types principales charte graphiques :
+
+    * Bougie noire "pleine" ou "vide" sur fond blanc
+    * Bougie verte "pleine" ou "vide" sur fond noir
+    * Bougie rouge ou verte sur fond blanc
+
+Chaque bougie représente le prix du marche à la hausse (bougies vertes ou vide) ou le prix du marché
+à la baisse (bougies rouges ou pleines) sur toute la durée de l'unité séléctionnée. Les barres
+verticales qui sorte de la bougie sont appelée "les mèches". Les mèches reprèsentes le prix le plus
+haut ou le prix le plus bas au cour de l'unité choisie.
 
 ####
 
@@ -173,7 +210,7 @@ définition
 
     **BID (BID/ASK)**
                      BID correspond au prix au quel le courtier vous achète ce que vous voulez
-                     vendre (voir spred).
+                     vendre (voir spread).
 
     **Broker**
                     Un Borker est un courtier. C'est lui qui vas vous permettre de prendre des
@@ -184,21 +221,130 @@ définition
                     entraîne des frais boursiers, c'est pour cette raison que le scalping n'est pas
                     une bonne solution.
 
-    **Effet de levier**
-                    [TODO]: renseigner la définition de l'effet de levier
+    **Compte à marge et Balance**
+                    La marge représente la somme disponible sur le compte que l'on à
+                    provisionné. Chaque fois que l'on prend une position, la marge diminue. Si la
+                    marge est à 0, cela signifie qu'il n'est plus possible d'ouvrir de nouvelle
+                    position. Cela signifie également que toute la marge est utilisé sur des
+                    positions ouvertes. Il ne sera pas possible d'ouvrir de nouvelles position tant
+                    que les positions ouverte ne serons pas fermé (et gagnante).
 
-    **Spred**
+                        ex: pour un compte de 1000€
+
+                            * Si on ouvre des positions pour 100€, la marge sera de 900€ donc 100€ de
+                            positions ouvertes. Il sera alors possible d'ouvrir de nouvelles positions
+
+                            * Si on ouvre pour 1000€ de positions, la marge sera de 0. Il ne sera
+                              donc plus possible d'ouvrir d'autre position
+
+                    La balance représente le gain ou la perte appliqué sur la marge après la
+                    fermeture d'une position.
+
+                        ex: pour un compte de 1000€
+
+                            * Si on ferme une position gagnante avec un gain de 100€, la balance
+                              sera de +100€ et la marge sera alors de 1100€.
+
+                            * Si on ferme une position perdante avec une perte de 100€, la balance
+                              sera de -100€ et la marge sera alors de 900€.
+
+    **Leverage (le levier)**
+                    Leverage (effet de levier), il s'agit d'un coéficiant multiplicateur qui permet
+                    de prendre des position plus grosse.
+
+                        Ex: avec un levier x100
+
+                            si on à 100 l'application du levier permettra de prendre une position
+                            à 1000.
+
+                    Il est généralement préférable d'essayer d'utiliser un levier le plus petit
+                    possible. Il faut appliquer une limite au niveau de levier.
+                    
+                    Un levier de 10 est déja considéré comme élevé mais peut être nécessaire pour
+                    aider les petits portefeuilles à grossier. Le meilleure niveau de levier est
+                    entre 2 et 5 maximum.
+
+
+                    .. warning::
+                        Attention l'effet de levier peut être très dangereux. IL est cependant
+                        nécessaire pour les particuliers. Par exemple il n'est pas possible d'acher
+                        0.01 lot sans utiliser le levier fourni par le broker. Au quel cas la plus
+                        petite unité de lots disponible serai : 1 ce qui la pluspart du temps
+                        représente une valeur trop importante pour le portefeuil d'un particulier.
+
+                        Le levier multiplie également les pertes.
+
+                            ex: pour un compte de 1000€ avec une position ouverte de 100€ avec un
+                            levier de 100 soit une position réel de 10000€
+
+                                Si on ferme la position perdante de 1% soit 1000€, la marge sera
+                                alors de 0. Il n'y au donc plus d'argent sur le compte.
+
+
+
+    **Plate-forme de trading**
+                    Les plate-formes de trading représentent les logiciels (WEB ou on premise)
+                    utilisés pour passer les ordres d'achat / vente, suivre l'évolution des marchés
+                    et effectuer les analyses techniques.
+
+                    Les brockers proposent généralement plusieurs plate-formes possible. La
+                    plate-forme indépendante la plus connue, est le logiciel **MetaTrader4 (MT4)**.
+
+                    MT4 est capable de sinterfacer avec de nombreux brocker différents. Il est
+                    courrant que les brockers propose une version personnalisée de MT4.
+
+    **pip(s)**
+                    Il s'agit de la plus petite variation du marché. Il s'agit du 4ème digit après
+                    la virgule.
+                    
+                    Le 5ème digit est appelée micropips. Cette valeur n'est généralement utilisée
+                    par les tradeurs que pour faire l'arondi du pip. Seul le robot boursier
+                    utilisent le micropips dans les opérations de microscalping.
+    
+    **spread**
                     c'est la différence entre le prix d'achat et le prix de vente. Le prix d'un
-                    produit est composé de 2 valeurs : la valeur basse et la valeur haute. Le spred
-                    est donc la différence entre ces deux prix. ce spred représente la marge
-                    appliqué par le courtier (le broker).
+                    produit est composé de 2 valeurs : la valeur basse et la valeur haute. Le spread
+                    est donc la différence entre ces deux prix. ce spread représente la marge
+                    appliqué par le courtier (le broker). Plus la valeur du spread est petite, plus
+                    se sera interressant pour le trader.
 
-                    les opérations d'achats vente se fond en tenant compte de ce spred. Il en
+                    La valeur du spread peut être soit flotante soit fixe. Les spread flotants peuvent
+                    être soit avantageux pour le tradeur (petit spread) soit très désavantageux (gros
+                    spread). Les spreads fixe on généralement une valeur plus élevé que les petits
+                    spreads flotants mais sont toujours plus avantageux que les gros spread flotants.
+                    Il est donc préférable de choisir des plate-forme de trading ayant des spreads
+                    fixes. **MT4** propose des spreads fixes.
+
+                    les opérations d'achats vente se fond en tenant compte de ce spread. Il en
                     résulte que les opérations d'achats se fond sur la valeur la plus haute
-                    (valeur basse + spred) et les opération de ventes se fond sur la valeur la plus
-                    basse (valeur haute - spred).
+                    (valeur basse + spread) et les opération de ventes se fond sur la valeur la plus
+                    basse (valeur haute - spread).
 
                     On parles bid/ask.
+
+                    Pour éviter de devoir être perdant sur le spread, il faut au minumum que la
+                    borne oposée soit au prix de la prise de position.
+
+                        ex: prise de position à l'achat
+
+                            avec un SELL à 1.1403 et BY à 1.1405
+
+                            Achat sur la valeur haute du spread (le BY). Pour fermer la position, il
+                            faudra vendre, donc vendre à la valeur basse du spread (le SELL).
+
+                            Si on ferme la position immédiatement après l'ouverture, nous serons
+                            alors perdant de 0.0002 pips.
+
+                            Pour ne pas être perdant, il faut vendre après que le prix du marché ai
+                            suffisement augmenté de façon à ce que la valeur du SELL soit au minimum
+                            égale à la valeur qu'avait le BY au moment de l'achat.
+
+
+                    N.B : il est intéressant d'afficher les 2 bornes du spread sur le graphique.
+                    Cela permet d'être plus atentif lors de la prise ou la fermeture de position.
+                    Pour afficher les droites représentants le spread, il faut faire un clique droit
+                    dans la fenêtre du graphique, puis allé dans "properties", puis selectionner
+                    "show ask line".
 
     **Volativitée**
                     La volativitée correspond à l'amplitude entre la hausse et la baisse des prix.
@@ -215,13 +361,19 @@ Les différentes plate-forme de trading (Les bordiers)
 :Liens_Web:
     * `markets.fxpro.com`_
     * `www.avatrade.fr`_
+    * `www.gkfx.fr`_
+    * `fr.tradingview.com`
 
 .. _`markets.fxpro.com`: https://markets.fxpro.com
 .. _`www.avatrade.fr`: https://www.avatrade.fr
+.. _`www.gkfx.fr`: https://www.gkfx.fr
+.. _`fr.tradingview.com`:https://fr.tradingview.com
+
+
 
 Les brokers permettent d'effectuer des opérations boursière comme ouvrir et fermer des positions.
-Les brokers ne gagne pas d'argent en faisant du trading, mais à chaque opérations qu'il leur est
-demandée. Sur chaque opérations le tradeur doit payé le spred et les frais de courtage. Par
+Les brokers ne gagnent pas d'argent en faisant du trading, mais à chaque opérations qu'il leur est
+demandée. Sur chaque opérations le tradeur doit payé le spread et les frais de courtage. Par
 conséquent, lorsqu'un broker propose des formations, ces formations seront orientées de la façon la
 plus avantageuse pour le broker et pas forcément pour pour le tradeur.
 
@@ -238,6 +390,11 @@ Les éléments à contrôler chez un courtier
 ==========================================
 
     #. La régulation : c'est les organismes auprès des-quel le broker est enregistré.
+    #. Vérifier que le brocker n'apparait pas sur la liste noire de l'AMF.
+    #. Le taux de démultiplication appliquer par le levier (ou effet de levier)
+    #. Les produits disponibles : tous les produits ne sont pas forcément disponible ches tous les
+       brockers.
+    
 
 ----------------
 Bonnes pratiques

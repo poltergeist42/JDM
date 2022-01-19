@@ -36,3 +36,14 @@ Multi-Line and multi-Cursor Editing
         * `Multi-Line Editing`_
 
 .. _`Multi-Line Editing`: https://kencenerelli.wordpress.com/2018/03/25/visual-studio-code-multi-line-and-multi-cursor-editing/
+
+Placer une ligne vertical sur la droite de la fenêtre de l'editeur
+==================================================================
+
+File --> Settings --> Rechercher "Editor:Rulers" --> cliquer sur "Edit in settings.json" ::
+
+    "editor.rulers": [
+        
+        100
+        
+        ],
