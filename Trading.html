@@ -383,7 +383,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#les-differents-types-de-marche">Les différents types de marché</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lecture-des-graphiques">Lecture des graphiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#take-profit-et-stop-loss">Take-Profit et Stop-Loss</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#definition">définition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definition">Définition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#les-differentes-plate-forme-de-trading-les-bordiers">Les différentes plate-forme de trading (Les bordiers)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#bonnes-pratiques">Bonnes pratiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#weblinks">Weblinks</a></li>
@@ -437,7 +437,7 @@
 <li><p><a class="reference internal" href="#les-differents-types-de-marche" id="id16">Les différents types de marché</a></p></li>
 <li><p><a class="reference internal" href="#lecture-des-graphiques" id="id17">Lecture des graphiques</a></p></li>
 <li><p><a class="reference internal" href="#take-profit-et-stop-loss" id="id18">Take-Profit et Stop-Loss</a></p></li>
-<li><p><a class="reference internal" href="#definition" id="id19">définition</a></p></li>
+<li><p><a class="reference internal" href="#definition" id="id19">Définition</a></p></li>
 <li><p><a class="reference internal" href="#les-differentes-plate-forme-de-trading-les-bordiers" id="id20">Les différentes plate-forme de trading (Les bordiers)</a></p>
 <ul>
 <li><p><a class="reference internal" href="#les-elements-a-controler-chez-un-courtier" id="id21">Les éléments à contrôler chez un courtier</a></p></li>
@@ -613,12 +613,6 @@ haut ou le prix le plus bas au cour de l’unité choisie.</p>
 <section id="take-profit-et-stop-loss">
 <h2><a class="toc-backref" href="#id18">Take-Profit et Stop-Loss</a><a class="headerlink" href="#take-profit-et-stop-loss" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="glossary">
-<dt id="term-Stop-Loss"><strong>Stop-Loss</strong><a class="headerlink" href="#term-Stop-Loss" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Il s’agit d’une limite qui permet de fermer automatiquement sa position si la
-valeur du produit trader atteint une certaine position. Cette limite doit être
-placée à une valeur inférieur à la valeur actuelle. Elle permet d’arrêter les
-pertes. Cette limite est généralement placée comme éléments de sécurité. On
-parle de « suivre la position ».</p>
-</dd>
 <dt id="term-Take-Profit"><strong>Take-Profit</strong><a class="headerlink" href="#term-Take-Profit" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Il s’agit d’une limite qui permet de fermer automatiquement sa position si la
 valeur du produit trader atteint une certaine position. Cette limite doit être
 placée  valeur supérieur à la valeur actuel. Elle permet alors d’empocher les
@@ -628,12 +622,27 @@ gains automatiquement.</p>
 </dd>
 </dl>
 </dd>
+<dt id="term-Stop-Loss"><strong>Stop-Loss</strong><a class="headerlink" href="#term-Stop-Loss" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Il s’agit d’une limite qui permet de fermer automatiquement sa position si la
+valeur du produit trader atteint une certaine position. Cette limite doit être
+placée à une valeur inférieur à la valeur actuelle. Elle permet d’arrêter les
+pertes. Cette limite est généralement placée comme éléments de sécurité. On
+parle de « suivre la position ».</p>
+</dd>
+<dt id="term-Trailling-stop"><strong>Trailling stop</strong><a class="headerlink" href="#term-Trailling-stop" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Le Trailling Stop (stop suiveur en français) est une gestion automatisé du
+niveau du Stop-Loss. On définit un niveau en Pips ou en pourcentage par rapport
+au prix du marché. Tant que le traid est gagnat, le trailling stop modifiera
+automatiquement le Stop-Loss. La valeur n’est pas réajustée en cas de traid
+perdant. Cela permet de garder un Stop-Loss suffisement proche du prix du marché
+et également de fermer automatiquement la position lorsque le prix du marché
+atteind le niveau du Stop-Loss.</p>
+<p><strong>N.B</strong> : Toutes les plate-formes ne proposent pas le trailling stop.</p>
+</dd>
 </dl>
 <p>Pour être efficace, le Take-Profit et le Stop-Loss doivent être placé en fonction de la <strong>volativitée</strong>.</p>
 </section>
 <hr class="docutils" />
 <section id="definition">
-<h2><a class="toc-backref" href="#id19">définition</a><a class="headerlink" href="#definition" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><a class="toc-backref" href="#id19">Définition</a><a class="headerlink" href="#definition" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="glossary">
 <dt id="term-ASK-BID-ASK"><strong>ASK (BID/ASK)</strong><a class="headerlink" href="#term-ASK-BID-ASK" title="Lien permanent vers ce terme">¶</a></dt><dd><p>ASK correspond au prix au quel le courtier vous vend ce que voulez acheter (Voir
 spre).</p>
@@ -649,11 +658,11 @@ entraîne des frais boursiers, c’est pour cette raison que le scalping n’est
 une bonne solution.</p>
 </dd>
 <dt id="term-Compte-a-marge-et-Balance"><strong>Compte à marge et Balance</strong><a class="headerlink" href="#term-Compte-a-marge-et-Balance" title="Lien permanent vers ce terme">¶</a></dt><dd><p>La marge représente la somme disponible sur le compte que l’on à
-provisionné. Chaque fois que l’on prend une position, la marge diminue. Si la
-marge est à 0, cela signifie qu’il n’est plus possible d’ouvrir de nouvelle
-position. Cela signifie également que toute la marge est utilisé sur des
-positions ouvertes. Il ne sera pas possible d’ouvrir de nouvelles position tant
-que les positions ouverte ne serons pas fermé (et gagnante).</p>
+provisionné. On parle également de Capital. Chaque fois que l’on prend une
+position, la marge diminue. Si la marge est à 0, cela signifie qu’il n’est plus
+possible d’ouvrir de nouvelle position. Cela signifie également que toute la
+marge est utilisé sur des positions ouvertes. Il ne sera pas possible d’ouvrir
+de nouvelles position tant que les positions ouverte ne serons pas fermées.</p>
 <blockquote>
 <div><p>ex: pour un compte de 1000€</p>
 <blockquote>
@@ -680,6 +689,22 @@ sera de -100€ et la marge sera alors de 900€.</p></li>
 </div></blockquote>
 </div></blockquote>
 </dd>
+<dt id="term-GAPS"><strong>GAPS</strong><a class="headerlink" href="#term-GAPS" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Le GAP est représente l’intervale entre la valeur de fermeture et la valeur
+d’ouverture du marché. Il est fréquent que l’ouverture du marché soit à un prix
+différent que celui de la fermeture précédente.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Si le Stop-Loss a été mal positionné, l’ouverture du marché peut se faire
+au delà de la limite fixée par le Stop-Loss. Dans cette situation, la
+plupart des brockers ferment la postition au prix d’ouverture du marché et
+non à la valeur du Stop-Loss. Les pertes seront alors plus importantes que
+celles qui ont été calcullées. C’est pourquoi il est important de placé le
+Stop-Loss en fonction de la volativité. Bien que le prix d’ouverture du
+marché peut être au delà de l valeur de la volativité, il est peut fréquent
+que l’écart vers le prix du marché soit beaucoup plus important que l’écart
+compris dans la volativitée.</p>
+</div>
+</dd>
 <dt id="term-Leverage-le-levier"><strong>Leverage (le levier)</strong><a class="headerlink" href="#term-Leverage-le-levier" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Leverage (effet de levier), il s’agit d’un coéficiant multiplicateur qui permet
 de prendre des position plus grosse.</p>
 <blockquote>
@@ -694,6 +719,18 @@ possible. Il faut appliquer une limite au niveau de levier.</p>
 <p>Un levier de 10 est déja considéré comme élevé mais peut être nécessaire pour
 aider les petits portefeuilles à grossier. Le meilleure niveau de levier est
 entre 2 et 5 maximum.</p>
+<p>N.B : La valeur du contrat (Valeur d’un lot) est souvent beaucoup trop
+importante pour être trader par un particulier. Le volume Minimal est souvent de
+0.1 lot ce qui reste très élevé. Sans levieril ne serait pas possible d’ouvrir
+une position.</p>
+<p>ex: pour du Forex EURUSD</p>
+<blockquote>
+<div><p>Valuer du lot = 1000000 €
+Volume minimum = 0.1 lot soit 10000 €</p>
+<p>Si la balance est de 500 €, il ne sera pas possible d’ouvrir une position.
+Il faut un levier de 20 minimum pour pouvoir prendre une position sur le
+volume minimal.</p>
+</div></blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
 <p>Attention l’effet de levier peut être très dangereux. IL est cependant
@@ -712,6 +749,21 @@ alors de 0. Il n’y au donc plus d’argent sur le compte.</p>
 </div></blockquote>
 </div>
 </dd>
+<dt id="term-Long-short"><strong>Long &amp; short</strong><a class="headerlink" href="#term-Long-short" title="Lien permanent vers ce terme">¶</a></dt><dd><p>On dit que l’on est « long » lorsque on achète. A l’inverse, on dit que l’on ai
+« short » lorsque on vend.</p>
+</dd>
+<dt id="term-Overnight-Swap"><strong>Overnight Swap</strong><a class="headerlink" href="#term-Overnight-Swap" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Il s’agit d’une commition appliqué par le brocker sur les positions ouvertes sur
+plus d’une journée. Cette commission est appliquée tous les jours. La valeur de
+cette commission peut être positive mais est générallement négative. Cette
+valeur est indiquée dans la colonne « Swap » de la plate-forme de trading. Ce Swap
+est appliqué directement sur le profit (qu’il soit positif ou négatif) de chaque
+position ouverte.</p>
+<p>Chaque broker applique ces propre valeurs de Swap en fonction du produit
+(devises, matières premières, les indices, etc …). Ces information sont
+disponibles sur les sites de chaque broker.</p>
+<p><strong>N.B</strong>: la valeur étant un pourcentage, cette valeur augmente de façon de plus
+en plus importante en fonction de la durée du traid.</p>
+</dd>
 <dt id="term-Plate-forme-de-trading"><strong>Plate-forme de trading</strong><a class="headerlink" href="#term-Plate-forme-de-trading" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Les plate-formes de trading représentent les logiciels (WEB ou on premise)
 utilisés pour passer les ordres d’achat / vente, suivre l’évolution des marchés
 et effectuer les analyses techniques.</p>
@@ -720,11 +772,32 @@ plate-forme indépendante la plus connue, est le logiciel <strong>MetaTrader4 (M
 <p>MT4 est capable de sinterfacer avec de nombreux brocker différents. Il est
 courrant que les brockers propose une version personnalisée de MT4.</p>
 </dd>
-<dt id="term-pip-s"><strong>pip(s)</strong><a class="headerlink" href="#term-pip-s" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Il s’agit de la plus petite variation du marché. Il s’agit du 4ème digit après
+<dt id="term-pip-s-ou-tick-s"><strong>pip(s) ou tick(s)</strong><a class="headerlink" href="#term-pip-s-ou-tick-s" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Il s’agit de la plus petite variation du marché. Il s’agit du 4ème digit après
 la virgule.</p>
 <p>Le 5ème digit est appelée micropips. Cette valeur n’est généralement utilisée
 par les tradeurs que pour faire l’arondi du pip. Seul le robot boursier
 utilisent le micropips dans les opérations de microscalping.</p>
+<p>La valeur d’un pip est :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Valeur</span><span class="p">(</span><span class="n">pip</span><span class="p">)</span> <span class="o">=</span> <span class="n">Taille</span><span class="p">(</span><span class="n">pip</span><span class="p">)</span> <span class="n">x</span> <span class="n">Taille</span><span class="p">(</span><span class="n">lot</span><span class="p">)</span> <span class="n">x</span> <span class="n">Volume</span><span class="p">(</span><span class="n">valeur</span> <span class="n">du</span> <span class="n">spread</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Attention, la valeur du pip est en Dolard. Il faut la convertir en Euros.</p>
+<p>ex: pour du FOREX EURUSD</p>
+<blockquote>
+<div><p>Taille du pip           = 0.0001
+Taille du lot           = 100000
+Valeur du spread        = 1.6</p>
+<p>V(pip) = 0.0001 x 100000 x 1.6
+v(pip) = 16$</p>
+</div></blockquote>
+</dd>
+<dt id="term-Specifications"><strong>Specifications</strong><a class="headerlink" href="#term-Specifications" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Les spécifications represente le contrat du produit. Ce contrat permet
+d’identifier la valeur d’un lot, le nombre de digit après la virgule, si le
+spread est fixe ou flotant, le volume minimal qu’il est possible d’acheter
+(souvent 0.01 lot) et d’autre informations qu’il peux être utile de connaitre
+avant de prendre une position sur un produit.</p>
+<p>Il est fortement conseillé de lire les spécifications avant de s’engager sur un
+produit.</p>
 </dd>
 <dt id="term-spread"><strong>spread</strong><a class="headerlink" href="#term-spread" title="Lien permanent vers ce terme">¶</a></dt><dd><p>c’est la différence entre le prix d’achat et le prix de vente. Le prix d’un
 produit est composé de 2 valeurs : la valeur basse et la valeur haute. Le spread
@@ -766,6 +839,13 @@ dans la fenêtre du graphique, puis allé dans « properties », puis selectio
 <dt id="term-Volativitee"><strong>Volativitée</strong><a class="headerlink" href="#term-Volativitee" title="Lien permanent vers ce terme">¶</a></dt><dd><p>La volativitée correspond à l’amplitude entre la hausse et la baisse des prix.
 Si il y a une grande amplitude, on dit qu’il y a une forte volativitée. Si il y
 a une petite amplitude, on dit qu’il y a une faible volativitée.</p>
+<p>L’un des indicateurs techniques permettant d’identifier la volativité est l’ATR
+(Average True Range).</p>
+<blockquote>
+<div><p>ex: Pour une valeur imédiate  de 50</p>
+<p>La valeur de la volativité est de + ou - 50 points dans l’intervale de temps
+observé (1 days, 1 weeck, etc …)</p>
+</div></blockquote>
 </dd>
 </dl>
 </section>
@@ -831,6 +911,7 @@ qu’elle se ferme automatiquement lorsque la position viendra croiser ou rebond
 le Stop-Loss.</p>
 </div></blockquote>
 </li>
+<li><p>Lire les spécifications des produits à trader pour chaque broker utilisé.</p></li>
 </ol>
 </div></blockquote>
 </section>
