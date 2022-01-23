@@ -176,14 +176,6 @@ Take-Profit et Stop-Loss
 
 .. glossary::
 
-    **Stop-Loss**     
-                    Il s'agit d'une limite qui permet de fermer automatiquement sa position si la
-                    valeur du produit trader atteint une certaine position. Cette limite doit être
-                    placée à une valeur inférieur à la valeur actuelle. Elle permet d’arrêter les
-                    pertes. Cette limite est généralement placée comme éléments de sécurité. On
-                    parle de "suivre la position".
-
-
     **Take-Profit**  
                     Il s'agit d'une limite qui permet de fermer automatiquement sa position si la
                     valeur du produit trader atteint une certaine position. Cette limite doit être
@@ -194,12 +186,32 @@ Take-Profit et Stop-Loss
                               le Take-profit n'est donc normalement pas utilisé.
 
 
+    **Stop-Loss**     
+                    Il s'agit d'une limite qui permet de fermer automatiquement sa position si la
+                    valeur du produit trader atteint une certaine position. Cette limite doit être
+                    placée à une valeur inférieur à la valeur actuelle. Elle permet d’arrêter les
+                    pertes. Cette limite est généralement placée comme éléments de sécurité. On
+                    parle de "suivre la position".
+
+
+    **Trailling stop**
+                    Le Trailling Stop (stop suiveur en français) est une gestion automatisé du
+                    niveau du Stop-Loss. On définit un niveau en Pips ou en pourcentage par rapport
+                    au prix du marché. Tant que le traid est gagnat, le trailling stop modifiera
+                    automatiquement le Stop-Loss. La valeur n'est pas réajustée en cas de traid
+                    perdant. Cela permet de garder un Stop-Loss suffisement proche du prix du marché
+                    et également de fermer automatiquement la position lorsque le prix du marché
+                    atteind le niveau du Stop-Loss.
+                    
+                    **N.B** : Toutes les plate-formes ne proposent pas le trailling stop. 
+
+
 Pour être efficace, le Take-Profit et le Stop-Loss doivent être placé en fonction de la **volativitée**.
 
 ####
 
 -----------
-définition
+Définition
 -----------
 
 .. glossary::
@@ -223,16 +235,17 @@ définition
 
     **Compte à marge et Balance**
                     La marge représente la somme disponible sur le compte que l'on à
-                    provisionné. Chaque fois que l'on prend une position, la marge diminue. Si la
-                    marge est à 0, cela signifie qu'il n'est plus possible d'ouvrir de nouvelle
-                    position. Cela signifie également que toute la marge est utilisé sur des
-                    positions ouvertes. Il ne sera pas possible d'ouvrir de nouvelles position tant
-                    que les positions ouverte ne serons pas fermé (et gagnante).
+                    provisionné. On parle également de Capital. Chaque fois que l'on prend une
+                    position, la marge diminue. Si la marge est à 0, cela signifie qu'il n'est plus
+                    possible d'ouvrir de nouvelle position. Cela signifie également que toute la
+                    marge est utilisé sur des positions ouvertes. Il ne sera pas possible d'ouvrir
+                    de nouvelles position tant que les positions ouverte ne serons pas fermées.
 
                         ex: pour un compte de 1000€
 
-                            * Si on ouvre des positions pour 100€, la marge sera de 900€ donc 100€ de
-                            positions ouvertes. Il sera alors possible d'ouvrir de nouvelles positions
+                            * Si on ouvre des positions pour 100€, la marge sera de 900€ donc 100€
+                              de positions ouvertes. Il sera alors possible d'ouvrir de nouvelles
+                              positions.
 
                             * Si on ouvre pour 1000€ de positions, la marge sera de 0. Il ne sera
                               donc plus possible d'ouvrir d'autre position
@@ -247,6 +260,24 @@ définition
 
                             * Si on ferme une position perdante avec une perte de 100€, la balance
                               sera de -100€ et la marge sera alors de 900€.
+
+
+    **GAPS**
+                    Le GAP est représente l'intervale entre la valeur de fermeture et la valeur
+                    d'ouverture du marché. Il est fréquent que l'ouverture du marché soit à un prix
+                    différent que celui de la fermeture précédente.
+
+                    .. warning::
+                        Si le Stop-Loss a été mal positionné, l'ouverture du marché peut se faire
+                        au delà de la limite fixée par le Stop-Loss. Dans cette situation, la
+                        plupart des brockers ferment la postition au prix d'ouverture du marché et
+                        non à la valeur du Stop-Loss. Les pertes seront alors plus importantes que
+                        celles qui ont été calcullées. C'est pourquoi il est important de placé le
+                        Stop-Loss en fonction de la volativité. Bien que le prix d'ouverture du
+                        marché peut être au delà de l valeur de la volativité, il est peut fréquent
+                        que l'écart vers le prix du marché soit beaucoup plus important que l'écart
+                        compris dans la volativitée.
+
 
     **Leverage (le levier)**
                     Leverage (effet de levier), il s'agit d'un coéficiant multiplicateur qui permet
@@ -263,6 +294,20 @@ définition
                     Un levier de 10 est déja considéré comme élevé mais peut être nécessaire pour
                     aider les petits portefeuilles à grossier. Le meilleure niveau de levier est
                     entre 2 et 5 maximum.
+
+                    N.B : La valeur du contrat (Valeur d'un lot) est souvent beaucoup trop
+                    importante pour être trader par un particulier. Le volume Minimal est souvent de
+                    0.1 lot ce qui reste très élevé. Sans levieril ne serait pas possible d'ouvrir
+                    une position.
+
+                    ex: pour du Forex EURUSD
+
+                        Valuer du lot = 1000000 €
+                        Volume minimum = 0.1 lot soit 10000 €
+
+                        Si la balance est de 500 €, il ne sera pas possible d'ouvrir une position.
+                        Il faut un levier de 20 minimum pour pouvoir prendre une position sur le
+                        volume minimal.
 
 
                     .. warning::
@@ -281,6 +326,26 @@ définition
                                 alors de 0. Il n'y au donc plus d'argent sur le compte.
 
 
+    **Long & short**
+                    On dit que l'on est "long" lorsque on achète. A l'inverse, on dit que l'on ai
+                    "short" lorsque on vend.
+
+
+    **Overnight Swap**
+                    Il s'agit d'une commition appliqué par le brocker sur les positions ouvertes sur
+                    plus d'une journée. Cette commission est appliquée tous les jours. La valeur de
+                    cette commission peut être positive mais est générallement négative. Cette
+                    valeur est indiquée dans la colonne "Swap" de la plate-forme de trading. Ce Swap
+                    est appliqué directement sur le profit (qu'il soit positif ou négatif) de chaque
+                    position ouverte.
+
+                    Chaque broker applique ces propre valeurs de Swap en fonction du produit
+                    (devises, matières premières, les indices, etc ...). Ces information sont
+                    disponibles sur les sites de chaque broker.
+
+                    **N.B**: la valeur étant un pourcentage, cette valeur augmente de façon de plus
+                    en plus importante en fonction de la durée du traid.
+
 
     **Plate-forme de trading**
                     Les plate-formes de trading représentent les logiciels (WEB ou on premise)
@@ -293,13 +358,40 @@ définition
                     MT4 est capable de sinterfacer avec de nombreux brocker différents. Il est
                     courrant que les brockers propose une version personnalisée de MT4.
 
-    **pip(s)**
+    **pip(s) ou tick(s)**
                     Il s'agit de la plus petite variation du marché. Il s'agit du 4ème digit après
                     la virgule.
                     
                     Le 5ème digit est appelée micropips. Cette valeur n'est généralement utilisée
                     par les tradeurs que pour faire l'arondi du pip. Seul le robot boursier
                     utilisent le micropips dans les opérations de microscalping.
+
+                    La valeur d'un pip est : ::
+
+                        Valeur(pip) = Taille(pip) x Taille(lot) x Volume(valeur du spread)
+
+                    
+                    Attention, la valeur du pip est en Dolard. Il faut la convertir en Euros.
+
+                    ex: pour du FOREX EURUSD
+
+                        Taille du pip           = 0.0001
+                        Taille du lot           = 100000
+                        Valeur du spread        = 1.6
+
+                        V(pip) = 0.0001 x 100000 x 1.6
+                        v(pip) = 16$
+
+    **Specifications**
+                    Les spécifications represente le contrat du produit. Ce contrat permet
+                    d'identifier la valeur d'un lot, le nombre de digit après la virgule, si le
+                    spread est fixe ou flotant, le volume minimal qu'il est possible d'acheter
+                    (souvent 0.01 lot) et d'autre informations qu'il peux être utile de connaitre
+                    avant de prendre une position sur un produit.
+
+                    Il est fortement conseillé de lire les spécifications avant de s'engager sur un
+                    produit. 
+
     
     **spread**
                     c'est la différence entre le prix d'achat et le prix de vente. Le prix d'un
@@ -351,6 +443,15 @@ définition
                     Si il y a une grande amplitude, on dit qu'il y a une forte volativitée. Si il y
                     a une petite amplitude, on dit qu'il y a une faible volativitée.
 
+                    L'un des indicateurs techniques permettant d'identifier la volativité est l'ATR
+                    (Average True Range). 
+
+                        ex: Pour une valeur imédiate  de 50
+
+                        La valeur de la volativité est de + ou - 50 points dans l'intervale de temps
+                        observé (1 days, 1 weeck, etc ...)
+                            
+
 
 ####
 
@@ -362,7 +463,7 @@ Les différentes plate-forme de trading (Les bordiers)
     * `markets.fxpro.com`_
     * `www.avatrade.fr`_
     * `www.gkfx.fr`_
-    * `fr.tradingview.com`
+    * `fr.tradingview.com`_
 
 .. _`markets.fxpro.com`: https://markets.fxpro.com
 .. _`www.avatrade.fr`: https://www.avatrade.fr
@@ -423,6 +524,8 @@ Bonnes pratiques
         La bonne pratique consiste à laisser courir une position si elle est gagnante et attendre
         qu'elle se ferme automatiquement lorsque la position viendra croiser ou rebondir sur
         le Stop-Loss.
+
+    #. Lire les spécifications des produits à trader pour chaque broker utilisé.
 
 ####
 
