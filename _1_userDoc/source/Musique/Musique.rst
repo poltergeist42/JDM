@@ -2,9 +2,8 @@
 Musique
 ========
 
-.. contents::
-   :backlinks: top
-   :depth: 2
+.. toctree::
+   :maxdepth: 2
 
    theorie/theorie
    MAO/MAO

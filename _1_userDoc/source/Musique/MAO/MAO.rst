@@ -2,12 +2,9 @@
 **M**usique **A**ssistée (par) **Ordinateur**
 =============================================
 
-.. toctree::
-   :maxdeph: 3
-   :caption: MAO
 
 .. contents::
-    :backlinks: top
+   :backlinks: top
 
 
 ####
@@ -21,8 +18,8 @@ Matos
     * `Focusrite Scarlett 2i2 in a Linux Home Studio`_
     * `Focusrite Scarlett on linux`_
 
-.. _`Focusrite Scarlett 2i2 in a Linux Home Studio`:https://sanderson.band/2017/09/04/focusrite-scarlet-2i2-in-a-linux-home-studio/
-.. _`Focusrite Scarlett on linux`:https://youtu.be/5zFA5piXf8Q
+.. _`Focusrite Scarlett 2i2 in a Linux Home Studio`: https://sanderson.band/2017/09/04/focusrite-scarlet-2i2-in-a-linux-home-studio/
+.. _`Focusrite Scarlett on linux`: https://youtu.be/5zFA5piXf8Q
 
 ####
 
