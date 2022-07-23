@@ -14,9 +14,9 @@ Le Cycle des Quintes
 --------------------
 
 :Liens_WEB:
-    * `ComposerSaMusique - CYCLE DES QUINTES le guide ultime 1-4 - COMPRENDRE le cycle`_
+    * `ComposerSaMusique - COMPRENDRE le cycle`_
 
-.. _`ComposerSaMusique - CYCLE DES QUINTES le guide ultime 1-4 - COMPRENDRE le cycle`:https://www.youtube.com/watch?v=-5CqU5MMz3k
+.. _`ComposerSaMusique - COMPRENDRE le cycle`:https://www.youtube.com/watch?v=-5CqU5MMz3k
 
 La Tonalité
 ===========
