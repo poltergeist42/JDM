@@ -2,9 +2,6 @@
 Théorie musicale
 ================
 
-.. toctree::
-   :maxdepth: 3
-   :caption: Théorie Musicale
 
 .. contents::
     :backlinks: top

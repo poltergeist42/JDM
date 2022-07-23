@@ -2,9 +2,6 @@
 **M**usique **A**ssistée (par) **Ordinateur**
 =============================================
 
-.. toctree::
-   :maxdepth: 3
-   :caption: MAO
 
 .. contents::
    :backlinks: top

@@ -3,10 +3,6 @@ Guitare
 =======
 
 
-.. toctree::
-   :maxdepth: 3
-   :caption: Guitare
-
 .. contents::
     :backlinks: top
 
