@@ -3,11 +3,11 @@
 =============================================
 
 .. toctree::
-   :maxdeph: 3
+   :maxdepth: 3
    :caption: MAO
 
-.. .. contents::
-..    :backlinks: top
+.. contents::
+   :backlinks: top
 
 
 ####
