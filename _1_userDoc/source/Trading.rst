@@ -45,12 +45,12 @@ Les différents types de Trading
                     
                     Le scalping est généralement utilisé par les tradeurs débutants car la très
                     courte durée entre l'entré en position et la sortie donne l'illusion de pouvoir
-                    gérer les risque plus facilement.
+                    gérer les risques plus facilement.
 
                     Ce type de trading de trading n'est en réalité bénéfique qu'aux brokers (Les
                     plate-forme de trading) car une commission doit être versée par le tradeur au
-                    broker (les frais de courtages) pour chaque prise de position, même si la
-                    position est perdantes.
+                    broker (les frais de courtages) pour chaque prise de position, en plus du
+                    spread, même si la position est perdantes.
 
                     Cette pratique est à éviter absolument !
 
@@ -66,7 +66,8 @@ Les différents types de Trading
                     Le Swing trading consiste à essayer de trouver des mouvement sur les marchés
                     pour trouvé la tendance et la suivre. Ce type de trading ce fait sur plusieurs
                     jours. L'unité de temps est de quatre heures minimum. Il est fréquent de devoir
-                    mettre des unité de temps plus grandes comme : la journée, la semaine ou le mois.
+                    mettre des unités de temps plus grandes comme : la journée, la semaine ou le
+                    mois.
 
                     Ce type de trading est plus facile à analyser si on ne fait que de l'analyse
                     technique.
@@ -77,8 +78,8 @@ Les différents types de Trading
                     s'inverse.
 
                     ex: 
-                        tendance haussière --> on ouvre la position à l'achat
-                        La tendance devient baissière --> on ferme la position.
+                        tendance haussière --> on ouvre la position à l'achat. Quand La tendance
+                        devient baissière, on ferme la position.
 
     :Le trading long terme:
                     C'est une autre forme de Swing Trading. Dans ce type de trading, les positions
@@ -99,7 +100,7 @@ Les différents types de marché
 .. _`Les principaux indices boursiers`: https://www.boursier.com/guide/debuter-en-bourse/les-principaux-indices-boursiers
 
 
-    :FOREX (FX): Le Forex (en anglais Foreign exchange market ou FX), ou marché des changes, est le 
+    :FOREX (FX): Le Forex (en anglais Foreign eXchange market ou FX), ou marché des changes, est le 
             marché sur lequel les devises dites convertibles (paire de devises) sont échangées l’une
             contre l’autre à des taux de change qui varient en permanence.
 
@@ -115,10 +116,10 @@ Les différents types de marché
             devise particulière :
 
                 ex:
-                    l'or en Dolard US sera représenter par la pair : XAUUSD
-                    l'or en Euro sera représenter par la pair : XAUEUR
-                    l'argent en Dolard US sera représenter par la pair : XAGUSD
-                    l'argent en Euro sera représenter par la pair : XAGEUR
+                    * l'or en Dolard US sera représenté par la pair : XAUUSD
+                    * l'or en Euro sera représenté par la pair : XAUEUR
+                    * l'argent en Dolard US sera représenté par la pair : XAGUSD
+                    * l'argent en Euro sera représenté par la pair : XAGEUR
 
             N.B : Le marché du FOREX est ouvert 24h / 24h.
 
@@ -153,7 +154,7 @@ Lecture des graphiques
 ----------------------
 
 En trading, les graphiques sont principalement consultés sous la forme de chandeliers japonais.
-Chaque bougie représente une unité de temps. Si l'unité de temps en heure, alors chaque bougie
+Chaque bougie représente une unité de temps. Si l'unité de temps est en heure, alors chaque bougie
 représentera une heure. Si l'unité de temps est en jour ou en semaine alors chaque bougie
 représentera un jour ou une semaine.
 
@@ -165,8 +166,8 @@ Il y a 3 types principales charte graphiques :
 
 Chaque bougie représente le prix du marche à la hausse (bougies vertes ou vide) ou le prix du marché
 à la baisse (bougies rouges ou pleines) sur toute la durée de l'unité séléctionnée. Les barres
-verticales qui sorte de la bougie sont appelée "les mèches". Les mèches reprèsentes le prix le plus
-haut ou le prix le plus bas au cour de l'unité choisie.
+verticales qui sortent de la bougie sont appelées "les mèches". Les mèches reprèsenteent le prix le
+plus haut ou le prix le plus bas au cour de l'unité choisie.
 
 ####
 
@@ -178,9 +179,9 @@ Take-Profit et Stop-Loss
 
     **Take-Profit**  
                     Il s'agit d'une limite qui permet de fermer automatiquement sa position si la
-                    valeur du produit trader atteint une certaine position. Cette limite doit être
-                    placée  valeur supérieur à la valeur actuel. Elle permet alors d'empocher les
-                    gains automatiquement.
+                    valeur du produit tradée atteint une certaine position. Cette limite doit être
+                    placée  à une valeur supérieur à la valeur actuel. Elle permet alors d'empocher
+                    les gains automatiquement.
 
                     **N.B** : La bonne attitude en trading consistant à "laisser courir sa position",
                               le Take-profit n'est donc normalement pas utilisé.
@@ -188,7 +189,7 @@ Take-Profit et Stop-Loss
 
     **Stop-Loss**     
                     Il s'agit d'une limite qui permet de fermer automatiquement sa position si la
-                    valeur du produit trader atteint une certaine position. Cette limite doit être
+                    valeur du produit tradé atteint une certaine position. Cette limite doit être
                     placée à une valeur inférieur à la valeur actuelle. Elle permet d’arrêter les
                     pertes. Cette limite est généralement placée comme éléments de sécurité. On
                     parle de "suivre la position".
@@ -197,7 +198,7 @@ Take-Profit et Stop-Loss
     **Trailling stop**
                     Le Trailling Stop (stop suiveur en français) est une gestion automatisé du
                     niveau du Stop-Loss. On définit un niveau en Pips ou en pourcentage par rapport
-                    au prix du marché. Tant que le traid est gagnat, le trailling stop modifiera
+                    au prix du marché. Tant que le traid est gagnant, le trailling stop modifiera
                     automatiquement le Stop-Loss. La valeur n'est pas réajustée en cas de traid
                     perdant. Cela permet de garder un Stop-Loss suffisement proche du prix du marché
                     et également de fermer automatiquement la position lorsque le prix du marché
@@ -206,7 +207,8 @@ Take-Profit et Stop-Loss
                     **N.B** : Toutes les plate-formes ne proposent pas le trailling stop. 
 
 
-Pour être efficace, le Take-Profit et le Stop-Loss doivent être placé en fonction de la **volativitée**.
+Pour être efficace, le Take-Profit, le Stop-Loss et le Trailling Stop doivent être placé en fonction
+de la **volativitée**.
 
 ####
 
@@ -218,7 +220,7 @@ Définition
 
     **ASK (BID/ASK)**
                     ASK correspond au prix au quel le courtier vous vend ce que voulez acheter (Voir
-                    spre).
+                    spread).
 
     **BID (BID/ASK)**
                      BID correspond au prix au quel le courtier vous achète ce que vous voulez
@@ -226,12 +228,12 @@ Définition
 
     **Broker**
                     Un Borker est un courtier. C'est lui qui vas vous permettre de prendre des
-                    position sur le marché.
+                    positions sur le marché.
 
                     Un particulier est obligé de passer par un broker pour effectuer des opérations
                     boursières comme le courtage (l'achat d'action) ou le trading. Chaque opérations
-                    entraîne des frais boursiers, c'est pour cette raison que le scalping n'est pas
-                    une bonne solution.
+                    entraînent des frais boursiers, c'est pour cette raison que le scalping n'est
+                    pas une bonne solution.
 
     **Compte à marge et Balance**
                     La marge représente la somme disponible sur le compte que l'on à
@@ -468,7 +470,7 @@ Les différentes plate-forme de trading (Les bordiers)
 .. _`markets.fxpro.com`: https://markets.fxpro.com
 .. _`www.avatrade.fr`: https://www.avatrade.fr
 .. _`www.gkfx.fr`: https://www.gkfx.fr
-.. _`fr.tradingview.com`:https://fr.tradingview.com
+.. _`fr.tradingview.com`: https://fr.tradingview.com
 
 
 

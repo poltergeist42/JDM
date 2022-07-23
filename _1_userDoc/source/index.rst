@@ -34,6 +34,7 @@ Mon journal de manip
    MAC_OS
    Machine_learning
    MQTT
+   Musique/Musique
    Optimisation_Travail
    Powershell
    Python
