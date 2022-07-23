@@ -4,7 +4,7 @@ Guitare
 
 
 .. toctree::
-   :maxdeph: 3
+   :maxdepth: 3
    :caption: Guitare
 
 .. contents::
