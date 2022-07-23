@@ -1,6 +1,6 @@
-=============================================
-**M**usique **A**ssistée (par) **Ordinateur**
-=============================================
+=======================================
+Musique Assistée (par) Ordinateur - MAO
+=======================================
 
 
 .. contents::
@@ -20,6 +20,38 @@ Matos
 
 .. _`Focusrite Scarlett 2i2 in a Linux Home Studio`: https://sanderson.band/2017/09/04/focusrite-scarlet-2i2-in-a-linux-home-studio/
 .. _`Focusrite Scarlett on linux`: https://youtu.be/5zFA5piXf8Q
+
+####
+
+---------------------------------
+Préparation de Cover (sous Linux)
+---------------------------------
+
+Ensemble d'éléments permettant de récupérer un fichier audio et de le préparer comme backtrack pour
+un travail sous Ardour.
+
+Extraction de l'audio depuis une vidéo Youtube
+==============================================
+
+:Logiciels:
+    * `video-downloader`_
+       Le logiciel est disponible dans snap
+
+.. _`video-downloader` : https://github.com/Unrud/video-downloader
+
+:Instructions:
+    #. Se positionner sur l'onglet "Audio"
+    #. Saisir l'url de la video souhaitée
+    #. Cliquer sur le bouton "Download"
+       Après l'extraction, le fichier sera disponible au format MP3 dans
+       "~/Downloads/VideoDownloader"
+
+    
+    .. image:: ./images/video-downloader.png
+       :width: 400 px
+       :align: center
+
+    **N.B:** Le nom du fichier doit être modifié car il comprend des caractères spéciaux
 
 ####
 
