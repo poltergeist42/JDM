@@ -4,6 +4,7 @@ Musique Assistée (par) Ordinateur - MAO
 
 
 .. contents::
+   :maxdepth: 3
    :backlinks: top
 
 
@@ -52,6 +53,36 @@ Extraction de l'audio depuis une vidéo Youtube
        :align: center
 
     **N.B:** Le nom du fichier doit être modifié car il comprend des caractères spéciaux
+
+Identifier le tempo du morceau
+==============================
+
+:Bit Finder:
+
+    :Liens_WEB:
+        * `vocalremover.org/key-bpm-finder`_
+        * `tunebat.com/Analyzer`_
+
+
+.. _`vocalremover.org/key-bpm-finder`: https://vocalremover.org/key-bpm-finder
+.. _`tunebat.com/Analyzer`: https://tunebat.com/Analyzer
+
+:TAP:
+
+    :Liens_WEB:
+        * `anotherproducer.com/online-tools-for-musicians/bpm-calculator`_
+
+.. _`anotherproducer.com/online-tools-for-musicians/bpm-calculator`: https://anotherproducer.com/online-tools-for-musicians/bpm-calculator/
+
+Isoler les vocals et la musique
+===============================
+
+:Liens_WEB:
+    * `Vtunebat.com/ocal-Remover`_
+    * `vocalremover.org`_
+
+.. _`Vtunebat.com/ocal-Remover`: https://tunebat.com/Vocal-Remover
+.. _`vocalremover.org`: https://vocalremover.org/
 
 ####
 
