@@ -48,7 +48,7 @@ Configuration à l'aide de l'outil **"Raspi-config"**
 
     #.
         .. code:: shell
-            sudo raspi-config
+           sudo raspi-config
 
     #.
         .. image:: ./images/raspiConf1.png
@@ -76,7 +76,7 @@ Configuration manuelle
 Il est possible de configurer les point d'accès directement depuis le fichier de configuration.
 
     #. Editer le fichier "wpa_supplcant"
-        .. code:: shell
+        .. code::
             cd /etc/wpa_supplicant/
             sudo vi wpa_supplicant.conf
 
