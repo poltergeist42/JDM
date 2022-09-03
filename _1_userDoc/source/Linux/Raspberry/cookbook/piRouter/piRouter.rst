@@ -12,17 +12,88 @@ Objectif
 ========
 
 L'objectif est de transformer le Raspberry Pi en router. La carte wifi doit se connecter à un point
-d'accès mobile tel q'un téléphone ou un router 4G / 5G. Le trafic est ensuite router vers la carte
+d'accès mobile tel q'un téléphone ou un router 4G / 5G. Le trafic est ensuite routé vers la carte
 Ethernet. 
 
-Un serveur DHCP est également configur& sur la carte Ethernet.
+Un serveur DHCP est également configuré sur la carte Ethernet.
 
 Schéma 
 ------
 
-         .. image:: ./images/schema.svg
-             :width: 400 px
-             :align: center
+    .. image:: ./images/schema.svg
+        :width: 520 px
+        :align: center
+
+####
+
+-------------------------------------
+Configuration des points d'accès wifi
+-------------------------------------
+
+    .. warning::
+       
+       Attention, il est important de respecter la casse du SSID (majuscule / minuscule). De plus,
+       un SSID ne peux pas contenir d'espace.
+
+L'ajout de SSID peut s'effectuer de 2 façons diférentes :
+
+Configuration à l'aide de l'outil **"Raspi-config"**
+====================================================
+
+    #. Naviguer dans les menus pour configurer le SSID du wifi
+
+
+
+       .. code:: shell
+
+          sudo raspi-config
+
+
+       .. image:: ./images/raspiConf1.png
+          :width: 520 px
+          :align: center
+
+       .. image:: ./images/raspiConf2.png
+          :width: 520 px
+          :align: center
+
+       .. image:: ./images/raspiConf3.png
+          :width: 520 px
+          :align: center
+
+       .. image:: ./images/raspiConf4.png
+          :width: 520 px
+          :align: center
+
+####
+
+-------
+Routeur
+-------
+
+
+[WIP]
+
+####
+
+------------
+Serveur DHCP
+------------
+
+[WIP]
+
+####
+
+--------------------
+Serveur d'impression
+--------------------
+
+:Liens_Web:
+    * `Comment Installer une Imprimante sur Raspberry Pi ? (CUPS)`_
+
+.. _`Comment Installer une Imprimante sur Raspberry Pi ? (CUPS)`:https://raspberrytips.fr/installer-imprimante-raspberry-pi/
+
+Ici aucune dificulté. Il suffit de suivre un tuto installation et de configuration de CUPS.
 
 ####
 

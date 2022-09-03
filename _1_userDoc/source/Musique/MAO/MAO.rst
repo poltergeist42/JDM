@@ -4,7 +4,7 @@ Musique Assistée (par) Ordinateur - MAO
 
 
 .. contents::
-   :maxdepth: 3
+   :depth: 3
    :backlinks: top
 
 

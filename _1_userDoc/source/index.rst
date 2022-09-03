@@ -30,7 +30,7 @@ Mon journal de manip
    Javascript
    kicad
    Latex
-   Linux
+   Linux/Linux
    MAC_OS
    Machine_learning
    MQTT
@@ -38,7 +38,6 @@ Mon journal de manip
    Optimisation_Travail
    Powershell
    Python
-   Raspberry
    Regex
    Reseau
    SiteWeb
