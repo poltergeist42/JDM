@@ -496,13 +496,23 @@ un SSID ne peux pas contenir d’espace.</p>
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Configuration manuelle</a><a class="headerlink" href="#configuration-manuelle" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Il est possible de configurer les point d’accès directement depuis le fichier de configuration.</p>
 <blockquote>
-<div><ol class="arabic simple">
-<li><dl class="simple">
-<dt>Editer le fichier « wpa_supplcant »</dt><dd></dd>
+<div><ol class="arabic">
+<li><dl>
+<dt>Editer le fichier « wpa_supplcant »</dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /etc/wpa_supplicant/
+sudo vi wpa_supplicant.conf
+</pre></div>
+</div>
+</dd>
 </dl>
 </li>
-<li><dl class="simple">
-<dt>Ajouter les informations Wifi (SSID + Password) à la fin du fichier</dt><dd></dd>
+<li><dl>
+<dt>Ajouter les informations Wifi (SSID + Password) à la fin du fichier</dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">network</span><span class="o">={</span>
+<span class="nv">ssid</span><span class="o">=</span><span class="s2">&quot;The SSID of your network (eg. Network name)&quot;</span>
+<span class="nv">psk</span><span class="o">=</span><span class="s2">&quot;Your Wifi Password&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</dd>
 </dl>
 </li>
 </ol>

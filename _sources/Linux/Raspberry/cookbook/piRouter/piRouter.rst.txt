@@ -77,12 +77,14 @@ Configuration manuelle
 Il est possible de configurer les point d'accès directement depuis le fichier de configuration.
 
     #. Editer le fichier "wpa_supplcant"
-        .. code::
+        .. code:: shell
+
             cd /etc/wpa_supplicant/
             sudo vi wpa_supplicant.conf
 
     #. Ajouter les informations Wifi (SSID + Password) à la fin du fichier
         .. code:: shell
+
             network={
             ssid="The SSID of your network (eg. Network name)"
             psk="Your Wifi Password"
