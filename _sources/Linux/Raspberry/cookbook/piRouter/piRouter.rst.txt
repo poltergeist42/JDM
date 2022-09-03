@@ -30,40 +30,62 @@ Schéma
 Configuration des points d'accès wifi
 -------------------------------------
 
-    .. warning::
-       
-       Attention, il est important de respecter la casse du SSID (majuscule / minuscule). De plus,
-       un SSID ne peux pas contenir d'espace.
+:Liens_Web:
+    * `Setting up Raspberry Pi Wi-Fi`_
+
+.. _`Setting up Raspberry Pi Wi-Fi`:https://pimylifeup.com/setting-up-raspberry-pi-wifi/
+
+.. warning::
+    Attention, il est important de respecter la casse du SSID (majuscule / minuscule). De plus,
+    un SSID ne peux pas contenir d'espace.
 
 L'ajout de SSID peut s'effectuer de 2 façons diférentes :
 
 Configuration à l'aide de l'outil **"Raspi-config"**
 ====================================================
 
-    #. Naviguer dans les menus pour configurer le SSID du wifi
+ Naviguer dans les menus pour configurer le SSID du wifi
 
+    #.
+        .. code:: shell
+            sudo raspi-config
 
+    #.
+        .. image:: ./images/raspiConf1.png
+            :width: 520 px
+            :align: center
 
-       .. code:: shell
+    #.
+        .. image:: ./images/raspiConf2.png
+            :width: 520 px
+            :align: center
 
-          sudo raspi-config
+    #.
+        .. image:: ./images/raspiConf3.png
+            :width: 520 px
+            :align: center
 
+    #.
+        .. image:: ./images/raspiConf4.png
+            :width: 520 px
+            :align: center
 
-       .. image:: ./images/raspiConf1.png
-          :width: 520 px
-          :align: center
+Configuration manuelle
+======================
 
-       .. image:: ./images/raspiConf2.png
-          :width: 520 px
-          :align: center
+Il est possible de configurer les point d'accès directement depuis le fichier de configuration.
 
-       .. image:: ./images/raspiConf3.png
-          :width: 520 px
-          :align: center
+    #. Editer le fichier "wpa_supplcant"
+        .. code:: shell
+            cd /etc/wpa_supplicant/
+            sudo vi wpa_supplicant.conf
 
-       .. image:: ./images/raspiConf4.png
-          :width: 520 px
-          :align: center
+    #. Ajouter les informations Wifi (SSID + Password) à la fin du fichier
+        .. code:: shell
+            network={
+            ssid="The SSID of your network (eg. Network name)"
+            psk="Your Wifi Password"
+            }
 
 ####
 
