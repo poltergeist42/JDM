@@ -91,7 +91,7 @@ Serveur d'impression
 :Liens_Web:
     * `Comment Installer une Imprimante sur Raspberry Pi (CUPS)`_
 
-.. _`Comment Installer une Imprimante sur Raspberry Pi ? (CUPS)`:https://raspberrytips.fr/installer-imprimante-raspberry-pi/
+.. _`Comment Installer une Imprimante sur Raspberry Pi (CUPS)`:https://raspberrytips.fr/installer-imprimante-raspberry-pi/
 
 Ici aucune dificulté. Il suffit de suivre un tuto installation et de configuration de CUPS.
 
