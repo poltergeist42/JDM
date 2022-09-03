@@ -52,7 +52,7 @@ Mon journal de manip
 ####
 
 .. toctree::
-   :maxdepth: 1
+   :tittlesonly:
 
    deprecated
 
