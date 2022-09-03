@@ -10,7 +10,7 @@ Mon journal de manip
    :maxdepth: 2
    :caption: Contents:
 
-   includeMe
+   readme
    Aquariophilie
    Composants
    ComputerVision
@@ -47,6 +47,7 @@ Mon journal de manip
    VIM
    visualStudioCode
    XML_JSON
+   arborescence/arborescence
 
 Indices and tables
 ==================

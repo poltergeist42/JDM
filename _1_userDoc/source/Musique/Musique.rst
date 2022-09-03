@@ -3,7 +3,7 @@ Musique
 ========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    theorie/theorie
    MAO/MAO
