@@ -34,7 +34,7 @@ Configuration des points d'accès wifi
 :Liens_Web:
     * `Setting up Raspberry Pi Wi-Fi`_
 
-.. _`Setting up Raspberry Pi Wi-Fi`:https://pimylifeup.com/setting-up-raspberry-pi-wifi/
+.. _`Setting up Raspberry Pi Wi-Fi`: https://pimylifeup.com/setting-up-raspberry-pi-wifi/
 
 .. warning::
     Attention, il est important de respecter la casse du SSID (majuscule / minuscule). De plus,
@@ -100,12 +100,13 @@ Routeur
 :Liens_Web:
     * `wlan0 to eth0 bridge`_
 
-.. _`wlan0 to eth0 bridge`:https://forums.raspberrypi.com/viewtopic.php?t=247584
+.. _`wlan0 to eth0 bridge`: https://forums.raspberrypi.com/viewtopic.php?t=247584
 
 Configuration d'une IP statique sur eth0
 ========================================
 
     #. Editer le fichier dhcpcd.conf
+
        .. code:: shell
 
           sudo vim /etc/dhcpcd.conf
@@ -173,7 +174,7 @@ Serveur DHCP
 :Liens_Web:
     * `How to Use Raspberry Pi as a DHCP Server`_
 
-.. _`How to Use Raspberry Pi as a DHCP Server`:https://raspberrytips.com/dhcp-server-on-raspberry-pi/
+.. _`How to Use Raspberry Pi as a DHCP Server`: https://raspberrytips.com/dhcp-server-on-raspberry-pi/
 
     #. Installation de dnsmasq
 
@@ -224,7 +225,7 @@ Webmin
 :Liens_Web:
     * `Install Webmin`_
 
-.. _`Install Webmin`:https://raspberrytips.com/install-webmin-raspberry-pi/
+.. _`Install Webmin`: https://raspberrytips.com/install-webmin-raspberry-pi/
 
     #. Editer le fichier source.list
 
@@ -271,7 +272,7 @@ Serveur d'impression
 :Liens_Web:
     * `Comment Installer une Imprimante sur Raspberry Pi (CUPS)`_
 
-.. _`Comment Installer une Imprimante sur Raspberry Pi (CUPS)`:https://raspberrytips.fr/installer-imprimante-raspberry-pi/
+.. _`Comment Installer une Imprimante sur Raspberry Pi (CUPS)`: https://raspberrytips.fr/installer-imprimante-raspberry-pi/
 
 Ici aucune dificulté. Il suffit de suivre un tuto installation et de configuration de CUPS.
 
