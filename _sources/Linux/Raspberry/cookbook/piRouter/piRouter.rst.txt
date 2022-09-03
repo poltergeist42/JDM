@@ -48,6 +48,7 @@ Configuration à l'aide de l'outil **"Raspi-config"**
 
     #.
         .. code:: shell
+
            sudo raspi-config
 
     #.
