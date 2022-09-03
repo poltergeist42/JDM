@@ -10,4 +10,4 @@ moi.
 
    Aquariophilie
    Django
-   English_vacb
+   English_vocab
