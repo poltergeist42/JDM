@@ -8,6 +8,7 @@ Musique
    theorie/theorie
    MAO/MAO
    guitare/guitare
+   GuitareChant/GuitareChant
 
 .. contents::
     :backlinks: top
