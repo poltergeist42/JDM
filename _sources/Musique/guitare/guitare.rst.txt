@@ -2,9 +2,9 @@
 Guitare
 =======
 
-
 .. contents::
-    :backlinks: top
+   :deth: 3
+   :backlinks: top
 
 [WIP]
 
