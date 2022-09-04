@@ -3,11 +3,12 @@ Musique
 ========
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    theorie/theorie
    MAO/MAO
    guitare/guitare
+   GuitareChant/GuitareChant
 
 .. contents::
     :backlinks: top

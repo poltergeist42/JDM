@@ -8,7 +8,7 @@ Mon journal de manip
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Sommaire:
 
    readme
    Aquariophilie
@@ -48,6 +48,13 @@ Mon journal de manip
    visualStudioCode
    XML_JSON
    arborescence/arborescence
+
+####
+
+.. toctree::
+   :titlesonly:
+   
+   deprecated
 
 Indices and tables
 ==================
