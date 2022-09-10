@@ -1,6 +1,6 @@
-=============================
-Multi-Screen terminal Windows
-=============================
+=====================
+Multi-Screen terminal 
+=====================
 
 .. contents::
     :depth: 3

@@ -1,6 +1,6 @@
 =====
 SHELL
-====
+=====
 
 .. contents::
     :depth: 3
@@ -19,12 +19,26 @@ Rappel des commandes de bases
 
 ####
 
+-------------
+Tips & Tricks
+-------------
+
+Ensemble de commandes Utiles et / ou astucieuses.
+
+
 Connaitre la version du shell utilisé
 =====================================
     ::
 
         ps -p $$
 
+linux rediriger sortie vers null
+================================
+
+:Liens_Web:
+            * http://www.lanterne-rouge.info/article-que-signifie-dev-null-2-1-70233357.html
+                # Une explication (fr) sur les sortie STDOUT et STDERR
+                
 
 ####
 
