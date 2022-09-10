@@ -6,6 +6,7 @@ LINUX
    :titlesonly:
    :maxdepth: 2
 
+   shell/shell
    Raspberry/Raspberry
    bugError/bugError
 
