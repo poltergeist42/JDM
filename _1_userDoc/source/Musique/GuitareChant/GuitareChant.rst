@@ -3,7 +3,7 @@ GuitareChant
 ============
 
 .. contents::
-    :deth: 3
+    :depth: 3
     :backlinks: top
 
 ####

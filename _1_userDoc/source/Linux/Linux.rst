@@ -6,6 +6,7 @@ LINUX
    :maxdepth: 2
 
    Raspberry/Raspberry
+   bugError/bugError
 
 .. contents::
     :backlinks: top
