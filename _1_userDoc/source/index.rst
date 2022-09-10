@@ -7,6 +7,7 @@ Mon journal de manip
 ====================
 
 .. toctree::
+   :titlesonly:
    :maxdepth: 2
    :caption: Sommaire:
 
