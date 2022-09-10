@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Multi-Screen terminal &mdash; JDM</title>
+  <title>Hardware Management &mdash; JDM</title>
   
 
   
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="Utilisateurs, Groupes et Permissions" href="../UsersGroupsACL/UsersGroupsACL.html" />
-    <link rel="prev" title="SHELL" href="../shell/shell.html" /> 
+    <link rel="next" title="Raspberry" href="../Raspberry/Raspberry.html" />
+    <link rel="prev" title="Dossiers partager et volumes distants" href="../sharedFolders/sharedFolders.html" /> 
 
 </head>
 
@@ -72,13 +72,13 @@
         
           <li><a href="../Linux.html">LINUX</a></li>
         
-      <li>Multi-Screen terminal</li>
+      <li>Hardware Management</li>
     
     
       <li class="breadcrumbs-aside">
         
             
-            <a href="../../_sources/Linux/multiscreen/multiscreen.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/Linux/hardwareMgnt/hardwareMgnt.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -132,12 +132,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Latex.html">LaTex</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../Linux.html">LINUX</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../shell/shell.html">SHELL</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Multi-Screen terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiscreen/multiscreen.html">Multi-Screen terminal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../UsersGroupsACL/UsersGroupsACL.html">Utilisateurs, Groupes et Permissions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sysAdmin/sysAdmin.html">Administration Système</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../network/network.html">network</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sharedFolders/sharedFolders.html">Dossiers partager et volumes distants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hardwareMgnt/hardwareMgnt.html">Hardware Management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Hardware Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Raspberry/Raspberry.html">Raspberry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../bugError/bugError.html">Bug, Maintenance et traitemant des Erreurs</a></li>
 </ul>
@@ -183,119 +183,121 @@
                     <div class="document">
                         
                             
-  <section id="multi-screen-terminal">
-<h1><a class="toc-backref" href="#sommaire" role="doc-backlink">Multi-Screen terminal</a><a class="headerlink" href="#multi-screen-terminal" title="Lien permanent vers cette rubrique">¶</a></h1>
+  <section id="hardware-management">
+<h1><a class="toc-backref" href="#sommaire" role="doc-backlink">Hardware Management</a><a class="headerlink" href="#hardware-management" title="Lien permanent vers cette rubrique">¶</a></h1>
 <nav class="contents" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#multi-screen-terminal" id="id5">Multi-Screen terminal</a></p>
+<li><p><a class="reference internal" href="#hardware-management" id="id1">Hardware Management</a></p>
 <ul>
-<li><p><a class="reference internal" href="#tmux" id="id6">tmux</a></p>
+<li><p><a class="reference internal" href="#gestion-materiel" id="id2">Gestion Matériel</a></p>
 <ul>
-<li><p><a class="reference internal" href="#memento-de-commandes-tmux" id="id7">Memento de commandes Tmux</a></p></li>
+<li><p><a class="reference internal" href="#info-gestion-cpu" id="id3">Info / Gestion CPU</a></p></li>
+<li><p><a class="reference internal" href="#connaitre-la-liste-des-materiel-usb" id="id4">Connaître la liste des matériel usb</a></p></li>
+<li><p><a class="reference internal" href="#connaitre-lespace-disque-utilise-et-celui-disponible" id="id5">Connaître l’espace disque utilise et celui disponible</a></p></li>
+<li><p><a class="reference internal" href="#les-ports-series" id="id6">Les ports séries</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#screen" id="id8">Screen</a></p>
-<ul>
-<li><p><a class="reference internal" href="#installation-de-screen" id="id9">Installation de screen</a></p></li>
-<li><p><a class="reference internal" href="#lancer-l-application-screen" id="id10">Lancer l’application « screen »</a></p></li>
-<li><p><a class="reference internal" href="#memento-des-commandes-screen" id="id11">Memento des commandes Screen</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#weblinks" id="id12">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id7">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
 <hr class="docutils" />
-<section id="tmux">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">tmux</a><a class="headerlink" href="#tmux" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="gestion-materiel">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Gestion Matériel</a><a class="headerlink" href="#gestion-materiel" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="info-gestion-cpu">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Info / Gestion CPU</a><a class="headerlink" href="#info-gestion-cpu" title="Lien permanent vers cette rubrique">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://github.com/tmux/tmux/wiki">tmux - Wiki Officiel</a> <a class="footnote-reference brackets" href="#id3" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
-<li><p><a class="reference external" href="https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/">How to Use tmux on Linux</a> <a class="footnote-reference brackets" href="#id1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.tecmint.com/check-linux-cpu-information/">https://www.tecmint.com/check-linux-cpu-information/</a></dt><dd><p># 9 Commandes pour la gestion du CPU</p>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
-<p>Tmux est plus simple et plus ergonomic que Screen. Il permet d’ouvrir plusieur fenêtre dans une
-seule fenêtre de terminal. Il permet égallement de sinder l’écran en plusieur sous fenêtre.</p>
-<section id="memento-de-commandes-tmux">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Memento de commandes Tmux</a><a class="headerlink" href="#memento-de-commandes-tmux" title="Lien permanent vers cette rubrique">¶</a></h3>
-<blockquote>
-<div><a class="reference internal image-reference" href="../../_images/memento.png"><img alt="../../_images/memento.png" class="align-center" src="../../_images/memento.png" style="width: 520px;" /></a>
-</div></blockquote>
 </section>
+<section id="connaitre-la-liste-des-materiel-usb">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaître la liste des matériel usb</a><a class="headerlink" href="#connaitre-la-liste-des-materiel-usb" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lsusb</span>
+</pre></div>
+</div>
+</div></blockquote>
 </section>
 <hr class="docutils" />
-<section id="screen">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Screen</a><a class="headerlink" href="#screen" title="Lien permanent vers cette rubrique">¶</a></h2>
-<section id="installation-de-screen">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Installation de screen</a><a class="headerlink" href="#installation-de-screen" title="Lien permanent vers cette rubrique">¶</a></h3>
+<section id="connaitre-lespace-disque-utilise-et-celui-disponible">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaître l’espace disque utilise et celui disponible</a><a class="headerlink" href="#connaitre-lespace-disque-utilise-et-celui-disponible" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">screen</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span>
 </pre></div>
 </div>
 </div></blockquote>
 </section>
-<section id="lancer-l-application-screen">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Lancer l’application « screen »</a><a class="headerlink" href="#lancer-l-application-screen" title="Lien permanent vers cette rubrique">¶</a></h3>
+<hr class="docutils" />
+<section id="les-ports-series">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Les ports séries</a><a class="headerlink" href="#les-ports-series" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">screen</span>
-</pre></div>
-</div>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.instructables.com/id/Read-and-write-from-serial-port-with-Raspberry-Pi/">http://www.instructables.com/id/Read-and-write-from-serial-port-with-Raspberry-Pi/</a></p></li>
+</ul>
+</dd>
+</dl>
 </div></blockquote>
-</section>
-<section id="memento-des-commandes-screen">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Memento des commandes Screen</a><a class="headerlink" href="#memento-des-commandes-screen" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>Rappel (équivalence de la notation Windows / Linux</p>
 <blockquote>
 <div><table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Raccourcis clavier</p></th>
-<th class="head"><p>Fonctions</p></th>
+<tr class="row-odd"><th class="head"><p>Windows</p></th>
+<th class="head"><p>Linux</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>screen</p></td>
-<td><p>Lancer screen</p></td>
+<tr class="row-even"><td><p>COM1</p></td>
+<td><p>/dev/ttyS0</p></td>
 </tr>
-<tr class="row-odd"><td><p>CTRL+[a]    –&gt; [c]</p></td>
-<td><p>Ouvrir un nouveau screen</p></td>
+<tr class="row-odd"><td><p>COM2</p></td>
+<td><p>/dev/ttyS1</p></td>
 </tr>
-<tr class="row-even"><td><p>CTRL+[a]    –&gt; [espace]</p></td>
-<td><p>Basculer vers le screen suivant</p></td>
+<tr class="row-even"><td><p>COM3</p></td>
+<td><p>/dev/ttyS2</p></td>
 </tr>
-<tr class="row-odd"><td><p>CTRL+[a][a]</p></td>
-<td><p>Basculer entre le teminal actif et le dernier consulté</p></td>
-</tr>
-<tr class="row-even"><td><p>CTRL+[a]    –&gt; d</p></td>
-<td><p>Détacher la session screen (permet) de fermer la console
-sans arréter les process</p></td>
-</tr>
-<tr class="row-odd"><td><p>screen -r</p></td>
-<td><p>Se reconnecter à la session screen tel qu’elle était
-lors du détachement avec CTRL[a][d]. On parle de rattacher
-le screen</p></td>
-</tr>
-<tr class="row-even"><td><p>exit</p></td>
-<td><p>Ferme le screen courrant</p></td>
+<tr class="row-odd"><td><p>COM4</p></td>
+<td><p>/dev/ttyS3</p></td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
+<section id="connaitre-la-liste-des-ports-serie">
+<h4>Connaître la liste des ports série<a class="headerlink" href="#connaitre-la-liste-des-ports-serie" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">tty</span><span class="o">*</span>
+    <span class="c1"># La commande retourne généralement plus de 50 tty.</span>
+      <span class="n">Cependant</span><span class="p">,</span> <span class="n">les</span> <span class="n">tty</span> <span class="n">associés</span> <span class="n">au</span> <span class="n">port</span> <span class="n">USB</span> <span class="n">disposent</span> <span class="n">d</span><span class="s1">&#39;une nomenclature différente.</span>
+      <span class="n">Ils</span> <span class="n">contiennent</span> <span class="n">habituellement</span> <span class="n">USB</span> <span class="n">ou</span> <span class="n">ACM</span> <span class="p">(</span><span class="n">Abstract</span> <span class="n">Control</span> <span class="n">Model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="interroger-le-journal-sur-les-ports-serie">
+<h4>Interroger le journal sur les ports série<a class="headerlink" href="#interroger-le-journal-sur-les-ports-serie" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dmesg</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">tty</span>
+    <span class="c1"># Information plus complète qu&#39;avec l&#39;instruction précédente</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
 </section>
 </section>
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
-<aside class="footnote brackets" id="id1" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/">https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/</a></p>
-</aside>
-<aside class="footnote brackets" id="id3" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">2</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://github.com/tmux/tmux/wiki">https://github.com/tmux/tmux/wiki</a></p>
-</aside>
 </section>
 </section>
 

@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Multi-Screen terminal &mdash; JDM</title>
+  <title>Scripting &mdash; JDM</title>
   
 
   
@@ -29,9 +29,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="Utilisateurs, Groupes et Permissions" href="../UsersGroupsACL/UsersGroupsACL.html" />
-    <link rel="prev" title="SHELL" href="../shell/shell.html" /> 
+    <link rel="search" title="Recherche" href="../../search.html" /> 
 
 </head>
 
@@ -70,15 +68,13 @@
     
       <li><a href="../../index.html">Docs</a></li>
         
-          <li><a href="../Linux.html">LINUX</a></li>
-        
-      <li>Multi-Screen terminal</li>
+      <li>Scripting</li>
     
     
       <li class="breadcrumbs-aside">
         
             
-            <a href="../../_sources/Linux/multiscreen/multiscreen.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/Linux/scripting/scripting.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -108,7 +104,7 @@
                             
                             
                                 <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">infos générales Journal de manip</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html#description">Description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Aquariophilie.html">Aquariophilie</a></li>
@@ -130,9 +126,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Javascript.html">JavaScript / REACT.js / node.js</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../kicad.html">Kicad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Latex.html">LaTex</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../Linux.html">LINUX</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Linux.html">LINUX</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shell/shell.html">SHELL</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Multi-Screen terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiscreen/multiscreen.html">Multi-Screen terminal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../UsersGroupsACL/UsersGroupsACL.html">Utilisateurs, Groupes et Permissions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sysAdmin/sysAdmin.html">Administration Système</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../network/network.html">network</a></li>
@@ -183,119 +179,56 @@
                     <div class="document">
                         
                             
-  <section id="multi-screen-terminal">
-<h1><a class="toc-backref" href="#sommaire" role="doc-backlink">Multi-Screen terminal</a><a class="headerlink" href="#multi-screen-terminal" title="Lien permanent vers cette rubrique">¶</a></h1>
+  <section id="scripting">
+<h1><a class="toc-backref" href="#sommaire" role="doc-backlink">Scripting</a><a class="headerlink" href="#scripting" title="Lien permanent vers cette rubrique">¶</a></h1>
 <nav class="contents" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#multi-screen-terminal" id="id5">Multi-Screen terminal</a></p>
+<li><p><a class="reference internal" href="#scripting" id="id1">Scripting</a></p>
 <ul>
-<li><p><a class="reference internal" href="#tmux" id="id6">tmux</a></p>
+<li><p><a class="reference internal" href="#faire-un-script-en-shell" id="id2">Faire un script en Shell</a></p></li>
+<li><p><a class="reference internal" href="#rendre-un-script-executable" id="id3">Rendre un script exécutable</a></p>
 <ul>
-<li><p><a class="reference internal" href="#memento-de-commandes-tmux" id="id7">Memento de commandes Tmux</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id4">Weblinks</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#screen" id="id8">Screen</a></p>
-<ul>
-<li><p><a class="reference internal" href="#installation-de-screen" id="id9">Installation de screen</a></p></li>
-<li><p><a class="reference internal" href="#lancer-l-application-screen" id="id10">Lancer l’application « screen »</a></p></li>
-<li><p><a class="reference internal" href="#memento-des-commandes-screen" id="id11">Memento des commandes Screen</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#weblinks" id="id12">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
 <hr class="docutils" />
-<section id="tmux">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">tmux</a><a class="headerlink" href="#tmux" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Présentation de différent éléments de scripting</p>
+<hr class="docutils" />
+<section id="faire-un-script-en-shell">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Faire un script en Shell</a><a class="headerlink" href="#faire-un-script-en-shell" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://github.com/tmux/tmux/wiki">tmux - Wiki Officiel</a> <a class="footnote-reference brackets" href="#id3" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
-<li><p><a class="reference external" href="https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/">How to Use tmux on Linux</a> <a class="footnote-reference brackets" href="#id1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://doc.ubuntu-fr.org/tutoriel/script_shell">https://doc.ubuntu-fr.org/tutoriel/script_shell</a></dt><dd><p># Tuto simple en Français</p>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
-<p>Tmux est plus simple et plus ergonomic que Screen. Il permet d’ouvrir plusieur fenêtre dans une
-seule fenêtre de terminal. Il permet égallement de sinder l’écran en plusieur sous fenêtre.</p>
-<section id="memento-de-commandes-tmux">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Memento de commandes Tmux</a><a class="headerlink" href="#memento-de-commandes-tmux" title="Lien permanent vers cette rubrique">¶</a></h3>
-<blockquote>
-<div><a class="reference internal image-reference" href="../../_images/memento.png"><img alt="../../_images/memento.png" class="align-center" src="../../_images/memento.png" style="width: 520px;" /></a>
-</div></blockquote>
-</section>
 </section>
 <hr class="docutils" />
-<section id="screen">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Screen</a><a class="headerlink" href="#screen" title="Lien permanent vers cette rubrique">¶</a></h2>
-<section id="installation-de-screen">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Installation de screen</a><a class="headerlink" href="#installation-de-screen" title="Lien permanent vers cette rubrique">¶</a></h3>
+<section id="rendre-un-script-executable">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Rendre un script exécutable</a><a class="headerlink" href="#rendre-un-script-executable" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">screen</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pour le rendre exécutable</span>
+<span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="o">&lt;</span><span class="n">Nom_du_script</span><span class="o">&gt;</span>
+
+<span class="c1"># Pour l&#39;exécuter</span>
+<span class="o">./&lt;</span><span class="n">Nom_du_script</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="lancer-l-application-screen">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Lancer l’application « screen »</a><a class="headerlink" href="#lancer-l-application-screen" title="Lien permanent vers cette rubrique">¶</a></h3>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">screen</span>
-</pre></div>
-</div>
-</div></blockquote>
-</section>
-<section id="memento-des-commandes-screen">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Memento des commandes Screen</a><a class="headerlink" href="#memento-des-commandes-screen" title="Lien permanent vers cette rubrique">¶</a></h3>
-<blockquote>
-<div><table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Raccourcis clavier</p></th>
-<th class="head"><p>Fonctions</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>screen</p></td>
-<td><p>Lancer screen</p></td>
-</tr>
-<tr class="row-odd"><td><p>CTRL+[a]    –&gt; [c]</p></td>
-<td><p>Ouvrir un nouveau screen</p></td>
-</tr>
-<tr class="row-even"><td><p>CTRL+[a]    –&gt; [espace]</p></td>
-<td><p>Basculer vers le screen suivant</p></td>
-</tr>
-<tr class="row-odd"><td><p>CTRL+[a][a]</p></td>
-<td><p>Basculer entre le teminal actif et le dernier consulté</p></td>
-</tr>
-<tr class="row-even"><td><p>CTRL+[a]    –&gt; d</p></td>
-<td><p>Détacher la session screen (permet) de fermer la console
-sans arréter les process</p></td>
-</tr>
-<tr class="row-odd"><td><p>screen -r</p></td>
-<td><p>Se reconnecter à la session screen tel qu’elle était
-lors du détachement avec CTRL[a][d]. On parle de rattacher
-le screen</p></td>
-</tr>
-<tr class="row-even"><td><p>exit</p></td>
-<td><p>Ferme le screen courrant</p></td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-</section>
-</section>
 <hr class="docutils" />
 <section id="weblinks">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
-<aside class="footnote brackets" id="id1" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/">https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/</a></p>
-</aside>
-<aside class="footnote brackets" id="id3" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">2</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://github.com/tmux/tmux/wiki">https://github.com/tmux/tmux/wiki</a></p>
-</aside>
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h3>
+</section>
 </section>
 </section>
 
