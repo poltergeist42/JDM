@@ -1,6 +1,6 @@
 =====
 SHELL
-====
+=====
 
 .. contents::
     :depth: 3
