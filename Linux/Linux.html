@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="../_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Weblinks" href="shell/shell.html" />
+    <link rel="next" title="Rappel des commandes de bases" href="shell/shell.html" />
     <link rel="prev" title="LaTex" href="../Latex.html" /> 
 
 </head>
@@ -129,7 +129,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../kicad.html">Kicad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Latex.html">LaTex</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">LINUX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="shell/shell.html">Weblinks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell/shell.html">Rappel des commandes de bases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell/shell.html#weblinks">Weblinks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiscreen/multiscreen.html">Multi-Screen terminal Windows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Raspberry/Raspberry.html">Raspberry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bugError/bugError.html">Bug, Maintenance et traitemant des Erreurs</a></li>
 </ul>
@@ -177,9 +179,80 @@
                             
   <section id="linux">
 <h1><a class="toc-backref" href="#sommaire" role="doc-backlink">LINUX</a><a class="headerlink" href="#linux" title="Lien permanent vers cette rubrique">¶</a></h1>
+<nav class="contents" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#linux" id="id1">LINUX</a></p>
+<ul>
+<li><p><a class="reference internal" href="#linux-rediriger-sortie-vers-null" id="id2">linux rediriger sortie vers null</a></p></li>
+<li><p><a class="reference internal" href="#faire-un-script-en-shell" id="id3">Faire un script en Shell</a></p></li>
+<li><p><a class="reference internal" href="#rendre-un-script-executable" id="id4">Rendre un script exécutable</a></p></li>
+<li><p><a class="reference internal" href="#creer-un-alias-permanent" id="id5">Créer un alias permanent</a></p>
+<ul>
+<li><p><a class="reference internal" href="#utilisateurs-groupes-et-permissions" id="id6">Utilisateurs, Groupes et Permissions</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#activer-le-compte-root" id="id7">activer le compte root</a></p></li>
+<li><p><a class="reference internal" href="#creer-un-nouvel-utilisateur" id="id8">Créer un nouvel utilisateur</a></p></li>
+<li><p><a class="reference internal" href="#creer-un-nouveau-groupe" id="id9">Créer un nouveau groupe</a></p></li>
+<li><p><a class="reference internal" href="#ajouter-un-utilisateur-a-un-groupe" id="id10">Ajouter un utilisateur à un groupe</a></p></li>
+<li><p><a class="reference internal" href="#afficher-les-membres-d-un-groupe" id="id11">Afficher les membres d’un groupe</a></p></li>
+<li><p><a class="reference internal" href="#afficher-les-groupes-d-un-utilisateur" id="id12">Afficher les groupes d’un utilisateur</a></p></li>
+<li><p><a class="reference internal" href="#changer-le-mot-de-passe-d-un-utilisateur" id="id13">Changer le mot de passe d’un utilisateur</a></p></li>
+<li><p><a class="reference internal" href="#faire-une-elevation-valable-toute-la-duree-de-la-session" id="id14">Faire une élévation valable toute la durée de la session</a></p></li>
+<li><p><a class="reference internal" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique" id="id15">Pour copier des fichiers en root depuis l’interface graphique</a></p></li>
+<li><p><a class="reference internal" href="#groupes" id="id16">Groupes</a></p></li>
+<li><p><a class="reference internal" href="#acl-proprietaire-rwx" id="id17">ACL (Propriétaire, RWX)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#configuration-systeme" id="id18">Configuration Système</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#date-et-heure" id="id19">Date et heure</a></p></li>
+<li><p><a class="reference internal" href="#changer-la-disposition-du-clavier" id="id20">Changer la disposition du clavier</a></p>
+<ul>
+<li><p><a class="reference internal" href="#administration-systeme" id="id21">Administration système</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#arreter-demarrer-les-services-deamon" id="id22">Arrêter / Démarrer les services (deamon)</a></p></li>
+<li><p><a class="reference internal" href="#creer-une-tache-planifie-cron" id="id23">Créer une tâche planifié (cron)</a></p></li>
+<li><p><a class="reference internal" href="#pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme" id="id24">Pour créer un script qui s’exécute au démarrage du système</a></p></li>
+<li><p><a class="reference internal" href="#connaitre-la-version-du-systeme" id="id25">Connaître la version du système</a></p></li>
+<li><p><a class="reference internal" href="#connaitre-la-version-d-un-paquet" id="id26">Connaître la version d’un paquet</a></p></li>
+<li><p><a class="reference internal" href="#emplacement-des-programmes" id="id27">Emplacement des programmes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#reseau" id="id28">Réseau</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#ssh" id="id29">SSH</a></p></li>
+<li><p><a class="reference internal" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux" id="id30">Pour pouvoir se connecter en RDP sur un poste Linux</a></p></li>
+<li><p><a class="reference internal" href="#pour-faire-du-xforwarding" id="id31">Pour faire du XForwarding</a></p></li>
+<li><p><a class="reference internal" href="#vncserver" id="id32">VNCserver</a></p></li>
+<li><p><a class="reference internal" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau" id="id33">Pour mettre une IP fixe sur une interfaces réseau</a></p></li>
+<li><p><a class="reference internal" href="#pour-active-le-wifi" id="id34">Pour active le WIFI</a></p></li>
+<li><p><a class="reference internal" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande" id="id35">Se connecter a un réseau wifi en ligne de commande</a></p></li>
+<li><p><a class="reference internal" href="#creer-un-dossier-partage-avec-samba" id="id36">Créer un dossier partagé avec samba</a></p></li>
+<li><p><a class="reference internal" href="#telecharger-un-fichier-en-ligne-de-commande-wget" id="id37">Télécharger un fichier en ligne de commande (wget)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#gestion-materiel" id="id38">Gestion Matériel</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#info-gestion-cpu" id="id39">Info / Gestion CPU</a></p></li>
+<li><p><a class="reference internal" href="#connaitre-la-liste-des-materiel-usb" id="id40">Connaître la liste des matériel usb</a></p></li>
+<li><p><a class="reference internal" href="#connaitre-lespace-disque-utilise-et-celui-disponible" id="id41">Connaître l’espace disque utilise et celui disponible</a></p></li>
+<li><p><a class="reference internal" href="#les-ports-series" id="id42">Les ports séries</a></p>
+<ul>
+<li><p><a class="reference internal" href="#weblinks" id="id43">Weblinks</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="shell/shell.html">Weblinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell/shell.html">Rappel des commandes de bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell/shell.html#weblinks">Weblinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multiscreen/multiscreen.html">Multi-Screen terminal Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Raspberry/Raspberry.html">Raspberry</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Raspberry/cookbook/piRouter/piRouter.html">Raspberry Pi as a router</a></li>
 </ul>
@@ -187,295 +260,9 @@
 <li class="toctree-l1"><a class="reference internal" href="bugError/bugError.html">Bug, Maintenance et traitemant des Erreurs</a></li>
 </ul>
 </div>
-<nav class="contents" id="sommaire">
-<p class="topic-title">Sommaire</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#linux" id="id1">LINUX</a></p>
-<ul>
-<li><p><a class="reference internal" href="#shell" id="id2">Shell</a></p>
-<ul>
-<li><p><a class="reference internal" href="#rappel-des-commandes-de-bases" id="id3">Rappel des commandes de bases</a></p></li>
-<li><p><a class="reference internal" href="#rappel-des-raccourcis-de-navigation-dans-le-shell" id="id4">Rappel des raccourcis de navigation dans le shell</a></p></li>
-<li><p><a class="reference internal" href="#connaitre-la-version-du-shell-utilise" id="id5">Connaitre la version du shell utilisé</a></p></li>
-<li><p><a class="reference internal" href="#faire-du-multi-screen-sur-une-fenetre-terminal" id="id6">Faire du multi-screen  sur une fenêtre terminal</a></p></li>
-<li><p><a class="reference internal" href="#linux-rediriger-sortie-vers-null" id="id7">linux rediriger sortie vers null</a></p></li>
-<li><p><a class="reference internal" href="#faire-un-script-en-shell" id="id8">Faire un script en Shell</a></p></li>
-<li><p><a class="reference internal" href="#rendre-un-script-executable" id="id9">Rendre un script exécutable</a></p></li>
-<li><p><a class="reference internal" href="#creer-un-alias-permanent" id="id10">Créer un alias permanent</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#utilisateurs-groupes-et-permissions" id="id11">Utilisateurs, Groupes et Permissions</a></p>
-<ul>
-<li><p><a class="reference internal" href="#activer-le-compte-root" id="id12">activer le compte root</a></p></li>
-<li><p><a class="reference internal" href="#creer-un-nouvel-utilisateur" id="id13">Créer un nouvel utilisateur</a></p></li>
-<li><p><a class="reference internal" href="#creer-un-nouveau-groupe" id="id14">Créer un nouveau groupe</a></p></li>
-<li><p><a class="reference internal" href="#ajouter-un-utilisateur-a-un-groupe" id="id15">Ajouter un utilisateur à un groupe</a></p></li>
-<li><p><a class="reference internal" href="#afficher-les-membres-d-un-groupe" id="id16">Afficher les membres d’un groupe</a></p></li>
-<li><p><a class="reference internal" href="#afficher-les-groupes-d-un-utilisateur" id="id17">Afficher les groupes d’un utilisateur</a></p></li>
-<li><p><a class="reference internal" href="#changer-le-mot-de-passe-d-un-utilisateur" id="id18">Changer le mot de passe d’un utilisateur</a></p></li>
-<li><p><a class="reference internal" href="#faire-une-elevation-valable-toute-la-duree-de-la-session" id="id19">Faire une élévation valable toute la durée de la session</a></p></li>
-<li><p><a class="reference internal" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique" id="id20">Pour copier des fichiers en root depuis l’interface graphique</a></p></li>
-<li><p><a class="reference internal" href="#groupes" id="id21">Groupes</a></p></li>
-<li><p><a class="reference internal" href="#acl-proprietaire-rwx" id="id22">ACL (Propriétaire, RWX)</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#configuration-systeme" id="id23">Configuration Système</a></p>
-<ul>
-<li><p><a class="reference internal" href="#date-et-heure" id="id24">Date et heure</a></p></li>
-<li><p><a class="reference internal" href="#changer-la-disposition-du-clavier" id="id25">Changer la disposition du clavier</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#administration-systeme" id="id26">Administration système</a></p>
-<ul>
-<li><p><a class="reference internal" href="#arreter-demarrer-les-services-deamon" id="id27">Arrêter / Démarrer les services (deamon)</a></p></li>
-<li><p><a class="reference internal" href="#creer-une-tache-planifie-cron" id="id28">Créer une tâche planifié (cron)</a></p></li>
-<li><p><a class="reference internal" href="#pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme" id="id29">Pour créer un script qui s’exécute au démarrage du système</a></p></li>
-<li><p><a class="reference internal" href="#connaitre-la-version-du-systeme" id="id30">Connaître la version du système</a></p></li>
-<li><p><a class="reference internal" href="#connaitre-la-version-d-un-paquet" id="id31">Connaître la version d’un paquet</a></p></li>
-<li><p><a class="reference internal" href="#emplacement-des-programmes" id="id32">Emplacement des programmes</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#reseau" id="id33">Réseau</a></p>
-<ul>
-<li><p><a class="reference internal" href="#ssh" id="id34">SSH</a></p></li>
-<li><p><a class="reference internal" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux" id="id35">Pour pouvoir se connecter en RDP sur un poste Linux</a></p></li>
-<li><p><a class="reference internal" href="#pour-faire-du-xforwarding" id="id36">Pour faire du XForwarding</a></p></li>
-<li><p><a class="reference internal" href="#vncserver" id="id37">VNCserver</a></p></li>
-<li><p><a class="reference internal" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau" id="id38">Pour mettre une IP fixe sur une interfaces réseau</a></p></li>
-<li><p><a class="reference internal" href="#pour-active-le-wifi" id="id39">Pour active le WIFI</a></p></li>
-<li><p><a class="reference internal" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande" id="id40">Se connecter a un réseau wifi en ligne de commande</a></p></li>
-<li><p><a class="reference internal" href="#creer-un-dossier-partage-avec-samba" id="id41">Créer un dossier partagé avec samba</a></p></li>
-<li><p><a class="reference internal" href="#telecharger-un-fichier-en-ligne-de-commande-wget" id="id42">Télécharger un fichier en ligne de commande (wget)</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#gestion-materiel" id="id43">Gestion Matériel</a></p>
-<ul>
-<li><p><a class="reference internal" href="#info-gestion-cpu" id="id44">Info / Gestion CPU</a></p></li>
-<li><p><a class="reference internal" href="#connaitre-la-liste-des-materiel-usb" id="id45">Connaître la liste des matériel usb</a></p></li>
-<li><p><a class="reference internal" href="#connaitre-lespace-disque-utilise-et-celui-disponible" id="id46">Connaître l’espace disque utilise et celui disponible</a></p></li>
-<li><p><a class="reference internal" href="#les-ports-series" id="id47">Les ports séries</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#weblinks" id="id48">Weblinks</a></p></li>
-</ul>
-</li>
-</ul>
-</nav>
-<section id="shell">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Shell</a><a class="headerlink" href="#shell" title="Lien permanent vers cette rubrique">¶</a></h2>
-<section id="rappel-des-commandes-de-bases">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Rappel des commandes de bases</a><a class="headerlink" href="#rappel-des-commandes-de-bases" title="Lien permanent vers cette rubrique">¶</a></h3>
-<blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">Liens web<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://wiki.linux-france.org/wiki/Les_commandes_fondamentales_de_Linux">http://wiki.linux-france.org/wiki/Les_commandes_fondamentales_de_Linux</a></p></li>
-</ul>
-</dd>
-</dl>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Meaning</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>ls</p></td>
-<td><dl>
-<dt>list files in current directory</dt><dd><p># pour afficher la list de tous les éléments,
-même cachés</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>ls -a</p></li>
-</ul>
-</div></blockquote>
-</dd>
-</dl>
-</td>
-</tr>
-<tr class="row-odd"><td><p>cd</p></td>
-<td><p>change directory</p></td>
-</tr>
-<tr class="row-even"><td><p>pwd</p></td>
-<td><p>print working directory</p></td>
-</tr>
-<tr class="row-odd"><td><p>rm</p></td>
-<td><dl>
-<dt>filename remove filename</dt><dd><p># Pour forcer la suppression d’un
-# répertoir non vide</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>rm -Rf monrepertoire</p></li>
-</ul>
-</div></blockquote>
-</dd>
-</dl>
-</td>
-</tr>
-<tr class="row-even"><td><p>mkdir <em>directoryname</em></p></td>
-<td><p>make directory with directoryname</p></td>
-</tr>
-<tr class="row-odd"><td><p>rmdir <em>directoryname</em></p></td>
-<td><p>remove empty directory</p></td>
-</tr>
-<tr class="row-even"><td><p>cat textfile</p></td>
-<td><p>display contents of textfile in the terminal</p></td>
-</tr>
-<tr class="row-odd"><td><p>mv oldfile newfile</p></td>
-<td><p>move (rename) oldfile to newfile</p></td>
-</tr>
-<tr class="row-even"><td><p>cp oldfile newfile</p></td>
-<td><p>copy oldfile to newfile</p></td>
-</tr>
-<tr class="row-odd"><td><p>man command</p></td>
-<td><p>display manual of command</p></td>
-</tr>
-<tr class="row-even"><td><p>date</p></td>
-<td><p>read system date/time</p></td>
-</tr>
-<tr class="row-odd"><td><p>echo</p></td>
-<td><p>echo what is typed back in the terminal</p></td>
-</tr>
-<tr class="row-even"><td><p>grep</p></td>
-<td><p>search program that uses regular expressions</p></td>
-</tr>
-<tr class="row-odd"><td><p>sudo</p></td>
-<td><p>perform as root user</p></td>
-</tr>
-<tr class="row-even"><td><p>./program</p></td>
-<td><p>run program</p></td>
-</tr>
-<tr class="row-odd"><td><p>exit</p></td>
-<td><p>quit terminal session</p></td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-</section>
-<hr class="docutils" />
-<section id="rappel-des-raccourcis-de-navigation-dans-le-shell">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Rappel des raccourcis de navigation dans le shell</a><a class="headerlink" href="#rappel-des-raccourcis-de-navigation-dans-le-shell" title="Lien permanent vers cette rubrique">¶</a></h3>
-<blockquote>
-<div><table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Key or Key Combination</p></th>
-<th class="head"><p>Function</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Ctrl + A</p></td>
-<td><p>Move cursor to beginning of line</p></td>
-</tr>
-<tr class="row-odd"><td><p>Ctrl + C</p></td>
-<td><p>Stop currently-executing process</p></td>
-</tr>
-<tr class="row-even"><td><p>Ctrl + D</p></td>
-<td><p>Log out—equivalent to typing exit</p></td>
-</tr>
-<tr class="row-odd"><td><p>Ctrl + E</p></td>
-<td><p>Move cursor to end of line</p></td>
-</tr>
-<tr class="row-even"><td><p>Ctrl + H</p></td>
-<td><p>Delete character in front of cursor</p></td>
-</tr>
-<tr class="row-odd"><td><p>Ctrl + L</p></td>
-<td><p>Clear terminal</p></td>
-</tr>
-<tr class="row-even"><td><p>Ctrl + R</p></td>
-<td><p>Search command history</p></td>
-</tr>
-<tr class="row-odd"><td><p>Ctrl + Z</p></td>
-<td><p>Suspend a program</p></td>
-</tr>
-<tr class="row-even"><td><p>Arrow Left/Right</p></td>
-<td><p>Move cursor left/right one character</p></td>
-</tr>
-<tr class="row-odd"><td><p>Arrow Up/Down</p></td>
-<td><p>Scrolls through previous commands</p></td>
-</tr>
-<tr class="row-even"><td><p>Shift + PageUp/PageDown</p></td>
-<td><p>Move one page up or down in terminal output</p></td>
-</tr>
-<tr class="row-odd"><td><p>Tab</p></td>
-<td><p>Command or file name completion</p></td>
-</tr>
-<tr class="row-even"><td><p>Tab Tab</p></td>
-<td><p>Shows all command or file name possibilities</p></td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-</section>
-<hr class="docutils" />
-<section id="connaitre-la-version-du-shell-utilise">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaitre la version du shell utilisé</a><a class="headerlink" href="#connaitre-la-version-du-shell-utilise" title="Lien permanent vers cette rubrique">¶</a></h3>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ps -p $$
-</pre></div>
-</div>
-</div></blockquote>
-</section>
-<hr class="docutils" />
-<section id="faire-du-multi-screen-sur-une-fenetre-terminal">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Faire du multi-screen  sur une fenêtre terminal</a><a class="headerlink" href="#faire-du-multi-screen-sur-une-fenetre-terminal" title="Lien permanent vers cette rubrique">¶</a></h3>
-<section id="installation-de-screen">
-<h4>Installation de screen<a class="headerlink" href="#installation-de-screen" title="Lien permanent vers cette rubrique">¶</a></h4>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">screen</span>
-</pre></div>
-</div>
-</div></blockquote>
-</section>
-<section id="lancer-l-application-screen">
-<h4>Lancer l’application « screen »<a class="headerlink" href="#lancer-l-application-screen" title="Lien permanent vers cette rubrique">¶</a></h4>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">screen</span>
-</pre></div>
-</div>
-</div></blockquote>
-</section>
-<section id="liste-des-commandes-des-bases-pour-screen">
-<h4>Liste des commandes des bases pour screen<a class="headerlink" href="#liste-des-commandes-des-bases-pour-screen" title="Lien permanent vers cette rubrique">¶</a></h4>
-<blockquote>
-<div><table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Raccourcis clavier</p></th>
-<th class="head"><p>Fonctions</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>screen</p></td>
-<td><p>Lancer screen</p></td>
-</tr>
-<tr class="row-odd"><td><p>CTRL+[a]    –&gt; [c]</p></td>
-<td><p>Ouvrir un nouveau screen</p></td>
-</tr>
-<tr class="row-even"><td><p>CTRL+[a]    –&gt; [espace]</p></td>
-<td><p>Basculer vers le screen suivant</p></td>
-</tr>
-<tr class="row-odd"><td><p>CTRL+[a][a]</p></td>
-<td><p>Basculer entre le teminal actif et le dernier consulté</p></td>
-</tr>
-<tr class="row-even"><td><p>CTRL+[a]    –&gt; d</p></td>
-<td><p>Détacher la session screen (permet) de fermer la console
-sans arréter les process</p></td>
-</tr>
-<tr class="row-odd"><td><p>screen -r</p></td>
-<td><p>Se reconnecter à la session screen tel qu’elle était
-lors du détachement avec CTRL[a][d]. On parle de rattacher
-le screen</p></td>
-</tr>
-<tr class="row-even"><td><p>exit</p></td>
-<td><p>Ferme le screen courrant</p></td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-</section>
-</section>
 <hr class="docutils" />
 <section id="linux-rediriger-sortie-vers-null">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">linux rediriger sortie vers null</a><a class="headerlink" href="#linux-rediriger-sortie-vers-null" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">linux rediriger sortie vers null</a><a class="headerlink" href="#linux-rediriger-sortie-vers-null" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -490,7 +277,7 @@ le screen</p></td>
 </section>
 <hr class="docutils" />
 <section id="faire-un-script-en-shell">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Faire un script en Shell</a><a class="headerlink" href="#faire-un-script-en-shell" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Faire un script en Shell</a><a class="headerlink" href="#faire-un-script-en-shell" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -505,7 +292,7 @@ le screen</p></td>
 </section>
 <hr class="docutils" />
 <section id="rendre-un-script-executable">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Rendre un script exécutable</a><a class="headerlink" href="#rendre-un-script-executable" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Rendre un script exécutable</a><a class="headerlink" href="#rendre-un-script-executable" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pour le rendre exécutable</span>
 <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="o">&lt;</span><span class="n">Nom_du_script</span><span class="o">&gt;</span>
@@ -518,7 +305,7 @@ le screen</p></td>
 </section>
 <hr class="docutils" />
 <section id="creer-un-alias-permanent">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer un alias permanent</a><a class="headerlink" href="#creer-un-alias-permanent" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer un alias permanent</a><a class="headerlink" href="#creer-un-alias-permanent" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
@@ -560,13 +347,13 @@ le screen</p></td>
 </li>
 </ol>
 </div></blockquote>
-</section>
-</section>
 <hr class="docutils" />
 <section id="utilisateurs-groupes-et-permissions">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Utilisateurs, Groupes et Permissions</a><a class="headerlink" href="#utilisateurs-groupes-et-permissions" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Utilisateurs, Groupes et Permissions</a><a class="headerlink" href="#utilisateurs-groupes-et-permissions" title="Lien permanent vers cette rubrique">¶</a></h3>
+</section>
+</section>
 <section id="activer-le-compte-root">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">activer le compte root</a><a class="headerlink" href="#activer-le-compte-root" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">activer le compte root</a><a class="headerlink" href="#activer-le-compte-root" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">passwd</span> <span class="n">root</span>
 </pre></div>
@@ -574,7 +361,7 @@ le screen</p></td>
 </div></blockquote>
 </section>
 <section id="creer-un-nouvel-utilisateur">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer un nouvel utilisateur</a><a class="headerlink" href="#creer-un-nouvel-utilisateur" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer un nouvel utilisateur</a><a class="headerlink" href="#creer-un-nouvel-utilisateur" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
@@ -592,7 +379,7 @@ le screen</p></td>
 </div></blockquote>
 </section>
 <section id="creer-un-nouveau-groupe">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer un nouveau groupe</a><a class="headerlink" href="#creer-un-nouveau-groupe" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer un nouveau groupe</a><a class="headerlink" href="#creer-un-nouveau-groupe" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
@@ -610,7 +397,7 @@ le screen</p></td>
 </div></blockquote>
 </section>
 <section id="ajouter-un-utilisateur-a-un-groupe">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Ajouter un utilisateur à un groupe</a><a class="headerlink" href="#ajouter-un-utilisateur-a-un-groupe" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Ajouter un utilisateur à un groupe</a><a class="headerlink" href="#ajouter-un-utilisateur-a-un-groupe" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">adduser</span> <span class="o">&lt;</span><span class="n">nom_de_l</span><span class="s1">&#39;utilisateur&gt; &lt;nom_du_groupe&gt;</span>
 
@@ -622,7 +409,7 @@ le screen</p></td>
 </div></blockquote>
 </section>
 <section id="afficher-les-membres-d-un-groupe">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Afficher les membres d’un groupe</a><a class="headerlink" href="#afficher-les-membres-d-un-groupe" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Afficher les membres d’un groupe</a><a class="headerlink" href="#afficher-les-membres-d-un-groupe" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getent</span> <span class="n">group</span> <span class="o">&lt;</span><span class="n">nom_du_group</span><span class="o">&gt;</span>
 
@@ -641,7 +428,7 @@ le screen</p></td>
 </div></blockquote>
 </section>
 <section id="afficher-les-groupes-d-un-utilisateur">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Afficher les groupes d’un utilisateur</a><a class="headerlink" href="#afficher-les-groupes-d-un-utilisateur" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Afficher les groupes d’un utilisateur</a><a class="headerlink" href="#afficher-les-groupes-d-un-utilisateur" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">groups</span> <span class="o">&lt;</span><span class="n">nom_d</span><span class="s1">&#39;utilisateur&gt;</span>
 
@@ -652,7 +439,7 @@ le screen</p></td>
 </div></blockquote>
 </section>
 <section id="changer-le-mot-de-passe-d-un-utilisateur">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Changer le mot de passe d’un utilisateur</a><a class="headerlink" href="#changer-le-mot-de-passe-d-un-utilisateur" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Changer le mot de passe d’un utilisateur</a><a class="headerlink" href="#changer-le-mot-de-passe-d-un-utilisateur" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">passwd</span> <span class="p">[</span><span class="n">username</span><span class="p">]</span>
 
@@ -665,7 +452,7 @@ le screen</p></td>
 </section>
 <hr class="docutils" />
 <section id="faire-une-elevation-valable-toute-la-duree-de-la-session">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Faire une élévation valable toute la durée de la session</a><a class="headerlink" href="#faire-une-elevation-valable-toute-la-duree-de-la-session" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Faire une élévation valable toute la durée de la session</a><a class="headerlink" href="#faire-une-elevation-valable-toute-la-duree-de-la-session" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">s</span>
 <span class="c1"># N.B : Le prompt devrais passer en root@[nom_de_machine]</span>
@@ -675,7 +462,7 @@ le screen</p></td>
 </section>
 <hr class="docutils" />
 <section id="pour-copier-des-fichiers-en-root-depuis-l-interface-graphique">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Pour copier des fichiers en root depuis l’interface graphique</a><a class="headerlink" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Pour copier des fichiers en root depuis l’interface graphique</a><a class="headerlink" href="#pour-copier-des-fichiers-en-root-depuis-l-interface-graphique" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl>
 <dt>Installation du logiciel « gksu »</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">gksu</span>
 </pre></div>
@@ -699,7 +486,7 @@ trouve sur le compte root.</p>
 </section>
 <hr class="docutils" />
 <section id="groupes">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Groupes</a><a class="headerlink" href="#groupes" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Groupes</a><a class="headerlink" href="#groupes" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl class="field-list">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><blockquote>
@@ -747,7 +534,7 @@ $ usermod -aG docker polter
 </dl>
 </section>
 <section id="acl-proprietaire-rwx">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">ACL (Propriétaire, RWX)</a><a class="headerlink" href="#acl-proprietaire-rwx" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">ACL (Propriétaire, RWX)</a><a class="headerlink" href="#acl-proprietaire-rwx" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
 <li><dl>
@@ -781,23 +568,18 @@ $ usermod -aG docker polter
 </li>
 </ol>
 </div></blockquote>
-</section>
-</section>
 <hr class="docutils" />
 <section id="configuration-systeme">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Configuration Système</a><a class="headerlink" href="#configuration-systeme" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Configuration Système</a><a class="headerlink" href="#configuration-systeme" title="Lien permanent vers cette rubrique">¶</a></h3>
+</section>
+</section>
 <section id="date-et-heure">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Date et heure</a><a class="headerlink" href="#date-et-heure" title="Lien permanent vers cette rubrique">¶</a></h3>
-<section id="conaitre-la-date-et-l-heure-du-systeme">
-<h4>Conaitre la date et l’heure du système<a class="headerlink" href="#conaitre-la-date-et-l-heure-du-systeme" title="Lien permanent vers cette rubrique">¶</a></h4>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Date et heure</a><a class="headerlink" href="#date-et-heure" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">date</span>
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="synchronyser-la-date-et-l-heure-avec-un-serveur-de-temp-ntp">
-<h4>Synchronyser la date et l’heure avec un serveur de temp (NTP)<a class="headerlink" href="#synchronyser-la-date-et-l-heure-avec-un-serveur-de-temp-ntp" title="Lien permanent vers cette rubrique">¶</a></h4>
 <dl class="field-list">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><blockquote>
@@ -853,22 +635,21 @@ $ usermod -aG docker polter
 </dd>
 </dl>
 </section>
-</section>
 <hr class="docutils" />
 <section id="changer-la-disposition-du-clavier">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Changer la disposition du clavier</a><a class="headerlink" href="#changer-la-disposition-du-clavier" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Changer la disposition du clavier</a><a class="headerlink" href="#changer-la-disposition-du-clavier" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dpkg</span><span class="o">-</span><span class="n">reconfigure</span> <span class="n">keyboard</span><span class="o">-</span><span class="n">configuration</span>
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-</section>
 <hr class="docutils" />
 <section id="administration-systeme">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Administration système</a><a class="headerlink" href="#administration-systeme" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Administration système</a><a class="headerlink" href="#administration-systeme" title="Lien permanent vers cette rubrique">¶</a></h3>
+</section>
+</section>
 <section id="arreter-demarrer-les-services-deamon">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Arrêter / Démarrer les services (deamon)</a><a class="headerlink" href="#arreter-demarrer-les-services-deamon" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Arrêter / Démarrer les services (deamon)</a><a class="headerlink" href="#arreter-demarrer-les-services-deamon" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
 <li><dl>
@@ -893,7 +674,7 @@ $ usermod -aG docker polter
 </section>
 <hr class="docutils" />
 <section id="creer-une-tache-planifie-cron">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer une tâche planifié (cron)</a><a class="headerlink" href="#creer-une-tache-planifie-cron" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer une tâche planifié (cron)</a><a class="headerlink" href="#creer-une-tache-planifie-cron" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl class="field-list">
 <dt class="field-odd">Liens Web<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -926,7 +707,7 @@ $ usermod -aG docker polter
 </section>
 <hr class="docutils" />
 <section id="pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Pour créer un script qui s’exécute au démarrage du système</a><a class="headerlink" href="#pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Pour créer un script qui s’exécute au démarrage du système</a><a class="headerlink" href="#pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl>
 <dt>Pour faire en sorte qu’un script s’exécute au démarrage, il faut 2 éléments distincts :</dt><dd><ul>
 <li><dl>
@@ -954,8 +735,6 @@ autrement dit les services.</p>
 </ul>
 </dd>
 </dl>
-<section id="preparation-du-script-shell">
-<h4>Préparation du script shell<a class="headerlink" href="#preparation-du-script-shell" title="Lien permanent vers cette rubrique">¶</a></h4>
 <blockquote>
 <div><ol class="arabic">
 <li><dl>
@@ -1035,9 +814,6 @@ et rendre le script exécutable avec la commande suivante :</p>
 </li>
 </ol>
 </div></blockquote>
-</section>
-<section id="preparation-du-script-python">
-<h4>Préparation du script python<a class="headerlink" href="#preparation-du-script-python" title="Lien permanent vers cette rubrique">¶</a></h4>
 <blockquote>
 <div><ol class="arabic">
 <li><p>Si se n’est pas déjà fait, éditer le script et ajouter la ligne suivante
@@ -1057,10 +833,9 @@ sur la première ligne de votre fichier</p>
 </ol>
 </div></blockquote>
 </section>
-</section>
 <hr class="docutils" />
 <section id="connaitre-la-version-du-systeme">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaître la version du système</a><a class="headerlink" href="#connaitre-la-version-du-systeme" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaître la version du système</a><a class="headerlink" href="#connaitre-la-version-du-systeme" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
 <li><dl>
@@ -1082,7 +857,7 @@ sur la première ligne de votre fichier</p>
 </section>
 <hr class="docutils" />
 <section id="connaitre-la-version-d-un-paquet">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaître la version d’un paquet</a><a class="headerlink" href="#connaitre-la-version-d-un-paquet" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaître la version d’un paquet</a><a class="headerlink" href="#connaitre-la-version-d-un-paquet" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
 <li><dl>
@@ -1104,7 +879,7 @@ sur la première ligne de votre fichier</p>
 </section>
 <hr class="docutils" />
 <section id="emplacement-des-programmes">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Emplacement des programmes</a><a class="headerlink" href="#emplacement-des-programmes" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Emplacement des programmes</a><a class="headerlink" href="#emplacement-des-programmes" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
 <li><dl>
@@ -1125,15 +900,13 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </li>
 </ol>
 </div></blockquote>
-</section>
-</section>
 <hr class="docutils" />
 <section id="reseau">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Réseau</a><a class="headerlink" href="#reseau" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Réseau</a><a class="headerlink" href="#reseau" title="Lien permanent vers cette rubrique">¶</a></h3>
+</section>
+</section>
 <section id="ssh">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">SSH</a><a class="headerlink" href="#ssh" title="Lien permanent vers cette rubrique">¶</a></h3>
-<section id="activer-la-connections-ssh">
-<h4>Activer la connections ssh<a class="headerlink" href="#activer-la-connections-ssh" title="Lien permanent vers cette rubrique">¶</a></h4>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">SSH</a><a class="headerlink" href="#ssh" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
@@ -1146,9 +919,6 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh">
-<h4>Désactiver la demande de mot de passe de la commande sudo au travers du ssh<a class="headerlink" href="#desactiver-la-demande-de-mot-de-passe-de-la-commande-sudo-au-travers-du-ssh" title="Lien permanent vers cette rubrique">¶</a></h4>
 <blockquote>
 <div><ol class="arabic">
 <li><p>Ajouter l’utilisateur au fichiers sudoers</p>
@@ -1185,10 +955,9 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </ol>
 </div></blockquote>
 </section>
-</section>
 <hr class="docutils" />
 <section id="pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Pour pouvoir se connecter en RDP sur un poste Linux</a><a class="headerlink" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Pour pouvoir se connecter en RDP sur un poste Linux</a><a class="headerlink" href="#pour-pouvoir-se-connecter-en-rdp-sur-un-poste-linux" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
@@ -1205,7 +974,7 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </section>
 <hr class="docutils" />
 <section id="pour-faire-du-xforwarding">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Pour faire du XForwarding</a><a class="headerlink" href="#pour-faire-du-xforwarding" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Pour faire du XForwarding</a><a class="headerlink" href="#pour-faire-du-xforwarding" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens WEB<span class="colon">:</span></dt>
@@ -1276,7 +1045,7 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </section>
 <hr class="docutils" />
 <section id="vncserver">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">VNCserver</a><a class="headerlink" href="#vncserver" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">VNCserver</a><a class="headerlink" href="#vncserver" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
@@ -1298,7 +1067,7 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </section>
 <hr class="docutils" />
 <section id="pour-mettre-une-ip-fixe-sur-une-interfaces-reseau">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Pour mettre une IP fixe sur une interfaces réseau</a><a class="headerlink" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Pour mettre une IP fixe sur une interfaces réseau</a><a class="headerlink" href="#pour-mettre-une-ip-fixe-sur-une-interfaces-reseau" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl class="field-list">
 <dt class="field-odd">Liens Web<span class="colon">:</span></dt>
 <dd class="field-odd"><blockquote>
@@ -1336,7 +1105,7 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </section>
 <hr class="docutils" />
 <section id="pour-active-le-wifi">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Pour active le WIFI</a><a class="headerlink" href="#pour-active-le-wifi" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Pour active le WIFI</a><a class="headerlink" href="#pour-active-le-wifi" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl class="field-list">
 <dt class="field-odd">liens Web<span class="colon">:</span></dt>
 <dd class="field-odd"><blockquote>
@@ -1365,7 +1134,7 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </section>
 <hr class="docutils" />
 <section id="se-connecter-a-un-reseau-wifi-en-ligne-de-commande">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Se connecter a un réseau wifi en ligne de commande</a><a class="headerlink" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Se connecter a un réseau wifi en ligne de commande</a><a class="headerlink" href="#se-connecter-a-un-reseau-wifi-en-ligne-de-commande" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl class="field-list">
 <dt class="field-odd">liens Web<span class="colon">:</span></dt>
 <dd class="field-odd"><blockquote>
@@ -1386,7 +1155,7 @@ que nous installons, doivent être installés dans : <strong>“/usr/local/”</
 </section>
 <hr class="docutils" />
 <section id="creer-un-dossier-partage-avec-samba">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer un dossier partagé avec samba</a><a class="headerlink" href="#creer-un-dossier-partage-avec-samba" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer un dossier partagé avec samba</a><a class="headerlink" href="#creer-un-dossier-partage-avec-samba" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl class="field-list">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><blockquote>
@@ -1504,8 +1273,6 @@ existant par au moins une ligne vide (hors commentaire)a</p></li>
 </ol>
 </dd>
 </dl>
-<section id="monter-un-repertoire-distant">
-<h4>Monter un répertoire distant<a class="headerlink" href="#monter-un-repertoire-distant" title="Lien permanent vers cette rubrique">¶</a></h4>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
@@ -1547,8 +1314,6 @@ existant par au moins une ligne vide (hors commentaire)a</p></li>
 </li>
 </ol>
 </div></blockquote>
-<section id="mode-manuel">
-<h5>Mode Manuel<a class="headerlink" href="#mode-manuel" title="Lien permanent vers cette rubrique">¶</a></h5>
 <blockquote>
 <div><ol class="arabic">
 <li><p>Montage</p>
@@ -1567,9 +1332,6 @@ automatiquement au démarrage.</p>
 </li>
 </ol>
 </div></blockquote>
-</section>
-<section id="mode-automatique">
-<h5>Mode Automatique<a class="headerlink" href="#mode-automatique" title="Lien permanent vers cette rubrique">¶</a></h5>
 <blockquote>
 <div><ol class="arabic">
 <li><p>Copier le fichier “fstab”</p>
@@ -1597,11 +1359,9 @@ accordés.</p></li>
 </ol>
 </div></blockquote>
 </section>
-</section>
-</section>
 <hr class="docutils" />
 <section id="telecharger-un-fichier-en-ligne-de-commande-wget">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Télécharger un fichier en ligne de commande (wget)</a><a class="headerlink" href="#telecharger-un-fichier-en-ligne-de-commande-wget" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Télécharger un fichier en ligne de commande (wget)</a><a class="headerlink" href="#telecharger-un-fichier-en-ligne-de-commande-wget" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl class="field-list">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><blockquote>
@@ -1615,13 +1375,13 @@ accordés.</p></li>
 </div>
 </dd>
 </dl>
-</section>
-</section>
 <hr class="docutils" />
 <section id="gestion-materiel">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Gestion Matériel</a><a class="headerlink" href="#gestion-materiel" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Gestion Matériel</a><a class="headerlink" href="#gestion-materiel" title="Lien permanent vers cette rubrique">¶</a></h3>
+</section>
+</section>
 <section id="info-gestion-cpu">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Info / Gestion CPU</a><a class="headerlink" href="#info-gestion-cpu" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Info / Gestion CPU</a><a class="headerlink" href="#info-gestion-cpu" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -1635,7 +1395,7 @@ accordés.</p></li>
 </dl>
 </section>
 <section id="connaitre-la-liste-des-materiel-usb">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaître la liste des matériel usb</a><a class="headerlink" href="#connaitre-la-liste-des-materiel-usb" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaître la liste des matériel usb</a><a class="headerlink" href="#connaitre-la-liste-des-materiel-usb" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lsusb</span>
 </pre></div>
@@ -1644,7 +1404,7 @@ accordés.</p></li>
 </section>
 <hr class="docutils" />
 <section id="connaitre-lespace-disque-utilise-et-celui-disponible">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaître l’espace disque utilise et celui disponible</a><a class="headerlink" href="#connaitre-lespace-disque-utilise-et-celui-disponible" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaître l’espace disque utilise et celui disponible</a><a class="headerlink" href="#connaitre-lespace-disque-utilise-et-celui-disponible" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span>
 </pre></div>
@@ -1653,7 +1413,7 @@ accordés.</p></li>
 </section>
 <hr class="docutils" />
 <section id="les-ports-series">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Les ports séries</a><a class="headerlink" href="#les-ports-series" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Les ports séries</a><a class="headerlink" href="#les-ports-series" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Liens Web<span class="colon">:</span></dt>
@@ -1687,8 +1447,6 @@ accordés.</p></li>
 </tbody>
 </table>
 </div></blockquote>
-<section id="connaitre-la-liste-des-ports-serie">
-<h4>Connaître la liste des ports série<a class="headerlink" href="#connaitre-la-liste-des-ports-serie" title="Lien permanent vers cette rubrique">¶</a></h4>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">tty</span><span class="o">*</span>
     <span class="c1"># La commande retourne généralement plus de 50 tty.</span>
@@ -1697,20 +1455,15 @@ accordés.</p></li>
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="interroger-le-journal-sur-les-ports-serie">
-<h4>Interroger le journal sur les ports série<a class="headerlink" href="#interroger-le-journal-sur-les-ports-serie" title="Lien permanent vers cette rubrique">¶</a></h4>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dmesg</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">tty</span>
     <span class="c1"># Information plus complète qu&#39;avec l&#39;instruction précédente</span>
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-</section>
-</section>
 <section id="weblinks">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h3>
+</section>
 </section>
 </section>
 
