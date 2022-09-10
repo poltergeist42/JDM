@@ -2,155 +2,19 @@
 LINUX
 =====
 
-.. toctree::
-   :titlesonly:
-   :maxdepth: 2
-
-   Raspberry/Raspberry
-   bugError/bugError
-
 .. contents::
     :backlinks: top
     :depth: 3
  
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
 
------
-Shell
------
+   shell/shell
+   multiscreen/multiscreen
+   Raspberry/Raspberry
+   bugError/bugError
 
-Rappel des commandes de bases
-=============================
-
-    :Liens web:
-            * http://wiki.linux-france.org/wiki/Les_commandes_fondamentales_de_Linux
-
-    +--------------------------+--------------------------------------------------+
-    |        Command           |          Meaning                                 |
-    +==========================+==================================================+
-    | ls                       | list files in current directory                  |
-    |                          |    # pour afficher la list de tous les éléments, |
-    |                          |    même cachés                                   |
-    |                          |                                                  |
-    |                          |        * ls -a                                   |
-    +--------------------------+--------------------------------------------------+
-    | cd                       | change directory                                 |
-    +--------------------------+--------------------------------------------------+
-    | pwd                      | print working directory                          |
-    +--------------------------+--------------------------------------------------+
-    | rm                       | filename remove filename                         |
-    |                          |    # Pour forcer la suppression d'un             | 
-    |                          |    # répertoir non vide                          |
-    |                          |                                                  |
-    |                          |        * rm -Rf monrepertoire                    |
-    +--------------------------+--------------------------------------------------+
-    | mkdir *directoryname*    | make directory with directoryname                |
-    +--------------------------+--------------------------------------------------+
-    | rmdir *directoryname*    | remove empty directory                           |
-    +--------------------------+--------------------------------------------------+
-    | cat textfile             | display contents of textfile in the terminal     |
-    +--------------------------+--------------------------------------------------+
-    | mv oldfile newfile       | move (rename) oldfile to newfile                 |
-    +--------------------------+--------------------------------------------------+
-    | cp oldfile newfile       | copy oldfile to newfile                          |
-    +--------------------------+--------------------------------------------------+
-    | man command              | display manual of command                        |
-    +--------------------------+--------------------------------------------------+
-    | date                     | read system date/time                            |
-    +--------------------------+--------------------------------------------------+
-    | echo                     | echo what is typed back in the terminal          |
-    +--------------------------+--------------------------------------------------+
-    | grep                     | search program that uses regular expressions     |
-    +--------------------------+--------------------------------------------------+
-    | sudo                     | perform as root user                             |
-    +--------------------------+--------------------------------------------------+
-    | ./program                | run program                                      |
-    +--------------------------+--------------------------------------------------+
-    | exit                     | quit terminal session                            |
-    +--------------------------+--------------------------------------------------+
-
-####
-
-Rappel des raccourcis de navigation dans le shell
-=================================================
-
-    +----------------------------+----------------------------------------------+
-    |   Key or Key Combination   |                  Function                    |
-    +============================+==============================================+
-    | Ctrl + A                   | Move cursor to beginning of line             |
-    +----------------------------+----------------------------------------------+
-    | Ctrl + C                   | Stop currently-executing process             |
-    +----------------------------+----------------------------------------------+
-    | Ctrl + D                   | Log out—equivalent to typing exit            |
-    +----------------------------+----------------------------------------------+
-    | Ctrl + E                   | Move cursor to end of line                   |
-    +----------------------------+----------------------------------------------+
-    | Ctrl + H                   | Delete character in front of cursor          |
-    +----------------------------+----------------------------------------------+
-    | Ctrl + L                   | Clear terminal                               |
-    +----------------------------+----------------------------------------------+
-    | Ctrl + R                   | Search command history                       |
-    +----------------------------+----------------------------------------------+
-    | Ctrl + Z                   | Suspend a program                            |
-    +----------------------------+----------------------------------------------+
-    | Arrow Left/Right           | Move cursor left/right one character         |
-    +----------------------------+----------------------------------------------+
-    | Arrow Up/Down              | Scrolls through previous commands            |
-    +----------------------------+----------------------------------------------+
-    | Shift + PageUp/PageDown    | Move one page up or down in terminal output  |
-    +----------------------------+----------------------------------------------+
-    | Tab                        | Command or file name completion              |
-    +----------------------------+----------------------------------------------+
-    | Tab Tab                    | Shows all command or file name possibilities |
-    +----------------------------+----------------------------------------------+
-
-####
-
-Connaitre la version du shell utilisé
-=====================================
-    ::
-
-        ps -p $$
-
-####
-
-Faire du multi-screen  sur une fenêtre terminal
-===============================================
-
-Installation de screen
-----------------------
-    ::
-
-        sudo apt-get install screen
-                
-Lancer l'application "screen"
------------------------------
-    ::
-
-        screen
-                
-Liste des commandes des bases pour screen
------------------------------------------
-
-    +--------------------------+------------------------------------------------------------+
-    | Raccourcis clavier       |                        Fonctions                           |
-    +==========================+============================================================+
-    | screen                   | Lancer screen                                              |
-    +--------------------------+------------------------------------------------------------+
-    | CTRL+[a]    --> [c]      | Ouvrir un nouveau screen                                   |
-    +--------------------------+------------------------------------------------------------+
-    | CTRL+[a]    --> [espace] | Basculer vers le screen suivant                            |
-    +--------------------------+------------------------------------------------------------+
-    | CTRL+[a][a]              | Basculer entre le teminal actif et le dernier consulté     |
-    +--------------------------+------------------------------------------------------------+
-    | CTRL+[a]    --> d        | Détacher la session screen (permet) de fermer la console   |
-    |                          | sans arréter les process                                   |
-    +--------------------------+------------------------------------------------------------+
-    | screen -r                | Se reconnecter à la session screen tel qu'elle était       |
-    |                          | lors du détachement avec CTRL[a][d]. On parle de rattacher |
-    |                          | le screen                                                  |
-    +--------------------------+------------------------------------------------------------+
-    | exit                     | Ferme le screen courrant                                   |
-    +--------------------------+------------------------------------------------------------+
 
 ####
 

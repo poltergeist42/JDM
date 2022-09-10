@@ -276,6 +276,14 @@ Serveur d'impression
 
 Ici aucune dificulté. Il suffit de suivre un tuto installation et de configuration de CUPS.
 
+    .. code::
+
+        # Pour accéder au serveur d'impression en local depuis un navigateur WEB
+        http://localhost:631
+
+        # Pour accéder au serveur d'impression depuis autre poste du réseau
+        http://[IP du serveur d'impression]:631
+
 ####
 
 --------
