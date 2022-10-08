@@ -596,11 +596,11 @@ app to the top of this list.</p>
 after your app. To register our app with Django, we need to point to this class. the path of
 this class looks like this :</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>App&#39;s DIR --&gt; apps.py --&gt; [class named after your app]
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">App</span><span class="s1">&#39;s DIR --&gt; apps.py --&gt; [class named after your app]</span>
 
-# ex for an app called &quot;pages&quot;
+<span class="c1"># ex for an app called &quot;pages&quot;</span>
 
-pages.apps.PagesConfig
+<span class="n">pages</span><span class="o">.</span><span class="n">apps</span><span class="o">.</span><span class="n">PagesConfig</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1063,15 +1063,15 @@ will be rewritten.</p>
 </div></blockquote>
 <p>It is a good practice to create the first « web page » under the project_site’s folder :</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>+---poject_site
-|   [...]
-|   |
-|   \---templates
-|           base.html
-|
-+---App&#39;s folder
-|
-[...]
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---</span><span class="n">poject_site</span>
+<span class="o">|</span>   <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   \<span class="o">---</span><span class="n">templates</span>
+<span class="o">|</span>           <span class="n">base</span><span class="o">.</span><span class="n">html</span>
+<span class="o">|</span>
+<span class="o">+---</span><span class="n">App</span><span class="s1">&#39;s folder</span>
+<span class="o">|</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1081,15 +1081,15 @@ will be rewritten.</p>
 <p>If an app need a html template, we need to create a dir  “templates” in the app’s root dir. We also need
 to create a new dir nammed as the app inside the templates dir.</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>+---pages                       &lt;-- app&#39;s name
-|   |   [...]
-|   |
-|   +---migrations
-|   |
-|   \---templates
-|       \---pages
-|               contact.html
-|               page.html       &lt;-- inherit from &#39;base.html&#39;
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---</span><span class="n">pages</span>                       <span class="o">&lt;--</span> <span class="n">app</span><span class="s1">&#39;s name</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   <span class="o">+---</span><span class="n">migrations</span>
+<span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   \<span class="o">---</span><span class="n">templates</span>
+<span class="o">|</span>       \<span class="o">---</span><span class="n">pages</span>
+<span class="o">|</span>               <span class="n">contact</span><span class="o">.</span><span class="n">html</span>
+<span class="o">|</span>               <span class="n">page</span><span class="o">.</span><span class="n">html</span>       <span class="o">&lt;--</span> <span class="n">inherit</span> <span class="kn">from</span> <span class="s1">&#39;base.html&#39;</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1114,19 +1114,19 @@ the rest of the application. The directory is defined in the <em>settings.py</em
 <strong>static</strong> by default. Until the site is in developement, the static dir need to be in the
 project_site’s dir, at the same level of the templates” dir.</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>+---project_site
-|   |   [...]
-|   |
-|   +---static
-|   |       logo.jpg
-|   |       main.css
-|   |       top_banner.png
-|   |
-|   \---templates
-|
-+---App&#39;s folder
-|
-[...]
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---</span><span class="n">project_site</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   <span class="o">+---</span><span class="n">static</span>
+<span class="o">|</span>   <span class="o">|</span>       <span class="n">logo</span><span class="o">.</span><span class="n">jpg</span>
+<span class="o">|</span>   <span class="o">|</span>       <span class="n">main</span><span class="o">.</span><span class="n">css</span>
+<span class="o">|</span>   <span class="o">|</span>       <span class="n">top_banner</span><span class="o">.</span><span class="n">png</span>
+<span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   \<span class="o">---</span><span class="n">templates</span>
+<span class="o">|</span>
+<span class="o">+---</span><span class="n">App</span><span class="s1">&#39;s folder</span>
+<span class="o">|</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s1">&#39;/static/&#39;</span>

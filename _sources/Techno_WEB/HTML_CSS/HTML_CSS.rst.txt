@@ -88,7 +88,7 @@ Sélecteur, pseudo-class et pseudo-elements
 Positionnement et dimensionnement dans la fenêtre (ou dans la boite)
 ====================================================================
 
-    .. image:: ./Images/HTML_CSS/dimensionnement.png
+    .. image:: ./images/dimensionnement.png
         :width: 400 px
         :align: center
 
@@ -99,7 +99,7 @@ Positionnement et dimensionnement dans la fenêtre (ou dans la boite)
 
 Chaque dimensions peut être utilisée dans sa forme courte (dans le sens horaire) :
 
-    .. image:: ./Images/HTML_CSS/rotation_propriete.PNG
+    .. image:: ./images/rotation_propriete.PNG
         :width: 400 px
         :align: center
 

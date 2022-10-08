@@ -12,7 +12,6 @@ Mon journal de manip
    :caption: Sommaire:
 
    readme
-   Aquariophilie
    Composants
    ComputerVision
    Cookbook
@@ -26,9 +25,7 @@ Mon journal de manip
    Freecad
    GIT
    HPVC
-   HTML_CSS
    Informatique
-   Javascript
    kicad
    Latex
    Linux/Linux
@@ -41,7 +38,6 @@ Mon journal de manip
    Python
    Regex
    Reseau
-   SiteWeb
    Soudure
    Techno_WEB/Techno_WEB
    Trading

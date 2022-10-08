@@ -340,7 +340,7 @@ Creating an App
         after your app. To register our app with Django, we need to point to this class. the path of
         this class looks like this : 
 
-            .. code:: shell
+            .. code:: 
 
                 App's DIR --> apps.py --> [class named after your app]
 
@@ -753,7 +753,7 @@ The content of this specific bloks will be replace in the child page only if it 
 
 It is a good practice to create the first "web page" under the project_site's folder :
 
-    .. code:: shell
+    .. code:: 
 
         +---poject_site
         |   [...]
@@ -771,7 +771,7 @@ The app's html template
 If an app need a html template, we need to create a dir  'templates' in the app's root dir. We also need
 to create a new dir nammed as the app inside the templates dir.
 
-    .. code:: shell
+    .. code:: 
 
         +---pages                       <-- app's name
         |   |   [...]
@@ -800,7 +800,7 @@ the rest of the application. The directory is defined in the *settings.py* file 
 **static** by default. Until the site is in developement, the static dir need to be in the
 project_site's dir, at the same level of the templates' dir.
 
-    .. code:: shell
+    .. code:: 
 
         +---project_site
         |   |   [...]
