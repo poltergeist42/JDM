@@ -16,9 +16,9 @@ Samba (SMB / CIFS)
 
 ####
 
----
-NFS
----
+-------------------------
+NFS (Network File System)
+-------------------------
 
 [WIP]
 

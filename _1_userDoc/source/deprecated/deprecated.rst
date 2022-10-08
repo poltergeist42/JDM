@@ -8,6 +8,6 @@ moi.
 .. toctree::
    :titlesonly:
 
-   Aquariophilie
-   Django
-   English_vocab
+   Aquariophilie/Aquariophilie
+   Django/Django
+   English_vocab/English_vocab

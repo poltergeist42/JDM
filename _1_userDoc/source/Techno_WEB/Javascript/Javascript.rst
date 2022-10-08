@@ -1568,6 +1568,23 @@ Node.js
 Node.js (ou Node) est un runtime pour Javascript. Tout comme JRE est le runtime de JAVA. Il permet à
 Javascript de s'executer en dehors d'un navigateur par exemple coté serveur.
 
+.. glossary::
+
+    CRUD
+        :Liens_WEB:     `Wikipedia : CRUD`_
+        
+        .. _`Wikipedia : CRUD`: https://fr.wikipedia.org/wiki/CRUD
+
+        CRUD est un acronyme réutnissant l'ensemble des actions réalisables sur une base de données
+
+            * **C** reate : créer
+
+            * **R** ead : lire
+
+            * **U** pdate : mettre à jour
+            
+            * **D** elete : supprimer
+
 ####
 
 .. index::

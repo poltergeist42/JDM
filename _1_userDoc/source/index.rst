@@ -17,8 +17,8 @@ Mon journal de manip
    ComputerVision
    Cookbook
    Culture_Gen
-   DataBase
-   Dev_Gest_Prjet
+   DataBase/DataBase
+   Dev_Gest_Prjet/Dev_Gest_Prjet
    Diagrams
    Docker
    Documentation_Automatique
@@ -43,6 +43,7 @@ Mon journal de manip
    Reseau
    SiteWeb
    Soudure
+   Techno_WEB/Techno_WEB
    Trading
    URLtheque
    VIM
@@ -55,7 +56,7 @@ Mon journal de manip
 .. toctree::
    :titlesonly:
    
-   deprecated
+   deprecated/deprecated
 
 Indices and tables
 ==================

@@ -2,6 +2,15 @@
 Développement, Gestion  et commercialisation de projet
 ======================================================
 
+.. index::
+   single: Gestion Projet
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+
+   Merise/Merise
+
 .. contents::
    :backlinks: top
    :depth: 3
@@ -9,7 +18,7 @@ Développement, Gestion  et commercialisation de projet
 ####
 
 .. index::
-   pair: PROJET;Développement
+   single: Gestion Projet; Développement
 
 -----------------------
 Dévellopement de projet

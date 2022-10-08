@@ -15,7 +15,9 @@ Utilisateurs
 activer l'utilisateur root
 ======================
 
-    :warning:   Attention il est recomander de ne pas activer le compte root. 
+    .. warning::
+        
+        Attention il est recomander de ne pas activer le compte root. 
 
     .. code:: shell
     
@@ -25,7 +27,9 @@ activer l'utilisateur root
 Faire une élévation valable toute la durée de la session
 ========================================================
 
-    :warning:   Attention il est recomander de ne pas activer le compte root. 
+    .. warning::
+        
+        Attention il est recomander de ne pas activer le compte root. 
 
     .. code:: shell
 
@@ -173,8 +177,10 @@ Changer le propriétaire d'un dossier (ownership)
 Mettre les droits sur un dossier
 ================================
 
-    :warning:   Il est déconseillé de mettre les droits 777 car cela donne tous les droits à tous le
-                monde. 
+    .. warning::
+        
+        Il est déconseillé de mettre les droits 777 car cela donne tous les droits à tous le
+        monde. 
 
     .. image:: ./images/filesPermissions.png
         :width: 520 px

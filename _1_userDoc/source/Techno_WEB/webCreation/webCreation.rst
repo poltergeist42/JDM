@@ -1,20 +1,18 @@
-========
-Site Web
-========
+====================
+Création de Site Web
+====================
 
-:Liens_Web:
-            * https://poltergeist42.github.io/JDM/Django.html
-                # URL traitant de Django dans mon journal de manip (JDM)
-
-            * https://poltergeist42.github.io/JDM/HTML_CSS.html
-                # URL traitant du html et du CSS dans mon journal de manip (JDM)
+.. contents::
+    :depth: 3
+    :backlinks: top
 
 :Descriptif:
             Ce document présente les grandes étapes pour la création, la mise en place
             et la publication (en ligne et hors ligne) d'un site web
 
+-----------
 Préparation
-===========
+-----------
 
     #. Cas d'utilisations (Use cases)
 
@@ -31,3 +29,11 @@ Préparation
 
         **N.B** : Il est généralement apprécier de ne pas devoir faire plus de 3 actions pour
         atteindre un écran.
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::
