@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Dossiers partager et volumes distants &mdash; JDM</title>
+  <title>PostGreSQL &mdash; JDM</title>
   
 
   
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="Hardware Management" href="../hardwareMgnt/hardwareMgnt.html" />
-    <link rel="prev" title="network" href="../network/network.html" /> 
+    <link rel="next" title="Redis" href="../Redis/Redis.html" />
+    <link rel="prev" title="DataBase" href="../DataBase.html" /> 
 
 </head>
 
@@ -70,15 +70,15 @@
     
       <li><a href="../../index.html">Docs</a></li>
         
-          <li><a href="../Linux.html">LINUX</a></li>
+          <li><a href="../DataBase.html">DataBase</a></li>
         
-      <li>Dossiers partager et volumes distants</li>
+      <li>PostGreSQL</li>
     
     
       <li class="breadcrumbs-aside">
         
             
-            <a href="../../_sources/Linux/sharedFolders/sharedFolders.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/DataBase/PostGreSQL/PostGreSQL.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -115,9 +115,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../ComputerVision.html">Computer Vision</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Cookbook.html">Cookbook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Culture_Gen.html">Culture Générale / Connaissances insolites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../DataBase/DataBase.html">DataBase</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../DataBase/PostGreSQL/PostGreSQL.html">PostGreSQL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../DataBase/Redis/Redis.html">Redis</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../DataBase.html">DataBase</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">PostGreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Redis/Redis.html">Redis</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Dev_Gest_Prjet/Dev_Gest_Prjet.html">Développement, Gestion  et commercialisation de projet</a><ul>
@@ -134,17 +134,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Informatique.html">Informatique</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../kicad.html">Kicad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Latex.html">LaTex</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../Linux.html">LINUX</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../shell/shell.html">SHELL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiscreen/multiscreen.html">Multi-Screen terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../scripting/scripting.html">Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../UsersGroupsACL/UsersGroupsACL.html">Utilisateurs, Groupes et Permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sysAdmin/sysAdmin.html">Administration Système</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../network/network.html">network</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Dossiers partager et volumes distants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hardwareMgnt/hardwareMgnt.html">Hardware Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Raspberry/Raspberry.html">Raspberry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../bugError/bugError.html">Bug, Maintenance et traitemant des Erreurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Linux/Linux.html">LINUX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/shell/shell.html">SHELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/multiscreen/multiscreen.html">Multi-Screen terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/scripting/scripting.html">Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/UsersGroupsACL/UsersGroupsACL.html">Utilisateurs, Groupes et Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/sysAdmin/sysAdmin.html">Administration Système</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/network/network.html">network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/sharedFolders/sharedFolders.html">Dossiers partager et volumes distants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/hardwareMgnt/hardwareMgnt.html">Hardware Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/Raspberry/Raspberry.html">Raspberry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/bugError/bugError.html">Bug, Maintenance et traitemant des Erreurs</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../MAC_OS.html">MAC OS</a></li>
@@ -195,39 +195,68 @@
                     <div class="document">
                         
                             
-  <section id="dossiers-partager-et-volumes-distants">
-<h1><a class="toc-backref" href="#sommaire" role="doc-backlink">Dossiers partager et volumes distants</a><a class="headerlink" href="#dossiers-partager-et-volumes-distants" title="Lien permanent vers cette rubrique">¶</a></h1>
+  <section id="postgresql">
+<h1><a class="toc-backref" href="#sommaire" role="doc-backlink">PostGreSQL</a><a class="headerlink" href="#postgresql" title="Lien permanent vers cette rubrique">¶</a></h1>
 <nav class="contents" id="sommaire">
-<p class="topic-title">Sommaire</p>
+<span id="index-0"></span><p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#dossiers-partager-et-volumes-distants" id="id1">Dossiers partager et volumes distants</a></p>
+<li><p><a class="reference internal" href="#postgresql" id="id9">PostGreSQL</a></p>
 <ul>
-<li><p><a class="reference internal" href="#samba-smb-cifs" id="id2">Samba (SMB / CIFS)</a></p></li>
-<li><p><a class="reference internal" href="#nfs-network-file-system" id="id3">NFS (Network File System)</a></p></li>
-<li><p><a class="reference internal" href="#iscsi" id="id4">iSCSI</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id5">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#installation" id="id10">Installation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sous-windows" id="id11">Sous Windows</a></p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </nav>
-<hr class="docutils" />
-<section id="samba-smb-cifs">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Samba (SMB / CIFS)</a><a class="headerlink" href="#samba-smb-cifs" title="Lien permanent vers cette rubrique">¶</a></h2>
-<p>[WIP]</p>
-</section>
-<hr class="docutils" />
-<section id="nfs-network-file-system">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">NFS (Network File System)</a><a class="headerlink" href="#nfs-network-file-system" title="Lien permanent vers cette rubrique">¶</a></h2>
-<p>[WIP]</p>
-</section>
-<hr class="docutils" />
-<section id="iscsi">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">iSCSI</a><a class="headerlink" href="#iscsi" title="Lien permanent vers cette rubrique">¶</a></h2>
-<p>[WIP]</p>
-</section>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_WEB<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://www.postgresql.org/docs/">Page de documentation officiel</a> <a class="footnote-reference brackets" href="#id1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+<li><p><a class="reference external" href="https://www.postgresql.fr/">site de la communauté francophone</a> <a class="footnote-reference brackets" href="#id3" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.postgresql.fr/10/">Doc (FR)</a> <a class="footnote-reference brackets" href="#id5" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</dd>
+</dl>
+<section id="installation">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Installation</a><a class="headerlink" href="#installation" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="sous-windows">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Sous Windows</a><a class="headerlink" href="#sous-windows" title="Lien permanent vers cette rubrique">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_WEB<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://www.postgresql.org/download/">PostGreSQL téléchargement</a> <a class="footnote-reference brackets" href="#id7" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> (toutes les versions et tous les environnements)</p>
+</dd>
+</dl>
+<p>Télécharger l’install automatique et ce laisser guider. Lorsque l’installation est terminée, il faut
+ajouter les 2 chemins suivants au “PATH” dans les Variables d’environnement.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="s2">&quot;C:\Program Files\PostgreSQL\10\bin&quot;</span>
+<span class="linenos">2</span> <span class="s2">&quot;C:\Program Files\PostgreSQL\10\lib&quot;</span>
+<span class="linenos">3</span>     <span class="c1"># &#39;C:\Program Files\&#39; est à adapté en fonction de l&#39;emplacement de &#39;PostgreSQL&#39;</span>
+</pre></div>
+</div>
 <hr class="docutils" />
 <section id="weblinks">
-<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h4>Weblinks<a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h4>
+<aside class="footnote brackets" id="id1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.postgresql.org/docs/">https://www.postgresql.org/docs/</a></p>
+</aside>
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">2</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.postgresql.fr/">https://www.postgresql.fr/</a></p>
+</aside>
+<aside class="footnote brackets" id="id5" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">3</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.postgresql.fr/10/">https://docs.postgresql.fr/10/</a></p>
+</aside>
+<aside class="footnote brackets" id="id7" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">4</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.postgresql.org/download/">https://www.postgresql.org/download/</a></p>
+</aside>
+</section>
+</section>
 </section>
 </section>
 

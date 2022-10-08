@@ -26,8 +26,10 @@ Snippets
 
     :Liens_Web:
         * `Création de snippets personnalisés`_ : # information sur la création et l'utilisation des snippets
+        * `Snippet Generator`_ : Générateur de snippet pour : vscode, Sublime Text et Atom
         
 .. _`Création de snippets personnalisés`: https://code.visualstudio.com/docs/editor/userdefinedsnippets
+.. _`Snippet Generator`: https://snippet-generator.app/
 
 Multi-Line and multi-Cursor Editing
 ===================================

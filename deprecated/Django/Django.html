@@ -1,0 +1,1525 @@
+
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Django 2 &mdash; JDM</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="English Vocabulary" href="../English_vocab/English_vocab.html" />
+    <link rel="prev" title="Aquariophilie" href="../Aquariophilie/Aquariophilie.html" /> 
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
+            <a class="site-title" href="../../index.html">
+                JDM
+            </a>
+        </div>
+    </header>
+
+
+<div class="breadcrumbs-outer hidden-xs-down">
+    <div class="container">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a></li>
+        
+          <li><a href="../deprecated.html">Eléments dépréciés</a></li>
+        
+      <li>Django 2</li>
+    
+    
+      <li class="breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/deprecated/Django/Django.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+</div>
+    </div>
+</div>
+    <div class="main-outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 site-nav">
+                    
+<div role="search">
+    <form class="search" action="../../search.html" method="get">
+        <div class="icon-input">
+            <input type="text" name="q" placeholder="Search" />
+            <span class="icon-search"></span>
+        </div>
+        <input type="submit" value="Go" class="d-hidden" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                    <div class="site-nav-tree">
+                        
+                            
+                            
+                                <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">infos générales Journal de manip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Composants.html">Composants Spécifiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ComputerVision.html">Computer Vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Cookbook.html">Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Culture_Gen.html">Culture Générale / Connaissances insolites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DataBase/DataBase.html">DataBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../DataBase/PostGreSQL/PostGreSQL.html">PostGreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DataBase/Redis/Redis.html">Redis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Dev_Gest_Prjet/Dev_Gest_Prjet.html">Développement, Gestion  et commercialisation de projet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Dev_Gest_Prjet/Merise/Merise.html">MERISE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Diagrams.html">Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Documentation_Automatique.html">Documentation_Automatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ESP.html">ESP8266 &amp; ESP32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Freecad.html">Freecad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT.html">GIT (versioning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../HPVC.html">HPVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Informatique.html">Informatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kicad.html">Kicad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Latex.html">LaTex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Linux/Linux.html">LINUX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/shell/shell.html">SHELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/multiscreen/multiscreen.html">Multi-Screen terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/scripting/scripting.html">Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/UsersGroupsACL/UsersGroupsACL.html">Utilisateurs, Groupes et Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/sysAdmin/sysAdmin.html">Administration Système</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/network/network.html">network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/sharedFolders/sharedFolders.html">Dossiers partager et volumes distants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/hardwareMgnt/hardwareMgnt.html">Hardware Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/Raspberry/Raspberry.html">Raspberry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/bugError/bugError.html">Bug, Maintenance et traitemant des Erreurs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../MAC_OS.html">MAC OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Machine_learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MQTT.html">MQTT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Musique/Musique.html">Musique</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Musique/theorie/theorie.html">Théorie musicale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Musique/MAO/MAO.html">Musique Assistée (par) Ordinateur - MAO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Musique/guitare/guitare.html">Guitare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Musique/GuitareChant/GuitareChant.html">GuitareChant</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Optimisation_Travail.html">Optimisation du travail (et de l’apprentissage)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Powershell.html">PowerShell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Python.html">PYTHON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Regex.html">Regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reseau.html">Reseau</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Soudure.html">Soudure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Techno_WEB/Techno_WEB.html">Technos Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Techno_WEB/HTML_CSS/HTML_CSS.html">HTML_CSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Techno_WEB/Javascript/Javascript.html">JavaScript / REACT.js / node.js</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Techno_WEB/React_and_legacy/React_and_legacy.html">React &amp; Legacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Techno_WEB/Node_Express/Node_Express.html">Node &amp; Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Techno_WEB/webCreation/webCreation.html">Création de Site Web</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Trading.html">Trading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../URLtheque.html">URLtheque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VIM.html">VIM (VI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../visualStudioCode.html">Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../XML_JSON.html">XML_JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arborescence/arborescence.html">Arborescence du projet</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../deprecated.html">Eléments dépréciés</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Aquariophilie/Aquariophilie.html">Aquariophilie</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Django 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../English_vocab/English_vocab.html">English Vocabulary</a></li>
+</ul>
+</li>
+</ul>
+
+                            
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="document">
+                        
+                            
+  <section id="django-2">
+<h1><a class="toc-backref" href="#sommaire" role="doc-backlink">Django 2</a><a class="headerlink" href="#django-2" title="Lien permanent vers cette rubrique">¶</a></h1>
+<nav class="contents" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#django-2" id="id54">Django 2</a></p>
+<ul>
+<li><p><a class="reference internal" href="#how-djano-is-structured" id="id55">How Djano is structured</a></p>
+<ul>
+<li><p><a class="reference internal" href="#model-view-controller-mvc" id="id56">Model, View, Controller (MVC)</a></p></li>
+<li><p><a class="reference internal" href="#models" id="id57">Models</a></p></li>
+<li><p><a class="reference internal" href="#template" id="id58">Template</a></p></li>
+<li><p><a class="reference internal" href="#view" id="id59">View</a></p></li>
+<li><p><a class="reference internal" href="#url-configuration-urlconf" id="id60">URL Configuration (URLconf)</a></p></li>
+<li><p><a class="reference internal" href="#admin" id="id61">Admin</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#install-django" id="id62">Install Django</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creating-a-project-directory" id="id63">Creating a project directory</a></p></li>
+<li><p><a class="reference internal" href="#installing-django-in-a-virtual-environement" id="id64">Installing Django in a Virtual Environement</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#how-to-start-and-basic-s-usages" id="id65">How to start and basic’s usages</a></p>
+<ul>
+<li><p><a class="reference internal" href="#starting-a-project" id="id66">Starting a project</a></p></li>
+<li><p><a class="reference internal" href="#django-shell-and-developement-server" id="id67">Django Shell and Developement Server</a></p></li>
+<li><p><a class="reference internal" href="#django-settings-settings-py" id="id68">Django Settings (settings.py)</a></p></li>
+<li><p><a class="reference internal" href="#django-applications" id="id69">Django Applications</a></p></li>
+<li><p><a class="reference internal" href="#configuring-the-urls-urls-py" id="id70">Configuring the URLs (urls.py)</a></p></li>
+<li><p><a class="reference internal" href="#apps-model-models-py" id="id71">apps” model (models.py)</a></p></li>
+<li><p><a class="reference internal" href="#admin-site-and-admin-py" id="id72">admin site (and admin.py)</a></p></li>
+<li><p><a class="reference internal" href="#django-templates" id="id73">Django Templates</a></p></li>
+<li><p><a class="reference internal" href="#static-files" id="id74">Static Files</a></p></li>
+<li><p><a class="reference internal" href="#django-s-error-page" id="id75">Django’s Error Page</a></p></li>
+<li><p><a class="reference internal" href="#forms" id="id76">Forms</a></p></li>
+<li><p><a class="reference internal" href="#django-s-view-views-py" id="id77">Django’s View (views.py)</a></p></li>
+<li><p><a class="reference internal" href="#file-uploads" id="id78">File Uploads</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#vocabulary" id="id79">Vocabulary</a></p></li>
+<li><p><a class="reference internal" href="#webography" id="id80">Webography</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="how-djano-is-structured">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">How Djano is structured</a><a class="headerlink" href="#how-djano-is-structured" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="model-view-controller-mvc">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Model, View, Controller (MVC)</a><a class="headerlink" href="#model-view-controller-mvc" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>Django is a Model View Controller (MVC) framework.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">MVC<span class="colon">:</span></dt>
+<dd class="field-odd"><p>MVC is a software design pattern that aims to separate application into three
+interconnected parts :</p>
+<ol class="arabic simple">
+<li><p><strong>Model</strong> : Provides the interface with the database containing the application data.</p></li>
+<li><p><strong>View</strong> : Decides what informations to present to the user and collects information
+from the user.</p></li>
+<li><p><strong>Controler</strong> : Manage the business logic for the application and acts as an
+information broker between the model and the view.</p></li>
+</ol>
+</dd>
+</dl>
+</div></blockquote>
+<section id="model-template-view-mtv">
+<h4>Model, Template, View (MTV)<a class="headerlink" href="#model-template-view-mtv" title="Lien permanent vers cette rubrique">¶</a></h4>
+<p>Django’s terminology is slightly different than the MVC’s :</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><strong>Model</strong> :  Is functionnaly the same. Django’s Object Relational Mapping (ORM) provides the
+interface between the user and your Django application.</p></li>
+<li><p><strong>Template</strong> : Provide display logic and is the interface between the user and your
+application. It corresponds to the View in the MVC model</p></li>
+<li><p><strong>View</strong> : manage the bulk of the applications data processing, application logic and
+messaging. It corresponds to the Controler in the MVC model</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">/!\ WARNING /!\<span class="colon">:</span></dt>
+<dd class="field-odd"><p>There is no direct link between the « Model » and the « Template ». Only the « View » can
+interracting with the two other.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<section id="models">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Models</a><a class="headerlink" href="#models" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">Django Project TOPICS Models</a> <a class="footnote-reference brackets" href="#id2" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> : The models' topics from the Django documentation</p></li>
+</ul>
+</dd>
+<dt class="field-even">ORM<span class="colon">:</span></dt>
+<dd class="field-even"><p>Object Relational Mapping : Provide a simple Mapping between an Object and the
+underlying database. The programmer doesn’t to know the database structure, nor does it
+require complex SQL to manipulate and retrieve data.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The model is the object that is mapped to the database. When you create a model, Django create a
+corresponding table in database. Each of your app’s models are a class that you create in your app’s
+<em>models.py</em> file.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Each model is a Python class that is a subclasses of <strong>django.db.models.Model</strong></p></li>
+<li><p>Each attribute of the model represent a database field.</p></li>
+</ul>
+</div></blockquote>
+<p>The <strong>models.py</strong> file is automaticaly created inside the app’s directory, when you are using the
+<em>startapp</em> wizard.</p>
+<section id="supported-databases">
+<h4>Supported databases<a class="headerlink" href="#supported-databases" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES">Django Project Settings Databases</a> <a class="footnote-reference brackets" href="#id5" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> : The databases' settings from the official
+documentation.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p>Django officially supports four databases :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>PostgreSQL</p></li>
+<li><p>MySQL</p></li>
+<li><p>SQLite</p></li>
+<li><p>Oracle</p></li>
+</ul>
+</div></blockquote>
+<p>By default, Django install SQLite automatically when you are using the <em>stratproject</em> wizard.</p>
+<p>If you need to connect to an unofficially supported database, there are several third-party
+application available.</p>
+</section>
+</section>
+<section id="template">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Template</a><a class="headerlink" href="#template" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">DTL<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Django Template Language is a plain text scripting language that uses tags to provide
+presentation logic for deciding what content to display in the template.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>A Django template is a text file designed to separate an application’s data from the way it is
+presented. It is not limited to HTML.</p>
+<p>There are three big principles for the Django templates” :</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>A template system should separate program logic from design.</p></li>
+<li><p>Templates should discourage redundancy (DRY : Don’t Repeat Yourself)</p></li>
+<li><p>The template system should be safe and secure. Code execution in the template must be
+forbiden.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="view">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">View</a><a class="headerlink" href="#view" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>Django’s views are the information brokers of a Django application. A view sources data from your
+database and delivers it to a template.</p>
+<p>Views are represented by either a function, or a classes methode’s. Each view has an associated
+template.</p>
+<p>The <strong>views.py</strong> file is automaticaly created inside the app’s directory, when you are using the
+<em>startapp</em> wizard.</p>
+<section id="displaying-error-pages">
+<h4>Displaying error pages<a class="headerlink" href="#displaying-error-pages" title="Lien permanent vers cette rubrique">¶</a></h4>
+<p>There are four built-in function-based views for displaying error pages :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The 404 (page not found) view</p></li>
+<li><p>The 500 (server error) view</p></li>
+<li><p>The 403 (HTTP forbiden) view</p></li>
+<li><p>The 400 (bad request) view</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="class-based-views-for-simplifying-common-display-tasks">
+<h4>class-based views for simplifying common display tasks<a class="headerlink" href="#class-based-views-for-simplifying-common-display-tasks" title="Lien permanent vers cette rubrique">¶</a></h4>
+<p>There are several class-based views for simplifying common display tasks. They include:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ListView : for displaying a list of data objects.</p></li>
+<li><p>DetailView : for displaying a single object</p></li>
+<li><p>RedirectView : for redirecting to another URL</p></li>
+<li><p>FormView : for displaying a form</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="url-configuration-urlconf">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">URL Configuration (URLconf)</a><a class="headerlink" href="#url-configuration-urlconf" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>There are several URL Configuration’s file (<strong>urls.py</strong>) :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>One into the Porject’s directory. It is created automatically with the « startproject wizard »</p></li>
+<li><p>One per Application’s directory. Need to be created manually in every apps” directories.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>URL Configuration</strong> decide which view (from <em>views.py</em> or <em>forms.py</em> files) will deal with the
+request. When Django finds a URL in <em>urls.py</em> that matches the request URL it calls the view
+associated with that URL. The selected view then renders the content to the template.</p>
+</section>
+<section id="admin">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Admin</a><a class="headerlink" href="#admin" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/contrib/admin/">Django Project admin site</a> <a class="footnote-reference brackets" href="#id7" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>: admin site’s page from the Djongo’s documentation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Automatic Admin Interface<span class="colon">:</span></dt>
+<dd class="field-even"><p>It reads metadata from your models to provide a quick, model-centric interface where trusted
+users can manage content on the Django’s project. It must be use as an internal management
+tool. It mustn’t be use for building the entire front end.</p>
+<p>With Django’s admin you can :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Authenticate users.</p></li>
+<li><p>Display and handle forms and validate input.</p></li>
+<li><p>Provide a convinient interface to our models for adding content to our app.</p></li>
+</ul>
+</div></blockquote>
+</dd>
+<dt class="field-odd">admin.py<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The <em>admin.py</em> file is created with every apps when your are using the « startapp » wizard. It
+display your models in the Django admin’s pannel.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="install-django">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Install Django</a><a class="headerlink" href="#install-django" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="creating-a-project-directory">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Creating a project directory</a><a class="headerlink" href="#creating-a-project-directory" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>The first thing to do is to create a project directory. The directory’s name can be modified later,
+but it can be easyer if you tag it whith « ROOT_ » followed by the name of the project :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">ROOT_MySuperProject</span>
+</pre></div>
+</div>
+</section>
+<section id="installing-django-in-a-virtual-environement">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Installing Django in a Virtual Environement</a><a class="headerlink" href="#installing-django-in-a-virtual-environement" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/intro/install">Django Project Install</a> <a class="footnote-reference brackets" href="#id9" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> : Install from the official documentation.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p>Assuming « virtualenv » is already installed.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>From root of project’s directory , create a subdirectory and then create your virtual
+environement into it.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir env_MySuperProject
+<span class="nb">cd</span> env_MySuperProject
+python -m virtualenv .
+<span class="c1"># /!\ don&#39;t forget the dot at the end of the line</span>
+</pre></div>
+</div>
+</li>
+<li><p>Activate the Virtual Environement and install Django :</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>env_MySuperProject<span class="se">\S</span>cript<span class="se">\a</span>ctivate.bat
+pip install <span class="s2">&quot;django&gt;=2.1, &lt;2.2&quot;</span>
+pip install <span class="s2">&quot;psycopg2&gt;=2.7,&lt;3.0&quot;</span>
+
+<span class="c1">## autre solution avec un fichier &#39;requirements.txt</span>
+
+<span class="c1"># requirements.txt</span>
+Django&gt;<span class="o">=</span><span class="m">2</span>.0,&lt;<span class="m">3</span>.0
+psycopg2&gt;<span class="o">=</span><span class="m">2</span>.7,&lt;<span class="m">3</span>.0
+pip install -r requirements.txt
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="how-to-start-and-basic-s-usages">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">How to start and basic’s usages</a><a class="headerlink" href="#how-to-start-and-basic-s-usages" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="starting-a-project">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Starting a project</a><a class="headerlink" href="#starting-a-project" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p>From root of project’s directory, run the « startproject » wizard :</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>django-admin startporject <span class="o">[</span>project_name<span class="o">]</span>
+
+ex:
+django-admin startporject mySuperProject
+
+A Directory will be created <span class="k">in</span> the root directory.
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Creating a Database :</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> mySuperProject
+python manage.py migrate
+</pre></div>
+</div>
+</div></blockquote>
+<p>The <em>migrate</em> command creates a new SQLite database and any necessary database tables
+according to the setting file created by the « startporject » command.</p>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<section id="django-shell-and-developement-server">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Django Shell and Developement Server</a><a class="headerlink" href="#django-shell-and-developement-server" title="Lien permanent vers cette rubrique">¶</a></h3>
+<section id="django-shell">
+<h4>Django Shell<a class="headerlink" href="#django-shell" title="Lien permanent vers cette rubrique">¶</a></h4>
+<p>For testing some stuff, you can run a python shell that include the features of Django :</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python manage.py shell
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="the-developement-server">
+<h4>The developement Server<a class="headerlink" href="#the-developement-server" title="Lien permanent vers cette rubrique">¶</a></h4>
+<p>The developement Server is a lightweight Web server. It is only for the developement environement
+and mustn’t be use in production environement.</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># To run the dev server :</span>
+python Manage.py runserver
+
+<span class="c1"># in Dev mode with Debug=False in the settings.py file</span>
+python manage.py run --insecure
+
+<span class="c1"># to use the dev server (in a web browser):</span>
+http://127.0.0.1:8000
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="django-settings-settings-py">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Django Settings (settings.py)</a><a class="headerlink" href="#django-settings-settings-py" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/">Django Project REF Settings</a> <a class="footnote-reference brackets" href="#id11" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> : The  settings' references from the official
+documentation</p></li>
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/settings/">Django Project TOPICS Settings</a> <a class="footnote-reference brackets" href="#id13" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> : The settings' topic from the official
+documentation</p></li>
+</ul>
+</dd>
+<dt class="field-even">settings.py<span class="colon">:</span></dt>
+<dd class="field-even"><p>This file contains the configuration information for your Django project.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="django-applications">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Django Applications</a><a class="headerlink" href="#django-applications" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>A Django application (app) is where the work is done. Good design practice says that each Django app
+should do one thing (ex: a blog, an article directory, a music collection, etc …). A Django
+project is the collection of apps and configuration settings that make up a Django website.</p>
+<section id="creating-an-app">
+<h4>Creating an App<a class="headerlink" href="#creating-an-app" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Create an app</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># startapp syntaxe</span>
+python manage.py startapp <span class="o">[</span>app_name<span class="o">]</span>
+
+<span class="c1"># ex:</span>
+python manage.py startapp pages
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Add the new app to the Django project</p>
+<blockquote>
+<div><p>All new app must be adding to the <strong>« settings.py »</strong>.</p>
+<p>Inside the <strong>« settings.py »</strong> file, there is a list named <strong>« INSTALLED_APPS »</strong>. This list
+contains all the apps that are installed in the Django project. We just have to add our new
+app to the top of this list.</p>
+<p>Django create <strong>« apps.py »</strong> inside every app. This file contains a configuration class named
+after your app. To register our app with Django, we need to point to this class. the path of
+this class looks like this :</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>App&#39;s DIR --&gt; apps.py --&gt; [class named after your app]
+
+# ex for an app called &quot;pages&quot;
+
+pages.apps.PagesConfig
+</pre></div>
+</div>
+</div></blockquote>
+<p>The setting list « INSTALLED_APPS » should be :</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;pages.apps.PagesConfig&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="c1"># more apps</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">/!\ WARNING /!\<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Applications must also be entered in the « urls.py » file of the project.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<section id="configuring-the-urls-urls-py">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Configuring the URLs (urls.py)</a><a class="headerlink" href="#configuring-the-urls-urls-py" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/urls/">Django Project TOPICS URLs</a> <a class="footnote-reference brackets" href="#id15" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> : The URLs settings' Topics from the official
+documentation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">path()<span class="colon">:</span></dt>
+<dd class="field-even"><p>The <strong>path()</strong> function is used to configure URLs. In its basic form, it as a very
+simple syntax :</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="p">(</span><span class="n">route</span><span class="p">,</span> <span class="n">view</span><span class="p">)</span>
+
+<span class="c1"># ex:</span>
+<span class="n">path</span><span class="p">(</span><span class="s1">&#39;mypage/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">myview</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+<section id="the-application-s-url">
+<h4>The application’s url<a class="headerlink" href="#the-application-s-url" title="Lien permanent vers cette rubrique">¶</a></h4>
+<p>We need to create <strong>« urls.py »</strong> in every app’s directory and then we need to complete it with a few
+set of instruction.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Creating app/urls.py</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="o">[</span>app_name<span class="o">]</span>
+mkdir urls.py
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Import « path() » and app.views.py</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Set the application’s namespace</p>
+<p>To avoid strange behavior if applications use a view with the same name, we need to set
+« app_name » with the application’s name.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app_name</span> <span class="o">=</span> <span class="p">[</span><span class="n">Application</span><span class="s1">&#39;s name]</span>
+
+<span class="c1"># ex:</span>
+<span class="n">app_name</span> <span class="o">=</span> <span class="s2">&quot;pages&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Set the urlpatterns</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># The &#39;&#39; is the default page</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<p>The minimum content of the application urls file looks like this :</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
+
+<span class="n">app_name</span> <span class="o">=</span> <span class="s2">&quot;pages&quot;</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># The &#39;&#39; is the default page</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="the-site-s-url-the-django-s-project">
+<h4>The site’s url (the Django’s project)<a class="headerlink" href="#the-site-s-url-the-django-s-project" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Import « include »</p></li>
+</ol>
+<p>import the « include » function in addition to the « path » function.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic">
+<li><p>Add the new url dispatcher to the urlpatterns</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;pages.urls&#39;</span><span class="p">)),</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<dl class="field-list">
+<dt class="field-odd">/!\ WARNING /!\<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>“admin/”</strong> : must be the first entry in the patterns.</p></li>
+<li><p><strong>“”</strong> or <strong>“/”</strong> : Must be the last entry in the patterns.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># exemple of the project&#39;s file &quot;urls.py&quot;</span>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+    <span class="c1"># ...</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;pages.urls&#39;</span><span class="p">)),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<section id="apps-model-models-py">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">apps” model (models.py)</a><a class="headerlink" href="#apps-model-models-py" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">Django Project TOPICS Models</a> <a class="footnote-reference brackets" href="#id2" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/fields/">Django Project Model field reference</a> <a class="footnote-reference brackets" href="#id17" id="id18" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>: the Model field reference from the Djanog’s
+documentation.</p></li>
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/options/">Model Meta options</a> <a class="footnote-reference brackets" href="#id19" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a>: Options for the Meta class</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<section id="create-the-app-class">
+<h4>Create the app class<a class="headerlink" href="#create-the-app-class" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Create the app class</p>
+<blockquote>
+<div><p>In the <strong>models.py</strong> file of the app’s directory, create the app class. It must inherit from
+Django’s Model Class.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># for an app called &quot;page&quot;</span>
+
+<span class="k">class</span> <span class="nc">Page</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Define the field for the model</p>
+<blockquote>
+<div><p>These fields will have a corresponding field in the table that Django creates for the model
+in the databases.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># exemple of some field you can create</span>
+<span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">permalink</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">update_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="s1">&#39;Dernière MAJ&#39;</span><span class="p">)</span>
+<span class="n">bodytext</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="s1">&#39;Page Content&#39;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Adding Metadata information for sorting, select the DB Table, and so on.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># exemple of a Meta class</span>
+<span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+    <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>returns a URL for displaying individual model records on the website</p>
+<blockquote>
+<div><p>Assume that the « model-detail-view » view is defined in « views.py ».</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_absolute_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the url to access a particular instance of the model.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;model-detail-view&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Return a human-readable version of the Pages class</p>
+<blockquote>
+<div><p>If python ask for a string representation of the Pages object, we need to create a special
+methode that return a human-readable string instead of the default string « Page object ».</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
+</pre></div>
+</div>
+<p><strong>N.B:</strong> Adding this method does not imply that you need to migrate the database again.</p>
+</div></blockquote>
+</li>
+<li><p>Check files before migration</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python manage.py check
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Prepare for migration and then migrate</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># exemple for an app called &quot;pages&quot;</span>
+python manage.py makemigrations pages
+...
+python manage.py migrate
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+<section id="admin-site-and-admin-py">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">admin site (and admin.py)</a><a class="headerlink" href="#admin-site-and-admin-py" title="Lien permanent vers cette rubrique">¶</a></h3>
+<section id="create-a-admin-user-superuser">
+<h4>Create a admin user (superuser)<a class="headerlink" href="#create-a-admin-user-superuser" title="Lien permanent vers cette rubrique">¶</a></h4>
+<p>Before using the admin site, you need to create a super-User.</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python manage.py createsuperuser
+
+&gt;Username: ...
+&gt;Password: ...
+&gt;Password <span class="o">(</span>again<span class="o">)</span>: ...
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="registering-model">
+<h4>Registering model<a class="headerlink" href="#registering-model" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/contrib/admin/">The Django admin site</a> <a class="footnote-reference brackets" href="#id7" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p>For a model to be accessible from the admin, it need to be registered into the <strong>admin.py</strong>.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># admin.py</span>
+<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Page</span>    <span class="c1"># Import the class from the &quot;models.py&quot; file of the app</span>
+                            <span class="c1">#</span>
+                            <span class="c1"># N.B: If &quot;model.py&quot; includes more than one class you</span>
+                            <span class="c1"># can / should import them all and save it in the same way so</span>
+                            <span class="c1"># that it is available on the admin page.</span>
+
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Page</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="list-display-ordering-and-searh-fields">
+<h4>List_display, ordering and searh_fields<a class="headerlink" href="#list-display-ordering-and-searh-fields" title="Lien permanent vers cette rubrique">¶</a></h4>
+<p>To change how a model is displayed in the admin interface, we need to define a ModelAdmin class
+(which describe the layout) and register it with the model. This class is called after the class”
+name of the <em>« models.py »</em> file + « Admin » in the <strong>admin.py</strong> file.</p>
+<blockquote>
+<div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Model&#39;s class name + &quot;Admin&quot;</span>
+<span class="c1"># For a class called &quot;Page&quot; in models.py</span>
+
+<span class="k">class</span> <span class="nc">PageAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="c1"># [...]</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>In the Admin site, we need to sort pages and keep track of changes. We also need to be able to
+search a specific page. Add commands bellow to the admin’s model class.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>See last update to keep track of change</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># in the PageAdmin&#39;s class</span>
+<span class="c1"># &#39;title&#39; and &#39;update_date&#39; are fields displaying in the list of pages</span>
+<span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;update_date&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Sort the display list (ordering by “title”)</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># in the PageAdmin&#39;s class</span>
+<span class="c1"># &#39;title&#39; is the field use to sort the list</span>
+<span class="n">ordering</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Search a pages</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># in the PageAdmin&#39;s class</span>
+<span class="c1"># &#39;title&#39; is the field should be search</span>
+<span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Add a filter in the admin page</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Only elements matching to the filter will appear</span>
+<span class="n">list_filter</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Add the class to the “admin.site.register</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Page</span><span class="p">,</span> <span class="n">PageAdmin</span><span class="p">)</span>    <span class="c1"># this must no be include into the</span>
+                                        <span class="c1"># MadelAdmin class</span>
+</pre></div>
+</div>
+<p>An alternative syntax for registering the MadelAdmin class is to use the register decorator:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@admin</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Page</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">PageAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="c1"># do some stuff like ...</span>
+    <span class="c1"># list_display = (&#39;title&#39;, &#39;update_date&#39;)</span>
+    <span class="c1"># ordering = (&#39;title&#39;,)</span>
+    <span class="c1"># search_fields = (&#39;title&#39;,)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<section id="adding-content">
+<h4>Adding content<a class="headerlink" href="#adding-content" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">/!\ WARNING /!\<span class="colon">:</span></dt>
+<dd class="field-odd"><p>When entering the page content (<em>TextField</em>), remember that it needs to be HTML to
+display well in your browser.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<section id="django-templates">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Django Templates</a><a class="headerlink" href="#django-templates" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/templates/">Django Project TEMPLATES</a> <a class="footnote-reference brackets" href="#id22" id="id23" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>: the templates reference from the Djanog’s
+documentation.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<section id="template-settings">
+<h4>Template Settings<a class="headerlink" href="#template-settings" title="Lien permanent vers cette rubrique">¶</a></h4>
+<p>For Django to show your site template, it first must know where to look for template file(s). To
+bind a template to the project, you must complete the <strong>TEMPLATES[“DIR”]</strong> in the <strong>settings.py</strong> file.</p>
+<p>Not all template files will be tied to a particuliar app. The <strong>“DIRS”</strong> setting is usefull for
+linking to templates that exit elsewere in your project structure.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Add a template’s path to <strong>TEMPLATES[“DIRS”]</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exemple for a template in the project&#39;s dir, and not bind to a specific app.</span>
+<span class="c1"># In the settings.py file</span>
+<span class="n">TEMPLATES</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="c1"># ...</span>
+        <span class="s1">&#39;DIRS&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;fdw/templates&#39;</span><span class="p">)],</span>
+        <span class="s1">&#39;APP_DIRS&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="c1"># ...</span>
+        <span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+<dl class="simple">
+<dt><strong>N.B:</strong></dt><dd><ul class="simple">
+<li><p>For an app’s template, the path must be “[app’s_dir]/templates”</p></li>
+<li><p>If “APP_DIRS” is Ture, Django will look for a folder named <em>templates</em> in each of
+your apps. Default is True.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Create the templates” dir into the project’s dir</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># in the same dir of the *settings.py* file</span>
+<span class="n">mkdir</span> <span class="n">templates</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>N.B:</strong> For an app’s template, you must create the template’s dir in the same dir of the
+<em>views.py</em> file.</p>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<section id="base-html-file">
+<h4>base.html file<a class="headerlink" href="#base-html-file" title="Lien permanent vers cette rubrique">¶</a></h4>
+<p>The <strong>base.html</strong> file is the “model” that the other web pages will inherit from, to avoid
+to rewrite the same code again and again (DRY). In the child page, only some specific blocks
+will be rewritten.</p>
+<p>The content of this specific bloks will be replace in the child page only if it is necessary.</p>
+<blockquote>
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- base.html --&gt;</span>
+[...]
+{% block h1_title %}
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Base h1 title<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+{% enblock h1_title %}
+[...]
+{% block parragraph %}
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, accusantium beatae
+        rem, cum quam, quaerat omnis ad consectetur eligendi placeat minima illo modi culpa
+        expedita at reprehenderit corporis suscipit pariatur!
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+{% enblock parragraph %}
+</pre></div>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- child.html --&gt;</span>
+{% extends &quot;base.html&quot; %}
+[...]
+{% block h1_title %}
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Child h1 title<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+{% endblock h1_title %}
+[...]
+{% block parragraph %}
+{% enblock parragraph %}
+</pre></div>
+</div>
+</div></blockquote>
+<p>It is a good practice to create the first « web page » under the project_site’s folder :</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>+---poject_site
+|   [...]
+|   |
+|   \---templates
+|           base.html
+|
++---App&#39;s folder
+|
+[...]
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="the-app-s-html-template">
+<h4>The app’s html template<a class="headerlink" href="#the-app-s-html-template" title="Lien permanent vers cette rubrique">¶</a></h4>
+<p>If an app need a html template, we need to create a dir  “templates” in the app’s root dir. We also need
+to create a new dir nammed as the app inside the templates dir.</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>+---pages                       &lt;-- app&#39;s name
+|   |   [...]
+|   |
+|   +---migrations
+|   |
+|   \---templates
+|       \---pages
+|               contact.html
+|               page.html       &lt;-- inherit from &#39;base.html&#39;
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="static-files">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Static Files</a><a class="headerlink" href="#static-files" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/">Django Project Static Files</a> <a class="footnote-reference brackets" href="#id24" id="id25" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a>: the Static Files” reference from the Djanog’s
+documentation.</p></li>
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/">Django Project Deploying static files</a> <a class="footnote-reference brackets" href="#id26" id="id27" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a>: How to deploying Static files in production
+environement</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p>Static Files are : Images, CSS and JavaScript. Django keep static media in a different directory to
+the rest of the application. The directory is defined in the <em>settings.py</em> file and is called
+<strong>static</strong> by default. Until the site is in developement, the static dir need to be in the
+project_site’s dir, at the same level of the templates” dir.</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>+---project_site
+|   |   [...]
+|   |
+|   +---static
+|   |       logo.jpg
+|   |       main.css
+|   |       top_banner.png
+|   |
+|   \---templates
+|
++---App&#39;s folder
+|
+[...]
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s1">&#39;/static/&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>To find the static files for our site, we need to add a static file’s dir :</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look for static files in the &#39;static&#39; directory  in our site root</span>
+<span class="n">STAITCFILES_DIR</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;fdw/static&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>To load static file in the template, we need to add it (with the template syntax) at the top of the
+Template. After that, to call / load a specific file from the static’s dir, we need to use the
+“static” key word.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># To load static file</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">load</span> <span class="n">static</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="c1"># to call / load a specific file from the static&#39;s dir</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">static</span> <span class="s1">&#39;logo.jpg&#39;</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Exemple code :</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% load static %}
+<span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html;charset=UTF-8&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Untitled Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% static &#39;main.css&#39; %}&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;wrapper&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">header</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;header&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;logo&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{% static &#39;logo.jpg&#39; %}&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">/&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="django-s-error-page">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Django’s Error Page</a><a class="headerlink" href="#django-s-error-page" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/error-reporting/">Howto : Error reporting</a> <a class="footnote-reference brackets" href="#id28" id="id29" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a> : The error reporting’s page form the Dango’s documentation</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p>When you’re running a public site you should always turn off the <strong>DEBUG</strong> setting (in the
+<em>settings.py’s</em> file). That will make your server run much faster, and will also prevent malicious
+users from seeing details of your application that can be revealed by the error pages.</p>
+<p>If <strong>DEBUG</strong> = True, Django will display à <strong>Template-loader postmortem</strong> to show where things
+went wrong.</p>
+<p>One simple way for testing is to make sure the view is passing the right information back to the
+template is to use Django’s error page to examine output of the view. For forcing the error page
+to appear, add « assert false » just before the return line in the views.py.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="c1"># [...]</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="c1"># [...]</span>
+        <span class="p">}</span>
+    <span class="k">assert</span> <span class="n">false</span>    <span class="c1"># If this line is not commented, the return will be false</span>
+                    <span class="c1"># and the function will recive an exit signal</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;base.tml&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>N.B:</strong> Don’t forget to comment the “assert” line for the standard behavior.</p>
+</div></blockquote>
+<section id="the-django-s-error-page-in-dev-mode">
+<h4>The Django’s Error page in Dev mode<a class="headerlink" href="#the-django-s-error-page-in-dev-mode" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Exception Type</strong> : first two line of error’s page is the Exception Type. It help to
+understand what went wrong.</p></li>
+<li><p><strong>Traceback</strong> : In the Traceback, the bold line is the were the exption was raise.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="forms">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Forms</a><a class="headerlink" href="#forms" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/forms/">Working with forms</a> <a class="footnote-reference brackets" href="#id30" id="id31" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/">Form fields</a> <a class="footnote-reference brackets" href="#id32" id="id33" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p>Django’s forms are a easy way to create, in the template, a form from the model.</p>
+<p>Django handles three distinct parts of the work involved in forms</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>preparing and restructuring data to make it ready for rendering</p></li>
+<li><p>creating HTML forms for the data</p></li>
+<li><p>receiving and processing submitted forms and data from the client</p></li>
+</ul>
+</div></blockquote>
+<section id="email">
+<h4>Email<a class="headerlink" href="#email" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/email/">Sending email</a> <a class="footnote-reference brackets" href="#id34" id="id35" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a> : Django’s documentation</p></li>
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#email-backend">settings.py : EMAIL</a> <a class="footnote-reference brackets" href="#id36" id="id37" role="doc-noteref"><span class="fn-bracket">[</span>17<span class="fn-bracket">]</span></a> : EMAIL’s instructions for the sttings.py’s file</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p>Django provide the EmailMessage class for sending and reciving Email. By default <strong>EMAIL_BACKEND</strong>
+is set to use the <strong>Console backend</strong> witch is sending email from form to the console. For the list
+of available backends see <strong>Sending email</strong> to use it in production.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="django-s-view-views-py">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Django’s View (views.py)</a><a class="headerlink" href="#django-s-view-views-py" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/views/">Writing views</a> <a class="footnote-reference brackets" href="#id38" id="id39" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a> : Dango’s documentation for the function-based views</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p>At the fundamental level, a view function is a Python function that take a Web request and returns
+a Web response. This response can be the HTML contents of a Web page, or a redirect, or a 404 error,
+or an XML document, or an image, or anything.</p>
+<section id="class-based-views">
+<h4>class-based views<a class="headerlink" href="#class-based-views" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/">Class-based views</a> <a class="footnote-reference brackets" href="#id40" id="id41" role="doc-noteref"><span class="fn-bracket">[</span>19<span class="fn-bracket">]</span></a> : Dango’s documentation for the Class-based views</p></li>
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/">Built-in class-based views API</a> <a class="footnote-reference brackets" href="#id42" id="id43" role="doc-noteref"><span class="fn-bracket">[</span>20<span class="fn-bracket">]</span></a> : The list of the Dango’s class-based view</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p>Django provide a lot of <strong>class-based views</strong> to simplifying developement.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># exemple for &quot;ListView&quot;</span>
+
+<span class="c1">## quotes/views.py</span>
+<span class="kn">from</span> <span class="nn">django.views.generic.list</span> <span class="kn">import</span> <span class="n">ListView</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Quote</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="file-uploads">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">File Uploads</a><a class="headerlink" href="#file-uploads" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/file-uploads/">Upload file in Django</a> <a class="footnote-reference brackets" href="#id44" id="id45" role="doc-noteref"><span class="fn-bracket">[</span>21<span class="fn-bracket">]</span></a> : Django’s documentation</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="vocabulary">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Vocabulary</a><a class="headerlink" href="#vocabulary" title="Lien permanent vers cette rubrique">¶</a></h2>
+<blockquote>
+<div><dl class="field-list">
+<dt class="field-odd">Mixins<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Mixins are a form of multiple inheritance where behaviors and attributes of mulptiple
+classes can be modified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#using-mixins">Using mixins</a> <a class="footnote-reference brackets" href="#id46" id="id47" role="doc-noteref"><span class="fn-bracket">[</span>22<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">QuerySet<span class="colon">:</span></dt>
+<dd class="field-even"><p>A QuerySet represents a collection of objects from your database. It can have zero,
+one or many filters. Filters narrow down the query results based on the given
+parameters. In SQL terms, a QuerySet equates to a SELECT statement, and a filter is a
+limiting clause such as WHERE or LIMIT.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># example</span>
+<span class="n">Blog</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>  <span class="c1"># returns a QuerySet that contains all Blog objects in the</span>
+                    <span class="c1"># database.</span>
+
+<span class="n">Entry</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pub_date__year</span><span class="o">=</span><span class="mi">2006</span><span class="p">)</span>
+                    <span class="c1"># returns a QuerySet that contains only blog&#39;s entries of</span>
+                    <span class="c1"># the year 2006</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/querysets/">QuerySet API ref</a> <a class="footnote-reference brackets" href="#id48" id="id49" role="doc-noteref"><span class="fn-bracket">[</span>23<span class="fn-bracket">]</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/queries/">Making queries</a> <a class="footnote-reference brackets" href="#id50" id="id51" role="doc-noteref"><span class="fn-bracket">[</span>24<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Scope<span class="colon">:</span></dt>
+<dd class="field-even"><p>Apply to the DataBase, but is used in the « Views.py » and « forms.py » files</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Slug<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Slug is a newspaper term. A slug is a short label for something, containing only
+letters, numbers, underscores or hyphens. They’re generally used in URLs. For example,
+in a typical blog entry URL:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">djangoproject</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">weblog</span><span class="o">/</span><span class="mi">2008</span><span class="o">/</span><span class="n">apr</span><span class="o">/</span><span class="mi">12</span><span class="o">/</span><span class="n">spring</span><span class="o">/</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>the last bit (spring) is the <strong>slug</strong>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/fields/#slugfield">SlugField</a> <a class="footnote-reference brackets" href="#id52" id="id53" role="doc-noteref"><span class="fn-bracket">[</span>25<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Scope<span class="colon">:</span></dt>
+<dd class="field-even"><p>Apply to the DataBase (models.SlugField)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="webography">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Webography</a><a class="headerlink" href="#webography" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/models/">https://docs.djangoproject.com/en/2.1/topics/db/models/</a></p>
+</aside>
+<aside class="footnote brackets" id="id5" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">2</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES">https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES</a></p>
+</aside>
+<aside class="footnote brackets" id="id7" role="note">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id8">1</a>,<a role="doc-backlink" href="#id21">2</a>)</span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/contrib/admin/">https://docs.djangoproject.com/en/2.1/ref/contrib/admin/</a></p>
+</aside>
+<aside class="footnote brackets" id="id9" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">4</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/intro/install">https://docs.djangoproject.com/en/2.1/intro/install</a></p>
+</aside>
+<aside class="footnote brackets" id="id11" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">5</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/">https://docs.djangoproject.com/en/2.1/ref/settings/</a></p>
+</aside>
+<aside class="footnote brackets" id="id13" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">6</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/settings/">https://docs.djangoproject.com/en/2.1/topics/settings/</a></p>
+</aside>
+<aside class="footnote brackets" id="id15" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">7</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/urls/">https://docs.djangoproject.com/en/2.1/topics/http/urls/</a></p>
+</aside>
+<aside class="footnote brackets" id="id17" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id18">8</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/fields/">https://docs.djangoproject.com/en/2.1/ref/models/fields/</a></p>
+</aside>
+<aside class="footnote brackets" id="id19" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id20">9</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/options/">https://docs.djangoproject.com/en/2.1/ref/models/options/</a></p>
+</aside>
+<aside class="footnote brackets" id="id22" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id23">10</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/templates/">https://docs.djangoproject.com/en/2.1/ref/templates/</a></p>
+</aside>
+<aside class="footnote brackets" id="id24" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id25">11</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/">https://docs.djangoproject.com/en/2.1/howto/static-files/</a></p>
+</aside>
+<aside class="footnote brackets" id="id26" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id27">12</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/">https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/</a></p>
+</aside>
+<aside class="footnote brackets" id="id28" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id29">13</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/howto/error-reporting/">https://docs.djangoproject.com/en/2.1/howto/error-reporting/</a></p>
+</aside>
+<aside class="footnote brackets" id="id30" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id31">14</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/forms/">https://docs.djangoproject.com/en/2.1/topics/forms/</a></p>
+</aside>
+<aside class="footnote brackets" id="id32" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id33">15</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/">https://docs.djangoproject.com/en/2.1/ref/forms/fields/</a></p>
+</aside>
+<aside class="footnote brackets" id="id34" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id35">16</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/email/">https://docs.djangoproject.com/en/2.1/topics/email/</a></p>
+</aside>
+<aside class="footnote brackets" id="id36" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id37">17</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/settings/#email-backend">https://docs.djangoproject.com/en/2.1/ref/settings/#email-backend</a></p>
+</aside>
+<aside class="footnote brackets" id="id38" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id39">18</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/views/">https://docs.djangoproject.com/en/2.1/topics/http/views/</a></p>
+</aside>
+<aside class="footnote brackets" id="id40" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id41">19</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/">https://docs.djangoproject.com/en/2.1/topics/class-based-views/</a></p>
+</aside>
+<aside class="footnote brackets" id="id42" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id43">20</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/">https://docs.djangoproject.com/en/2.1/ref/class-based-views/</a></p>
+</aside>
+<aside class="footnote brackets" id="id44" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id45">21</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/http/file-uploads/">https://docs.djangoproject.com/en/2.1/topics/http/file-uploads/</a></p>
+</aside>
+<aside class="footnote brackets" id="id46" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id47">22</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#using-mixins">https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#using-mixins</a></p>
+</aside>
+<aside class="footnote brackets" id="id48" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id49">23</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/ref/models/querysets/">https://docs.djangoproject.com/en/2.1/ref/models/querysets/</a></p>
+</aside>
+<aside class="footnote brackets" id="id50" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id51">24</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/db/queries/">https://docs.djangoproject.com/en/2.1/topics/db/queries/</a></p>
+</aside>
+<aside class="footnote brackets" id="id52" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id53">25</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/fields/#slugfield">https://docs.djangoproject.com/en/2.2/ref/models/fields/#slugfield</a></p>
+</aside>
+</section>
+</section>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'20170523',
+            LANGUAGE:'fr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+    <div class="footer" role="contentinfo">
+        <div class="container">
+            &#169; Copyright 2017, Poltergeist42.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
+        </div>
+    </div>  
+
+</body>
+</html>

@@ -12,6 +12,7 @@ LINUX
 
    shell/shell
    multiscreen/multiscreen
+   scripting/scripting
    UsersGroupsACL/UsersGroupsACL
    sysAdmin/sysAdmin
    network/network
