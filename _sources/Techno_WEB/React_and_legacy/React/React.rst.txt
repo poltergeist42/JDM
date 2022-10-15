@@ -115,7 +115,7 @@ Exemple d'organisation de projet
 
     **N.B** : Les feuilles de styles bootstrap sont géré depuis un emplacement propre à Bootstrap.
 
-    .. code:: css
+    .. code:: CSS
 
         # Excemple d'import d'une CSS dans "App.css"
 
