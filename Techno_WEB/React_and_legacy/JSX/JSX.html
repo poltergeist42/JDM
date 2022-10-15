@@ -1,0 +1,430 @@
+
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>JSX (JavaScript eXtended) &mdash; JDM</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.min.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../../search.html" /> 
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
+            <a class="site-title" href="../../../index.html">
+                JDM
+            </a>
+        </div>
+    </header>
+
+
+<div class="breadcrumbs-outer hidden-xs-down">
+    <div class="container">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a></li>
+        
+      <li>JSX (JavaScript eXtended)</li>
+    
+    
+      <li class="breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/Techno_WEB/React_and_legacy/JSX/JSX.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+</div>
+    </div>
+</div>
+    <div class="main-outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 site-nav">
+                    
+<div role="search">
+    <form class="search" action="../../../search.html" method="get">
+        <div class="icon-input">
+            <input type="text" name="q" placeholder="Search" />
+            <span class="icon-search"></span>
+        </div>
+        <input type="submit" value="Go" class="d-hidden" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                    <div class="site-nav-tree">
+                        
+                            
+                            
+                                <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../readme.html">infos générales Journal de manip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../readme.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Composants.html">Composants Spécifiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ComputerVision.html">Computer Vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Cookbook.html">Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Culture_Gen.html">Culture Générale / Connaissances insolites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../DataBase/DataBase.html">DataBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../DataBase/PostGreSQL/PostGreSQL.html">PostGreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../DataBase/Redis/Redis.html">Redis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Dev_Gest_Prjet/Dev_Gest_Prjet.html">Développement, Gestion  et commercialisation de projet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Dev_Gest_Prjet/Merise/Merise.html">MERISE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Diagrams.html">Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Documentation_Automatique.html">Documentation_Automatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ESP.html">ESP8266 &amp; ESP32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Freecad.html">Freecad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../GIT.html">GIT (versioning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../HPVC.html">HPVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../IDE_TextEditor/IDE_TextEditor.html">IDE &amp; Text Editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../IDE_TextEditor/Latex/Latex.html">LaTex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../IDE_TextEditor/VIM/VIM.html">VIM (VI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../IDE_TextEditor/visualStudioCode/visualStudioCode.html">Visual Studio Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Informatique.html">Informatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kicad.html">Kicad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Linux/Linux.html">LINUX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Linux/shell/shell.html">SHELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Linux/multiscreen/multiscreen.html">Multi-Screen terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Linux/scripting/scripting.html">Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Linux/UsersGroupsACL/UsersGroupsACL.html">Utilisateurs, Groupes et Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Linux/sysAdmin/sysAdmin.html">Administration Système</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Linux/network/network.html">network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Linux/sharedFolders/sharedFolders.html">Dossiers partager et volumes distants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Linux/hardwareMgnt/hardwareMgnt.html">Hardware Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Linux/Raspberry/Raspberry.html">Raspberry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Linux/bugError/bugError.html">Bug, Maintenance et traitemant des Erreurs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../MAC_OS.html">MAC OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Machine_learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../MQTT.html">MQTT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Musique/Musique.html">Musique</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Musique/theorie/theorie.html">Théorie musicale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Musique/MAO/MAO.html">Musique Assistée (par) Ordinateur - MAO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Musique/guitare/guitare.html">Guitare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Musique/GuitareChant/GuitareChant.html">GuitareChant</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Optimisation_Travail.html">Optimisation du travail (et de l’apprentissage)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Powershell.html">PowerShell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Python.html">PYTHON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Regex.html">Regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Reseau.html">Reseau</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Soudure.html">Soudure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Techno_WEB.html">Technos Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../HTML_CSS/HTML_CSS.html">HTML_CSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Javascript/Javascript.html">JavaScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../React_and_legacy.html">React &amp; Legacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Node_Express/Node_Express.html">Node &amp; Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../webCreation/webCreation.html">Création de Site Web</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Trading.html">Trading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../URLtheque.html">URLtheque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../XML_JSON.html">XML_JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../arborescence/arborescence.html">Arborescence du projet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../deprecated/deprecated.html">Eléments dépréciés</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../deprecated/Aquariophilie/Aquariophilie.html">Aquariophilie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../deprecated/Django/Django.html">Django 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../deprecated/English_vocab/English_vocab.html">English Vocabulary</a></li>
+</ul>
+</li>
+</ul>
+
+                            
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="document">
+                        
+                            
+  <section id="jsx-javascript-extended">
+<h1><a class="toc-backref" href="#sommaire" role="doc-backlink">JSX (JavaScript eXtended)</a><a class="headerlink" href="#jsx-javascript-extended" title="Lien permanent vers cette rubrique">¶</a></h1>
+<nav class="contents" id="sommaire">
+<span id="index-0"></span><p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#jsx-javascript-extended" id="id7">JSX (JavaScript eXtended)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#definission-de-jsx" id="id8">Definission de JSX</a></p></li>
+<li><p><a class="reference internal" href="#interpreter-le-jsx-dans-un-navigateur" id="id9">Interpréter le JSX dans un navigateur</a></p></li>
+<li><p><a class="reference internal" href="#details-syntaxique" id="id10">Details syntaxique</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id11">Weblinks</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<hr class="docutils" />
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://www.apprendre-react.fr/tutorial/debutant/jsx/">Les bases du JSX</a> <a class="footnote-reference brackets" href="#id1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+<li><p><a class="reference external" href="https://fr.reactjs.org/docs/introducing-jsx.html">Introduction à JSX</a> <a class="footnote-reference brackets" href="#id3" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
+<li><p><a class="reference external" href="https://fr.reactjs.org/docs/jsx-in-depth.html">JSX dans le détail</a> <a class="footnote-reference brackets" href="#id5" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</dd>
+</dl>
+<section id="definission-de-jsx">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Definission de JSX</a><a class="headerlink" href="#definission-de-jsx" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Le JSX est l’encapsulation d’un pseudo HTML dans du Javascript. cela permet donc de simplifier
+l’écriture. C’est ce que l’on appel du <em>« sucre syntaxique »</em>.</p>
+<p>On écris le html directement dans le code JavaScript, ce qui nous permet d’y inclure directement
+des composants React.</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="c1">//Expression en JSX</span>
+<span class="linenos"> 2</span> <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
+<span class="linenos"> 3</span>     <span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;greeting&quot;</span><span class="o">&gt;</span>
+<span class="linenos"> 4</span>         <span class="nx">Je</span> <span class="nx">s</span><span class="s1">&#39;appel Groot !</span>
+<span class="linenos"> 5</span><span class="s1">     &lt;/h1&gt;</span>
+<span class="linenos"> 6</span><span class="s1"> );</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="s1"> //Expression en REACT</span>
+<span class="linenos"> 9</span><span class="s1"> const element = React.createlement(</span>
+<span class="linenos">10</span><span class="s1">     &#39;</span><span class="nx">h1</span><span class="s1">&#39;,</span>
+<span class="linenos">11</span><span class="s1">     {className: &#39;</span><span class="nx">greeting</span><span class="s1">&#39;},</span>
+<span class="linenos">12</span><span class="s1">     &#39;</span><span class="nx">Je</span> <span class="nx">s</span><span class="s1">&#39;appelle Groot !&#39;</span>
+<span class="linenos">13</span> <span class="p">);</span>
+</pre></div>
+</div>
+<p>Ces deux expressions sont équivlente.</p>
+<p>Il est possible d’ajouter des commentaire dans une expression JSX. Les commentaire s’écrivent
+comme pour le JavaScript mais entourés d’accolades.</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
+<span class="linenos">2</span>     <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span>
+<span class="linenos">3</span>         <span class="p">{</span><span class="cm">/* un super commentaire bien pertinent */</span><span class="p">}</span>
+<span class="linenos">4</span>         <span class="nx">Je</span> <span class="nx">s</span><span class="err">&#39;</span><span class="nx">appelle</span> <span class="nx">Groot</span> <span class="o">!</span>
+<span class="linenos">5</span>     <span class="o">&lt;</span><span class="err">/h1&gt;</span>
+<span class="linenos">6</span> <span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="interpreter-le-jsx-dans-un-navigateur">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Interpréter le JSX dans un navigateur</a><a class="headerlink" href="#interpreter-le-jsx-dans-un-navigateur" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Le JSX n’est pas nativement interpréter par les navigateurs. Pour interpréter le JSX dans le
+navigateur, il faut le prévoir dans le HTML en ajoutant une la bibliothèque <strong>« Babel »</strong> au moyen de
+la balise <em>&lt;src= »… »&gt;</em>. Il faut également inclure l’attribut <em>type= »text/babel »</em> dans la balise
+script contenant le JSX.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span> <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span>     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>         <span class="cm">&lt;!-- CDN React - Development --&gt;</span>
+<span class="linenos"> 6</span>         <span class="p">&lt;</span><span class="nt">script</span> <span class="na">crossorigin</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/react@16/umd/react.development.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>         <span class="p">&lt;</span><span class="nt">script</span> <span class="na">crossorigin</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>         <span class="cm">&lt;!-- imort de Babel (Dev uniquement) --&gt;</span>
+<span class="hll"><span class="linenos">10</span>         <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/babel-standalone@6/babel.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span class="linenos">11</span>     <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos">12</span>     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">13</span>         <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos">14</span>     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>     <span class="cm">&lt;!-- Balise &#39;script&#39; avec l&#39;option &#39;text/babel --&gt;</span>
+<span class="hll"><span class="linenos">17</span>     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/babel&quot;</span><span class="p">&gt;</span>
+</span><span class="linenos">18</span>         <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
+<span class="linenos">19</span>             <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span>
+<span class="linenos">20</span>                 <span class="nx">Je</span> <span class="nx">s</span><span class="err">&#39;</span><span class="nx">appel</span> <span class="nx">Groot</span> <span class="o">!</span>
+<span class="linenos">21</span>             <span class="o">&lt;</span><span class="err">/h1&gt;</span>
+<span class="linenos">22</span>         <span class="p">);</span>
+<span class="linenos">23</span>         <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">));</span>
+<span class="linenos">24</span>     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="linenos">25</span> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>L’inclusion de Babel pour interpréter le JSX ralentie le programme. En effet, cela ajoute une
+étape de traduction supplémentaire au processus.</p>
+<p>L’inclusion de Babel est donc a reserver à la phase de <strong>Developpement</strong>. En phase de
+<strong>production</strong> on utilisera d’autres outils tel que <strong>Webpack</strong> pour créer un package.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="details-syntaxique">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Details syntaxique</a><a class="headerlink" href="#details-syntaxique" title="Lien permanent vers cette rubrique">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p>Le mot clef <strong>“class”</strong> habituellement utilisé dans le html ne peut pas être utilisé en JSX
+car c’est égallement un mot clef utilisé en Javascript. Dans les expressions JSX, ce mot clef
+est remplacé par <strong>« className »</strong>.</p></li>
+<li><p>Les mots clefs composés (séparé par « _ ») utilisés en CSS sont systématiquement remplacé par
+le formatage en <strong>lowerCamelCase</strong></p></li>
+<li><p>JSX (et donc React) considère les composants commençant par des lettres minuscules comme des
+balises <a class="reference internal" href="../../Javascript/Javascript.html#term-DOM"><span class="xref std std-term">DOM</span></a>. Par exemple, &lt;div /&gt; représente une balise HTML div, mais &lt;Welcome /&gt;
+représente un composant, et exige que l’identifiant Welcome existe dans la portée courante.</p></li>
+<li><p>Toutes les balises auto-fermantes doivent être fermées avec « / » avant le « &gt; »</p>
+<blockquote>
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span> <span class="cm">&lt;!-- Balise auto-fermantes en HTML --&gt;</span>
+</span><span class="linenos">2</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+<span class="linenos">3</span>
+<span class="hll"><span class="linenos">4</span> <span class="cm">&lt;!-- Balise auto-fermantes en JSX --&gt;</span>
+</span><span class="linenos">5</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Le JSX n’accepte de retourner qu’un seule élément parent à la fois</p>
+<blockquote>
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> // Code en erreur
+<span class="linenos"> 2</span> import React, { Component } from &#39;react&#39;
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span> class App extends Component {
+<span class="linenos"> 5</span>     render() {
+<span class="linenos"> 6</span>         return (
+<span class="linenos"> 7</span>             {/* Premier composant parent */}
+<span class="linenos"> 8</span>             <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span>                 <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Je s&#39;appelle Groot !<span class="p">&lt;</span><span class="nt">h1</span><span class="p">/&gt;</span>
+<span class="linenos">10</span>             <span class="p">&lt;</span><span class="nt">div</span><span class="p">/&gt;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>             {/* Second composant parent (Interdit !) */}
+<span class="linenos">13</span>             <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Je s&#39;appelle Pierre<span class="p">&lt;</span><span class="nt">h2</span><span class="p">/&gt;</span>
+<span class="linenos">14</span>         )
+<span class="linenos">15</span>     }
+<span class="linenos">16</span>
+<span class="linenos">17</span> export default App
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<blockquote>
+<div><p>Pour eviter ce problème, on import « Fragment » depuis React et on entoure le JSX d’une balise
+« &lt;Fragment&gt;&lt;/Fragment&gt; »</p>
+<blockquote>
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> // Code valide
+<span class="linenos"> 2</span> import React, { Component, Fragment } from &#39;react&#39;
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span> class App extends Component {
+<span class="linenos"> 5</span>     render() {
+<span class="linenos"> 6</span>         return (
+<span class="linenos"> 7</span>             <span class="p">&lt;</span><span class="nt">Fragment</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span>                 {/* Premier composant parent */}
+<span class="linenos"> 9</span>                 <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos">10</span>                     <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Je s&#39;appelle Groot !<span class="p">&lt;</span><span class="nt">h1</span><span class="p">/&gt;</span>
+<span class="linenos">11</span>                 <span class="p">&lt;</span><span class="nt">div</span><span class="p">/&gt;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>                 {/* Second composant parent (Interdit !) */}
+<span class="linenos">14</span>                 <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Je s&#39;appelle Pierre<span class="p">&lt;</span><span class="nt">h2</span><span class="p">/&gt;</span>
+<span class="linenos">15</span>             <span class="p">&lt;/</span><span class="nt">Fragment</span><span class="p">&gt;</span>
+<span class="linenos">16</span>         )
+<span class="linenos">17</span>     }
+<span class="linenos">18</span>
+<span class="linenos">19</span> export default App
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="weblinks">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote brackets" id="id1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.apprendre-react.fr/tutorial/debutant/jsx/">https://www.apprendre-react.fr/tutorial/debutant/jsx/</a></p>
+</aside>
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">2</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://fr.reactjs.org/docs/introducing-jsx.html">https://fr.reactjs.org/docs/introducing-jsx.html</a></p>
+</aside>
+<aside class="footnote brackets" id="id5" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">3</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://fr.reactjs.org/docs/jsx-in-depth.html">https://fr.reactjs.org/docs/jsx-in-depth.html</a></p>
+</aside>
+</section>
+</section>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'20170523',
+            LANGUAGE:'fr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+    <div class="footer" role="contentinfo">
+        <div class="container">
+            &#169; Copyright 2017, Poltergeist42.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
+        </div>
+    </div>  
+
+</body>
+</html>

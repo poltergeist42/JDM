@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="../../../_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Recherche" href="../../../search.html" />
-    <link rel="next" title="React Native" href="../Native/Native.html" />
+    <link rel="next" title="Composant" href="Components/Components.html" />
     <link rel="prev" title="React &amp; Legacy" href="../React_and_legacy.html" /> 
 
 </head>
@@ -133,9 +133,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Freecad.html">Freecad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../GIT.html">GIT (versioning)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../HPVC.html">HPVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../IDE_TextEditor/IDE_TextEditor.html">IDE &amp; Text Editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../IDE_TextEditor/Latex/Latex.html">LaTex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../IDE_TextEditor/VIM/VIM.html">VIM (VI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../IDE_TextEditor/visualStudioCode/visualStudioCode.html">Visual Studio Code</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Informatique.html">Informatique</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../kicad.html">Kicad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Latex.html">LaTex</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Linux/Linux.html">LINUX</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../Linux/shell/shell.html">SHELL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Linux/multiscreen/multiscreen.html">Multi-Screen terminal</a></li>
@@ -167,7 +172,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Soudure.html">Soudure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../Techno_WEB.html">Technos Web</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../HTML_CSS/HTML_CSS.html">HTML_CSS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Javascript/Javascript.html">JavaScript / REACT.js / node.js</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Javascript/Javascript.html">JavaScript</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../React_and_legacy.html">React &amp; Legacy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Node_Express/Node_Express.html">Node &amp; Express</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../webCreation/webCreation.html">Création de Site Web</a></li>
@@ -175,8 +180,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Trading.html">Trading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../URLtheque.html">URLtheque</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../VIM.html">VIM (VI)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../visualStudioCode.html">Visual Studio Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../XML_JSON.html">XML_JSON</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../arborescence/arborescence.html">Arborescence du projet</a></li>
 </ul>
@@ -202,18 +205,88 @@
 <nav class="contents" id="sommaire">
 <span id="index-0"></span><p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#react" id="id1">React</a></p>
+<li><p><a class="reference internal" href="#react" id="id3">React</a></p>
 <ul>
-<li><p><a class="reference internal" href="#weblinks" id="id2">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#getting-started" id="id4">Getting started</a></p>
+<ul>
+<li><p><a class="reference internal" href="#versionning-et-recuperation-de-projet" id="id5">Versionning et récupération de projet</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#weblinks" id="id6">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Components/Components.html">Composant</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Components/Components.html#les-types-de-component">Les types de component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Components.html#rendu-dun-composant-comment-lier-react-au-dom">Rendu d’un composant : Comment lier React au DOM ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Components.html#amelioration-semantique-du-html-dans-le-rendu-des-composants">Amélioration sémantique du HTML dans le rendu des composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Components.html#extraire-des-composants">Extraire des composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Components.html#convertir-une-fonction-en-classe">Convertir une fonction en classe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Components.html#weblinks">Weblinks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Props/Props.html">Props (Short for « Properties »)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Props/Props.html#utilisation-des-props">Utilisation des Props</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Props/Props.html#les-props-sont-en-lecture-seule">Les props sont en lecture seule</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="States/States.html">States</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="States/States.html#weblinks">Weblinks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Hooks/Hooks.html">Weblinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReactRouterDOM/ReactRouterDOM.html">React-Router-DOM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ReactRouterDOM/ReactRouterDOM.html#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <hr class="docutils" />
-<p>[WIP]</p>
+<section id="getting-started">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Getting started</a><a class="headerlink" href="#getting-started" title="Lien permanent vers cette rubrique">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/facebook/create-react-app">Package create-react-app</a> <a class="footnote-reference brackets" href="#id1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Create React App</strong> est un paquet qui permet de créer l’arborescence et d’installer toutes les
+dépendances nécéssaires.</p>
+<p>Ce paquet doit être installer globallement.</p>
+<section id="versionning-et-recuperation-de-projet">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Versionning et récupération de projet</a><a class="headerlink" href="#versionning-et-recuperation-de-projet" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>Lorsqu’un projet react est créer avec create-react-app, un « git » est également initialisé. React
+étant en frontend, il peut être préférable de le supprimer pour en créer un plus haut dans
+l’arborescence et ainsi englober le frontend et le backend .</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>~/myProject
+    <span class="p">|</span>
+    <span class="se">\-</span>-&gt; .git
+    <span class="p">|</span>
+    <span class="se">\-</span>-&gt; frontend <span class="c1"># React</span>
+    <span class="p">|</span>
+    <span class="se">\-</span>-&gt; backend <span class="c1"># Node-Express + Mongo</span>
+</pre></div>
+</div>
+<p>Create-react-app génére également un fichier « .gitignore » qui exclue le dossier « node_modules ». Ce
+fichier est à conserver. Il est même intéressant de créer un fichier « .dockerignore » qui exclue lui
+aussi le dossier « node_modules ».</p>
+<p>Le dossiers « node_modules » contient toutes les dépendances de React. Ces dépendances sont listées
+dans le fichiers « package.json ».</p>
+<p>Si le projet est récupérer d’un dépot distant comme Github par exemple il faut alors installer les
+dépendances du projet.</p>
+</section>
+</section>
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote brackets" id="id1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://github.com/facebook/create-react-app">https://github.com/facebook/create-react-app</a></p>
+</aside>
 </section>
 </section>
 

@@ -5,15 +5,85 @@ React
 .. index::
    single: React
    single: Frontend; React
+   single: JavaScript; React
+   single: MERN; React
    single: Web; React
 
 .. contents::
     :depth: 3
     :backlinks: top
 
+
+.. toctree::
+   :maxdepth: 2
+
+   Components/Components
+   Props/Props
+   States/States
+   Hooks/Hooks
+   ReactRouterDOM/ReactRouterDOM
+
 ####
 
-[WIP]
+---------------
+Getting started
+---------------
+
+:Liens_Web:
+    * `Package create-react-app`_
+
+.. _`Package create-react-app`: https://github.com/facebook/create-react-app
+
+**Create React App** est un paquet qui permet de créer l'arborescence et d'installer toutes les
+dépendances nécéssaires.
+
+Ce paquet doit être installer globallement.
+
+.. code:: shell
+   :linenos:
+   :force:
+
+    npm install -g create-react-app
+
+    # Créer ensuite un nouveau projet
+    npx create-react-app [my-app]       # Attention, les noms des projets doivent être écris en
+                                        # minuscule uniquement.
+    cd [my-app]
+    npm start
+
+Versionning et récupération de projet
+=====================================
+
+Lorsqu'un projet react est créer avec create-react-app, un "git" est également initialisé. React
+étant en frontend, il peut être préférable de le supprimer pour en créer un plus haut dans
+l'arborescence et ainsi englober le frontend et le backend . 
+
+.. code:: shell
+
+    ~/myProject
+        |
+        \--> .git
+        |
+        \--> frontend # React
+        |
+        \--> backend # Node-Express + Mongo
+
+Create-react-app génére également un fichier ".gitignore" qui exclue le dossier "node_modules". Ce
+fichier est à conserver. Il est même intéressant de créer un fichier ".dockerignore" qui exclue lui
+aussi le dossier "node_modules".
+
+Le dossiers "node_modules" contient toutes les dépendances de React. Ces dépendances sont listées
+dans le fichiers "package.json".
+
+Si le projet est récupérer d'un dépot distant comme Github par exemple il faut alors installer les
+dépendances du projet.
+
+.. code:: shell
+   :linenos:
+   :force:
+
+    cd [my-app]
+    npm install     #lecture du fichier "package.json" pour identifier les dépendances à installer
 
 ####
 
