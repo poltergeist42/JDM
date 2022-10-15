@@ -212,7 +212,8 @@
 <li><p><a class="reference internal" href="#versionning-et-recuperation-de-projet" id="id5">Versionning et récupération de projet</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#weblinks" id="id6">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#exemple-d-organisation-de-projet" id="id6">Exemple d’organisation de projet</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id7">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -292,6 +293,40 @@ dépendances du projet.</p>
 </pre></div>
 </div>
 </section>
+</section>
+<hr class="docutils" />
+<section id="exemple-d-organisation-de-projet">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Exemple d’organisation de projet</a><a class="headerlink" href="#exemple-d-organisation-de-projet" title="Lien permanent vers cette rubrique">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span>
+    <span class="o">|</span>
+    \
+     <span class="o">--&gt;</span> <span class="n">Index</span><span class="o">.</span><span class="n">html</span>
+
+<span class="n">SRC</span>
+    <span class="o">|</span>
+    <span class="o">--&gt;</span> <span class="n">Composants</span>
+    <span class="o">|</span>
+    <span class="o">--&gt;</span> <span class="n">CSS</span>
+    <span class="o">|</span>
+    <span class="o">--&gt;</span> <span class="n">Pages</span>
+    <span class="o">|</span>
+    <span class="o">--&gt;</span> <span class="n">App</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Les composants sont isolés et appellés depuis les Pages</p></li>
+<li><p>Les Pages exploitent les composants et les CSS</p></li>
+<li><p>Les CSS sont conccentrée à 1 seul emplacement. Toutes les CSS sont importée depuis une feuille
+de style.</p></li>
+</ul>
+<p><strong>N.B</strong> : Les feuilles de styles bootstrap sont géré depuis un emplacement propre à Bootstrap.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span># Excemple d&#39;import d&#39;une CSS dans &quot;App.css&quot;
+
+@import &#39;./home.css&#39;;
+</pre></div>
+</div>
+</div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="weblinks">

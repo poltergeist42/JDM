@@ -55,6 +55,7 @@ Ces deux expressions sont équivlente.
 Il est possible d'ajouter des commentaire dans une expression JSX. Les commentaire s'écrivent
 comme pour le JavaScript mais entourés d'accolades.
 
+
 .. code:: JavaScript
    :number-lines:
 
@@ -64,6 +65,7 @@ comme pour le JavaScript mais entourés d'accolades.
             Je s'appelle Groot !
         </h1>
     );
+
 
 ####
 

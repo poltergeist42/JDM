@@ -87,6 +87,42 @@ dépendances du projet.
 
 ####
 
+--------------------------------
+Exemple d'organisation de projet
+--------------------------------
+
+    .. code::
+
+        Public
+            |
+            \
+             --> Index.html
+
+        SRC
+            |
+            --> Composants
+            |
+            --> CSS
+            |
+            --> Pages
+            |
+            --> App.js
+
+    * Les composants sont isolés et appellés depuis les Pages
+    * Les Pages exploitent les composants et les CSS
+    * Les CSS sont conccentrée à 1 seul emplacement. Toutes les CSS sont importée depuis une feuille
+      de style.
+
+    **N.B** : Les feuilles de styles bootstrap sont géré depuis un emplacement propre à Bootstrap.
+
+    .. code:: css
+
+        # Excemple d'import d'une CSS dans "App.css"
+
+        @import './home.css';
+
+####
+
 --------
 Weblinks
 --------
