@@ -338,6 +338,13 @@ Engineering.</p>
 </ul>
 </dd>
 </dl>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>   sudo apt update <span class="o">&amp;&amp;</span> apt install git
+<span class="linenos">2</span>   <span class="nb">cd</span> /opt
+<span class="linenos">3</span>   git clone https://github.com/Dewalt-arch/pimpmykali
+<span class="linenos">4</span>   <span class="nb">cd</span> pimpmykali
+<span class="linenos">5</span>   sudo ./pimpmykali.sh
+</pre></div>
+</div>
 </section>
 </section>
 <section id="parrot-security-os">
@@ -451,7 +458,11 @@ early stages of a penetration test or red team engagement. Use it for open sourc
 intelligence (OSINT) gathering to help determine a company’s external threat landscape on the
 internet. The tool gathers emails, names, subdomains, IPs and URLs using</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># theHaverester manual</span>
+<span class="linenos">2</span>python3 theHarvester.py -h
+</pre></div>
+</div>
+</div></blockquote>
 </section>
 <section id="enum4linux">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">enum4Linux</a><a class="headerlink" href="#enum4linux" title="Lien permanent vers cette rubrique">¶</a></h3>
@@ -488,7 +499,21 @@ Nmap executable, the Nmap suite includes an advanced GUI and results viewer (Zen
 data transfer, redirection, and debugging tool (Ncat), a utility for comparing scan results (Ndiff),
 and a packet generation and response analysis tool (Nping).</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># nmap</span>
+<span class="linenos"> 2</span>nmap -A -p- -T4 &lt;ip ou plage ip&gt;
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># Par défaut, le scan s&#39;effectue sur le TCP (-sS). Pour forcer le scan en UCP il faut</span>
+<span class="linenos"> 5</span><span class="c1"># utiliser l&#39;option -sU.</span>
+<span class="linenos"> 6</span><span class="c1">#</span>
+<span class="linenos"> 7</span><span class="c1"># -A: Enable OS detection, version detection, script scanning, and traceroute</span>
+<span class="linenos"> 8</span><span class="c1">#</span>
+<span class="linenos"> 9</span><span class="c1"># -p-: permet de scanner tous les ports si le deuxième &quot;-&quot; est absent, seuls les 1000</span>
+<span class="linenos">10</span><span class="c1">#      Premiers ports seront scanner</span>
+<span class="linenos">11</span><span class="c1">#</span>
+<span class="linenos">12</span><span class="c1"># -T4: permet de déterminer la vitesse du scan 0-lent --&gt; 5-rapide</span>
+</pre></div>
+</div>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">.. warning:<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Attention il n’y a pas de time out en UDP. Le scan peux donc durer indéfiniment. Il
@@ -497,6 +522,9 @@ est donc conseiller de ne scanner que les 1000 premiers ports.</p>
 </dl>
 <section id="performe-a-ping-sweep-with-nmap">
 <h4>Performe a ping sweep with nmap<a class="headerlink" href="#performe-a-ping-sweep-with-nmap" title="Lien permanent vers cette rubrique">¶</a></h4>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>sudo nmap -sn <span class="m">192</span>.168.1.0/24
+</pre></div>
+</div>
 <p>This option tells Nmap not to do a port scan after host discovery and only print the available hosts
 that respond to the probe. The default host discovery done with -sn consists of an ICMP echo
 request, TCP SYN to port 443, TCP ACK to port 80, and an ICMP timestamp request by default.</p>
@@ -546,7 +574,15 @@ encounter software in a CTF or pentest.</p>
 works using a downloaded version of the database, meaning that you already have all of the exploits
 already on your Kali Linux!</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Update database</span>
+<span class="linenos">2</span>searchsploit -u
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1"># perform search</span>
+<span class="linenos">5</span><span class="c1"># searchsploit [App_name]</span>
+<span class="linenos">6</span>searchsploit wordpress <span class="m">5</span>
+</pre></div>
+</div>
+</div></blockquote>
 </section>
 <section id="national-vulnerability-database-nvd">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">NATIONAL VULNERABILITY DATABASE (NVD)</a><a class="headerlink" href="#national-vulnerability-database-nvd" title="Lien permanent vers cette rubrique">¶</a></h3>

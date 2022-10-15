@@ -104,7 +104,7 @@ Babel
 
 Installer babel en mode dévellopeur :
 
-.. code-block:: shell
+.. code:: shell
    :number-lines:
    :force:
 

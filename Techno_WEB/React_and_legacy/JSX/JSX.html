@@ -231,9 +231,32 @@
 l’écriture. C’est ce que l’on appel du <em>« sucre syntaxique »</em>.</p>
 <p>On écris le html directement dans le code JavaScript, ce qui nous permet d’y inclure directement
 des composants React.</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="c1">//Expression en JSX</span>
+<span class="linenos"> 2</span> <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
+<span class="linenos"> 3</span>     <span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;greeting&quot;</span><span class="o">&gt;</span>
+<span class="linenos"> 4</span>         <span class="nx">Je</span> <span class="nx">s</span><span class="s1">&#39;appel Groot !</span>
+<span class="linenos"> 5</span><span class="s1">     &lt;/h1&gt;</span>
+<span class="linenos"> 6</span><span class="s1"> );</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="s1"> //Expression en REACT</span>
+<span class="linenos"> 9</span><span class="s1"> const element = React.createlement(</span>
+<span class="linenos">10</span><span class="s1">     &#39;</span><span class="nx">h1</span><span class="s1">&#39;,</span>
+<span class="linenos">11</span><span class="s1">     {className: &#39;</span><span class="nx">greeting</span><span class="s1">&#39;},</span>
+<span class="linenos">12</span><span class="s1">     &#39;</span><span class="nx">Je</span> <span class="nx">s</span><span class="s1">&#39;appelle Groot !&#39;</span>
+<span class="linenos">13</span> <span class="p">);</span>
+</pre></div>
+</div>
 <p>Ces deux expressions sont équivlente.</p>
 <p>Il est possible d’ajouter des commentaire dans une expression JSX. Les commentaire s’écrivent
 comme pour le JavaScript mais entourés d’accolades.</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
+<span class="linenos">2</span>     <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span>
+<span class="linenos">3</span>         <span class="p">{</span><span class="cm">/* un super commentaire bien pertinent */</span><span class="p">}</span>
+<span class="linenos">4</span>         <span class="nx">Je</span> <span class="nx">s</span><span class="err">&#39;</span><span class="nx">appelle</span> <span class="nx">Groot</span> <span class="o">!</span>
+<span class="linenos">5</span>     <span class="o">&lt;</span><span class="err">/h1&gt;</span>
+<span class="linenos">6</span> <span class="p">);</span>
+</pre></div>
+</div>
 </section>
 <hr class="docutils" />
 <section id="interpreter-le-jsx-dans-un-navigateur">
@@ -269,14 +292,54 @@ représente un composant, et exige que l’identifiant Welcome existe dans la po
 </li>
 <li><p>Le JSX n’accepte de retourner qu’un seule élément parent à la fois</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> // Code en erreur
+<span class="linenos"> 2</span> import React, { Component } from &#39;react&#39;
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span> class App extends Component {
+<span class="linenos"> 5</span>     render() {
+<span class="linenos"> 6</span>         return (
+<span class="linenos"> 7</span>             {/* Premier composant parent */}
+<span class="linenos"> 8</span>             <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span>                 <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Je s&#39;appelle Groot !<span class="p">&lt;</span><span class="nt">h1</span><span class="p">/&gt;</span>
+<span class="linenos">10</span>             <span class="p">&lt;</span><span class="nt">div</span><span class="p">/&gt;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>             {/* Second composant parent (Interdit !) */}
+<span class="linenos">13</span>             <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Je s&#39;appelle Pierre<span class="p">&lt;</span><span class="nt">h2</span><span class="p">/&gt;</span>
+<span class="linenos">14</span>         )
+<span class="linenos">15</span>     }
+<span class="linenos">16</span>
+<span class="linenos">17</span> export default App
+</pre></div>
+</div>
+</div></blockquote>
 </li>
 </ul>
 <blockquote>
 <div><p>Pour eviter ce problème, on import « Fragment » depuis React et on entoure le JSX d’une balise
 « &lt;Fragment&gt;&lt;/Fragment&gt; »</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> // Code valide
+<span class="linenos"> 2</span> import React, { Component, Fragment } from &#39;react&#39;
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span> class App extends Component {
+<span class="linenos"> 5</span>     render() {
+<span class="linenos"> 6</span>         return (
+<span class="linenos"> 7</span>             <span class="p">&lt;</span><span class="nt">Fragment</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span>                 {/* Premier composant parent */}
+<span class="linenos"> 9</span>                 <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos">10</span>                     <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Je s&#39;appelle Groot !<span class="p">&lt;</span><span class="nt">h1</span><span class="p">/&gt;</span>
+<span class="linenos">11</span>                 <span class="p">&lt;</span><span class="nt">div</span><span class="p">/&gt;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>                 {/* Second composant parent (Interdit !) */}
+<span class="linenos">14</span>                 <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Je s&#39;appelle Pierre<span class="p">&lt;</span><span class="nt">h2</span><span class="p">/&gt;</span>
+<span class="linenos">15</span>             <span class="p">&lt;/</span><span class="nt">Fragment</span><span class="p">&gt;</span>
+<span class="linenos">16</span>         )
+<span class="linenos">17</span>     }
+<span class="linenos">18</span>
+<span class="linenos">19</span> export default App
+</pre></div>
+</div>
+</div></blockquote>
 </div></blockquote>
 </div></blockquote>
 </section>

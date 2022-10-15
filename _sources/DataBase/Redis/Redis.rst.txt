@@ -38,7 +38,7 @@ le mode développeur). L'utilisation d'un container (docker) est également poss
 Install Linux
 -------------
 
-.. code-block:: shell
+.. code:: shell
    :number-lines:
    :force:
 
@@ -71,7 +71,7 @@ Démarrer le serveur
 
     #. En mode manuelle :
 
-        .. code-block:: JavaScript
+        .. code:: JavaScript
            :number-lines:
            :force:
 
@@ -86,7 +86,7 @@ Démarrer le serveur
 
     #. Démarrer le service automatiquement :
 
-        .. code-block:: shell
+        .. code:: shell
            :number-lines:
            :force:
 
@@ -95,7 +95,7 @@ Démarrer le serveur
 Lancer le CLI
 -------------
 
-.. code-block:: shell
+.. code:: shell
    :number-lines:
    :force:
 
@@ -110,7 +110,7 @@ Utilisation avec Python
 
     #. Installation :
 
-        .. code-block:: python
+        .. code:: python
            :number-lines:
            :force:
 
@@ -118,7 +118,7 @@ Utilisation avec Python
 
     # Exemple d'utilisation :
 
-        .. code-block:: python
+        .. code:: python
            :number-lines:
            :force:
 

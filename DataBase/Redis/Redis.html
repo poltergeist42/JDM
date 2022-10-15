@@ -235,6 +235,31 @@ version Linux.</p>
 le mode développeur). L’utilisation d’un container (docker) est également possible.</p>
 <section id="install-linux">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Install Linux</a><a class="headerlink" href="#install-linux" title="Lien permanent vers cette rubrique">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="c1">## Téléchargement des dépendances</span>
+<span class="linenos"> 2</span> sudo apt-get install build-essential
+<span class="linenos"> 3</span> sudo apt-get install tcl8.5
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span> <span class="c1">## Télchargement et décompression du paquet</span>
+<span class="linenos"> 6</span> wget http://download.redis.io/releases/redis-4.0.2.tar.gz
+<span class="linenos"> 7</span> <span class="c1"># --&gt; verifier si une version plus récente n&#39;existe pas</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span> tar xzf redis-4.0.2.tar.gz
+<span class="linenos">10</span> <span class="nb">cd</span> redis-4.0.2
+<span class="linenos">11</span>
+<span class="linenos">12</span> <span class="c1">## Compilation des sources</span>
+<span class="linenos">13</span> sudo make distclean
+<span class="linenos">14</span> sudo make –j
+<span class="linenos">15</span>
+<span class="linenos">16</span> <span class="c1">## Test des éléments compilés avant l&#39;installation</span>
+<span class="linenos">17</span> sudo make <span class="nb">test</span> -j
+<span class="linenos">18</span>
+<span class="linenos">19</span> <span class="c1">## Installation du serveur</span>
+<span class="linenos">20</span> sudo make install -j
+<span class="linenos">21</span> <span class="nb">cd</span> utils
+<span class="linenos">22</span> sudo ./install_server.sh
+<span class="linenos">23</span> <span class="c1"># --&gt; Accepter tous les choix par défaut</span>
+</pre></div>
+</div>
 </section>
 <section id="demarrer-le-serveur">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Démarrer le serveur</a><a class="headerlink" href="#demarrer-le-serveur" title="Lien permanent vers cette rubrique">¶</a></h3>
@@ -242,17 +267,33 @@ le mode développeur). L’utilisation d’un container (docker) est également 
 <div><ol class="arabic">
 <li><p>En mode manuelle :</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="err">#</span> <span class="nx">Démarrer</span> <span class="nx">le</span> <span class="nx">service</span>
+<span class="linenos">2</span> <span class="nx">sudo</span> <span class="nx">service</span> <span class="nx">redis_6379</span> <span class="nx">start</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span> <span class="err">#</span> <span class="nx">Rédémarrer</span> <span class="nx">le</span> <span class="nx">service</span>
+<span class="linenos">5</span> <span class="nx">sudo</span> <span class="nx">service</span> <span class="nx">redis_6379</span> <span class="nx">restart</span>
+<span class="linenos">6</span>
+<span class="linenos">7</span> <span class="err">#</span> <span class="nx">Arréter</span> <span class="nx">le</span> <span class="nx">service</span>
+<span class="linenos">8</span> <span class="nx">sudo</span> <span class="nx">service</span> <span class="nx">redis_6379</span> <span class="nx">stop</span>
+</pre></div>
+</div>
+</div></blockquote>
 </li>
 <li><p>Démarrer le service automatiquement :</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> sudo update-rc.d redis_6379 defaults
+</pre></div>
+</div>
+</div></blockquote>
 </li>
 </ol>
 </div></blockquote>
 </section>
 <section id="lancer-le-cli">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Lancer le CLI</a><a class="headerlink" href="#lancer-le-cli" title="Lien permanent vers cette rubrique">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> redis-cli
+</pre></div>
+</div>
 </section>
 <section id="utilisation-avec-python">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Utilisation avec Python</a><a class="headerlink" href="#utilisation-avec-python" title="Lien permanent vers cette rubrique">¶</a></h3>
@@ -265,12 +306,23 @@ le mode développeur). L’utilisation d’un container (docker) est également 
 <div><ol class="arabic">
 <li><p>Installation :</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">redis</span>
+</pre></div>
+</div>
+</div></blockquote>
 </li>
 </ol>
 <p># Exemple d’utilisation :</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">redis</span>
+<span class="linenos">2</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">StrictRedis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="linenos">3</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="linenos">4</span> <span class="kc">True</span>
+<span class="linenos">5</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="linenos">6</span> <span class="s1">&#39;bar&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
 </div></blockquote>
 <section id="weblinks">
 <h4>Weblinks<a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h4>

@@ -34,7 +34,7 @@ Syntax and quick start
 Diagrams must be surrounded by 2 tags:
 
 
-.. code-block::
+.. code::
    :number-lines:
    :force:
 
