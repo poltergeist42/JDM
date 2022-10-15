@@ -117,7 +117,7 @@ On a new install of Kali, we need to update, upgrade and fix tools
 .. _`git repository called “pimpmykali”`: https://github.com/Dewalt-arch/pimpmykali
 
 .. code-block:: shell
-   :linenos:
+   :number-lines:
    :force:
 
       sudo apt update && apt install git
@@ -236,7 +236,7 @@ intelligence (OSINT) gathering to help determine a company's external threat lan
 internet. The tool gathers emails, names, subdomains, IPs and URLs using
 
    .. code-block:: shell
-      :linenos:
+      :number-lines:
       :force:
 
       # theHaverester manual
@@ -279,7 +279,7 @@ data transfer, redirection, and debugging tool (Ncat), a utility for comparing s
 and a packet generation and response analysis tool (Nping).
 
    .. code-block:: shell
-      :linenos:
+      :number-lines:
       :force:
 
       # nmap
@@ -302,7 +302,7 @@ Performe a ping sweep with nmap
 -------------------------------
 
 .. code-block:: shell
-   :linenos:
+   :number-lines:
    :force:
 
    sudo nmap -sn 192.168.1.0/24
@@ -365,7 +365,7 @@ works using a downloaded version of the database, meaning that you already have 
 already on your Kali Linux!
 
    .. code-block:: shell
-      :linenos:
+      :number-lines:
       :force:
 
       # Update database

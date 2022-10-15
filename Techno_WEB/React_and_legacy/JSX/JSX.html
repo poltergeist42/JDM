@@ -29,7 +29,9 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Recherche" href="../../../search.html" /> 
+    <link rel="search" title="Recherche" href="../../../search.html" />
+    <link rel="next" title="React" href="../React/React.html" />
+    <link rel="prev" title="React &amp; Legacy" href="../React_and_legacy.html" /> 
 
 </head>
 
@@ -68,6 +70,10 @@
     
       <li><a href="../../../index.html">Docs</a></li>
         
+          <li><a href="../../Techno_WEB.html">Technos Web</a></li>
+        
+          <li><a href="../React_and_legacy.html">React &amp; Legacy</a></li>
+        
       <li>JSX (JavaScript eXtended)</li>
     
     
@@ -104,7 +110,7 @@
                             
                             
                                 <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../readme.html">infos générales Journal de manip</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../readme.html#description">Description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Composants.html">Composants Spécifiques</a></li>
@@ -164,10 +170,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Regex.html">Regex</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Reseau.html">Reseau</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Soudure.html">Soudure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Techno_WEB.html">Technos Web</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../../Techno_WEB.html">Technos Web</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../HTML_CSS/HTML_CSS.html">HTML_CSS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Javascript/Javascript.html">JavaScript</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../React_and_legacy.html">React &amp; Legacy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../React_and_legacy.html">React &amp; Legacy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Node_Express/Node_Express.html">Node &amp; Express</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../webCreation/webCreation.html">Création de Site Web</a></li>
 </ul>
@@ -225,32 +231,9 @@
 l’écriture. C’est ce que l’on appel du <em>« sucre syntaxique »</em>.</p>
 <p>On écris le html directement dans le code JavaScript, ce qui nous permet d’y inclure directement
 des composants React.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="c1">//Expression en JSX</span>
-<span class="linenos"> 2</span> <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
-<span class="linenos"> 3</span>     <span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;greeting&quot;</span><span class="o">&gt;</span>
-<span class="linenos"> 4</span>         <span class="nx">Je</span> <span class="nx">s</span><span class="s1">&#39;appel Groot !</span>
-<span class="linenos"> 5</span><span class="s1">     &lt;/h1&gt;</span>
-<span class="linenos"> 6</span><span class="s1"> );</span>
-<span class="linenos"> 7</span>
-<span class="linenos"> 8</span><span class="s1"> //Expression en REACT</span>
-<span class="linenos"> 9</span><span class="s1"> const element = React.createlement(</span>
-<span class="linenos">10</span><span class="s1">     &#39;</span><span class="nx">h1</span><span class="s1">&#39;,</span>
-<span class="linenos">11</span><span class="s1">     {className: &#39;</span><span class="nx">greeting</span><span class="s1">&#39;},</span>
-<span class="linenos">12</span><span class="s1">     &#39;</span><span class="nx">Je</span> <span class="nx">s</span><span class="s1">&#39;appelle Groot !&#39;</span>
-<span class="linenos">13</span> <span class="p">);</span>
-</pre></div>
-</div>
 <p>Ces deux expressions sont équivlente.</p>
 <p>Il est possible d’ajouter des commentaire dans une expression JSX. Les commentaire s’écrivent
 comme pour le JavaScript mais entourés d’accolades.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
-<span class="linenos">2</span>     <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span>
-<span class="linenos">3</span>         <span class="p">{</span><span class="cm">/* un super commentaire bien pertinent */</span><span class="p">}</span>
-<span class="linenos">4</span>         <span class="nx">Je</span> <span class="nx">s</span><span class="err">&#39;</span><span class="nx">appelle</span> <span class="nx">Groot</span> <span class="o">!</span>
-<span class="linenos">5</span>     <span class="o">&lt;</span><span class="err">/h1&gt;</span>
-<span class="linenos">6</span> <span class="p">);</span>
-</pre></div>
-</div>
 </section>
 <hr class="docutils" />
 <section id="interpreter-le-jsx-dans-un-navigateur">
@@ -259,33 +242,6 @@ comme pour le JavaScript mais entourés d’accolades.</p>
 navigateur, il faut le prévoir dans le HTML en ajoutant une la bibliothèque <strong>« Babel »</strong> au moyen de
 la balise <em>&lt;src= »… »&gt;</em>. Il faut également inclure l’attribut <em>type= »text/babel »</em> dans la balise
 script contenant le JSX.</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="linenos"> 2</span> <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<span class="linenos"> 3</span>     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="linenos"> 4</span>         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
-<span class="linenos"> 5</span>         <span class="cm">&lt;!-- CDN React - Development --&gt;</span>
-<span class="linenos"> 6</span>         <span class="p">&lt;</span><span class="nt">script</span> <span class="na">crossorigin</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/react@16/umd/react.development.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="linenos"> 7</span>         <span class="p">&lt;</span><span class="nt">script</span> <span class="na">crossorigin</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="linenos"> 8</span>
-<span class="linenos"> 9</span>         <span class="cm">&lt;!-- imort de Babel (Dev uniquement) --&gt;</span>
-<span class="hll"><span class="linenos">10</span>         <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/babel-standalone@6/babel.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span><span class="linenos">11</span>     <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="linenos">12</span>     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="linenos">13</span>         <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="linenos">14</span>     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="linenos">15</span>
-<span class="linenos">16</span>     <span class="cm">&lt;!-- Balise &#39;script&#39; avec l&#39;option &#39;text/babel --&gt;</span>
-<span class="hll"><span class="linenos">17</span>     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/babel&quot;</span><span class="p">&gt;</span>
-</span><span class="linenos">18</span>         <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
-<span class="linenos">19</span>             <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span>
-<span class="linenos">20</span>                 <span class="nx">Je</span> <span class="nx">s</span><span class="err">&#39;</span><span class="nx">appel</span> <span class="nx">Groot</span> <span class="o">!</span>
-<span class="linenos">21</span>             <span class="o">&lt;</span><span class="err">/h1&gt;</span>
-<span class="linenos">22</span>         <span class="p">);</span>
-<span class="linenos">23</span>         <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">));</span>
-<span class="linenos">24</span>     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="linenos">25</span> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</pre></div>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
 <p>L’inclusion de Babel pour interpréter le JSX ralentie le programme. En effet, cela ajoute une
@@ -309,65 +265,18 @@ balises <a class="reference internal" href="../../Javascript/Javascript.html#ter
 représente un composant, et exige que l’identifiant Welcome existe dans la portée courante.</p></li>
 <li><p>Toutes les balises auto-fermantes doivent être fermées avec « / » avant le « &gt; »</p>
 <blockquote>
-<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span> <span class="cm">&lt;!-- Balise auto-fermantes en HTML --&gt;</span>
-</span><span class="linenos">2</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
-<span class="linenos">3</span>
-<span class="hll"><span class="linenos">4</span> <span class="cm">&lt;!-- Balise auto-fermantes en JSX --&gt;</span>
-</span><span class="linenos">5</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="p">/&gt;</span>
-</pre></div>
-</div>
-</div></blockquote>
+<div></div></blockquote>
 </li>
 <li><p>Le JSX n’accepte de retourner qu’un seule élément parent à la fois</p>
 <blockquote>
-<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> // Code en erreur
-<span class="linenos"> 2</span> import React, { Component } from &#39;react&#39;
-<span class="linenos"> 3</span>
-<span class="linenos"> 4</span> class App extends Component {
-<span class="linenos"> 5</span>     render() {
-<span class="linenos"> 6</span>         return (
-<span class="linenos"> 7</span>             {/* Premier composant parent */}
-<span class="linenos"> 8</span>             <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="linenos"> 9</span>                 <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Je s&#39;appelle Groot !<span class="p">&lt;</span><span class="nt">h1</span><span class="p">/&gt;</span>
-<span class="linenos">10</span>             <span class="p">&lt;</span><span class="nt">div</span><span class="p">/&gt;</span>
-<span class="linenos">11</span>
-<span class="linenos">12</span>             {/* Second composant parent (Interdit !) */}
-<span class="linenos">13</span>             <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Je s&#39;appelle Pierre<span class="p">&lt;</span><span class="nt">h2</span><span class="p">/&gt;</span>
-<span class="linenos">14</span>         )
-<span class="linenos">15</span>     }
-<span class="linenos">16</span>
-<span class="linenos">17</span> export default App
-</pre></div>
-</div>
-</div></blockquote>
+<div></div></blockquote>
 </li>
 </ul>
 <blockquote>
 <div><p>Pour eviter ce problème, on import « Fragment » depuis React et on entoure le JSX d’une balise
 « &lt;Fragment&gt;&lt;/Fragment&gt; »</p>
 <blockquote>
-<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> // Code valide
-<span class="linenos"> 2</span> import React, { Component, Fragment } from &#39;react&#39;
-<span class="linenos"> 3</span>
-<span class="linenos"> 4</span> class App extends Component {
-<span class="linenos"> 5</span>     render() {
-<span class="linenos"> 6</span>         return (
-<span class="linenos"> 7</span>             <span class="p">&lt;</span><span class="nt">Fragment</span><span class="p">&gt;</span>
-<span class="linenos"> 8</span>                 {/* Premier composant parent */}
-<span class="linenos"> 9</span>                 <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="linenos">10</span>                     <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Je s&#39;appelle Groot !<span class="p">&lt;</span><span class="nt">h1</span><span class="p">/&gt;</span>
-<span class="linenos">11</span>                 <span class="p">&lt;</span><span class="nt">div</span><span class="p">/&gt;</span>
-<span class="linenos">12</span>
-<span class="linenos">13</span>                 {/* Second composant parent (Interdit !) */}
-<span class="linenos">14</span>                 <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Je s&#39;appelle Pierre<span class="p">&lt;</span><span class="nt">h2</span><span class="p">/&gt;</span>
-<span class="linenos">15</span>             <span class="p">&lt;/</span><span class="nt">Fragment</span><span class="p">&gt;</span>
-<span class="linenos">16</span>         )
-<span class="linenos">17</span>     }
-<span class="linenos">18</span>
-<span class="linenos">19</span> export default App
-</pre></div>
-</div>
-</div></blockquote>
+<div></div></blockquote>
 </div></blockquote>
 </div></blockquote>
 </section>

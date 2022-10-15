@@ -39,7 +39,7 @@ Install Linux
 -------------
 
 .. code-block:: shell
-   :linenos:
+   :number-lines:
    :force:
 
     ## Téléchargement des dépendances
@@ -72,7 +72,7 @@ Démarrer le serveur
     #. En mode manuelle :
 
         .. code-block:: JavaScript
-           :linenos:
+           :number-lines:
            :force:
 
             # Démarrer le service
@@ -87,7 +87,7 @@ Démarrer le serveur
     #. Démarrer le service automatiquement :
 
         .. code-block:: shell
-           :linenos:
+           :number-lines:
            :force:
 
             sudo update-rc.d redis_6379 defaults
@@ -96,7 +96,7 @@ Lancer le CLI
 -------------
 
 .. code-block:: shell
-   :linenos:
+   :number-lines:
    :force:
 
     redis-cli
@@ -111,7 +111,7 @@ Utilisation avec Python
     #. Installation :
 
         .. code-block:: python
-           :linenos:
+           :number-lines:
            :force:
 
             sudo pip install redis
@@ -119,7 +119,7 @@ Utilisation avec Python
     # Exemple d'utilisation :
 
         .. code-block:: python
-           :linenos:
+           :number-lines:
            :force:
 
             >>> import redis

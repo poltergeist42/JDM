@@ -51,7 +51,7 @@ Une fonction est dite "pure" si elle ne tente pas de modifier ses entrées et re
 même résultat avec les même entrées.
 
 .. code:: JavaScript
-   :linenos:
+   :number-lines:
    :force:
 
     // Une fonction pure (qui ne modifie pas ces propres entrées)

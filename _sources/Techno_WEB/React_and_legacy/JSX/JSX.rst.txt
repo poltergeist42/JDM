@@ -34,7 +34,7 @@ On écris le html directement dans le code JavaScript, ce qui nous permet d'y in
 des composants React.
 
 .. code-block:: JavaScript
-   :linenos:
+   :number-lines:
    :force:
 
     //Expression en JSX
@@ -57,7 +57,7 @@ Il est possible d'ajouter des commentaire dans une expression JSX. Les commentai
 comme pour le JavaScript mais entourés d'accolades.
 
 .. code-block:: JavaScript
-   :linenos:
+   :number-lines:
    :force:
 
     const element = (
@@ -79,7 +79,7 @@ la balise *<src="...">*. Il faut également inclure l'attribut *type="text/babel
 script contenant le JSX.
 
 .. code-block:: html
-   :linenos:
+   :number-lines:
    :emphasize-lines: 10, 17
    :force:
 
@@ -137,7 +137,7 @@ Details syntaxique
     * Toutes les balises auto-fermantes doivent être fermées avec "/" avant le ">"
 
         .. code-block:: html
-           :linenos:
+           :number-lines:
            :emphasize-lines: 1, 4
            :force:
 
@@ -150,7 +150,7 @@ Details syntaxique
     * Le JSX n'accepte de retourner qu'un seule élément parent à la fois
 
         .. code-block:: html
-           :linenos:
+           :number-lines:
            :force:
 
             // Code en erreur
@@ -175,7 +175,7 @@ Details syntaxique
      "<Fragment></Fragment>"
 
         .. code-block:: html
-           :linenos:
+           :number-lines:
            :force:
 
             // Code valide

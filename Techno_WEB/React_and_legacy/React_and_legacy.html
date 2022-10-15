@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="React" href="React/React.html" />
+    <link rel="next" title="JSX (JavaScript eXtended)" href="JSX/JSX.html" />
     <link rel="prev" title="JavaScript" href="../Javascript/Javascript.html" /> 
 
 </head>
@@ -213,6 +213,13 @@
 </nav>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="JSX/JSX.html">JSX (JavaScript eXtended)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="JSX/JSX.html#definission-de-jsx">Definission de JSX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="JSX/JSX.html#interpreter-le-jsx-dans-un-navigateur">Interpréter le JSX dans un navigateur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="JSX/JSX.html#details-syntaxique">Details syntaxique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="JSX/JSX.html#weblinks">Weblinks</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="React/React.html">React</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="React/Components/Components.html">Composant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="React/Props/Props.html">Props (Short for « Properties »)</a></li>
@@ -280,6 +287,31 @@ créer avec React.</p></li>
 <p>Attention, les deux bibliothèques sont fournie en version <strong>« development »</strong> et en version
 <strong>« production »</strong>.</p>
 <p>Le code minimale d’une page est donc :</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span> <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span>     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>         <span class="cm">&lt;!-- CDN React - Development --&gt;</span>
+<span class="linenos"> 7</span>         <span class="p">&lt;</span><span class="nt">script</span> <span class="na">crossorigin</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/react@16/umd/react.development.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span>         <span class="p">&lt;</span><span class="nt">script</span> <span class="na">crossorigin</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>         <span class="cm">&lt;!-- CDN React - Production --&gt;</span>
+<span class="linenos">11</span>         <span class="cm">&lt;!-- &lt;script crossorigin src=&quot;https://unpkg.com/react@16/umd/react.production.min.js&quot;&gt;&lt;/script&gt; --&gt;</span>
+<span class="linenos">12</span>         <span class="cm">&lt;!-- &lt;script crossorigin src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt; --&gt;</span>
+<span class="linenos">13</span>     <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">16</span>         <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos">17</span>     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="linenos">20</span>         <span class="c1">// code React ICI.</span>
+<span class="linenos">21</span>         <span class="c1">// ou inclusion d&#39;un module (Ne pas oublier type=&quot;module&quot; dans la balise &lt;script&gt;)</span>
+<span class="linenos">22</span>     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="linenos">23</span> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
 </section>
 <hr class="docutils" />
 <section id="weblinks">

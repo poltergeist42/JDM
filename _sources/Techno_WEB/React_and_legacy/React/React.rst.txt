@@ -17,7 +17,6 @@ React
 .. toctree::
    :maxdepth: 2
 
-   JSX/JSX
    Components/Components
    Props/Props
    States/States
@@ -41,7 +40,7 @@ dépendances nécéssaires.
 Ce paquet doit être installer globallement.
 
 .. code:: shell
-   :linenos:
+   :number-lines:
    :force:
 
     npm install -g create-react-app
@@ -80,7 +79,7 @@ Si le projet est récupérer d'un dépot distant comme Github par exemple il fau
 dépendances du projet.
 
 .. code:: shell
-   :linenos:
+   :number-lines:
    :force:
 
     cd [my-app]

@@ -12,6 +12,7 @@ React & Legacy
 .. toctree::
    :maxdepth: 2
 
+   JSX/JSX
    React/React
    Native/Native
 
@@ -67,7 +68,7 @@ Attention, les deux bibliothèques sont fournie en version **"development"** et 
 Le code minimale d'une page est donc :
 
 .. code:: html
-   :linenos:
+   :number-lines:
    :force:
 
     <!DOCTYPE html>

@@ -28,7 +28,7 @@ Lorsqu'un composant doit modifier son état, on utilise une classe (ou des Hooks
 fonction).
 
 .. code:: JavaScript
-   :linenos:
+   :number-lines:
    :force:
 
     const famille = {

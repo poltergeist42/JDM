@@ -31,7 +31,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Recherche" href="../../../search.html" />
     <link rel="next" title="Composant" href="Components/Components.html" />
-    <link rel="prev" title="React &amp; Legacy" href="../React_and_legacy.html" /> 
+    <link rel="prev" title="JSX (JavaScript eXtended)" href="../JSX/JSX.html" /> 
 
 </head>
 
@@ -257,6 +257,15 @@
 <p><strong>Create React App</strong> est un paquet qui permet de créer l’arborescence et d’installer toutes les
 dépendances nécéssaires.</p>
 <p>Ce paquet doit être installer globallement.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> npm install -g create-react-app
+<span class="linenos">2</span>
+<span class="linenos">3</span> <span class="c1"># Créer ensuite un nouveau projet</span>
+<span class="linenos">4</span> npx create-react-app <span class="o">[</span>my-app<span class="o">]</span>       <span class="c1"># Attention, les noms des projets doivent être écris en</span>
+<span class="linenos">5</span>                                     <span class="c1"># minuscule uniquement.</span>
+<span class="linenos">6</span> <span class="nb">cd</span> <span class="o">[</span>my-app<span class="o">]</span>
+<span class="linenos">7</span> npm start
+</pre></div>
+</div>
 <section id="versionning-et-recuperation-de-projet">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Versionning et récupération de projet</a><a class="headerlink" href="#versionning-et-recuperation-de-projet" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Lorsqu’un projet react est créer avec create-react-app, un « git » est également initialisé. React
@@ -278,6 +287,10 @@ aussi le dossier « node_modules ».</p>
 dans le fichiers « package.json ».</p>
 <p>Si le projet est récupérer d’un dépot distant comme Github par exemple il faut alors installer les
 dépendances du projet.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="nb">cd</span> <span class="o">[</span>my-app<span class="o">]</span>
+<span class="linenos">2</span> npm install     <span class="c1">#lecture du fichier &quot;package.json&quot; pour identifier les dépendances à installer</span>
+</pre></div>
+</div>
 </section>
 </section>
 <hr class="docutils" />
