@@ -35,7 +35,6 @@ des composants React.
 
 .. code:: JavaScript
    :number-lines:
-   :force:
 
     //Expression en JSX
     const element = (
@@ -58,7 +57,6 @@ comme pour le JavaScript mais entourés d'accolades.
 
 .. code:: JavaScript
    :number-lines:
-   :force:
 
     const element = (
         <h1>
@@ -80,8 +78,6 @@ script contenant le JSX.
 
 .. code:: html
    :number-lines:
-   :emphasize-lines: 10, 17
-   :force:
 
     <!DOCTYPE html>
     <html>
@@ -138,8 +134,6 @@ Details syntaxique
 
         .. code:: html
            :number-lines:
-           :emphasize-lines: 1, 4
-           :force:
 
             <!-- Balise auto-fermantes en HTML -->
             <input type="text">
@@ -151,7 +145,6 @@ Details syntaxique
 
         .. code:: html
            :number-lines:
-           :force:
 
             // Code en erreur
             import React, { Component } from 'react'
@@ -176,7 +169,6 @@ Details syntaxique
 
         .. code:: html
            :number-lines:
-           :force:
 
             // Code valide
             import React, { Component, Fragment } from 'react'

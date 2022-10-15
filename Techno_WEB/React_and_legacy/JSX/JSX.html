@@ -249,12 +249,12 @@ des composants React.</p>
 <p>Ces deux expressions sont équivlente.</p>
 <p>Il est possible d’ajouter des commentaire dans une expression JSX. Les commentaire s’écrivent
 comme pour le JavaScript mais entourés d’accolades.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
-<span class="linenos">2</span>     <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span>
-<span class="linenos">3</span>         <span class="p">{</span><span class="cm">/* un super commentaire bien pertinent */</span><span class="p">}</span>
-<span class="linenos">4</span>         <span class="nx">Je</span> <span class="nx">s</span><span class="err">&#39;</span><span class="nx">appelle</span> <span class="nx">Groot</span> <span class="o">!</span>
-<span class="linenos">5</span>     <span class="o">&lt;</span><span class="err">/h1&gt;</span>
-<span class="linenos">6</span> <span class="p">);</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> const element = (
+<span class="linenos">2</span>     &lt;h1&gt;
+<span class="linenos">3</span>         {/* un super commentaire bien pertinent */}
+<span class="linenos">4</span>         Je s&#39;appelle Groot !
+<span class="linenos">5</span>     &lt;/h1&gt;
+<span class="linenos">6</span> );
 </pre></div>
 </div>
 </section>
@@ -265,6 +265,33 @@ comme pour le JavaScript mais entourés d’accolades.</p>
 navigateur, il faut le prévoir dans le HTML en ajoutant une la bibliothèque <strong>« Babel »</strong> au moyen de
 la balise <em>&lt;src= »… »&gt;</em>. Il faut également inclure l’attribut <em>type= »text/babel »</em> dans la balise
 script contenant le JSX.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> &lt;!DOCTYPE html&gt;
+<span class="linenos"> 2</span> &lt;html&gt;
+<span class="linenos"> 3</span>     &lt;head&gt;
+<span class="linenos"> 4</span>         &lt;meta charset=&quot;utf-8&quot;&gt;
+<span class="linenos"> 5</span>         &lt;!-- CDN React - Development --&gt;
+<span class="linenos"> 6</span>         &lt;script crossorigin src=&quot;https://unpkg.com/react@16/umd/react.development.js&quot;&gt;&lt;/script&gt;
+<span class="linenos"> 7</span>         &lt;script crossorigin src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot;&gt;&lt;/script&gt;
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>         &lt;!-- imort de Babel (Dev uniquement) --&gt;
+<span class="linenos">10</span>         &lt;script src=&quot;https://unpkg.com/babel-standalone@6/babel.min.js&quot;&gt;&lt;/script&gt;
+<span class="linenos">11</span>     &lt;/head&gt;
+<span class="linenos">12</span>     &lt;body&gt;
+<span class="linenos">13</span>         &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+<span class="linenos">14</span>     &lt;/body&gt;
+<span class="linenos">15</span>
+<span class="linenos">16</span>     &lt;!-- Balise &#39;script&#39; avec l&#39;option &#39;text/babel --&gt;
+<span class="linenos">17</span>     &lt;script type=&quot;text/babel&quot;&gt;
+<span class="linenos">18</span>         const element = (
+<span class="linenos">19</span>             &lt;h1&gt;
+<span class="linenos">20</span>                 Je s&#39;appel Groot !
+<span class="linenos">21</span>             &lt;/h1&gt;
+<span class="linenos">22</span>         );
+<span class="linenos">23</span>         ReactDOM.render(element, document.getElementById(&quot;app&quot;));
+<span class="linenos">24</span>     &lt;/script&gt;
+<span class="linenos">25</span> &lt;/html&gt;
+</pre></div>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
 <p>L’inclusion de Babel pour interpréter le JSX ralentie le programme. En effet, cela ajoute une
@@ -288,7 +315,14 @@ balises <a class="reference internal" href="../../Javascript/Javascript.html#ter
 représente un composant, et exige que l’identifiant Welcome existe dans la portée courante.</p></li>
 <li><p>Toutes les balises auto-fermantes doivent être fermées avec « / » avant le « &gt; »</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="cm">&lt;!-- Balise auto-fermantes en HTML --&gt;</span>
+<span class="linenos">2</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span> <span class="cm">&lt;!-- Balise auto-fermantes en JSX --&gt;</span>
+<span class="linenos">5</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
 </li>
 <li><p>Le JSX n’accepte de retourner qu’un seule élément parent à la fois</p>
 <blockquote>
