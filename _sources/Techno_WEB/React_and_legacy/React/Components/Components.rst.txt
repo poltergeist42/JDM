@@ -37,7 +37,7 @@ obligatoirement retourner quelque chose
 On peut également utiliser une classe ES6 pour définir un composant.
 
     .. code:: JavaScript
-       :linenos:
+       :number-lines:
        :force:
 
         // class
@@ -91,7 +91,7 @@ Pour lier une application au DOM, il faut utiliser le package ReactDOM et la fon
 en paramètres, le composant racine de l'application et le noeud du DOM auquel il sera attaché.
 
     .. code:: JavaScript
-       :linenos:
+       :number-lines:
        :force:
 
         ReactDOM.render(
@@ -102,7 +102,7 @@ en paramètres, le composant racine de l'application et le noeud du DOM auquel i
 Les éléments peuvent soit représenter un éléments du DOM :
 
     .. code:: JavaScript
-       :linenos:
+       :number-lines:
        :force:
 
         const element = <div />;
@@ -110,7 +110,7 @@ Les éléments peuvent soit représenter un éléments du DOM :
 soit représenter un élément définis par l'utilisateur :
 
     .. code:: JavaScript
-       :linenos:
+       :number-lines:
        :force:
 
     const element = <Welcome name="Sara"/>;
@@ -121,7 +121,7 @@ les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelo
 **Le rendu** se fait en appellant **ReactDOM.render()**.
 
     .. code:: JavaScript
-       :linenos:
+       :number-lines:
        :force:
 
         function Welcome(props){
@@ -148,7 +148,7 @@ Parcourrir un tableau et l'afficher sous forme de liste
 =======================================================
 
     .. code:: JavaScript
-       :linenos:
+       :number-lines:
        :force:
 
         {/* JavaScript Object */}
@@ -218,7 +218,7 @@ C'est l'équivalent d'une fonction *main()*. Pour faciliter la maintenance et la
 doit isoler, chaque fois que c'est possible, les éléments en composants plus petits (et monotache).
 
     .. code:: JavaScript
-       :linenos:
+       :number-lines:
        :force:
 
         function Comment(props) {
@@ -247,7 +247,7 @@ Si on définit séparément les composant **Avatar** et **UserInfo**, on pourra 
 composant **Comment** :
 
     .. code:: JavaScript
-       :linenos:
+       :number-lines:
        :force:
 
         // Composant "Avatar"
@@ -308,7 +308,7 @@ Il est possible de convertir une fonction en classe en quelques étapes:
     #. Supprimez la déclaration désormais vide de la fonction.
 
     .. code:: JavaScript
-       :linenos:
+       :number-lines:
        :force:
 
         //Fonction Clock

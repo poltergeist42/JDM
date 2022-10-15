@@ -248,7 +248,26 @@ obligatoirement retourner quelque chose</p>
 </div></blockquote>
 <p>On peut également utiliser une classe ES6 pour définir un composant.</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="c1">// class</span>
+<span class="linenos"> 2</span> <span class="k">import</span> <span class="nx">React</span> <span class="kr">from</span> <span class="s1">&#39;react&#39;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span> <span class="kd">class</span> <span class="nx">Welcome</span> <span class="k">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+<span class="linenos"> 5</span>     <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos"> 6</span>         <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Bonjour</span><span class="p">,</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;;</span>
+<span class="linenos"> 7</span>     <span class="p">}</span>
+<span class="linenos"> 8</span> <span class="p">}</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span> <span class="c1">// Alternative : import de React.Component à l&#39;aide du destructuring</span>
+<span class="linenos">11</span> <span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;react&#39;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span> <span class="kd">class</span> <span class="nx">Welcome</span> <span class="k">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+<span class="linenos">14</span>     <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos">15</span>         <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Bonjour</span><span class="p">,</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;;</span>
+<span class="linenos">16</span>     <span class="p">}</span>
+<span class="linenos">17</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
 <p>Ces 2 composants (la fonction et la classe) sont équivalents.</p>
 <p>Une classe doit systématiquement avor une méthode <strong>« render(){return(&lt;code JSX/&gt;)} »</strong> c’est cette
 méthode qui modifie le DOM virtuel.</p>
@@ -272,10 +291,19 @@ première lettre du composant soit en majuscule.</p>
 <p>Pour lier une application au DOM, il faut utiliser le package ReactDOM et la fonction render avec
 en paramètres, le composant racine de l’application et le noeud du DOM auquel il sera attaché.</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+<span class="linenos">2</span>     <span class="o">&lt;</span><span class="nx">MonApplication</span> <span class="o">/&gt;</span><span class="p">,</span>
+<span class="linenos">3</span>     <span class="nx">docment</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">)</span>
+<span class="linenos">4</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
 <p>Les éléments peuvent soit représenter un éléments du DOM :</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">div</span> <span class="o">/&gt;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
 <p>soit représenter un élément définis par l’utilisateur :</p>
 <blockquote>
 <div><p>const element = &lt;Welcome name= »Sara »/&gt;;</p>
@@ -284,7 +312,18 @@ en paramètres, le composant racine de l’application et le noeud du DOM auquel
 les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelons cet objet <strong>« props »</strong>.</p>
 <p><strong>Le rendu</strong> se fait en appellant <strong>ReactDOM.render()</strong>.</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">function</span> <span class="nx">Welcome</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+<span class="linenos">2</span>     <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Bonjour</span><span class="p">,</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;;</span>
+<span class="linenos">3</span> <span class="p">}</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span> <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">Welcome</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;Sara&quot;</span><span class="o">/&gt;</span><span class="p">;</span>
+<span class="linenos">6</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+<span class="linenos">7</span>     <span class="nx">element</span><span class="p">,</span>
+<span class="linenos">8</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">)</span>
+<span class="linenos">9</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
 <p>Détail du déroulement de l’exemple précedent :</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -297,7 +336,31 @@ les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelo
 <section id="parcourrir-un-tableau-et-l-afficher-sous-forme-de-liste">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Parcourrir un tableau et l’afficher sous forme de liste</a><a class="headerlink" href="#parcourrir-un-tableau-et-l-afficher-sous-forme-de-liste" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="p">{</span><span class="cm">/* JavaScript Object */</span><span class="p">}</span>
+<span class="linenos"> 2</span> <span class="kd">var</span> <span class="nx">d</span><span class="o">=</span> <span class="p">{</span><span class="nx">elm1</span><span class="o">:</span> <span class="s2">&quot;Je s&#39;appelle Groot !&quot;</span><span class="p">,</span>
+<span class="linenos"> 3</span>         <span class="nx">elm2</span><span class="o">:</span> <span class="s2">&quot;Je s&#39;appelle Pierre !&quot;</span><span class="p">,</span>
+<span class="linenos"> 4</span>         <span class="nx">eml3</span><span class="o">:</span> <span class="s2">&quot;Je s&#39;appelle atarte&quot;</span><span class="p">}</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span> <span class="p">{</span><span class="cm">/* Creation of an array from keys of the &quot;d&quot; object */</span><span class="p">}</span>
+<span class="linenos"> 7</span> <span class="kd">var</span> <span class="nx">dKeys</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span>
+<span class="linenos"> 8</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;dKey : &quot;</span><span class="p">,</span> <span class="nx">dKeys</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span> <span class="p">{</span><span class="cm">/* Browsing the &quot;dkeys&quot; array with the map function. The map function use a callback function.</span>
+<span class="linenos">11</span><span class="cm"> Each item (dkey) is given as the unique key ID : (&quot;item&quot;, &quot;unique key&quot;)=&gt;{...} */</span><span class="p">}</span>
+<span class="linenos">12</span> <span class="kd">var</span> <span class="nx">ul</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;ul&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">dKeys</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span>
+<span class="linenos">13</span>                             <span class="p">(</span><span class="nx">dKey</span><span class="p">,</span> <span class="nx">dkey</span><span class="p">)=&gt;{</span>
+<span class="linenos">14</span>                                 <span class="k">return</span> <span class="p">(</span>
+<span class="linenos">15</span>                                     <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;li&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">d</span><span class="p">[</span><span class="nx">dKey</span><span class="p">])</span>
+<span class="linenos">16</span>                                     <span class="p">)</span>
+<span class="linenos">17</span>                                 <span class="p">}</span>
+<span class="linenos">18</span>                             <span class="p">)</span>
+<span class="linenos">19</span>                         <span class="p">)</span>
+<span class="linenos">20</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ul</span><span class="p">)</span>
+<span class="linenos">21</span> <span class="p">{</span><span class="cm">/* the &quot;ul&quot;  function is given to the render */</span><span class="p">}</span>
+<span class="linenos">22</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">ul</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div></blockquote>
 </section>
 </section>
 <hr class="docutils" />
@@ -334,11 +397,72 @@ C’est l’équivalent d’une fonction <em>main()</em>. Pour faciliter la main
 éléments, il est conseiller d’avoir un composant <strong>App</strong> le plus simple possible. Pour cela, on
 doit isoler, chaque fois que c’est possible, les éléments en composants plus petits (et monotache).</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="kd">function</span> <span class="nx">Comment</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos"> 2</span>     <span class="k">return</span> <span class="p">(</span>
+<span class="linenos"> 3</span>         <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;Comment&quot;</span><span class="o">&gt;</span>
+<span class="linenos"> 4</span>             <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;UserInfo&quot;</span><span class="o">&gt;</span>
+<span class="linenos"> 5</span>                 <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;Avatar&quot;</span>
+<span class="linenos"> 6</span>                     <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">author</span><span class="p">.</span><span class="nx">avatarUrl</span><span class="p">}</span>
+<span class="linenos"> 7</span>                     <span class="nx">alt</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">author</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span>
+<span class="linenos"> 8</span>                 <span class="o">/&gt;</span>
+<span class="linenos"> 9</span>                 <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;UserInfo-name&quot;</span><span class="o">&gt;</span>
+<span class="linenos">10</span>                     <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">author</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span>
+<span class="linenos">11</span>                 <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos">12</span>             <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos">13</span>             <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;Comment-text&quot;</span><span class="o">&gt;</span>
+<span class="linenos">14</span>                 <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span>
+<span class="linenos">15</span>             <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos">16</span>             <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;Comment-date&quot;</span><span class="o">&gt;</span>
+<span class="linenos">17</span>                 <span class="p">{</span><span class="nx">formatDate</span><span class="p">(</span><span class="nx">props</span><span class="p">.</span><span class="nx">date</span><span class="p">)}</span>
+<span class="linenos">18</span>             <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos">19</span>         <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos">20</span>     <span class="p">);</span>
+<span class="linenos">21</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
 <p>Si on définit séparément les composant <strong>Avatar</strong> et <strong>UserInfo</strong>, on pourra alors simplifier le
 composant <strong>Comment</strong> :</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="c1">// Composant &quot;Avatar&quot;</span>
+<span class="linenos"> 2</span> <span class="kd">function</span> <span class="nx">Avatar</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos"> 3</span>     <span class="k">return</span> <span class="p">(</span>
+<span class="linenos"> 4</span>         <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;Avatar&quot;</span>
+<span class="linenos"> 5</span>         <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">avatarUrl</span><span class="p">}</span>
+<span class="linenos"> 6</span>         <span class="nx">alt</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span>
+<span class="linenos"> 7</span>         <span class="o">/&gt;</span>
+<span class="linenos"> 8</span>     <span class="p">);</span>
+<span class="linenos"> 9</span> <span class="p">}</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span> <span class="c1">// Composant &quot;UserInfo&quot;</span>
+<span class="linenos">12</span> <span class="kd">function</span> <span class="nx">UserInfo</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">13</span>     <span class="k">return</span> <span class="p">(</span>
+<span class="linenos">14</span>         <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;UserInfo&quot;</span><span class="o">&gt;</span>
+<span class="linenos">15</span>             <span class="o">&lt;</span><span class="nx">Avatar</span> <span class="nx">user</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">user</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">16</span>             <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;UserInfo-name&quot;</span><span class="o">&gt;</span>
+<span class="linenos">17</span>                 <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span>
+<span class="linenos">18</span>             <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos">19</span>         <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos">20</span>     <span class="p">);</span>
+<span class="linenos">21</span> <span class="p">}</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span> <span class="c1">// composant &quot;Comment&quot;</span>
+<span class="linenos">24</span> <span class="kd">function</span> <span class="nx">Comment</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">25</span>     <span class="k">return</span> <span class="p">(</span>
+<span class="linenos">26</span>         <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;Comment&quot;</span><span class="o">&gt;</span>
+<span class="linenos">27</span>             <span class="o">&lt;</span><span class="nx">UserInfo</span> <span class="nx">user</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">author</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">28</span>             <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;Comment-text&quot;</span><span class="o">&gt;</span>
+<span class="linenos">29</span>                 <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">text</span><span class="p">}</span>
+<span class="linenos">30</span>             <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos">31</span>             <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;Comment-date&quot;</span><span class="o">&gt;</span>
+<span class="linenos">32</span>                 <span class="p">{</span><span class="nx">formatDate</span><span class="p">(</span><span class="nx">props</span><span class="p">.</span><span class="nx">date</span><span class="p">)}</span>
+<span class="linenos">33</span>             <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos">34</span>         <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos">35</span>     <span class="p">);</span>
+<span class="linenos">36</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="convertir-une-fonction-en-classe">
@@ -354,6 +478,29 @@ l’a importer en destructuring {component}).</p></li>
 q’un seul élément : “return” suivie d’un bloc JSX entouré de parenthèses.</p></li>
 <li><p>Supprimez la déclaration désormais vide de la fonction.</p></li>
 </ol>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="c1">//Fonction Clock</span>
+<span class="linenos"> 2</span> <span class="kd">function</span> <span class="nx">Clock</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos"> 3</span>     <span class="k">return</span> <span class="p">(</span>
+<span class="linenos"> 4</span>         <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+<span class="linenos"> 5</span>         <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Bonjour</span><span class="p">,</span> <span class="nx">monde</span> <span class="o">!&lt;</span><span class="err">/h1&gt;</span>
+<span class="linenos"> 6</span>         <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Il</span> <span class="nx">est</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">date</span><span class="p">.</span><span class="nx">toLocaleTimeString</span><span class="p">()}.</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
+<span class="linenos"> 7</span>         <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos"> 8</span>     <span class="p">);</span>
+<span class="linenos"> 9</span> <span class="p">}</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span> <span class="c1">//Classe Clock après transformation</span>
+<span class="linenos">12</span> <span class="kd">class</span> <span class="nx">Clock</span> <span class="k">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+<span class="linenos">13</span>     <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos">14</span>         <span class="k">return</span> <span class="p">(</span>
+<span class="linenos">15</span>         <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+<span class="linenos">16</span>             <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Bonjour</span><span class="p">,</span> <span class="nx">monde</span> <span class="o">!&lt;</span><span class="err">/h1&gt;</span>
+<span class="linenos">17</span>             <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Il</span> <span class="nx">est</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">date</span><span class="p">.</span><span class="nx">toLocaleTimeString</span><span class="p">()}.</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
+<span class="linenos">18</span>         <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos">19</span>         <span class="p">);</span>
+<span class="linenos">20</span>     <span class="p">}</span>
+<span class="linenos">21</span> <span class="p">}</span>
+</pre></div>
+</div>
 </div></blockquote>
 </section>
 <hr class="docutils" />
