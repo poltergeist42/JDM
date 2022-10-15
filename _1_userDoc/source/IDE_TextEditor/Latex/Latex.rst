@@ -2,6 +2,12 @@
 LaTex
 =====
 
+.. index::
+   single: IDE & Text Editor; LaTex
+
+.. contents::
+   :backlinks: top
+
 :liens_Web:
 
             * https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes

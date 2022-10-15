@@ -25,9 +25,9 @@ Mon journal de manip
    Freecad
    GIT
    HPVC
+   IDE_TextEditor/IDE_TextEditor
    Informatique
    kicad
-   Latex
    Linux/Linux
    MAC_OS
    Machine_learning
@@ -42,8 +42,6 @@ Mon journal de manip
    Techno_WEB/Techno_WEB
    Trading
    URLtheque
-   VIM
-   visualStudioCode
    XML_JSON
    arborescence/arborescence
 

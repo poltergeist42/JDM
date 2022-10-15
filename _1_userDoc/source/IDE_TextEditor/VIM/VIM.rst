@@ -2,6 +2,12 @@
 VIM (VI)
 ========
 
+.. index::
+   single: IDE & Text Editor; VIM (VI)
+
+.. contents::
+   :backlinks: top
+
 :liens Web:
             * http://www.vim.org/download.php
             

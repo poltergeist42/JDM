@@ -2,6 +2,9 @@
 Visual Studio Code
 ==================
 
+.. index::
+   single: IDE & Text Editor; VS Code
+
 .. contents::
    :backlinks: top
 
