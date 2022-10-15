@@ -17,6 +17,7 @@ React
 .. toctree::
    :maxdepth: 2
 
+   JSX/JSX
    Components/Components
    Props/Props
    States/States

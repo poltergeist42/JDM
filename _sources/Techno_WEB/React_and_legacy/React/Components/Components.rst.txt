@@ -113,7 +113,7 @@ soit représenter un élément définis par l'utilisateur :
        :number-lines:
        :force:
 
-    const element = <Welcome name="Sara"/>;
+        const element = <Welcome name="Sara"/>;
 
 Lorsque React rencontre un élément représentant un composant défini par l’utilisateur, il transmet
 les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelons cet objet **"props"**.
