@@ -207,23 +207,23 @@
 <nav class="contents" id="sommaire">
 <span id="index-0"></span><p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#composant" id="id13">Composant</a></p>
+<li><p><a class="reference internal" href="#composant" id="id5">Composant</a></p>
 <ul>
-<li><p><a class="reference internal" href="#les-types-de-component" id="id14">Les types de component</a></p>
+<li><p><a class="reference internal" href="#les-types-de-component" id="id6">Les types de component</a></p>
 <ul>
-<li><p><a class="reference internal" href="#choix-d-un-composant-fonction-classe" id="id15">Choix d’un composant ? Fonction : Classe</a></p></li>
-<li><p><a class="reference internal" href="#convention-de-nommage-des-composants" id="id16">Convention de nommage des Composants</a></p></li>
+<li><p><a class="reference internal" href="#choix-d-un-composant-fonction-classe" id="id7">Choix d’un composant ? Fonction : Classe</a></p></li>
+<li><p><a class="reference internal" href="#convention-de-nommage-des-composants" id="id8">Convention de nommage des Composants</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#rendu-dun-composant-comment-lier-react-au-dom" id="id17">Rendu d’un composant : Comment lier React au DOM ?</a></p>
+<li><p><a class="reference internal" href="#rendu-dun-composant-comment-lier-react-au-dom" id="id9">Rendu d’un composant : Comment lier React au DOM ?</a></p>
 <ul>
-<li><p><a class="reference internal" href="#parcourrir-un-tableau-et-l-afficher-sous-forme-de-liste" id="id18">Parcourrir un tableau et l’afficher sous forme de liste</a></p></li>
+<li><p><a class="reference internal" href="#parcourrir-un-tableau-et-l-afficher-sous-forme-de-liste" id="id10">Parcourrir un tableau et l’afficher sous forme de liste</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#amelioration-semantique-du-html-dans-le-rendu-des-composants" id="id19">Amélioration sémantique du HTML dans le rendu des composants</a></p></li>
-<li><p><a class="reference internal" href="#extraire-des-composants" id="id20">Extraire des composants</a></p></li>
-<li><p><a class="reference internal" href="#convertir-une-fonction-en-classe" id="id21">Convertir une fonction en classe</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id22">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#amelioration-semantique-du-html-dans-le-rendu-des-composants" id="id11">Amélioration sémantique du HTML dans le rendu des composants</a></p></li>
+<li><p><a class="reference internal" href="#extraire-des-composants" id="id12">Extraire des composants</a></p></li>
+<li><p><a class="reference internal" href="#convertir-une-fonction-en-classe" id="id13">Convertir une fonction en classe</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id14">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -236,52 +236,10 @@
 <strong>props</strong> qui signifie « propriétés ». Il peut ne pas y avoir de props. Ce composant doit
 obligatoirement retourner quelque chose</p>
 <blockquote>
-<div><dl class="field-list">
-<dt class="field-odd">linenos<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-<dt class="field-even">force<span class="colon">:</span></dt>
-<dd class="field-even"><p>// fonction composant
-import React from “react”</p>
-<dl class="simple">
-<dt>function Welcome(props){</dt><dd><p>return &lt;h1&gt;Bonjour, {props.name} &lt;/h1&gt;;
-}</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-</div></blockquote>
+<div></div></blockquote>
 <p>On peut également utiliser une classe ES6 pour définir un composant.</p>
 <blockquote>
-<div><dl class="field-list">
-<dt class="field-odd">linenos<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-<dt class="field-even">force<span class="colon">:</span></dt>
-<dd class="field-even"><p>// class
-import React from “react”</p>
-<dl>
-<dt>class Welcome extends React.Component{</dt><dd><dl class="simple">
-<dt>render() {</dt><dd><p>return &lt;h1&gt;Bonjour, {this.props.name}&lt;/h1&gt;;</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-<p>}</p>
-<p>// Alternative : import de React.Component à l’aide du destructuring
-import React, { Component } from “react”</p>
-<dl>
-<dt>class Welcome extends Component {</dt><dd><dl class="simple">
-<dt>render() {</dt><dd><p>return &lt;h1&gt;Bonjour, {this.props.name}&lt;/h1&gt;;</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-</div></blockquote>
+<div></div></blockquote>
 <p>Ces 2 composants (la fonction et la classe) sont équivalents.</p>
 <p>Une classe doit systématiquement avor une méthode <strong>« render(){return(&lt;code JSX/&gt;)} »</strong> c’est cette
 méthode qui modifie le DOM virtuel.</p>
@@ -305,62 +263,19 @@ première lettre du composant soit en majuscule.</p>
 <p>Pour lier une application au DOM, il faut utiliser le package ReactDOM et la fonction render avec
 en paramètres, le composant racine de l’application et le noeud du DOM auquel il sera attaché.</p>
 <blockquote>
-<div><dl class="field-list">
-<dt class="field-odd">linenos<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-<dt class="field-even">force<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
-<dt>ReactDOM.render(</dt><dd><p>&lt;MonApplication /&gt;,
-docment.getElementById(“root”)</p>
-</dd>
-</dl>
-<p>);</p>
-</dd>
-</dl>
-</div></blockquote>
+<div></div></blockquote>
 <p>Les éléments peuvent soit représenter un éléments du DOM :</p>
 <blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">linenos<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-<dt class="field-even">force<span class="colon">:</span></dt>
-<dd class="field-even"><p>const element = &lt;div /&gt;;</p>
-</dd>
-</dl>
-</div></blockquote>
+<div></div></blockquote>
 <p>soit représenter un élément définis par l’utilisateur :</p>
 <blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">linenos<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-<dt class="field-even">force<span class="colon">:</span></dt>
-<dd class="field-even"><p></p></dd>
-</dl>
-<p>const element = &lt;Welcome name= »Sara »/&gt;;</p>
+<div><p>const element = &lt;Welcome name= »Sara »/&gt;;</p>
 </div></blockquote>
 <p>Lorsque React rencontre un élément représentant un composant défini par l’utilisateur, il transmet
 les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelons cet objet <strong>« props »</strong>.</p>
 <p><strong>Le rendu</strong> se fait en appellant <strong>ReactDOM.render()</strong>.</p>
 <blockquote>
-<div><dl class="field-list">
-<dt class="field-odd">linenos<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-<dt class="field-even">force<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
-<dt>function Welcome(props){</dt><dd><p>return &lt;h1&gt;Bonjour, {props.name}&lt;/h1&gt;;</p>
-</dd>
-</dl>
-<p>}</p>
-<p>const element = &lt;Welcome name= »Sara »/&gt;;
-ReactDOM.render(</p>
-<blockquote>
-<div><p>element,
-document.getElementById(“root”)</p>
-</div></blockquote>
-<p>);</p>
-</dd>
-</dl>
-</div></blockquote>
+<div></div></blockquote>
 <p>Détail du déroulement de l’exemple précedent :</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -373,43 +288,7 @@ document.getElementById(“root”)</p>
 <section id="parcourrir-un-tableau-et-l-afficher-sous-forme-de-liste">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Parcourrir un tableau et l’afficher sous forme de liste</a><a class="headerlink" href="#parcourrir-un-tableau-et-l-afficher-sous-forme-de-liste" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
-<div><dl class="field-list">
-<dt class="field-odd">linenos<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-<dt class="field-even">force<span class="colon">:</span></dt>
-<dd class="field-even"><p>{/* JavaScript Object <a href="#id1"><span class="problematic" id="id2">*</span></a>/}
-var d= {elm1: « Je s’appelle Groot ! »,</p>
-<blockquote>
-<div><p>elm2: « Je s’appelle Pierre ! »,
-eml3: « Je s’appelle atarte »}</p>
-</div></blockquote>
-<p>{/* Creation of an array from keys of the « d » object <a href="#id3"><span class="problematic" id="id4">*</span></a>/}
-var dKeys = Object.keys(d)
-console.log(« dKey : « , dKeys)</p>
-<p>{/* Browsing the « dkeys » array with the map function. The map function use a callback function.
-Each item (dkey) is given as the unique key ID : (« item », « unique key »)=&gt;{…} <a href="#id5"><span class="problematic" id="id6">*</span></a>/}
-var ul = React.createElement(« ul », null, dKeys.map(</p>
-<blockquote>
-<div><blockquote>
-<div><dl>
-<dt>(dKey, dkey)=&gt;{</dt><dd><dl class="simple">
-<dt>return (</dt><dd><p>React.createElement(« li », null, d[dKey])
-)</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-<p>)</p>
-</div></blockquote>
-<p>)</p>
-</div></blockquote>
-<p>console.log(ul)
-{/* the « ul »  function is given to the render <a href="#id7"><span class="problematic" id="id8">*</span></a>/}
-ReactDOM.render(ul, document.getElementById(« app »))</p>
-</dd>
-</dl>
-</div></blockquote>
+<div></div></blockquote>
 </section>
 </section>
 <hr class="docutils" />
@@ -418,8 +297,8 @@ ReactDOM.render(ul, document.getElementById(« app »))</p>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://queen.raae.codes/emails/2022-10-10-semantic-react/">A little semantic HTML trick for React components</a> <a class="footnote-reference brackets" href="#id9" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
-<li><p><a class="reference external" href="https://fr.w3docs.com/apprendre-html/les-elements-semantiques-html5.html">Les éléments sémantiques HTML5</a> <a class="footnote-reference brackets" href="#id11" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
+<li><p><a class="reference external" href="https://queen.raae.codes/emails/2022-10-10-semantic-react/">A little semantic HTML trick for React components</a> <a class="footnote-reference brackets" href="#id1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+<li><p><a class="reference external" href="https://fr.w3docs.com/apprendre-html/les-elements-semantiques-html5.html">Les éléments sémantiques HTML5</a> <a class="footnote-reference brackets" href="#id3" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -446,116 +325,11 @@ C’est l’équivalent d’une fonction <em>main()</em>. Pour faciliter la main
 éléments, il est conseiller d’avoir un composant <strong>App</strong> le plus simple possible. Pour cela, on
 doit isoler, chaque fois que c’est possible, les éléments en composants plus petits (et monotache).</p>
 <blockquote>
-<div><dl class="field-list">
-<dt class="field-odd">linenos<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-<dt class="field-even">force<span class="colon">:</span></dt>
-<dd class="field-even"><dl>
-<dt>function Comment(props) {</dt><dd><dl>
-<dt>return (</dt><dd><dl>
-<dt>&lt;div className= »Comment »&gt;</dt><dd><dl>
-<dt>&lt;div className= »UserInfo »&gt;</dt><dd><dl class="simple">
-<dt>&lt;img className= »Avatar »</dt><dd><p>src={props.author.avatarUrl}
-alt={props.author.name}</p>
-</dd>
-</dl>
-<p>/&gt;
-&lt;div className= »UserInfo-name »&gt;</p>
-<blockquote>
-<div><p>{props.author.name}</p>
-</div></blockquote>
-<p>&lt;/div&gt;</p>
-</dd>
-</dl>
-<p>&lt;/div&gt;
-&lt;div className= »Comment-text »&gt;</p>
-<blockquote>
-<div><p>{props.name}</p>
-</div></blockquote>
-<p>&lt;/div&gt;
-&lt;div className= »Comment-date »&gt;</p>
-<blockquote>
-<div><p>{formatDate(props.date)}</p>
-</div></blockquote>
-<p>&lt;/div&gt;</p>
-</dd>
-</dl>
-<p>&lt;/div&gt;</p>
-</dd>
-</dl>
-<p>);</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-</div></blockquote>
+<div></div></blockquote>
 <p>Si on définit séparément les composant <strong>Avatar</strong> et <strong>UserInfo</strong>, on pourra alors simplifier le
 composant <strong>Comment</strong> :</p>
 <blockquote>
-<div><dl class="field-list">
-<dt class="field-odd">linenos<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-<dt class="field-even">force<span class="colon">:</span></dt>
-<dd class="field-even"><p>// Composant « Avatar »
-function Avatar(props) {</p>
-<blockquote>
-<div><dl class="simple">
-<dt>return (</dt><dd><p>&lt;img className= »Avatar »
-src={props.user.avatarUrl}
-alt={props.user.name}
-/&gt;</p>
-</dd>
-</dl>
-<p>);</p>
-</div></blockquote>
-<p>}</p>
-<p>// Composant « UserInfo »
-function UserInfo(props) {</p>
-<blockquote>
-<div><dl>
-<dt>return (</dt><dd><dl>
-<dt>&lt;div className= »UserInfo »&gt;</dt><dd><p>&lt;Avatar user={props.user} /&gt;
-&lt;div className= »UserInfo-name »&gt;</p>
-<blockquote>
-<div><p>{props.user.name}</p>
-</div></blockquote>
-<p>&lt;/div&gt;</p>
-</dd>
-</dl>
-<p>&lt;/div&gt;</p>
-</dd>
-</dl>
-<p>);</p>
-</div></blockquote>
-<p>}</p>
-<p>// composant « Comment »
-function Comment(props) {</p>
-<blockquote>
-<div><dl>
-<dt>return (</dt><dd><dl>
-<dt>&lt;div className= »Comment »&gt;</dt><dd><p>&lt;UserInfo user={props.author} /&gt;
-&lt;div className= »Comment-text »&gt;</p>
-<blockquote>
-<div><p>{props.text}</p>
-</div></blockquote>
-<p>&lt;/div&gt;
-&lt;div className= »Comment-date »&gt;</p>
-<blockquote>
-<div><p>{formatDate(props.date)}</p>
-</div></blockquote>
-<p>&lt;/div&gt;</p>
-</dd>
-</dl>
-<p>&lt;/div&gt;</p>
-</dd>
-</dl>
-<p>);</p>
-</div></blockquote>
-<p>}</p>
-</dd>
-</dl>
-</div></blockquote>
+<div></div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="convertir-une-fonction-en-classe">
@@ -571,53 +345,17 @@ l’a importer en destructuring {component}).</p></li>
 q’un seul élément : “return” suivie d’un bloc JSX entouré de parenthèses.</p></li>
 <li><p>Supprimez la déclaration désormais vide de la fonction.</p></li>
 </ol>
-<dl class="field-list">
-<dt class="field-odd">linenos<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-<dt class="field-even">force<span class="colon">:</span></dt>
-<dd class="field-even"><p>//Fonction Clock
-function Clock(props) {</p>
-<blockquote>
-<div><dl class="simple">
-<dt>return (</dt><dd><p>&lt;div&gt;
-&lt;h1&gt;Bonjour, monde !&lt;/h1&gt;
-&lt;h2&gt;Il est {props.date.toLocaleTimeString()}.&lt;/h2&gt;
-&lt;/div&gt;</p>
-</dd>
-</dl>
-<p>);</p>
-</div></blockquote>
-<p>}</p>
-<p>//Classe Clock après transformation
-class Clock extends React.Component {</p>
-<blockquote>
-<div><dl>
-<dt>render() {</dt><dd><p>return (
-&lt;div&gt;</p>
-<blockquote>
-<div><p>&lt;h1&gt;Bonjour, monde !&lt;/h1&gt;
-&lt;h2&gt;Il est {this.props.date.toLocaleTimeString()}.&lt;/h2&gt;</p>
-</div></blockquote>
-<p>&lt;/div&gt;
-);</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>}</p>
-</dd>
-</dl>
 </div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
-<aside class="footnote brackets" id="id9" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">1</a><span class="fn-bracket">]</span></span>
+<aside class="footnote brackets" id="id1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://queen.raae.codes/emails/2022-10-10-semantic-react/">https://queen.raae.codes/emails/2022-10-10-semantic-react/</a></p>
 </aside>
-<aside class="footnote brackets" id="id11" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">2</a><span class="fn-bracket">]</span></span>
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">2</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://fr.w3docs.com/apprendre-html/les-elements-semantiques-html5.html">https://fr.w3docs.com/apprendre-html/les-elements-semantiques-html5.html</a></p>
 </aside>
 </section>

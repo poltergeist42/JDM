@@ -23,8 +23,8 @@ Une **fonction composant** est une fonction Javascript qui n'accepte qu'un seul 
 obligatoirement retourner quelque chose 
 
     .. code:: JavaScript
-    :linenos:
-    :force:
+       :linenos:
+       :force:
 
         // fonction composant
         import React from 'react'
@@ -37,8 +37,8 @@ obligatoirement retourner quelque chose
 On peut également utiliser une classe ES6 pour définir un composant.
 
     .. code:: JavaScript
-    :linenos:
-    :force:
+       :linenos:
+       :force:
 
         // class
         import React from 'react'
@@ -91,8 +91,8 @@ Pour lier une application au DOM, il faut utiliser le package ReactDOM et la fon
 en paramètres, le composant racine de l'application et le noeud du DOM auquel il sera attaché.
 
     .. code:: JavaScript
-    :linenos:
-    :force:
+       :linenos:
+       :force:
 
         ReactDOM.render(
             <MonApplication />,
@@ -102,16 +102,16 @@ en paramètres, le composant racine de l'application et le noeud du DOM auquel i
 Les éléments peuvent soit représenter un éléments du DOM :
 
     .. code:: JavaScript
-    :linenos:
-    :force:
+       :linenos:
+       :force:
 
         const element = <div />;
 
 soit représenter un élément définis par l'utilisateur :
 
     .. code:: JavaScript
-    :linenos:
-    :force:
+       :linenos:
+       :force:
 
     const element = <Welcome name="Sara"/>;
 
@@ -121,8 +121,8 @@ les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelo
 **Le rendu** se fait en appellant **ReactDOM.render()**.
 
     .. code:: JavaScript
-    :linenos:
-    :force:
+       :linenos:
+       :force:
 
         function Welcome(props){
             return <h1>Bonjour, {props.name}</h1>;
@@ -148,8 +148,8 @@ Parcourrir un tableau et l'afficher sous forme de liste
 =======================================================
 
     .. code:: JavaScript
-    :linenos:
-    :force:
+       :linenos:
+       :force:
 
         {/* JavaScript Object */}
         var d= {elm1: "Je s'appelle Groot !",
@@ -218,8 +218,8 @@ C'est l'équivalent d'une fonction *main()*. Pour faciliter la maintenance et la
 doit isoler, chaque fois que c'est possible, les éléments en composants plus petits (et monotache).
 
     .. code:: JavaScript
-    :linenos:
-    :force:
+       :linenos:
+       :force:
 
         function Comment(props) {
             return (
@@ -247,8 +247,8 @@ Si on définit séparément les composant **Avatar** et **UserInfo**, on pourra 
 composant **Comment** :
 
     .. code:: JavaScript
-    :linenos:
-    :force:
+       :linenos:
+       :force:
 
         // Composant "Avatar"
         function Avatar(props) {
@@ -308,8 +308,8 @@ Il est possible de convertir une fonction en classe en quelques étapes:
     #. Supprimez la déclaration désormais vide de la fonction.
 
     .. code:: JavaScript
-    :linenos:
-    :force:
+       :linenos:
+       :force:
 
         //Fonction Clock
         function Clock(props) {
