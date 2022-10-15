@@ -236,7 +236,16 @@
 <strong>props</strong> qui signifie « propriétés ». Il peut ne pas y avoir de props. Ce composant doit
 obligatoirement retourner quelque chose</p>
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="c1">// fonction composant</span>
+<span class="linenos">2</span> <span class="k">import</span> <span class="nx">React</span> <span class="kr">from</span> <span class="s1">&#39;react&#39;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span> <span class="kd">function</span> <span class="nx">Welcome</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+<span class="linenos">5</span>     <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Bonjour</span><span class="p">,</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span> <span class="o">&lt;</span><span class="err">/h1&gt;;</span>
+<span class="linenos">6</span>     <span class="p">}</span>
+<span class="linenos">7</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
 <p>On peut également utiliser une classe ES6 pour définir un composant.</p>
 <blockquote>
 <div></div></blockquote>

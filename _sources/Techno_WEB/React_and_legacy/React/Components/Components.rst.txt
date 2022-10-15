@@ -23,7 +23,7 @@ Une **fonction composant** est une fonction Javascript qui n'accepte qu'un seul 
 obligatoirement retourner quelque chose 
 
     .. code:: JavaScript
-       :linenos:
+       :number-lines:
        :force:
 
         // fonction composant
