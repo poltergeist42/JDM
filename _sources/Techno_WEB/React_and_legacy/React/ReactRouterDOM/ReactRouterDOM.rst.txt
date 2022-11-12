@@ -23,8 +23,10 @@ React-Router-DOM
 .. _`faire un redirect avec le composant react-router-dom après une requête POST`: https://www.journaldunet.fr/web-tech/developpement/1441289-comment-faire-un-redirect-avec-le-composant-react-router-dom-apres-une-requete-post/
 .. _`Quick Start`: https://reacttraining.com/react-router/web/guides/quick-start
 
-React-routeur-dom est un paquet qui permet de rediriger vers une nouvelle url et donc d'afficher un
-nouveau composant en gardant l'esrpie "monopage" de React.
+React-routeur-dom est un paquet qui permet de rediriger vers une nouvelle url et donc de naviguer entre les différentes pages
+en gardant l'esrpie "monopage" de React.
+
+Cette librairie est utilisée depuis le composoant racine, génrallement le composant "App.js".
 
 .. warning::
     A chaque changement de composant ce dernier est recharger dans le DOM. Il est donc important de

@@ -10,6 +10,12 @@ Composant
     :depth: 3
     :backlinks: top
 
+.. toctree::
+   :maxdepth: 2
+
+   Fragment/Fragment
+   Navbar/Navbar
+
 ####
 
 ----------------------
@@ -64,7 +70,7 @@ Ces 2 composants (la fonction et la classe) sont équivalents.
 Une classe doit systématiquement avor une méthode **"render(){return(<code JSX/>)}"** c'est cette
 méthode qui modifie le DOM virtuel.
 
-Une fonction doit elle, systématiquement avoir un "return".
+Une fonction doit, systématiquement avoir un "return".
 
 Choix d'un composant ? Fonction : Classe
 ========================================
@@ -205,6 +211,57 @@ nous privant ainsi d'une partie de la souplesse ammenée avec le HTML5.
 
 Il est interessant de prendre un peu de temps pour permettre aux composant de pouvoir définir
 dynamiquement c'est balises interne.
+
+    .. code:: Javascript
+        :number-lines:
+        :force:
+
+        // File: card.js
+        import React from "react";
+
+        export function Card(props) {
+            // 1️⃣ Destructure element and children from props
+            const { element, children } = props;
+
+            // 2️⃣ Capitalise element to make it valid jsx
+            let Element = element;
+
+            // 3️⃣ Make "div" the default choice
+            if (!element) {
+                Element = "div";
+            }
+
+        return <Element>{children}</Element>;
+        }
+
+L'utilisation se fera alors de la façon suivante :
+
+    .. code:: JavaScript
+        :number-lines:
+        :force:
+
+        // File: exmaple.js
+        import React from "react";
+        import { Card } from "./card";
+
+        export function Example() {
+        return (
+            <article>
+            <p>An introduction</p>
+
+            <Card element="aside">
+                Something related to the article but a little outside of the normal
+                flow.
+            </Card>
+
+            <p>More content...</p>
+
+            <Card element="p">A paragraph with different styling...</Card>
+
+            <p>More content...</p>
+            </article>
+        );
+        }
 
 ####
 
