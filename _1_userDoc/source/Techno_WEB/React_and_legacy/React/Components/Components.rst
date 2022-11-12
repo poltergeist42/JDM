@@ -10,6 +10,12 @@ Composant
     :depth: 3
     :backlinks: top
 
+.. toctree::
+   :maxdepth: 2
+
+   Fragment/Fragment
+   Navbar/Navbar
+
 ####
 
 ----------------------
@@ -22,41 +28,41 @@ Une **fonction composant** est une fonction Javascript qui n'accepte qu'un seul 
 **props** qui signifie "propriétés". Il peut ne pas y avoir de props. Ce composant doit
 obligatoirement retourner quelque chose 
 
-.. code:: JavaScript
-   :linenos:
-   :force:
+    .. code:: JavaScript
+       :number-lines:
+       :force:
 
-    // fonction composant
-    import React from 'react'
+        // fonction composant
+        import React from 'react'
 
-    function Welcome(props){
-        return <h1>Bonjour, {props.name} </h1>;
+        function Welcome(props){
+            return <h1>Bonjour, {props.name} </h1>;
+            }
         }
-    }
 
 On peut également utiliser une classe ES6 pour définir un composant.
 
-.. code:: JavaScript
-   :linenos:
-   :force:
+    .. code:: JavaScript
+       :number-lines:
+       :force:
 
-    // class
-    import React from 'react'
+        // class
+        import React from 'react'
 
-    class Welcome extends React.Component{
-        render() {
-            return <h1>Bonjour, {this.props.name}</h1>;
+        class Welcome extends React.Component{
+            render() {
+                return <h1>Bonjour, {this.props.name}</h1>;
+            }
         }
-    }
 
-    // Alternative : import de React.Component à l'aide du destructuring
-    import React, { Component } from 'react'
+        // Alternative : import de React.Component à l'aide du destructuring
+        import React, { Component } from 'react'
 
-    class Welcome extends Component {
-        render() {
-            return <h1>Bonjour, {this.props.name}</h1>;
+        class Welcome extends Component {
+            render() {
+                return <h1>Bonjour, {this.props.name}</h1>;
+            }
         }
-    }
 
 
 Ces 2 composants (la fonction et la classe) sont équivalents.
@@ -64,7 +70,7 @@ Ces 2 composants (la fonction et la classe) sont équivalents.
 Une classe doit systématiquement avor une méthode **"render(){return(<code JSX/>)}"** c'est cette
 méthode qui modifie le DOM virtuel.
 
-Une fonction doit elle, systématiquement avoir un "return".
+Une fonction doit, systématiquement avoir un "return".
 
 Choix d'un composant ? Fonction : Classe
 ========================================
@@ -90,49 +96,49 @@ Rendu d’un composant : Comment lier React au DOM ?
 Pour lier une application au DOM, il faut utiliser le package ReactDOM et la fonction render avec
 en paramètres, le composant racine de l'application et le noeud du DOM auquel il sera attaché.
 
-.. code:: JavaScript
-   :linenos:
-   :force:
+    .. code:: JavaScript
+       :number-lines:
+       :force:
 
-    ReactDOM.render(
-        <MonApplication />,
-        docment.getElementById('root')
-    );
+        ReactDOM.render(
+            <MonApplication />,
+            docment.getElementById('root')
+        );
 
 Les éléments peuvent soit représenter un éléments du DOM :
 
-.. code:: JavaScript
-   :linenos:
-   :force:
+    .. code:: JavaScript
+       :number-lines:
+       :force:
 
-    const element = <div />;
+        const element = <div />;
 
 soit représenter un élément définis par l'utilisateur :
 
-.. code:: JavaScript
-   :linenos:
-   :force:
+    .. code:: JavaScript
+       :number-lines:
+       :force:
 
-    const element = <Welcome name="Sara"/>;
+        const element = <Welcome name="Sara"/>;
 
 Lorsque React rencontre un élément représentant un composant défini par l’utilisateur, il transmet
 les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelons cet objet **"props"**.
 
 **Le rendu** se fait en appellant **ReactDOM.render()**.
 
-.. code-block:: JavaScript
-   :linenos:
-   :force:
+    .. code:: JavaScript
+       :number-lines:
+       :force:
 
-    function Welcome(props){
-        return <h1>Bonjour, {props.name}</h1>;
-    }
+        function Welcome(props){
+            return <h1>Bonjour, {props.name}</h1>;
+        }
 
-    const element = <Welcome name="Sara"/>;
-    ReactDOM.render(
-        element,
-        document.getElementById('root')
-    );
+        const element = <Welcome name="Sara"/>;
+        ReactDOM.render(
+            element,
+            document.getElementById('root')
+        );
 
 Détail du déroulement de l'exemple précedent :
 
@@ -147,32 +153,32 @@ Détail du déroulement de l'exemple précedent :
 Parcourrir un tableau et l'afficher sous forme de liste
 =======================================================
 
-.. code-block:: JavaScript
-   :linenos:
-   :force:
+    .. code:: JavaScript
+       :number-lines:
+       :force:
 
-    {/* JavaScript Object */}
-    var d= {elm1: "Je s'appelle Groot !",
-            elm2: "Je s'appelle Pierre !",
-            eml3: "Je s'appelle atarte"}
+        {/* JavaScript Object */}
+        var d= {elm1: "Je s'appelle Groot !",
+                elm2: "Je s'appelle Pierre !",
+                eml3: "Je s'appelle atarte"}
 
-    {/* Creation of an array from keys of the "d" object */}
-    var dKeys = Object.keys(d)
-    console.log("dKey : ", dKeys)
+        {/* Creation of an array from keys of the "d" object */}
+        var dKeys = Object.keys(d)
+        console.log("dKey : ", dKeys)
 
-    {/* Browsing the "dkeys" array with the map function. The map function use a callback function. 
-    Each item (dkey) is given as the unique key ID : ("item", "unique key")=>{...} */}
-    var ul = React.createElement("ul", null, dKeys.map(
-                                (dKey, dkey)=>{
-                                    return (
-                                        React.createElement("li", null, d[dKey])
-                                        )
-                                    }
+        {/* Browsing the "dkeys" array with the map function. The map function use a callback function. 
+        Each item (dkey) is given as the unique key ID : ("item", "unique key")=>{...} */}
+        var ul = React.createElement("ul", null, dKeys.map(
+                                    (dKey, dkey)=>{
+                                        return (
+                                            React.createElement("li", null, d[dKey])
+                                            )
+                                        }
+                                    )
                                 )
-                            )
-    console.log(ul)
-    {/* the "ul"  function is given to the render */}
-    ReactDOM.render(ul, document.getElementById("app"))
+        console.log(ul)
+        {/* the "ul"  function is given to the render */}
+        ReactDOM.render(ul, document.getElementById("app"))
 
 ####
 
@@ -206,6 +212,57 @@ nous privant ainsi d'une partie de la souplesse ammenée avec le HTML5.
 Il est interessant de prendre un peu de temps pour permettre aux composant de pouvoir définir
 dynamiquement c'est balises interne.
 
+    .. code:: Javascript
+        :number-lines:
+        :force:
+
+        // File: card.js
+        import React from "react";
+
+        export function Card(props) {
+            // 1️⃣ Destructure element and children from props
+            const { element, children } = props;
+
+            // 2️⃣ Capitalise element to make it valid jsx
+            let Element = element;
+
+            // 3️⃣ Make "div" the default choice
+            if (!element) {
+                Element = "div";
+            }
+
+        return <Element>{children}</Element>;
+        }
+
+L'utilisation se fera alors de la façon suivante :
+
+    .. code:: JavaScript
+        :number-lines:
+        :force:
+
+        // File: exmaple.js
+        import React from "react";
+        import { Card } from "./card";
+
+        export function Example() {
+        return (
+            <article>
+            <p>An introduction</p>
+
+            <Card element="aside">
+                Something related to the article but a little outside of the normal
+                flow.
+            </Card>
+
+            <p>More content...</p>
+
+            <Card element="p">A paragraph with different styling...</Card>
+
+            <p>More content...</p>
+            </article>
+        );
+        }
+
 ####
 
 -----------------------
@@ -217,75 +274,75 @@ C'est l'équivalent d'une fonction *main()*. Pour faciliter la maintenance et la
 éléments, il est conseiller d'avoir un composant **App** le plus simple possible. Pour cela, on
 doit isoler, chaque fois que c'est possible, les éléments en composants plus petits (et monotache).
 
-.. code-block:: JavaScript
-   :linenos:
-   :force:
+    .. code:: JavaScript
+       :number-lines:
+       :force:
 
-    function Comment(props) {
-        return (
-            <div className="Comment">
-                <div className="UserInfo">
-                    <img className="Avatar"
-                        src={props.author.avatarUrl}
-                        alt={props.author.name}
-                    />
-                    <div className="UserInfo-name">
-                        {props.author.name}
+        function Comment(props) {
+            return (
+                <div className="Comment">
+                    <div className="UserInfo">
+                        <img className="Avatar"
+                            src={props.author.avatarUrl}
+                            alt={props.author.name}
+                        />
+                        <div className="UserInfo-name">
+                            {props.author.name}
+                        </div>
+                    </div>
+                    <div className="Comment-text">
+                        {props.name}
+                    </div>
+                    <div className="Comment-date">
+                        {formatDate(props.date)}
                     </div>
                 </div>
-                <div className="Comment-text">
-                    {props.name}
-                </div>
-                <div className="Comment-date">
-                    {formatDate(props.date)}
-                </div>
-            </div>
-        );
-    }
+            );
+        }
 
 Si on définit séparément les composant **Avatar** et **UserInfo**, on pourra alors simplifier le
 composant **Comment** :
 
-.. code-block:: JavaScript
-   :linenos:
-   :force:
+    .. code:: JavaScript
+       :number-lines:
+       :force:
 
-    // Composant "Avatar"
-    function Avatar(props) {
-        return (
-            <img className="Avatar"
-            src={props.user.avatarUrl}
-            alt={props.user.name}
-            />
-        );
-    }
+        // Composant "Avatar"
+        function Avatar(props) {
+            return (
+                <img className="Avatar"
+                src={props.user.avatarUrl}
+                alt={props.user.name}
+                />
+            );
+        }
 
-    // Composant "UserInfo"
-    function UserInfo(props) {
-        return (
-            <div className="UserInfo">
-                <Avatar user={props.user} />
-                <div className="UserInfo-name">
-                    {props.user.name}
+        // Composant "UserInfo"
+        function UserInfo(props) {
+            return (
+                <div className="UserInfo">
+                    <Avatar user={props.user} />
+                    <div className="UserInfo-name">
+                        {props.user.name}
+                    </div>
                 </div>
-            </div>
-        );
-    }
+            );
+        }
 
-    // composant "Comment"
-    function Comment(props) {
-        return (
-            <div className="Comment">
-                <UserInfo user={props.author} />
-                <div className="Comment-text">
-                    {props.text}
+        // composant "Comment"
+        function Comment(props) {
+            return (
+                <div className="Comment">
+                    <UserInfo user={props.author} />
+                    <div className="Comment-text">
+                        {props.text}
+                    </div>
+                    <div className="Comment-date">
+                        {formatDate(props.date)}
+                    </div>
                 </div>
-                <div className="Comment-date">
-                    {formatDate(props.date)}
-                </div>
-            </div>
-        );
-    }
+            );
+        }
 
 ####
 
@@ -307,31 +364,31 @@ Il est possible de convertir une fonction en classe en quelques étapes:
 
     #. Supprimez la déclaration désormais vide de la fonction.
 
-.. code-block:: JavaScript
-   :linenos:
-   :force:
+    .. code:: JavaScript
+       :number-lines:
+       :force:
 
-    //Fonction Clock
-    function Clock(props) {
-        return (
-            <div>
-            <h1>Bonjour, monde !</h1>
-            <h2>Il est {props.date.toLocaleTimeString()}.</h2>
-            </div>
-        );
-    }
-
-    //Classe Clock après transformation
-    class Clock extends React.Component {
-        render() {
+        //Fonction Clock
+        function Clock(props) {
             return (
-            <div>
+                <div>
                 <h1>Bonjour, monde !</h1>
-                <h2>Il est {this.props.date.toLocaleTimeString()}.</h2>
-            </div>
+                <h2>Il est {props.date.toLocaleTimeString()}.</h2>
+                </div>
             );
         }
-    }
+
+        //Classe Clock après transformation
+        class Clock extends React.Component {
+            render() {
+                return (
+                <div>
+                    <h1>Bonjour, monde !</h1>
+                    <h2>Il est {this.props.date.toLocaleTimeString()}.</h2>
+                </div>
+                );
+            }
+        }
 
 ####
 

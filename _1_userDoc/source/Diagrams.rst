@@ -34,8 +34,8 @@ Syntax and quick start
 Diagrams must be surrounded by 2 tags:
 
 
-.. code-block::
-   :linenos:
+.. code::
+   :number-lines:
    :force:
 
     @startuml

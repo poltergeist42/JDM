@@ -12,6 +12,7 @@ React & Legacy
 .. toctree::
    :maxdepth: 2
 
+   JSX/JSX
    React/React
    Native/Native
 
@@ -30,12 +31,12 @@ Présentation
 
 .. _`Site officiel React`: https://fr.reactjs.org/docs/getting-started.html
 
-React est une bibliothèque Javascript, utilisée pour créer des composants utiliser dans l'IHM. Dans
+React est une bibliothèque Javascript, utilisée pour créer des composants utilisé dans l'IHM. Dans
 le modèle MVC, React correspond à la **Vue**.
 
 Pour créer une application avec React, on va créer des composants (des classes ou des fonctions)
-qui seront ensuite assemblé pour former l'application finale. Les composant React sont
-réutilisable.
+qui seront ensuite assemblé pour former l'application finale. Les composants React sont
+réutilisables.
 
 **React utilise un DOM virtuel**
 
@@ -67,7 +68,7 @@ Attention, les deux bibliothèques sont fournie en version **"development"** et 
 Le code minimale d'une page est donc :
 
 .. code:: html
-   :linenos:
+   :number-lines:
    :force:
 
     <!DOCTYPE html>

@@ -33,9 +33,8 @@ l'écriture. C'est ce que l'on appel du *"sucre syntaxique"*.
 On écris le html directement dans le code JavaScript, ce qui nous permet d'y inclure directement
 des composants React.
 
-.. code-block:: JavaScript
-   :linenos:
-   :force:
+.. code:: JavaScript
+   :number-lines:
 
     //Expression en JSX
     const element = (
@@ -56,9 +55,9 @@ Ces deux expressions sont équivlente.
 Il est possible d'ajouter des commentaire dans une expression JSX. Les commentaire s'écrivent
 comme pour le JavaScript mais entourés d'accolades.
 
-.. code-block:: JavaScript
-   :linenos:
-   :force:
+
+.. code:: JavaScript
+   :number-lines:
 
     const element = (
         <h1>
@@ -66,6 +65,7 @@ comme pour le JavaScript mais entourés d'accolades.
             Je s'appelle Groot !
         </h1>
     );
+
 
 ####
 
@@ -78,10 +78,8 @@ navigateur, il faut le prévoir dans le HTML en ajoutant une la bibliothèque **
 la balise *<src="...">*. Il faut également inclure l'attribut *type="text/babel"* dans la balise
 script contenant le JSX.
 
-.. code-block:: html
-   :linenos:
-   :emphasize-lines: 10, 17
-   :force:
+.. code:: html
+   :number-lines:
 
     <!DOCTYPE html>
     <html>
@@ -136,10 +134,8 @@ Details syntaxique
 
     * Toutes les balises auto-fermantes doivent être fermées avec "/" avant le ">"
 
-        .. code-block:: html
-           :linenos:
-           :emphasize-lines: 1, 4
-           :force:
+        .. code:: html
+           :number-lines:
 
             <!-- Balise auto-fermantes en HTML -->
             <input type="text">
@@ -149,9 +145,8 @@ Details syntaxique
 
     * Le JSX n'accepte de retourner qu'un seule élément parent à la fois
 
-        .. code-block:: html
-           :linenos:
-           :force:
+        .. code:: html
+           :number-lines:
 
             // Code en erreur
             import React, { Component } from 'react'
@@ -174,9 +169,8 @@ Details syntaxique
      Pour eviter ce problème, on import "Fragment" depuis React et on entoure le JSX d'une balise
      "<Fragment></Fragment>"
 
-        .. code-block:: html
-           :linenos:
-           :force:
+        .. code:: html
+           :number-lines:
 
             // Code valide
             import React, { Component, Fragment } from 'react'

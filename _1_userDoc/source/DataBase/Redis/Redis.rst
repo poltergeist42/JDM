@@ -38,8 +38,8 @@ le mode développeur). L'utilisation d'un container (docker) est également poss
 Install Linux
 -------------
 
-.. code-block:: shell
-   :linenos:
+.. code:: shell
+   :number-lines:
    :force:
 
     ## Téléchargement des dépendances
@@ -71,8 +71,8 @@ Démarrer le serveur
 
     #. En mode manuelle :
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             # Démarrer le service
@@ -86,8 +86,8 @@ Démarrer le serveur
 
     #. Démarrer le service automatiquement :
 
-        .. code-block:: shell
-           :linenos:
+        .. code:: shell
+           :number-lines:
            :force:
 
             sudo update-rc.d redis_6379 defaults
@@ -95,8 +95,8 @@ Démarrer le serveur
 Lancer le CLI
 -------------
 
-.. code-block:: shell
-   :linenos:
+.. code:: shell
+   :number-lines:
    :force:
 
     redis-cli
@@ -110,16 +110,16 @@ Utilisation avec Python
 
     #. Installation :
 
-        .. code-block:: python
-           :linenos:
+        .. code:: python
+           :number-lines:
            :force:
 
             sudo pip install redis
 
     # Exemple d'utilisation :
 
-        .. code-block:: python
-           :linenos:
+        .. code:: python
+           :number-lines:
            :force:
 
             >>> import redis

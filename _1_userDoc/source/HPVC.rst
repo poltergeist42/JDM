@@ -116,8 +116,8 @@ On a new install of Kali, we need to update, upgrade and fix tools
       
 .. _`git repository called “pimpmykali”`: https://github.com/Dewalt-arch/pimpmykali
 
-.. code-block:: shell
-   :linenos:
+.. code:: shell
+   :number-lines:
    :force:
 
       sudo apt update && apt install git
@@ -235,8 +235,8 @@ early stages of a penetration test or red team engagement. Use it for open sourc
 intelligence (OSINT) gathering to help determine a company's external threat landscape on the
 internet. The tool gathers emails, names, subdomains, IPs and URLs using
 
-   .. code-block:: shell
-      :linenos:
+   .. code:: shell
+      :number-lines:
       :force:
 
       # theHaverester manual
@@ -278,8 +278,8 @@ Nmap executable, the Nmap suite includes an advanced GUI and results viewer (Zen
 data transfer, redirection, and debugging tool (Ncat), a utility for comparing scan results (Ndiff),
 and a packet generation and response analysis tool (Nping).
 
-   .. code-block:: shell
-      :linenos:
+   .. code:: shell
+      :number-lines:
       :force:
 
       # nmap
@@ -301,8 +301,8 @@ and a packet generation and response analysis tool (Nping).
 Performe a ping sweep with nmap
 -------------------------------
 
-.. code-block:: shell
-   :linenos:
+.. code:: shell
+   :number-lines:
    :force:
 
    sudo nmap -sn 192.168.1.0/24
@@ -364,8 +364,8 @@ If you're inclined towards the CLI on Linux, Kali comes pre-installed with a too
 works using a downloaded version of the database, meaning that you already have all of the exploits
 already on your Kali Linux!
 
-   .. code-block:: shell
-      :linenos:
+   .. code:: shell
+      :number-lines:
       :force:
 
       # Update database

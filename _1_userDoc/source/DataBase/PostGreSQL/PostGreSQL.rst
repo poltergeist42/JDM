@@ -35,8 +35,8 @@ Sous Windows
 Télécharger l'install automatique et ce laisser guider. Lorsque l'installation est terminée, il faut
 ajouter les 2 chemins suivants au 'PATH' dans les Variables d'environnement.
 
-.. code-block:: shell
-   :linenos:
+.. code:: shell
+   :number-lines:
    :force:
 
     "C:\Program Files\PostgreSQL\10\bin"

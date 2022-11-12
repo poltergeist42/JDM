@@ -44,8 +44,8 @@ chargement d'un fichier HTML étant séquentiel, il est conseiller de placer les
 page (juste avant "</html>") pour ne pas ralentir le chargement des autres éléments.
 
 
-.. code-block:: html
-   :linenos:
+.. code:: html
+   :number-lines:
    :force:
 
     <!-- JS directely loadded in the HTML page -->
@@ -80,8 +80,8 @@ Commentaires
 
 Les commentaires sont les mêmes qu'en C : 
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     // Commentaire simple
@@ -97,8 +97,8 @@ Interaction avec l'utilisateur
 
     #. affichage d'un message à l'écran
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         alert();
@@ -108,8 +108,8 @@ Interaction avec l'utilisateur
 
     #. Entrée utilisateur
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         prompt();
@@ -118,8 +118,8 @@ Interaction avec l'utilisateur
 
     #. Confirmation conditionnelle
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         confirm();
@@ -132,8 +132,8 @@ Interaction avec l'utilisateur
 
     #. Affichage dans la console
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
        console.log("Je s'appelle Groot !");
@@ -151,8 +151,8 @@ Type
 
     #. Connaitre le type d’une variable
     
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         typeof
@@ -164,8 +164,8 @@ Type
 
         #. String --> Number
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             parseInt()
@@ -176,8 +176,8 @@ Type
 
         #. Number --> String
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             //ex:
@@ -195,8 +195,8 @@ Opérateur
 
     #. Opérateur d'égalité : "==" et "==="
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         var a = 1;
@@ -213,8 +213,8 @@ Opérateur
 
     #. Opérateur ternaire
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         /* a ? [instruction 1] : [instruction 2]
@@ -242,8 +242,8 @@ Il y a 2 méthodes permettant de concaténer les chaines de caractères :
 
     #. Additionner les strings
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         var str1 = "aa"
@@ -256,8 +256,8 @@ Il y a 2 méthodes permettant de concaténer les chaines de caractères :
         Pour pouvoir modifier les chaines directement, il remplacer les simples cotes < ' ... ' >
         ou les doubles cotes <" ... "> par des accent graves (altGR + 7) < \` ... \` >
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             var str1 = "aa"
@@ -270,8 +270,8 @@ Déclaration des variables
 
         Les constantes sont définies avec le préfix "const".
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             const var_constante = "cc";
@@ -283,8 +283,8 @@ Déclaration des variables
         "var" permet de définir une variable locale. Si la valeur de cette variable est modifiée
         en dehors de la portée de sa déclaration, la valeur initale sera modifiée / écrasée. 
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             var nom = "aa";
@@ -300,8 +300,8 @@ Déclaration des variables
         "let" permet de définir une variable locale. Si la valeur de cette variable est modifiée
         en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modifiée.
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             let nom = "aa";
@@ -319,8 +319,8 @@ Les objets JSON (Object)
 Les objets JSON sont l'équivalent des dictionnaires en python. On peux utiliser toute la syntaxe
 JSON.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     { id : "id1" }
@@ -329,8 +329,8 @@ Extraire les clés (keys) pour les classé dans un tableau
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     var myObject = { 
@@ -346,8 +346,8 @@ Quand utiliser '[]' ou '.' pour accéder à une clef
 On utilise '[]' dans le cas d'une itération lorsque le nom du membre n'est pas connue. A l'inverse,
 on utilise '.' pour un appel direct, lorsque le nom du membre est connu
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     d={'a':1, 'b':2, 'c':3}             //d     --> Object { a: 1, b: 2, c: 3 }
@@ -370,8 +370,8 @@ Les fonctions
 
     #. Fonctions simples
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         // Déclaration
@@ -396,8 +396,8 @@ Les fonctions
 
     #. Fonctions anonymes
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         // déclaration
@@ -407,8 +407,8 @@ Les fonctions
 
     #. Exécution immédiate d'une fonction, sans appel préalable
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         (function (myArg){
@@ -428,8 +428,8 @@ intégrable par d'autres objet.
 
 exemple : Création dans "personne2", d'une copie de "personne"
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         var personne = {
@@ -440,8 +440,8 @@ exemple : Création dans "personne2", d'une copie de "personne"
 
     #. Sans l'opérateur spread
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         var personne2 = {
@@ -456,8 +456,8 @@ exemple : Création dans "personne2", d'une copie de "personne"
 
     #. Avec l'opérateur spread
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         var personne2 = {
@@ -481,8 +481,8 @@ vraie, contrairement à l'opérateur ternaire qui retourne une expression dans t
 
 Cet opérateur est sous utilise le "ET" logique : &&
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         let isTrue = true
@@ -519,8 +519,8 @@ objet JavaScript (un Dictionnaire) ou de décomposer les propriétés d'un objet
 forme utilisée pour n'importer que certaines classes d'une librairie et ainsi éviter de la chargé
 complétement.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     /* Affectation */
@@ -580,8 +580,8 @@ Les classes
 La Création d'une classe se fait avec le mot clef : **class**. La création d'une instance se fait
 avec le mot clef : **new**.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     class Personne{
@@ -596,8 +596,8 @@ méthode **"__init__()"** en Python. La définition d'attribut ou l'appel d'une 
 autre méthode de la classe doit être précéder de **"this"**. c'est l'équivalent de **"self"**
 en Python.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     class Personne{
@@ -614,8 +614,8 @@ L'héritage d'une classe se fait par lajout du terme **"extends" suivie du nom d
 dans la déclaration de classe. Il faut égallement appeller la méthode **"super()"** dans la méthode
 **"constructor()"** de la classe fille.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     class Homme extends Personne{
@@ -656,8 +656,8 @@ impose de connaitre à l'avance toutes les dépendances et donc nous oblige à i
 fichiers dans l'ordre. De plus le fichier HTML est alors surchargé ce qui peux le rendre difficile
 à maintenir.
 
-.. code-block:: html
-   :linenos:
+.. code:: html
+   :number-lines:
    :force:
 
 
@@ -683,8 +683,8 @@ Pour éviter ces problèmes, il faut créer des modules en choisissant les élé
 du termes **"export"**. Le ficher deveint un module à ce moment là. Il est possible d'exporter
 plusieurs éléments en les séparant par des virgules.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     //module "personne.js"
@@ -702,8 +702,8 @@ plusieurs éléments en les séparant par des virgules.
 
 L'utilisation de ces modules se fait à l'aide de la commande **"import [...] from [...]"**.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     // Module "Homme"
@@ -725,8 +725,8 @@ L'utilisation de ces modules se fait à l'aide de la commande **"import [...] fr
 
 IL est conseiller d'importer tous les modules dans un seul fichier.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     import {Personne} from "./personne";
@@ -741,8 +741,8 @@ IL est conseiller d'importer tous les modules dans un seul fichier.
 On peux ensuite importer Ce fichier dans une balise **"script"** de type **"module"** dans le
 fichier html.
 
-.. code-block:: html
-   :linenos:
+.. code:: html
+   :number-lines:
    :force:
 
     <!DOCTYPE html>
@@ -764,8 +764,8 @@ Importer du CSS
 Si on importe les fichier JavaScript sans préciser l'extention, c'est l'inverse lorsque l'on doit
 inserer du CSS.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     import {Personne} from "./personne"

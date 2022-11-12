@@ -104,8 +104,8 @@ Babel
 
 Installer babel en mode dévellopeur :
 
-.. code-block:: shell
-   :linenos:
+.. code:: shell
+   :number-lines:
    :force:
 
     npm install --save-dev @babel/core@7 @babel/cli@7

@@ -42,8 +42,8 @@ c'est dans cette section que son regrouper toutes les meta-données de la page W
 chargement d'un fichier HTML étant séquentiel, il est conseiller de placer les scripts JS en bas de
 page (juste avant "</html>") pour ne pas ralentir le chargement des autres éléments.
 
-.. code-block:: html
-   :linenos:
+.. code:: html
+   :number-lines:
    :force:
 
     <!-- JS directely loadded in the HTML page -->
@@ -79,8 +79,8 @@ Commentaires
 
 Les commentaires sont les mêmes qu'en C : 
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     // Commentaire simple
@@ -96,8 +96,8 @@ Interaction avec l'utilisateur
 
     #. affichage d'un message à l'écran
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         alert();
@@ -107,8 +107,8 @@ Interaction avec l'utilisateur
 
     #. Entrée utilisateur
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         prompt();
@@ -117,8 +117,8 @@ Interaction avec l'utilisateur
 
     #. Confirmation conditionnelle
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         confirm();
@@ -131,8 +131,8 @@ Interaction avec l'utilisateur
 
     #. Affichage dans la console
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
        console.log("Je s'appelle Groot !");
@@ -150,8 +150,8 @@ Type
 
     #. Connaitre le type d’une variable
     
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         typeof
@@ -163,8 +163,8 @@ Type
 
         #. String --> Number
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             parseInt()
@@ -175,8 +175,8 @@ Type
 
         #. Number --> String
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             //ex:
@@ -194,8 +194,8 @@ Opérateur
 
     #. Opérateur d'égalité : "==" et "==="
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         var a = 1;
@@ -212,8 +212,8 @@ Opérateur
 
     #. Opérateur ternaire
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         /* a ? [instruction 1] : [instruction 2]
@@ -241,8 +241,8 @@ Il y a 2 méthodes permettant de concaténer les chaines de caractères :
 
     #. Additionner les strings
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         var str1 = "aa"
@@ -255,8 +255,8 @@ Il y a 2 méthodes permettant de concaténer les chaines de caractères :
         Pour pouvoir modifier les chaines directement, il remplacer les simples cotes < ' ... ' >
         ou les doubles cotes <" ... "> par des accent graves (altGR + 7) < \` ... \` >
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             var str1 = "aa"
@@ -269,8 +269,8 @@ Déclaration des variables
 
         Les constantes sont définies avec le préfix "const".
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             const var_constante = "cc";
@@ -282,8 +282,8 @@ Déclaration des variables
         "var" permet de définir une variable locale. Si la valeur de cette variable est modifiée
         en dehors de la portée de sa déclaration, la valeur initale sera modifiée / écrasée. 
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             var nom = "aa";
@@ -299,8 +299,8 @@ Déclaration des variables
         "let" permet de définir une variable locale. Si la valeur de cette variable est modifiée
         en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modifiée.
 
-        .. code-block:: JavaScript
-           :linenos:
+        .. code:: JavaScript
+           :number-lines:
            :force:
 
             let nom = "aa";
@@ -317,8 +317,8 @@ Les objets JSON (Object)
 Les objets JSON sont l'équivalent des dictionnaires en python. On peux utiliser toute la syntaxe
 JSON.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     { id : "id1" }
@@ -327,8 +327,8 @@ Extraire les clés (keys) pour les classé dans un tableau
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     var myObject = { 
@@ -344,8 +344,8 @@ Les fonctions
 
     #. Fonctions simples
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         // Déclaration
@@ -370,8 +370,8 @@ Les fonctions
 
     #. Fonctions anonymes
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         // déclaration
@@ -381,8 +381,8 @@ Les fonctions
 
     #. Exécution immédiate d'une fonction, sans appel préalable
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         (function (myArg){
@@ -402,8 +402,8 @@ intégrable par d'autres objet.
 
 exemple : Création dans "personne2", d'une copie de "personne"
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         var personne = {
@@ -414,8 +414,8 @@ exemple : Création dans "personne2", d'une copie de "personne"
 
     #. Sans l'opérateur spread
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         var personne2 = {
@@ -430,8 +430,8 @@ exemple : Création dans "personne2", d'une copie de "personne"
 
     #. Avec l'opérateur spread
 
-    .. code-block:: JavaScript
-       :linenos:
+    .. code:: JavaScript
+       :number-lines:
        :force:
 
         var personne2 = {
@@ -465,8 +465,8 @@ objet JavaScript (un Dictionnaire) ou de décomposer les propriétés d'un objet
 forme utilisée pour n'importer que certaines classes d'une librairie et ainsi éviter de la chargé
 complétement.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     /* Affectation */
@@ -525,8 +525,8 @@ Les classes
 La Création d'une classe se fait avec le mot clef : **class**. La création d'une instance se fait
 avec le mot clef : **new**.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     class Personne{
@@ -540,8 +540,8 @@ appellée automatiquement à la création d'une instance de la classe. C'est l'�
 méthode **"__init__()"** en Python. La définition d'attribut ou l'appel d'une méthode depuis une autre
 méthode de la classe doit être précéder de **"this"**. c'est l'équivalent de **"self"** en Python.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     class Personne{
@@ -558,8 +558,8 @@ L'héritage d'une classe se fait par lajout du terme **"extends" suivie du nom d
 dans la déclaration de classe. Il faut égallement appeller la méthode **"super()"** dans la méthode
 **"constructor()"** de la classe fille.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     class Homme extends Personne{
@@ -598,8 +598,8 @@ impose de connaitre à l'avance toutes les dépendances et donc nous oblige à i
 fichiers dans l'ordre. De plus le fichier HTML est alors surchargé ce qui peux le rendre difficile
 à maintenir.
 
-.. code-block:: html
-   :linenos:
+.. code:: html
+   :number-lines:
    :force:
 
 
@@ -625,8 +625,8 @@ Pour éviter ces problèmes, il faut créer des modules en choisissant les élé
 du termes **"export"**. Le ficher deveint un module à ce moment là. Il est possible d'exporter
 plusieurs éléments en les séparant par des virgules.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     //module "personne.js"
@@ -644,8 +644,8 @@ plusieurs éléments en les séparant par des virgules.
 
 L'utilisation de ces modules se fait à l'aide de la commande **"import [...] from [...]"**.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     // Module "Homme"
@@ -667,8 +667,8 @@ L'utilisation de ces modules se fait à l'aide de la commande **"import [...] fr
 
 IL est conseiller d'importer tous les modules dans un seul fichier.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     import {Personne} from "./personne.js";
@@ -683,8 +683,8 @@ IL est conseiller d'importer tous les modules dans un seul fichier.
 On peux ensuite importer Ce fichier dans une balise **"script"** de type **"module"** dans le
 fichier html.
 
-.. code-block:: html
-   :linenos:
+.. code:: html
+   :number-lines:
    :force:
 
     <!DOCTYPE html>
@@ -780,8 +780,8 @@ l'écriture. C'est ce que l'on appel du *"sucre syntaxique"*.
 On écris le html directement dans le code JavaScript, ce qui nous permet d'y inclure directement
 des composants React.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     //Expression en JSX
@@ -803,8 +803,8 @@ Ces deux expressions sont équivlente.
 Il est possible d'ajouter des commentaire dans une expression JSX. Les commentaire s'écrivent
 comme pour le JavaScript mais entourés d'accolades.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     const element = (
@@ -822,8 +822,8 @@ navigateur, il faut le prévoir dans le HTML en ajoutant une la bibliothèque **
 balise *<src="...">*. Il faut également inclure l'attribut *type="text/babel"* dans la balise
 script contenant le JSX.
 
-.. code-block:: html
-   :linenos:
+.. code:: html
+   :number-lines:
    :emphasize-lines: 10, 17
    :force:
 
@@ -877,8 +877,8 @@ Details syntaxique
 
     * Toutes les balises auto-fermantes doivent être fermées avec "/" avant le ">"
 
-        .. code-block:: html
-           :linenos:
+        .. code:: html
+           :number-lines:
            :emphasize-lines: 1, 4
            :force:
 
@@ -890,8 +890,8 @@ Details syntaxique
 
     * Le JSX n'accepte de retourner qu'un seule élément parent à la fois
 
-        .. code-block:: html
-           :linenos:
+        .. code:: html
+           :number-lines:
            :force:
 
             // Code en erreur
@@ -915,8 +915,8 @@ Details syntaxique
      Pour eviter ce problème, on import "Fragment" depuis React et on entoure le JSX d'une balise
      "<Fragment></Fragment>"
 
-        .. code-block:: html
-           :linenos:
+        .. code:: html
+           :number-lines:
            :force:
 
             // Code valide
@@ -995,8 +995,8 @@ Attention, les deux bibliothèques sont fournie en version **"development"** et 
 
 Le code minimale d'une page est donc :
 
-.. code-block:: html
-   :linenos:
+.. code:: html
+   :number-lines:
    :force:
 
     <!DOCTYPE html>
@@ -1035,8 +1035,8 @@ Une **fonction composant** est une fonction Javascript qui n'accepte qu'un seul 
 **props** qui signifie "propriétés". Il peut ne pas y avoir de props. Ce composant doit
 obligatoirement retourner quelque chose 
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     // fonction composant
@@ -1049,8 +1049,8 @@ obligatoirement retourner quelque chose
 
 On peut également utiliser une classe ES6 pour définir un composant.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     // class
@@ -1101,8 +1101,8 @@ Rendu d’un composant : Comment lier React au DOM ?
 Pour lier une application au DOM, il faut utiliser le package ReactDOM et la fonction render avec
 en paramètres, le composant racine de l'application et le noeud du DOM auquel il sera attaché.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     ReactDOM.render(
@@ -1112,16 +1112,16 @@ en paramètres, le composant racine de l'application et le noeud du DOM auquel i
 
 Les éléments peuvent soit représenter un éléments du DOM :
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     const element = <div />;
 
 soit représenter un élément définis par l'utilisateur :
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     const element = <Welcome name="Sara"/>;
@@ -1131,8 +1131,8 @@ les attributs JSX à ce composant sous la forme d’un objet unique. Nous appelo
 
 **Le rendu** se fait en appellant **ReactDOM.render()**.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     function Welcome(props){
@@ -1158,8 +1158,8 @@ Détail du déroulement de l'exemple précedent :
 Parcourrir un tableau et l'afficher sous forme de liste
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     {/* JavaScript Object */}
@@ -1193,8 +1193,8 @@ C'est l'équivalent d'une fonction *main()*. Pour faciliter la maintenance et la
 éléments, il est conseiller d'avoir un composant **App** le plus simple possible. Pour cela, on
 doit isoler, chaque fois que c'est possible, les éléments en composants plus petits (et monotache).
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     function Comment(props) {
@@ -1222,8 +1222,8 @@ doit isoler, chaque fois que c'est possible, les éléments en composants plus p
 Si on définit séparément les composant **Avatar** et **UserInfo**, on pourra alors simplifier le
 composant **Comment** :
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     // Composant "Avatar"
@@ -1279,8 +1279,8 @@ Il est possible de convertir une fonction en classe en quelques étapes:
 
     #. Supprimez la déclaration désormais vide de la fonction.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     //Fonction Clock
@@ -1310,8 +1310,8 @@ Il est possible de convertir une fonction en classe en quelques étapes:
 Une fonction est dite "pure" si elle ne tente pas de modifier ses entrées et retourne toujours le
 même résultat avec les même entrées.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     // Une fonction pure (qui ne modifie pas ces propres entrées)
@@ -1333,8 +1333,8 @@ composant ne modifie pas sont état. On parle de **Composant Stateless**.
 
 Lorsqu'un composant doit modifier son état, on utilise une classe.
 
-.. code-block:: JavaScript
-   :linenos:
+.. code:: JavaScript
+   :number-lines:
    :force:
 
     const famille = {
