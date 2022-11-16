@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Fragment &mdash; JDM</title>
+  <title>React-Router-DOM &mdash; JDM</title>
   
 
   
@@ -29,9 +29,7 @@
   <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="../../../../../genindex.html" />
-    <link rel="search" title="Recherche" href="../../../../../search.html" />
-    <link rel="next" title="Navbar" href="../Navbar/Navbar.html" />
-    <link rel="prev" title="Composant" href="../Components.html" /> 
+    <link rel="search" title="Recherche" href="../../../../../search.html" /> 
 
 </head>
 
@@ -70,21 +68,13 @@
     
       <li><a href="../../../../../index.html">Docs</a></li>
         
-          <li><a href="../../../../Techno_WEB.html">Technos Web</a></li>
-        
-          <li><a href="../../../React_and_legacy.html">React &amp; Legacy</a></li>
-        
-          <li><a href="../../React.html">React</a></li>
-        
-          <li><a href="../Components.html">Composant</a></li>
-        
-      <li>Fragment</li>
+      <li>React-Router-DOM</li>
     
     
       <li class="breadcrumbs-aside">
         
             
-            <a href="../../../../../_sources/Techno_WEB/React_and_legacy/React/Components/Fragment/Fragment.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../../../../_sources/Techno_WEB/React_and_legacy/React/Librairies/ReactRouterDOM/ReactRouterDOM.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -114,7 +104,7 @@
                             
                             
                                 <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../readme.html">infos générales Journal de manip</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../readme.html#description">Description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../Composants.html">Composants Spécifiques</a></li>
@@ -174,10 +164,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../../Regex.html">Regex</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../Reseau.html">Reseau</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../Soudure.html">Soudure</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../../../Techno_WEB.html">Technos Web</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../Techno_WEB.html">Technos Web</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../HTML_CSS/HTML_CSS.html">HTML_CSS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../Javascript/Javascript.html">JavaScript</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../../React_and_legacy.html">React &amp; Legacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../React_and_legacy.html">React &amp; Legacy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../Node_Express/Node_Express.html">Node &amp; Express</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../webCreation/webCreation.html">Création de Site Web</a></li>
 </ul>
@@ -204,53 +194,154 @@
                     <div class="document">
                         
                             
-  <section id="fragment">
-<h1><a class="toc-backref" href="#sommaire" role="doc-backlink">Fragment</a><a class="headerlink" href="#fragment" title="Lien permanent vers cette rubrique">¶</a></h1>
+  <section id="react-router-dom">
+<h1><a class="toc-backref" href="#sommaire" role="doc-backlink">React-Router-DOM</a><a class="headerlink" href="#react-router-dom" title="Lien permanent vers cette rubrique">¶</a></h1>
 <nav class="contents" id="sommaire">
 <span id="index-0"></span><p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#fragment" id="id1">Fragment</a></p>
+<li><p><a class="reference internal" href="#react-router-dom" id="id9">React-Router-DOM</a></p>
 <ul>
-<li><p><a class="reference internal" href="#weblinks" id="id2">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#cookbook-react-router-dom-v6" id="id10">Cookbook : React-Router-DOM v6</a></p></li>
+<li><p><a class="reference internal" href="#link-vs-navlink" id="id11">Link vs NavLink</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id12">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
 <hr class="docutils" />
-<p>Il n’est pas possible d’effectuer un rendu de plus d’un composant à la fois. Pour palier à se
-problème, il est possible d’utiliser le composant « Fragment ». Ce composant est importé depuis
-« React ».</p>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://www.journaldunet.fr/web-tech/developpement/1441259-comment-gerer-la-navigation-programmatique-avec-react-router/">gérer la navigation programmatique</a> <a class="footnote-reference brackets" href="#id1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+<li><p><a class="reference external" href="https://www.journaldunet.fr/web-tech/developpement/1441289-comment-faire-un-redirect-avec-le-composant-react-router-dom-apres-une-requete-post/">faire un redirect avec le composant react-router-dom après une requête POST</a> <a class="footnote-reference brackets" href="#id3" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
+<li><p><a class="reference external" href="https://reacttraining.com/react-router/web/guides/quick-start">Quick Start</a> <a class="footnote-reference brackets" href="#id5" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> : semble être la doc officiel</p></li>
+</ul>
+</dd>
+</dl>
+<p>React-routeur-dom est un paquet qui permet de rediriger vers une nouvelle url et donc de naviguer entre les différentes pages
+en gardant l’esrpie « monopage » de React.</p>
+<p>Cette librairie est utilisée depuis le composoant racine, génrallement le composant « App.js ».</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>A chaque changement de composant ce dernier est recharger dans le DOM. Il est donc important de
+<strong>percisté les données</strong> avec le localstorage ou une base de donnés. Dans le cas contraite
+toutes les données seront perdu puisque le composant sera chargé à son état initial.</p>
+</div>
+<hr class="docutils" />
+<section id="cookbook-react-router-dom-v6">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Cookbook : React-Router-DOM v6</a><a class="headerlink" href="#cookbook-react-router-dom-v6" title="Lien permanent vers cette rubrique">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=hOg-hJDw1NM">Comprendre React Router V6 en 20 minutes</a> <a class="footnote-reference brackets" href="#id7" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</dd>
+</dl>
+<p>Le composant &lt;Switch/&gt; n’est plus utilisé dans la v6. Il est remplacé par le composant &lt;Routes/&gt;</p>
 <blockquote>
-<div><div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">import</span> <span class="p">{</span><span class="nx">Fragment</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
-<span class="linenos"> 2</span>
-<span class="linenos"> 3</span><span class="kd">const</span> <span class="nx">Numbers</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-<span class="linenos"> 4</span>    <span class="k">return</span> <span class="p">(</span>
-<span class="linenos"> 5</span>        <span class="o">&lt;</span><span class="nx">Fragment</span><span class="o">&gt;</span>
-<span class="linenos"> 6</span>            <span class="o">&lt;</span><span class="nx">Module1</span><span class="o">/&gt;</span>
-<span class="linenos"> 7</span>            <span class="o">&lt;</span><span class="nx">Module2</span><span class="o">/&gt;</span>
-<span class="linenos"> 8</span>        <span class="o">&lt;</span><span class="err">/Fragment&gt;</span>
-<span class="linenos"> 9</span>    <span class="p">)</span>
-<span class="linenos">10</span><span class="p">}</span>
+<div><ol class="arabic">
+<li><p>Le composant &lt;BrowserRouter&gt;&lt;/BrowserRouter&gt; doit être placé au plus haut dans l’arborescence,
+générallement dans « index.js ».</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span>// Document : index.js
+
+// Import de librairie
+import React from &#39;react&#39;;
+import ReactDOM from &#39;react-dom/client&#39;;
+import { BrowserRouter } from &#39;react-router-dom&#39;;
+
+// Import des pages et des composant
+import App from &#39;./App&#39;;
+
+const root = ReactDOM.createRoot(document.getElementById(&#39;root&#39;));
+root.render(
+  &lt;BrowserRouter&gt;
+      &lt;App /&gt;
+  &lt;/BrowserRouter&gt;
+);
 </pre></div>
 </div>
-</div></blockquote>
-<p>Il est possible d’utiliser la forme courte « &lt;&gt; … &lt;/&gt; ». Il ne sera alors plus nécessaire de faire
-l’import depuis “react”.</p>
-<blockquote>
-<div><div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span>const Numbers = () =&gt; {
-    return (
-        &lt;&gt;
-            &lt;Module1/&gt;
-            &lt;Module2/&gt;
-        &lt;/&gt;
-    )
-}
+</li>
+<li><p>Il faut ensuite définir les différente routes dans le composant &lt;App /&gt; à l’aide des
+composants &lt;Routes&gt;&lt;/Routes&gt; et &lt;Route&gt;.</p>
+<p>La nécéssité de créer des routes et liée au faite d’avoir plusieurs pages chacune dépendantes
+d’une URL spécifique. Il peut cependant y avoir des composant statiques commun entre toutes
+les pages. C’est le cas des barres de navigation et des footers. Ces éléments doivent être
+placés en dehors du composant &lt;Routes&gt;&lt;/Routes&gt;.</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span> // Document : App.js
+
+ // Import de librairie Tiers
+ import React from &#39;react&#39;;
+ import { Routes, Route } from &#39;react-router-dom&#39;;
+ // import { Switch } from &#39;react-router&#39;;
+
+ // Import des pages et des composant
+ import Navigation from &#39;./components/Navigation/Navigation&#39;;
+ import Home from &#39;./pages/Home/Home&#39;;
+ import Entree from &#39;./pages/Entree/Entree&#39;;
+ import Resume from &#39;./pages/Resume/Resume&#39;;
+
+ // Import de CSS
+ import &#39;./App.css&#39;;
+
+ const App = () =&gt; {
+ return (
+     &lt;&gt;
+     &lt;Navigation /&gt;
+     &lt;Routes&gt;
+         &lt;Route path=&quot;/Entree&quot; element={&lt;Entree /&gt;} /&gt;
+         &lt;Route path=&quot;/Resume&quot; element={&lt;Resume /&gt;} /&gt;
+         {/* Toutes les entrée de l&#39;URL différente des routes précédente sont redirigé vers &#39;Home&#39; */}
+         &lt;Route exact path=&quot;/&quot; element={&lt;Home /&gt;} /&gt;
+         &lt;Route path=&quot;*&quot; element={&lt;Home /&gt;} /&gt;
+     &lt;/Routes&gt;
+     &lt;/&gt;
+   )
+ }
+
+export default App;
 </pre></div>
 </div>
+</li>
+</ol>
 </div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="link-vs-navlink">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Link vs NavLink</a><a class="headerlink" href="#link-vs-navlink" title="Lien permanent vers cette rubrique">¶</a></h2>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">&lt;Link /&gt;<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Permet de créer des liens vers des routes. C’est l’équivalent des
+balises &lt;a&gt;&lt;/a&gt; dans le html.</p>
+</dd>
+<dt class="field-even">&lt;NavLink /&gt;<span class="colon">:</span></dt>
+<dd class="field-even"><p>Permet également de créer des liens vers des routes mais avec une notion
+d’analyse de l’éléments sélectionné. Cette analyse permet de mettre en evidence
+le liens sélectionné par rapport aux autres liens non séléctionnés. NavLink est
+donc plus souvent utilisé dans les barres de navigation.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote brackets" id="id1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.journaldunet.fr/web-tech/developpement/1441259-comment-gerer-la-navigation-programmatique-avec-react-router/">https://www.journaldunet.fr/web-tech/developpement/1441259-comment-gerer-la-navigation-programmatique-avec-react-router/</a></p>
+</aside>
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">2</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.journaldunet.fr/web-tech/developpement/1441289-comment-faire-un-redirect-avec-le-composant-react-router-dom-apres-une-requete-post/">https://www.journaldunet.fr/web-tech/developpement/1441289-comment-faire-un-redirect-avec-le-composant-react-router-dom-apres-une-requete-post/</a></p>
+</aside>
+<aside class="footnote brackets" id="id5" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">3</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://reacttraining.com/react-router/web/guides/quick-start">https://reacttraining.com/react-router/web/guides/quick-start</a></p>
+</aside>
+<aside class="footnote brackets" id="id7" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">4</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=hOg-hJDw1NM">https://www.youtube.com/watch?v=hOg-hJDw1NM</a></p>
+</aside>
 </section>
 </section>
 
