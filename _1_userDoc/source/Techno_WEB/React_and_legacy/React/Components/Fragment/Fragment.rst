@@ -34,7 +34,7 @@ problème, il est possible d'utiliser le composant "Fragment". Ce composant est 
 Il est possible d'utiliser la forme courte "<> ... </>". Il ne sera alors plus nécessaire de faire
 l'import depuis 'react'.
 
-    .. code:: javascript
+    .. code:: Javascript
 
         const Numbers = () => {
             return (

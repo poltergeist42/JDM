@@ -21,7 +21,7 @@ React
    Props/Props
    States/States
    Hooks/Hooks
-   ReactRouterDOM/ReactRouterDOM
+   Librairies/Librairies
    BugFix/BugFix
 
 ####
@@ -143,6 +143,7 @@ Exemple d'organisation de projet
 
     * Les composants sont isolés et appellés depuis les Pages.
       Il existe deux type de composants.
+
         + Les composants Statyques. le contenu de ces éléments n'est jamais modifié. C'est éléments
           sont souvent partagé entre plusieurs page (exemple : Navbar ou Footer).
         + Les composant dynamiques. Le contenu et le comportement de ces éléments est modifié en
@@ -158,7 +159,7 @@ Exemple d'organisation de projet
 
     **N.B** : Les feuilles de styles bootstrap sont gérée depuis un emplacement propre à Bootstrap.
 
-    .. code:: CSS
+    .. code:: css
 
         # Excemple d'import d'une CSS dans "App.css"
 
