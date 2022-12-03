@@ -83,7 +83,6 @@ Le composant <Switch/> n'est plus utilisé dans la v6. Il est remplacé par le c
          // Import de librairie Tiers
          import React from 'react';
          import { Routes, Route } from 'react-router-dom';
-         // import { Switch } from 'react-router';
 
          // Import des pages et des composant
          import Navigation from './components/Navigation/Navigation';
@@ -120,7 +119,7 @@ Link vs NavLink
     :<Link />:      Permet de créer des liens vers des routes. C'est l'équivalent des
                     balises <a></a> dans le html.
 
-    :<NavLink />:     Permet également de créer des liens vers des routes mais avec une notion
+    :<NavLink />:   Permet également de créer des liens vers des routes mais avec une notion
                     d'analyse de l'éléments sélectionné. Cette analyse permet de mettre en evidence
                     le liens sélectionné par rapport aux autres liens non séléctionnés. NavLink est
                     donc plus souvent utilisé dans les barres de navigation.
