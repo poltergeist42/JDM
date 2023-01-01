@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dévellopement de projet &mdash; JDM</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="MERISE" href="../Merise/Merise.html" />
+    <link rel="prev" title="Développement, Gestion et Commercialisation de projet" href="../Dev_Gest_Prjet.html" /> 
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
+            <a class="site-title" href="../../index.html">
+                JDM
+            </a>
+        </div>
+    </header>
+
+
+<div class="breadcrumbs-outer hidden-xs-down">
+    <div class="container">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a></li>
+        
+          <li><a href="../Dev_Gest_Prjet.html">Développement, Gestion  et Commercialisation de projet</a></li>
+        
+      <li>Dévellopement de projet</li>
+    
+    
+      <li class="breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Dev_Gest_Prjet/DevProject/DevProject.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+</div>
+    </div>
+</div>
+    <div class="main-outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 site-nav">
+                    
+<div role="search">
+    <form class="search" action="../../search.html" method="get">
+        <div class="icon-input">
+            <input type="text" name="q" placeholder="Search" />
+            <span class="icon-search"></span>
+        </div>
+        <input type="submit" value="Go" class="d-hidden" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                    <div class="site-nav-tree">
+                        
+                            
+                            
+                                <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">infos générales Journal de manip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Composants.html">Composants Spécifiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ComputerVision.html">Computer Vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Cookbook.html">Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Culture_Gen.html">Culture Générale / Connaissances insolites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DataBase/DataBase.html">DataBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../DataBase/PostGreSQL/PostGreSQL.html">PostGreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DataBase/Redis/Redis.html">Redis</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Dev_Gest_Prjet.html">Développement, Gestion  et Commercialisation de projet</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Dévellopement de projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Merise/Merise.html">MERISE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Agile/Agile.html">La méthode Agile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Commercialisation/Commercialisation.html">Commercialisation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Diagrams.html">Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Documentation_Automatique.html">Documentation_Automatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ESP.html">ESP8266 &amp; ESP32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Freecad.html">Freecad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT.html">GIT (versioning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Golang/Golang.html">Golang</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Golang/GetStarted/GetStarted.html">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../HPVC.html">HPVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../IDE_TextEditor/IDE_TextEditor.html">IDE &amp; Text Editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../IDE_TextEditor/Latex/Latex.html">LaTex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../IDE_TextEditor/VIM/VIM.html">VIM (VI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../IDE_TextEditor/visualStudioCode/visualStudioCode.html">Visual Studio Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Informatique.html">Informatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kicad.html">Kicad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Linux/Linux.html">LINUX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/shell/shell.html">SHELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/multiscreen/multiscreen.html">Multi-Screen terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/scripting/scripting.html">Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/UsersGroupsACL/UsersGroupsACL.html">Utilisateurs, Groupes et Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/sysAdmin/sysAdmin.html">Administration Système</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/network/network.html">network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/sharedFolders/sharedFolders.html">Dossiers partager et volumes distants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/hardwareMgnt/hardwareMgnt.html">Hardware Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/Raspberry/Raspberry.html">Raspberry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Linux/bugError/bugError.html">Bug, Maintenance et traitemant des Erreurs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../MAC_OS.html">MAC OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Machine_learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MQTT.html">MQTT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Musique/Musique.html">Musique</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Musique/theorie/theorie.html">Théorie musicale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Musique/MAO/MAO.html">Musique Assistée (par) Ordinateur - MAO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Musique/guitare/guitare.html">Guitare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Musique/GuitareChant/GuitareChant.html">GuitareChant</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Optimisation_Travail.html">Optimisation du travail (et de l’apprentissage)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Powershell.html">PowerShell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Python.html">PYTHON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Regex.html">Regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reseau.html">Reseau</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Soudure.html">Soudure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Techno_WEB/Techno_WEB.html">Technos Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Techno_WEB/HTML_CSS/HTML_CSS.html">HTML_CSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Techno_WEB/Javascript/Javascript.html">JavaScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Techno_WEB/React_and_legacy/React_and_legacy.html">React &amp; Legacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Techno_WEB/Node_Express/Node_Express.html">Node &amp; Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Techno_WEB/webCreation/webCreation.html">Création de Site Web</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Trading.html">Trading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../URLtheque.html">URLtheque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../XML_JSON.html">XML_JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arborescence/arborescence.html">Arborescence du projet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../deprecated/deprecated.html">Eléments dépréciés</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../deprecated/Aquariophilie/Aquariophilie.html">Aquariophilie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deprecated/Django/Django.html">Django 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deprecated/English_vocab/English_vocab.html">English Vocabulary</a></li>
+</ul>
+</li>
+</ul>
+
+                            
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="document">
+                        
+                            
+  <section id="devellopement-de-projet">
+<h1><a class="toc-backref" href="#sommaire" role="doc-backlink">Dévellopement de projet</a><a class="headerlink" href="#devellopement-de-projet" title="Lien permanent vers cette rubrique">¶</a></h1>
+<nav class="contents" id="sommaire">
+<span id="index-0"></span><p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#devellopement-de-projet" id="id1">Dévellopement de projet</a></p>
+<ul>
+<li><p><a class="reference internal" href="#le-design-thinking" id="id2">Le design thinking</a></p>
+<ul>
+<li><p><a class="reference internal" href="#objectif" id="id3">Objectif</a></p></li>
+<li><p><a class="reference internal" href="#contexte" id="id4">Contexte</a></p></li>
+<li><p><a class="reference internal" href="#application-de-cette-approche" id="id5">Application de cette approche</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#redefinir-lobjectif-dun-projet" id="id6">Redéfinir l’objectif d’un projet</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id7">Weblinks</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<hr class="docutils" />
+<section id="le-design-thinking">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Le design thinking</a><a class="headerlink" href="#le-design-thinking" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="objectif">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Objectif</a><a class="headerlink" href="#objectif" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>Le design thinking est inspiré du travail de création des designers. C’est un outil qui permet de
+ciblé au mieux, pour les utilisateurs finaux, le produit ou le projet en impliquant ces derniers
+directement dans le procéssus de création.</p>
+<p>L’implication de l’utilisateur final peut ammener de nombreux exhanges au début du processus de
+création et ammènera souvent à pluieurs itération des solutions proposée avant le début du projet.</p>
+<p>Cette approche permet :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>De s’assurer que la solution proposé répond bien à un besoin ou à un problème.</p></li>
+<li><p>D’identifier ce qui apporte le plus de valeur, de manière à hiérarchiser les exigeces.</p></li>
+<li><p>D’identifier au plutôt les futurs contrainte du produit ou du service à concevoir.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="contexte">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Contexte</a><a class="headerlink" href="#contexte" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>Le design thinking est particulièrement approprié en amont d’un projet, avant de se lancer dans le
+projet de développement de la solution en tant que tel.</p>
+</section>
+<section id="application-de-cette-approche">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Application de cette approche</a><a class="headerlink" href="#application-de-cette-approche" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Phase d’immersion et d’observation</p>
+<p>Il est nécessaire de s’immerger dans l’univers de l’utilisateur finale à fin de mieux
+comprendre le besoin réel. Pour comprendre le besoin réel, il peut être utile de :</p>
+<ul class="simple">
+<li><p>D’échanger avec l’utilisateur finale.</p></li>
+<li><p>Observer l’utilisateur dans son context.</p></li>
+<li><p>Faire preuve d’empathie et d’ouverture d’esprit.</p></li>
+</ul>
+</li>
+<li><p>Définir le problème ou le besoin</p>
+<p>Après la phase d’immersion et d’observation, il deviens possible d’identifier plus précisément
+Le besoin ou le problème.</p>
+<p>C’est le bon moment pour reformuler et redéfinir la problèmatique et permettre ainsi de définir
+l’objectif.</p>
+</li>
+<li><p>Imaginner les différentes solutions aux problèmes et besoin identifiés plus haut</p>
+<p>Pour un même problème ou une même tâche, il est important de définir plusieurs scénarios pour
+le traitement de ces derniers.</p>
+<p>Avoir plusieurs solution possible permet de ne pas se retrouver bloquer si l’un des éléments de
+la solution proposé n’est plus valide.</p>
+<p>Plus il y a de solution possible, plus il y a de chance que le projet puisse aboutir.</p>
+</li>
+<li><p>Prototyper, Tester et Itérer</p></li>
+</ol>
+<blockquote>
+<div><p>Chaque scénario doit être éprouvé. Cela permet d’en tester la viabilité, d’identifier les
+avantages, inconvégniant et contraintes de chacun des scénarios et enfin aider à definir le
+budget et les couts associer.</p>
+<p>Plusieurs itérations sur les diférents scénarios permettrons de définir le meileur scénario
+possible en fonction des contraintes de temps, de couts et solutionnement des tâches ou besoins
+identifier.</p>
+</div></blockquote>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="redefinir-lobjectif-dun-projet">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Redéfinir l’objectif d’un projet</a><a class="headerlink" href="#redefinir-lobjectif-dun-projet" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Redéfinir l’objectif d’un projet peut être utile pour changer de point de vue et envisager le
+problème sous un nouvel angle.</p>
+<dl class="simple">
+<dt>Cette démarche peut être effectuée :</dt><dd><ul class="simple">
+<li><p>Dès la conceptualisation du projet : Cela permet de démarrer le projet en partant dans la
+bonne direction.</p></li>
+<li><p>En cours de développement : Cela permet de se remettre en question lorsque le projet semble
+être dans une impasse.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Pour redéfinir un objectif il faut reformuler la question initiale. Le plus efficace est de
+reformuler la question de multiples façons. Les nouvelles questions seront souvent plus pertinentes
+que la question originelle.</p>
+<p>Ex : Conception d’un piège à souris</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Question initiale :</dt><dd><ul class="simple">
+<li><p>Comment piéger une souris ?</p></li>
+</ul>
+</dd>
+<dt>Questions redéfinies :</dt><dd><ul class="simple">
+<li><p>Qu’est ce qui attire les souris ?</p></li>
+<li><p>Qu’est ce qui fait fuir les souris ?</p></li>
+<li><p>Comment faire préférer aux souris d’être à l’extérieur plutôt qu’à l’intérieur ?</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p>En reformulant la question posée par l’objectif initial, on s’aperçoit que le véritable objectif
+n’est pas d’attraper les mes souris mais au contraire de s’en débarrasser !</p>
+<p>Le nouvel objectif est donc : « Comment se débarrasser des souris ? »</p>
+<p>Grace aux différentes questions qui nous ont amenées à reformuler notre objectif, nous savons que
+pour se débarrasser des souris, il faut :</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Identifier et éliminer tous ce qui pourrait attirer les souris.</p></li>
+<li><p>Mettre en place de répulsifs.</p></li>
+<li><p>Forcer les souris à aller ailleurs que chez vous.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="weblinks">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+</section>
+</section>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'20170523',
+            LANGUAGE:'fr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+    <div class="footer" role="contentinfo">
+        <div class="container">
+            &#169; Copyright 2017, Poltergeist42.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.
+        </div>
+    </div>  
+
+</body>
+</html>

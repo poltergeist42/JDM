@@ -9,7 +9,7 @@ Développement, Gestion  et Commercialisation de projet
    :titlesonly:
    :maxdepth: 2
 
-   Dev_Project/Dev_Project
+   DevProject/DevProject
    Merise/Merise
    Agile/Agile
    Commercialisation/Commercialisation
