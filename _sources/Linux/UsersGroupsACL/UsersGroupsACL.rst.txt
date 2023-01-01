@@ -13,7 +13,7 @@ Utilisateurs
 ------------
 
 activer l'utilisateur root
-======================
+==========================
 
     .. warning::
         

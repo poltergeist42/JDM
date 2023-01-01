@@ -5,7 +5,7 @@ MERISE
 .. index::
    single: Gestion Projet; Merise
 
-    .. contents::
+.. contents::
     :depth: 3
     :backlinks: top
 
