@@ -24,6 +24,7 @@ Mon journal de manip
    ESP
    Freecad
    GIT
+   Golang/Golang
    HPVC
    IDE_TextEditor/IDE_TextEditor
    Informatique

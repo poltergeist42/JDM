@@ -1,0 +1,19 @@
+======
+Golang
+======
+
+.. toctree::
+   :maxdepth: 2
+
+    GetStarted/GetStarted
+
+.. contents::
+    :backlinks: top
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::
