@@ -10,26 +10,29 @@ React-Router-DOM
     :depth: 3
     :backlinks: top
 
+.. toctree::
+   :maxdepth: 2
+
+    RedirectionForm2URI/RedirectionForm2URI
+
 ####
 
 :Liens_Web:
     * `gérer la navigation programmatique`_
 
-    * `faire un redirect avec le composant react-router-dom après une requête POST`_
-
     * `Quick Start`_ : semble être la doc officiel
 
 .. _`gérer la navigation programmatique`: https://www.journaldunet.fr/web-tech/developpement/1441259-comment-gerer-la-navigation-programmatique-avec-react-router/
-.. _`faire un redirect avec le composant react-router-dom après une requête POST`: https://www.journaldunet.fr/web-tech/developpement/1441289-comment-faire-un-redirect-avec-le-composant-react-router-dom-apres-une-requete-post/
-.. _`Quick Start`: https://reacttraining.com/react-router/web/guides/quick-start
 
-React-routeur-dom est un paquet qui permet de rediriger vers une nouvelle url et donc de naviguer entre les différentes pages
-en gardant l'esrpie "monopage" de React.
+.. _`Quick Start`: https://reactrouter.com/en/6.4.4
+
+React-routeur-dom est une Librairie qui permet de faire du routage entre les pages du projet ou de 
+l'application sans avoir à recharger le DOM. 
 
 Cette librairie est utilisée depuis le composoant racine, génrallement le composant "App.js".
 
 .. warning::
-    A chaque changement de composant ce dernier est recharger dans le DOM. Il est donc important de
+    A chaque changement de composant les données seront effacées. Il est donc important de
     **percisté les données** avec le localstorage ou une base de donnés. Dans le cas contraite
     toutes les données seront perdu puisque le composant sera chargé à son état initial.
 

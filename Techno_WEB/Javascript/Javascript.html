@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -120,8 +120,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../DataBase/Redis/Redis.html">Redis</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Dev_Gest_Prjet/Dev_Gest_Prjet.html">Développement, Gestion  et commercialisation de projet</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Dev_Gest_Prjet/Dev_Gest_Prjet.html">Développement, Gestion  et Commercialisation de projet</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Dev_Gest_Prjet/Merise/Merise.html">MERISE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Dev_Gest_Prjet/Agile/Agile.html">La méthode Agile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Dev_Gest_Prjet/Commercialisation/Commercialisation.html">Commercialisation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Diagrams.html">Diagrams</a></li>
@@ -130,6 +132,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../ESP.html">ESP8266 &amp; ESP32</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Freecad.html">Freecad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../GIT.html">GIT (versioning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Golang/Golang.html">Golang</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../HPVC.html">HPVC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../IDE_TextEditor/IDE_TextEditor.html">IDE &amp; Text Editor</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../IDE_TextEditor/Latex/Latex.html">LaTex</a></li>
@@ -246,9 +251,9 @@ page (juste avant « &lt;/html&gt; ») pour ne pas ralentir le chargement des 
 <span class="linenos"> 6</span>     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="linenos"> 7</span>         <span class="cm">&lt;!-- some cool stuff --&gt;</span>
 <span class="linenos"> 8</span>     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="linenos"> 9</span>     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="linenos">10</span>         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Je s&#39;appelle Groot !&quot;</span><span class="p">);</span>
-<span class="linenos">11</span>     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span>     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">         </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Je s&#39;appelle Groot !&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">     </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="linenos">12</span> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 <span class="linenos">13</span>
 <span class="linenos">14</span> <span class="cm">&lt;!-- JS loadded from a seprated file --&gt;</span>
@@ -268,13 +273,13 @@ page (juste avant « &lt;/html&gt; ») pour ne pas ralentir le chargement des 
 <section id="commentaires">
 <h4>Commentaires<a class="headerlink" href="#commentaires" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Les commentaires sont les mêmes qu’en C :</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="c1">// Commentaire simple</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// Commentaire simple</span><span class="w"></span>
 <span class="linenos">2</span>
-<span class="linenos">3</span> <span class="cm">/*</span>
+<span class="linenos">3</span><span class="w"> </span><span class="cm">/*</span>
 <span class="linenos">4</span><span class="cm">     Commentaires</span>
 <span class="linenos">5</span><span class="cm">     sur plusieurs</span>
 <span class="linenos">6</span><span class="cm">     lignes</span>
-<span class="linenos">7</span><span class="cm"> */</span>
+<span class="linenos">7</span><span class="cm"> */</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -284,36 +289,36 @@ page (juste avant « &lt;/html&gt; ») pour ne pas ralentir le chargement des 
 <div><ol class="arabic simple">
 <li><p>affichage d’un message à l’écran</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="nx">alert</span><span class="p">();</span>
-<span class="linenos">2</span> <span class="c1">//ex:</span>
-<span class="linenos">3</span> <span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="s2">&quot;un message super important&quot;</span><span class="p">;</span>
-<span class="linenos">4</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">myVar</span><span class="p">);</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="nx">alert</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="c1">//ex:</span><span class="w"></span>
+<span class="linenos">3</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">myVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;un message super important&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="nx">myVar</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Entrée utilisateur</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="nx">prompt</span><span class="p">();</span>
-<span class="linenos">2</span> <span class="c1">//ex:</span>
-<span class="linenos">3</span> <span class="kd">var</span> <span class="nx">entreeClavier</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;tapez du texte ici : &quot;</span><span class="p">);</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="nx">prompt</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="c1">//ex:</span><span class="w"></span>
+<span class="linenos">3</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">entreeClavier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;tapez du texte ici : &quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Confirmation conditionnelle</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="nx">confirm</span><span class="p">();</span>
-<span class="linenos">2</span> <span class="c1">//ex:</span>
-<span class="linenos">3</span> <span class="k">if</span> <span class="p">(</span><span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;Voulez-vous exécuter le code JavaScript de cette page ?&#39;</span><span class="p">))</span> <span class="p">{</span>
-<span class="linenos">4</span>     <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Le code a bien été exécuté !&#39;</span><span class="p">);</span>
-<span class="linenos">5</span>     <span class="p">}</span>
-<span class="linenos">6</span> <span class="cm">/* un Popup doit s&#39;ouvrir et demander de confirmer ([OK]) ou pas ([Annuler])</span>
-<span class="linenos">7</span><span class="cm"> la valeur retournée est alors un booléin (true ou false) */</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="nx">confirm</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="c1">//ex:</span><span class="w"></span>
+<span class="linenos">3</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;Voulez-vous exécuter le code JavaScript de cette page ?&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">     </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Le code a bien été exécuté !&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">6</span><span class="w"> </span><span class="cm">/* un Popup doit s&#39;ouvrir et demander de confirmer ([OK]) ou pas ([Annuler])</span>
+<span class="linenos">7</span><span class="cm"> la valeur retournée est alors un booléin (true ou false) */</span><span class="w"></span>
 </pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Affichage dans la console</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Je s&#39;appelle Groot !&quot;</span><span class="p">);</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Je s&#39;appelle Groot !&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -333,10 +338,10 @@ page (juste avant « &lt;/html&gt; ») pour ne pas ralentir le chargement des 
 </li>
 <li><p>Connaitre le type d’une variable</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="ow">typeof</span>
-<span class="linenos">2</span> <span class="c1">//ex:</span>
-<span class="linenos">3</span> <span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="mf">2</span><span class="p">;</span>
-<span class="linenos">4</span> <span class="nx">alert</span><span class="p">(</span><span class="ow">typeof</span> <span class="nx">myVar</span><span class="p">);</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="ow">typeof</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="c1">//ex:</span><span class="w"></span>
+<span class="linenos">3</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">myVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">myVar</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <ol class="arabic">
@@ -345,25 +350,25 @@ page (juste avant « &lt;/html&gt; ») pour ne pas ralentir le chargement des 
 <div><ol class="arabic simple">
 <li><p>String –&gt; Number</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="nb">parseInt</span><span class="p">()</span>
-<span class="linenos">2</span> <span class="c1">//ex:</span>
-<span class="linenos">3</span> <span class="kd">var</span> <span class="nx">myStr</span><span class="p">,</span> <span class="nx">myNumber</span><span class="p">;</span>
-<span class="linenos">4</span> <span class="nx">myStr</span> <span class="o">=</span> <span class="s2">&quot;1234&quot;</span><span class="p">;</span>
-<span class="linenos">5</span> <span class="nx">myNumber</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">myStr</span><span class="p">);</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="c1">//ex:</span><span class="w"></span>
+<span class="linenos">3</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">myStr</span><span class="p">,</span><span class="w"> </span><span class="nx">myNumber</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="w"> </span><span class="nx">myStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;1234&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">5</span><span class="w"> </span><span class="nx">myNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">myStr</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Number –&gt; String</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="c1">//ex:</span>
-<span class="linenos">2</span> <span class="kd">var</span> <span class="nx">myNumber</span><span class="p">,</span> <span class="nx">myStr</span><span class="p">;</span>
-<span class="linenos">3</span> <span class="nx">myNumber</span> <span class="o">=</span> <span class="mf">1234</span><span class="p">;</span>
-<span class="linenos">4</span> <span class="nx">myStr</span> <span class="o">=</span> <span class="nx">myNumber</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">//ex:</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">myNumber</span><span class="p">,</span><span class="w"> </span><span class="nx">myStr</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="w"> </span><span class="nx">myNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1234</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="w"> </span><span class="nx">myStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myNumber</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="w"></span>
 <span class="linenos">5</span>
-<span class="linenos">6</span> <span class="c1">//ex: (version simplifiée)</span>
-<span class="linenos">7</span> <span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="mf">12</span><span class="p">;</span>
-<span class="linenos">8</span> <span class="nx">myVar</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-<span class="linenos">9</span> <span class="nx">alert</span><span class="p">(</span><span class="ow">typeof</span> <span class="nx">myVar</span><span class="p">);</span>
+<span class="linenos">6</span><span class="w"> </span><span class="c1">//ex: (version simplifiée)</span><span class="w"></span>
+<span class="linenos">7</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">myVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">8</span><span class="w"> </span><span class="nx">myVar</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">9</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">myVar</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -377,35 +382,35 @@ page (juste avant « &lt;/html&gt; ») pour ne pas ralentir le chargement des 
 <div><ol class="arabic simple">
 <li><p>Opérateur d’égalité : « == » et « === »</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
-<span class="linenos"> 2</span> <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
-<span class="linenos"> 3</span> <span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span><span class="p">;</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span> <span class="c1">//&quot;==&quot;  --&gt; contenu égale à</span>
-<span class="linenos"> 6</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">==</span> <span class="nx">b</span><span class="p">);</span>    <span class="c1">// true</span>
-<span class="linenos"> 7</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="o">==</span><span class="nx">c</span><span class="p">);</span>      <span class="c1">// true</span>
+<span class="linenos"> 5</span><span class="w"> </span><span class="c1">//&quot;==&quot;  --&gt; contenu égale à</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span><span class="w">    </span><span class="c1">// true</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="o">==</span><span class="nx">c</span><span class="p">);</span><span class="w">      </span><span class="c1">// true</span><span class="w"></span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span> <span class="c1">//&quot;===&quot; --&gt; contenu et type égale à</span>
-<span class="linenos">10</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">===</span> <span class="nx">b</span><span class="p">);</span>   <span class="c1">// true</span>
-<span class="linenos">11</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="o">===</span><span class="nx">c</span><span class="p">);</span>     <span class="c1">// false</span>
+<span class="linenos"> 9</span><span class="w"> </span><span class="c1">//&quot;===&quot; --&gt; contenu et type égale à</span><span class="w"></span>
+<span class="linenos">10</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// true</span><span class="w"></span>
+<span class="linenos">11</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="o">===</span><span class="nx">c</span><span class="p">);</span><span class="w">     </span><span class="c1">// false</span><span class="w"></span>
 </pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Opérateur ternaire</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="cm">/* a ? [instruction 1] : [instruction 2]</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="cm">/* a ? [instruction 1] : [instruction 2]</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="cm">     si a est vrai</span>
 <span class="linenos"> 4</span><span class="cm">         [instruction 1]</span>
 <span class="linenos"> 5</span><span class="cm">     sinon</span>
 <span class="linenos"> 6</span><span class="cm">         [instruction 2]</span>
-<span class="linenos"> 7</span><span class="cm"> */</span>
-<span class="linenos"> 8</span> <span class="c1">// ex :</span>
-<span class="linenos"> 9</span> <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
-<span class="linenos">10</span> <span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">?</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&#39;a&#39; est vrai&quot;</span><span class="p">)</span> <span class="o">:</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&#39;a&#39; est faux&quot;</span><span class="p">);</span>     <span class="c1">// &quot;&#39;a&#39; est vrai&quot;</span>
+<span class="linenos"> 7</span><span class="cm"> */</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w"> </span><span class="c1">// ex :</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">myVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&#39;a&#39; est vrai&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&#39;a&#39; est faux&quot;</span><span class="p">);</span><span class="w">     </span><span class="c1">// &quot;&#39;a&#39; est vrai&quot;</span><span class="w"></span>
 <span class="linenos">11</span>
-<span class="linenos">12</span> <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-<span class="linenos">13</span> <span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">?</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&#39;a&#39; est vrai&quot;</span><span class="p">)</span> <span class="o">:</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&#39;a&#39; est faux&quot;</span><span class="p">);</span>     <span class="c1">// &quot;&#39;a&#39; est faux&quot;</span>
+<span class="linenos">12</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">myVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&#39;a&#39; est vrai&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&#39;a&#39; est faux&quot;</span><span class="p">);</span><span class="w">     </span><span class="c1">// &quot;&#39;a&#39; est faux&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -420,18 +425,18 @@ page (juste avant « &lt;/html&gt; ») pour ne pas ralentir le chargement des 
 <div><ol class="arabic simple">
 <li><p>Additionner les strings</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">var</span> <span class="nx">str1</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span>
-<span class="linenos">2</span> <span class="kd">var</span> <span class="nx">str2</span> <span class="o">=</span> <span class="s2">&quot;zz&quot;</span>
-<span class="linenos">3</span> <span class="kd">var</span> <span class="nx">str12</span> <span class="o">=</span> <span class="s2">&quot;STR1 : &quot;</span> <span class="o">+</span> <span class="nx">str1</span> <span class="o">+</span> <span class="s2">&quot; STR2 : &quot;</span> <span class="o">+</span> <span class="nx">str2</span>
-<span class="linenos">4</span> <span class="c1">//&quot;STR1 : aa STR2 : zz&quot;</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;aa&quot;</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;zz&quot;</span><span class="w"></span>
+<span class="linenos">3</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">str12</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;STR1 : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">str1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; STR2 : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">str2</span><span class="w"></span>
+<span class="linenos">4</span><span class="w"> </span><span class="c1">//&quot;STR1 : aa STR2 : zz&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 <ol class="arabic">
 <li><p>Modifier les chaines directement</p>
 <p>Pour pouvoir modifier les chaines directement, il remplacer les simples cotes &lt; “ … “ &gt;
 ou les doubles cotes &lt; » … « &gt; par des accent graves (altGR + 7) &lt; ` … ` &gt;</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">var</span> <span class="nx">str1</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span>
-<span class="linenos">2</span> <span class="kd">var</span> <span class="nx">str_GR7</span> <span class="o">=</span> <span class="sb">`str1 : </span><span class="si">${</span><span class="nx">str1</span><span class="si">}</span><span class="sb">`</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;aa&quot;</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">str_GR7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`str1 : </span><span class="si">${</span><span class="nx">str1</span><span class="si">}</span><span class="sb">`</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -445,9 +450,9 @@ ou les doubles cotes &lt; » … « &gt; par des accent graves (altGR + 7) &lt
 <li><p>Constantes</p>
 <blockquote>
 <div><p>Les constantes sont définies avec le préfix « const ».</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">const</span> <span class="nx">var_constante</span> <span class="o">=</span> <span class="s2">&quot;cc&quot;</span><span class="p">;</span>
-<span class="linenos">2</span> <span class="nx">var_constante</span> <span class="o">=</span> <span class="s2">&quot;nn&quot;</span>
-<span class="linenos">3</span> <span class="c1">//TypeError: invalid assignment to const `var_constante`</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">var_constante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;cc&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="nx">var_constante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;nn&quot;</span><span class="w"></span>
+<span class="linenos">3</span><span class="w"> </span><span class="c1">//TypeError: invalid assignment to const `var_constante`</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -456,13 +461,13 @@ ou les doubles cotes &lt; » … « &gt; par des accent graves (altGR + 7) &lt
 <blockquote>
 <div><p>« var » permet de définir une variable locale. Si la valeur de cette variable est modifiée
 en dehors de la portée de sa déclaration, la valeur initale sera modifiée / écrasée.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">var</span> <span class="nx">nom</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span><span class="p">;</span>
-<span class="linenos">2</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Avant le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>      <span class="c1">//nom == &quot;aa&quot;</span>
-<span class="linenos">3</span> <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">){</span>
-<span class="linenos">4</span>     <span class="kd">var</span> <span class="nx">nom</span> <span class="o">=</span> <span class="s2">&quot;zz&quot;</span><span class="p">;</span>
-<span class="linenos">5</span>     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Dans le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>   <span class="c1">//nom == &quot;zz&quot;</span>
-<span class="linenos">6</span> <span class="p">}</span>
-<span class="linenos">7</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Après le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>      <span class="c1">//nom == &quot;zz&quot;</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;aa&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Avant le bloc : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nom</span><span class="p">);</span><span class="w">      </span><span class="c1">//nom == &quot;aa&quot;</span><span class="w"></span>
+<span class="linenos">3</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">     </span><span class="kd">var</span><span class="w"> </span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;zz&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">     </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Dans le bloc : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nom</span><span class="p">);</span><span class="w">   </span><span class="c1">//nom == &quot;zz&quot;</span><span class="w"></span>
+<span class="linenos">6</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">7</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Après le bloc : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nom</span><span class="p">);</span><span class="w">      </span><span class="c1">//nom == &quot;zz&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -471,13 +476,13 @@ en dehors de la portée de sa déclaration, la valeur initale sera modifiée / �
 <blockquote>
 <div><p>« let » permet de définir une variable locale. Si la valeur de cette variable est modifiée
 en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modifiée.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">let</span> <span class="nx">nom</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span><span class="p">;</span>
-<span class="linenos">2</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Avant le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>      <span class="c1">//nom == &quot;aa&quot;</span>
-<span class="linenos">3</span> <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">){</span>
-<span class="linenos">4</span>     <span class="kd">let</span> <span class="nx">nom</span> <span class="o">=</span> <span class="s2">&quot;zz&quot;</span><span class="p">;</span>
-<span class="linenos">5</span>     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Dans le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>   <span class="c1">//nom == &quot;zz&quot;</span>
-<span class="linenos">6</span> <span class="p">}</span>
-<span class="linenos">7</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Après le bloc : &quot;</span> <span class="o">+</span> <span class="nx">nom</span><span class="p">);</span>      <span class="c1">//nom == &quot;aa&quot;</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;aa&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Avant le bloc : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nom</span><span class="p">);</span><span class="w">      </span><span class="c1">//nom == &quot;aa&quot;</span><span class="w"></span>
+<span class="linenos">3</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">     </span><span class="kd">let</span><span class="w"> </span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;zz&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">     </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Dans le bloc : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nom</span><span class="p">);</span><span class="w">   </span><span class="c1">//nom == &quot;zz&quot;</span><span class="w"></span>
+<span class="linenos">6</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">7</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Après le bloc : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nom</span><span class="p">);</span><span class="w">      </span><span class="c1">//nom == &quot;aa&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -489,17 +494,17 @@ en dehors de la portée de sa déclaration, la valeur initiale ne sera pas modif
 <h4>Les objets JSON (Object)<a class="headerlink" href="#les-objets-json-object" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Les objets JSON sont l’équivalent des dictionnaires en python. On peux utiliser toute la syntaxe
 JSON.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="p">{</span> <span class="nx">id</span> <span class="o">:</span> <span class="s2">&quot;id1&quot;</span> <span class="p">}</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;id1&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <section id="extraire-les-cles-keys-pour-les-classe-dans-un-tableau">
 <h5>Extraire les clés (keys) pour les classé dans un tableau<a class="headerlink" href="#extraire-les-cles-keys-pour-les-classe-dans-un-tableau" title="Lien permanent vers cette rubrique">¶</a></h5>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">var</span> <span class="nx">myObject</span> <span class="o">=</span> <span class="p">{</span>
-<span class="linenos">2</span>     <span class="nx">id1</span> <span class="o">:</span> <span class="s2">&quot;id1&quot;</span><span class="p">,</span>
-<span class="linenos">3</span>     <span class="nx">id2</span><span class="o">:</span> <span class="s2">&quot;id2&quot;</span>
-<span class="linenos">4</span>     <span class="p">}</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">myObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">     </span><span class="nx">id1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;id1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">     </span><span class="nx">id2</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;id2&quot;</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">5</span>
-<span class="linenos">6</span> <span class="kd">var</span> <span class="nx">keyFromObject</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span> <span class="nx">myObject</span> <span class="p">)</span>     <span class="c1">//keyFromObject === [&quot;id1&quot;, &quot;id2&quot;]</span>
+<span class="linenos">6</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">keyFromObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="w"> </span><span class="nx">myObject</span><span class="w"> </span><span class="p">)</span><span class="w">     </span><span class="c1">//keyFromObject === [&quot;id1&quot;, &quot;id2&quot;]</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -507,20 +512,20 @@ JSON.</p>
 <h5>Quand utiliser “[]” ou “.” pour accéder à une clef<a class="headerlink" href="#quand-utiliser-ou-pour-acceder-a-une-clef" title="Lien permanent vers cette rubrique">¶</a></h5>
 <p>On utilise “[]” dans le cas d’une itération lorsque le nom du membre n’est pas connue. A l’inverse,
 on utilise “.” pour un appel direct, lorsque le nom du membre est connu</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="nx">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="o">:</span><span class="mf">2</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="o">:</span><span class="mf">3</span><span class="p">}</span>             <span class="c1">//d     --&gt; Object { a: 1, b: 2, c: 3 }</span>
-<span class="linenos"> 2</span> <span class="kd">const</span> <span class="nx">d_str</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span>        <span class="c1">//d_str --&gt; Array(3) [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ]</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="nx">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="o">:</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;c&#39;</span><span class="o">:</span><span class="mf">3</span><span class="p">}</span><span class="w">             </span><span class="c1">//d     --&gt; Object { a: 1, b: 2, c: 3 }</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">d_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span><span class="w">        </span><span class="c1">//d_str --&gt; Array(3) [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ]</span><span class="w"></span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span> <span class="nx">d_str</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span>
-<span class="linenos"> 5</span>     <span class="nx">item</span> <span class="p">=&gt;{</span>
-<span class="linenos"> 6</span>         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">[</span><span class="nx">item</span><span class="p">])</span>
-<span class="linenos"> 7</span>     <span class="p">}</span>
-<span class="linenos"> 8</span> <span class="p">)</span>                                   <span class="c1">//1</span>
-<span class="linenos"> 9</span>                                     <span class="c1">//2</span>
-<span class="linenos">10</span>                                     <span class="c1">//3</span>
+<span class="linenos"> 4</span><span class="w"> </span><span class="nx">d_str</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">     </span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">         </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">[</span><span class="nx">item</span><span class="p">])</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w"> </span><span class="p">)</span><span class="w">                                   </span><span class="c1">//1</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">                                     </span><span class="c1">//2</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">                                     </span><span class="c1">//3</span><span class="w"></span>
 <span class="linenos">11</span>
-<span class="linenos">12</span> <span class="nx">d</span><span class="p">.</span><span class="nx">a</span>                                 <span class="c1">//1</span>
-<span class="linenos">13</span> <span class="nx">d</span><span class="p">.</span><span class="nx">b</span>                                 <span class="c1">//2</span>
-<span class="linenos">14</span> <span class="nx">d</span><span class="p">.</span><span class="nx">c</span>                                 <span class="c1">//3</span>
+<span class="linenos">12</span><span class="w"> </span><span class="nx">d</span><span class="p">.</span><span class="nx">a</span><span class="w">                                 </span><span class="c1">//1</span><span class="w"></span>
+<span class="linenos">13</span><span class="w"> </span><span class="nx">d</span><span class="p">.</span><span class="nx">b</span><span class="w">                                 </span><span class="c1">//2</span><span class="w"></span>
+<span class="linenos">14</span><span class="w"> </span><span class="nx">d</span><span class="p">.</span><span class="nx">c</span><span class="w">                                 </span><span class="c1">//3</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -531,47 +536,47 @@ on utilise “.” pour un appel direct, lorsque le nom du membre est connu</p>
 <div><ol class="arabic simple">
 <li><p>Fonctions simples</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="c1">// Déclaration</span>
-<span class="linenos"> 2</span> <span class="kd">function</span> <span class="nx">myFunct</span><span class="p">(</span><span class="nx">myArg1</span><span class="p">,</span> <span class="nx">myArg2</span><span class="p">){</span>
-<span class="linenos"> 3</span>     <span class="c1">// un super code ...</span>
-<span class="linenos"> 4</span> <span class="p">}</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="c1">// Déclaration</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">myFunct</span><span class="p">(</span><span class="nx">myArg1</span><span class="p">,</span><span class="w"> </span><span class="nx">myArg2</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">     </span><span class="c1">// un super code ...</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span> <span class="c1">// appel</span>
-<span class="linenos"> 7</span> <span class="nx">myFunct</span><span class="p">()</span>
+<span class="linenos"> 6</span><span class="w"> </span><span class="c1">// appel</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w"> </span><span class="nx">myFunct</span><span class="p">()</span><span class="w"></span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span> <span class="cm">/* Variante */</span>
-<span class="linenos">10</span> <span class="kd">var</span> <span class="nx">myFunct</span><span class="p">(</span><span class="nx">myArg1</span><span class="p">,</span> <span class="nx">myArg2</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-<span class="linenos">11</span>     <span class="c1">//un super code ...</span>
-<span class="linenos">12</span>     <span class="p">}</span>
-<span class="linenos">13</span> <span class="c1">// Le mot clef &quot;function&quot; est suprimé, alors que la flèche &quot; =&gt; &quot; est insérée entre</span>
-<span class="linenos">14</span> <span class="c1">// les parenthèses et les accolades</span>
+<span class="linenos"> 9</span><span class="w"> </span><span class="cm">/* Variante */</span><span class="w"></span>
+<span class="linenos">10</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">myFunct</span><span class="p">(</span><span class="nx">myArg1</span><span class="p">,</span><span class="w"> </span><span class="nx">myArg2</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">     </span><span class="c1">//un super code ...</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span><span class="w"> </span><span class="c1">// Le mot clef &quot;function&quot; est suprimé, alors que la flèche &quot; =&gt; &quot; est insérée entre</span><span class="w"></span>
+<span class="linenos">14</span><span class="w"> </span><span class="c1">// les parenthèses et les accolades</span><span class="w"></span>
 <span class="linenos">15</span>
-<span class="linenos">16</span> <span class="c1">//si la fonction n&#39;a pas d&#39;argument</span>
-<span class="linenos">17</span> <span class="kd">var</span> <span class="nx">myFunct</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-<span class="linenos">18</span>     <span class="c1">//un super code ...</span>
-<span class="linenos">19</span>     <span class="p">}</span>
+<span class="linenos">16</span><span class="w"> </span><span class="c1">//si la fonction n&#39;a pas d&#39;argument</span><span class="w"></span>
+<span class="linenos">17</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">myFunct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">     </span><span class="c1">//un super code ...</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Fonctions anonymes</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="c1">// déclaration</span>
-<span class="linenos">2</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">myArg</span><span class="p">){</span>
-<span class="linenos">3</span>     <span class="c1">// un super code ...</span>
-<span class="linenos">4</span> <span class="p">}</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// déclaration</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">myArg</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">     </span><span class="c1">// un super code ...</span><span class="w"></span>
+<span class="linenos">4</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Exécution immédiate d’une fonction, sans appel préalable</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">myArg</span><span class="p">){</span>
-<span class="linenos">2</span>     <span class="c1">// super code ...</span>
-<span class="linenos">3</span> <span class="p">})();</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">myArg</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">     </span><span class="c1">// super code ...</span><span class="w"></span>
+<span class="linenos">3</span><span class="w"> </span><span class="p">})();</span><span class="w"></span>
 <span class="linenos">4</span>
-<span class="linenos">5</span> <span class="cm">/* Cette syntaxe permet d&#39;exécuter du code isolé</span>
+<span class="linenos">5</span><span class="w"> </span><span class="cm">/* Cette syntaxe permet d&#39;exécuter du code isolé</span>
 <span class="linenos">6</span><span class="cm"> sans appel préalable d&#39;une</span>
 <span class="linenos">7</span><span class="cm"> fonction. La fonction anonyme est exécutée automatiquement (et immédiatement)</span>
-<span class="linenos">8</span><span class="cm"> */</span>
+<span class="linenos">8</span><span class="cm"> */</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -582,39 +587,39 @@ on utilise “.” pour un appel direct, lorsque le nom du membre est connu</p>
 intégrable par d’autres objet.</p>
 <p>exemple : Création dans « personne2 », d’une copie de « personne »</p>
 <blockquote>
-<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">var</span> <span class="nx">personne</span> <span class="o">=</span> <span class="p">{</span>
-<span class="linenos">2</span>     <span class="nx">nom</span> <span class="o">:</span> <span class="s2">&quot;aa&quot;</span><span class="p">,</span>
-<span class="linenos">3</span>     <span class="nx">prenom</span> <span class="o">:</span> <span class="s2">&quot;zz&quot;</span><span class="p">};</span>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">personne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">     </span><span class="nx">nom</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;aa&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">     </span><span class="nx">prenom</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;zz&quot;</span><span class="p">};</span><span class="w"></span>
 <span class="linenos">4</span>
-<span class="linenos">5</span>     <span class="kd">var</span> <span class="nx">ville</span> <span class="o">=</span> <span class="s2">&quot;ee&quot;</span><span class="p">;</span>
+<span class="linenos">5</span><span class="w">     </span><span class="kd">var</span><span class="w"> </span><span class="nx">ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ee&quot;</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Sans l’opérateur spread</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">var</span> <span class="nx">personne2</span> <span class="o">=</span> <span class="p">{</span>
-<span class="linenos">2</span>     <span class="nx">personne</span><span class="p">,</span>
-<span class="linenos">3</span>     <span class="nx">ville</span><span class="p">};</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">personne2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">     </span><span class="nx">personne</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">     </span><span class="nx">ville</span><span class="p">};</span><span class="w"></span>
 <span class="linenos">4</span>
 <span class="linenos">5</span>
-<span class="linenos">6</span> <span class="nx">personne2</span><span class="p">;</span>
-<span class="linenos">7</span> <span class="p">{</span><span class="err">…</span><span class="p">}</span>
-<span class="linenos">8</span>     <span class="nx">personne</span><span class="o">:</span> <span class="nb">Object</span> <span class="p">{</span> <span class="nx">nom</span><span class="o">:</span> <span class="s2">&quot;aa&quot;</span><span class="p">,</span> <span class="nx">prenom</span><span class="o">:</span> <span class="s2">&quot;zz&quot;</span><span class="p">}</span>
-<span class="linenos">9</span>     <span class="nx">ville</span><span class="o">:</span> <span class="s2">&quot;ee&quot;</span>
+<span class="linenos">6</span><span class="w"> </span><span class="nx">personne2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">7</span><span class="w"> </span><span class="p">{</span><span class="err">…</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">8</span><span class="w">     </span><span class="nx">personne</span><span class="o">:</span><span class="w"> </span><span class="nb">Object</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;aa&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">prenom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;zz&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">9</span><span class="w">     </span><span class="nx">ville</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ee&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Avec l’opérateur spread</p></li>
 </ol>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">var</span> <span class="nx">personne2</span> <span class="o">=</span> <span class="p">{</span>
-<span class="linenos">2</span>     <span class="p">...</span><span class="nx">personne</span><span class="p">,</span>
-<span class="linenos">3</span>     <span class="nx">ville</span><span class="p">};</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">personne2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">     </span><span class="p">...</span><span class="nx">personne</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">     </span><span class="nx">ville</span><span class="p">};</span><span class="w"></span>
 <span class="linenos">4</span>
-<span class="linenos">5</span> <span class="nx">personne2</span><span class="p">;</span>
-<span class="linenos">6</span> <span class="p">{</span><span class="err">…</span><span class="p">}</span>
-<span class="linenos">7</span>     <span class="nx">nom</span><span class="o">:</span> <span class="s2">&quot;aa&quot;</span>
-<span class="linenos">8</span>     <span class="nx">prenom</span><span class="o">:</span> <span class="s2">&quot;zz&quot;</span>
-<span class="linenos">9</span>     <span class="nx">ville</span><span class="o">:</span> <span class="s2">&quot;ee&quot;</span>
+<span class="linenos">5</span><span class="w"> </span><span class="nx">personne2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">6</span><span class="w"> </span><span class="p">{</span><span class="err">…</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">     </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;aa&quot;</span><span class="w"></span>
+<span class="linenos">8</span><span class="w">     </span><span class="nx">prenom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;zz&quot;</span><span class="w"></span>
+<span class="linenos">9</span><span class="w">     </span><span class="nx">ville</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ee&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -627,18 +632,18 @@ Dans le second cas, seules les propriétés de « personne » ont été ajout�
 vraie, contrairement à l’opérateur ternaire qui retourne une expression dans tous les cas.</p>
 <p>Cet opérateur est sous utilise le « ET » logique : &amp;&amp;</p>
 <blockquote>
-<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="kd">let</span> <span class="nx">isTrue</span> <span class="o">=</span> <span class="kc">true</span>
-<span class="linenos"> 2</span> <span class="kd">let</span> <span class="nx">someExpression</span> <span class="o">=</span> <span class="s2">&quot;isTrue est vrai&quot;</span>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">isTrue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">someExpression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;isTrue est vrai&quot;</span><span class="w"></span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span> <span class="nx">isTrue</span> <span class="o">&amp;&amp;</span> <span class="nx">someExpression</span>        <span class="c1">// --&gt; &quot;isTrue est vrai&quot;</span>
+<span class="linenos"> 4</span><span class="w"> </span><span class="nx">isTrue</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">someExpression</span><span class="w">        </span><span class="c1">// --&gt; &quot;isTrue est vrai&quot;</span><span class="w"></span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span> <span class="nx">isTrue</span> <span class="o">=</span> <span class="kc">false</span>
-<span class="linenos"> 7</span> <span class="nx">isTrue</span> <span class="o">&amp;&amp;</span> <span class="nx">someExpression</span>        <span class="c1">// --&gt; flase</span>
+<span class="linenos"> 6</span><span class="w"> </span><span class="nx">isTrue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w"> </span><span class="nx">isTrue</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">someExpression</span><span class="w">        </span><span class="c1">// --&gt; flase</span><span class="w"></span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span> <span class="c1">//cette syntaxe est équivalente à :</span>
-<span class="linenos">10</span> <span class="k">if</span> <span class="p">(</span><span class="nx">isTrue</span><span class="p">){</span>
-<span class="linenos">11</span>     <span class="nx">someExpression</span>
-<span class="linenos">12</span>     <span class="p">}</span>
+<span class="linenos"> 9</span><span class="w"> </span><span class="c1">//cette syntaxe est équivalente à :</span><span class="w"></span>
+<span class="linenos">10</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">isTrue</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">     </span><span class="nx">someExpression</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -661,56 +666,56 @@ dont la forme ressemble à la structure du tableau ou de l’objet.</p>
 objet JavaScript (un Dictionnaire) ou de décomposer les propriétés d’un objet. C’est égelement la
 forme utilisée pour n’importer que certaines classes d’une librairie et ainsi éviter de la chargé
 complétement.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="cm">/* Affectation */</span>
-<span class="linenos"> 2</span> <span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">rest</span>
-<span class="linenos"> 3</span> <span class="c1">//Affectation simple</span>
-<span class="linenos"> 4</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">]</span>                     <span class="c1">//a===1, b===2</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="cm">/* Affectation */</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="nx">rest</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w"> </span><span class="c1">//Affectation simple</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">]</span><span class="w">                     </span><span class="c1">//a===1, b===2</span><span class="w"></span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span> <span class="c1">//Afectation avec un &#39;reste&#39; grace à l&#39;opérateur &#39;spread&#39;</span>
-<span class="linenos"> 7</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="p">...</span><span class="nx">rest</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">,</span> <span class="mf">4</span><span class="p">,</span> <span class="mf">5</span><span class="p">]</span>   <span class="c1">//a===1, b===2, rest = [3, 4, 5]</span>
+<span class="linenos"> 6</span><span class="w"> </span><span class="c1">//Afectation avec un &#39;reste&#39; grace à l&#39;opérateur &#39;spread&#39;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">rest</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">]</span><span class="w">   </span><span class="c1">//a===1, b===2, rest = [3, 4, 5]</span><span class="w"></span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span> <span class="cm">/* Décomposer un objet */</span>
-<span class="linenos">10</span> <span class="c1">//Décomposition simple</span>
-<span class="linenos">11</span> <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span><span class="nx">p</span><span class="o">:</span> <span class="mf">42</span><span class="p">,</span> <span class="nx">q</span><span class="o">:</span> <span class="kc">true</span><span class="p">};</span>
-<span class="linenos">12</span> <span class="kd">var</span> <span class="p">{</span><span class="nx">p</span><span class="p">,</span> <span class="nx">q</span><span class="p">}</span> <span class="o">=</span> <span class="nx">o</span><span class="p">;</span>                     <span class="c1">//p===42, q===true</span>
+<span class="linenos"> 9</span><span class="w"> </span><span class="cm">/* Décomposer un objet */</span><span class="w"></span>
+<span class="linenos">10</span><span class="w"> </span><span class="c1">//Décomposition simple</span><span class="w"></span>
+<span class="linenos">11</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">p</span><span class="o">:</span><span class="w"> </span><span class="mf">42</span><span class="p">,</span><span class="w"> </span><span class="nx">q</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">};</span><span class="w"></span>
+<span class="linenos">12</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="p">{</span><span class="nx">p</span><span class="p">,</span><span class="w"> </span><span class="nx">q</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">o</span><span class="p">;</span><span class="w">                     </span><span class="c1">//p===42, q===true</span><span class="w"></span>
 <span class="linenos">13</span>
-<span class="linenos">14</span> <span class="c1">//Décomposition sans affectation</span>
-<span class="linenos">15</span> <span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">;</span>
-<span class="linenos">16</span> <span class="p">({</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">}</span> <span class="o">=</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span><span class="mf">2</span><span class="p">});</span>              <span class="c1">//Les parenthèses ( ... ) utilisées autour de l&#39;instruction</span>
-<span class="linenos">17</span>                                     <span class="c1">//sont nécessaires pour que la partie gauche soit bien</span>
-<span class="linenos">18</span>                                     <span class="c1">//interprétée comme un objet littéral et non comme un bloc.</span>
-<span class="linenos">19</span>                                     <span class="c1">//Il est également nécessaire d&#39;avoir un point-virgule</span>
-<span class="linenos">20</span>                                     <span class="c1">//avant les parenthèses de l&#39;instruction car sinon, ces</span>
-<span class="linenos">21</span>                                     <span class="c1">//parenthèses peuvent être interprétées comme un appel</span>
-<span class="linenos">22</span>                                     <span class="c1">//de fonction.</span>
+<span class="linenos">14</span><span class="w"> </span><span class="c1">//Décomposition sans affectation</span><span class="w"></span>
+<span class="linenos">15</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">16</span><span class="w"> </span><span class="p">({</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">a</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="mf">2</span><span class="p">});</span><span class="w">              </span><span class="c1">//Les parenthèses ( ... ) utilisées autour de l&#39;instruction</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">                                     </span><span class="c1">//sont nécessaires pour que la partie gauche soit bien</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">                                     </span><span class="c1">//interprétée comme un objet littéral et non comme un bloc.</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">                                     </span><span class="c1">//Il est également nécessaire d&#39;avoir un point-virgule</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">                                     </span><span class="c1">//avant les parenthèses de l&#39;instruction car sinon, ces</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">                                     </span><span class="c1">//parenthèses peuvent être interprétées comme un appel</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">                                     </span><span class="c1">//de fonction.</span><span class="w"></span>
 <span class="linenos">23</span>
-<span class="linenos">24</span> <span class="c1">//affectation avec un nom différent</span>
-<span class="linenos">25</span> <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span><span class="nx">p</span><span class="o">:</span> <span class="mf">42</span><span class="p">,</span> <span class="nx">q</span><span class="o">:</span> <span class="kc">true</span><span class="p">};</span>
-<span class="linenos">26</span> <span class="kd">var</span> <span class="p">{</span><span class="nx">p</span><span class="o">:</span> <span class="nx">toto</span><span class="p">,</span> <span class="nx">q</span><span class="o">:</span> <span class="nx">truc</span><span class="p">}</span> <span class="o">=</span> <span class="nx">o</span><span class="p">;</span>         <span class="c1">//toto===42, truc===true</span>
+<span class="linenos">24</span><span class="w"> </span><span class="c1">//affectation avec un nom différent</span><span class="w"></span>
+<span class="linenos">25</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">p</span><span class="o">:</span><span class="w"> </span><span class="mf">42</span><span class="p">,</span><span class="w"> </span><span class="nx">q</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">};</span><span class="w"></span>
+<span class="linenos">26</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="p">{</span><span class="nx">p</span><span class="o">:</span><span class="w"> </span><span class="nx">toto</span><span class="p">,</span><span class="w"> </span><span class="nx">q</span><span class="o">:</span><span class="w"> </span><span class="nx">truc</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">o</span><span class="p">;</span><span class="w">         </span><span class="c1">//toto===42, truc===true</span><span class="w"></span>
 <span class="linenos">27</span>
-<span class="linenos">28</span> <span class="c1">//Décomposer les propriétés d&#39;objets passés en arguments</span>
-<span class="linenos">29</span> <span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
-<span class="linenos">30</span>     <span class="nx">id</span><span class="o">:</span> <span class="mf">42</span><span class="p">,</span>
-<span class="linenos">31</span>     <span class="nx">displayName</span><span class="o">:</span> <span class="s2">&quot;jbiche&quot;</span><span class="p">,</span>
-<span class="linenos">32</span>     <span class="nx">fullName</span><span class="o">:</span> <span class="p">{</span>
-<span class="linenos">33</span>         <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Jean&quot;</span><span class="p">,</span>
-<span class="linenos">34</span>         <span class="nx">lastName</span><span class="o">:</span> <span class="s2">&quot;Biche&quot;</span>
-<span class="linenos">35</span>     <span class="p">}</span>
-<span class="linenos">36</span> <span class="p">};</span>
+<span class="linenos">28</span><span class="w"> </span><span class="c1">//Décomposer les propriétés d&#39;objets passés en arguments</span><span class="w"></span>
+<span class="linenos">29</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">     </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">42</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">     </span><span class="nx">displayName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;jbiche&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">     </span><span class="nx">fullName</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">         </span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Jean&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">         </span><span class="nx">lastName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Biche&quot;</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">36</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
 <span class="linenos">37</span>
-<span class="linenos">38</span> <span class="kd">function</span> <span class="nx">userId</span><span class="p">({</span><span class="nx">id</span><span class="p">})</span> <span class="p">{</span>
-<span class="linenos">39</span>     <span class="k">return</span> <span class="nx">id</span><span class="p">;</span>
-<span class="linenos">40</span> <span class="p">}</span>
+<span class="linenos">38</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">userId</span><span class="p">({</span><span class="nx">id</span><span class="p">})</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="nx">id</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">40</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">41</span>
-<span class="linenos">42</span> <span class="kd">function</span> <span class="nx">whois</span><span class="p">({</span><span class="nx">displayName</span><span class="o">:</span> <span class="nx">displayName</span><span class="p">,</span> <span class="nx">fullName</span><span class="o">:</span> <span class="p">{</span><span class="nx">firstName</span><span class="o">:</span> <span class="nx">name</span><span class="p">}}){</span>
-<span class="linenos">43</span>     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">displayName</span> <span class="o">+</span> <span class="s2">&quot; est &quot;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
-<span class="linenos">44</span> <span class="p">}</span>
+<span class="linenos">42</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">whois</span><span class="p">({</span><span class="nx">displayName</span><span class="o">:</span><span class="w"> </span><span class="nx">displayName</span><span class="p">,</span><span class="w"> </span><span class="nx">fullName</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="nx">name</span><span class="p">}}){</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">     </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">displayName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; est &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">name</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">44</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">45</span>
-<span class="linenos">46</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;userId: &quot;</span> <span class="o">+</span> <span class="nx">userId</span><span class="p">(</span><span class="nx">user</span><span class="p">));</span> <span class="nx">w</span><span class="c1">// &quot;userId: 42&quot;</span>
-<span class="linenos">47</span>     <span class="nx">whois</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span> <span class="c1">// &quot;jbiche est Jean&quot;</span>
+<span class="linenos">46</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;userId: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">userId</span><span class="p">(</span><span class="nx">user</span><span class="p">));</span><span class="w"> </span><span class="nx">w</span><span class="c1">// &quot;userId: 42&quot;</span><span class="w"></span>
+<span class="linenos">47</span><span class="w">     </span><span class="nx">whois</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;jbiche est Jean&quot;</span><span class="w"></span>
 <span class="linenos">48</span>
-<span class="linenos">49</span>                                     <span class="c1">//Cela permet d&#39;accéder directement à id, displayName et</span>
-<span class="linenos">50</span>                                     <span class="c1">//firstName depuis l&#39;objet user</span>
+<span class="linenos">49</span><span class="w">                                     </span><span class="c1">//Cela permet d&#39;accéder directement à id, displayName et</span><span class="w"></span>
+<span class="linenos">50</span><span class="w">                                     </span><span class="c1">//firstName depuis l&#39;objet user</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -718,11 +723,11 @@ complétement.</p>
 <h4>Les classes<a class="headerlink" href="#les-classes" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>La Création d’une classe se fait avec le mot clef : <strong>class</strong>. La création d’une instance se fait
 avec le mot clef : <strong>new</strong>.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">class</span> <span class="nx">Personne</span><span class="p">{</span>
-<span class="linenos">2</span>     <span class="c1">//...</span>
-<span class="linenos">3</span> <span class="p">}</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Personne</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">     </span><span class="c1">//...</span><span class="w"></span>
+<span class="linenos">3</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">4</span>
-<span class="linenos">5</span> <span class="nx">personne</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Personne</span><span class="p">();</span>
+<span class="linenos">5</span><span class="w"> </span><span class="nx">personne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Personne</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 <p>La définission d’attribut de classe se fait dans une méthode <strong>« construtor() »</strong>. Cette méthode est
@@ -730,12 +735,12 @@ appellée automatiquement à la création d’une instance de la classe. C’est
 méthode <strong>« __init__() »</strong> en Python. La définition d’attribut ou l’appel d’une méthode depuis une
 autre méthode de la classe doit être précéder de <strong>« this »</strong>. c’est l’équivalent de <strong>« self »</strong>
 en Python.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kd">class</span> <span class="nx">Personne</span><span class="p">{</span>
-<span class="linenos">2</span>     <span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span> <span class="nx">prenom</span><span class="p">){</span>
-<span class="linenos">3</span>         <span class="k">this</span><span class="p">.</span><span class="nx">nom</span> <span class="o">=</span> <span class="nx">nom</span><span class="p">;</span>
-<span class="linenos">4</span>         <span class="k">this</span><span class="p">.</span><span class="nx">prenom</span> <span class="o">=</span> <span class="nx">prenom</span><span class="p">;</span>
-<span class="linenos">5</span>     <span class="p">}</span>
-<span class="linenos">6</span> <span class="p">}</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Personne</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">     </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">prenom</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">         </span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nom</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">         </span><span class="k">this</span><span class="p">.</span><span class="nx">prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prenom</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">6</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <section id="heritage-de-classe">
@@ -743,19 +748,19 @@ en Python.</p>
 <p>L’héritage d’une classe se fait par lajout du terme <strong>« extends » suivie du nom de la calsse mère</strong>
 dans la déclaration de classe. Il faut égallement appeller la méthode <strong>« super() »</strong> dans la méthode
 <strong>« constructor() »</strong> de la classe fille.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="kd">class</span> <span class="nx">Homme</span> <span class="k">extends</span> <span class="nx">Personne</span><span class="p">{</span>
-<span class="linenos"> 2</span>     <span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span> <span class="nx">prenom</span><span class="p">){</span>
-<span class="linenos"> 3</span>         <span class="k">super</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span> <span class="nx">prenom</span><span class="p">);</span>     <span class="c1">//Equivalent de Personne.constructor(nom, prenom)</span>
-<span class="linenos"> 4</span>         <span class="k">this</span><span class="p">.</span><span class="nx">sexe</span> <span class="o">=</span> <span class="s2">&quot;H&quot;</span><span class="p">;</span>
-<span class="linenos"> 5</span>     <span class="p">}</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Homme</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Personne</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">     </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">prenom</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">         </span><span class="k">super</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">prenom</span><span class="p">);</span><span class="w">     </span><span class="c1">//Equivalent de Personne.constructor(nom, prenom)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">         </span><span class="k">this</span><span class="p">.</span><span class="nx">sexe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;H&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span>     <span class="nx">log</span><span class="p">(){</span>
-<span class="linenos"> 8</span>         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`nom : </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="si">}</span><span class="sb">, prenom : </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">prenom</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<span class="linenos"> 9</span>     <span class="p">}</span>
-<span class="linenos">10</span> <span class="p">}</span>
+<span class="linenos"> 7</span><span class="w">     </span><span class="nx">log</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`nom : </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="si">}</span><span class="sb">, prenom : </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">prenom</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">11</span>
-<span class="linenos">12</span> <span class="kd">var</span> <span class="nx">personne</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Homme</span><span class="p">(</span><span class="s2">&quot;Bond&quot;</span><span class="p">,</span> <span class="s2">&quot;James&quot;</span><span class="p">);</span>
-<span class="linenos">13</span> <span class="nx">personne</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span>
+<span class="linenos">12</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">personne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Homme</span><span class="p">(</span><span class="s2">&quot;Bond&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;James&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">13</span><span class="w"> </span><span class="nx">personne</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 <section id="super">
@@ -793,58 +798,58 @@ fichiers dans l’ordre. De plus le fichier HTML est alors surchargé ce qui peu
 <span class="linenos">10</span>     <span class="cm">&lt;!-- Inclusion des modules externes --&gt;</span>
 <span class="linenos">11</span>     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./personne.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="linenos">12</span>     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./homme.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="linenos">13</span>     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="linenos">14</span>         <span class="kd">var</span> <span class="nx">personne</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Homme</span><span class="p">(</span><span class="s2">&quot;Bond&quot;</span><span class="p">,</span> <span class="s2">&quot;James&quot;</span><span class="p">);</span>
-<span class="linenos">15</span>         <span class="nx">personne</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span>
-<span class="linenos">16</span>     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>&gt;
+<span class="linenos">13</span>     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">         </span><span class="kd">var</span><span class="w"> </span><span class="nx">personne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Homme</span><span class="p">(</span><span class="s2">&quot;Bond&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;James&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">         </span><span class="nx">personne</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">     </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>&gt;
 <span class="linenos">17</span> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>Pour éviter ces problèmes, il faut créer des modules en choisissant les éléments à exposer à l’Aide
 du termes <strong>« export »</strong>. Le ficher deveint un module à ce moment là. Il est possible d’exporter
 plusieurs éléments en les séparant par des virgules.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="c1">//module &quot;personne.js&quot;</span>
-<span class="linenos"> 2</span> <span class="kd">class</span> <span class="nx">Personne</span><span class="p">{</span>
-<span class="linenos"> 3</span>     <span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span> <span class="nx">prenom</span><span class="p">){</span>
-<span class="linenos"> 4</span>         <span class="k">this</span><span class="p">.</span><span class="nx">nom</span> <span class="o">=</span> <span class="nx">nom</span><span class="p">;</span>
-<span class="linenos"> 5</span>         <span class="k">this</span><span class="p">.</span><span class="nx">prenom</span> <span class="o">=</span> <span class="nx">prenom</span><span class="p">;</span>
-<span class="linenos"> 6</span>     <span class="p">}</span>
-<span class="linenos"> 7</span>     <span class="nx">log</span><span class="p">(){</span>
-<span class="linenos"> 8</span>         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`nom : </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="si">}</span><span class="sb">, prenom : </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">prenom</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<span class="linenos"> 9</span>     <span class="p">}</span>
-<span class="linenos">10</span> <span class="p">}</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="c1">//module &quot;personne.js&quot;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Personne</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">     </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">prenom</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">         </span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nom</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">         </span><span class="k">this</span><span class="p">.</span><span class="nx">prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prenom</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">     </span><span class="nx">log</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`nom : </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="si">}</span><span class="sb">, prenom : </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">prenom</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">11</span>
-<span class="linenos">12</span> <span class="k">export</span> <span class="p">{</span><span class="nx">Personne</span><span class="p">};</span>
+<span class="linenos">12</span><span class="w"> </span><span class="k">export</span><span class="w"> </span><span class="p">{</span><span class="nx">Personne</span><span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
 <p>L’utilisation de ces modules se fait à l’aide de la commande <strong>« import […] from […] »</strong>.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="c1">// Module &quot;Homme&quot;</span>
-<span class="linenos"> 2</span> <span class="k">import</span> <span class="p">{</span><span class="nx">Personne</span><span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;./personne.js&quot;</span><span class="p">;</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="c1">// Module &quot;Homme&quot;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">Personne</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./personne.js&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span> <span class="kd">class</span> <span class="nx">Homme</span> <span class="k">extends</span> <span class="nx">Personne</span><span class="p">{</span>
-<span class="linenos"> 5</span>     <span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span> <span class="nx">prenom</span><span class="p">){</span>
-<span class="linenos"> 6</span>         <span class="k">super</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span> <span class="nx">prenom</span><span class="p">);</span>     <span class="c1">//Equivalent de Personne.constructor(nom, prenom)</span>
-<span class="linenos"> 7</span>         <span class="k">this</span><span class="p">.</span><span class="nx">sexe</span> <span class="o">=</span> <span class="s2">&quot;H&quot;</span><span class="p">;</span>
-<span class="linenos"> 8</span>     <span class="p">}</span>
+<span class="linenos"> 4</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Homme</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Personne</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">     </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">prenom</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">         </span><span class="k">super</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">prenom</span><span class="p">);</span><span class="w">     </span><span class="c1">//Equivalent de Personne.constructor(nom, prenom)</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">         </span><span class="k">this</span><span class="p">.</span><span class="nx">sexe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;H&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
 <span class="linenos"> 9</span>
-<span class="linenos">10</span>     <span class="nx">log</span><span class="p">(){</span>
-<span class="linenos">11</span>         <span class="k">super</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span>
-<span class="linenos">12</span>         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;C&#39;est un homme !&quot;</span><span class="p">);</span>
-<span class="linenos">13</span>     <span class="p">}</span>
-<span class="linenos">14</span> <span class="p">}</span>
+<span class="linenos">10</span><span class="w">     </span><span class="nx">log</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">         </span><span class="k">super</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">         </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;C&#39;est un homme !&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">15</span>
-<span class="linenos">16</span> <span class="k">export</span> <span class="p">{</span><span class="nx">Homme</span><span class="p">};</span>
+<span class="linenos">16</span><span class="w"> </span><span class="k">export</span><span class="w"> </span><span class="p">{</span><span class="nx">Homme</span><span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
 <p>IL est conseiller d’importer tous les modules dans un seul fichier.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="k">import</span> <span class="p">{</span><span class="nx">Personne</span><span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;./personne&quot;</span><span class="p">;</span>
-<span class="linenos">2</span> <span class="k">import</span> <span class="p">{</span><span class="nx">Homme</span><span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;./homme&quot;</span><span class="p">;</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">Personne</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./personne&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">Homme</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./homme&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="linenos">3</span>
-<span class="linenos">4</span> <span class="kd">var</span> <span class="nx">personne</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Personne</span><span class="p">(</span><span class="s2">&quot;Gabin&quot;</span><span class="p">,</span> <span class="s2">&quot;Jean&quot;</span><span class="p">);</span>
-<span class="linenos">5</span> <span class="nx">personne</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span>
+<span class="linenos">4</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">personne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Personne</span><span class="p">(</span><span class="s2">&quot;Gabin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Jean&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">5</span><span class="w"> </span><span class="nx">personne</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span><span class="w"></span>
 <span class="linenos">6</span>
-<span class="linenos">7</span> <span class="kd">var</span> <span class="nx">personne2</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Homme</span><span class="p">(</span><span class="s2">&quot;Bond&quot;</span><span class="p">,</span> <span class="s2">&quot;James&quot;</span><span class="p">);</span>
-<span class="linenos">8</span> <span class="nx">personne2</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span>
+<span class="linenos">7</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">personne2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Homme</span><span class="p">(</span><span class="s2">&quot;Bond&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;James&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">8</span><span class="w"> </span><span class="nx">personne2</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 <p>On peux ensuite importer Ce fichier dans une balise <strong>« script »</strong> de type <strong>« module »</strong> dans le
@@ -869,8 +874,8 @@ fichier html.</p>
 <h4>Importer du CSS<a class="headerlink" href="#importer-du-css" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Si on importe les fichier JavaScript sans préciser l’extention, c’est l’inverse lorsque l’on doit
 inserer du CSS.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="k">import</span> <span class="p">{</span><span class="nx">Personne</span><span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;./personne&quot;</span>
-<span class="linenos">2</span> <span class="k">import</span> <span class="nx">styles</span> <span class="kr">from</span> <span class="s2">&quot;./css/monSuperCSS.css&quot;</span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">Personne</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./personne&quot;</span><span class="w"></span>
+<span class="linenos">2</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="nx">styles</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./css/monSuperCSS.css&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 <dl class="glossary">
@@ -916,6 +921,7 @@ remplacé par des fonctions dans les cadres JavaScript et l’API standard offic
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id1" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript">https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript</a></p>
@@ -961,6 +967,7 @@ remplacé par des fonctions dans les cadres JavaScript et l’API standard offic
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id23">11</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/Guide/AJAX">https://developer.mozilla.org/fr/docs/Web/Guide/AJAX</a></p>
 </aside>
+</aside>
 </section>
 </section>
 
@@ -997,7 +1004,7 @@ remplacé par des fonctions dans les cadres JavaScript et l’API standard offic
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.
         </div>
     </div>  
 
