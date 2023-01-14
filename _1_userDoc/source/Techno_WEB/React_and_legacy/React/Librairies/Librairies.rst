@@ -18,7 +18,6 @@ Librairies
    :maxdepth: 2
 
    ReactRouterDOM/ReactRouterDOM
-   ReactBootstrap/ReactBootStrap
 
 ####
 

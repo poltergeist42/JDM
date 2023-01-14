@@ -11,7 +11,7 @@ React-Router-DOM
     :backlinks: top
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
     RedirectionForm2URI/RedirectionForm2URI
 
