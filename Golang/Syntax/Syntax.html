@@ -215,7 +215,13 @@
 <li><p><a class="reference internal" href="#details-syntaxiques" id="id1">Détails syntaxiques</a></p>
 <ul>
 <li><p><a class="reference internal" href="#accolades" id="id2">Accolades</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id3">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#main-go" id="id3">main.go</a></p></li>
+<li><p><a class="reference internal" href="#fonctions" id="id4">Fonctions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#forme-simple" id="id5">Forme simple</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#weblinks" id="id6">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -239,6 +245,37 @@
 </pre></div>
 </div>
 </div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="main-go">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">main.go</a><a class="headerlink" href="#main-go" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Tous les projets doivent avoir un fichier « main.go ». C’est le fichier principale du programme. Ce
+fichier doit contenir une fonction « main() ». C’est cette fonction qui est appellée lors de
+l’éxécution du programme.</p>
+<blockquote>
+<div><div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// code minimum</span><span class="w"></span>
+<span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="fonctions">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Fonctions</a><a class="headerlink" href="#fonctions" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Une fonction peut être déclarée avec des prototypes plus ou moins complexes en fonction de si la
+fonction reçoit des arguments, si elle retourne des arguments et si elle est lié à un struct ou à
+un interface.</p>
+<section id="forme-simple">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Forme simple</a><a class="headerlink" href="#forme-simple" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>Cette forme ne prend pas d’argument, ne retourne rien et n’est pas liée à un autre élément.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/simpleFunction.svg"><img alt="../../_images/simpleFunction.svg" class="align-center" src="../../_images/simpleFunction.svg" width="520px" /></a>
+</div></blockquote>
+</section>
 </section>
 <hr class="docutils" />
 <section id="weblinks">

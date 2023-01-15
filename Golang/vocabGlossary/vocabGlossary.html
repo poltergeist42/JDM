@@ -212,10 +212,10 @@
 <nav class="contents" id="sommaire">
 <span id="index-0"></span><p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#vocabulaire-et-glossaire" id="id2">Vocabulaire et Glossaire</a></p>
+<li><p><a class="reference internal" href="#vocabulaire-et-glossaire" id="id4">Vocabulaire et Glossaire</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id1" id="id3">Vocabulaire et Glossaire</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id4">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id5">Vocabulaire et Glossaire</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id6">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -223,18 +223,37 @@
 <hr class="docutils" />
 <section id="id1">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Vocabulaire et Glossaire</a><a class="headerlink" href="#id1" title="Lien permanent vers cette rubrique">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://pkg.go.dev/std">Liste des packages de la bibliothèque standard</a> <a class="footnote-reference brackets" href="#id2" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</dd>
+</dl>
 <dl class="glossary">
-<dt id="term-Package">Package<a class="headerlink" href="#term-Package" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Package are used to group related feature. Every code file has to declare the package to
-which its contents.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">package</span> <span class="n">main</span>
+<dt id="term-Package">Package<a class="headerlink" href="#term-Package" title="Lien permanent vers ce terme">¶</a></dt><dd><p>Les packages sont utilisés pour regrouper les fonctionnalités associées. Chaque fichier de
+code doit déclarer le package auquel il est lié. Le package par défaut est « main ». Il est
+associé au dossier racine du projet.</p>
+<p>Il est possible de définir ces propre packages. Le nom à déclarer dans tous les fichier de
+code sera alors le même que le dossier du package.</p>
+<p>Un package correspond à une librairie dans d’autre langage. Il est possible d’appeler des
+package externes pour enrichier la bibliothèque standard.</p>
+<p>Un package ce déclare au début du fichier avec le mot clef « package » suivi du nom du package.</p>
+<blockquote>
+<div><div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
 </pre></div>
 </div>
+</div></blockquote>
 </dd>
 </dl>
 </section>
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://pkg.go.dev/std">https://pkg.go.dev/std</a></p>
+</aside>
 </section>
 </section>
 
