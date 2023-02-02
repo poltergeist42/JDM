@@ -52,6 +52,8 @@ Création d'un nouveau module (Package)
 Un module peut aussi bien être un programme complet qu'une librairie qui sera utilisée par d'autre
 module.
 
+Il est commun (voir même usuel) de créer un nouveau module lors de la création de nouveau projet.
+
 N.B : Pour u programme, il faut également créer le fichier "main.go"
 
     .. code:: shell

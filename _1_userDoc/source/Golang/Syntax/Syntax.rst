@@ -12,6 +12,18 @@ Détails syntaxiques
 
 ####
 
+--------------
+Aperçu globale
+--------------
+
+:Liens_Web:
+    * `Apprendre X en Y minutes`_ : Ensemble de code commentée en français permettant d'avoir un
+      apperçu concis de l'ensemble des éléments de syntaxe du language.
+
+.. _`Apprendre X en Y minutes`: https://learnxinyminutes.com/docs/fr-fr/go-fr/
+
+####
+
 ---------
 Accolades
 ---------

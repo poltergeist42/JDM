@@ -8,6 +8,7 @@ Golang
     GetStarted/GetStarted
     Syntax/Syntax
     vocabGlossary/vocabGlossary
+    codeSinppets/codeSinppets
 
 .. contents::
     :backlinks: top
