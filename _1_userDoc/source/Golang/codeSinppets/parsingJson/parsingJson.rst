@@ -121,31 +121,53 @@ interne.
        la fonction 'main' soit le plus simple possible et effectue le moins possible de traitement
        direct.
 
-       .. code:: Go
+        .. code:: Go
 
             func main() {
                 // jsonData from a variable
 
     #. Création d'un dictionnaire de struct (map[string]struct{})
 
-       "map" permet de créer un dictionnaire. C'est à dire de réunir un ensemble de données sous la
-       forme Clef / Valeur. 
+        .. image:: ./images/mapOfJsonStruct.svg
+           :width: 520 px
+           :align: center
        
-       .. code:: Go
+       "map" permet de créer un dictionnaire. C'est à dire de réunir un ensemble de données sous la
+       forme Clefs / Valeurs.
 
-                // Creation of a 'map' (Dictionary) of type 'JsonStruct'
+       Nous créons une variable "config" de type "map". Ce "map" prendra des clefs de type "string"
+       et des valeurs de type "JsonStruct".
+
+       Cela signifie qu'une instance du struct "JsonStruct" sera créée pour chaque clefs ajoutées
+       dans "config". Dans notre exemple, les clefs seront les clefs primaires du Json ("Dropbox",
+       "Polux", "Minux" et "Labux")
+
+        .. code:: Go
+
+                // Creation of a 'map' (Dictionary)
+                // Keys must be a type 'string' and values must be a type 'JsonStruct'
                 var config map[string]JsonStruct
 
-       Ici, le type de clef attendue est "string" le dictionnaire lui même est de type "JsonStruct".
+    #. Remplissage de 'config'
+
+       On parcour l'ensemble du fichier json. A Chaque nouvelle entrée dans le Json, on crée une
+       instance de JsonStruct que l'on rempli avec les données associé à chaque clef primaire.
+
+        .. code:: Go
 
                 // Unmarshal the json data and send it to the adress (&) of of the map 'config'
                 // The json Data must be provided as a slice of byte
                 json.Unmarshal([]byte(jsonData), &config)
 
+    #. Pour accéder aux dnée de config, peux le parcourrir avec une ou plusieur boucle 'for'
+
+        .. code:: Go
+
                 for key, _ := range config {
                     fmt.Println("\n/**********/")
                     fmt.Println("key in 'config': ", key)
 
+                    // Check if a key is in the map struct
                     if _, ok := config[key]; ok {
                         fmt.Printf("\nAffichage du 'Path' de %v: %v\n", key, config[key].Path)
 
@@ -159,6 +181,124 @@ interne.
 
                 }
 
+            }
+
+Json Externe
+============
+
+Dans ce Snippet, les données json son fournies depuis un fichier externe. Le code est très similaire
+au précédent. La partie de traitement du json a été placée dans une fonction pour facilité la
+lecture.
+
+    #. On commence par importer les bibliothèques
+
+       * La bibliothèque "encoding/json" permet de faire les traitement sur les données json. 
+       
+       * La bibliothèque "fmt" est utiliée pour l'affichage d'information pour l'utilisateur.
+
+       * La bibliothèque "log" est utilisée pour le traitement des erreurs.
+
+       * La bibliothèque "os" est utilisée pour le traitement des fichiers.
+
+        .. code:: Go
+
+
+            package main
+
+            import (
+                "encoding/json"
+                "fmt"
+                "io"
+                "log"
+                "os"
+            )
+
+    #. On définit ensuite un struct qui sera utilisé pour la mise en forme des données extraites du
+       json.
+
+       Puisque tous les éléments d'un struct doivent être publique, donc commencer par une Majuscule,
+       il faut établir une correspondance entre les membres du struct et les clés du json.
+
+       Cette correspondence s'établie en ajoutant : `json:"Nom_de_la_clef"` à la suite de la
+       déclaration du membre.
+
+        .. code:: Go
+
+            type JsonStruct struct {
+                Path    string   `json:"path"`
+                Exclude []string `json:"exclude"`
+            }
+
+    #. Json Data
+
+       Le chemin du fichier json est donné dans la variable 'fileName'.
+
+       .. code:: Go
+
+            var fileName string = "./computerPathList.json"
+
+    
+
+            // Function to parse the json file
+            func getJsonFile(fileName string) []byte {
+                // Json Data from an external file
+                jsonFile, err := os.Open(fileName)
+                if err != nil {
+                    log.Fatal("Error when opening file: ", err)
+                }
+                defer jsonFile.Close()
+
+                // Read the file until EOF. The return is a Slice of byte
+                byteValue, err := io.ReadAll(jsonFile)
+                if err != nil {
+                    log.Fatal("Error when reading Data: ", err)
+                }
+                return byteValue
+            }
+
+            // Function to check if a key is in the map struct
+            func keyInMap(refMap map[string]JsonStruct, key string) bool {
+                _, ok := refMap[key]
+                if ok {
+                    return true
+                } else {
+                    return false
+                }
+            }
+
+            func main() {
+                // printHelper()
+
+                byteValue := getJsonFile(fileName)
+
+                // Creation of a 'map' (Dictionary) of type 'JsonStruct'
+                var config map[string]JsonStruct
+                // Unmarshal the json data and send it to the adress (&) of of the map 'config'
+                // The json Data must be provided as a slice of byte
+                json.Unmarshal(byteValue, &config)
+
+                fmt.Printf("Type of 'config: %T\n", config)
+
+                isPresent := keyInMap(config, "aaa")
+                fmt.Println("isPresent: ", isPresent)
+
+                for key, _ := range config {
+
+                    if _, ok := config[key]; ok {
+                        if pathIsNotEmpty := config[key].Path; pathIsNotEmpty != "" {
+                            fmt.Println("\n/**********/")
+                            fmt.Println("key in 'config': ", key)
+                            fmt.Printf("\nAffichage du 'Path' de %v: %v\n", key, config[key].Path)
+                        }
+
+                        if excludeIsNotEmpty := config[key].Exclude; len(excludeIsNotEmpty) != 0 {
+                            fmt.Println("\nParcours des elements exclus:")
+                            for _, exclude := range config[key].Exclude {
+                                fmt.Println(exclude)
+                            }
+                        }
+                    }
+                }
             }
 
 

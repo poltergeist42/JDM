@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="113.8059mm"
+   height="46.309063mm"
+   viewBox="0 0 113.8059 46.309063"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="mapOfJsonStruct.svg"
+   inkscape:export-filename="mapOfJsonStruct.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     borderlayer="true"
+     inkscape:zoom="2.0989207"
+     inkscape:cx="171.75494"
+     inkscape:cy="169.37276"
+     inkscape:window-width="2400"
+     inkscape:window-height="1321"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer4" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow1L"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1L"
+       markerWidth="8.75"
+       markerHeight="5"
+       viewBox="0 0 8.75 5"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="arrow1L"
+         transform="scale(-0.5)" />
+    </marker>
+    <rect
+       x="94.329384"
+       y="375.96997"
+       width="549.80554"
+       height="113.19526"
+       id="rect791" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-61.293297,-69.698129)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="syntax"
+     transform="translate(-61.293297,-69.698129)">
+    <text
+       xml:space="preserve"
+       style="font-size:7.76111px;display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583"
+       x="64.534218"
+       y="114.2719"
+       id="text955"><tspan
+         sodipodi:role="line"
+         id="tspan953"
+         style="font-size:7.76111px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583"
+         x="64.534218"
+         y="114.2719">map[<tspan
+   style="font-size:7.76111px;fill:#3ed400;fill-opacity:1;stroke:#40d600;stroke-opacity:1"
+   id="tspan1073">string</tspan>]<tspan
+   style="font-size:7.76111px;fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-opacity:1"
+   id="tspan1213">JsonStruct</tspan></tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Definission"
+     transform="translate(-61.293297,-69.698129)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="relation"
+     transform="translate(-61.293297,-69.698129)">
+    <g
+       id="g4990"
+       transform="matrix(1.0007173,0,0,0.80351592,-0.05773292,13.704479)">
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;fill:#3d36ff;fill-opacity:1;stroke:#9c9c9c;stroke-width:0.264583;stroke-opacity:1"
+         x="62.73452"
+         y="75.021561"
+         id="text1532"><tspan
+           sodipodi:role="line"
+           id="tspan1530"
+           style="font-size:4.23333px;fill:#000000;stroke:none;stroke-width:0.264583"
+           x="62.73452"
+           y="75.021561">Création du map</tspan></text>
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1746"
+         width="38.100296"
+         height="7.7941766"
+         x="61.439346"
+         y="69.818092" />
+    </g>
+    <g
+       id="g5103"
+       transform="matrix(0.99998034,0,0,1.0092941,0.00223257,-1.3219541)">
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;fill:#3fd400;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1"
+         x="84.97744"
+         y="83.949013"
+         id="text1536"><tspan
+           sodipodi:role="line"
+           id="tspan1534"
+           style="fill:#3fd400;fill-opacity:1;stroke-width:0.264583;stroke-dasharray:none"
+           x="84.97744"
+           y="83.949013">Type attendu pour les clefs</tspan></text>
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5044"
+         width="62.272083"
+         height="6.1767855"
+         x="82.441177"
+         y="79.667931" />
+    </g>
+    <g
+       id="g5164">
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;fill:#4b45f1;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="110.70773"
+         y="92.665916"
+         id="text1540"><tspan
+           sodipodi:role="line"
+           id="tspan1538"
+           style="fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="110.70773"
+           y="92.665916">Type attendu pour les Valeurs</tspan></text>
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:0.233246;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5105"
+         width="65.328781"
+         height="6.2667542"
+         x="109.65379"
+         y="88.350182" />
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="M 71.978461,76.138338 71.600289,109.03917"
+       id="path5220" />
+    <path
+       style="fill:#00ff00;fill-opacity:1;stroke:#00ff00;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="M 94.101437,85.466543 93.975379,107.52649"
+       id="path5222" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="M 116.35047,94.794751 V 108.15678"
+       id="path5224" />
+  </g>
+</svg>
