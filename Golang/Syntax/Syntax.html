@@ -385,30 +385,25 @@ spécifiquement définie. Il n’est donc pas possible d’additionner un <stron
 <div><div class="admonition hint">
 <p class="admonition-title">Indication</p>
 <p>Bonne syntaxe</p>
-<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// Bonne Syntaxe</span>
-<span class="linenos"> 2</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
-<span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
-<span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 7</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, world&quot;</span><span class="p">)</span>
-<span class="linenos"> 8</span><span class="p">}</span>
-<span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="c1">// Results</span>
-<span class="linenos">11</span><span class="o">==</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">Hello</span><span class="p">,</span><span class="w"> </span><span class="nx">world</span>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, world&quot;</span><span class="p">)</span>
+<span class="linenos">3</span><span class="p">}</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="c1">// Results</span>
+<span class="linenos">6</span><span class="o">==</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">Hello</span><span class="p">,</span><span class="w"> </span><span class="nx">world</span>
 </pre></div>
 </div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
-<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// Mauviase Syntaxe</span>
-<span class="linenos">2</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span>
-<span class="linenos">3</span><span class="p">{</span>
-<span class="linenos">4</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, world&quot;</span><span class="p">)</span>
-<span class="linenos">5</span><span class="p">}</span>
-<span class="linenos">6</span>
-<span class="linenos">7</span><span class="c1">// Results</span>
-<span class="linenos">8</span><span class="o">==</span><span class="p">&gt;</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">prog</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="nx">syntax</span><span class="w"> </span><span class="kt">error</span><span class="p">:</span><span class="w"> </span><span class="nx">unexpected</span><span class="w"> </span><span class="nx">semicolon</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">newline</span><span class="w"> </span><span class="nx">before</span><span class="w"> </span><span class="p">{</span>
+<p><strong>Mauvaise Syntaxe</strong></p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span>
+<span class="linenos">2</span><span class="p">{</span>
+<span class="linenos">3</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, world&quot;</span><span class="p">)</span>
+<span class="linenos">4</span><span class="p">}</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="c1">// Results</span>
+<span class="linenos">7</span><span class="o">==</span><span class="p">&gt;</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">prog</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="nx">syntax</span><span class="w"> </span><span class="kt">error</span><span class="p">:</span><span class="w"> </span><span class="nx">unexpected</span><span class="w"> </span><span class="nx">semicolon</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">newline</span><span class="w"> </span><span class="nx">before</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
 </div>
 </div>

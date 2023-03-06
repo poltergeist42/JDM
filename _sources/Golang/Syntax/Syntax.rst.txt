@@ -158,11 +158,6 @@ Exemple pour une fonction :
             :number-lines:
             :force:
 
-            // Bonne Syntaxe
-            package main
-
-            import "fmt"
-
             func main() {
                 fmt.Println("Hello, world")
             }
@@ -171,13 +166,12 @@ Exemple pour une fonction :
             ==> Hello, world
 
 
-    .. warning::
+    .. warning:: **Mauvaise Syntaxe**
 
         .. code:: go
             :number-lines:
             :force:
 
-            // Mauviase Syntaxe
             func main ()
             {
                 fmt.Println("Hello, world")
