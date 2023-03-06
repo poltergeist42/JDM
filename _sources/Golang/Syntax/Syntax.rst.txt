@@ -82,10 +82,10 @@ Il y a 17 types de bases et 2 alias :
         +-----------+-----------------------------------------------------------+
         | string    | "Hello". Character sequences escaped with a backslash are |
         |           | interpreted if the value is enclosed in double quotes     |
-        |           | ("Hello\n"). Escape sequences are not interpreted if the  |
-        |           | is enclosed backquotes (`Hello\n`).                       |
+        |           | ("Hello\\n"). Escape sequences are not interpreted if the  |
+        |           | is enclosed backquotes (`Hello\\n`).                       |
         +-----------+-----------------------------------------------------------+
-        | rune      | 'A', '\n', '\u00A5', '€'.                                 |
+        | rune      | 'A', '\\n', '\\u00A5', '€'.                                 |
         |           | Characters glyphs, and escape sequences are enclosed in   |
         |           | single quotes.                                            |
         +-----------+-----------------------------------------------------------+
