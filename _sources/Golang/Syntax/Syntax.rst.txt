@@ -96,26 +96,21 @@ Conversion entre basic tpyes
 **Go** applique une règle stricte sur les conversions. Toutes les conversions doivent être
 spécifiquement définie. Il n'est donc pas possible d'additionner un **int** avec un **float32**
 
-    .. code:: go
-        :number-lines:
-        :force:
-        
-        package main
+    .. warning::
 
-        import (
-            "fmt"
-        )
+        .. code:: go
+            :number-lines:
+            :force:
+            
+            func main() {
+                const price int = 275
+                const tax float32 = 27.50
 
-        func main() {
+                fmt.Println(price + tax)
+            }
 
-            const price int = 275
-            const tax float32 = 27.50
-
-            fmt.Println(price + tax)
-        }
-
-        // Results :
-        ==> ./main.go:22:14: invalid operation: price + tax (mismatched types int and float32)
+            // Results :
+            ==> ./main.go:22:14: invalid operation: price + tax (mismatched types int and float32)
 
 
 
@@ -172,20 +167,21 @@ Exemple pour une fonction :
         // Results
         ==> Hello, world
 
-.. warning::
 
-    .. code:: go
-        :number-lines:
-        :force:
+    .. warning::
 
-        // Mauviase Syntaxe
-        func main ()
-        {
-            fmt.Println("Hello, world")
-        }
+        .. code:: go
+            :number-lines:
+            :force:
 
-        // Results
-        ==> ./prog.go:8:1: syntax error: unexpected semicolon or newline before {
+            // Mauviase Syntaxe
+            func main ()
+            {
+                fmt.Println("Hello, world")
+            }
+
+            // Results
+            ==> ./prog.go:8:1: syntax error: unexpected semicolon or newline before {
 
 ####
 
