@@ -169,7 +169,6 @@ Exemple pour une fonction :
     .. warning:: 
         
         **Mauvaise Syntaxe**
-        ++++++++++++++++++++
 
         .. code:: go
             :number-lines:
