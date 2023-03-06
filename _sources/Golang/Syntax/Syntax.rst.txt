@@ -102,6 +102,7 @@ spécifiquement définie. Il n'est donc pas possible d'additionner un **int** av
             :number-lines:
             :force:
             
+            // Impossible d'additionner des types différents
             func main() {
                 const price int = 275
                 const tax float32 = 27.50
@@ -110,7 +111,7 @@ spécifiquement définie. Il n'est donc pas possible d'additionner un **int** av
             }
 
             // Results :
-            ==> ./main.go:22:14: invalid operation: price + tax (mismatched types int and float32)
+            ==> ./prog.go:8:14: invalid operation: price + tax (mismatched types int and float32)
 
 
 
@@ -151,21 +152,23 @@ La première accolade doit être positionnée sur la même que l'élément au qu
 
 Exemple pour une fonction :
 
-    .. code:: go
-        :number-lines:
-        :force:
+    .. hint::
+        
+        .. code:: go
+            :number-lines:
+            :force:
 
-        // Bonne Syntaxe
-        package main
+            // Bonne Syntaxe
+            package main
 
-        import "fmt"
+            import "fmt"
 
-        func main() {
-            fmt.Println("Hello, world")
-        }
+            func main() {
+                fmt.Println("Hello, world")
+            }
 
-        // Results
-        ==> Hello, world
+            // Results
+            ==> Hello, world
 
 
     .. warning::
