@@ -36,7 +36,7 @@ Il y a 17 types de bases et 2 alias :
     * int  int8  int16  int32  int64
       uint uint8 uint16 uint32 uint64 uintptr
 
-      .. info:: 
+      .. note:: 
 
             **int** et **uint** doivent être utilisés par défaut sauf si une taille spécifique est
             necessaire. **int** et **unint** sont dépendent de la plateforme pour laquelle il sont
@@ -44,7 +44,7 @@ Il y a 17 types de bases et 2 alias :
 
     * byte 
     
-      .. info:: 
+      .. note:: 
 
             **byte** est un alias de uint8. Il est utilisé pour représenter un byte de données.
 
@@ -52,7 +52,7 @@ Il y a 17 types de bases et 2 alias :
 
     * rune
     
-      .. info::
+      .. note::
         
             **rune** est un alias de int32. il est utiliser pour représenter un caractère Unicode.
 

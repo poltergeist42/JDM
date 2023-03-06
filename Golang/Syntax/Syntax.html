@@ -247,14 +247,31 @@ apperçu concis de l’ensemble des éléments de syntaxe du language.</p></li>
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Basic Types</a><a class="headerlink" href="#basic-types" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Il y a 17 types de bases et 2 alias :</p>
 <blockquote>
-<div><ul class="simple">
+<div><ul>
 <li><p>bool</p></li>
 <li><p>string</p></li>
 <li><p>int  int8  int16  int32  int64
-uint uint8 uint16 uint32 uint64 uintptr</p></li>
-<li><p>byte</p></li>
+uint uint8 uint16 uint32 uint64 uintptr</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>int</strong> et <strong>uint</strong> doivent être utilisés par défaut sauf si une taille spécifique est
+necessaire. <strong>int</strong> et <strong>unint</strong> sont dépendent de la plateforme pour laquelle il sont
+compilé. Il pourrons donc être soit un int/uint32 soit un int/uint64.</p>
+</div>
+</li>
+<li><p>byte</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>byte</strong> est un alias de uint8. Il est utilisé pour représenter un byte de données.</p>
+</div>
+</li>
 <li><p>float32 float64</p></li>
-<li><p>rune</p></li>
+<li><p>rune</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>rune</strong> est un alias de int32. il est utiliser pour représenter un caractère Unicode.</p>
+</div>
+</li>
 <li><p>complex64 complex128</p></li>
 </ul>
 <ol class="arabic">
