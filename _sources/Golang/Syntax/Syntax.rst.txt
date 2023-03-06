@@ -112,6 +112,7 @@ spécifiquement définie. Il n'est donc pas possible d'additionner un **int** av
             }
 
         **Results** :
+
         .. code:: bash
 
             ./prog.go:8:14: invalid operation: price + tax (mismatched types int and float32)
