@@ -98,11 +98,12 @@ spécifiquement définie. Il n'est donc pas possible d'additionner un **int** av
 
     .. warning::
 
+        **Impossible d'additionner des types différents**
+
         .. code:: go
             :number-lines:
             :force:
             
-            // Impossible d'additionner des types différents
             func main() {
                 const price int = 275
                 const tax float32 = 27.50
@@ -110,8 +111,10 @@ spécifiquement définie. Il n'est donc pas possible d'additionner un **int** av
                 fmt.Println(price + tax)
             }
 
-            // Results :
-            ==> ./prog.go:8:14: invalid operation: price + tax (mismatched types int and float32)
+        **Results** :
+        .. code:: bash
+
+            ./prog.go:8:14: invalid operation: price + tax (mismatched types int and float32)
 
 
 
@@ -152,7 +155,9 @@ La première accolade doit être positionnée sur la même que l'élément au qu
 
 Exemple pour une fonction :
 
-    .. hint:: Bonne syntaxe
+    .. hint:: 
+        
+        **Bonne syntaxe**
         
         .. code:: go
             :number-lines:

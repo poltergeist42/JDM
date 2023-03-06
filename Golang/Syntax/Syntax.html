@@ -340,18 +340,20 @@ spécifiquement définie. Il n’est donc pas possible d’additionner un <stron
 <blockquote>
 <div><div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
-<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// Impossible d&#39;additionner des types différents</span>
-<span class="linenos"> 2</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">price</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">275</span>
-<span class="linenos"> 4</span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">tax</span><span class="w"> </span><span class="kt">float32</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">27.50</span>
-<span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">price</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">tax</span><span class="p">)</span>
-<span class="linenos"> 7</span><span class="p">}</span>
-<span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="c1">// Results :</span>
-<span class="linenos">10</span><span class="o">==</span><span class="p">&gt;</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">prog</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="w"> </span><span class="nx">invalid</span><span class="w"> </span><span class="nx">operation</span><span class="p">:</span><span class="w"> </span><span class="nx">price</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">tax</span><span class="w"> </span><span class="p">(</span><span class="nx">mismatched</span><span class="w"> </span><span class="nx">types</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="kt">float32</span><span class="p">)</span>
+<p><strong>Impossible d’additionner des types différents</strong></p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">price</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">275</span>
+<span class="linenos">3</span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">tax</span><span class="w"> </span><span class="kt">float32</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">27.50</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">price</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">tax</span><span class="p">)</span>
+<span class="linenos">6</span><span class="p">}</span>
 </pre></div>
 </div>
+<p><strong>Results</strong> :
+.. code:: bash</p>
+<blockquote>
+<div><p>./prog.go:8:14: invalid operation: price + tax (mismatched types int and float32)</p>
+</div></blockquote>
 </div>
 </div></blockquote>
 </section>
@@ -384,7 +386,7 @@ spécifiquement définie. Il n’est donc pas possible d’additionner un <stron
 <blockquote>
 <div><div class="admonition hint">
 <p class="admonition-title">Indication</p>
-<p>Bonne syntaxe</p>
+<p><strong>Bonne syntaxe</strong></p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos">2</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, world&quot;</span><span class="p">)</span>
 <span class="linenos">3</span><span class="p">}</span>
