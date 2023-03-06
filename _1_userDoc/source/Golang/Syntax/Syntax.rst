@@ -36,7 +36,7 @@ Il y a 17 types de bases et 2 alias :
     * int  int8  int16  int32  int64
       uint uint8 uint16 uint32 uint64 uintptr
 
-      .. info:: 
+      .. note:: 
 
             **int** et **uint** doivent être utilisés par défaut sauf si une taille spécifique est
             necessaire. **int** et **unint** sont dépendent de la plateforme pour laquelle il sont
@@ -44,7 +44,7 @@ Il y a 17 types de bases et 2 alias :
 
     * byte 
     
-      .. info:: 
+      .. note:: 
 
             **byte** est un alias de uint8. Il est utilisé pour représenter un byte de données.
 
@@ -52,7 +52,7 @@ Il y a 17 types de bases et 2 alias :
 
     * rune
     
-      .. info::
+      .. note::
         
             **rune** est un alias de int32. il est utiliser pour représenter un caractère Unicode.
 
@@ -60,7 +60,7 @@ Il y a 17 types de bases et 2 alias :
 
     #. Literal Value Exemple
 
-        +===========+===========================================================+
+        +-----------+-----------------------------------------------------------+
         | Types     | Exemples                                                  |
         +===========+===========================================================+
         | int       | 20, -20.                                                  |
@@ -82,14 +82,71 @@ Il y a 17 types de bases et 2 alias :
         +-----------+-----------------------------------------------------------+
         | string    | "Hello". Character sequences escaped with a backslash are |
         |           | interpreted if the value is enclosed in double quotes     |
-        |           | ("Hello\n"). Escape sequences are not interpreted if the  |
-        |           | is enclosed backquotes (`Hello\n`).                       |
+        |           | ("Hello\\n"). Escape sequences are not interpreted if the |
+        |           | is enclosed backquotes (\`Hello\\n\`).                    |
         +-----------+-----------------------------------------------------------+
-        | rune      | 'A', '\n', '\u00A5', '€'.                                 |
+        | rune      | \'A\', \'\\n\', \'\\u00A5\', \'€\'.                       |
         |           | Characters glyphs, and escape sequences are enclosed in   |
         |           | single quotes.                                            |
         +-----------+-----------------------------------------------------------+
 
+Conversion entre basic tpyes
+============================
+
+**Go** applique une règle stricte sur les conversions. Toutes les conversions doivent être
+spécifiquement définie. Il n'est donc pas possible d'additionner un **int** avec un **float32**
+
+    .. warning::
+
+        **Impossible d'additionner des types différents**
+
+        .. code:: go
+            :number-lines:
+            :force:
+            
+            func main() {
+                const price int = 275
+                const tax float32 = 27.50
+
+                fmt.Println(price + tax)
+            }
+
+        .. raw:: html
+
+            <u>Results :</u>
+
+        .. code:: go
+
+            ./prog.go:8:14: invalid operation: price + tax (mismatched types int and float32)
+
+
+
+
+
+####
+
+----------
+Constantes
+----------
+
+Les constantes se déclarent avec le mot clef **const**.
+
+Il y a deux types de déclaration de constantes :
+
+    * Les déclaration Typées
+
+    * Les déclaration non-Typées
+
+Constantes typées
+=================
+
+[WIP]
+
+
+Constantes non-typées
+=====================
+
+[WIP]
 
 ####
 
@@ -101,20 +158,37 @@ La première accolade doit être positionnée sur la même que l'élément au qu
 
 Exemple pour une fonction :
 
-    .. code:: go
-        :number-lines:
-        :force:
+    .. hint:: 
+        
+        **Bonne syntaxe**
+        
+        .. code:: go
+            :number-lines:
+            :force:
 
-        // Bonne Syntaxe
-        func main () {
-            // ...
+            func main() {
+                fmt.Println("Hello, world")
             }
 
-        // Mauviase Syntaxe
-        func main ()
-        {
-            // ...
+            // Results
+            ==> Hello, world
+
+
+    .. warning:: 
+        
+        **Mauvaise Syntaxe**
+
+        .. code:: go
+            :number-lines:
+            :force:
+
+            func main ()
+            {
+                fmt.Println("Hello, world")
             }
+
+            // Results
+            ==> ./prog.go:8:1: syntax error: unexpected semicolon or newline before {
 
 ####
 
