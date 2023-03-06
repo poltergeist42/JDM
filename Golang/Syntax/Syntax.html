@@ -277,35 +277,48 @@ compilé. Il pourrons donc être soit un int/uint32 soit un int/uint64.</p>
 <ol class="arabic">
 <li><p>Literal Value Exemple</p>
 <blockquote>
-<div><p>+===========+===========================================================+
-| Types     | Exemples                                                  |
-+===========+===========================================================+
-| int       | 20, -20.                                                  |
-|           | Values can also be expressed in hex (0x14), octal (0o24), |
-|           | and binary notation (0b0010100).                          |
-+———–+———————————————————–+
-| uint      | There are no unint literals. All literal whole numbers    |
-|           | are treated as int values.                                |
-+———–+———————————————————–+
-| byte      | There are no byte literals. Bytes are typically expressed |
-|           | as integer literals (such as 101) or run literals (“e”)   |
-|           | since byte type is an alias for the unint8 type.          |
-+———–+———————————————————–+
-| float64   | 20.2, -20.2, 1.2e10, -1.2e10.                             |
-|           | Values can also be expressed in hex notation (0x2p10),    |
-|           | Altrough the exposant is expressed in decimal digits.     |
-+———–+———————————————————–+
-| bool      | true, false                                               |
-+———–+———————————————————–+
-| string    | « Hello ». Character sequences escaped with a backslash are |
-|           | interpreted if the value is enclosed in double quotes     |
-|           | (« Hellon »). Escape sequences are not interpreted if the  |
-|           | is enclosed backquotes (<cite>Hellon</cite>).                       |
-+———–+———————————————————–+
-| rune      | “A”, “n”, “u00A5”, “€”.                                 |
-|           | Characters glyphs, and escape sequences are enclosed in   |
-|           | single quotes.                                            |
-+———–+———————————————————–+</p>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Types</p></th>
+<th class="head"><p>Exemples</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>20, -20.
+Values can also be expressed in hex (0x14), octal (0o24),
+and binary notation (0b0010100).</p></td>
+</tr>
+<tr class="row-odd"><td><p>uint</p></td>
+<td><p>There are no unint literals. All literal whole numbers
+are treated as int values.</p></td>
+</tr>
+<tr class="row-even"><td><p>byte</p></td>
+<td><p>There are no byte literals. Bytes are typically expressed
+as integer literals (such as 101) or run literals (“e”)
+since byte type is an alias for the unint8 type.</p></td>
+</tr>
+<tr class="row-odd"><td><p>float64</p></td>
+<td><p>20.2, -20.2, 1.2e10, -1.2e10.
+Values can also be expressed in hex notation (0x2p10),
+Altrough the exposant is expressed in decimal digits.</p></td>
+</tr>
+<tr class="row-even"><td><p>bool</p></td>
+<td><p>true, false</p></td>
+</tr>
+<tr class="row-odd"><td><p>string</p></td>
+<td><p>« Hello ». Character sequences escaped with a backslash are
+interpreted if the value is enclosed in double quotes
+(« Hellon »). Escape sequences are not interpreted if the
+is enclosed backquotes (<cite>Hellon</cite>).</p></td>
+</tr>
+<tr class="row-even"><td><p>rune</p></td>
+<td><p>“A”, “n”, “u00A5”, “€”.
+Characters glyphs, and escape sequences are enclosed in
+single quotes.</p></td>
+</tr>
+</tbody>
+</table>
 </div></blockquote>
 </li>
 </ol>
