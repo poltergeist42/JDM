@@ -166,7 +166,10 @@ Exemple pour une fonction :
             ==> Hello, world
 
 
-    .. warning:: **Mauvaise Syntaxe**
+    .. warning:: 
+        
+        **Mauvaise Syntaxe**
+        ++++++++++++++++++++
 
         .. code:: go
             :number-lines:
