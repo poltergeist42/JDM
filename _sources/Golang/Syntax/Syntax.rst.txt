@@ -153,6 +153,7 @@ La première accolade doit être positionnée sur la même que l'élément au qu
 Exemple pour une fonction :
 
     .. hint::
+        :name: Bonne syntaxe
         
         .. code:: go
             :number-lines:
