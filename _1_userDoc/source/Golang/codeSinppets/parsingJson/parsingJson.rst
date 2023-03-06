@@ -59,8 +59,8 @@ interne.
 
     #. On commence par importer les bibliothèques
 
-       Seule la bibliothèque "encoding/json" est nécéssaire. la bibliothèque "fmt" n'est utiliée que
-       pour l'affichage.
+        Seule la bibliothèque "encoding/json" est nécéssaire. la bibliothèque "fmt" n'est utiliée
+        que pour l'affichage.
 
         .. code:: Go
 
@@ -74,11 +74,12 @@ interne.
     #. On définit ensuite un struct qui sera utilisé pour la mise en forme des données extraites du
        json.
 
-       Puisque tous les éléments d'un struct doivent être publique, donc commencer par une Majuscule,
-       il faut établir une correspondance entre les membres du struct et les clés du json.
+        Puisque tous les éléments d'un struct doivent être publique, donc commencer par une
+        Majuscule, il faut établir une correspondance entre les membres du struct et les clés du
+        json.
 
-       Cette correspondence s'établie en ajoutant : `json:"Nom_de_la_clef"` à la suite de la
-       déclaration du membre.
+        Cette correspondence s'établie en ajoutant : `json:"Nom_de_la_clef"` à la suite de la
+        déclaration du membre.
 
         .. code:: Go
 
@@ -89,7 +90,7 @@ interne.
 
     #. Json Data
 
-       Les données Json son fournie manuellement dans une variable.
+        Les données Json son fournie manuellement dans une variable.
 
         .. code:: Go
 
@@ -116,10 +117,10 @@ interne.
 
     #. Fonction 'main'
 
-       Ici, tout le traitement s'effectue, par facilité, dans la fonction 'main'. Les best practices
-       étant au contraire de travailler le plus possible avec des fonctions et des modules pour que
-       la fonction 'main' soit le plus simple possible et effectue le moins possible de traitement
-       direct.
+        Ici, tout le traitement s'effectue, par facilité, dans la fonction 'main'. Les best
+        practices étant au contraire de travailler le plus possible avec des fonctions et des
+        modules pour que la fonction 'main' soit le plus simple possible et effectue le moins
+        possible de traitement direct.
 
         .. code:: Go
 
@@ -132,15 +133,15 @@ interne.
            :width: 520 px
            :align: center
        
-       "map" permet de créer un dictionnaire. C'est à dire de réunir un ensemble de données sous la
-       forme Clefs / Valeurs.
+        "map" permet de créer un dictionnaire. C'est à dire de réunir un ensemble de données sous la
+        forme Clefs / Valeurs.
 
-       Nous créons une variable "config" de type "map". Ce "map" prendra des clefs de type "string"
-       et des valeurs de type "JsonStruct".
+        Nous créons une variable "config" de type "map". Ce "map" prendra des clefs de type "string"
+        et des valeurs de type "JsonStruct".
 
-       Cela signifie qu'une instance du struct "JsonStruct" sera créée pour chaque clefs ajoutées
-       dans "config". Dans notre exemple, les clefs seront les clefs primaires du Json ("Dropbox",
-       "Polux", "Minux" et "Labux")
+        Cela signifie qu'une instance du struct "JsonStruct" sera créée pour chaque clefs ajoutées
+        dans "config". Dans notre exemple, les clefs seront les clefs primaires du Json ("Dropbox",
+        "Polux", "Minux" et "Labux")
 
         .. code:: Go
 
@@ -150,8 +151,8 @@ interne.
 
     #. Remplissage de 'config'
 
-       On parcour l'ensemble du fichier json. A Chaque nouvelle entrée dans le Json, on crée une
-       instance de JsonStruct que l'on rempli avec les données associé à chaque clef primaire.
+        On parcour l'ensemble du fichier json. A Chaque nouvelle entrée dans le Json, on crée une
+        instance de JsonStruct que l'on rempli avec les données associé à chaque clef primaire.
 
         .. code:: Go
 
@@ -216,11 +217,11 @@ lecture.
     #. On définit ensuite un struct qui sera utilisé pour la mise en forme des données extraites du
        json.
 
-       Puisque tous les éléments d'un struct doivent être publique, donc commencer par une Majuscule,
-       il faut établir une correspondance entre les membres du struct et les clés du json.
+        Puisque tous les éléments d'un struct doivent être publique, donc commencer par une Majuscule,
+        il faut établir une correspondance entre les membres du struct et les clés du json.
 
-       Cette correspondence s'établie en ajoutant : `json:"Nom_de_la_clef"` à la suite de la
-       déclaration du membre.
+        Cette correspondence s'établie en ajoutant : `json:"Nom_de_la_clef"` à la suite de la
+        déclaration du membre.
 
         .. code:: Go
 
@@ -231,13 +232,21 @@ lecture.
 
     #. Json Data
 
-       Le chemin du fichier json est donné dans la variable 'fileName'.
+        Le chemin du fichier json est donné dans la variable 'fileName'.
 
-       .. code:: Go
+        .. code:: Go
 
             var fileName string = "./computerPathList.json"
 
-    
+    #. Parcour du fichier json
+
+        La fonction 'getJsonFile' prend en arguement une variable de type 'string' cet arguement
+        correspond au nom du fichier. Elle retourne un 'slice' de type 'byte'.
+
+        Cette fonction contrôle si le fichier existe puis le parcour et le copie en mémoire dans un
+        tableau de 'byte'.
+
+        .. code:: Go
 
             // Function to parse the json file
             func getJsonFile(fileName string) []byte {
@@ -246,7 +255,24 @@ lecture.
                 if err != nil {
                     log.Fatal("Error when opening file: ", err)
                 }
+
+        Le fichier 'jsonFile' sera fermé automatiquement dès que le traitement de ce fichier sera
+        terminé. Il s'agit d'une fermeture différée (command 'defer').
+
+        La bonne pratique est de placer le 'defer' juste après l'ouverture du fichier pour être
+        certain de ne pas l'oublier.
+
+        .. code:: Go
+
                 defer jsonFile.Close()
+
+        On lit ensuite le fichier jusqu'à la fin et on retourne un 'slice' de 'byte' : 'byteValue'.
+
+        N.b : Cette fonction de lecture de fichier peut consommer beaucoup de mémoire en cas de
+        lecture d'un très gros fichier. Pour la lecture gros fichier, il peut être plus efficace
+        d'utiliser des fonction de lecture avec un buffer (ex: 'ReadAtLeast' ou 'ReadFull').
+
+        .. code:: Go
 
                 // Read the file until EOF. The return is a Slice of byte
                 byteValue, err := io.ReadAll(jsonFile)
@@ -255,6 +281,16 @@ lecture.
                 }
                 return byteValue
             }
+
+    #. Contrôle de l'éxistance d'une clef dans le 'map' de 'struct'
+
+        La fonction prend en arguement le 'map' de 'struct' de type 'JsonStruct' et un 'string' puis
+        retourne un 'boolean'.
+
+        L'argument de type "string" correspond au nom de la clef dont ont cherche à vérifier
+        l'existance dans le struct.
+
+        .. code:: Go
 
             // Function to check if a key is in the map struct
             func keyInMap(refMap map[string]JsonStruct, key string) bool {
@@ -266,9 +302,9 @@ lecture.
                 }
             }
 
-            func main() {
-                // printHelper()
+    #. La 
 
+            func main() {
                 byteValue := getJsonFile(fileName)
 
                 // Creation of a 'map' (Dictionary) of type 'JsonStruct'
@@ -277,7 +313,7 @@ lecture.
                 // The json Data must be provided as a slice of byte
                 json.Unmarshal(byteValue, &config)
 
-                fmt.Printf("Type of 'config: %T\n", config)
+                fmt.Printf("Type of 'config': %T\n", config)
 
                 isPresent := keyInMap(config, "aaa")
                 fmt.Println("isPresent: ", isPresent)

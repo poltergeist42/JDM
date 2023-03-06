@@ -121,7 +121,7 @@ Il y a deux commandes principalement utilisées pour la compilation.
         utiliser pendant le dévelopement.
 
         .. code:: shell
-            :number-lines:G
+            :number-lines:
             :force:
 
             go run .
