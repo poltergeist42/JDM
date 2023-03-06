@@ -111,7 +111,9 @@ spécifiquement définie. Il n'est donc pas possible d'additionner un **int** av
                 fmt.Println(price + tax)
             }
 
-        <u>*Results*</u> :
+        .. raw:: html
+
+            <u>Results :</u>
 
         .. code:: go
 
