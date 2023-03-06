@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Détails syntaxiques" href="../Syntax/Syntax.html" />
@@ -241,7 +242,7 @@
 <p>Après le téléchargement du binnaire, il faut supprimer les version existantes avant de décompresser
 l’archive dans le dossier « /usr/local »</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> rm -rf /usr/local/go <span class="o">&amp;&amp;</span> tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/usr/local/go<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>tar<span class="w"> </span>-C<span class="w"> </span>/usr/local<span class="w"> </span>-xzf<span class="w"> </span>go1.19.4.linux-amd64.tar.gz
 </pre></div>
 </div>
 </div></blockquote>
@@ -249,7 +250,7 @@ l’archive dans le dossier « /usr/local »</p>
 « $HOME/.profile ». Attention si le shell et différent de bash, l’entrée sera à ajouter dans fichier
 différent. Ex: pour ZSH « $HOME/.zshrc ».</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/go/bin
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/go/bin
 </pre></div>
 </div>
 </div></blockquote>
@@ -263,27 +264,27 @@ module.</p>
 <p>N.B : Pour u programme, il faut également créer le fichier « main.go »</p>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Se placer dans le dossier de déstination</span>
-<span class="linenos">2</span><span class="nb">cd</span> monSupperModule
+<span class="linenos">2</span><span class="nb">cd</span><span class="w"> </span>monSupperModule
 <span class="linenos">3</span>
 <span class="linenos">4</span><span class="c1"># Initialiser le module</span>
 <span class="linenos">5</span><span class="c1"># go mod init [nom_du_package]</span>
-<span class="linenos">6</span>go mod init monSupperModule
+<span class="linenos">6</span>go<span class="w"> </span>mod<span class="w"> </span>init<span class="w"> </span>monSupperModule
 </pre></div>
 </div>
 </div></blockquote>
 <section id="structure-minimum-d-une-application">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Structure minimum d’une application</a><a class="headerlink" href="#structure-minimum-d-une-application" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
-<div><div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// Tous les fichiers &quot;.go&quot; doivent appartenir à un package</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<div><div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// Tous les fichiers &quot;.go&quot; doivent appartenir à un package</span>
+<span class="linenos"> 2</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="c1">// Import des package ou bibliothèque extérieur</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="c1">// Import des package ou bibliothèque extérieur</span>
+<span class="linenos"> 5</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="c1">// Déclaration de la fonction principale.</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Todo: add some features&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="linenos">10</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="c1">// Déclaration de la fonction principale.</span>
+<span class="linenos"> 8</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Todo: add some features&quot;</span><span class="p">)</span>
+<span class="linenos">10</span><span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -299,12 +300,12 @@ module.</p>
 <blockquote>
 <div><p><strong>« go build »</strong> permet de compiler le code pour produire le fichier binnaire. Il sera alors
 possible d’éxécuter manuellement le programme ou de l’appeler au travers d’un script.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>go build .
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>go<span class="w"> </span>build<span class="w"> </span>.
 </pre></div>
 </div>
 <p>N.B : Sous linux, il est possible que le binnaire ne soit pas exécutable. Il faudra donc le
 rendre exécutable avec la commande « chmod »</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>chmod +x <span class="o">[</span>nom_du_binnaire<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>chmod<span class="w"> </span>+x<span class="w"> </span><span class="o">[</span>nom_du_binnaire<span class="o">]</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -314,6 +315,9 @@ rendre exécutable avec la commande « chmod »</p>
 <div><p><strong>« go run »</strong> compile le code et l’éxécute immédiatement sans créer de fichier binnaire. Il
 n’y a donc pas de droits à gérer sur le fichier de sortie. Cette commande est surtout
 utiliser pendant le dévelopement.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>go<span class="w"> </span>run<span class="w"> </span>.
+</pre></div>
+</div>
 </div></blockquote>
 </li>
 </ol>
@@ -322,6 +326,7 @@ utiliser pendant le dévelopement.</p>
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id1" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://go.dev/dl/">https://go.dev/dl/</a></p>
@@ -329,6 +334,7 @@ utiliser pendant le dévelopement.</p>
 <aside class="footnote brackets" id="id3" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">2</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://go.dev/doc/install">https://go.dev/doc/install</a></p>
+</aside>
 </aside>
 </section>
 </section>
@@ -360,13 +366,14 @@ utiliser pendant le dévelopement.</p>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
         </div>
     </div>  
 

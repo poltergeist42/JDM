@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Recherche" href="../../../search.html" />
     <link rel="next" title="HPVC" href="../../../HPVC.html" />
@@ -237,15 +238,15 @@ dynamique.</p>
 <section id="json-structure">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Json Structuré</a><a class="headerlink" href="#json-structure" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
-<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;merlin&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;metiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;enchanteur&quot;</span><span class="w"></span>
-<span class="p">},</span><span class="w"></span>
-<span class="p">{</span><span class="w">   </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Arthur&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;metier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;roi&quot;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;merlin&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;metiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;enchanteur&quot;</span>
+<span class="p">},</span>
+<span class="p">{</span><span class="w">   </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Arthur&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;metier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;roi&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -253,16 +254,16 @@ dynamique.</p>
 <section id="json-non-structure">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Json Non structuré</a><a class="headerlink" href="#json-non-structure" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
-<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;merlin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;metier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;enchanteur&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;Arthur&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;metier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;roi&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;merlin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;metier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;enchanteur&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;Arthur&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;metier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;roi&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -273,38 +274,39 @@ interne.</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p>On commence par importer les bibliothèques</p>
-<p>Seule la bibliothèque « encoding/json » est nécéssaire. la bibliothèque « fmt » n’est utiliée que
-pour l’affichage.</p>
 <blockquote>
-<div><div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<div><p>Seule la bibliothèque « encoding/json » est nécéssaire. la bibliothèque « fmt » n’est utiliée
+que pour l’affichage.</p>
+<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;encoding/json&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<span class="p">)</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;encoding/json&quot;</span>
+<span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>On définit ensuite un struct qui sera utilisé pour la mise en forme des données extraites du
 json.</p>
-<p>Puisque tous les éléments d’un struct doivent être publique, donc commencer par une Majuscule,
-il faut établir une correspondance entre les membres du struct et les clés du json.</p>
+<blockquote>
+<div><p>Puisque tous les éléments d’un struct doivent être publique, donc commencer par une
+Majuscule, il faut établir une correspondance entre les membres du struct et les clés du
+json.</p>
 <p>Cette correspondence s’établie en ajoutant : <cite>json: »Nom_de_la_clef »</cite> à la suite de la
 déclaration du membre.</p>
-<blockquote>
-<div><div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="kd">type</span><span class="w"> </span><span class="nx">JsonStruct</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">Path</span><span class="w">    </span><span class="kt">string</span><span class="w">   </span><span class="s">`json:&quot;path&quot;`</span><span class="w"></span>
-<span class="w">    </span><span class="nx">Exclude</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;exclude&quot;`</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="kd">type</span><span class="w"> </span><span class="nx">JsonStruct</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Path</span><span class="w">    </span><span class="kt">string</span><span class="w">   </span><span class="s">`json:&quot;path&quot;`</span>
+<span class="w">    </span><span class="nx">Exclude</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;exclude&quot;`</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Json Data</p>
-<p>Les données Json son fournie manuellement dans une variable.</p>
 <blockquote>
-<div><div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="c1">// jsonData from a variable</span><span class="w"></span>
+<div><p>Les données Json son fournie manuellement dans une variable.</p>
+<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="c1">// jsonData from a variable</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">jsonData</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">`{</span>
 <span class="s">        &quot;Dropbox&quot;: {</span>
 <span class="s">            &quot;path&quot;: &quot;/home/polter/Dropbox/WEB/atelier/project/_3_software/Atelier/&quot;,</span>
@@ -322,19 +324,19 @@ déclaration du membre.</p>
 <span class="s">            &quot;path&quot;:&quot;&quot;,</span>
 <span class="s">            &quot;exclude&quot;: []</span>
 <span class="s">        }</span>
-<span class="s">    }`</span><span class="w"></span>
+<span class="s">    }`</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Fonction “main”</p>
-<p>Ici, tout le traitement s’effectue, par facilité, dans la fonction “main”. Les best practices
-étant au contraire de travailler le plus possible avec des fonctions et des modules pour que
-la fonction “main” soit le plus simple possible et effectue le moins possible de traitement
-direct.</p>
 <blockquote>
-<div><div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// jsonData from a variable</span><span class="w"></span>
+<div><p>Ici, tout le traitement s’effectue, par facilité, dans la fonction “main”. Les best
+practices étant au contraire de travailler le plus possible avec des fonctions et des
+modules pour que la fonction “main” soit le plus simple possible et effectue le moins
+possible de traitement direct.</p>
+<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// jsonData from a variable</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -342,7 +344,6 @@ direct.</p>
 <li><p>Création d’un dictionnaire de struct (map[string]struct{})</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../_images/mapOfJsonStruct.svg"><img alt="../../../_images/mapOfJsonStruct.svg" class="align-center" src="../../../_images/mapOfJsonStruct.svg" width="520px" /></a>
-</div></blockquote>
 <p>« map » permet de créer un dictionnaire. C’est à dire de réunir un ensemble de données sous la
 forme Clefs / Valeurs.</p>
 <p>Nous créons une variable « config » de type « map ». Ce « map » prendra des clefs de type « string »
@@ -350,46 +351,45 @@ et des valeurs de type « JsonStruct ».</p>
 <p>Cela signifie qu’une instance du struct « JsonStruct » sera créée pour chaque clefs ajoutées
 dans « config ». Dans notre exemple, les clefs seront les clefs primaires du Json (« Dropbox »,
 « Polux », « Minux » et « Labux »)</p>
-<blockquote>
-<div><div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="c1">// Creation of a &#39;map&#39; (Dictionary)</span><span class="w"></span>
-<span class="c1">// Keys must be a type &#39;string&#39; and values must be a type &#39;JsonStruct&#39;</span><span class="w"></span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="nx">JsonStruct</span><span class="w"></span>
+<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="c1">// Creation of a &#39;map&#39; (Dictionary)</span>
+<span class="c1">// Keys must be a type &#39;string&#39; and values must be a type &#39;JsonStruct&#39;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="nx">JsonStruct</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Remplissage de “config”</p>
-<p>On parcour l’ensemble du fichier json. A Chaque nouvelle entrée dans le Json, on crée une
-instance de JsonStruct que l’on rempli avec les données associé à chaque clef primaire.</p>
 <blockquote>
-<div><div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="c1">// Unmarshal the json data and send it to the adress (&amp;) of of the map &#39;config&#39;</span><span class="w"></span>
-<span class="c1">// The json Data must be provided as a slice of byte</span><span class="w"></span>
-<span class="nx">json</span><span class="p">.</span><span class="nx">Unmarshal</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">jsonData</span><span class="p">),</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">config</span><span class="p">)</span><span class="w"></span>
+<div><p>On parcour l’ensemble du fichier json. A Chaque nouvelle entrée dans le Json, on crée une
+instance de JsonStruct que l’on rempli avec les données associé à chaque clef primaire.</p>
+<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="c1">// Unmarshal the json data and send it to the adress (&amp;) of of the map &#39;config&#39;</span>
+<span class="c1">// The json Data must be provided as a slice of byte</span>
+<span class="nx">json</span><span class="p">.</span><span class="nx">Unmarshal</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">jsonData</span><span class="p">),</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">config</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Pour accéder aux dnée de config, peux le parcourrir avec une ou plusieur boucle “for”</p>
 <blockquote>
-<div><div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;\n/**********/&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;key in &#39;config&#39;: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">)</span><span class="w"></span>
+<div><div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;\n/**********/&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;key in &#39;config&#39;: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">)</span>
 
-<span class="w">        </span><span class="c1">// Check if a key is in the map struct</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;\nAffichage du &#39;Path&#39; de %v: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">Path</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Check if a key is in the map struct</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;\nAffichage du &#39;Path&#39; de %v: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">Path</span><span class="p">)</span>
 
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">isNotEmpty</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">Exclude</span><span class="p">;</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">isNotEmpty</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;\nParcours des elements exclus:&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">exclude</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">Exclude</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">exclude</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="p">}</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">isNotEmpty</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">Exclude</span><span class="p">;</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">isNotEmpty</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;\nParcours des elements exclus:&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">exclude</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">Exclude</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">exclude</span><span class="p">)</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
 
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -412,103 +412,139 @@ lecture.</p>
 <li><p>La bibliothèque « os » est utilisée pour le traitement des fichiers.</p></li>
 </ul>
 <blockquote>
-<div><div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<div><div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;encoding/json&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;io&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;os&quot;</span><span class="w"></span>
-<span class="p">)</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;encoding/json&quot;</span>
+<span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<span class="w">    </span><span class="s">&quot;io&quot;</span>
+<span class="w">    </span><span class="s">&quot;log&quot;</span>
+<span class="w">    </span><span class="s">&quot;os&quot;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>On définit ensuite un struct qui sera utilisé pour la mise en forme des données extraites du
 json.</p>
-<p>Puisque tous les éléments d’un struct doivent être publique, donc commencer par une Majuscule,
+<blockquote>
+<div><p>Puisque tous les éléments d’un struct doivent être publique, donc commencer par une Majuscule,
 il faut établir une correspondance entre les membres du struct et les clés du json.</p>
 <p>Cette correspondence s’établie en ajoutant : <cite>json: »Nom_de_la_clef »</cite> à la suite de la
 déclaration du membre.</p>
-<blockquote>
-<div><div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="kd">type</span><span class="w"> </span><span class="nx">JsonStruct</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">Path</span><span class="w">    </span><span class="kt">string</span><span class="w">   </span><span class="s">`json:&quot;path&quot;`</span><span class="w"></span>
-<span class="w">    </span><span class="nx">Exclude</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;exclude&quot;`</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="kd">type</span><span class="w"> </span><span class="nx">JsonStruct</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Path</span><span class="w">    </span><span class="kt">string</span><span class="w">   </span><span class="s">`json:&quot;path&quot;`</span>
+<span class="w">    </span><span class="nx">Exclude</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;exclude&quot;`</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Json Data</p>
-<p>Le chemin du fichier json est donné dans la variable “fileName”.</p>
-<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">fileName</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;./computerPathList.json&quot;</span><span class="w"></span>
-
-
-
-<span class="c1">// Function to parse the json file</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="nx">getJsonFile</span><span class="p">(</span><span class="nx">fileName</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Json Data from an external file</span><span class="w"></span>
-<span class="w">    </span><span class="nx">jsonFile</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="nx">fileName</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="s">&quot;Error when opening file: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">jsonFile</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
-
-<span class="w">    </span><span class="c1">// Read the file until EOF. The return is a Slice of byte</span><span class="w"></span>
-<span class="w">    </span><span class="nx">byteValue</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">io</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">jsonFile</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="s">&quot;Error when reading Data: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">byteValue</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="c1">// Function to check if a key is in the map struct</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="nx">keyInMap</span><span class="p">(</span><span class="nx">refMap</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="nx">JsonStruct</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">refMap</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// printHelper()</span><span class="w"></span>
-
-<span class="w">    </span><span class="nx">byteValue</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">getJsonFile</span><span class="p">(</span><span class="nx">fileName</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">    </span><span class="c1">// Creation of a &#39;map&#39; (Dictionary) of type &#39;JsonStruct&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="nx">JsonStruct</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Unmarshal the json data and send it to the adress (&amp;) of of the map &#39;config&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// The json Data must be provided as a slice of byte</span><span class="w"></span>
-<span class="w">    </span><span class="nx">json</span><span class="p">.</span><span class="nx">Unmarshal</span><span class="p">(</span><span class="nx">byteValue</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">config</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Type of &#39;config: %T\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">    </span><span class="nx">isPresent</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">keyInMap</span><span class="p">(</span><span class="nx">config</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;aaa&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;isPresent: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">isPresent</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">pathIsNotEmpty</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">Path</span><span class="p">;</span><span class="w"> </span><span class="nx">pathIsNotEmpty</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;\n/**********/&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;key in &#39;config&#39;: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;\nAffichage du &#39;Path&#39; de %v: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">Path</span><span class="p">)</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">excludeIsNotEmpty</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">Exclude</span><span class="p">;</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">excludeIsNotEmpty</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;\nParcours des elements exclus:&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">exclude</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">config</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">Exclude</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">exclude</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="p">}</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<blockquote>
+<div><p>Le chemin du fichier json est donné dans la variable “fileName”.</p>
+<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">fileName</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;./computerPathList.json&quot;</span>
 </pre></div>
 </div>
+</div></blockquote>
+</li>
+<li><p>Parcour du fichier json</p>
+<blockquote>
+<div><p>La fonction “getJsonFile” prend en arguement une variable de type “string” cet arguement
+correspond au nom du fichier. Elle retourne un “slice” de type “byte”.</p>
+<p>Cette fonction contrôle si le fichier existe puis le parcour et le copie en mémoire dans un
+tableau de “byte”.</p>
+<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="c1">// Function to parse the json file</span>
+<span class="kd">func</span><span class="w"> </span><span class="nx">getJsonFile</span><span class="p">(</span><span class="nx">fileName</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Json Data from an external file</span>
+<span class="w">    </span><span class="nx">jsonFile</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="nx">fileName</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="s">&quot;Error when opening file: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Le fichier “jsonFile” sera fermé automatiquement dès que le traitement de ce fichier sera
+terminé. Il s’agit d’une fermeture différée (command “defer”).</p>
+<p>La bonne pratique est de placer le “defer” juste après l’ouverture du fichier pour être
+certain de ne pas l’oublier.</p>
+<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="k">defer</span><span class="w"> </span><span class="nx">jsonFile</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>On lit ensuite le fichier jusqu’à la fin et on retourne un “slice” de “byte” : “byteValue”.</p>
+<p>N.b : Cette fonction de lecture de fichier peut consommer beaucoup de mémoire en cas de
+lecture d’un très gros fichier. Pour la lecture gros fichier, il peut être plus efficace
+d’utiliser des fonction de lecture avec un buffer (ex: “ReadAtLeast” ou “ReadFull”).</p>
+<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1">// Read the file until EOF. The return is a Slice of byte</span>
+<span class="w">    </span><span class="nx">byteValue</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">io</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">jsonFile</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="s">&quot;Error when reading Data: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">byteValue</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Contrôle de l’éxistance d’une clef dans le “map” de “struct”</p>
+<blockquote>
+<div><p>La fonction prend en arguement le “map” de “struct” de type “JsonStruct” et un “string” puis
+retourne un “boolean”.</p>
+<p>L’argument de type « string » correspond au nom de la clef dont ont cherche à vérifier
+l’existance dans le struct.</p>
+<div class="highlight-Go notranslate"><div class="highlight"><pre><span></span><span class="c1">// Function to check if a key is in the map struct</span>
+<span class="kd">func</span><span class="w"> </span><span class="nx">keyInMap</span><span class="p">(</span><span class="nx">refMap</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="nx">JsonStruct</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">refMap</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>La</p>
+<blockquote>
+<div><dl>
+<dt>func main() {</dt><dd><p>byteValue := getJsonFile(fileName)</p>
+<p>// Creation of a “map” (Dictionary) of type “JsonStruct”
+var config map[string]JsonStruct
+// Unmarshal the json data and send it to the adress (&amp;) of of the map “config”
+// The json Data must be provided as a slice of byte
+json.Unmarshal(byteValue, &amp;config)</p>
+<p>fmt.Printf(« Type of “config”: %Tn », config)</p>
+<p>isPresent := keyInMap(config, « aaa »)
+fmt.Println(« isPresent: « , isPresent)</p>
+<p>for key, _ := range config {</p>
+<blockquote>
+<div><dl>
+<dt>if _, ok := config[key]; ok {</dt><dd><dl class="simple">
+<dt>if pathIsNotEmpty := config[key].Path; pathIsNotEmpty != «  » {</dt><dd><p>fmt.Println( »n/<strong>******</strong>/ »)
+fmt.Println(« key in “config”: « , key)
+fmt.Printf( »nAffichage du “Path” de %v: %vn », key, config[key].Path)</p>
+</dd>
+</dl>
+<p>}</p>
+<dl>
+<dt>if excludeIsNotEmpty := config[key].Exclude; len(excludeIsNotEmpty) != 0 {</dt><dd><p>fmt.Println( »nParcours des elements exclus: »)
+for _, exclude := range config[key].Exclude {</p>
+<blockquote>
+<div><p>fmt.Println(exclude)</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
 </li>
 </ol>
 </div></blockquote>
@@ -548,13 +584,14 @@ déclaration du membre.</p>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
         </div>
     </div>  
 

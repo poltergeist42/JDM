@@ -6,8 +6,7 @@ Détails syntaxiques
    single: Go Syntaxe
    single: Go; Go Syntaxe
 
-.. contents::
-    :depth: 3
+.. contents::    :depth: 3
     :backlinks: top
 
 ####
@@ -21,6 +20,76 @@ Aperçu globale
       apperçu concis de l'ensemble des éléments de syntaxe du language.
 
 .. _`Apprendre X en Y minutes`: https://learnxinyminutes.com/docs/fr-fr/go-fr/
+
+####
+
+------------
+Basic Types 
+------------
+
+Il y a 17 types de bases et 2 alias :
+
+    * bool
+
+    * string
+
+    * int  int8  int16  int32  int64
+      uint uint8 uint16 uint32 uint64 uintptr
+
+      .. info:: 
+
+            **int** et **uint** doivent être utilisés par défaut sauf si une taille spécifique est
+            necessaire. **int** et **unint** sont dépendent de la plateforme pour laquelle il sont
+            compilé. Il pourrons donc être soit un int/uint32 soit un int/uint64.
+
+    * byte 
+    
+      .. info:: 
+
+            **byte** est un alias de uint8. Il est utilisé pour représenter un byte de données.
+
+    * float32 float64
+
+    * rune
+    
+      .. info::
+        
+            **rune** est un alias de int32. il est utiliser pour représenter un caractère Unicode.
+
+    * complex64 complex128
+
+    #. Literal Value Exemple
+
+        +===========+===========================================================+
+        | Types     | Exemples                                                  |
+        +===========+===========================================================+
+        | int       | 20, -20.                                                  |
+        |           | Values can also be expressed in hex (0x14), octal (0o24), |
+        |           | and binary notation (0b0010100).                          |
+        +-----------+-----------------------------------------------------------+
+        | uint      | There are no unint literals. All literal whole numbers    |
+        |           | are treated as int values.                                |
+        +-----------+-----------------------------------------------------------+
+        | byte      | There are no byte literals. Bytes are typically expressed |
+        |           | as integer literals (such as 101) or run literals ('e')   |
+        |           | since byte type is an alias for the unint8 type.          |
+        +-----------+-----------------------------------------------------------+
+        | float64   | 20.2, -20.2, 1.2e10, -1.2e10.                             |
+        |           | Values can also be expressed in hex notation (0x2p10),    |
+        |           | Altrough the exposant is expressed in decimal digits.     |
+        +-----------+-----------------------------------------------------------+
+        | bool      | true, false                                               |
+        +-----------+-----------------------------------------------------------+
+        | string    | "Hello". Character sequences escaped with a backslash are |
+        |           | interpreted if the value is enclosed in double quotes     |
+        |           | ("Hello\n"). Escape sequences are not interpreted if the  |
+        |           | is enclosed backquotes (`Hello\n`).                       |
+        +-----------+-----------------------------------------------------------+
+        | rune      | 'A', '\n', '\u00A5', '€'.                                 |
+        |           | Characters glyphs, and escape sequences are enclosed in   |
+        |           | single quotes.                                            |
+        +-----------+-----------------------------------------------------------+
+
 
 ####
 

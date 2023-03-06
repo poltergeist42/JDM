@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Recherche" href="../../../../search.html" />
     <link rel="next" title="Weblinks" href="../Hooks/Hooks.html" />
@@ -141,6 +142,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../Golang/GetStarted/GetStarted.html">Get Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../Golang/Syntax/Syntax.html">Détails syntaxiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../Golang/vocabGlossary/vocabGlossary.html">Vocabulaire et Glossaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../Golang/codeSinppets/codeSinppets.html">Code Sinppets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../HPVC.html">HPVC</a></li>
@@ -239,8 +241,8 @@
 composant ne modifie pas sont état. On parle de <strong>Composant Stateless</strong>.</p>
 <p>Lorsqu’un composant doit modifier son état, on utilise une classe (ou des Hooks dans le cas d’une
 fonction).</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">famille</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="w">     </span><span class="nx">membre1</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">famille</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">     </span><span class="nx">membre1</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos"> 3</span><span class="w">         </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Pierre,</span>
 <span class="linenos"> 4</span><span class="s1">         age: 42,</span>
 <span class="linenos"> 5</span><span class="s1">         type: &#39;</span><span class="nx">humain</span><span class="s1">&#39;</span>
@@ -254,28 +256,30 @@ fonction).</p>
 <span class="linenos">13</span>
 <span class="linenos">14</span><span class="s1"> class App extends Component {</span>
 <span class="linenos">15</span><span class="s1">     // &#39;</span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">famille</span><span class="w"> </span><span class="p">}</span><span class="s1">&#39; en version destructuration</span>
-<span class="linenos">16</span><span class="s1">     // &#39;</span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">famille</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">famille</span><span class="w"> </span><span class="p">}</span><span class="err">&#39;</span><span class="w"> </span><span class="nx">en</span><span class="w"> </span><span class="nx">version</span><span class="w"> </span><span class="nx">normal</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">     </span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">famille</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">     </span><span class="nx">render</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">         </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">titre</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">         </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">famille</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">         </span><span class="k">return</span><span class="p">(</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">             </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">                 </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">titre</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">                 </span><span class="o">&lt;</span><span class="nx">Membre</span><span class="w"> </span><span class="nx">nom</span><span class="o">=</span><span class="p">{</span><span class="nx">famille</span><span class="p">.</span><span class="nx">membre1</span><span class="p">.</span><span class="nx">nom</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">                 </span><span class="o">&lt;</span><span class="nx">Membre</span><span class="w"> </span><span class="nx">nom</span><span class="o">=</span><span class="p">{</span><span class="nx">famille</span><span class="p">.</span><span class="nx">membre2</span><span class="p">.</span><span class="nx">nom</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">             </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">         </span><span class="p">)</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">29</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span><span class="s1">     // &#39;</span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">famille</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">famille</span><span class="w"> </span><span class="p">}</span><span class="err">&#39;</span><span class="w"> </span><span class="nx">en</span><span class="w"> </span><span class="nx">version</span><span class="w"> </span><span class="nx">normal</span>
+<span class="linenos">17</span><span class="w">     </span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">famille</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos">18</span><span class="w">     </span><span class="nx">render</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">19</span><span class="w">         </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">titre</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">props</span>
+<span class="linenos">20</span><span class="w">         </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">famille</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">state</span>
+<span class="linenos">21</span><span class="w">         </span><span class="k">return</span><span class="p">(</span>
+<span class="linenos">22</span><span class="w">             </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+<span class="linenos">23</span><span class="w">                 </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">titre</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+<span class="linenos">24</span><span class="w">                 </span><span class="o">&lt;</span><span class="nx">Membre</span><span class="w"> </span><span class="nx">nom</span><span class="o">=</span><span class="p">{</span><span class="nx">famille</span><span class="p">.</span><span class="nx">membre1</span><span class="p">.</span><span class="nx">nom</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
+<span class="linenos">25</span><span class="w">                 </span><span class="o">&lt;</span><span class="nx">Membre</span><span class="w"> </span><span class="nx">nom</span><span class="o">=</span><span class="p">{</span><span class="nx">famille</span><span class="p">.</span><span class="nx">membre2</span><span class="p">.</span><span class="nx">nom</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
+<span class="linenos">26</span><span class="w">             </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="linenos">27</span><span class="w">         </span><span class="p">)</span>
+<span class="linenos">28</span><span class="w">     </span><span class="p">}</span>
+<span class="linenos">29</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id1" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://codeburst.io/react-js-understanding-state-e875911e921c">https://codeburst.io/react-js-understanding-state-e875911e921c</a></p>
+</aside>
 </aside>
 </section>
 </section>
@@ -307,13 +311,14 @@ fonction).</p>
     <script type="text/javascript" src="../../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="../../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
         </div>
     </div>  
 

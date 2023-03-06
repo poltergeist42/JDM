@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Vocabulaire et Glossaire" href="../vocabGlossary/vocabGlossary.html" />
@@ -216,14 +217,15 @@
 <li><p><a class="reference internal" href="#details-syntaxiques" id="id3">Détails syntaxiques</a></p>
 <ul>
 <li><p><a class="reference internal" href="#apercu-globale" id="id4">Aperçu globale</a></p></li>
-<li><p><a class="reference internal" href="#accolades" id="id5">Accolades</a></p></li>
-<li><p><a class="reference internal" href="#main-go" id="id6">main.go</a></p></li>
-<li><p><a class="reference internal" href="#fonctions" id="id7">Fonctions</a></p>
+<li><p><a class="reference internal" href="#basic-types" id="id5">Basic Types</a></p></li>
+<li><p><a class="reference internal" href="#accolades" id="id6">Accolades</a></p></li>
+<li><p><a class="reference internal" href="#main-go" id="id7">main.go</a></p></li>
+<li><p><a class="reference internal" href="#fonctions" id="id8">Fonctions</a></p>
 <ul>
-<li><p><a class="reference internal" href="#forme-simple" id="id8">Forme simple</a></p></li>
+<li><p><a class="reference internal" href="#forme-simple" id="id9">Forme simple</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#weblinks" id="id9">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id10">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -241,21 +243,73 @@ apperçu concis de l’ensemble des éléments de syntaxe du language.</p></li>
 </dl>
 </section>
 <hr class="docutils" />
+<section id="basic-types">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Basic Types</a><a class="headerlink" href="#basic-types" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Il y a 17 types de bases et 2 alias :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>bool</p></li>
+<li><p>string</p></li>
+<li><p>int  int8  int16  int32  int64
+uint uint8 uint16 uint32 uint64 uintptr</p></li>
+<li><p>byte</p></li>
+<li><p>float32 float64</p></li>
+<li><p>rune</p></li>
+<li><p>complex64 complex128</p></li>
+</ul>
+<ol class="arabic">
+<li><p>Literal Value Exemple</p>
+<blockquote>
+<div><p>+===========+===========================================================+
+| Types     | Exemples                                                  |
++===========+===========================================================+
+| int       | 20, -20.                                                  |
+|           | Values can also be expressed in hex (0x14), octal (0o24), |
+|           | and binary notation (0b0010100).                          |
++———–+———————————————————–+
+| uint      | There are no unint literals. All literal whole numbers    |
+|           | are treated as int values.                                |
++———–+———————————————————–+
+| byte      | There are no byte literals. Bytes are typically expressed |
+|           | as integer literals (such as 101) or run literals (“e”)   |
+|           | since byte type is an alias for the unint8 type.          |
++———–+———————————————————–+
+| float64   | 20.2, -20.2, 1.2e10, -1.2e10.                             |
+|           | Values can also be expressed in hex notation (0x2p10),    |
+|           | Altrough the exposant is expressed in decimal digits.     |
++———–+———————————————————–+
+| bool      | true, false                                               |
++———–+———————————————————–+
+| string    | « Hello ». Character sequences escaped with a backslash are |
+|           | interpreted if the value is enclosed in double quotes     |
+|           | (« Hellon »). Escape sequences are not interpreted if the  |
+|           | is enclosed backquotes (<cite>Hellon</cite>).                       |
++———–+———————————————————–+
+| rune      | “A”, “n”, “u00A5”, “€”.                                 |
+|           | Characters glyphs, and escape sequences are enclosed in   |
+|           | single quotes.                                            |
++———–+———————————————————–+</p>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<hr class="docutils" />
 <section id="accolades">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Accolades</a><a class="headerlink" href="#accolades" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>La première accolade doit être positionnée sur la même que l’élément au quel elles appartiennent.</p>
 <p>Exemple pour une fonction :</p>
 <blockquote>
-<div><div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// Bonne Syntaxe</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
-<span class="linenos"> 4</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<div><div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// Bonne Syntaxe</span>
+<span class="linenos"> 2</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="c1">// ...</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">}</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="c1">// Mauviase Syntaxe</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="c1">// Mauviase Syntaxe</span>
+<span class="linenos"> 7</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span>
+<span class="linenos"> 8</span><span class="p">{</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// ...</span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -267,12 +321,12 @@ apperçu concis de l’ensemble des éléments de syntaxe du language.</p></li>
 fichier doit contenir une fonction « main() ». C’est cette fonction qui est appellée lors de
 l’éxécution du programme.</p>
 <blockquote>
-<div><div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// code minimum</span><span class="w"></span>
-<span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<div><div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// code minimum</span>
+<span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -294,9 +348,11 @@ un interface.</p>
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id1" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://learnxinyminutes.com/docs/fr-fr/go-fr/">https://learnxinyminutes.com/docs/fr-fr/go-fr/</a></p>
+</aside>
 </aside>
 </section>
 </section>
@@ -328,13 +384,14 @@ un interface.</p>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
         </div>
     </div>  
 

@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Recherche" href="../../../../search.html" />
     <link rel="next" title="States" href="../States/States.html" />
@@ -141,6 +142,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../Golang/GetStarted/GetStarted.html">Get Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../Golang/Syntax/Syntax.html">Détails syntaxiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../Golang/vocabGlossary/vocabGlossary.html">Vocabulaire et Glossaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../Golang/codeSinppets/codeSinppets.html">Code Sinppets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../HPVC.html">HPVC</a></li>
@@ -264,23 +266,25 @@ JavaScript (Dictionnaire) : {Attribut: Value}.</p></li>
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Les props sont en lecture seule</a><a class="headerlink" href="#les-props-sont-en-lecture-seule" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Une fonction est dite « pure » si elle ne tente pas de modifier ses entrées et retourne toujours le
 même résultat avec les même entrées.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// Une fonction pure (qui ne modifie pas ces propres entrées)</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">3</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">4</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// Une fonction pure (qui ne modifie pas ces propres entrées)</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">3</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="linenos">4</span><span class="w"> </span><span class="p">}</span>
 <span class="linenos">5</span>
-<span class="linenos">6</span><span class="w"> </span><span class="c1">// Une fonction impure (qui modifie ces propres entrées)</span><span class="w"></span>
-<span class="linenos">7</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">withdraw</span><span class="p">(</span><span class="nx">account</span><span class="p">,</span><span class="w"> </span><span class="nx">amout</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">8</span><span class="w">     </span><span class="nx">account</span><span class="p">.</span><span class="nx">total</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="nx">amount</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">9</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">6</span><span class="w"> </span><span class="c1">// Une fonction impure (qui modifie ces propres entrées)</span>
+<span class="linenos">7</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">withdraw</span><span class="p">(</span><span class="nx">account</span><span class="p">,</span><span class="w"> </span><span class="nx">amout</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">8</span><span class="w">     </span><span class="nx">account</span><span class="p">.</span><span class="nx">total</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="nx">amount</span><span class="p">;</span>
+<span class="linenos">9</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <hr class="docutils" />
 <section id="weblinks">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h3>
+<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id1" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0">https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0</a></p>
+</aside>
 </aside>
 </section>
 </section>
@@ -313,13 +317,14 @@ même résultat avec les même entrées.</p>
     <script type="text/javascript" src="../../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="../../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
         </div>
     </div>  
 

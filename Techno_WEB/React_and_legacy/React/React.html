@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Recherche" href="../../../search.html" />
     <link rel="next" title="Composant" href="Components/Components.html" />
@@ -139,6 +140,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Golang/GetStarted/GetStarted.html">Get Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Golang/Syntax/Syntax.html">Détails syntaxiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Golang/vocabGlossary/vocabGlossary.html">Vocabulaire et Glossaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Golang/codeSinppets/codeSinppets.html">Code Sinppets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../HPVC.html">HPVC</a></li>
@@ -286,8 +288,8 @@
 dépendances nécéssaires.</p>
 <p>Ce paquet doit être installer globallement.</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>npm install -g create-react-app     <span class="c1"># le &quot;-g&quot; permet d&#39;effectuer l&#39;installation de façon</span>
-<span class="linenos">2</span>                                    <span class="c1"># global. Cette étape n&#39;est à effectuer qu&#39;une seule fois.</span>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>create-react-app<span class="w">     </span><span class="c1"># le &quot;-g&quot; permet d&#39;effectuer l&#39;installation de façon</span>
+<span class="linenos">2</span><span class="w">                                    </span><span class="c1"># global. Cette étape n&#39;est à effectuer qu&#39;une seule fois.</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -296,10 +298,10 @@ dépendances nécéssaires.</p>
 fournit en arguement. Ce nom n’étant pas attache au projet React lui même, il peut être modifié
 ultérieurement.</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>npx create-react-app <span class="o">[</span>my-app<span class="o">]</span>       <span class="c1"># Attention, les noms des projets doivent être écris en</span>
-<span class="linenos">2</span>                                    <span class="c1"># minuscule uniquement.</span>
-<span class="linenos">3</span><span class="nb">cd</span> <span class="o">[</span>my-app<span class="o">]</span>
-<span class="linenos">4</span>npm start
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>npx<span class="w"> </span>create-react-app<span class="w"> </span><span class="o">[</span>my-app<span class="o">]</span><span class="w">       </span><span class="c1"># Attention, les noms des projets doivent être écris en</span>
+<span class="linenos">2</span><span class="w">                                    </span><span class="c1"># minuscule uniquement.</span>
+<span class="linenos">3</span><span class="nb">cd</span><span class="w"> </span><span class="o">[</span>my-app<span class="o">]</span>
+<span class="linenos">4</span>npm<span class="w"> </span>start
 </pre></div>
 </div>
 </div></blockquote>
@@ -307,10 +309,10 @@ ultérieurement.</p>
 Sur les version moderne de « npm » et « Create-react-app » il n’est plus nécéssaire de
 lancer « Create-react-app » depuis « npx ».</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>create-react-app <span class="o">[</span>my-app<span class="o">]</span>       <span class="c1"># Attention, les noms des projets doivent être écris en</span>
-<span class="linenos">2</span>                                <span class="c1"># minuscule uniquement.</span>
-<span class="linenos">3</span><span class="nb">cd</span> <span class="o">[</span>my-app<span class="o">]</span>
-<span class="linenos">4</span>npm start
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>create-react-app<span class="w"> </span><span class="o">[</span>my-app<span class="o">]</span><span class="w">       </span><span class="c1"># Attention, les noms des projets doivent être écris en</span>
+<span class="linenos">2</span><span class="w">                                </span><span class="c1"># minuscule uniquement.</span>
+<span class="linenos">3</span><span class="nb">cd</span><span class="w"> </span><span class="o">[</span>my-app<span class="o">]</span>
+<span class="linenos">4</span>npm<span class="w"> </span>start
 </pre></div>
 </div>
 </div></blockquote>
@@ -320,12 +322,12 @@ lancer « Create-react-app » depuis « npx ».</p>
 étant en frontend, il peut être préférable de le supprimer pour en créer un plus haut dans
 l’arborescence et ainsi englober le frontend et le backend .</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>~/myProject
-    <span class="p">|</span>
-    <span class="se">\-</span>-&gt; .git
-    <span class="p">|</span>
-    <span class="se">\-</span>-&gt; frontend <span class="c1"># React</span>
-    <span class="p">|</span>
-    <span class="se">\-</span>-&gt; backend <span class="c1"># Node-Express + Mongo</span>
+<span class="w">    </span><span class="p">|</span>
+<span class="w">    </span><span class="se">\-</span>-&gt;<span class="w"> </span>.git
+<span class="w">    </span><span class="p">|</span>
+<span class="w">    </span><span class="se">\-</span>-&gt;<span class="w"> </span>frontend<span class="w"> </span><span class="c1"># React</span>
+<span class="w">    </span><span class="p">|</span>
+<span class="w">    </span><span class="se">\-</span>-&gt;<span class="w"> </span>backend<span class="w"> </span><span class="c1"># Node-Express + Mongo</span>
 </pre></div>
 </div>
 <p>Create-react-app génére également un fichier « .gitignore » qui exclue le dossier « node_modules ». Ce
@@ -335,8 +337,8 @@ aussi le dossier « node_modules ».</p>
 dans le fichiers « package.json ».</p>
 <p>Si le projet est récupérer d’un dépot distant comme Github par exemple il faut alors installer les
 dépendances du projet.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="nb">cd</span> <span class="o">[</span>my-app<span class="o">]</span>
-<span class="linenos">2</span> npm install     <span class="c1">#lecture du fichier &quot;package.json&quot; pour identifier les dépendances à installer</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="o">[</span>my-app<span class="o">]</span>
+<span class="linenos">2</span><span class="w"> </span>npm<span class="w"> </span>install<span class="w">     </span><span class="c1">#lecture du fichier &quot;package.json&quot; pour identifier les dépendances à installer</span>
 </pre></div>
 </div>
 </section>
@@ -394,16 +396,16 @@ plus simple de procéder au routage à l’aide de « React-Router-DOM ».</p>
 <p>Les pages doivent, dans un premier temps, être le plus simple possible. Elles seront complétée par
 la suite avec leur contenu définitif.</p>
 <blockquote>
-<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// Titre du document : Home.js</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="w"></span>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// Titre du document : Home.js</span>
+<span class="linenos"> 2</span><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="kd">const</span><span class="w"> </span><span class="nx">Home</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">        </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Accueil</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">    </span><span class="p">)</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="kd">const</span><span class="w"> </span><span class="nx">Home</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Accueil</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="p">}</span>
 <span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Home</span><span class="w"></span>
+<span class="linenos">10</span><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Home</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -423,6 +425,7 @@ les redistribuer.</p>
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id1" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=f0X1Tl8aHtA">https://www.youtube.com/watch?v=f0X1Tl8aHtA</a></p>
@@ -430,6 +433,7 @@ les redistribuer.</p>
 <aside class="footnote brackets" id="id3" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">2</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://github.com/facebook/create-react-app">https://github.com/facebook/create-react-app</a></p>
+</aside>
 </aside>
 </section>
 </section>
@@ -461,13 +465,14 @@ les redistribuer.</p>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
         </div>
     </div>  
 
