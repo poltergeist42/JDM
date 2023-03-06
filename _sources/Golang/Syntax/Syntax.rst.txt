@@ -172,6 +172,12 @@ Exemple pour une fonction :
         // Results
         ==> Hello, world
 
+.. warning::
+
+    .. code:: go
+        :number-lines:
+        :force:
+
         // Mauviase Syntaxe
         func main ()
         {
