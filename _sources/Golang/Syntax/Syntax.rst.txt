@@ -90,6 +90,60 @@ Il y a 17 types de bases et 2 alias :
         |           | single quotes.                                            |
         +-----------+-----------------------------------------------------------+
 
+Conversion entre basic tpyes
+============================
+
+**Go** applique une règle stricte sur les conversions. Toutes les conversions doivent être
+spécifiquement définie. Il n'est donc pas possible d'additionner un **int** avec un **float32**
+
+    .. code:: go
+        :number-lines:
+        :force:
+        
+        package main
+
+        import (
+            "fmt"
+        )
+
+        func main() {
+
+            const price int = 275
+            const tax float32 = 27.50
+
+            fmt.Println(price + tax)
+        }
+
+        ==> ./main.go:22:14: invalid operation: price + tax (mismatched types int and float32)
+
+
+
+
+
+####
+
+----------
+Constantes
+----------
+
+Les constantes se déclarent avec le mot clef **const**.
+
+Il y a deux types de déclaration de constantes :
+
+    * Les déclaration Typées
+
+    * Les déclaration non-Typées
+
+Constantes typées
+=================
+
+[WIP]
+
+
+Constantes non-typées
+=====================
+
+[WIP]
 
 ####
 

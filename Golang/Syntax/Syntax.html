@@ -217,15 +217,25 @@
 <li><p><a class="reference internal" href="#details-syntaxiques" id="id3">Détails syntaxiques</a></p>
 <ul>
 <li><p><a class="reference internal" href="#apercu-globale" id="id4">Aperçu globale</a></p></li>
-<li><p><a class="reference internal" href="#basic-types" id="id5">Basic Types</a></p></li>
-<li><p><a class="reference internal" href="#accolades" id="id6">Accolades</a></p></li>
-<li><p><a class="reference internal" href="#main-go" id="id7">main.go</a></p></li>
-<li><p><a class="reference internal" href="#fonctions" id="id8">Fonctions</a></p>
+<li><p><a class="reference internal" href="#basic-types" id="id5">Basic Types</a></p>
 <ul>
-<li><p><a class="reference internal" href="#forme-simple" id="id9">Forme simple</a></p></li>
+<li><p><a class="reference internal" href="#conversion-entre-basic-tpyes" id="id6">Conversion entre basic tpyes</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#weblinks" id="id10">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#constantes" id="id7">Constantes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#constantes-typees" id="id8">Constantes typées</a></p></li>
+<li><p><a class="reference internal" href="#constantes-non-typees" id="id9">Constantes non-typées</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#accolades" id="id10">Accolades</a></p></li>
+<li><p><a class="reference internal" href="#main-go" id="id11">main.go</a></p></li>
+<li><p><a class="reference internal" href="#fonctions" id="id12">Fonctions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#forme-simple" id="id13">Forme simple</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#weblinks" id="id14">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -323,6 +333,50 @@ single quotes.</p></td>
 </li>
 </ol>
 </div></blockquote>
+<section id="conversion-entre-basic-tpyes">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Conversion entre basic tpyes</a><a class="headerlink" href="#conversion-entre-basic-tpyes" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p><strong>Go</strong> applique une règle stricte sur les conversions. Toutes les conversions doivent être
+spécifiquement définie. Il n’est donc pas possible d’additionner un <strong>int</strong> avec un <strong>float32</strong></p>
+<blockquote>
+<div><div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<span class="linenos"> 5</span><span class="p">)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">price</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">275</span>
+<span class="linenos">10</span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">tax</span><span class="w"> </span><span class="kt">float32</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">27.50</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">price</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">tax</span><span class="p">)</span>
+<span class="linenos">13</span><span class="p">}</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="o">==</span><span class="p">&gt;</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">main</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="w"> </span><span class="nx">invalid</span><span class="w"> </span><span class="nx">operation</span><span class="p">:</span><span class="w"> </span><span class="nx">price</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">tax</span><span class="w"> </span><span class="p">(</span><span class="nx">mismatched</span><span class="w"> </span><span class="nx">types</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="kt">float32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="constantes">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Constantes</a><a class="headerlink" href="#constantes" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Les constantes se déclarent avec le mot clef <strong>const</strong>.</p>
+<p>Il y a deux types de déclaration de constantes :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Les déclaration Typées</p></li>
+<li><p>Les déclaration non-Typées</p></li>
+</ul>
+</div></blockquote>
+<section id="constantes-typees">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Constantes typées</a><a class="headerlink" href="#constantes-typees" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>[WIP]</p>
+</section>
+<section id="constantes-non-typees">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Constantes non-typées</a><a class="headerlink" href="#constantes-non-typees" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>[WIP]</p>
+</section>
 </section>
 <hr class="docutils" />
 <section id="accolades">
