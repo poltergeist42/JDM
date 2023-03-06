@@ -114,6 +114,7 @@ spécifiquement définie. Il n'est donc pas possible d'additionner un **int** av
             fmt.Println(price + tax)
         }
 
+        // Results :
         ==> ./main.go:22:14: invalid operation: price + tax (mismatched types int and float32)
 
 
@@ -160,15 +161,25 @@ Exemple pour une fonction :
         :force:
 
         // Bonne Syntaxe
-        func main () {
-            // ...
-            }
+        package main
+
+        import "fmt"
+
+        func main() {
+            fmt.Println("Hello, world")
+        }
+
+        // Results
+        ==> Hello, world
 
         // Mauviase Syntaxe
         func main ()
         {
-            // ...
-            }
+            fmt.Println("Hello, world")
+        }
+
+        // Results
+        ==> ./prog.go:8:1: syntax error: unexpected semicolon or newline before {
 
 ####
 
