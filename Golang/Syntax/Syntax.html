@@ -374,8 +374,8 @@ mémoire dont la valeur ne peut pas être modifiée après sa déclaration.</p>
 <p>Le type de la constante est définie de façon explicite. Le compilateur appliquera se type sur la
 constante dans tous les cas.</p>
 <blockquote>
-<div><div class="admonition hint">
-<p class="admonition-title">Indication</p>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Constantes Typées</strong></p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos">2</span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">price</span><span class="w"> </span><span class="kt">float32</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">250</span>
@@ -401,6 +401,28 @@ constante dans tous les cas.</p>
 <p>Le type de la constante n’est pas définie au moment de la déclaration. Le compilateur deduira le
 type en fonction de la valeur affecté. Ce type peut être ammené à être redéfinie en fonction du
 contexte.</p>
+<p>Ce mode d’affectation permet de faire du typage dynamique et donc d’additionner des éléments de
+types différents.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Constantes non Typées</strong></p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">price</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">250</span>
+<span class="linenos">3</span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">tax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">27.50</span>
+<span class="linenos">4</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;&#39;price&#39; type: %T - Value: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="p">)</span>
+<span class="linenos">5</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;&#39;tax&#39; type: %T - Value: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tax</span><span class="p">,</span><span class="w"> </span><span class="nx">tax</span><span class="p">)</span>
+<span class="linenos">6</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;&#39;price&#39;+&#39;tax&#39; type: %T - Value: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="o">+</span><span class="nx">tax</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="o">+</span><span class="nx">tax</span><span class="p">)</span>
+<span class="linenos">7</span><span class="p">}</span>
+</pre></div>
+</div>
+<u>Results</u><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;price&#39;</span><span class="w"> </span>type:<span class="w"> </span>int<span class="w"> </span>-<span class="w"> </span>Value:<span class="w"> </span><span class="m">250</span>
+<span class="s1">&#39;tax&#39;</span><span class="w"> </span>type:<span class="w"> </span>float64<span class="w"> </span>-<span class="w"> </span>Value:<span class="w"> </span><span class="m">27</span>.5
+<span class="s1">&#39;price&#39;</span>+<span class="s1">&#39;tax&#39;</span><span class="w"> </span>type:<span class="w"> </span>float64<span class="w"> </span>-<span class="w"> </span>Value:<span class="w"> </span><span class="m">277</span>.5
+</pre></div>
+</div>
+</div>
+</div></blockquote>
 </section>
 </section>
 <hr class="docutils" />

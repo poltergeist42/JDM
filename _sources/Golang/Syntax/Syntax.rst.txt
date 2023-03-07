@@ -143,7 +143,7 @@ Constantes typées
 Le type de la constante est définie de façon explicite. Le compilateur appliquera se type sur la
 constante dans tous les cas.
 
-        .. hint:: 
+        .. note:: 
             
             **Constantes Typées**
             
@@ -180,6 +180,37 @@ Constantes non-typées
 Le type de la constante n'est pas définie au moment de la déclaration. Le compilateur deduira le
 type en fonction de la valeur affecté. Ce type peut être ammené à être redéfinie en fonction du
 contexte.
+
+Ce mode d'affectation permet de faire du typage dynamique et donc d'additionner des éléments de
+types différents.
+
+        .. note:: 
+            
+            **Constantes non Typées**
+            
+            .. code:: go
+                :number-lines:
+                :force:
+    
+                func main() {
+                    const price = 250
+                    const tax = 27.50
+                    fmt.Printf("'price' type: %T - Value: %v\n", price, price)
+                    fmt.Printf("'tax' type: %T - Value: %v\n", tax, tax)
+                    fmt.Printf("'price'+'tax' type: %T - Value: %v\n", price+tax, price+tax)
+                }
+    
+            .. raw:: html
+    
+                <u>Results</u>
+    
+            .. code:: shell
+    
+                'price' type: int - Value: 250
+                'tax' type: float64 - Value: 27.5
+                'price'+'tax' type: float64 - Value: 277.5
+
+            
 
 ####
 
