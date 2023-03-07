@@ -170,13 +170,13 @@ Exemple pour une fonction :
                 fmt.Println("Hello, world")
             }
 
-            .. raw:: html
+        .. raw:: html
 
-                <u>Results</u>
+            <u>Results</u>
 
-            .. code:: go
+        .. code:: go
 
-                Hello, world
+            Hello, world
 
 
 
