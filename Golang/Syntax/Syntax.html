@@ -219,7 +219,7 @@
 <li><p><a class="reference internal" href="#apercu-globale" id="id4">Aperçu globale</a></p></li>
 <li><p><a class="reference internal" href="#basic-types" id="id5">Basic Types</a></p>
 <ul>
-<li><p><a class="reference internal" href="#conversion-entre-basic-tpyes" id="id6">Conversion entre basic tpyes</a></p></li>
+<li><p><a class="reference internal" href="#conversion-entre-basic-types" id="id6">Conversion entre Basic types</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#constantes" id="id7">Constantes</a></p>
@@ -333,8 +333,8 @@ single quotes.</p></td>
 </li>
 </ol>
 </div></blockquote>
-<section id="conversion-entre-basic-tpyes">
-<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Conversion entre basic tpyes</a><a class="headerlink" href="#conversion-entre-basic-tpyes" title="Lien permanent vers cette rubrique">¶</a></h3>
+<section id="conversion-entre-basic-types">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Conversion entre Basic types</a><a class="headerlink" href="#conversion-entre-basic-types" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p><strong>Go</strong> applique une règle stricte sur les conversions. Toutes les conversions doivent être
 spécifiquement définie. Il n’est donc pas possible d’additionner un <strong>int</strong> avec un <strong>float32</strong></p>
 <blockquote>
@@ -385,12 +385,17 @@ spécifiquement définie. Il n’est donc pas possible d’additionner un <stron
 <div><div class="admonition hint">
 <p class="admonition-title">Indication</p>
 <p><strong>Bonne syntaxe</strong></p>
-<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">2</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, world&quot;</span><span class="p">)</span>
-<span class="linenos">3</span><span class="p">}</span>
-<span class="linenos">4</span>
-<span class="linenos">5</span><span class="c1">// Results</span>
-<span class="linenos">6</span><span class="o">==</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">Hello</span><span class="p">,</span><span class="w"> </span><span class="nx">world</span>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, world&quot;</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="p">}</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="p">..</span><span class="w"> </span><span class="nx">raw</span><span class="p">::</span><span class="w"> </span><span class="nx">html</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="p">&lt;</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">Results</span><span class="p">&lt;</span><span class="o">/</span><span class="nx">u</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="p">..</span><span class="w"> </span><span class="nx">code</span><span class="p">::</span><span class="w"> </span><span class="k">go</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="nx">Hello</span><span class="p">,</span><span class="w"> </span><span class="nx">world</span>
 </pre></div>
 </div>
 </div>
@@ -398,12 +403,12 @@ spécifiquement définie. Il n’est donc pas possible d’additionner un <stron
 <p class="admonition-title">Avertissement</p>
 <p><strong>Mauvaise Syntaxe</strong></p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span>
-<span class="linenos">2</span><span class="p">{</span>
+<span class="linenos">2</span><span class="p">{</span><span class="w"> </span><span class="c1">// &lt;-- L&#39;accolade doit être sur la même ligne que la déclaration de la fonction</span>
 <span class="linenos">3</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, world&quot;</span><span class="p">)</span>
 <span class="linenos">4</span><span class="p">}</span>
-<span class="linenos">5</span>
-<span class="linenos">6</span><span class="c1">// Results</span>
-<span class="linenos">7</span><span class="o">==</span><span class="p">&gt;</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">prog</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="nx">syntax</span><span class="w"> </span><span class="kt">error</span><span class="p">:</span><span class="w"> </span><span class="nx">unexpected</span><span class="w"> </span><span class="nx">semicolon</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">newline</span><span class="w"> </span><span class="nx">before</span><span class="w"> </span><span class="p">{</span>
+</pre></div>
+</div>
+<u>Results</u><div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="nx">prog</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="nx">syntax</span><span class="w"> </span><span class="kt">error</span><span class="p">:</span><span class="w"> </span><span class="nx">unexpected</span><span class="w"> </span><span class="nx">semicolon</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">newline</span><span class="w"> </span><span class="nx">before</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
 </div>
 </div>
@@ -416,13 +421,16 @@ spécifiquement définie. Il n’est donc pas possible d’additionner un <stron
 fichier doit contenir une fonction « main() ». C’est cette fonction qui est appellée lors de
 l’éxécution du programme.</p>
 <blockquote>
-<div><div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// code minimum</span>
-<span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
-
-<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-
-<span class="p">}</span>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Minimum code</strong></p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">4</span><span class="w">    </span><span class="c1">// put some cool code here</span>
+<span class="linenos">5</span><span class="p">}</span>
 </pre></div>
+</div>
 </div>
 </div></blockquote>
 </section>
