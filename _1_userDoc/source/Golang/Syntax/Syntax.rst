@@ -90,7 +90,7 @@ Il y a 17 types de bases et 2 alias :
         |           | single quotes.                                            |
         +-----------+-----------------------------------------------------------+
 
-Conversion entre basic tpyes
+Conversion entre Basic types
 ============================
 
 **Go** applique une règle stricte sur les conversions. Toutes les conversions doivent être
@@ -119,9 +119,7 @@ spécifiquement définie. Il n'est donc pas possible d'additionner un **int** av
 
             ./prog.go:8:14: invalid operation: price + tax (mismatched types int and float32)
 
-
-
-
+        Les 2 éléments étant de types différent, il n'est pas possible de les additionner
 
 ####
 
@@ -129,7 +127,8 @@ spécifiquement définie. Il n'est donc pas possible d'additionner un **int** av
 Constantes
 ----------
 
-Les constantes se déclarent avec le mot clef **const**.
+Les constantes se déclarent avec le mot clef **const**. Une constante est une information stocké en
+mémoire dont la valeur ne peut pas être modifiée après sa déclaration.
 
 Il y a deux types de déclaration de constantes :
 
@@ -137,16 +136,84 @@ Il y a deux types de déclaration de constantes :
 
     * Les déclaration non-Typées
 
+C'est déclaration peuvent être effectuées au niveau du module ou à l'interrieur d'une fonction.
+
+
 Constantes typées
 =================
 
-[WIP]
+Le type de la constante est définie de façon explicite. Le compilateur appliquera se type sur la
+constante dans tous les cas.
+
+        .. note:: 
+            
+            **Constantes Typées**
+            
+            .. code:: go
+                :number-lines:
+                :force:
+    
+                func main() {
+                    const price float32 = 250
+                    const tax float32 = 27.50
+                    fmt.Printf("'price' type: %T - Value: %v\n", price, price)
+                    fmt.Printf("'tax' type: %T - Value: %v\n", tax, tax)
+                    fmt.Printf("'price'+'tax' type: %T - Value: %v\n", price+tax, price+tax)
+                }
+    
+            .. raw:: html
+    
+                <u>Results</u>
+    
+            .. code:: shell
+
+                'price' type: float32 - Value: 250
+                'tax' type: float32 - Value: 27.5
+                'price'+'tax' type: float32 - Value: 277.5
+            
+            Les 2 éléments sont de types float32. Il est donc possible de les additionner.
+
+            voir `Conversion entre Basic types`_
 
 
 Constantes non-typées
 =====================
 
-[WIP]
+Le type de la constante n'est pas définie au moment de la déclaration. Le compilateur deduira le
+type en fonction de la valeur affecté. Ce type peut être ammené à être redéfinie en fonction du
+contexte.
+
+Ce mode d'affectation permet de faire du typage dynamique et donc d'additionner des éléments de
+types différents.
+
+        .. note:: 
+            
+            **Constantes non Typées**
+            
+            .. code:: go
+                :number-lines:
+                :force:
+    
+                func main() {
+                    const price = 250
+                    const tax = 27.50
+                    fmt.Printf("'price' type: %T - Value: %v\n", price, price)
+                    fmt.Printf("'tax' type: %T - Value: %v\n", tax, tax)
+                    fmt.Printf("'price'+'tax' type: %T - Value: %v\n", price+tax, price+tax)
+                }
+    
+            .. raw:: html
+    
+                <u>Results</u>
+    
+            .. code:: shell
+    
+                'price' type: int - Value: 250
+                'tax' type: float64 - Value: 27.5
+                'price'+'tax' type: float64 - Value: 277.5
+
+            Ici, le type de 'price' est redéfinie dynamiquement en fonction du contexte. le type
+            passe alors de **int** à **float64** pour pouvoir additionner les deux valeur.
 
 ####
 
@@ -154,13 +221,14 @@ Constantes non-typées
 Accolades
 ---------
 
-La première accolade doit être positionnée sur la même que l'élément au quel elles appartiennent.
+La première accolade doit être positionnée sur la même ligne que l'élément au quel elles
+appartient.
 
 Exemple pour une fonction :
 
     .. hint:: 
         
-        **Bonne syntaxe**
+        **Bonne Syntaxe**
         
         .. code:: go
             :number-lines:
@@ -170,25 +238,37 @@ Exemple pour une fonction :
                 fmt.Println("Hello, world")
             }
 
-            // Results
-            ==> Hello, world
+        .. raw:: html
+
+            <u>Results</u>
+
+        .. code:: go
+
+            Hello, world
+
 
 
     .. warning:: 
         
         **Mauvaise Syntaxe**
-
+        
         .. code:: go
             :number-lines:
             :force:
 
             func main ()
-            {
+            { // <-- L'accolade doit être sur la même ligne que la déclaration de la fonction
                 fmt.Println("Hello, world")
             }
 
-            // Results
-            ==> ./prog.go:8:1: syntax error: unexpected semicolon or newline before {
+        .. raw:: html
+
+            <u>Results</u>
+
+        .. code:: go
+
+            ./prog.go:8:1: syntax error: unexpected semicolon or newline before {
+                
 
 ####
 
@@ -200,15 +280,20 @@ Tous les projets doivent avoir un fichier "main.go". C'est le fichier principale
 fichier doit contenir une fonction "main()". C'est cette fonction qui est appellée lors de
 l'éxécution du programme.
 
+        .. note:: 
+            
+            **Minimum code**
+            
+            .. code:: go
+                :number-lines:
+                :force:
+    
+                package main
 
-    .. code:: go
+                func main() {
+                    // put some cool code here
+                }
 
-        // code minimum
-        package main
-
-        func main() {
-
-        }
 
 ####
 
@@ -236,3 +321,4 @@ Weblinks
 --------
 
 .. target-notes::
+
