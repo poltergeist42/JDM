@@ -169,7 +169,8 @@ constante dans tous les cas.
                 'tax' type: float32 - Value: 27.5
                 'price'+'tax' type: float32 - Value: 277.5
             
-            Les 2 éléments sont de types float32. Il est donc possible de les additionner
+            Les 2 éléments sont de types float32. Il est donc possible de les additionner.
+
             voir `Conversion entre Basic types`_
 
 
