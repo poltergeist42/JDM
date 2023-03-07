@@ -119,6 +119,8 @@ spécifiquement définie. Il n'est donc pas possible d'additionner un **int** av
 
             ./prog.go:8:14: invalid operation: price + tax (mismatched types int and float32)
 
+        Les 2 éléments étant de types différent, il n'est pas possible de les additionner
+
 ####
 
 ----------
@@ -210,7 +212,8 @@ types différents.
                 'tax' type: float64 - Value: 27.5
                 'price'+'tax' type: float64 - Value: 277.5
 
-            
+            Ici, le type de 'price' est redéfinie dynamiquement en fonction du contexte. le type
+            passe alors de **int** à **float64** pour pouvoir additionner les deux valeur.
 
 ####
 
