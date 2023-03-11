@@ -250,6 +250,102 @@ seule fenêtre de terminal. Il permet égallement de sinder l’écran en plusie
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Memento de commandes Tmux</a><a class="headerlink" href="#memento-de-commandes-tmux" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../_images/memento.png"><img alt="../../_images/memento.png" class="align-center" src="../../_images/memento.png" style="width: 520px;" /></a>
+<p class="plantuml">
+<img src="../../_images/plantuml-31ac874a2edd9a96decbad5856057851cca0767f.svg" alt="&#64;startuml
+
+
+&#64;startmindmap
+
+skinparam linetype polyline
+' skinparam linetype ortho
+
+title TMUX commands
+
+&lt;style&gt;
+mindmapDiagram {
+  .green {
+    ' BackgroundColor lightgreen
+    LineColor lightgreen
+    LineThickness 3
+  }
+  .rose {
+    ' BackgroundColor #FFBBCC
+    LineColor #FFBBCC
+    LineThickness 3
+  }
+  .blue {
+    ' BackgroundColor lightblue
+    LineColor lightblue
+    LineThickness 3
+  }
+  .orange {
+    ' BackgroundColor #EB937F
+    LineColor #EB937F
+    LineThickness 3
+  }
+}
+&lt;/style&gt;
+
+* &lt;b&gt;tmux
+left side
+
+**:&lt;b&gt;Terminal commands&lt;/b&gt;
+&lt;code&gt;
+( avant de lancer tmux )
+&lt;/code&gt;; &lt;&lt;orange&gt;&gt;
+***:&lt;b&gt;Create a new session&lt;/b&gt;
+&lt;code&gt;
+    :~$ tmux
+&lt;/code&gt;; &lt;&lt;orange&gt;&gt;
+***:&lt;b&gt;List all the session&lt;/b&gt;
+&lt;code&gt;
+    :~$ tmux ls
+&lt;/code&gt;; &lt;&lt;orange&gt;&gt;
+***:&lt;b&gt;Attach a session to the terminal&lt;/b&gt;
+&lt;code&gt;
+    :~$ tmux attach -t [Number_of_session]
+&lt;/code&gt;; &lt;&lt;orange&gt;&gt;
+
+**:&lt;b&gt;Sessions commands&lt;/b&gt;
+&lt;code&gt;
+( [Ctrl]+[b] ==&gt; [char] )
+&lt;/code&gt;; &lt;&lt;green&gt;&gt;
+*** &lt;b&gt;s&lt;/b&gt;: List sessions &lt;&lt;green&gt;&gt;
+*** &lt;b&gt;$&lt;/b&gt;: Rename current session &lt;&lt;green&gt;&gt;
+*** &lt;b&gt;d&lt;/b&gt;: Detach current session &lt;&lt;green&gt;&gt;
+
+
+**:&lt;b&gt;Window commands
+&lt;code&gt;
+( [Ctrl]+[b] ==&gt; [char] )
+&lt;/code&gt;; &lt;&lt;rose&gt;&gt;
+*** &lt;b&gt;c&lt;/b&gt;: Create a new window &lt;&lt;rose&gt;&gt;
+*** &lt;b&gt;,&lt;/b&gt;: Rename the curent window &lt;&lt;rose&gt;&gt;
+*** &lt;b&gt;w&lt;/b&gt;: List the windows &lt;&lt;rose&gt;&gt;
+*** &lt;b&gt;n&lt;/b&gt;: Move to the next window &lt;&lt;rose&gt;&gt;
+*** &lt;b&gt;p&lt;/b&gt;: Move to previous window &lt;&lt;rose&gt;&gt;
+*** &lt;b&gt;0 to 9&lt;/b&gt;: Move the window to the number specified &lt;&lt;rose&gt;&gt;
+
+right side
+
+**:&lt;b&gt;Pane commands
+&lt;code&gt;
+( [Ctrl]+[b] ==&gt; [char] )
+&lt;/code&gt;; &lt;&lt;blue&gt;&gt;
+*** &lt;b&gt;%&lt;/b&gt;: Create a horizontal split &lt;&lt;blue&gt;&gt;
+*** &lt;b&gt;''&lt;/b&gt;: Create a vertical split &lt;&lt;blue&gt;&gt;
+*** &lt;b&gt;h or Left Arrow&lt;/b&gt;: Move to the pane on the Left &lt;&lt;blue&gt;&gt;
+*** &lt;b&gt;i or Right Arrow&lt;/b&gt;: Move to the pane on the Right &lt;&lt;blue&gt;&gt;
+*** &lt;b&gt;j or Down Arrow&lt;/b&gt;: Move to the pane Below &lt;&lt;blue&gt;&gt;
+*** &lt;b&gt;k or Up Arrow&lt;/b&gt;: Move to the pane Above &lt;&lt;blue&gt;&gt;
+*** &lt;b&gt;q&lt;/b&gt;: Briefly show pane numbers &lt;&lt;blue&gt;&gt;
+*** &lt;b&gt;o&lt;/b&gt;: Move trough panes in order. \nEach press takes you to the next, until all of them &lt;&lt;blue&gt;&gt;
+*** &lt;b&gt;}&lt;/b&gt;: Swap the position of the current pane with the next &lt;&lt;blue&gt;&gt;
+*** &lt;b&gt;{&lt;/b&gt;: Swap the position of the current pane with the previous &lt;&lt;blue&gt;&gt;
+*** &lt;b&gt;x&lt;/b&gt;: Close the current pane &lt;&lt;blue&gt;&gt;
+
+&#64;endmindmap
+&#64;enduml"/></p>
 </div></blockquote>
 </section>
 </section>
