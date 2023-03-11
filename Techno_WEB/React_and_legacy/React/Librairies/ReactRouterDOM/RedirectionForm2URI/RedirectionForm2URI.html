@@ -266,26 +266,26 @@
 <p>Ce hook prend 2 argument. Le premier est à la route à utiliser pour la redirection. Le second, qui
 est facultatif, est le state que doit récupérer la page de destination.</p>
 <blockquote>
-<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="c1">// ...</span>
+<div><div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="c1">// ...</span><span class="w"></span>
 
-<span class="c1">// Syntax d&#39;utilisation de useNavigate()</span>
-<span class="c1">// useNavigate(&quot;path&quot;, {state: {...SomeData})</span>
+<span class="c1">// Syntax d&#39;utilisation de useNavigate()</span><span class="w"></span>
+<span class="c1">// useNavigate(&quot;path&quot;, {state: {...SomeData})</span><span class="w"></span>
 
-<span class="c1">// import du hook depuis la librairie</span>
-<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useNavigate</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-router-dom&#39;</span>
+<span class="c1">// import du hook depuis la librairie</span><span class="w"></span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useNavigate</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-router-dom&#39;</span><span class="w"></span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">form2submit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">form2submit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">navigation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useNavigate</span><span class="p">()</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">navigation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useNavigate</span><span class="p">()</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">handleSubmit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
-<span class="w">    </span><span class="c1">// ...</span>
-<span class="w">    </span><span class="nx">navigation</span><span class="p">(</span><span class="s2">&quot;/list&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">state</span><span class="o">:</span><span class="w"> </span><span class="p">{...</span><span class="nx">someState</span><span class="p">})</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">handleSubmit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
+<span class="w">    </span><span class="nx">navigation</span><span class="p">(</span><span class="s2">&quot;/list&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">state</span><span class="o">:</span><span class="w"> </span><span class="p">{...</span><span class="nx">someState</span><span class="p">})</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="c1">// ...</span>
-<span class="p">}</span>
+<span class="c1">// ...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -322,7 +322,6 @@ const List = (props) =&gt; {
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
-<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id3" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://reactrouter.com/en/6.4.4/hooks/use-navigate">https://reactrouter.com/en/6.4.4/hooks/use-navigate</a></p>
@@ -330,7 +329,6 @@ const List = (props) =&gt; {
 <aside class="footnote brackets" id="id5" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">2</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://reactrouter.com/en/6.4.4/hooks/use-location">https://reactrouter.com/en/6.4.4/hooks/use-location</a></p>
-</aside>
 </aside>
 </section>
 </section>
@@ -362,14 +360,13 @@ const List = (props) =&gt; {
     <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../../../../../_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="../../../../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
         </div>
     </div>  
 

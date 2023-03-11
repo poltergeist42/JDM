@@ -349,11 +349,11 @@ Engineering.</p>
 </ul>
 </dd>
 </dl>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">   </span>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git
-<span class="linenos">2</span><span class="w">   </span><span class="nb">cd</span><span class="w"> </span>/opt
-<span class="linenos">3</span><span class="w">   </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Dewalt-arch/pimpmykali
-<span class="linenos">4</span><span class="w">   </span><span class="nb">cd</span><span class="w"> </span>pimpmykali
-<span class="linenos">5</span><span class="w">   </span>sudo<span class="w"> </span>./pimpmykali.sh
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>   sudo apt update <span class="o">&amp;&amp;</span> apt install git
+<span class="linenos">2</span>   <span class="nb">cd</span> /opt
+<span class="linenos">3</span>   git clone https://github.com/Dewalt-arch/pimpmykali
+<span class="linenos">4</span>   <span class="nb">cd</span> pimpmykali
+<span class="linenos">5</span>   sudo ./pimpmykali.sh
 </pre></div>
 </div>
 </section>
@@ -470,7 +470,7 @@ intelligence (OSINT) gathering to help determine a company’s external threat l
 internet. The tool gathers emails, names, subdomains, IPs and URLs using</p>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># theHaverester manual</span>
-<span class="linenos">2</span>python3<span class="w"> </span>theHarvester.py<span class="w"> </span>-h
+<span class="linenos">2</span>python3 theHarvester.py -h
 </pre></div>
 </div>
 </div></blockquote>
@@ -511,7 +511,7 @@ data transfer, redirection, and debugging tool (Ncat), a utility for comparing s
 and a packet generation and response analysis tool (Nping).</p>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># nmap</span>
-<span class="linenos"> 2</span>nmap<span class="w"> </span>-A<span class="w"> </span>-p-<span class="w"> </span>-T4<span class="w"> </span>&lt;ip<span class="w"> </span>ou<span class="w"> </span>plage<span class="w"> </span>ip&gt;
+<span class="linenos"> 2</span>nmap -A -p- -T4 &lt;ip ou plage ip&gt;
 <span class="linenos"> 3</span>
 <span class="linenos"> 4</span><span class="c1"># Par défaut, le scan s&#39;effectue sur le TCP (-sS). Pour forcer le scan en UCP il faut</span>
 <span class="linenos"> 5</span><span class="c1"># utiliser l&#39;option -sU.</span>
@@ -533,7 +533,7 @@ est donc conseiller de ne scanner que les 1000 premiers ports.</p>
 </dl>
 <section id="performe-a-ping-sweep-with-nmap">
 <h4>Performe a ping sweep with nmap<a class="headerlink" href="#performe-a-ping-sweep-with-nmap" title="Lien permanent vers cette rubrique">¶</a></h4>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>sudo<span class="w"> </span>nmap<span class="w"> </span>-sn<span class="w"> </span><span class="m">192</span>.168.1.0/24
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>sudo nmap -sn <span class="m">192</span>.168.1.0/24
 </pre></div>
 </div>
 <p>This option tells Nmap not to do a port scan after host discovery and only print the available hosts
@@ -586,11 +586,11 @@ works using a downloaded version of the database, meaning that you already have 
 already on your Kali Linux!</p>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Update database</span>
-<span class="linenos">2</span>searchsploit<span class="w"> </span>-u
+<span class="linenos">2</span>searchsploit -u
 <span class="linenos">3</span>
 <span class="linenos">4</span><span class="c1"># perform search</span>
 <span class="linenos">5</span><span class="c1"># searchsploit [App_name]</span>
-<span class="linenos">6</span>searchsploit<span class="w"> </span>wordpress<span class="w"> </span><span class="m">5</span>
+<span class="linenos">6</span>searchsploit wordpress <span class="m">5</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -668,7 +668,6 @@ ssh-add -d to remove it off your ssh-agent</p>
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
-<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id2" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://www.sentinelone.com/blog/what-is-osint-how-is-it-used/">https://www.sentinelone.com/blog/what-is-osint-how-is-it-used/</a></p>
@@ -781,7 +780,6 @@ ssh-add -d to remove it off your ssh-agent</p>
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id57">28</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://stackoverflow.com/questions/3891616/can-i-test-authentication-with-an-rsa-key-locally">https://stackoverflow.com/questions/3891616/can-i-test-authentication-with-an-rsa-key-locally</a></p>
 </aside>
-</aside>
 </section>
 </section>
 
@@ -812,14 +810,13 @@ ssh-add -d to remove it off your ssh-agent</p>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
         </div>
     </div>  
 

@@ -278,7 +278,7 @@ un SSID ne peux pas contenir d’espace.</p>
 <div><p>Naviguer dans les menus pour configurer le SSID du wifi</p>
 <blockquote>
 <div><ol class="arabic">
-<li><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>raspi-config
+<li><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo raspi-config
 </pre></div>
 </div>
 </li>
@@ -300,8 +300,8 @@ un SSID ne peux pas contenir d’espace.</p>
 <blockquote>
 <div><ol class="arabic">
 <li><dl>
-<dt>Editer le fichier « wpa_supplcant »</dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/etc/wpa_supplicant/
-sudo<span class="w"> </span>vi<span class="w"> </span>wpa_supplicant.conf
+<dt>Editer le fichier « wpa_supplcant »</dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /etc/wpa_supplicant/
+sudo vi wpa_supplicant.conf
 </pre></div>
 </div>
 </dd>
@@ -336,7 +336,7 @@ sudo<span class="w"> </span>vi<span class="w"> </span>wpa_supplicant.conf
 <blockquote>
 <div><ol class="arabic">
 <li><p>Editer le fichier dhcpcd.conf</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/dhcpcd.conf
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo vim /etc/dhcpcd.conf
 </pre></div>
 </div>
 </li>
@@ -344,19 +344,19 @@ sudo<span class="w"> </span>vi<span class="w"> </span>wpa_supplicant.conf
 <p>Ici, il n’est pas nécessaire de renseigner la passerelle car puisqu’il n’y en à qu’une (wlan0),
 elle est utilisée par défault.</p>
 <p>La définission des DNS est facultative. Par défault, les DNS sont fournis par l’ISP.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>interface<span class="w"> </span>eth0
-static<span class="w"> </span><span class="nv">ip_address</span><span class="o">=</span><span class="m">192</span>.168.1.254/24
-static<span class="w"> </span><span class="nv">domain_name_servers</span><span class="o">=</span><span class="m">1</span>.1.1.1<span class="w"> </span><span class="m">9</span>.9.9.9
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>interface eth0
+static <span class="nv">ip_address</span><span class="o">=</span><span class="m">192</span>.168.1.254/24
+static <span class="nv">domain_name_servers</span><span class="o">=</span><span class="m">1</span>.1.1.1 <span class="m">9</span>.9.9.9
 </pre></div>
 </div>
 </li>
 <li><p>Redémarrer le Pi</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>reboot
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo reboot
 </pre></div>
 </div>
 </li>
 <li><p>Editer le fichier de configuration du Kernel</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>/etc/sysctl.conf
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo /etc/sysctl.conf
 </pre></div>
 </div>
 </li>
@@ -367,20 +367,20 @@ net.ipv4.ip_forward<span class="o">=</span><span class="m">1</span>
 </div>
 </li>
 <li><p>Installation d’Iptable</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>iptables-persistent
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt-get update
+sudo apt-get install iptables-persistent
 </pre></div>
 </div>
 </li>
 <li><p>Ajout du fichier « rules.v4 » au group de l’utilisateur</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>chgrp<span class="w"> </span>pi<span class="w"> </span>/etc/iptables/rules.v*
-sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">664</span><span class="w"> </span>/etc/iptables/rules.v*
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo chgrp pi /etc/iptables/rules.v*
+sudo chmod <span class="m">664</span> /etc/iptables/rules.v*
 </pre></div>
 </div>
 </li>
 <li><p>Création d’une table persistante</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>POSTROUTING<span class="w"> </span>-o<span class="w"> </span>wlan0<span class="w"> </span>-j<span class="w"> </span>MASQUERADE
-sudo<span class="w"> </span>iptables-save<span class="w"> </span>&gt;/etc/iptables/rules.v4
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+sudo iptables-save &gt;/etc/iptables/rules.v4
 </pre></div>
 </div>
 </li>
@@ -401,12 +401,12 @@ sudo<span class="w"> </span>iptables-save<span class="w"> </span>&gt;/etc/iptabl
 <blockquote>
 <div><ol class="arabic">
 <li><p>Installation de dnsmasq</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>dnsmasq
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt install dnsmasq
 </pre></div>
 </div>
 </li>
 <li><p>Editer le fichier de configuration de dnsmasq</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>vim<span class="w"> </span>dnsmasq.conf
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo vim dnsmasq.conf
 </pre></div>
 </div>
 </li>
@@ -428,7 +428,7 @@ informations ajoutées.</p>
 <a class="reference internal image-reference" href="../../../../_images/dnsmasq.png"><img alt="../../../../_images/dnsmasq.png" class="align-center" src="../../../../_images/dnsmasq.png" style="width: 520px;" /></a>
 </li>
 <li><p>Redémarrer le service dnsmasq</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>service<span class="w"> </span>dnsmasq<span class="w"> </span>restart
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo service dnsmasq restart
 </pre></div>
 </div>
 </li>
@@ -448,24 +448,24 @@ informations ajoutées.</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p>Editer le fichier source.list</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/apt/sources.list
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo vim /etc/apt/sources.list
 </pre></div>
 </div>
 </li>
 <li><p>Ajouter le dépôt à la fin du fichier</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>deb<span class="w"> </span>https://download.webmin.com/download/repository<span class="w"> </span>sarge<span class="w"> </span>contrib
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>deb https://download.webmin.com/download/repository sarge contrib
 </pre></div>
 </div>
 </li>
 <li><p>Installation de la clef GPG</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>http://www.webmin.com/jcameron-key.asc
-sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>jcameron-key.asc
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>wget http://www.webmin.com/jcameron-key.asc
+sudo apt-key add jcameron-key.asc
 </pre></div>
 </div>
 </li>
 <li><p>Installation de webmin</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>webmin
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt update
+sudo apt install webmin
 </pre></div>
 </div>
 </li>
@@ -505,7 +505,6 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
-<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id1" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://pimylifeup.com/setting-up-raspberry-pi-wifi/">https://pimylifeup.com/setting-up-raspberry-pi-wifi/</a></p>
@@ -525,7 +524,6 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 <aside class="footnote brackets" id="id9" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">5</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://raspberrytips.fr/installer-imprimante-raspberry-pi/">https://raspberrytips.fr/installer-imprimante-raspberry-pi/</a></p>
-</aside>
 </aside>
 </section>
 </section>
@@ -557,14 +555,13 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
     <script type="text/javascript" src="../../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="../../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../../../_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="../../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
         </div>
     </div>  
 

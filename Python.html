@@ -867,7 +867,7 @@ complète y compris le contenu des données itérables</p>
 </ul>
 <p>exemple d’utilisation :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">decorateur</span><span class="p">(</span><span class="n">fonct</span><span class="p">)</span> <span class="p">:</span>
-<span class="gp">... </span><span class="w">    </span><span class="sd">&quot;&quot;&quot; fonction décorateur permettant de donnée le temps d’exécution d&#39;une fonction &quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot; fonction décorateur permettant de donnée le temps d’exécution d&#39;une fonction &quot;&quot;&quot;</span>
 <span class="gp">... </span>    <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span> <span class="n">fonct</span> <span class="p">)</span>
 <span class="gp">... </span>    <span class="k">def</span> <span class="nf">appelFonc</span><span class="p">(</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span> <span class="p">)</span> <span class="p">:</span>
 <span class="gp">... </span>            <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -879,7 +879,7 @@ complète y compris le contenu des données itérables</p>
 <span class="go">&gt;&gt;&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nd">@decorateur</span>
 <span class="gp">... </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="p">:</span>
-<span class="gp">... </span><span class="w">    </span><span class="sd">&quot;&quot;&quot; affiche le contenue et le type des variables passées en argument &quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot; affiche le contenue et le type des variables passées en argument &quot;&quot;&quot;</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1491,14 +1491,13 @@ d’explications supplémentaires.</p>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
         </div>
     </div>  
 

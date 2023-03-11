@@ -615,13 +615,13 @@ dans « C:Program Files (x86) »</p></li>
 <p>l’état <strong>detached HEAD</strong> se produit lorsque « HEAD » fait référence à un commit et non plus à la branche elle même.</p>
 <p>cette information est alors visible en faisant un « git branch »</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git branch
 
-*<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>detached<span class="w"> </span>from<span class="w"> </span>2ca07f8<span class="o">)</span>
-<span class="w">  </span>crash_test
-<span class="w">  </span>dev_jojo
-<span class="w">  </span>dev_pierre
-<span class="w">  </span>master
+* <span class="o">(</span>HEAD detached from 2ca07f8<span class="o">)</span>
+  crash_test
+  dev_jojo
+  dev_pierre
+  master
 </pre></div>
 </div>
 </div></blockquote>
@@ -630,37 +630,37 @@ dans « C:Program Files (x86) »</p></li>
 <div><ol class="arabic">
 <li><p>Créer une branche temporaire à partir de la branch actuelle et se placer dessus.</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>temp
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git checkout -b temp
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>mettre la branch « normalle » à jour par rapport à la branch temporaire.</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-f<span class="w"> </span><span class="o">[</span>nom_de_la_branche_normalile<span class="o">]</span><span class="w"> </span><span class="o">[</span>nom_de_la_branch_temporaire<span class="o">]</span>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git branch -f <span class="o">[</span>nom_de_la_branche_normalile<span class="o">]</span> <span class="o">[</span>nom_de_la_branch_temporaire<span class="o">]</span>
 
 ex:
-git<span class="w"> </span>branch<span class="w"> </span>-f<span class="w"> </span>dev_pierre<span class="w"> </span>temp
+git branch -f dev_pierre temp
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Ce déplacer sur la branche « normalle » et supprimer la branche temporaire.</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>dev_pierre
-git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span>temp
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git checkout dev_pierre
+git branch -D temp
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Vérifier que l’opération c’est effectuée correctement.</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git branch
 
-<span class="w">  </span>crash_test
-<span class="w">  </span>dev_jojo
-*<span class="w"> </span>dev_pierre
-<span class="w">  </span>master
+  crash_test
+  dev_jojo
+* dev_pierre
+  master
 </pre></div>
 </div>
 </div></blockquote>
@@ -865,14 +865,13 @@ chemin du dépôt distant directement en éditant le fichier « config » du d
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
         </div>
     </div>  
 

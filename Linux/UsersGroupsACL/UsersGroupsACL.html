@@ -258,7 +258,7 @@
 <p>Attention il est recomander de ne pas activer le compte root.</p>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cette command réinitialise le mot de passe de l&#39;utilisateur root et l&#39;active si nécessaire.</span>
-sudo<span class="w"> </span>passwd<span class="w"> </span>root
+sudo passwd root
 </pre></div>
 </div>
 </div></blockquote>
@@ -271,7 +271,7 @@ sudo<span class="w"> </span>passwd<span class="w"> </span>root
 <p>Attention il est recomander de ne pas activer le compte root.</p>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># N.B : Le prompt devrais passer en root@[nom_de_machine]</span>
-sudo<span class="w"> </span>-s
+sudo -s
 </pre></div>
 </div>
 </div></blockquote>
@@ -289,7 +289,7 @@ sudo<span class="w"> </span>-s
 </div></blockquote>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># sudo adduser &lt;nom_du_nouvel_utilisateur&gt;</span>
-sudo<span class="w"> </span>adduser<span class="w"> </span>volab
+sudo adduser volab
 </pre></div>
 </div>
 <p>N.B: Lorsqu’on crée un nouvel utilisateur, un groupe du même nom est également créer.</p>
@@ -299,7 +299,7 @@ sudo<span class="w"> </span>adduser<span class="w"> </span>volab
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Ajouter un utilisateur à un groupe</a><a class="headerlink" href="#ajouter-un-utilisateur-a-un-groupe" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># sudo adduser &lt;nom_de_l&#39;utilisateur&gt; &lt;nom_du_groupe&gt;</span>
-sudo<span class="w"> </span>adduser<span class="w"> </span>root<span class="w"> </span>volab
+sudo adduser root volab
 </pre></div>
 </div>
 <p>N.B: Lorsqu’on crée un nouvel utilisateur, un groupe du même nom est également créer.</p>
@@ -309,7 +309,7 @@ sudo<span class="w"> </span>adduser<span class="w"> </span>root<span class="w"> 
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Changer le mot de passe d’un utilisateur</a><a class="headerlink" href="#changer-le-mot-de-passe-d-un-utilisateur" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># sudo passwd [username]</span>
-sudo<span class="w"> </span>passwd<span class="w"> </span>root
+sudo passwd root
 </pre></div>
 </div>
 </div></blockquote>
@@ -329,7 +329,7 @@ sudo<span class="w"> </span>passwd<span class="w"> </span>root
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer un nouveau groupe</a><a class="headerlink" href="#creer-un-nouveau-groupe" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># sudo addgroup &lt;nom_du_group&gt;</span>
-sudo<span class="w"> </span>addgroup<span class="w"> </span>volab
+sudo addgroup volab
 </pre></div>
 </div>
 </div></blockquote>
@@ -338,7 +338,7 @@ sudo<span class="w"> </span>addgroup<span class="w"> </span>volab
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Afficher les groupes d’un utilisateur</a><a class="headerlink" href="#afficher-les-groupes-d-un-utilisateur" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># groups &lt;nom_d&#39;utilisateur&gt;</span>
-groups<span class="w"> </span>polter
+groups polter
 <span class="c1"># &gt;&gt; polter : polter adm cdrom sudo dip plugdev</span>
 </pre></div>
 </div>
@@ -348,7 +348,7 @@ groups<span class="w"> </span>polter
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Afficher les membres d’un groupe</a><a class="headerlink" href="#afficher-les-membres-d-un-groupe" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># getent group &lt;nom_du_group&gt;</span>
-getent<span class="w"> </span>group<span class="w"> </span>volab
+getent group volab
 </pre></div>
 </div>
 </div></blockquote>
@@ -356,7 +356,7 @@ getent<span class="w"> </span>group<span class="w"> </span>volab
 <h4>Afficher les membres d’un groupes (commande alternantive)<a class="headerlink" href="#afficher-les-membres-d-un-groupes-commande-alternantive" title="Lien permanent vers cette rubrique">¶</a></h4>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># grep &lt;nom_du_groupe&gt; /etc/group</span>
-grep<span class="w"> </span>volab<span class="w"> </span>/etc/group
+grep volab /etc/group
 </pre></div>
 </div>
 </div></blockquote>
@@ -365,14 +365,14 @@ grep<span class="w"> </span>volab<span class="w"> </span>/etc/group
 <section id="afficher-la-liste-de-tous-les-groupes">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Afficher la liste de tous les groupes</a><a class="headerlink" href="#afficher-la-liste-de-tous-les-groupes" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>getent<span class="w"> </span>group
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>getent group
 </pre></div>
 </div>
 </div></blockquote>
 <section id="afficher-la-liste-de-tous-les-groupes-commande-alternantive">
 <h4>Afficher la liste de tous les groupes (commande alternantive)<a class="headerlink" href="#afficher-la-liste-de-tous-les-groupes-commande-alternantive" title="Lien permanent vers cette rubrique">¶</a></h4>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>/etc/group
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cat /etc/group
 </pre></div>
 </div>
 </div></blockquote>
@@ -382,7 +382,7 @@ grep<span class="w"> </span>volab<span class="w"> </span>/etc/group
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Ajouter un utilisateur à un groupes</a><a class="headerlink" href="#ajouter-un-utilisateur-a-un-groupes" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># sudo usermod -aG [nom_du_groupe] [nom_de_l&#39;utilisateur]</span>
-usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span>polter
+usermod -aG docker polter
 </pre></div>
 </div>
 </div></blockquote>
@@ -401,7 +401,7 @@ usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w">
 <section id="connaitre-tous-les-droits-et-autorisation-sur-des-fichiers-et-des-repertoires">
 <h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaitre tous les droits et autorisation sur des fichiers et des répertoires</a><a class="headerlink" href="#connaitre-tous-les-droits-et-autorisation-sur-des-fichiers-et-des-repertoires" title="Lien permanent vers cette rubrique">¶</a></h3>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-al
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ls -al
 </pre></div>
 </div>
 </div></blockquote>
@@ -411,7 +411,7 @@ usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w">
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># chown root:[nom_d&#39;utilisateur] [nom_du_dossier]/</span>
 
-chown<span class="w"> </span>root:volab<span class="w"> </span>echanges/
+chown root:volab echanges/
 </pre></div>
 </div>
 </div></blockquote>
@@ -439,7 +439,6 @@ monde.</p>
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
-<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id1" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://doc.ubuntu-fr.org/adduser#adduser">https://doc.ubuntu-fr.org/adduser#adduser</a></p>
@@ -451,7 +450,6 @@ monde.</p>
 <aside class="footnote brackets" id="id5" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">3</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://doc.ubuntu-fr.org/permissions">https://doc.ubuntu-fr.org/permissions</a></p>
-</aside>
 </aside>
 </section>
 </section>
@@ -483,14 +481,13 @@ monde.</p>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
         </div>
     </div>  
 
