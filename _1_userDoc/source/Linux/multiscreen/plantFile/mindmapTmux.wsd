@@ -1,0 +1,95 @@
+@startuml
+
+
+@startmindmap
+
+skinparam linetype polyline
+' skinparam linetype ortho
+
+title TMUX commands
+
+<style>
+mindmapDiagram {
+  .green {
+    ' BackgroundColor lightgreen
+    LineColor lightgreen
+    LineThickness 3
+  }
+  .rose {
+    ' BackgroundColor #FFBBCC
+    LineColor #FFBBCC
+    LineThickness 3
+  }
+  .blue {
+    ' BackgroundColor lightblue
+    LineColor lightblue
+    LineThickness 3
+  }
+  .orange {
+    ' BackgroundColor #EB937F
+    LineColor #EB937F
+    LineThickness 3
+  }
+}
+</style>
+
+* <b>tmux
+left side
+
+**:<b>Terminal commands</b>
+<code>
+( avant de lancer tmux )
+</code>; <<orange>>
+***:<b>Create a new session</b>
+<code>
+    :~$ tmux
+</code>; <<orange>>
+***:<b>List all the session</b>
+<code>
+    :~$ tmux ls
+</code>; <<orange>>
+***:<b>Attach a session to the terminal</b>
+<code>
+    :~$ tmux attach -t [Number_of_session]
+</code>; <<orange>>
+
+**:<b>Sessions commands</b>
+<code>
+( [Ctrl]+[b] ==> [char] )
+</code>; <<green>>
+*** <b>s</b>: List sessions <<green>>
+*** <b>$</b>: Rename current session <<green>>
+*** <b>d</b>: Detach current session <<green>>
+
+
+**:<b>Window commands
+<code>
+( [Ctrl]+[b] ==> [char] )
+</code>; <<rose>>
+*** <b>c</b>: Create a new window <<rose>>
+*** <b>,</b>: Rename the curent window <<rose>>
+*** <b>w</b>: List the windows <<rose>>
+*** <b>n</b>: Move to the next window <<rose>>
+*** <b>p</b>: Move to previous window <<rose>>
+*** <b>0 to 9</b>: Move the window to the number specified <<rose>>
+
+right side
+
+**:<b>Pane commands
+<code>
+( [Ctrl]+[b] ==> [char] )
+</code>; <<blue>>
+*** <b>%</b>: Create a horizontal split <<blue>>
+*** <b>''</b>: Create a vertical split <<blue>>
+*** <b>h or Left Arrow</b>: Move to the pane on the Left <<blue>>
+*** <b>i or Right Arrow</b>: Move to the pane on the Right <<blue>>
+*** <b>j or Down Arrow</b>: Move to the pane Below <<blue>>
+*** <b>k or Up Arrow</b>: Move to the pane Above <<blue>>
+*** <b>q</b>: Briefly show pane numbers <<blue>>
+*** <b>o</b>: Move trough panes in order. \nEach press takes you to the next, until all of them <<blue>>
+*** <b>}</b>: Swap the position of the current pane with the next <<blue>>
+*** <b>{</b>: Swap the position of the current pane with the previous <<blue>>
+*** <b>x</b>: Close the current pane <<blue>>
+
+@endmindmap
+@enduml

@@ -121,6 +121,86 @@ spécifiquement définie. Il n'est donc pas possible d'additionner un **int** av
 
         Les 2 éléments étant de types différent, il n'est pas possible de les additionner
 
+Définission du type
+===================
+
+Il y a plusieur façons de définir le type des éléments 
+
+Définission Explicite du type
+-----------------------------
+
+    #. Définission Explicite simple
+
+        La définission explicite simple permet de déclarer un unique élément à la fois. Elle
+        comprend le mot clef de la déclaration (var, const, func ...) et le type. Un élément peut
+        être définie puis initialisé ultérieurement.
+        
+            .. note:: 
+                
+                **Définission Explicite Simple**
+                
+                .. code:: go
+                    :number-lines:
+                    :force:
+        
+                    func main() {
+                        var price int //La variable est déclarée, mais pas initialisée
+                        price = 250   //La variable est initialisée par affectation d'une valeur
+
+                        const tax float64 = 27.50 //La constante est déclarée et initialisée dans une même action
+
+                        var qte int = 1 //La variable est déclarée et initialisée en dans une même action
+
+                        fmt.Printf("'price' type: %T - Value: %v\n", price, price)
+                        fmt.Printf("'tax' type: %T - Value: %v\n", tax, tax)
+                        fmt.Printf("'qte' type: %T - Value: %v\n", qte, qte)
+                    }
+        
+                .. raw:: html
+        
+                    <u>Results</u>
+        
+                .. code:: shell
+        
+                    'price' type: int - Value: 250
+                    'tax' type: float64 - Value: 27.5
+                    'qty' type: int - Value: 1
+
+    #. Définission Explicite chainées
+
+        Il est possible de définir plusieurs elément d'un coup si ces éléments sont de même type. Le
+        nom du type ne sera alors donné qu'une seule fois.
+
+            .. note:: 
+                
+                **Définission Explicite Chainée**
+                
+                .. code:: go
+                    :number-lines:
+                    :force:
+        
+                    func main() {
+                        var price, qte int = 250, 1 //Les 2 variables sont définie et initialiser en une même action.
+                        // N.B : le type 'int' n'est renseigné qu'une seule fois
+
+                        fmt.Printf("'price' type: %T - Value: %v\n", price, price)
+                        fmt.Printf("'qte' type: %T - Value: %v\n", qte, qte)
+                    }
+        
+                .. raw:: html
+        
+                    <u>Results</u>
+        
+                .. code:: shell
+        
+                    'price' type: int - Value: 250
+                    'qty' type: int - Value: 1
+
+Définission Non-Explicite du type
+---------------------------------
+
+[WIP]
+
 ####
 
 ----------
@@ -137,7 +217,6 @@ Il y a deux types de déclaration de constantes :
     * Les déclaration non-Typées
 
 C'est déclaration peuvent être effectuées au niveau du module ou à l'interrieur d'une fonction.
-
 
 Constantes typées
 =================
@@ -214,6 +293,14 @@ types différents.
 
             Ici, le type de 'price' est redéfinie dynamiquement en fonction du contexte. le type
             passe alors de **int** à **float64** pour pouvoir additionner les deux valeur.
+
+####
+
+---------
+Variables
+---------
+
+[WIP]
 
 ####
 

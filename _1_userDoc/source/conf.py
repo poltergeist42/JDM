@@ -199,5 +199,3 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-
-
