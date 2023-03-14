@@ -65,10 +65,12 @@ Date et heure
 
 Conaitre la date et l'heure du système
 --------------------------------------
+
     ::
     
         date
         
+
 Synchronyser la date et l'heure avec un serveur de temp (NTP)
 -------------------------------------------------------------
 

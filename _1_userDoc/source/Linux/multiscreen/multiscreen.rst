@@ -30,7 +30,7 @@ Memento de commandes Tmux
         :width: 520 px
         :align: center
 
-  .. uml:: plantuml/mindmapTmux.wsd
+  .. uml:: plantFile/mindmapTmux.wsd
 
 ####
 
