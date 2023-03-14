@@ -1,0 +1,27 @@
+==========
+Composants
+==========
+
+.. index::
+   single: Composants
+
+.. toctree::
+   :maxdepth: 2
+
+   mpu6050/mpu6050
+
+.. contents::
+    :backlinks: top
+
+####
+
+Ce document présente différents composants et module éléctronique utilisables avec les cartes de
+prototypages tels qu'Arduino, ESP8266/ESP32, Raspberry-pi etc.
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::

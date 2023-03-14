@@ -1,0 +1,863 @@
+
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Composants Spécifiques &mdash; JDM</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" /> 
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
+            <a class="site-title" href="../index.html">
+                JDM
+            </a>
+        </div>
+    </header>
+
+
+<div class="breadcrumbs-outer hidden-xs-down">
+    <div class="container">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a></li>
+        
+      <li>Composants Spécifiques</li>
+    
+    
+      <li class="breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Composants/ComposantsOld.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+</div>
+    </div>
+</div>
+    <div class="main-outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 site-nav">
+                    
+<div role="search">
+    <form class="search" action="../search.html" method="get">
+        <div class="icon-input">
+            <input type="text" name="q" placeholder="Search" />
+            <span class="icon-search"></span>
+        </div>
+        <input type="submit" value="Go" class="d-hidden" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                    <div class="site-nav-tree">
+                        
+                            
+                            
+                                <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">infos générales Journal de manip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composants.html">Composants</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mpu6050/mpu6050.html">mpu6050</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ComputerVision.html">Computer Vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cookbook.html">Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Culture_Gen.html">Culture Générale / Connaissances insolites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DataBase/DataBase.html">DataBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DataBase/PostGreSQL/PostGreSQL.html">PostGreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataBase/Redis/Redis.html">Redis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Dev_Gest_Prjet/Dev_Gest_Prjet.html">Développement, Gestion  et Commercialisation de projet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Dev_Gest_Prjet/DevProject/DevProject.html">Dévellopement de projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dev_Gest_Prjet/Merise/Merise.html">MERISE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dev_Gest_Prjet/Agile/Agile.html">La méthode Agile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dev_Gest_Prjet/Commercialisation/Commercialisation.html">Commercialisation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Diagrams.html">Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Documentation_Automatique.html">Documentation_Automatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ESP.html">ESP8266 &amp; ESP32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Freecad.html">Freecad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT.html">GIT (versioning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Golang/Golang.html">Golang</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Golang/GetStarted/GetStarted.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Golang/Syntax/Syntax.html">Détails syntaxiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Golang/vocabGlossary/vocabGlossary.html">Vocabulaire et Glossaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Golang/codeSinppets/codeSinppets.html">Code Sinppets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../HPVC.html">HPVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../IDE_TextEditor/IDE_TextEditor.html">IDE &amp; Text Editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../IDE_TextEditor/Latex/Latex.html">LaTex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IDE_TextEditor/VIM/VIM.html">VIM (VI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IDE_TextEditor/visualStudioCode/visualStudioCode.html">Visual Studio Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Informatique.html">Informatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kicad.html">Kicad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Linux/Linux.html">LINUX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/shell/shell.html">SHELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/multiscreen/multiscreen.html">Multi-Screen terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/scripting/scripting.html">Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/UsersGroupsACL/UsersGroupsACL.html">Utilisateurs, Groupes et Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/sysAdmin/sysAdmin.html">Administration Système</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/network/network.html">network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/sharedFolders/sharedFolders.html">Dossiers partager et volumes distants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/hardwareMgnt/hardwareMgnt.html">Hardware Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/Raspberry/Raspberry.html">Raspberry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/bugError/bugError.html">Bug, Maintenance et traitemant des Erreurs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MAC_OS.html">MAC OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Machine_learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MQTT.html">MQTT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Musique/Musique.html">Musique</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Musique/theorie/theorie.html">Théorie musicale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Musique/MAO/MAO.html">Musique Assistée (par) Ordinateur - MAO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Musique/guitare/guitare.html">Guitare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Musique/GuitareChant/GuitareChant.html">GuitareChant</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Optimisation_Travail.html">Optimisation du travail (et de l’apprentissage)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Powershell.html">PowerShell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python.html">PYTHON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Regex.html">Regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Reseau.html">Reseau</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Soudure.html">Soudure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Techno_WEB/Techno_WEB.html">Technos Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Techno_WEB/HTML_CSS/HTML_CSS.html">HTML_CSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Techno_WEB/Javascript/Javascript.html">JavaScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React_and_legacy.html">React &amp; Legacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Techno_WEB/Node_Express/Node_Express.html">Node &amp; Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Techno_WEB/webCreation/webCreation.html">Création de Site Web</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Trading.html">Trading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../URLtheque.html">URLtheque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../XML_JSON.html">XML_JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arborescence/arborescence.html">Arborescence du projet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated/deprecated.html">Eléments dépréciés</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deprecated/Aquariophilie/Aquariophilie.html">Aquariophilie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deprecated/Django/Django.html">Django 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deprecated/English_vocab/English_vocab.html">English Vocabulary</a></li>
+</ul>
+</li>
+</ul>
+
+                            
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="document">
+                        
+                            
+  <section id="composants-specifiques">
+<h1>Composants Spécifiques<a class="headerlink" href="#composants-specifiques" title="Lien permanent vers cette rubrique">¶</a></h1>
+<section id="programmation-des-atmega">
+<h2>Programmation des ATMega<a class="headerlink" href="#programmation-des-atmega" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Pour programmer un ATmega (328P ; 2560 etc) on peut utiliser Trois environnement différent :</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">AVR_Studio<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Proposer par Microchip (anciennement Atmel) permet de faire du debug
+au travers de la sonde JTAG mais n’accepte que
+les programmateur officiels</p>
+</dd>
+<dt class="field-even">Arduino<span class="colon">:</span></dt>
+<dd class="field-even"><p>En utilisant le mode « Arduino as ISP. Ne permet pas de programmer
+autre chose que du “.ino”</p>
+</dd>
+<dt class="field-odd">AVRDUDE<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tout en ligne de commande, mais accepte tous les programmateur (même
+“Arduino as ISP”</p>
+</dd>
+</dl>
+</div></blockquote>
+<section id="atmega-328p-pu-pinout">
+<h3>ATMega 328p-PU Pinout<a class="headerlink" href="#atmega-328p-pu-pinout" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="Composants/Images/Composants/ATMEGA/ATMEGA328-PU-PINOUT.jpg"><img alt="Composants/Images/Composants/ATMEGA/ATMEGA328-PU-PINOUT.jpg" class="align-center" src="Composants/Images/Composants/ATMEGA/ATMEGA328-PU-PINOUT.jpg" style="width: 400px;" /></a>
+</div></blockquote>
+</section>
+<section id="installation-du-programmateur-usbasp-sous-windows-10">
+<h3>Installation du programmateur USBASP sous windows 10<a class="headerlink" href="#installation-du-programmateur-usbasp-sous-windows-10" title="Lien permanent vers cette rubrique">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://zadig.akeo.ie/">http://zadig.akeo.ie/</a></dt><dd><p># Le logiciel Zadig permet d’installer des pilotes USB
+# pour plusieurs programmateur différents</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="avrdude">
+<h3>AVRDUDE<a class="headerlink" href="#avrdude" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Installation</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://sourceforge.net/projects/winavr/files/">https://sourceforge.net/projects/winavr/files/</a></dt><dd><p># dernière version : 2010-01-20</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p><strong>/!\ Ne pas cocher la case “ajouter au path” mais ajouter les chemins manuellement</strong></p>
+<ol class="arabic">
+<li><p>Chemins à ajouter dans le path</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>C:WinAVR-20100110bin</p></li>
+<li><p>C:WinAVR-20100110utilsbin</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Utilisation</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://skyduino.wordpress.com/2011/12/02/tutoriel-avrdude-en-ligne-de-commande/">https://skyduino.wordpress.com/2011/12/02/tutoriel-avrdude-en-ligne-de-commande/</a></p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic">
+<li><p>Téléverser un programme</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="p">[</span><span class="n">NOM_DU_MICROCONTROLEUR</span><span class="p">]</span> <span class="o">-</span><span class="n">v</span> <span class="p">(</span><span class="n">mode</span> <span class="n">verbose</span><span class="p">)</span> <span class="o">-</span><span class="n">U</span> <span class="n">flash</span><span class="p">:[</span><span class="n">r</span><span class="o">|</span><span class="n">w</span><span class="o">|</span><span class="n">v</span><span class="p">]:[</span><span class="n">NOM_DU_HEX_A_TELEVERSER</span><span class="p">]</span>
+
+<span class="n">ex</span> <span class="p">:</span> <span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="n">usbasp</span> <span class="o">-</span><span class="n">p</span> <span class="n">m2560</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">U</span> <span class="n">flash</span><span class="p">:</span><span class="n">w</span><span class="p">:</span><span class="n">Marlin_witbox_2</span><span class="o">-</span><span class="mf">510.</span><span class="n">hex</span>
+</pre></div>
+</div>
+</li>
+<li><p>Obtenir la liste des noms des microcontroleurs utilisables</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="p">[</span><span class="n">NOM_DU_PROGRAMATEUR</span><span class="p">]</span>
+
+<span class="n">ex</span> <span class="p">:</span> <span class="n">avrdude</span> <span class="o">-</span><span class="n">c</span> <span class="n">usbasp</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+<section id="magnetomettre-hmc5883l">
+<h2>Magnetomettre : HMC5883L<a class="headerlink" href="#magnetomettre-hmc5883l" title="Lien permanent vers cette rubrique">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">liens WEB<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/?ALLSTEPS">http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/?ALLSTEPS</a></dt><dd><p># Instructable (install I2C et test en Python3)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/">http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/</a></dt><dd><p># Exemple de mise en œuvre + liste des fonctions</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf">http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf</a></dt><dd><p># Datasheet du composant</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.sparkfun.com/products/10530">https://www.sparkfun.com/products/10530</a></dt><dd><p># fiche produit Sparkfun (arduino)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<section id="implantation-hmc5883l">
+<h3>Implantation HMC5883L<a class="headerlink" href="#implantation-hmc5883l" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><p>La sérigraphie est masqué lorsque le magnétomètre est enfiché dans une breadbord.
+L’implantation si dessous est donc présenter en <strong>vue de dessus (donc sérigraphie cachée)</strong></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Haut</span>
+    <span class="mi">3</span><span class="n">v3</span>
+    <span class="n">DRDY</span>
+    <span class="n">SDA</span>
+    <span class="n">SCL</span>
+    <span class="n">GND</span>
+    <span class="n">VCC_</span><span class="o">+</span><span class="mi">5</span><span class="n">v</span>
+<span class="n">Bas</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="installation-des-librairies-quick2wire-et-i2clibraries">
+<h3>Installation des librairies quick2wire et i2clibraries<a class="headerlink" href="#installation-des-librairies-quick2wire-et-i2clibraries" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl>
+<dt>Préparation :</dt><dd><p>Si ce n’est pas déjà fait, il faut installer les outils Python :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">i2c</span><span class="o">-</span><span class="n">tools</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">smbus</span>
+     <span class="c1"># Quick2wire.i2c peut aussi être utilisé our l&#39;i2c</span>
+
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span>
+<span class="n">sudo</span> <span class="n">reboot</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>L’installation et configurations des librairies et outils Quick2wire</dt><dd><p><strong>N.B :</strong> le lignes qui suivent sont copiées telles quelles depuis la page instructables</p>
+<dl>
+<dt>Se positionner à l’endroit ou l’on veut installer quick2wire</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span><span class="o">.</span><span class="n">git</span>
+    <span class="c1">#get quick2wire from github.com</span>
+
+    <span class="c1">#if don&#39;t have git, try &quot;sudo apt-get install git&quot;</span>
+
+<span class="n">mv</span> <span class="o">./</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span> <span class="o">./</span><span class="n">code</span>
+    <span class="c1"># renaming the quick2wire library folder to code for tidiness,</span>
+    <span class="c1"># you can skip this if you prefer keeping it original</span>
+
+<span class="n">nano</span> <span class="n">setup</span><span class="o">.</span><span class="n">env</span>
+    <span class="c1"># create a setup file, basically to point out where the quick2wire library is</span>
+    <span class="c1"># situated for your python</span>
+    <span class="c1"># after this line, terminal will enter text editing mode, type in these lines</span>
+
+<span class="n">export</span> <span class="n">QUICK2WIRE_API_HOME</span><span class="o">=~/</span><span class="n">project</span><span class="o">/</span><span class="n">code</span>
+    <span class="c1">#change the directory address if different than what i&#39;m using</span>
+    <span class="c1">#export PYTHONPATH=$PYTHONPATH:$QUICK2WIRE_API_HOME</span>
+
+<span class="n">after</span> <span class="n">that</span> <span class="n">CTRL</span><span class="o">+</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">ENTER</span> <span class="n">to</span> <span class="n">quit</span><span class="p">,</span> <span class="n">save</span> <span class="ow">and</span> <span class="n">overwrite</span>
+
+<span class="n">back</span> <span class="ow">in</span> <span class="n">terminal</span> <span class="n">mode</span>
+
+<span class="o">.</span> <span class="o">./</span><span class="n">quick2wire</span><span class="o">.</span><span class="n">env</span>
+    <span class="c1"># run the environment setup, run this once every time after reboot,</span>
+    <span class="c1"># running twice will append the address directory</span>
+    <span class="c1"># for checking, use &quot;env |grep quick2wire&quot;,</span>
+    <span class="c1"># address shown must be the same with the directory where</span>
+    <span class="c1"># you install your quick2wire library</span>
+
+<span class="n">cd</span> <span class="n">code</span>
+    <span class="c1">#go into the quick2wire folder, this will be where you put your python code</span>
+
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">bitbucket</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">thinkbowl</span><span class="o">/</span><span class="n">i2clibraries</span><span class="o">.</span><span class="n">git</span>
+    <span class="c1">#getting library files containing functions for i2c devices such as HMC5883L,</span>
+    <span class="c1">#ITG-3205, ADXL345 and LCD</span>
+
+<span class="n">Now</span> <span class="n">you</span> <span class="n">can</span> <span class="n">shut</span> <span class="n">it</span> <span class="n">down</span> <span class="k">with</span> <span class="s2">&quot;sudo shutdown -h now&quot;</span> <span class="n">so</span> <span class="n">that</span> <span class="n">we</span> <span class="n">can</span> <span class="n">do</span> <span class="n">the</span> <span class="n">wiring</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<section id="configuration-du-hmc5883l">
+<h3>Configuration du HMC5883L<a class="headerlink" href="#configuration-du-hmc5883l" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl>
+<dt>la déclinaison terrestre</dt><dd><p>Pour pouvoir être le plus précis possible, il faut recalibrer la boussole en tenant compte
+de notre décalage par rapport au pôle magnétique. On appel ça : <strong>« la déclinaison terrestre »</strong>
+Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Longitude :  49° 1’22.48 »N</p></li>
+<li><p>Latitude  :   2° 1’50.51 »E</p></li>
+</ul>
+</div></blockquote>
+<p>se qui donne à la date du 18/08/2015 : 0° 9,24”</p>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="motteur-pas-a-pas-28byj-48">
+<h2>Motteur Pas à Pas : 28BYJ-48<a class="headerlink" href="#motteur-pas-a-pas-28byj-48" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p><strong>N.B :</strong> se PAP doit être piloté par un driver comme le UNL2003</p>
+<section id="specification-du-pap">
+<h3>Spécification du PAP<a class="headerlink" href="#specification-du-pap" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>angle par pas (moteur)</p></td>
+<td><p>5.625°</p></td>
+</tr>
+<tr class="row-even"><td><p>Nbe de pas / tours (moteur)</p></td>
+<td><p>64 (360/5.625)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ratio (démultiplicateur)</p></td>
+<td><p>1/64</p></td>
+</tr>
+<tr class="row-even"><td><p>angle par pas (en sortie d’arbre)</p></td>
+<td><p>0.087890625°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nbe de pas / tour (en sortie d’arbre)</p></td>
+<td><p>4096</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="correspondance-entre-le-driver-et-les-gpio">
+<h3>Correspondance entre le driver et les GPIO<a class="headerlink" href="#correspondance-entre-le-driver-et-les-gpio" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>BCM (GPIO)</p></th>
+<th class="head"><p>Sérigraphie sur UNL2003</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GPIO17</p></td>
+<td><p>N1</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO18</p></td>
+<td><p>N2</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO27</p></td>
+<td><p>N3</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO22</p></td>
+<td><p>N4</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="phases">
+<h3>Phases<a class="headerlink" href="#phases" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td></td>
+<td colspan="8"><p>==&gt; CW Direction (1-2 Phase )</p></td>
+</tr>
+<tr class="row-even"><td><p>lead Wire color</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>4 orange</p></td>
+<td><p>x</p></td>
+<td><p>x</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>x</p></td>
+</tr>
+<tr class="row-even"><td><p>3 yelow</p></td>
+<td></td>
+<td><p>x</p></td>
+<td><p>x</p></td>
+<td><p>x</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>2 pink</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>x</p></td>
+<td><p>x</p></td>
+<td><p>x</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>1 blue</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>x</p></td>
+<td><p>x</p></td>
+<td><p>x</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="simple">
+<dt><strong>N.B :</strong> les 8 phases donnent 1 tour complet sur le moteur,</dt><dd><p>soit 1/64 de tour en sortie d’arbre.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="organisation-des-phases-en-python3">
+<h3>Organisation des phases en python3<a class="headerlink" href="#organisation-des-phases-en-python3" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Séquence de sortie</span>
+<span class="n">ndp</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">phase</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">ndp</span><span class="p">))</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">phase</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl>
+<dt><strong>N.B :</strong> la liste contenu dans chaque phase, correspond à l’état</dt><dd><p>(1 = Hight = True ; 0 = Low = False) à appliquer sur le broches du GPIO</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ex</span>  <span class="p">:</span> <span class="n">phase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+    <span class="o">--&gt;</span> <span class="n">GPIO17</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="o">--&gt;</span> <span class="n">GPIO18</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="o">--&gt;</span> <span class="n">GPIO27</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="o">--&gt;</span> <span class="n">GPIO22</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="picamera">
+<h2>Picamera<a class="headerlink" href="#picamera" title="Lien permanent vers cette rubrique">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">liens WEB<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.framboise314.fr/picamera-pour-piloter-integralement-la-camera-de-votre-raspberry-pi-en-python/">http://www.framboise314.fr/picamera-pour-piloter-integralement-la-camera-de-votre-raspberry-pi-en-python/</a></p></li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://picamera.readthedocs.org/en/release-1.0/quickstart.html">http://picamera.readthedocs.org/en/release-1.0/quickstart.html</a></dt><dd><p># Quick Start</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="http://picamera.readthedocs.org/en/release-1.0/recipes1.html">http://picamera.readthedocs.org/en/release-1.0/recipes1.html</a></dt><dd><p># CookBook</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<section id="activation-du-module-camera-sur-le-rpi">
+<h3>Activation du module caméra sur le RPi<a class="headerlink" href="#activation-du-module-camera-sur-le-rpi" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl>
+<dt>se connecter au module de configuration</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+<dl>
+<dt>#.* faire la séquence suivante</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;5 Enable Camera&quot;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+        <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Enable</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+        <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Finish</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+        <span class="o">--&gt;</span> <span class="o">&lt;</span><span class="n">Oui</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Entré</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="installation-de-la-camera">
+<h3>installation de la camera<a class="headerlink" href="#installation-de-la-camera" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Insérer la limande dans le ports situé au niveau du port HDMI.</p></li>
+</ol>
+<blockquote>
+<div><p><strong>N.B :</strong> la partie métallique doit être en direction du port HDMI</p>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="instalation-de-la-librairie-picamera">
+<h3>Instalation de la librairie PiCamera<a class="headerlink" href="#instalation-de-la-librairie-picamera" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl>
+<dt>Faire les mises à jour système de rigueur puis</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">picamera</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<section id="utilisation-avec-python">
+<h3>utilisation avec python<a class="headerlink" href="#utilisation-avec-python" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">picamera</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="capteur-ultrason-hc-sr04">
+<h2>Capteur ultrason : HC-SR04<a class="headerlink" href="#capteur-ultrason-hc-sr04" title="Lien permanent vers cette rubrique">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/xACy8l3LsXI">https://youtu.be/xACy8l3LsXI</a></p></li>
+<li><p><a class="reference external" href="http://www.modmypi.com/blog/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi">http://www.modmypi.com/blog/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi</a></p></li>
+</ul>
+</dd>
+</dl>
+<section id="vocabulaire-et-definissions-pour-le-hc-sr04">
+<h3>Vocabulaire et définissions pour le HC-SR04<a class="headerlink" href="#vocabulaire-et-definissions-pour-le-hc-sr04" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list">
+<dt class="field-odd">Trig<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>En Sortie (haut-parleur - Trig)</dt><dd><p># 1 impulsion est égale a 10us (0.00001)</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Echo<span class="colon">:</span></dt>
+<dd class="field-even"><p>En Entrée (Micro - Echo)</p>
+<blockquote>
+<div><p># Attention les entrée du RPi étant en 3.3v,
+il faut faire un pont diviseur entre la broche
+« Echo » et le GND pour pouvoir se brancher
+sur le RPi</p>
+</div></blockquote>
+</dd>
+<dt class="field-odd">Vitesse du son<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Le son se déplace à une vitesse d’environ 343 m/s (à température ambiante de 20°),
+soit environ 34300 cm/s</p>
+</dd>
+<dt class="field-even">Distance<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>D = 17150 x time</dt><dd><p># 17150 correspond a la vitesse du son / 2 (34300/2).
+On divise par 2 car seule la distance en l’obstacle et le mur nous intéresse
+et non la distance total parcourue par l’onde radio.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="specification-du-hc-sr04">
+<h3>Spécification du HC-SR04<a class="headerlink" href="#specification-du-hc-sr04" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Alimentation<span class="colon">:</span></dt>
+<dd class="field-odd"><p>5 V</p>
+</dd>
+<dt class="field-even">porté<span class="colon">:</span></dt>
+<dd class="field-even"><p>2 cm à 500 cm</p>
+</dd>
+<dt class="field-odd">Résolution<span class="colon">:</span></dt>
+<dd class="field-odd"><p>0.3 cm</p>
+</dd>
+<dt class="field-even">Fréquence<span class="colon">:</span></dt>
+<dd class="field-even"><p>40 kHz</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="captheur-de-methane-mq4">
+<h2>Captheur de Méthane : MQ4<a class="headerlink" href="#captheur-de-methane-mq4" title="Lien permanent vers cette rubrique">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.pololu.com/file/0J311/MQ4.pdf">https://www.pololu.com/file/0J311/MQ4.pdf</a></dt><dd><p># DATASHEET du composant</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.aliexpress.com/item/Free-shipping-MQ-4-gas-methane-sensor-module-MQ4-for-arduino/32561647140.html?spm=a2g0s.9042311.0.0.27424c4dETPH08">https://www.aliexpress.com/item/Free-shipping-MQ-4-gas-methane-sensor-module-MQ4-for-arduino/32561647140.html?spm=a2g0s.9042311.0.0.27424c4dETPH08</a></dt><dd><p># Ref Aliexpress</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.sparkfun.com/datasheets/Sensors/Biometric/MQ-4.pdf">https://www.sparkfun.com/datasheets/Sensors/Biometric/MQ-4.pdf</a></dt><dd><p># Une autre version de la DATASHHET (avec des dessins plus gros et schéma plus détaillés)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt class="field-even">INFOS<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p>Les capteurs de Type “MQx” ont besoin d’être alimentés en continue</p></li>
+<li><p>Les capteurs de Type “MQx” doivent nécessite un délais de minimum 48H pour fournir
+des informations fiables</p></li>
+<li><p>Toutes les valeurs données ici concerne uniquement le Méthane. Pour tout autre gaze
+détecté par le MQ4, il faut se reporter à la documentation</p></li>
+</ul>
+</dd>
+<dt class="field-odd">/attention\<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Sur la version PCB la résistance Rl, qui devrait être une résistance ajustable de 10 à 47k,
+est une résistance fixe de 1K. D’après la documentation, cette résistance devrait être
+étalonnée pour 5000 ppm soit à peut près 20K</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="liste-des-gazes-pouvant-etre-detecter-par-le-mq4">
+<h2>Liste des gazes pouvant être détecter par le MQ4<a class="headerlink" href="#liste-des-gazes-pouvant-etre-detecter-par-le-mq4" title="Lien permanent vers cette rubrique">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>GPL</p></li>
+<li><p>Méthane (CH4)</p></li>
+<li><p>Hydrogène (H2)</p></li>
+<li><p>Monoxyde de Carbone (CO)</p></li>
+<li><p>Alcool</p></li>
+<li><p>Fumé de cigarette</p></li>
+</ul>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="definition-des-constantes-et-valeurs-de-references">
+<h2>Définition des constantes et valeurs de références<a class="headerlink" href="#definition-des-constantes-et-valeurs-de-references" title="Lien permanent vers cette rubrique">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.jayconsystems.com/tutorials/gas-sensor-tutorial/">https://www.jayconsystems.com/tutorials/gas-sensor-tutorial/</a></dt><dd><p># Tous les calculs ont été effectuer sellons les calculs de cette page mais sur la courbe CH4</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt class="field-even">RS<span class="colon">:</span></dt>
+<dd class="field-even"><p>C’est la résistance mesurer mesurer par le capteur. Cette valeur est Variable.</p>
+</dd>
+<dt class="field-odd">R0<span class="colon">:</span></dt>
+<dd class="field-odd"><p>C’est la résistance du capteur en condition de gaz normal. Cette valeur est Variable.
+Elle doit être calculer.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'20170523',
+            LANGUAGE:'fr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sphinx_highlight.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+    <div class="footer" role="contentinfo">
+        <div class="container">
+            &#169; Copyright 2017, Poltergeist42.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
+        </div>
+    </div>  
+
+</body>
+</html>

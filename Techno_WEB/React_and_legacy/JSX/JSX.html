@@ -114,7 +114,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../readme.html">infos générales Journal de manip</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../readme.html#description">Description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Composants.html">Composants Spécifiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Composants/Composants.html">Composants</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Composants/mpu6050/mpu6050.html">mpu6050</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ComputerVision.html">Computer Vision</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Cookbook.html">Cookbook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Culture_Gen.html">Culture Générale / Connaissances insolites</a></li>
@@ -242,9 +245,9 @@
 l’écriture. C’est ce que l’on appel du <em>« sucre syntaxique »</em>.</p>
 <p>On écris le html directement dans le code JavaScript, ce qui nous permet d’y inclure directement
 des composants React.</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="c1">//Expression en JSX</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="w">     </span><span class="o">&lt;</span><span class="nx">h1</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;greeting&quot;</span><span class="o">&gt;</span><span class="w"></span>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="c1">//Expression en JSX</span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="linenos"> 3</span><span class="w">     </span><span class="o">&lt;</span><span class="nx">h1</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;greeting&quot;</span><span class="o">&gt;</span>
 <span class="linenos"> 4</span><span class="w">         </span><span class="nx">Je</span><span class="w"> </span><span class="nx">s</span><span class="s1">&#39;appel Groot !</span>
 <span class="linenos"> 5</span><span class="s1">     &lt;/h1&gt;</span>
 <span class="linenos"> 6</span><span class="s1"> );</span>
@@ -253,8 +256,8 @@ des composants React.</p>
 <span class="linenos"> 9</span><span class="s1"> const element = React.createlement(</span>
 <span class="linenos">10</span><span class="s1">     &#39;</span><span class="nx">h1</span><span class="s1">&#39;,</span>
 <span class="linenos">11</span><span class="s1">     {className: &#39;</span><span class="nx">greeting</span><span class="s1">&#39;},</span>
-<span class="linenos">12</span><span class="s1">     &#39;</span><span class="nx">Je</span><span class="w"> </span><span class="nx">s</span><span class="s1">&#39;appelle Groot !&#39;</span><span class="w"></span>
-<span class="linenos">13</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="s1">     &#39;</span><span class="nx">Je</span><span class="w"> </span><span class="nx">s</span><span class="s1">&#39;appelle Groot !&#39;</span>
+<span class="linenos">13</span><span class="w"> </span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Ces deux expressions sont équivlente.</p>
@@ -391,6 +394,7 @@ représente un composant, et exige que l’identifiant Welcome existe dans la po
 <hr class="docutils" />
 <section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id1" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://www.apprendre-react.fr/tutorial/debutant/jsx/">https://www.apprendre-react.fr/tutorial/debutant/jsx/</a></p>
@@ -402,6 +406,7 @@ représente un composant, et exige que l’identifiant Welcome existe dans la po
 <aside class="footnote brackets" id="id5" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">3</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://fr.reactjs.org/docs/jsx-in-depth.html">https://fr.reactjs.org/docs/jsx-in-depth.html</a></p>
+</aside>
 </aside>
 </section>
 </section>
@@ -433,13 +438,14 @@ représente un composant, et exige que l’identifiant Welcome existe dans la po
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/sphinx_highlight.js"></script>
     <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
   
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; Copyright 2017, Poltergeist42.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
         </div>
     </div>  
 

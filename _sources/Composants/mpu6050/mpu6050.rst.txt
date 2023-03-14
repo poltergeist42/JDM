@@ -1,0 +1,26 @@
+=======
+mpu6050
+=======
+
+.. index::
+   single: Accéléromètre
+   single: Composants; Accéléromètre
+
+.. contents::
+    :depth: 3
+    :backlinks: top
+
+####
+
+:Liens_Web:
+    * `MPU-6050 with ESP32/ESP8266 (Accelerometer, Gyroscope, and temperature)`_
+
+.. _`MPU-6050 with ESP32/ESP8266 (Accelerometer, Gyroscope, and temperature)`: https://microcontrollerslab.com/micropython-mpu-6050-esp32-esp8266/
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::

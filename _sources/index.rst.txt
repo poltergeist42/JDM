@@ -12,7 +12,7 @@ Mon journal de manip
    :caption: Sommaire:
 
    readme
-   Composants
+   Composants/Composants
    ComputerVision
    Cookbook
    Culture_Gen
