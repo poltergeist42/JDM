@@ -17,7 +17,7 @@ mpu6050
 
 .. _`MPU-6050 with ESP32/ESP8266 (Accelerometer, Gyroscope, and temperature)`: https://microcontrollerslab.com/micropython-mpu-6050-esp32-esp8266/
 
-Voici la documentation du composant :download:`Datasheet MPU-6050 <doc/mpu6050.pdf>`
+Voici la documentation du composant :download:`Datasheet MPU-6050 <doc/MPU-6000.PDF>`
 
 ####
 
