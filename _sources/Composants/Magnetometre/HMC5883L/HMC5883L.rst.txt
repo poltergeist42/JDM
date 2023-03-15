@@ -37,7 +37,7 @@ La sérigraphie est masqué lorsque le magnétomètre est enfiché dans une brea
 dessous est donc présenter en **vue de dessus (donc sérigraphie cachée)**
     
     .. image:: images/10530-04.jpg
-       :width: 400 px:
+       :width: 400 px
        :align: center
     
 ####
