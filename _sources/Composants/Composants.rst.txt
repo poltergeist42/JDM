@@ -9,6 +9,7 @@ Composants
    :maxdepth: 2
 
    mpu6050/mpu6050
+   HMC5883L/HMC5883L
 
 .. contents::
     :backlinks: top

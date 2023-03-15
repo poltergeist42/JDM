@@ -210,8 +210,9 @@
                             
   <section id="composants-specifiques">
 <h1>Composants Spécifiques<a class="headerlink" href="#composants-specifiques" title="Lien permanent vers cette rubrique">¶</a></h1>
+</section>
 <section id="programmation-des-atmega">
-<h2>Programmation des ATMega<a class="headerlink" href="#programmation-des-atmega" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h1>Programmation des ATMega<a class="headerlink" href="#programmation-des-atmega" title="Lien permanent vers cette rubrique">¶</a></h1>
 <p>Pour programmer un ATmega (328P ; 2560 etc) on peut utiliser Trois environnement différent :</p>
 <blockquote>
 <div><dl class="field-list simple">
@@ -231,13 +232,13 @@ autre chose que du “.ino”</p>
 </dl>
 </div></blockquote>
 <section id="atmega-328p-pu-pinout">
-<h3>ATMega 328p-PU Pinout<a class="headerlink" href="#atmega-328p-pu-pinout" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>ATMega 328p-PU Pinout<a class="headerlink" href="#atmega-328p-pu-pinout" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><a class="reference internal image-reference" href="Composants/Images/Composants/ATMEGA/ATMEGA328-PU-PINOUT.jpg"><img alt="Composants/Images/Composants/ATMEGA/ATMEGA328-PU-PINOUT.jpg" class="align-center" src="Composants/Images/Composants/ATMEGA/ATMEGA328-PU-PINOUT.jpg" style="width: 400px;" /></a>
 </div></blockquote>
 </section>
 <section id="installation-du-programmateur-usbasp-sous-windows-10">
-<h3>Installation du programmateur USBASP sous windows 10<a class="headerlink" href="#installation-du-programmateur-usbasp-sous-windows-10" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>Installation du programmateur USBASP sous windows 10<a class="headerlink" href="#installation-du-programmateur-usbasp-sous-windows-10" title="Lien permanent vers cette rubrique">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -252,7 +253,7 @@ autre chose que du “.ino”</p>
 </dl>
 </section>
 <section id="avrdude">
-<h3>AVRDUDE<a class="headerlink" href="#avrdude" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>AVRDUDE<a class="headerlink" href="#avrdude" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
 <li><p>Installation</p>
@@ -312,150 +313,12 @@ autre chose que du “.ino”</p>
 </div></blockquote>
 </section>
 </section>
-<section id="magnetomettre-hmc5883l">
-<h2>Magnetomettre : HMC5883L<a class="headerlink" href="#magnetomettre-hmc5883l" title="Lien permanent vers cette rubrique">¶</a></h2>
-<dl class="field-list simple">
-<dt class="field-odd">liens WEB<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><dl class="simple">
-<dt><a class="reference external" href="http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/?ALLSTEPS">http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/?ALLSTEPS</a></dt><dd><p># Instructable (install I2C et test en Python3)</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><a class="reference external" href="http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/">http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/</a></dt><dd><p># Exemple de mise en œuvre + liste des fonctions</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><a class="reference external" href="http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf">http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf</a></dt><dd><p># Datasheet du composant</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><a class="reference external" href="https://www.sparkfun.com/products/10530">https://www.sparkfun.com/products/10530</a></dt><dd><p># fiche produit Sparkfun (arduino)</p>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-<section id="implantation-hmc5883l">
-<h3>Implantation HMC5883L<a class="headerlink" href="#implantation-hmc5883l" title="Lien permanent vers cette rubrique">¶</a></h3>
-<blockquote>
-<div><p>La sérigraphie est masqué lorsque le magnétomètre est enfiché dans une breadbord.
-L’implantation si dessous est donc présenter en <strong>vue de dessus (donc sérigraphie cachée)</strong></p>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Haut</span>
-    <span class="mi">3</span><span class="n">v3</span>
-    <span class="n">DRDY</span>
-    <span class="n">SDA</span>
-    <span class="n">SCL</span>
-    <span class="n">GND</span>
-    <span class="n">VCC_</span><span class="o">+</span><span class="mi">5</span><span class="n">v</span>
-<span class="n">Bas</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div></blockquote>
-</section>
-<section id="installation-des-librairies-quick2wire-et-i2clibraries">
-<h3>Installation des librairies quick2wire et i2clibraries<a class="headerlink" href="#installation-des-librairies-quick2wire-et-i2clibraries" title="Lien permanent vers cette rubrique">¶</a></h3>
-<blockquote>
-<div><ol class="arabic">
-<li><dl>
-<dt>Préparation :</dt><dd><p>Si ce n’est pas déjà fait, il faut installer les outils Python :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">i2c</span><span class="o">-</span><span class="n">tools</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">smbus</span>
-     <span class="c1"># Quick2wire.i2c peut aussi être utilisé our l&#39;i2c</span>
-
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span>
-<span class="n">sudo</span> <span class="n">reboot</span>
-</pre></div>
-</div>
-</dd>
-</dl>
-</li>
-<li><dl>
-<dt>L’installation et configurations des librairies et outils Quick2wire</dt><dd><p><strong>N.B :</strong> le lignes qui suivent sont copiées telles quelles depuis la page instructables</p>
-<dl>
-<dt>Se positionner à l’endroit ou l’on veut installer quick2wire</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">/</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span><span class="o">.</span><span class="n">git</span>
-    <span class="c1">#get quick2wire from github.com</span>
-
-    <span class="c1">#if don&#39;t have git, try &quot;sudo apt-get install git&quot;</span>
-
-<span class="n">mv</span> <span class="o">./</span><span class="n">quick2wire</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">api</span> <span class="o">./</span><span class="n">code</span>
-    <span class="c1"># renaming the quick2wire library folder to code for tidiness,</span>
-    <span class="c1"># you can skip this if you prefer keeping it original</span>
-
-<span class="n">nano</span> <span class="n">setup</span><span class="o">.</span><span class="n">env</span>
-    <span class="c1"># create a setup file, basically to point out where the quick2wire library is</span>
-    <span class="c1"># situated for your python</span>
-    <span class="c1"># after this line, terminal will enter text editing mode, type in these lines</span>
-
-<span class="n">export</span> <span class="n">QUICK2WIRE_API_HOME</span><span class="o">=~/</span><span class="n">project</span><span class="o">/</span><span class="n">code</span>
-    <span class="c1">#change the directory address if different than what i&#39;m using</span>
-    <span class="c1">#export PYTHONPATH=$PYTHONPATH:$QUICK2WIRE_API_HOME</span>
-
-<span class="n">after</span> <span class="n">that</span> <span class="n">CTRL</span><span class="o">+</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">ENTER</span> <span class="n">to</span> <span class="n">quit</span><span class="p">,</span> <span class="n">save</span> <span class="ow">and</span> <span class="n">overwrite</span>
-
-<span class="n">back</span> <span class="ow">in</span> <span class="n">terminal</span> <span class="n">mode</span>
-
-<span class="o">.</span> <span class="o">./</span><span class="n">quick2wire</span><span class="o">.</span><span class="n">env</span>
-    <span class="c1"># run the environment setup, run this once every time after reboot,</span>
-    <span class="c1"># running twice will append the address directory</span>
-    <span class="c1"># for checking, use &quot;env |grep quick2wire&quot;,</span>
-    <span class="c1"># address shown must be the same with the directory where</span>
-    <span class="c1"># you install your quick2wire library</span>
-
-<span class="n">cd</span> <span class="n">code</span>
-    <span class="c1">#go into the quick2wire folder, this will be where you put your python code</span>
-
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">bitbucket</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">thinkbowl</span><span class="o">/</span><span class="n">i2clibraries</span><span class="o">.</span><span class="n">git</span>
-    <span class="c1">#getting library files containing functions for i2c devices such as HMC5883L,</span>
-    <span class="c1">#ITG-3205, ADXL345 and LCD</span>
-
-<span class="n">Now</span> <span class="n">you</span> <span class="n">can</span> <span class="n">shut</span> <span class="n">it</span> <span class="n">down</span> <span class="k">with</span> <span class="s2">&quot;sudo shutdown -h now&quot;</span> <span class="n">so</span> <span class="n">that</span> <span class="n">we</span> <span class="n">can</span> <span class="n">do</span> <span class="n">the</span> <span class="n">wiring</span>
-</pre></div>
-</div>
-</dd>
-</dl>
-</dd>
-</dl>
-</li>
-</ol>
-</div></blockquote>
-</section>
-<section id="configuration-du-hmc5883l">
-<h3>Configuration du HMC5883L<a class="headerlink" href="#configuration-du-hmc5883l" title="Lien permanent vers cette rubrique">¶</a></h3>
-<blockquote>
-<div><ol class="arabic">
-<li><dl>
-<dt>la déclinaison terrestre</dt><dd><p>Pour pouvoir être le plus précis possible, il faut recalibrer la boussole en tenant compte
-de notre décalage par rapport au pôle magnétique. On appel ça : <strong>« la déclinaison terrestre »</strong>
-Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Longitude :  49° 1’22.48 »N</p></li>
-<li><p>Latitude  :   2° 1’50.51 »E</p></li>
-</ul>
-</div></blockquote>
-<p>se qui donne à la date du 18/08/2015 : 0° 9,24”</p>
-</dd>
-</dl>
-</li>
-</ol>
-</div></blockquote>
-</section>
-</section>
 <hr class="docutils" />
 <section id="motteur-pas-a-pas-28byj-48">
-<h2>Motteur Pas à Pas : 28BYJ-48<a class="headerlink" href="#motteur-pas-a-pas-28byj-48" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h1>Motteur Pas à Pas : 28BYJ-48<a class="headerlink" href="#motteur-pas-a-pas-28byj-48" title="Lien permanent vers cette rubrique">¶</a></h1>
 <p><strong>N.B :</strong> se PAP doit être piloté par un driver comme le UNL2003</p>
 <section id="specification-du-pap">
-<h3>Spécification du PAP<a class="headerlink" href="#specification-du-pap" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>Spécification du PAP<a class="headerlink" href="#specification-du-pap" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><table class="docutils align-default">
 <tbody>
@@ -479,7 +342,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </div></blockquote>
 </section>
 <section id="correspondance-entre-le-driver-et-les-gpio">
-<h3>Correspondance entre le driver et les GPIO<a class="headerlink" href="#correspondance-entre-le-driver-et-les-gpio" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>Correspondance entre le driver et les GPIO<a class="headerlink" href="#correspondance-entre-le-driver-et-les-gpio" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><table class="docutils align-default">
 <thead>
@@ -505,7 +368,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </div></blockquote>
 </section>
 <section id="phases">
-<h3>Phases<a class="headerlink" href="#phases" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>Phases<a class="headerlink" href="#phases" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><table class="docutils align-default">
 <tbody>
@@ -571,7 +434,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </div></blockquote>
 </section>
 <section id="organisation-des-phases-en-python3">
-<h3>Organisation des phases en python3<a class="headerlink" href="#organisation-des-phases-en-python3" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>Organisation des phases en python3<a class="headerlink" href="#organisation-des-phases-en-python3" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Séquence de sortie</span>
 <span class="n">ndp</span> <span class="o">=</span> <span class="mi">8</span>
@@ -602,7 +465,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </section>
 <hr class="docutils" />
 <section id="picamera">
-<h2>Picamera<a class="headerlink" href="#picamera" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h1>Picamera<a class="headerlink" href="#picamera" title="Lien permanent vers cette rubrique">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">liens WEB<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -621,7 +484,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </dd>
 </dl>
 <section id="activation-du-module-camera-sur-le-rpi">
-<h3>Activation du module caméra sur le RPi<a class="headerlink" href="#activation-du-module-camera-sur-le-rpi" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>Activation du module caméra sur le RPi<a class="headerlink" href="#activation-du-module-camera-sur-le-rpi" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
 <li><dl>
@@ -644,7 +507,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </div></blockquote>
 </section>
 <section id="installation-de-la-camera">
-<h3>installation de la camera<a class="headerlink" href="#installation-de-la-camera" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>installation de la camera<a class="headerlink" href="#installation-de-la-camera" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>Insérer la limande dans le ports situé au niveau du port HDMI.</p></li>
@@ -655,7 +518,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </div></blockquote>
 </section>
 <section id="instalation-de-la-librairie-picamera">
-<h3>Instalation de la librairie PiCamera<a class="headerlink" href="#instalation-de-la-librairie-picamera" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>Instalation de la librairie PiCamera<a class="headerlink" href="#instalation-de-la-librairie-picamera" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><ol class="arabic">
 <li><dl>
@@ -669,7 +532,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </div></blockquote>
 </section>
 <section id="utilisation-avec-python">
-<h3>utilisation avec python<a class="headerlink" href="#utilisation-avec-python" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>utilisation avec python<a class="headerlink" href="#utilisation-avec-python" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">picamera</span>
 </pre></div>
@@ -679,7 +542,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </section>
 <hr class="docutils" />
 <section id="capteur-ultrason-hc-sr04">
-<h2>Capteur ultrason : HC-SR04<a class="headerlink" href="#capteur-ultrason-hc-sr04" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h1>Capteur ultrason : HC-SR04<a class="headerlink" href="#capteur-ultrason-hc-sr04" title="Lien permanent vers cette rubrique">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Liens Web<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -689,7 +552,7 @@ Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):</p>
 </dd>
 </dl>
 <section id="vocabulaire-et-definissions-pour-le-hc-sr04">
-<h3>Vocabulaire et définissions pour le HC-SR04<a class="headerlink" href="#vocabulaire-et-definissions-pour-le-hc-sr04" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>Vocabulaire et définissions pour le HC-SR04<a class="headerlink" href="#vocabulaire-et-definissions-pour-le-hc-sr04" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><dl class="field-list">
 <dt class="field-odd">Trig<span class="colon">:</span></dt>
@@ -723,7 +586,7 @@ et non la distance total parcourue par l’onde radio.</p>
 </div></blockquote>
 </section>
 <section id="specification-du-hc-sr04">
-<h3>Spécification du HC-SR04<a class="headerlink" href="#specification-du-hc-sr04" title="Lien permanent vers cette rubrique">¶</a></h3>
+<h2>Spécification du HC-SR04<a class="headerlink" href="#specification-du-hc-sr04" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Alimentation<span class="colon">:</span></dt>
@@ -744,7 +607,7 @@ et non la distance total parcourue par l’onde radio.</p>
 </section>
 <hr class="docutils" />
 <section id="captheur-de-methane-mq4">
-<h2>Captheur de Méthane : MQ4<a class="headerlink" href="#captheur-de-methane-mq4" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h1>Captheur de Méthane : MQ4<a class="headerlink" href="#captheur-de-methane-mq4" title="Lien permanent vers cette rubrique">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -785,7 +648,7 @@ est une résistance fixe de 1K. D’après la documentation, cette résistance d
 </section>
 <hr class="docutils" />
 <section id="liste-des-gazes-pouvant-etre-detecter-par-le-mq4">
-<h2>Liste des gazes pouvant être détecter par le MQ4<a class="headerlink" href="#liste-des-gazes-pouvant-etre-detecter-par-le-mq4" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h1>Liste des gazes pouvant être détecter par le MQ4<a class="headerlink" href="#liste-des-gazes-pouvant-etre-detecter-par-le-mq4" title="Lien permanent vers cette rubrique">¶</a></h1>
 <blockquote>
 <div><ul class="simple">
 <li><p>GPL</p></li>
@@ -799,7 +662,7 @@ est une résistance fixe de 1K. D’après la documentation, cette résistance d
 </section>
 <hr class="docutils" />
 <section id="definition-des-constantes-et-valeurs-de-references">
-<h2>Définition des constantes et valeurs de références<a class="headerlink" href="#definition-des-constantes-et-valeurs-de-references" title="Lien permanent vers cette rubrique">¶</a></h2>
+<h1>Définition des constantes et valeurs de références<a class="headerlink" href="#definition-des-constantes-et-valeurs-de-references" title="Lien permanent vers cette rubrique">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -818,7 +681,6 @@ est une résistance fixe de 1K. D’après la documentation, cette résistance d
 Elle doit être calculer.</p>
 </dd>
 </dl>
-</section>
 </section>
 
 
