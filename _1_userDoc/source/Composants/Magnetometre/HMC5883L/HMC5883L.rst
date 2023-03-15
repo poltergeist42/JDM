@@ -1,0 +1,194 @@
+========================
+Magnetomettre : HMC5883L
+========================
+
+.. index::
+   single: Magnétomètre
+   single: Composant; Magnétomètre
+
+.. contents::
+    :depth: 3
+    :backlinks: top
+
+####
+
+
+:liens WEB:
+            * http://www.instructables.com/id/Interfacing-Digital-Compass-HMC5883L-with-Raspberr/?ALLSTEPS
+                # Instructable (install I2C et test en Python3)
+                                                
+            * http://think-bowl.com/raspberry-pi/i2c-python-library-3-axis-digital-compass-hmc5883l-with-the-raspberry-pi/
+                # Exemple de mise en œuvre + liste des fonctions
+                    
+
+                                                
+            * https://www.sparkfun.com/products/10530
+                # fiche produit Sparkfun (arduino)
+
+Voici la documentation du composant :download:`Datasheet HMC5883L <doc/dataSheet_HMC5883L.pdf>`
+
+####
+
+---------------------
+Implantation HMC5883L
+---------------------
+    
+La sérigraphie est masqué lorsque le magnétomètre est enfiché dans une breadbord. L’implantation si
+dessous est donc présentée en **vue de dessus (donc sérigraphie cachée)**
+    
+    .. image:: images/10530-04.jpg
+       :width: 400 px
+       :align: center
+    
+####
+
+------------------------------------------------------
+Installation des librairies quick2wire et i2clibraries
+------------------------------------------------------
+
+    #. Préparation :
+        Si ce n'est pas déjà fait, il faut installer les outils Python :
+        
+        ::
+        
+            sudo apt-get update
+            sudo apt-get upgrade
+            sudo apt-get install i2c-tools
+            sudo apt-get install python3-smbus
+                    # Quick2wire.i2c peut aussi être utilisé our l'i2c
+                
+            sudo apt-get install python3
+            sudo reboot
+                
+    #. L'installation et configurations des librairies et outils Quick2wire
+        **N.B :** le lignes qui suivent sont copiées telles quelles depuis la page instructables
+        
+        Se positionner à l'endroit ou l'on veut installer quick2wire
+            ::
+            
+                git clone https://github.com/quick2wire/quick2wire-python-api.git
+                    #get quick2wire from github.com
+
+                    #if don't have git, try "sudo apt-get install git"
+
+                mv ./quick2wire-python-api ./code
+                    # renaming the quick2wire library folder to code for tidiness, 
+                    # you can skip this if you prefer keeping it original
+
+                nano setup.env 
+                    # create a setup file, basically to point out where the quick2wire library is
+                    # situated for your python>
+                    # after this line, terminal will enter text editing mode, type in these lines
+
+                export QUICK2WIRE_API_HOME=~/project/code
+                    #change the directory address if different than what i'm using
+                    #export PYTHONPATH=$PYTHONPATH:$QUICK2WIRE_API_HOME
+
+                after that CTRL+X, Y, ENTER to quit, save and overwrite
+
+                back in terminal mode
+
+                . ./quick2wire.env 
+                    # run the environment setup, run this once every time after reboot,
+                    # running twice will append the address directory
+                    # for checking, use "env |grep quick2wire",
+                    # address shown must be the same with the directory where 
+                    # you install your quick2wire library
+
+                cd code
+                    #go into the quick2wire folder, this will be where you put your python code
+
+                git clone https://bitbucket.org/thinkbowl/i2clibraries.git
+                    #getting library files containing functions for i2c devices such as HMC5883L,
+                    #ITG-3205, ADXL345 and LCD
+
+                Now you can shut it down with "sudo shutdown -h now" so that we can do the wiring
+                            
+####
+
+------------------------------------------------------
+Installation des librairies quick2wire et i2clibraries
+------------------------------------------------------
+
+        #. Préparation :
+            Si ce n'est pas déjà fait, il faut installer les outils Python :
+            
+            ::
+            
+                sudo apt-get update
+                sudo apt-get upgrade
+                sudo apt-get install i2c-tools
+                sudo apt-get install python3-smbus
+                     # Quick2wire.i2c peut aussi être utilisé our l'i2c
+                    
+                sudo apt-get install python3
+                sudo reboot
+                    
+        #. L'installation et configurations des librairies et outils Quick2wire
+            **N.B :** le lignes qui suivent sont copiées telles quelles depuis la page instructables
+            
+            Se positionner à l'endroit ou l'on veut installer quick2wire
+                ::
+                
+                    git clone https://giInstallation des librairies quick2wire et i2clibrariesthub.com/quick2wire/quick2wire-python-api.git
+                        #get quick2wire from github.com
+
+                        #if don't have git, try "sudo apt-get install git"
+
+                    mv ./quick2wire-python-api ./code
+                        # renaming the quick2wire library folder to code for tidiness, 
+                        # you can skip this if you prefer keeping it original
+
+                    nano setup.env 
+                        # create a setup file, basically to point out where the quick2wire library is
+                        # situated for your python
+                        # after this line, terminal will enter text editing mode, type in these lines
+
+                    export QUICK2WIRE_API_HOME=~/project/code
+                        #change the directory address if different than what i'm using
+                        #export PYTHONPATH=$PYTHONPATH:$QUICK2WIRE_API_HOME
+
+                    after that CTRL+X, Y, ENTER to quit, save and overwrite
+
+                    back in terminal mode
+
+                    . ./quick2wire.env 
+                        # run the environment setup, run this once every time after reboot,
+                        # running twice will append the address directory
+                        # for checking, use "env |grep quick2wire",
+                        # address shown must be the same with the directory where 
+                        # you install your quick2wire library
+
+                    cd code
+                        #go into the quick2wire folder, this will be where you put your python code
+
+                    git clone https://bitbucket.org/thinkbowl/i2clibraries.git
+                        #getting library files containing functions for i2c devices such as HMC5883L,
+                        #ITG-3205, ADXL345 and LCD
+
+                    Now you can shut it down with "sudo shutdown -h now" so that we can do the wiring
+                                
+####
+
+-------------------------
+Configuration du HMC5883L
+-------------------------
+
+    #. la déclinaison terrestre
+        Pour pouvoir être le plus précis possible, il faut recalibrer la boussole en tenant compte
+        de notre décalage par rapport au pôle magnétique. On appel ça : **"la déclinaison terrestre"**
+        Pour cela on à besoin de nos coordonnées (les coordonnées du LAB):
+        
+            * Longitude :  49° 1'22.48"N
+            * Latitude  :   2° 1'50.51"E
+        
+        se qui donne à la date du 18/08/2015 : 0° 9,24'
+
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::

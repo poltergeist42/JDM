@@ -8,7 +8,9 @@ Composants
 .. toctree::
    :maxdepth: 2
 
-   mpu6050/mpu6050
+   Accelerometre/Accelerometre
+   Magnetometre/Magnetometre
+   stepMotor/stepMotor
 
 .. contents::
     :backlinks: top
