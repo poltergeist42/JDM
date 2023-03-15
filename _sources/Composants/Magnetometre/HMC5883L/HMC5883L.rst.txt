@@ -34,7 +34,7 @@ Implantation HMC5883L
 ---------------------
     
 La sérigraphie est masqué lorsque le magnétomètre est enfiché dans une breadbord. L’implantation si
-dessous est donc présenter en **vue de dessus (donc sérigraphie cachée)**
+dessous est donc présentée en **vue de dessus (donc sérigraphie cachée)**
     
     .. image:: images/10530-04.jpg
        :width: 400 px
@@ -77,7 +77,7 @@ Installation des librairies quick2wire et i2clibraries
 
                 nano setup.env 
                     # create a setup file, basically to point out where the quick2wire library is
-                    # situated for your python
+                    # situated for your python>
                     # after this line, terminal will enter text editing mode, type in these lines
 
                 export QUICK2WIRE_API_HOME=~/project/code
