@@ -1,0 +1,27 @@
+============
+Informatique
+============
+
+.. index::
+   single: IT
+   single: Informatique; IT
+
+.. toctree::
+   :maxdepth: 2
+
+   SysAdmin/SysAdmin
+
+.. contents::
+    :backlinks: top
+
+####
+
+[WIP]
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::

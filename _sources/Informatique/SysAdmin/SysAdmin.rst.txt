@@ -1,0 +1,27 @@
+========
+Sysadmin
+========
+
+.. index::
+   single: SysAdmin
+   single: IT; SysAdmin
+
+.. toctree::
+   :maxdepth: 2
+
+   KRBTGT/KRBTGT
+
+.. contents::
+    :backlinks: top
+
+####
+
+Ensemble d'outil et d'élément relatifs à l'administration Système sous Microsoft Windows
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::

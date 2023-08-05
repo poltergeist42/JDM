@@ -85,6 +85,23 @@ Structure minimum d'une application
             fmt.Println("Todo: add some features")
         }
 
+Installation des dépendences
+============================
+
+Les dépendences représentent tous les packages importés avec la commandes "import".
+
+    .. code:: shell
+        :number-lines:
+        :force:
+
+        # Se placer dans le dossier de déstination
+        cd monSupperModule
+
+        # go: to add module requirements and sums:  
+        go mod init tidy 
+
+
+
 ####
 
 ------------------------

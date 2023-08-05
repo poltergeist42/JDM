@@ -27,7 +27,7 @@ Mon journal de manip
    Golang/Golang
    HPVC
    IDE_TextEditor/IDE_TextEditor
-   Informatique
+   Informatique/Informatique
    kicad
    Linux/Linux
    MAC_OS
