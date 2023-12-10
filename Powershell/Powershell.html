@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+<head>
+    <meta charset="utf-8" />
+        <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="docsearch:name" content="Journal de Manip" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="20170523" />
+    <meta name="docsearch:version" content="20170523" />
+    
+        <title>PowerShell &mdash; Journal de Manip</title>
+    
+    <link rel="stylesheet" type="text/css" href="../_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/dist/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+            <link rel="index" title="Index" href="../genindex.html" />
+            <link rel="search" title="Recherche" href="../search.html" />
+            <link rel="top" title="Journal de Manip" href="#" />
+            <link rel="next" title="Code Sinppets" href="codeSinppets/codeSinppets.html" />
+            <link rel="prev" title="Optimisation du travail (et de l’apprentissage)" href="../Optimisation_Travail.html" />
+    </head>
+<body>
+    <header class="container-fluid bg-primary">
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="../index.html"
+                        title="logoGrenouilleTech"
+                        class="logo navbar-brand"
+                    >
+                        <img src="../_static/img/ColorLogoOpenHardware-noBackground.svg" width="500" height="400" alt="logoGrenouilleTech"
+                            class="logo-img"
+                        />
+                        Journal de Manip
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">Menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">infos générales Journal de manip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Composants/Composants.html">Composants</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Composants/Accelerometre/Accelerometre.html">Accéléromètre</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Composants/Accelerometre/mpu6050/mpu6050.html">mpu6050</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Composants/Magnetometre/Magnetometre.html">Magnétomètres</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Composants/Magnetometre/HMC5883L/HMC5883L.html">Magnetomettre : HMC5883L</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Composants/stepMotor/stepMotor.html">Moteurs Pas à Pas et Drivers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Composants/stepMotor/28BYJ-48/28BYJ-48.html">28BYJ-48</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ComputerVision.html">Computer Vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cookbook.html">Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Culture_Gen.html">Culture Générale / Connaissances insolites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DataBase/DataBase.html">DataBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DataBase/PostGreSQL/PostGreSQL.html">PostGreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataBase/Redis/Redis.html">Redis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Dev_Gest_Prjet/Dev_Gest_Prjet.html">Développement, Gestion  et Commercialisation de projet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Dev_Gest_Prjet/DevProject/DevProject.html">Dévellopement de projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dev_Gest_Prjet/Merise/Merise.html">MERISE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dev_Gest_Prjet/Agile/Agile.html">La méthode Agile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dev_Gest_Prjet/Commercialisation/Commercialisation.html">Commercialisation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Diagrams.html">Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocAutomatique/DocAutomatique.html">Documentation_Automatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ESP.html">ESP8266 &amp; ESP32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Freecad.html">Freecad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/GIT.html">Git (versioning)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GIT/Bitbucket/Bitbucket.html">Bitbucket</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Golang/Golang.html">Golang</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Golang/GetStarted/GetStarted.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Golang/Syntax/Syntax.html">Détails syntaxiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Golang/goroutine/goroutine.html">Keyword</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Golang/vocabGlossary/vocabGlossary.html">Vocabulaire et Glossaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Golang/codeSinppets/codeSinppets.html">Code Sinppets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Golang/codeSinppets/parsingJson/parsingJson.html">Parsing Json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Golang/codeSinppets/sliceCompare/sliceCompare.html">Slice comparation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../HPVC.html">HPVC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../IDE_TextEditor/IDE_TextEditor.html">IDE &amp; Text Editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../IDE_TextEditor/Latex/Latex.html">LaTex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IDE_TextEditor/VIM/VIM.html">VIM (VI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IDE_TextEditor/visualStudioCode/visualStudioCode.html">Visual Studio Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Informatique/Informatique.html">Informatique</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Informatique/SysAdmin/SysAdmin.html">Sysadmin</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kicad.html">Kicad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Linux/Linux.html">LINUX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/shell/shell.html">SHELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/multiscreen/multiscreen.html">Multi-Screen terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/scripting/scripting.html">Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/UsersGroupsACL/UsersGroupsACL.html">Utilisateurs, Groupes et Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/sysAdmin/sysAdmin.html">Administration Système</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Linux/sysAdmin/conky/conky.html">Conky</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/network/network.html">network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/sharedFolders/sharedFolders.html">Dossiers partager et volumes distants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/hardwareMgnt/hardwareMgnt.html">Hardware Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/Raspberry/Raspberry.html">Raspberry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Linux/Raspberry/cookbook/piRouter/piRouter.html">Raspberry Pi as a router</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Linux/bugError/bugError.html">Bug, Maintenance et traitemant des Erreurs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MAC_OS.html">MAC OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Machine_learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MQTT.html">MQTT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Musique/Musique.html">Musique</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Musique/theorie/theorie.html">Théorie musicale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Musique/MAO/MAO.html">Musique Assistée (par) Ordinateur - MAO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Musique/guitare/guitare.html">Guitare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Musique/GuitareChant/GuitareChant.html">GuitareChant</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Optimisation_Travail.html">Optimisation du travail (et de l’apprentissage)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PowerShell</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="codeSinppets/codeSinppets.html">Code Sinppets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="codeSinppets/Toolbox/Toolbox.html">PowerShell Toolbox</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Python.html">PYTHON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Regex.html">Regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Reseau.html">Reseau</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Soudure.html">Soudure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Techno_WEB/Techno_WEB.html">Technos Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Techno_WEB/HTML_CSS/HTML_CSS.html">HTML_CSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Techno_WEB/Javascript/Javascript.html">JavaScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React_and_legacy.html">React &amp; Legacy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Techno_WEB/React_and_legacy/JSX/JSX.html">JSX (JavaScript eXtended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React/React.html">React</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React/Components/Components.html">Composant</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React/Components/Fragment/Fragment.html">Fragment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React/Components/Navbar/Navbar.html">Navbar</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React/Props/Props.html">Props (Short for « Properties »)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React/States/States.html">States</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React/Hooks/Hooks.html">Weblinks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React/Librairies/Librairies.html">Librairies</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React/Librairies/ReactRouterDOM/ReactRouterDOM.html">React-Router-DOM</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React/Librairies/ReactRouterDOM/RedirectionForm2URI/RedirectionForm2URI.html">Redirection vers une Page React depuis un formulaire</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../Techno_WEB/React_and_legacy/React/BugFix/BugFix.html">Bug &amp; Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Techno_WEB/React_and_legacy/Native/Native.html">React Native</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Techno_WEB/Node_Express/Node_Express.html">Node &amp; Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Techno_WEB/webCreation/webCreation.html">Création de Site Web</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Trading.html">Trading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../URLtheque.html">URLtheque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../XML_JSON.html">XML_JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arborescence/arborescence.html">Arborescence du projet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated/deprecated.html">Eléments dépréciés</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deprecated/Aquariophilie/Aquariophilie.html">Aquariophilie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deprecated/Django/Django.html">Django 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deprecated/English_vocab/English_vocab.html">English Vocabulary</a></li>
+</ul>
+</li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="../index.html">Docs</a></li>
+        <li class="breadcrumb-item active" aria-current="page">PowerShell</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="ahd-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/ahdcreative/sphinx_ahd_theme/blob/main/docs/Powershell/Powershell.rst" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="../_sources/Powershell/Powershell.rst.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main">
+<section id="powershell">
+<h1><a class="toc-backref" href="#sommaire" role="doc-backlink">PowerShell</a><a class="headerlink" href="#powershell" title="Lien permanent vers cette rubrique">¶</a></h1>
+<nav class="contents" id="sommaire">
+<span id="index-0"></span><p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#powershell" id="id3">PowerShell</a></p>
+<ul>
+<li><p><a class="reference internal" href="#commandes-utiles" id="id4">Commandes utiles</a></p>
+<ul>
+<li><p><a class="reference internal" href="#obtenir-de-l-aide" id="id5">Obtenir de l’aide</a></p></li>
+<li><p><a class="reference internal" href="#activer-desactiver-le-mode-debogage" id="id6">Activer / Désactiver le mode débogage</a></p></li>
+<li><p><a class="reference internal" href="#generer-l-aide-automatique-dans-un-script-ou-dans-une-fonction" id="id7">Générer l’aide automatique dans un script ou dans une fonction</a></p></li>
+<li><p><a class="reference internal" href="#connaitre-toutes-les-methodes-d-un-objet" id="id8">Connaître toutes les méthodes d’un objet</a></p></li>
+<li><p><a class="reference internal" href="#selectionner-une-commande-depuis-une-fenetre-graphique" id="id9">Séléctionner une commande depuis une fenêtre graphique</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#windows-powershell-integrated-scripting-environment-ise" id="id10">Windows PowerShell Integrated Scripting Environment (ISE)</a></p></li>
+<li><p><a class="reference internal" href="#syntaxe-et-utilisation" id="id11">Syntaxe et utilisation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#equivalent-du-print-ou-du-echo" id="id12">Equivalent du print (ou du echo)</a></p></li>
+<li><p><a class="reference internal" href="#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique" id="id13">Renvoyer la sortie d’une commande vers une fenêtre graphique</a></p></li>
+<li><p><a class="reference internal" href="#equivalence-de-la-command-linux-grep" id="id14">Equivalence de la command linux « grep »</a></p></li>
+<li><p><a class="reference internal" href="#caractere-specifiques" id="id15">Caractère spécifiques</a></p></li>
+<li><p><a class="reference internal" href="#declarer-une-variable" id="id16">Déclarer une variable</a></p></li>
+<li><p><a class="reference internal" href="#creer-des-variables-en-powershell-sous-forme-de-tableau" id="id17">Créer des variables en PowerShell sous forme de tableau</a></p></li>
+<li><p><a class="reference internal" href="#slicing" id="id18">Slicing</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#navigation-et-gestion-de-fichiers-gestion-de-dossiers" id="id19">Navigation et gestion de Fichiers / gestion de dossiers</a></p>
+<ul>
+<li><p><a class="reference internal" href="#stocker-un-chemin-puis-y-retourne" id="id20">stocker un chemin puis y retourné</a></p></li>
+<li><p><a class="reference internal" href="#tester-si-un-chemin-exist" id="id21">Tester si un chemin exist</a></p></li>
+<li><p><a class="reference internal" href="#supprimer-un-dossier-et-son-contenu" id="id22">Supprimer un dossier et son contenu</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#scripting" id="id23">SCRIPTING</a></p>
+<ul>
+<li><p><a class="reference internal" href="#autoriser-lexecution-des-script" id="id24">Autoriser l’exécution des script</a></p></li>
+<li><p><a class="reference internal" href="#lancer-un-script-depuis-la-console-powershell" id="id25">Lancer un script depuis la console powershell</a></p></li>
+<li><p><a class="reference internal" href="#declarer-une-fonction" id="id26">Déclarer une fonction</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#admisitration-exchange" id="id27">Admisitration Exchange</a></p></li>
+<li><p><a class="reference internal" href="#automatisation-de-windows-et-de-windows-server-avec-windows-powershell" id="id28">Automatisation de Windows et de Windows Server avec Windows PowerShell</a></p></li>
+<li><p><a class="reference internal" href="#creer-des-interfaces-graphiques" id="id29">Créer des interfaces graphiques</a></p></li>
+<li><p><a class="reference internal" href="#hyperv" id="id30">HyperV</a></p>
+<ul>
+<li><p><a class="reference internal" href="#utiliser-les-cmdlets-hyperv-avec-powershell2-2008-2008r2-et-2012" id="id31">utiliser les cmdlets HyperV avec powershell2 (2008, 2008r2 et 2012)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#commandes-en-vrac" id="id32">Commandes en vrac</a></p>
+<ul>
+<li><p><a class="reference internal" href="#activer-psremote-depuis-un-poste" id="id33">Activer PSRemote depuis un poste</a></p></li>
+<li><p><a class="reference internal" href="#manipuler-les-variables-d-environement" id="id34">Manipuler les variables d’environement</a></p></li>
+<li><p><a class="reference internal" href="#ouvrir-un-document-avec-vim-depuis-powershell" id="id35">Ouvrir un document avec VIM depuis PowerShell</a></p></li>
+<li><p><a class="reference internal" href="#wmiobject" id="id36">WmiObject</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#weblinks" id="id37">Weblinks</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="codeSinppets/codeSinppets.html">Code Sinppets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="codeSinppets/Toolbox/Toolbox.html">PowerShell Toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="codeSinppets/codeSinppets.html#code-snippets">Code Snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="codeSinppets/codeSinppets.html#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="commandes-utiles">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Commandes utiles</a><a class="headerlink" href="#commandes-utiles" title="Lien permanent vers cette rubrique">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.octetmalin.net/windows/scripts/powershell-gestion-des-fichiers-dossiers-repertoires.php">http://www.octetmalin.net/windows/scripts/powershell-gestion-des-fichiers-dossiers-repertoires.php</a></p></li>
+</ul>
+</dd>
+</dl>
+<section id="obtenir-de-l-aide">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Obtenir de l’aide</a><a class="headerlink" href="#obtenir-de-l-aide" title="Lien permanent vers cette rubrique">¶</a></h3>
+<dl class="field-list">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/fr-fr/powershell/module/microsoft.powershell.utility/?view=powershell-5.1">https://docs.microsoft.com/fr-fr/powershell/module/microsoft.powershell.utility/?view=powershell-5.1</a></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic">
+<li><p>Obtenir de l’aide depuis le shell</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="p">[</span><span class="n">nom_de_la_commande</span><span class="p">]</span>
+
+<span class="n">ex</span> <span class="p">:</span>
+<span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">get</span><span class="o">-</span><span class="n">member</span>
+</pre></div>
+</div>
+</li>
+<li><p>Les diférents modes de l’aide</p>
+<blockquote>
+<div><ul>
+<li><p>Pour consulter les exemples :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">examples</span>
+</pre></div>
+</div>
+</li>
+<li><p>Pour plus d’informations :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">detailed</span>
+</pre></div>
+</div>
+</li>
+<li><p>Pour obtenir des informations techniques :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">full</span>
+</pre></div>
+</div>
+</li>
+<li><p>Pour l’aide en ligne :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">help</span> <span class="n">Get</span><span class="o">-</span><span class="n">Help</span> <span class="o">-</span><span class="n">online</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Obtenir la liste de toutes les blibliothèques d’aide dans PowerShell</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span> <span class="n">about</span>
+</pre></div>
+</div>
+</li>
+<li><p>Obtenir de l’aide sur le formatage et l’utilisation des commentaires</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://msdn.microsoft.com/en-us/library/aa965353%28VS.85%29.aspx?f=255&amp;MSPPError=-2147217396">https://msdn.microsoft.com/en-us/library/aa965353%28VS.85%29.aspx?f=255&amp;MSPPError=-2147217396</a></p></li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p>Command powershell</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span> <span class="n">about_comment_based</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Obtenir de l’aide sur les méthodes ou les propriétés d’un objet « .net »</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Identifier le type (TypeName) de l’objet avec Get-Member</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; $a = &quot;&quot;
+&gt; $a | gm
+
+    TypeName : System.String
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Rechercher dans Google le TypeName identifier et aller sur la page
+Microsoft MSDN correspondant a la classe de l’objet</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Recherche</span> <span class="p">:</span> <span class="n">System</span><span class="o">.</span><span class="n">String</span>
+
+<span class="n">Résultat</span> <span class="p">:</span>
+
+    <span class="n">String</span> <span class="n">classe</span> <span class="p">(</span><span class="n">System</span><span class="p">)</span> <span class="o">-</span> <span class="n">MSDN</span> <span class="o">-</span> <span class="n">Microsoft</span>
+    <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">msdn</span><span class="o">.</span><span class="n">microsoft</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fr</span><span class="o">-</span><span class="n">fr</span><span class="o">/</span><span class="n">library</span><span class="o">/</span><span class="n">system</span><span class="o">.</span><span class="n">string</span><span class="p">(</span><span class="n">v</span><span class="o">=</span><span class="n">vs</span><span class="mf">.110</span><span class="p">)</span><span class="o">.</span><span class="n">aspx</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Séléctionner dans le menu de gauche la rubrique désirée (Constructeur, Méthode,
+Propriétés)</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="activer-desactiver-le-mode-debogage">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Activer / Désactiver le mode débogage</a><a class="headerlink" href="#activer-desactiver-le-mode-debogage" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p>activer le mode débogage</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">psdebug</span> <span class="o">-</span><span class="n">trace</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</li>
+<li><p>Désactiver le mode débogage</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">psdebug</span> <span class="o">-</span><span class="n">trace</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<section id="generer-l-aide-automatique-dans-un-script-ou-dans-une-fonction">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Générer l’aide automatique dans un script ou dans une fonction</a><a class="headerlink" href="#generer-l-aide-automatique-dans-un-script-ou-dans-une-fonction" title="Lien permanent vers cette rubrique">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6">https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6</a></dt><dd><p># Toutes les explications</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6#syntax-for-comment-based-help-in-script-modules">https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6#syntax-for-comment-based-help-in-script-modules</a></dt><dd><p># Les mots clef à utiliser dans le bloc d’aide</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="connaitre-toutes-les-methodes-d-un-objet">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Connaître toutes les méthodes d’un objet</a><a class="headerlink" href="#connaitre-toutes-les-methodes-d-un-objet" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Objet_ou_command</span><span class="p">]</span> <span class="o">|</span> <span class="n">get</span><span class="o">-</span><span class="n">member</span> <span class="p">(</span><span class="n">ou</span> <span class="n">gm</span><span class="p">)</span>
+    <span class="c1"># exemple pour une variable : $v_a | get-member</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="selectionner-une-commande-depuis-une-fenetre-graphique">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Séléctionner une commande depuis une fenêtre graphique</a><a class="headerlink" href="#selectionner-une-commande-depuis-une-fenetre-graphique" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Show</span><span class="o">-</span><span class="n">Command</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="windows-powershell-integrated-scripting-environment-ise">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Windows PowerShell Integrated Scripting Environment (ISE)</a><a class="headerlink" href="#windows-powershell-integrated-scripting-environment-ise" title="Lien permanent vers cette rubrique">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Pour lancer PowerShell ISE depuis la console</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">c</span><span class="p">:</span>\<span class="n">ISE</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="syntaxe-et-utilisation">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Syntaxe et utilisation</a><a class="headerlink" href="#syntaxe-et-utilisation" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="equivalent-du-print-ou-du-echo">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Equivalent du print (ou du echo)</a><a class="headerlink" href="#equivalent-du-print-ou-du-echo" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><dl>
+<dt>Methode classique avec la commande “write-host”</dt><dd><p>Dans cette commande, les simples cotes ne permettent pas d’interpréter de
+variable. L’utilisation des doubles cotes permet l’interpretation de variable ou
+d’objet</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\Users\polter&gt; $valeur = 2
+PS C:\Users\polter&gt; write-host &#39;$valeur&#39;
+$valeur
+PS C:\Users\polter&gt; write-host &quot;$valeur&quot;
+2
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p>Méthode “plus propre” avec l’option “format” (-f)</p>
+<blockquote>
+<div><p>Avec cette méthode on utilise les doubles cotes pour encadrer le texte, les
+accolades avec un numéro d’index a l’intérieur (commençant a 0). Les variables sont
+placées a l’extérieur du bloc (après le “-f”) et séparées par des virgules</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\Users\polter&gt; $valeur = 2
+PS C:\Users\polter&gt; $valeur2 = 2
+PS C:\Users\polter&gt; &quot;{0} + {1} = {2}&quot; -f $valeur, $valeur2, ($valeur + $valeur2)
+2 + 2 = 4
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<section id="renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Renvoyer la sortie d’une commande vers une fenêtre graphique</a><a class="headerlink" href="#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">polter</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">commande</span><span class="p">]</span> <span class="o">|</span> <span class="n">Out</span><span class="o">-</span><span class="n">GridView</span>
+    <span class="c1"># La fenêtre qui apparait permet alors d&#39;appliquer des filtres en direct</span>
+
+<span class="n">ex</span> <span class="p">:</span>
+
+<span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">polter</span><span class="o">&gt;</span> <span class="n">get</span><span class="o">-</span><span class="n">cliditem</span> <span class="o">|</span> <span class="n">Out</span><span class="o">-</span><span class="n">GridView</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="equivalence-de-la-command-linux-grep">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Equivalence de la command linux « grep »</a><a class="headerlink" href="#equivalence-de-la-command-linux-grep" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">netstat</span> <span class="n">-an</span> <span class="p">|</span> <span class="n">findstr</span> <span class="n">1883</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="caractere-specifiques">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Caractère spécifiques</a><a class="headerlink" href="#caractere-specifiques" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Caractère échappement</p>
+<blockquote>
+<div><dl>
+<dt>Le caractère d’échappement est le « ` » (accent grave seul [ALT_GR-7])</dt><dd><blockquote>
+<div><ul>
+<li><p>Placé en fin de ligne il permet de ligne, il sert de continuation pour aller
+à la ligne</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$Reg = get-wmiobject -Namespace Root\Default -computerName `
+       $Comptuer -List | where-object `
+       {$_.Name -eq &quot;StdRegProv&quot;}
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p>Placé avant une variable elle sera interprétée comme une chaine de caractère</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ps:&gt; $v_maVariable = &quot;test&quot;
+
+ps:&gt; write-host &quot;affichage de la variable : $v_maVariable&quot;
+ps:&gt; affichage de la variable : test
+
+ps:&gt; write-host &quot;affichage de la variable : `$v_maVariable&quot;
+ps:&gt; affichage de la variable : $v_maVariable
+</pre></div>
+</div>
+</li>
+</ul>
+<blockquote>
+<div><ul>
+<li><p>Placé devant un caractère, il sera interpréter comme une commande</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ps:&gt; $v_maVariable = &quot;test&quot;
+ps:&gt; write-host &quot;blabla`t$v_maVariable&quot;
+ps:&gt; blabla    test
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<section id="declarer-une-variable">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Déclarer une variable</a><a class="headerlink" href="#declarer-une-variable" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p>variable typee dynamiquement</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$maVarible = valeur
+</pre></div>
+</div>
+</li>
+<li><p>variable fortement typee</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[bool] $maVarible = true
+</pre></div>
+</div>
+<p>N.B : par convention les string se declarent avec des simples cotes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$maVarible = &#39;text&#39;
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<section id="variables-specifiques">
+<h4>variables spécifiques<a class="headerlink" href="#variables-specifiques" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">$_<span class="colon">:</span></dt>
+<dd class="field-odd"><p>contient l’objet en cours dans le pipeline</p>
+</dd>
+<dt class="field-even">$Error<span class="colon">:</span></dt>
+<dd class="field-even"><p>contient les objets d’erreur de la session PowerShell en cours</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="ecrire-un-bloc-de-texte-sur-plusieur-ligne-dans-une-variable-le-here-string">
+<h4>Ecrire un bloc de texte sur plusieur ligne dans une variable (le here-string)<a class="headerlink" href="#ecrire-un-bloc-de-texte-sur-plusieur-ligne-dans-une-variable-le-here-string" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><p>Pour écrire un bloc de texte sur plusieur ligne dans une variable, il faut
+entourer le bloc avec &#64;” … “&#64; ou &#64; » … « &#64;.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Simples cotes
+PS C:\&gt; $myvar = @&#39;
+&gt;&gt; blabla ...
+&gt;&gt; Je s&#39;appel groot !
+&gt;&gt; etc ...
+&gt;&gt; &#39;@
+
+Doubles cotes :
+PS C:\&gt; $myvar = @&quot;
+&gt;&gt; blabla ...
+&gt;&gt; Je s&#39;appel groot !
+&gt;&gt; etc ...
+&gt;&gt; &quot;@
+</pre></div>
+</div>
+<p><strong>Rappel</strong> : Les simples cotes ne permettent pas d’interpréter les variables
+qu’elles contiennent alors que les double le permettent.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="creer-des-variables-en-powershell-sous-forme-de-tableau">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer des variables en PowerShell sous forme de tableau</a><a class="headerlink" href="#creer-des-variables-en-powershell-sous-forme-de-tableau" title="Lien permanent vers cette rubrique">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://gmergit.blogspot.fr/2011/11/recemment-jai-eu-besoin-de-creer-des.html">http://gmergit.blogspot.fr/2011/11/recemment-jai-eu-besoin-de-creer-des.html</a></p></li>
+</ul>
+</dd>
+</dl>
+<section id="les-tableau">
+<h4>Les Tableau<a class="headerlink" href="#les-tableau" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><ol class="arabic">
+<li><dl>
+<dt>Les Tableau fixe</dt><dd><p>Ces tableau ne permettent pas d’ajouter ou de supprimer des données</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\&gt; $monTableau = @(1, &#39;a&#39;)
+PS C:\&gt; $monTableau
+1
+a
+PS C:\&gt; $monTableau.Add(&#39;z&#39;)
+Exception lors de l&#39;appel de « Add » avec « 1 » argument(s) : « La collection était d&#39;une taille fixe. »
+Au caractère Ligne:1 : 1
++ $monTableau.Add(&#39;z&#39;)
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Les Tableau dynamiques</dt><dd><p>Ces tableau permettent d’ajouter ou de supprimer des éléments</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\&gt; [System.Collections.ArrayList]$monTableau = @(1, &#39;a&#39;)
+PS C:\&gt; $monTableau
+1
+a
+PS C:\&gt; $monTableau.Add(&#39;Z&#39;)
+2
+PS C:\&gt; $monTableau
+1
+a
+Z
+PS C:\&gt;
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+<section id="slicing">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Slicing</a><a class="headerlink" href="#slicing" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$a = &quot;test.txt&quot;
+$a.Substring(0, $a.length -4)
+&gt; test
+$a.Substring(2, $a.length -4)
+&gt; st.t
+$a.Substring($a.length -4)
+&gt; .txt
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="navigation-et-gestion-de-fichiers-gestion-de-dossiers">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Navigation et gestion de Fichiers / gestion de dossiers</a><a class="headerlink" href="#navigation-et-gestion-de-fichiers-gestion-de-dossiers" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="stocker-un-chemin-puis-y-retourne">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">stocker un chemin puis y retourné</a><a class="headerlink" href="#stocker-un-chemin-puis-y-retourne" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Pour stocker le repertoire de travail courant</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Push</span><span class="o">-</span><span class="n">Location</span>
+</pre></div>
+</div>
+</li>
+<li><p>Pour retourner dans le repertoire de travail stocker précédement</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pop</span><span class="o">-</span><span class="n">Location</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<section id="tester-si-un-chemin-exist">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Tester si un chemin exist</a><a class="headerlink" href="#tester-si-un-chemin-exist" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Test</span><span class="o">-</span><span class="n">Path</span> <span class="p">[</span><span class="n">chemin_a_tester</span><span class="p">]</span>
+
+<span class="n">ex</span> <span class="p">:</span>
+
+<span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="o">&gt;</span> <span class="n">Test</span><span class="o">-</span><span class="n">Path</span> <span class="n">c</span><span class="p">:</span>\<span class="n">test</span>
+<span class="kc">False</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="supprimer-un-dossier-et-son-contenu">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Supprimer un dossier et son contenu</a><a class="headerlink" href="#supprimer-un-dossier-et-son-contenu" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Get-ChildItem [Chemin du dossier] -recurse | where {$_.mode -like &#39;d*&#39; } | remove-item -Recurse -force -Verbose
+    # &#39;-force&#39; permet de supprimer tous les éléments sans confirmation
+    # &#39;-Verbose&#39; permet d&#39;afficher toutes les opérations en cours dans la console
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="scripting">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">SCRIPTING</a><a class="headerlink" href="#scripting" title="Lien permanent vers cette rubrique">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/learn/modules/script-with-powershell/">Introduction to scripting in PowerShell</a> <a class="footnote-reference brackets" href="#id1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</dd>
+</dl>
+<section id="autoriser-lexecution-des-script">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Autoriser l’exécution des script</a><a class="headerlink" href="#autoriser-lexecution-des-script" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">ExecutionPolicy</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="lancer-un-script-depuis-la-console-powershell">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Lancer un script depuis la console powershell</a><a class="headerlink" href="#lancer-un-script-depuis-la-console-powershell" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="o">.</span> <span class="o">.</span>\<span class="p">[</span><span class="n">mon_script</span><span class="p">]</span><span class="o">.</span><span class="n">ps1</span>
+    <span class="c1"># Ne pas oublier le premier &quot;.&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="declarer-une-fonction">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Déclarer une fonction</a><a class="headerlink" href="#declarer-une-fonction" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="p">[</span><span class="n">nom_de_la_fonction</span><span class="p">]</span> <span class="p">{</span>
+<span class="p">[</span><span class="n">command_1</span><span class="p">]</span>
+<span class="p">[</span><span class="n">command_2</span><span class="p">]</span>
+<span class="p">[</span><span class="n">etc_</span><span class="o">...</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">ex</span> <span class="p">:</span>
+
+    <span class="n">function</span> <span class="n">f_maFonction</span> <span class="p">{</span> <span class="n">get</span><span class="o">-</span><span class="n">cliditem</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="admisitration-exchange">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Admisitration Exchange</a><a class="headerlink" href="#admisitration-exchange" title="Lien permanent vers cette rubrique">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Page d’information pour toutes les versions d’exchange</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://technet.microsoft.com/en-us/library/mt587043(v=exchg.150).aspx">https://technet.microsoft.com/en-us/library/mt587043(v=exchg.150).aspx</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Exchange Online cmdlets</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://technet.microsoft.com/EN-US/library/jj200780(v=exchg.160).aspx">https://technet.microsoft.com/EN-US/library/jj200780(v=exchg.160).aspx</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Exchange Online Protection cmdlets</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://technet.microsoft.com/EN-US/library/dn621038(v=exchg.160).aspx">https://technet.microsoft.com/EN-US/library/dn621038(v=exchg.160).aspx</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Office 365 Security &amp; Compliance Center PowerShell</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://technet.microsoft.com/en-us/library/mt587091(v=exchg.160).aspx">https://technet.microsoft.com/en-us/library/mt587091(v=exchg.160).aspx</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Exchange 2016 cmdlets</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://technet.microsoft.com/EN-US/library/bb124413(v=exchg.160).aspx">https://technet.microsoft.com/EN-US/library/bb124413(v=exchg.160).aspx</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Exchange 2013 cmdlets</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://technet.microsoft.com/EN-US/library/bb124413(v=exchg.150).aspx">https://technet.microsoft.com/EN-US/library/bb124413(v=exchg.150).aspx</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Exchange 2010 Cmdlets</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://technet.microsoft.com/en-us/library/bb124413(v=exchg.141).aspx">https://technet.microsoft.com/en-us/library/bb124413(v=exchg.141).aspx</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="automatisation-de-windows-et-de-windows-server-avec-windows-powershell">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Automatisation de Windows et de Windows Server avec Windows PowerShell</a><a class="headerlink" href="#automatisation-de-windows-et-de-windows-server-avec-windows-powershell" title="Lien permanent vers cette rubrique">¶</a></h2>
+<dl class="field-list">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://technet.microsoft.com/fr-fr/library/dn249523(v=wps.630).aspx">https://technet.microsoft.com/fr-fr/library/dn249523(v=wps.630).aspx</a></p></li>
+</ul>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>DHCP Server Cmdlets</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://technet.microsoft.com/en-us/library/jj590751(v=wps.620).aspx">https://technet.microsoft.com/en-us/library/jj590751(v=wps.620).aspx</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="creer-des-interfaces-graphiques">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Créer des interfaces graphiques</a><a class="headerlink" href="#creer-des-interfaces-graphiques" title="Lien permanent vers cette rubrique">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Avec WindowsForm</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://justanitblog.wordpress.com/2016/01/28/powershell-creation-dune-interface-graphique/">https://justanitblog.wordpress.com/2016/01/28/powershell-creation-dune-interface-graphique/</a></dt><dd><p># un example windowsForm et WPF</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p>Avec WPF (en XAML avec visual studio)</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.supinfo.com/articles/single/1933-interface-graphique-xaml-script-powershell">https://www.supinfo.com/articles/single/1933-interface-graphique-xaml-script-powershell</a></dt><dd><p># une astuce pour ne pas avoir à ecrire le code XAML</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="hyperv">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">HyperV</a><a class="headerlink" href="#hyperv" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="utiliser-les-cmdlets-hyperv-avec-powershell2-2008-2008r2-et-2012">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">utiliser les cmdlets HyperV avec powershell2 (2008, 2008r2 et 2012)</a><a class="headerlink" href="#utiliser-les-cmdlets-hyperv-avec-powershell2-2008-2008r2-et-2012" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://github.com/gcbond/pshyperv">https://github.com/gcbond/pshyperv</a></dt><dd><p># Source du module à installer dans powershell</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://www.alexanderjohn.co.uk/2010/07/06/automatically-loading-pshyperv-library/">https://www.alexanderjohn.co.uk/2010/07/06/automatically-loading-pshyperv-library/</a></dt><dd><p># Intégration automatique du module dans le profil powershell</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic">
+<li><p>Lancer manuellement le module HyperV :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Import-Module “c:\Program Files\modules\hyperv\hyperv.psd1”
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="commandes-en-vrac">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Commandes en vrac</a><a class="headerlink" href="#commandes-en-vrac" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="activer-psremote-depuis-un-poste">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Activer PSRemote depuis un poste</a><a class="headerlink" href="#activer-psremote-depuis-un-poste" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enable</span><span class="o">-</span><span class="n">PSRemoting</span> <span class="o">-</span><span class="n">force</span>
+    <span class="c1"># &#39;-force&#39; permet de supprimer les intéractions utilisateurs</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="manipuler-les-variables-d-environement">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Manipuler les variables d’environement</a><a class="headerlink" href="#manipuler-les-variables-d-environement" title="Lien permanent vers cette rubrique">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://ss64.com/ps/syntax-env.html">https://ss64.com/ps/syntax-env.html</a></dt><dd><p># Démonstration de manipulation des variable d’environnement</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://technet.microsoft.com/fr-fr/library/hh847808.aspx">https://technet.microsoft.com/fr-fr/library/hh847808.aspx</a></dt><dd><p># Documentation Powershell</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="ouvrir-un-document-avec-vim-depuis-powershell">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Ouvrir un document avec VIM depuis PowerShell</a><a class="headerlink" href="#ouvrir-un-document-avec-vim-depuis-powershell" title="Lien permanent vers cette rubrique">¶</a></h3>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Liens_Web<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://youtu.be/MB5xuLIBUOg">https://youtu.be/MB5xuLIBUOg</a></dt><dd><p># Vidéo montrant la manip</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic">
+<li><p>Ouvrir le fichier du profil PowerShell :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS :&gt; notepad $PROFILE
+</pre></div>
+</div>
+</li>
+<li><p>Créer un alias associer au chemin de VIM :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">-</span><span class="n">alias</span> <span class="n">vi</span> <span class="s2">&quot;C:\Program Files (x86)\Vim</span><span class="se">\v</span><span class="s2">im80\gvim.exe&quot;</span>
+<span class="nb">set</span><span class="o">-</span><span class="n">alias</span> <span class="n">vim</span> <span class="s2">&quot;C:\Program Files (x86)\Vim</span><span class="se">\v</span><span class="s2">im80\gvim.exe&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Tester après avoir fermer et réouvert PowerShell :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vim</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</section>
+<section id="wmiobject">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">WmiObject</a><a class="headerlink" href="#wmiobject" title="Lien permanent vers cette rubrique">¶</a></h3>
+<section id="conaitre-les-iformations-de-tous-les-medias">
+<h4>Conaitre les iformations de tous les medias<a class="headerlink" href="#conaitre-les-iformations-de-tous-les-medias" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## Pour obtenir les infos de tous les médias
+Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | select -Property * | fl
+
+## Pour obtenir les infos d&#39;un média en particulier (ex : le disque dur C:
+Get-WmiObject Win32_LogicalDisk -comp &quot;localhost&quot; | where {$_.Name -like &quot;C:&quot;} | select -Property * | fl
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="connaitre-la-clef-de-licence-de-windows">
+<h4>Connaitre la clef de licence de Windows<a class="headerlink" href="#connaitre-la-clef-de-licence-de-windows" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="connaitre-les-information-du-bios">
+<h4>Connaitre les information du BIOS<a class="headerlink" href="#connaitre-les-information-du-bios" title="Lien permanent vers cette rubrique">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">WmiObject</span> <span class="n">win32_bios</span> <span class="o">|</span> <span class="n">select</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="weblinks">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.microsoft.com/en-us/learn/modules/script-with-powershell/">https://docs.microsoft.com/en-us/learn/modules/script-with-powershell/</a></p>
+</aside>
+</aside>
+</section>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="../Optimisation_Travail.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span>Optimisation du travail (et de l’apprentissage)
+    </a>
+    <a class="float-right" href="codeSinppets/codeSinppets.html" title="Next">
+        Code Sinppets <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">PowerShell</a><ul>
+<li><a class="reference internal" href="#commandes-utiles">Commandes utiles</a><ul>
+<li><a class="reference internal" href="#obtenir-de-l-aide">Obtenir de l’aide</a></li>
+<li><a class="reference internal" href="#activer-desactiver-le-mode-debogage">Activer / Désactiver le mode débogage</a></li>
+<li><a class="reference internal" href="#generer-l-aide-automatique-dans-un-script-ou-dans-une-fonction">Générer l’aide automatique dans un script ou dans une fonction</a></li>
+<li><a class="reference internal" href="#connaitre-toutes-les-methodes-d-un-objet">Connaître toutes les méthodes d’un objet</a></li>
+<li><a class="reference internal" href="#selectionner-une-commande-depuis-une-fenetre-graphique">Séléctionner une commande depuis une fenêtre graphique</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#windows-powershell-integrated-scripting-environment-ise">Windows PowerShell Integrated Scripting Environment (ISE)</a></li>
+<li><a class="reference internal" href="#syntaxe-et-utilisation">Syntaxe et utilisation</a><ul>
+<li><a class="reference internal" href="#equivalent-du-print-ou-du-echo">Equivalent du print (ou du echo)</a></li>
+<li><a class="reference internal" href="#renvoyer-la-sortie-d-une-commande-vers-une-fenetre-graphique">Renvoyer la sortie d’une commande vers une fenêtre graphique</a></li>
+<li><a class="reference internal" href="#equivalence-de-la-command-linux-grep">Equivalence de la command linux « grep »</a></li>
+<li><a class="reference internal" href="#caractere-specifiques">Caractère spécifiques</a></li>
+<li><a class="reference internal" href="#declarer-une-variable">Déclarer une variable</a><ul>
+<li><a class="reference internal" href="#variables-specifiques">variables spécifiques</a></li>
+<li><a class="reference internal" href="#ecrire-un-bloc-de-texte-sur-plusieur-ligne-dans-une-variable-le-here-string">Ecrire un bloc de texte sur plusieur ligne dans une variable (le here-string)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#creer-des-variables-en-powershell-sous-forme-de-tableau">Créer des variables en PowerShell sous forme de tableau</a><ul>
+<li><a class="reference internal" href="#les-tableau">Les Tableau</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#slicing">Slicing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#navigation-et-gestion-de-fichiers-gestion-de-dossiers">Navigation et gestion de Fichiers / gestion de dossiers</a><ul>
+<li><a class="reference internal" href="#stocker-un-chemin-puis-y-retourne">stocker un chemin puis y retourné</a></li>
+<li><a class="reference internal" href="#tester-si-un-chemin-exist">Tester si un chemin exist</a></li>
+<li><a class="reference internal" href="#supprimer-un-dossier-et-son-contenu">Supprimer un dossier et son contenu</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripting">SCRIPTING</a><ul>
+<li><a class="reference internal" href="#autoriser-lexecution-des-script">Autoriser l’exécution des script</a></li>
+<li><a class="reference internal" href="#lancer-un-script-depuis-la-console-powershell">Lancer un script depuis la console powershell</a></li>
+<li><a class="reference internal" href="#declarer-une-fonction">Déclarer une fonction</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#admisitration-exchange">Admisitration Exchange</a></li>
+<li><a class="reference internal" href="#automatisation-de-windows-et-de-windows-server-avec-windows-powershell">Automatisation de Windows et de Windows Server avec Windows PowerShell</a></li>
+<li><a class="reference internal" href="#creer-des-interfaces-graphiques">Créer des interfaces graphiques</a></li>
+<li><a class="reference internal" href="#hyperv">HyperV</a><ul>
+<li><a class="reference internal" href="#utiliser-les-cmdlets-hyperv-avec-powershell2-2008-2008r2-et-2012">utiliser les cmdlets HyperV avec powershell2 (2008, 2008r2 et 2012)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#commandes-en-vrac">Commandes en vrac</a><ul>
+<li><a class="reference internal" href="#activer-psremote-depuis-un-poste">Activer PSRemote depuis un poste</a></li>
+<li><a class="reference internal" href="#manipuler-les-variables-d-environement">Manipuler les variables d’environement</a></li>
+<li><a class="reference internal" href="#ouvrir-un-document-avec-vim-depuis-powershell">Ouvrir un document avec VIM depuis PowerShell</a></li>
+<li><a class="reference internal" href="#wmiobject">WmiObject</a><ul>
+<li><a class="reference internal" href="#conaitre-les-iformations-de-tous-les-medias">Conaitre les iformations de tous les medias</a></li>
+<li><a class="reference internal" href="#connaitre-la-clef-de-licence-de-windows">Connaitre la clef de licence de Windows</a></li>
+<li><a class="reference internal" href="#connaitre-les-information-du-bios">Connaitre les information du BIOS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+            <div class="text-center">
+                <p style="display: none">
+                    <a class="text-light" href="https://github.com/ahdcreative/sphinx_ahd_theme" rel="nofollow" target="_blank">
+                        AHDCreative Sphinx Theme 5.3.8
+                    </a>
+                </p>
+            </div>
+            <div class="text-center">
+                    &copy; Copyright 2017, Poltergeist42
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/dist/theme.js"></script>
+        <script type="text/javascript" src="../_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="../_static/searchtools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript">
+            jQuery(function() { Search.loadIndex("../searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>

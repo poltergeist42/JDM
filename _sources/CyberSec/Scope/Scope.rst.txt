@@ -1,0 +1,30 @@
+==================
+Objectives & Scope
+==================
+
+.. index::
+   single: Objectives & Scope
+   single: CyberSec; Objectives & Scope
+
+.. contents::
+    :depth: 3
+    :backlinks: top
+
+####
+
+----------------------------------------
+Agreement of the Objective and the Scope
+----------------------------------------
+
+    :Liens_Web:
+        * `Pentest Organisation`_
+
+.. _`Pentest Organisation`:http://www.pentest-standard.org/index.php/Main_Page
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::

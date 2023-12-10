@@ -7,6 +7,7 @@ Golang
 
     GetStarted/GetStarted
     Syntax/Syntax
+    goroutine/goroutine
     vocabGlossary/vocabGlossary
     codeSinppets/codeSinppets
 

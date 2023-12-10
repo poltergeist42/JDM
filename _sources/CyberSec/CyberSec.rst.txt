@@ -1,0 +1,35 @@
+==============
+Cyber Security
+==============
+
+.. index::
+   single: Cyber Security
+
+.. toctree::
+   :maxdepth: 2
+
+   Scope/Scope
+   Enumeration/Enumeration
+
+.. contents::
+    :backlinks: top
+
+####
+
+A penetration test generally consists of the following phases:
+
+   * Define the Objective and the Scope 
+   * Information gathering
+   * Vulnerability identification
+   * Exploitation
+   * Clean-up
+   * Reporting
+   * Elimination or mitigation of vulnerabilities
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::

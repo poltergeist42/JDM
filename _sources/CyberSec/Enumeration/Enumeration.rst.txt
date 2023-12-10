@@ -1,0 +1,57 @@
+===========
+Enumeration
+===========
+
+.. index::
+   single: Enumeration
+   single: CyberSec; Enumeration
+
+.. toctree::
+   :maxdepth: 2
+
+   Child/Child
+
+.. contents::
+    :backlinks: top
+
+####
+
+---------------------
+Information gathering
+---------------------
+
+The Enumeration is the Information gathering process.
+
+This process typically starts with information gathering, both passive and active, and focuses on
+getting as much information about the target as possible. 
+
+    :Passive information gathering:
+
+        focuses on information which is publicly available such as company
+        information, Whois information (a resource which may now have been blocked due to the EU’s
+        GDPR legislation), company e-mail addresses mentioned on the website, and so on.
+
+
+    :Active information gathering:
+    
+        Collects information about the target by actually connecting and interacting with services
+        on the target. Examples of active information gathering are port scans and the enumeration
+        of services such as SMTP, SMB and SNMP.
+
+This phase is probably the most important phase of the penetration test. The information gathered 
+here will be the basis for all the following phases and, for this reason, they must be carried out
+thoroughly, diligently and with great attention to detail. It is a good practice to revive a
+previous search by including the new data collected. This phase is probably the most important phase
+of the penetration test. The information gathered here will be the basis for all the following
+phases and, for this reason, they must be carried out thoroughly, diligently and with great
+attention to detail. It is a good practice to revive a previous search by including the new
+collected data.
+
+
+####
+
+--------
+Weblinks
+--------
+
+.. target-notes::
