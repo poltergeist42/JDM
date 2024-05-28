@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="806px" preserveAspectRatio="none" style="width:1447px;height:806px;background:#FFFFFF;" version="1.1" viewBox="0 0 1447 806" width="1447px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="27.6094" id="_title" style="stroke:none;stroke-width:1.0;" width="129" x="657.5" y="15"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="119" x="662.5" y="34.5332">TMUX commands</text><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="54" x="678" y="402.8799"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="34" x="688" y="427.4131">tmux</text><rect fill="#F1F1F1" height="55.8887" rx="12.5" ry="12.5" style="stroke:#ADD8E6;stroke-width:3.0;" width="220" x="782" y="393.7402"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="114" x="792" y="418.2734">Pane commands</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="200" x="792" y="435.4248">( [Ctrl]+[b] ==&gt; [char] )</text><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#ADD8E6;stroke-width:3.0;" width="191" x="1052" y="106.0283"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="10" x="1062" y="130.5615">%</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="1072" y="130.5615">: Create a horizontal split</text><path d="M1002,421.6846 L1012,421.6846 C1027,421.6846 1027,124.833 1042,124.833 L1052,124.833 " fill="none" style="stroke:#ADD8E6;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#ADD8E6;stroke-width:3.0;" width="171" x="1052" y="163.6377"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="6" x="1062" y="188.1709">''</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="1068" y="188.1709">: Create a vertical split</text><path d="M1002,421.6846 L1012,421.6846 C1027,421.6846 1027,182.4424 1042,182.4424 L1052,182.4424 " fill="none" style="stroke:#ADD8E6;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#ADD8E6;stroke-width:3.0;" width="318" x="1052" y="221.2471"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="104" x="1062" y="245.7803">h or Left Arrow</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190" x="1166" y="245.7803">: Move to the pane on the Left</text><path d="M1002,421.6846 L1012,421.6846 C1027,421.6846 1027,240.0518 1042,240.0518 L1052,240.0518 " fill="none" style="stroke:#ADD8E6;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#ADD8E6;stroke-width:3.0;" width="332" x="1052" y="278.8564"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="109" x="1062" y="303.3896">i or Right Arrow</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="199" x="1171" y="303.3896">: Move to the pane on the Right</text><path d="M1002,421.6846 L1012,421.6846 C1027,421.6846 1027,297.6611 1042,297.6611 L1052,297.6611 " fill="none" style="stroke:#ADD8E6;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#ADD8E6;stroke-width:3.0;" width="294" x="1052" y="336.4658"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="111" x="1062" y="360.999">j or Down Arrow</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="1173" y="360.999">: Move to the pane Below</text><path d="M1002,421.6846 L1012,421.6846 C1027,421.6846 1027,355.2705 1042,355.2705 L1052,355.2705 " fill="none" style="stroke:#ADD8E6;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#ADD8E6;stroke-width:3.0;" width="281" x="1052" y="394.0752"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="95" x="1062" y="418.6084">k or Up Arrow</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="1157" y="418.6084">: Move to the pane Above</text><path d="M1002,421.6846 L1012,421.6846 C1027,421.6846 1027,412.8799 1042,412.8799 L1052,412.8799 " fill="none" style="stroke:#ADD8E6;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#ADD8E6;stroke-width:3.0;" width="211" x="1052" y="451.6846"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="9" x="1062" y="476.2178">q</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="1071" y="476.2178">: Briefly show pane numbers</text><path d="M1002,421.6846 L1012,421.6846 C1027,421.6846 1027,470.4893 1042,470.4893 L1052,470.4893 " fill="none" style="stroke:#ADD8E6;stroke-width:3.0;"/><rect fill="#F1F1F1" height="55.2188" rx="12.5" ry="12.5" style="stroke:#ADD8E6;stroke-width:3.0;" width="333" x="1052" y="509.2939"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="9" x="1062" y="533.8271">o</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="187" x="1071" y="533.8271">: Move trough panes in order.</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="309" x="1062" y="551.4365">Each press takes you to the next, until all of them</text><path d="M1002,421.6846 L1012,421.6846 C1027,421.6846 1027,536.9033 1042,536.9033 L1052,536.9033 " fill="none" style="stroke:#ADD8E6;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#ADD8E6;stroke-width:3.0;" width="355" x="1052" y="584.5127"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="5" x="1062" y="609.0459">}</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="326" x="1067" y="609.0459">: Swap the position of the current pane with the next</text><path d="M1002,421.6846 L1012,421.6846 C1027,421.6846 1027,603.3174 1042,603.3174 L1052,603.3174 " fill="none" style="stroke:#ADD8E6;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#ADD8E6;stroke-width:3.0;" width="383" x="1052" y="642.1221"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="5" x="1062" y="666.6553">{</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="354" x="1067" y="666.6553">: Swap the position of the current pane with the previous</text><path d="M1002,421.6846 L1012,421.6846 C1027,421.6846 1027,660.9268 1042,660.9268 L1052,660.9268 " fill="none" style="stroke:#ADD8E6;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#ADD8E6;stroke-width:3.0;" width="185" x="1052" y="699.7314"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="8" x="1062" y="724.2646">x</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153" x="1070" y="724.2646">: Close the current pane</text><path d="M1002,421.6846 L1012,421.6846 C1027,421.6846 1027,718.5361 1042,718.5361 L1052,718.5361 " fill="none" style="stroke:#ADD8E6;stroke-width:3.0;"/><path d="M732,421.6846 L742,421.6846 C757,421.6846 757,421.6846 772,421.6846 L782,421.6846 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><rect fill="#F1F1F1" height="55.8887" rx="12.5" ry="12.5" style="stroke:#EB937F;stroke-width:3.0;" width="212" x="416" y="134.498"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="139" x="426" y="159.0313">Terminal commands</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="192" x="426" y="176.1826">( avant de lancer tmux )</text><rect fill="#F1F1F1" height="55.8887" rx="12.5" ry="12.5" style="stroke:#EB937F;stroke-width:3.0;" width="171" x="195" y="58.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="151" x="205" y="83.1426">Create a new session</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="64" x="237" y="100.2939">:~$ tmux</text><path d="M416,162.4424 L406,162.4424 C391,162.4424 391,86.5537 376,86.5537 L366,86.5537 " fill="none" style="stroke:#EB937F;stroke-width:3.0;"/><rect fill="#F1F1F1" height="55.8887" rx="12.5" ry="12.5" style="stroke:#EB937F;stroke-width:3.0;" width="151" x="215" y="134.498"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="131" x="225" y="159.0313">List all the session</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="88" x="257" y="176.1826">:~$ tmux ls</text><path d="M416,162.4424 L406,162.4424 C391,162.4424 391,162.4424 376,162.4424 L366,162.4424 " fill="none" style="stroke:#EB937F;stroke-width:3.0;"/><rect fill="#F1F1F1" height="55.8887" rx="12.5" ry="12.5" style="stroke:#EB937F;stroke-width:3.0;" width="356" x="10" y="210.3867"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="221" x="20" y="234.9199">Attach a session to the terminal</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="304" x="52" y="252.0713">:~$ tmux attach -t [Number_of_session]</text><path d="M416,162.4424 L406,162.4424 C391,162.4424 391,238.3311 376,238.3311 L366,238.3311 " fill="none" style="stroke:#EB937F;stroke-width:3.0;"/><path d="M678,421.6846 L668,421.6846 C653,421.6846 653,162.4424 638,162.4424 L628,162.4424 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><rect fill="#F1F1F1" height="55.8887" rx="12.5" ry="12.5" style="stroke:#90EE90;stroke-width:3.0;" width="220" x="408" y="334.7451"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="143" x="418" y="359.2783">Sessions commands</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="200" x="418" y="376.4297">( [Ctrl]+[b] ==&gt; [char] )</text><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#90EE90;stroke-width:3.0;" width="121" x="237" y="286.2754"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="8" x="247" y="310.8086">s</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="255" y="310.8086">: List sessions</text><path d="M408,362.6895 L398,362.6895 C383,362.6895 383,305.0801 368,305.0801 L358,305.0801 " fill="none" style="stroke:#90EE90;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#90EE90;stroke-width:3.0;" width="194" x="164" y="343.8848"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="8" x="174" y="368.418">$</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="182" y="368.418">: Rename current session</text><path d="M408,362.6895 L398,362.6895 C383,362.6895 383,362.6895 368,362.6895 L358,362.6895 " fill="none" style="stroke:#90EE90;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#90EE90;stroke-width:3.0;" width="187" x="171" y="401.4941"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="9" x="181" y="426.0273">d</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="190" y="426.0273">: Detach current session</text><path d="M408,362.6895 L398,362.6895 C383,362.6895 383,420.2988 368,420.2988 L358,420.2988 " fill="none" style="stroke:#90EE90;stroke-width:3.0;"/><path d="M678,421.6846 L668,421.6846 C653,421.6846 653,362.6895 638,362.6895 L628,362.6895 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><rect fill="#F1F1F1" height="55.8887" rx="12.5" ry="12.5" style="stroke:#FFBBCC;stroke-width:3.0;" width="220" x="408" y="593.9873"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="134" x="418" y="618.5205">Window commands</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="200" x="418" y="635.6719">( [Ctrl]+[b] ==&gt; [char] )</text><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#FFBBCC;stroke-width:3.0;" width="173" x="185" y="459.1035"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="8" x="195" y="483.6367">c</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="203" y="483.6367">: Create a new window</text><path d="M408,621.9316 L398,621.9316 C383,621.9316 383,477.9082 368,477.9082 L358,477.9082 " fill="none" style="stroke:#FFBBCC;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#FFBBCC;stroke-width:3.0;" width="206" x="152" y="516.7129"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4" x="162" y="541.2461">,</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="166" y="541.2461">: Rename the curent window</text><path d="M408,621.9316 L398,621.9316 C383,621.9316 383,535.5176 368,535.5176 L358,535.5176 " fill="none" style="stroke:#FFBBCC;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#FFBBCC;stroke-width:3.0;" width="145" x="213" y="574.3223"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="11" x="223" y="598.8555">w</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="234" y="598.8555">: List the windows</text><path d="M408,621.9316 L398,621.9316 C383,621.9316 383,593.127 368,593.127 L358,593.127 " fill="none" style="stroke:#FFBBCC;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#FFBBCC;stroke-width:3.0;" width="194" x="164" y="631.9316"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="9" x="174" y="656.4648">n</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="183" y="656.4648">: Move to the next window</text><path d="M408,621.9316 L398,621.9316 C383,621.9316 383,650.7363 368,650.7363 L358,650.7363 " fill="none" style="stroke:#FFBBCC;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#FFBBCC;stroke-width:3.0;" width="198" x="160" y="689.541"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="9" x="170" y="714.0742">p</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="165" x="179" y="714.0742">: Move to previous window</text><path d="M408,621.9316 L398,621.9316 C383,621.9316 383,708.3457 368,708.3457 L358,708.3457 " fill="none" style="stroke:#FFBBCC;stroke-width:3.0;"/><rect fill="#F1F1F1" height="37.6094" rx="12.5" ry="12.5" style="stroke:#FFBBCC;stroke-width:3.0;" width="329" x="29" y="747.1504"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="38" x="39" y="771.6836">0 to 9</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="267" x="77" y="771.6836">: Move the window to the number specified</text><path d="M408,621.9316 L398,621.9316 C383,621.9316 383,765.9551 368,765.9551 L358,765.9551 " fill="none" style="stroke:#FFBBCC;stroke-width:3.0;"/><path d="M678,421.6846 L668,421.6846 C653,421.6846 653,621.9316 638,621.9316 L628,621.9316 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><!--MD5=[0714cecf38a788f1d7c7eb55dbd96759]
+@startmindmap
+
+skinparam linetype polyline
+' skinparam linetype ortho
+
+title TMUX commands
+
+<style>
+mindmapDiagram {
+  .green {
+    ' BackgroundColor lightgreen
+    LineColor lightgreen
+    LineThickness 3
+  }
+  .rose {
+    ' BackgroundColor #FFBBCC
+    LineColor #FFBBCC
+    LineThickness 3
+  }
+  .blue {
+    ' BackgroundColor lightblue
+    LineColor lightblue
+    LineThickness 3
+  }
+  .orange {
+    ' BackgroundColor #EB937F
+    LineColor #EB937F
+    LineThickness 3
+  }
+}
+</style>
+ 
+* <b>tmux
+left side
+
+**:<b>Terminal commands</b>
+<code>
+( avant de lancer tmux )
+</code>; <<orange>>
+***:<b>Create a new session</b>
+<code>
+    :~$ tmux
+</code>; <<orange>>
+***:<b>List all the session</b>
+<code>
+    :~$ tmux ls
+</code>; <<orange>>
+***:<b>Attach a session to the terminal</b>
+<code>
+    :~$ tmux attach -t [Number_of_session]
+</code>; <<orange>>
+
+**:<b>Sessions commands</b>
+<code>
+( [Ctrl]+[b] ==> [char] )
+</code>; <<green>>
+*** <b>s</b>: List sessions <<green>>
+*** <b>$</b>: Rename current session <<green>>
+*** <b>d</b>: Detach current session <<green>>
+
+
+**:<b>Window commands
+<code>
+( [Ctrl]+[b] ==> [char] )
+</code>; <<rose>>
+*** <b>c</b>: Create a new window <<rose>>
+*** <b>,</b>: Rename the curent window <<rose>>
+*** <b>w</b>: List the windows <<rose>>
+*** <b>n</b>: Move to the next window <<rose>>
+*** <b>p</b>: Move to previous window <<rose>>
+*** <b>0 to 9</b>: Move the window to the number specified <<rose>>
+
+right side
+
+**:<b>Pane commands
+<code>
+( [Ctrl]+[b] ==> [char] )
+</code>; <<blue>>
+*** <b>%</b>: Create a horizontal split <<blue>>
+*** <b>''</b>: Create a vertical split <<blue>>
+*** <b>h or Left Arrow</b>: Move to the pane on the Left <<blue>>
+*** <b>i or Right Arrow</b>: Move to the pane on the Right <<blue>>
+*** <b>j or Down Arrow</b>: Move to the pane Below <<blue>>
+*** <b>k or Up Arrow</b>: Move to the pane Above <<blue>>
+*** <b>q</b>: Briefly show pane numbers <<blue>>
+*** <b>o</b>: Move trough panes in order. \nEach press takes you to the next, until all of them <<blue>>
+*** <b>}</b>: Swap the position of the current pane with the next <<blue>>
+*** <b>{</b>: Swap the position of the current pane with the previous <<blue>>
+*** <b>x</b>: Close the current pane <<blue>>
+
+@endmindmap
+
+@startmindmap
+
+skinparam linetype polyline
+
+title TMUX commands
+
+<style>
+mindmapDiagram {
+  .green {
+    LineColor lightgreen
+    LineThickness 3
+  }
+  .rose {
+    LineColor #FFBBCC
+    LineThickness 3
+  }
+  .blue {
+    LineColor lightblue
+    LineThickness 3
+  }
+  .orange {
+    LineColor #EB937F
+    LineThickness 3
+  }
+}
+</style>
+ 
+* <b>tmux
+left side
+
+**:<b>Terminal commands</b>
+<code>
+( avant de lancer tmux )
+</code>; <<orange>>
+***:<b>Create a new session</b>
+<code>
+    :~$ tmux
+</code>; <<orange>>
+***:<b>List all the session</b>
+<code>
+    :~$ tmux ls
+</code>; <<orange>>
+***:<b>Attach a session to the terminal</b>
+<code>
+    :~$ tmux attach -t [Number_of_session]
+</code>; <<orange>>
+
+**:<b>Sessions commands</b>
+<code>
+( [Ctrl]+[b] ==> [char] )
+</code>; <<green>>
+*** <b>s</b>: List sessions <<green>>
+*** <b>$</b>: Rename current session <<green>>
+*** <b>d</b>: Detach current session <<green>>
+
+
+**:<b>Window commands
+<code>
+( [Ctrl]+[b] ==> [char] )
+</code>; <<rose>>
+*** <b>c</b>: Create a new window <<rose>>
+*** <b>,</b>: Rename the curent window <<rose>>
+*** <b>w</b>: List the windows <<rose>>
+*** <b>n</b>: Move to the next window <<rose>>
+*** <b>p</b>: Move to previous window <<rose>>
+*** <b>0 to 9</b>: Move the window to the number specified <<rose>>
+
+right side
+
+**:<b>Pane commands
+<code>
+( [Ctrl]+[b] ==> [char] )
+</code>; <<blue>>
+*** <b>%</b>: Create a horizontal split <<blue>>
+*** <b>''</b>: Create a vertical split <<blue>>
+*** <b>h or Left Arrow</b>: Move to the pane on the Left <<blue>>
+*** <b>i or Right Arrow</b>: Move to the pane on the Right <<blue>>
+*** <b>j or Down Arrow</b>: Move to the pane Below <<blue>>
+*** <b>k or Up Arrow</b>: Move to the pane Above <<blue>>
+*** <b>q</b>: Briefly show pane numbers <<blue>>
+*** <b>o</b>: Move trough panes in order. \nEach press takes you to the next, until all of them <<blue>>
+*** <b>}</b>: Swap the position of the current pane with the next <<blue>>
+*** <b>{</b>: Swap the position of the current pane with the previous <<blue>>
+*** <b>x</b>: Close the current pane <<blue>>
+
+@endmindmap
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: fr
+Country: FR
+--></g></svg>

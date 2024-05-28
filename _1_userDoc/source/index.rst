@@ -1,10 +1,7 @@
-.. JDM documentation master file, created by
-   sphinx-quickstart on Tue May 23 20:15:46 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-Mon journal de manip
-====================
+================
+Journal de manip
+================
 
 .. toctree::
    :titlesonly:
@@ -16,26 +13,27 @@ Mon journal de manip
    ComputerVision
    Cookbook
    Culture_Gen
+   CyberSec/CyberSec
    DataBase/DataBase
    Dev_Gest_Prjet/Dev_Gest_Prjet
    Diagrams
    Docker
-   Documentation_Automatique
+   DocAutomatique/DocAutomatique
    ESP
    Freecad
-   GIT
+   GIT/GIT
    Golang/Golang
    HPVC
    IDE_TextEditor/IDE_TextEditor
-   Informatique
+   Informatique/Informatique
    kicad
    Linux/Linux
    MAC_OS
    Machine_learning
-   MQTT
+   MQTT/MQTT
    Musique/Musique
-   Optimisation_Travail
-   Powershell
+   OptimisationTravail/OptimisationTravail
+   Powershell/Powershell
    Python
    Regex
    Reseau
@@ -57,4 +55,5 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
+* :ref:`modindex`
 * :ref:`search`

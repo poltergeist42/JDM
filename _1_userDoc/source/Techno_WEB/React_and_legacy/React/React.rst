@@ -62,25 +62,30 @@ ultérieurement.
         :number-lines:
         :force:
 
-        npx create-react-app [my-app]       # Attention, les noms des projets doivent être écris en
+         npx create-react-app [my-app]       # Attention, les noms des projets doivent être écris en
                                             # minuscule uniquement.
-        cd [my-app]
-        npm start
+         cd [my-app]
+         npm start
 
 
 *Variante* : 
 Sur les version moderne de "npm" et "Create-react-app" il n'est plus nécéssaire de
 lancer "Create-react-app" depuis "npx".
 
-    .. code:: shell
-        :number-lines:
-        :force:
+    .. note:: 
+        
+        .. code:: shell
+            :number-lines:
+            :force:
 
-        create-react-app [my-app]       # Attention, les noms des projets doivent être écris en
-                                        # minuscule uniquement.
-        cd [my-app]
-        npm start
+            create-react-app [my-app]       # Attention, les noms des projets doivent être écris en
+                                            # minuscule uniquement.
+            cd [my-app]
+            npm start
 
+        .. image:: images/Create-React-App-status.png
+           :width: 500 px
+           :align: center
 
 
 
@@ -91,15 +96,15 @@ Lorsqu'un projet react est créer avec create-react-app, un "git" est également
 étant en frontend, il peut être préférable de le supprimer pour en créer un plus haut dans
 l'arborescence et ainsi englober le frontend et le backend . 
 
-.. code:: shell
+    .. code:: shell
 
-    ~/myProject
-        |
-        \--> .git
-        |
-        \--> frontend # React
-        |
-        \--> backend # Node-Express + Mongo
+        ~/myProject
+            |
+            \--> .git
+            |
+            \--> frontend # React
+            |
+            \--> backend # Node-Express + Mongo
 
 Create-react-app génére également un fichier ".gitignore" qui exclue le dossier "node_modules". Ce
 fichier est à conserver. Il est même intéressant de créer un fichier ".dockerignore" qui exclue lui
@@ -111,12 +116,12 @@ dans le fichiers "package.json".
 Si le projet est récupérer d'un dépot distant comme Github par exemple il faut alors installer les
 dépendances du projet.
 
-.. code:: shell
-   :number-lines:
-   :force:
+    .. code:: shell
+    :number-lines:
+    :force:
 
-    cd [my-app]
-    npm install     #lecture du fichier "package.json" pour identifier les dépendances à installer
+        cd [my-app]
+        npm install     #lecture du fichier "package.json" pour identifier les dépendances à installer
 
 ####
 

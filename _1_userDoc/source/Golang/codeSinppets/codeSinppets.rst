@@ -14,6 +14,7 @@ Code Sinppets
    :maxdepth: 2
 
    parsingJson/parsingJson
+   sliceCompare/sliceCompare
 
 ####
 
