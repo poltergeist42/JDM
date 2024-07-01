@@ -16,7 +16,7 @@ SIEM
 
 ####
 
-A SIEM (**S**ecurity **I**nformation and **E**vent **M**anagement) is a security solution that
+A **SIEM (Security Information and Event Management)** is a security solution that
 collects, analyzes, and correlates security-related data from various sources within an
 organization's IT infrastructure.
 
