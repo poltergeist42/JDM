@@ -17,6 +17,7 @@ React
 .. toctree::
    :maxdepth: 2
 
+   Vite/Vite
    Components/Components
    Props/Props
    States/States
